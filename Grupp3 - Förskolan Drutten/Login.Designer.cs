@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LoggaInButton = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.losenordTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
+            this.LoggaInButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -52,29 +53,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // LoggaInButton
-            // 
-            this.LoggaInButton.Location = new System.Drawing.Point(221, 204);
-            this.LoggaInButton.Name = "LoggaInButton";
-            this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
-            this.LoggaInButton.TabIndex = 0;
-            this.LoggaInButton.Text = "Logga in";
-            this.LoggaInButton.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.LoggaInButton);
-            this.groupBox2.Location = new System.Drawing.Point(71, 129);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(387, 273);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.drutten;
@@ -84,24 +62,19 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // groupBox2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox1.Location = new System.Drawing.Point(126, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Användarnamn";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Användarnamn:";
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.losenordTextbox);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.andvandarnamnTextbox);
+            this.groupBox2.Controls.Add(this.LoggaInButton);
+            this.groupBox2.Location = new System.Drawing.Point(71, 129);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(387, 273);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
             // 
             // label2
             // 
@@ -112,15 +85,48 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Lösenord:";
             // 
-            // textBox2
+            // losenordTextbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox2.Location = new System.Drawing.Point(126, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Lösenord";
+            this.losenordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.losenordTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.losenordTextbox.Location = new System.Drawing.Point(126, 154);
+            this.losenordTextbox.Name = "losenordTextbox";
+            this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
+            this.losenordTextbox.TabIndex = 3;
+            this.losenordTextbox.Text = "Lösenord";
+            this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
+            this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(126, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Användarnamn:";
+            // 
+            // andvandarnamnTextbox
+            // 
+            this.andvandarnamnTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.andvandarnamnTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.andvandarnamnTextbox.Location = new System.Drawing.Point(126, 112);
+            this.andvandarnamnTextbox.Name = "andvandarnamnTextbox";
+            this.andvandarnamnTextbox.Size = new System.Drawing.Size(123, 20);
+            this.andvandarnamnTextbox.TabIndex = 2;
+            this.andvandarnamnTextbox.Text = "Användarnamn";
+            this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
+            this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
+            // 
+            // LoggaInButton
+            // 
+            this.LoggaInButton.Location = new System.Drawing.Point(221, 204);
+            this.LoggaInButton.Name = "LoggaInButton";
+            this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
+            this.LoggaInButton.TabIndex = 1;
+            this.LoggaInButton.Text = "Logga in";
+            this.LoggaInButton.UseVisualStyleBackColor = true;
+            this.LoggaInButton.Click += new System.EventHandler(this.LoggaInButton_Click);
             // 
             // Login
             // 
@@ -129,12 +135,16 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(800, 600);
             this.Name = "Login";
-            this.Text = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Inloggning";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,9 +155,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox losenordTextbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox andvandarnamnTextbox;
         private System.Windows.Forms.Button LoggaInButton;
     }
 }

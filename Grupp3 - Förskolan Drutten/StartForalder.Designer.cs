@@ -39,11 +39,11 @@
             this.informationTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loggaBox = new System.Windows.Forms.PictureBox();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.informationTabControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -89,6 +89,7 @@
             this.informationButton.TabIndex = 11;
             this.informationButton.Text = "Information";
             this.informationButton.UseVisualStyleBackColor = true;
+            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
             // 
             // närvaroButton
             // 
@@ -134,7 +135,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(740, 363);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Senaste";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -144,17 +145,18 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(740, 363);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Om Druttens förskola";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // loggaBox
             // 
-            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttenMellan;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 86);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.loggaBox.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttenMellan;
+            this.loggaBox.Location = new System.Drawing.Point(22, 12);
+            this.loggaBox.Name = "loggaBox";
+            this.loggaBox.Size = new System.Drawing.Size(113, 86);
+            this.loggaBox.TabIndex = 1;
+            this.loggaBox.TabStop = false;
+            this.loggaBox.Click += new System.EventHandler(this.loggaBox_Click);
             // 
             // kontoTypLabel
             // 
@@ -174,15 +176,16 @@
             this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(1008, 561);
             this.Controls.Add(this.kontoTypLabel);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.loggaBox);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartForalder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.informationTabControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +194,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox loggaBox;
         private System.Windows.Forms.Label inloggadSomNamnLabel;
         private System.Windows.Forms.Label inloggadSomLabel;
         private System.Windows.Forms.Button informationButton;
