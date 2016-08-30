@@ -17,6 +17,6 @@ C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - För
 C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3 - Förskolan Drutten.csprojResolveAssemblyReference.cache
 C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.Login.resources
 C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.Properties.Resources.resources
-C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.Start.resources
 C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.StartForalder.resources
 C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3 - Förskolan Drutten.csproj.GenerateResource.Cache
+C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.StartPersonal.resources

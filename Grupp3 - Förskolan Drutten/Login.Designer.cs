@@ -87,7 +87,7 @@
             // 
             // losenordTextbox
             // 
-            this.losenordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.losenordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.losenordTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.losenordTextbox.Location = new System.Drawing.Point(126, 154);
             this.losenordTextbox.Name = "losenordTextbox";
@@ -108,7 +108,7 @@
             // 
             // andvandarnamnTextbox
             // 
-            this.andvandarnamnTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.andvandarnamnTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.andvandarnamnTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.andvandarnamnTextbox.Location = new System.Drawing.Point(126, 112);
             this.andvandarnamnTextbox.Name = "andvandarnamnTextbox";

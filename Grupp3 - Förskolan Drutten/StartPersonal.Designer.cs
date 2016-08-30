@@ -1,6 +1,6 @@
 ﻿namespace Grupp3___Förskolan_Drutten
 {
-    partial class Start
+    partial class StartPersonal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.inloggadSomNamnLabel = new System.Windows.Forms.Label();
             this.inloggadSomLabel = new System.Windows.Forms.Label();
@@ -134,7 +134,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(740, 363);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Senaste";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -144,7 +144,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(740, 363);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Om Druttens förskola";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -167,7 +167,7 @@
             this.kontoTypLabel.TabIndex = 3;
             this.kontoTypLabel.Text = "Personal";
             // 
-            // Start
+            // StartPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,7 +177,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Start";
+            this.Name = "StartPersonal";
             this.Text = "Start";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

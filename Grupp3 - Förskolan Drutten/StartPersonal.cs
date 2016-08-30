@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Grupp3___Förskolan_Drutten
 {
-    public partial class Start : Form
+    public partial class StartPersonal : Form
     {
-        public Start()
+        public StartPersonal()
         {
             InitializeComponent();
         }
