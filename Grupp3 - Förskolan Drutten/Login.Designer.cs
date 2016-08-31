@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
             this.LoggaInButton = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -65,6 +66,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.losenordTextbox);
             this.groupBox2.Controls.Add(this.label1);
@@ -128,6 +130,15 @@
             this.LoggaInButton.UseVisualStyleBackColor = true;
             this.LoggaInButton.Click += new System.EventHandler(this.LoggaInButton_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(70, 28);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(260, 55);
+            this.richTextBox1.TabIndex = 6;
+            this.richTextBox1.Text = "Skriv endast: personal eller: förälder, utan lösenord \nför att komma till respekt" +
+    "ive Form";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +170,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox andvandarnamnTextbox;
         private System.Windows.Forms.Button LoggaInButton;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

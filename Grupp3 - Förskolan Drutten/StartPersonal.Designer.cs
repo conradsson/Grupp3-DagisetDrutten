@@ -37,28 +37,33 @@
             this.tiderButton = new System.Windows.Forms.Button();
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.informationTabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.senasteTabPage = new System.Windows.Forms.TabPage();
+            this.omTabPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.LoggaUtLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.MittKontoTabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             this.informationTabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.MittKontoTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.MittKontoTabControl);
             this.groupBox1.Controls.Add(this.LoggaUtLinkLabel);
             this.groupBox1.Controls.Add(this.inloggadSomNamnLabel);
             this.groupBox1.Controls.Add(this.inloggadSomLabel);
+            this.groupBox1.Controls.Add(this.informationTabControl);
             this.groupBox1.Controls.Add(this.informationButton);
             this.groupBox1.Controls.Add(this.närvaroButton);
             this.groupBox1.Controls.Add(this.tiderButton);
             this.groupBox1.Controls.Add(this.mittKontoButton);
-            this.groupBox1.Controls.Add(this.informationTabControl);
-            this.groupBox1.Location = new System.Drawing.Point(22, 104);
+            this.groupBox1.Location = new System.Drawing.Point(24, 104);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(957, 435);
             this.groupBox1.TabIndex = 0;
@@ -85,69 +90,107 @@
             // 
             // informationButton
             // 
-            this.informationButton.Location = new System.Drawing.Point(18, 71);
+            this.informationButton.BackColor = System.Drawing.Color.White;
+            this.informationButton.FlatAppearance.BorderColor = System.Drawing.Color.SaddleBrown;
+            this.informationButton.FlatAppearance.BorderSize = 2;
+            this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.informationButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informationButton.Location = new System.Drawing.Point(33, 78);
             this.informationButton.Name = "informationButton";
-            this.informationButton.Size = new System.Drawing.Size(163, 31);
-            this.informationButton.TabIndex = 18;
+            this.informationButton.Size = new System.Drawing.Size(163, 45);
+            this.informationButton.TabIndex = 1;
             this.informationButton.Text = "Information";
-            this.informationButton.UseVisualStyleBackColor = true;
+            this.informationButton.UseVisualStyleBackColor = false;
+            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
             // 
             // närvaroButton
             // 
-            this.närvaroButton.Location = new System.Drawing.Point(18, 200);
+            this.närvaroButton.BackColor = System.Drawing.Color.White;
+            this.närvaroButton.FlatAppearance.BorderColor = System.Drawing.Color.SaddleBrown;
+            this.närvaroButton.FlatAppearance.BorderSize = 2;
+            this.närvaroButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.närvaroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.närvaroButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.närvaroButton.Location = new System.Drawing.Point(33, 207);
             this.närvaroButton.Name = "närvaroButton";
-            this.närvaroButton.Size = new System.Drawing.Size(163, 31);
-            this.närvaroButton.TabIndex = 17;
+            this.närvaroButton.Size = new System.Drawing.Size(163, 45);
+            this.närvaroButton.TabIndex = 4;
             this.närvaroButton.Text = "Närvaro";
-            this.närvaroButton.UseVisualStyleBackColor = true;
+            this.närvaroButton.UseVisualStyleBackColor = false;
             // 
             // tiderButton
             // 
-            this.tiderButton.Location = new System.Drawing.Point(18, 157);
+            this.tiderButton.BackColor = System.Drawing.Color.White;
+            this.tiderButton.FlatAppearance.BorderColor = System.Drawing.Color.SaddleBrown;
+            this.tiderButton.FlatAppearance.BorderSize = 2;
+            this.tiderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.tiderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.tiderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tiderButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiderButton.Location = new System.Drawing.Point(33, 164);
             this.tiderButton.Name = "tiderButton";
-            this.tiderButton.Size = new System.Drawing.Size(163, 31);
-            this.tiderButton.TabIndex = 16;
+            this.tiderButton.Size = new System.Drawing.Size(163, 45);
+            this.tiderButton.TabIndex = 3;
             this.tiderButton.Text = "Tider";
-            this.tiderButton.UseVisualStyleBackColor = true;
+            this.tiderButton.UseVisualStyleBackColor = false;
             // 
             // mittKontoButton
             // 
-            this.mittKontoButton.Location = new System.Drawing.Point(18, 114);
+            this.mittKontoButton.BackColor = System.Drawing.Color.White;
+            this.mittKontoButton.FlatAppearance.BorderColor = System.Drawing.Color.SaddleBrown;
+            this.mittKontoButton.FlatAppearance.BorderSize = 2;
+            this.mittKontoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.mittKontoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mittKontoButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mittKontoButton.Location = new System.Drawing.Point(33, 121);
             this.mittKontoButton.Name = "mittKontoButton";
-            this.mittKontoButton.Size = new System.Drawing.Size(163, 31);
-            this.mittKontoButton.TabIndex = 15;
+            this.mittKontoButton.Size = new System.Drawing.Size(163, 45);
+            this.mittKontoButton.TabIndex = 2;
             this.mittKontoButton.Text = "Mitt Konto";
-            this.mittKontoButton.UseVisualStyleBackColor = true;
+            this.mittKontoButton.UseVisualStyleBackColor = false;
+            this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
             // 
             // informationTabControl
             // 
-            this.informationTabControl.Controls.Add(this.tabPage1);
-            this.informationTabControl.Controls.Add(this.tabPage2);
+            this.informationTabControl.Controls.Add(this.senasteTabPage);
+            this.informationTabControl.Controls.Add(this.omTabPage);
             this.informationTabControl.Location = new System.Drawing.Point(193, 30);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
             this.informationTabControl.Size = new System.Drawing.Size(748, 389);
             this.informationTabControl.TabIndex = 14;
+            this.informationTabControl.Visible = false;
             // 
-            // tabPage1
+            // senasteTabPage
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(740, 363);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Senaste";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.senasteTabPage.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.senasteTabPage.Location = new System.Drawing.Point(4, 22);
+            this.senasteTabPage.Name = "senasteTabPage";
+            this.senasteTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.senasteTabPage.Size = new System.Drawing.Size(740, 363);
+            this.senasteTabPage.TabIndex = 0;
+            this.senasteTabPage.Text = "Senaste";
+            this.senasteTabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // omTabPage
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(740, 363);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Om Druttens förskola";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.omTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.omTabPage.Location = new System.Drawing.Point(4, 22);
+            this.omTabPage.Name = "omTabPage";
+            this.omTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.omTabPage.Size = new System.Drawing.Size(740, 363);
+            this.omTabPage.TabIndex = 1;
+            this.omTabPage.Text = "Om Druttens förskola";
+            this.omTabPage.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -157,6 +200,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(113, 86);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.loggaBox_Click);
             // 
             // kontoTypLabel
             // 
@@ -175,9 +219,44 @@
             this.LoggaUtLinkLabel.Location = new System.Drawing.Point(97, 30);
             this.LoggaUtLinkLabel.Name = "LoggaUtLinkLabel";
             this.LoggaUtLinkLabel.Size = new System.Drawing.Size(49, 13);
-            this.LoggaUtLinkLabel.TabIndex = 21;
+            this.LoggaUtLinkLabel.TabIndex = 5;
             this.LoggaUtLinkLabel.TabStop = true;
             this.LoggaUtLinkLabel.Text = "Logga ut";
+            this.LoggaUtLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LoggaUtLinkLabel_LinkClicked);
+            // 
+            // MittKontoTabControl
+            // 
+            this.MittKontoTabControl.Controls.Add(this.tabPage1);
+            this.MittKontoTabControl.Controls.Add(this.tabPage2);
+            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 30);
+            this.MittKontoTabControl.Name = "MittKontoTabControl";
+            this.MittKontoTabControl.SelectedIndex = 0;
+            this.MittKontoTabControl.Size = new System.Drawing.Size(748, 389);
+            this.MittKontoTabControl.TabIndex = 21;
+            this.MittKontoTabControl.Visible = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(740, 363);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Kontouppgifter";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(740, 363);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Mina Barn";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // StartPersonal
             // 
@@ -195,6 +274,7 @@
             this.groupBox1.PerformLayout();
             this.informationTabControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MittKontoTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,8 +292,11 @@
         private System.Windows.Forms.Button tiderButton;
         private System.Windows.Forms.Button mittKontoButton;
         private System.Windows.Forms.TabControl informationTabControl;
+        private System.Windows.Forms.TabPage senasteTabPage;
+        private System.Windows.Forms.TabPage omTabPage;
+        private System.Windows.Forms.LinkLabel LoggaUtLinkLabel;
+        private System.Windows.Forms.TabControl MittKontoTabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.LinkLabel LoggaUtLinkLabel;
     }
 }

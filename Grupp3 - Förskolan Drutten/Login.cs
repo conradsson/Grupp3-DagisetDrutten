@@ -12,6 +12,7 @@ namespace Grupp3___Förskolan_Drutten
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
@@ -23,13 +24,14 @@ namespace Grupp3___Förskolan_Drutten
 
             if(andvandarnamnTextbox.Text == "Förälder" || andvandarnamnTextbox.Text == "förälder")
             {
+                this.Visible = false;
                 StartForalder foralder = new StartForalder();
                 // this.Visible = false;
                 foralder.Show();
             }
             else if(andvandarnamnTextbox.Text == "Personal" || andvandarnamnTextbox.Text == "personal")
             {
-
+                this.Visible = false;
                 StartPersonal personal = new StartPersonal();
                 // this.Visible = false;
                 personal.Show();
@@ -50,6 +52,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 andvandarnamnTextbox.Text = "";
                 andvandarnamnTextbox.ForeColor = System.Drawing.Color.Black;
+               // if()    OM man trycker på Enter så Clickas Logga in knappen
             }
         }
 
@@ -80,6 +83,10 @@ namespace Grupp3___Förskolan_Drutten
                 losenordTextbox.ForeColor = System.Drawing.Color.Gray;
                 
             }
+           /* else if (losenordTextbox.Text == "Lösenord")
+            {
+                 Om texten är Lösenord så ska INTE PasswordChar vara aktiv
+            }*/
         }
     }
 }
