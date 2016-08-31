@@ -41,6 +41,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.kontoTypLabel = new System.Windows.Forms.Label();
+            this.LoggaUtLinkLabel = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.informationTabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
@@ -49,6 +50,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.LoggaUtLinkLabel);
             this.groupBox1.Controls.Add(this.inloggadSomNamnLabel);
             this.groupBox1.Controls.Add(this.inloggadSomLabel);
             this.groupBox1.Controls.Add(this.informationButton);
@@ -65,7 +67,7 @@
             // inloggadSomNamnLabel
             // 
             this.inloggadSomNamnLabel.AutoSize = true;
-            this.inloggadSomNamnLabel.Location = new System.Drawing.Point(97, 16);
+            this.inloggadSomNamnLabel.Location = new System.Drawing.Point(97, 13);
             this.inloggadSomNamnLabel.Name = "inloggadSomNamnLabel";
             this.inloggadSomNamnLabel.Size = new System.Drawing.Size(85, 13);
             this.inloggadSomNamnLabel.TabIndex = 13;
@@ -75,7 +77,7 @@
             // 
             this.inloggadSomLabel.AutoSize = true;
             this.inloggadSomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inloggadSomLabel.Location = new System.Drawing.Point(15, 16);
+            this.inloggadSomLabel.Location = new System.Drawing.Point(15, 13);
             this.inloggadSomLabel.Name = "inloggadSomLabel";
             this.inloggadSomLabel.Size = new System.Drawing.Size(90, 13);
             this.inloggadSomLabel.TabIndex = 12;
@@ -169,6 +171,17 @@
             this.kontoTypLabel.TabIndex = 4;
             this.kontoTypLabel.Text = "Förälder";
             // 
+            // LoggaUtLinkLabel
+            // 
+            this.LoggaUtLinkLabel.AutoSize = true;
+            this.LoggaUtLinkLabel.Location = new System.Drawing.Point(97, 30);
+            this.LoggaUtLinkLabel.Name = "LoggaUtLinkLabel";
+            this.LoggaUtLinkLabel.Size = new System.Drawing.Size(49, 13);
+            this.LoggaUtLinkLabel.TabIndex = 22;
+            this.LoggaUtLinkLabel.TabStop = true;
+            this.LoggaUtLinkLabel.Text = "Logga ut";
+            this.LoggaUtLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LoggaUtLinkLabel_LinkClicked);
+            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label kontoTypLabel;
+        private System.Windows.Forms.LinkLabel LoggaUtLinkLabel;
     }
 }
