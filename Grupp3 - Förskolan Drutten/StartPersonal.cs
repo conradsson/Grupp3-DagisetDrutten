@@ -15,7 +15,7 @@ namespace Grupp3___Förskolan_Drutten
         public StartPersonal()
         {
             InitializeComponent();
-            //  Start Effekter
+            //  Start Effekter.
             informationTabControl.Visible = true;
         }
 

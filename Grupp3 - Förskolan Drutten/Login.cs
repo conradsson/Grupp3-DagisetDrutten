@@ -33,7 +33,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 this.Visible = false;
                 StartPersonal personal = new StartPersonal();
-                // this.Visible = false;
+                // this.Visible = false;.
                 personal.Show();
             }
             else
