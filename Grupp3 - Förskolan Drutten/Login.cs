@@ -51,7 +51,7 @@ namespace Grupp3___Förskolan_Drutten
             if (andvandarnamnTextbox.Text == "Användarnamn")
             {
                 andvandarnamnTextbox.Text = "";
-                andvandarnamnTextbox.ForeColor = System.Drawing.Color.Black;
+                andvandarnamnTextbox.ForeColor = System.Drawing.Color.Blue;
                // if()    OM man trycker på Enter så Clickas Logga in knappen
             }
         }
