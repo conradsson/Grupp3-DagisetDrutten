@@ -20,14 +20,3 @@ C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - För
 C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.StartForalder.resources
 C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3 - Förskolan Drutten.csproj.GenerateResource.Cache
 C:\Users\Johan\Documents\Visual Studio 2015\Projects\Github\dagis3\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.StartPersonal.resources
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\bin\Debug\Grupp3 - Förskolan Drutten.exe.config
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3 - Förskolan Drutten.exe
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3 - Förskolan Drutten.pdb
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\bin\Debug\Grupp3 - Förskolan Drutten.exe
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\bin\Debug\Grupp3 - Förskolan Drutten.pdb
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3 - Förskolan Drutten.csprojResolveAssemblyReference.cache
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.Login.resources
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.Properties.Resources.resources
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.StartPersonal.resources
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3___Förskolan_Drutten.StartForalder.resources
-C:\Users\Hischam\Source\Repos\dagis33\Grupp3 - Förskolan Drutten\obj\Debug\Grupp3 - Förskolan Drutten.csproj.GenerateResource.Cache
