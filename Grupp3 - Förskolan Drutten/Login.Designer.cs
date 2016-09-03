@@ -29,39 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.losenordTextbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
             this.LoggaInButton = new System.Windows.Forms.Button();
+            this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.losenordTextbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // panel1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(126, 58);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(524, 443);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.drutten;
-            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(524, 443);
+            this.panel1.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -78,35 +67,15 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // label2
+            // LoggaInButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Lösenord:";
-            // 
-            // losenordTextbox
-            // 
-            this.losenordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.losenordTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.losenordTextbox.Location = new System.Drawing.Point(126, 154);
-            this.losenordTextbox.Name = "losenordTextbox";
-            this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
-            this.losenordTextbox.TabIndex = 3;
-            this.losenordTextbox.Text = "Lösenord";
-            this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
-            this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Användarnamn:";
+            this.LoggaInButton.Location = new System.Drawing.Point(221, 204);
+            this.LoggaInButton.Name = "LoggaInButton";
+            this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
+            this.LoggaInButton.TabIndex = 1;
+            this.LoggaInButton.Text = "Logga in";
+            this.LoggaInButton.UseVisualStyleBackColor = true;
+            this.LoggaInButton.Click += new System.EventHandler(this.LoggaInButton_Click);
             // 
             // andvandarnamnTextbox
             // 
@@ -120,15 +89,35 @@
             this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
             this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
             // 
-            // LoggaInButton
+            // label1
             // 
-            this.LoggaInButton.Location = new System.Drawing.Point(221, 204);
-            this.LoggaInButton.Name = "LoggaInButton";
-            this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
-            this.LoggaInButton.TabIndex = 1;
-            this.LoggaInButton.Text = "Logga in";
-            this.LoggaInButton.UseVisualStyleBackColor = true;
-            this.LoggaInButton.Click += new System.EventHandler(this.LoggaInButton_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(126, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Användarnamn:";
+            // 
+            // losenordTextbox
+            // 
+            this.losenordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.losenordTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.losenordTextbox.Location = new System.Drawing.Point(126, 154);
+            this.losenordTextbox.Name = "losenordTextbox";
+            this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
+            this.losenordTextbox.TabIndex = 3;
+            this.losenordTextbox.Text = "Lösenord";
+            this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
+            this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(126, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Lösenord:";
             // 
             // richTextBox1
             // 
@@ -139,38 +128,62 @@
             this.richTextBox1.Text = "Skriv endast: personal eller: förälder, utan lösenord \nför att komma till respekt" +
     "ive Form";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
+            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(127, 58);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(524, 443);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(800, 600);
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inloggning";
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox losenordTextbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox andvandarnamnTextbox;
         private System.Windows.Forms.Button LoggaInButton;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

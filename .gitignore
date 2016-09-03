@@ -3,3 +3,12 @@
 ################################################################################
 
 *.config
+*.manifest
+*.exe
+*.cache
+*.txt
+*.cs
+*.dll
+/.vs/Grupp3 - Förskolan Drutten/v14/.suo
+*.resources
+*.pdb

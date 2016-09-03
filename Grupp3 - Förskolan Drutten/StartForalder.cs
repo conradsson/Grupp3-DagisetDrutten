@@ -31,9 +31,9 @@ namespace Grupp3___Förskolan_Drutten
 
         private void mittKontoButton_Click(object sender, EventArgs e)// Mitt Konto-knappen
         {
-            //  .Visable Effekter.
-            informationTabControl.Visible = false;
+            //  .Visable Effekter.            
             MittKontoTabControl.Visible = true;
+            informationTabControl.Visible = false;
         }
 
         private void loggaBox_Click(object sender, EventArgs e)
