@@ -33,23 +33,23 @@
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.informationButton = new System.Windows.Forms.Button();
+            this.närvaroButton = new System.Windows.Forms.Button();
+            this.tiderButton = new System.Windows.Forms.Button();
+            this.mittKontoButton = new System.Windows.Forms.Button();
             this.informationTabControl = new System.Windows.Forms.TabControl();
             this.senasteTabPage = new System.Windows.Forms.TabPage();
             this.omTabPage = new System.Windows.Forms.TabPage();
             this.LoggaUtLinkLabel = new System.Windows.Forms.LinkLabel();
             this.inloggadSomNamnLabel = new System.Windows.Forms.Label();
             this.inloggadSomLabel = new System.Windows.Forms.Label();
-            this.informationButton = new System.Windows.Forms.Button();
-            this.närvaroButton = new System.Windows.Forms.Button();
-            this.tiderButton = new System.Windows.Forms.Button();
-            this.mittKontoButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.loggaBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
             this.informationTabControl.SuspendLayout();
@@ -61,11 +61,11 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Controls.Add(this.MittKontoTabControl);
+            this.groupBox1.Controls.Add(this.informationTabControl);
             this.groupBox1.Controls.Add(this.informationButton);
             this.groupBox1.Controls.Add(this.närvaroButton);
             this.groupBox1.Controls.Add(this.tiderButton);
             this.groupBox1.Controls.Add(this.mittKontoButton);
-            this.groupBox1.Controls.Add(this.informationTabControl);
             this.groupBox1.Controls.Add(this.LoggaUtLinkLabel);
             this.groupBox1.Controls.Add(this.inloggadSomNamnLabel);
             this.groupBox1.Controls.Add(this.inloggadSomLabel);
@@ -109,6 +109,95 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mina Barn";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // informationButton
+            // 
+            this.informationButton.BackColor = System.Drawing.Color.LightGray;
+            this.informationButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten2;
+            this.informationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.informationButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.informationButton.FlatAppearance.BorderSize = 0;
+            this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.informationButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informationButton.ForeColor = System.Drawing.Color.Black;
+            this.informationButton.Location = new System.Drawing.Point(32, 78);
+            this.informationButton.Name = "informationButton";
+            this.informationButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.informationButton.Size = new System.Drawing.Size(163, 45);
+            this.informationButton.TabIndex = 1;
+            this.informationButton.Text = "Information";
+            this.informationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.informationButton.UseVisualStyleBackColor = false;
+            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
+            this.informationButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.informationButton_MouseDown);
+            // 
+            // närvaroButton
+            // 
+            this.närvaroButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("närvaroButton.BackgroundImage")));
+            this.närvaroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.närvaroButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.närvaroButton.FlatAppearance.BorderSize = 0;
+            this.närvaroButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.närvaroButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.närvaroButton.ForeColor = System.Drawing.Color.Black;
+            this.närvaroButton.Location = new System.Drawing.Point(32, 228);
+            this.närvaroButton.Name = "närvaroButton";
+            this.närvaroButton.Size = new System.Drawing.Size(163, 45);
+            this.närvaroButton.TabIndex = 4;
+            this.närvaroButton.Text = "Närvaro";
+            this.närvaroButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.närvaroButton.UseVisualStyleBackColor = false;
+            // 
+            // tiderButton
+            // 
+            this.tiderButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tiderButton.BackgroundImage")));
+            this.tiderButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tiderButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.tiderButton.FlatAppearance.BorderSize = 0;
+            this.tiderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.tiderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tiderButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiderButton.ForeColor = System.Drawing.Color.Black;
+            this.tiderButton.Location = new System.Drawing.Point(32, 178);
+            this.tiderButton.Name = "tiderButton";
+            this.tiderButton.Size = new System.Drawing.Size(163, 45);
+            this.tiderButton.TabIndex = 3;
+            this.tiderButton.Text = "Tider";
+            this.tiderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tiderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.tiderButton.UseVisualStyleBackColor = false;
+            // 
+            // mittKontoButton
+            // 
+            this.mittKontoButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mittKontoButton.BackgroundImage")));
+            this.mittKontoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mittKontoButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.mittKontoButton.FlatAppearance.BorderSize = 0;
+            this.mittKontoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mittKontoButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mittKontoButton.ForeColor = System.Drawing.Color.Black;
+            this.mittKontoButton.Location = new System.Drawing.Point(32, 128);
+            this.mittKontoButton.Name = "mittKontoButton";
+            this.mittKontoButton.Size = new System.Drawing.Size(163, 45);
+            this.mittKontoButton.TabIndex = 2;
+            this.mittKontoButton.Text = "Mitt konto";
+            this.mittKontoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mittKontoButton.UseVisualStyleBackColor = false;
+            this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
             // 
             // informationTabControl
             // 
@@ -177,94 +266,6 @@
             this.inloggadSomLabel.TabIndex = 12;
             this.inloggadSomLabel.Text = "Inloggad som: ";
             // 
-            // informationButton
-            // 
-            this.informationButton.BackColor = System.Drawing.Color.LightGray;
-            this.informationButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten2;
-            this.informationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.informationButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.informationButton.FlatAppearance.BorderSize = 0;
-            this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.informationButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.informationButton.ForeColor = System.Drawing.Color.Black;
-            this.informationButton.Location = new System.Drawing.Point(32, 78);
-            this.informationButton.Name = "informationButton";
-            this.informationButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.informationButton.Size = new System.Drawing.Size(163, 45);
-            this.informationButton.TabIndex = 1;
-            this.informationButton.Text = "Information";
-            this.informationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.informationButton.UseVisualStyleBackColor = false;
-            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
-            // 
-            // närvaroButton
-            // 
-            this.närvaroButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("närvaroButton.BackgroundImage")));
-            this.närvaroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.närvaroButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.närvaroButton.FlatAppearance.BorderSize = 0;
-            this.närvaroButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.närvaroButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.närvaroButton.ForeColor = System.Drawing.Color.Black;
-            this.närvaroButton.Location = new System.Drawing.Point(32, 228);
-            this.närvaroButton.Name = "närvaroButton";
-            this.närvaroButton.Size = new System.Drawing.Size(163, 45);
-            this.närvaroButton.TabIndex = 4;
-            this.närvaroButton.Text = "Närvaro";
-            this.närvaroButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.närvaroButton.UseVisualStyleBackColor = false;
-            // 
-            // tiderButton
-            // 
-            this.tiderButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.tiderButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tiderButton.BackgroundImage")));
-            this.tiderButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tiderButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.tiderButton.FlatAppearance.BorderSize = 0;
-            this.tiderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.tiderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.tiderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.tiderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tiderButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiderButton.ForeColor = System.Drawing.Color.Black;
-            this.tiderButton.Location = new System.Drawing.Point(32, 178);
-            this.tiderButton.Name = "tiderButton";
-            this.tiderButton.Size = new System.Drawing.Size(163, 45);
-            this.tiderButton.TabIndex = 3;
-            this.tiderButton.Text = "Tider";
-            this.tiderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tiderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.tiderButton.UseVisualStyleBackColor = false;
-            // 
-            // mittKontoButton
-            // 
-            this.mittKontoButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mittKontoButton.BackgroundImage")));
-            this.mittKontoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mittKontoButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.mittKontoButton.FlatAppearance.BorderSize = 0;
-            this.mittKontoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mittKontoButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mittKontoButton.ForeColor = System.Drawing.Color.Black;
-            this.mittKontoButton.Location = new System.Drawing.Point(32, 128);
-            this.mittKontoButton.Name = "mittKontoButton";
-            this.mittKontoButton.Size = new System.Drawing.Size(163, 45);
-            this.mittKontoButton.TabIndex = 2;
-            this.mittKontoButton.Text = "Mitt konto";
-            this.mittKontoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.mittKontoButton.UseVisualStyleBackColor = false;
-            this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -277,6 +278,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
             this.panel1.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(4, 246);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "IKON";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(3, 196);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "IKON";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(3, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "IKON";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(3, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "IKON";
             // 
             // kontoTypLabel
             // 
@@ -300,46 +341,6 @@
             this.loggaBox.TabIndex = 1;
             this.loggaBox.TabStop = false;
             this.loggaBox.Click += new System.EventHandler(this.loggaBox_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(3, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "IKON";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(3, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "IKON";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(3, 196);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "IKON";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(4, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "IKON";
             // 
             // StartForalder
             // 

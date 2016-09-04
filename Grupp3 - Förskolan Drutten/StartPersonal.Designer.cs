@@ -35,26 +35,26 @@
             this.senasteTabPage = new System.Windows.Forms.TabPage();
             this.omTabPage = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MittKontoTabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.LoggaUtLinkLabel = new System.Windows.Forms.LinkLabel();
             this.inloggadSomNamnLabel = new System.Windows.Forms.Label();
             this.inloggadSomLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.informationButton = new System.Windows.Forms.Button();
             this.närvaroButton = new System.Windows.Forms.Button();
             this.tiderButton = new System.Windows.Forms.Button();
             this.mittKontoButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kontoTypLabel
@@ -130,6 +130,40 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // MittKontoTabControl
+            // 
+            this.MittKontoTabControl.Controls.Add(this.tabPage1);
+            this.MittKontoTabControl.Controls.Add(this.tabPage2);
+            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 30);
+            this.MittKontoTabControl.Name = "MittKontoTabControl";
+            this.MittKontoTabControl.SelectedIndex = 0;
+            this.MittKontoTabControl.Size = new System.Drawing.Size(748, 389);
+            this.MittKontoTabControl.TabIndex = 21;
+            this.MittKontoTabControl.Visible = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(740, 363);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Kontouppgifter";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(740, 363);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Mina Barn";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // LoggaUtLinkLabel
             // 
             this.LoggaUtLinkLabel.AutoSize = true;
@@ -181,6 +215,46 @@
             this.panel1.Size = new System.Drawing.Size(957, 435);
             this.panel1.TabIndex = 4;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(6, 246);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "IKON";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(3, 195);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "IKON";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(3, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "IKON";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(3, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "IKON";
+            // 
             // informationButton
             // 
             this.informationButton.BackColor = System.Drawing.Color.LightGray;
@@ -203,6 +277,7 @@
             this.informationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.informationButton.UseVisualStyleBackColor = false;
             this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
+            this.informationButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.informationButton_MouseDown);
             // 
             // närvaroButton
             // 
@@ -224,6 +299,8 @@
             this.närvaroButton.Text = "Närvaro";
             this.närvaroButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.närvaroButton.UseVisualStyleBackColor = false;
+            this.närvaroButton.Click += new System.EventHandler(this.närvaroButton_Click);
+            this.närvaroButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.närvaroButton_MouseDown);
             // 
             // tiderButton
             // 
@@ -246,6 +323,8 @@
             this.tiderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.tiderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.tiderButton.UseVisualStyleBackColor = false;
+            this.tiderButton.Click += new System.EventHandler(this.tiderButton_Click);
+            this.tiderButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tiderButton_MouseDown);
             // 
             // mittKontoButton
             // 
@@ -268,80 +347,7 @@
             this.mittKontoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mittKontoButton.UseVisualStyleBackColor = false;
             this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(3, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "IKON";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(3, 146);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "IKON";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(3, 195);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "IKON";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(6, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "IKON";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(740, 363);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mina Barn";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(740, 363);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Kontouppgifter";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // MittKontoTabControl
-            // 
-            this.MittKontoTabControl.Controls.Add(this.tabPage1);
-            this.MittKontoTabControl.Controls.Add(this.tabPage2);
-            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 30);
-            this.MittKontoTabControl.Name = "MittKontoTabControl";
-            this.MittKontoTabControl.SelectedIndex = 0;
-            this.MittKontoTabControl.Size = new System.Drawing.Size(748, 389);
-            this.MittKontoTabControl.TabIndex = 21;
-            this.MittKontoTabControl.Visible = false;
+            this.mittKontoButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mittKontoButton_MouseDown);
             // 
             // StartPersonal
             // 
@@ -364,9 +370,9 @@
             this.informationTabControl.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.MittKontoTabControl.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.MittKontoTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

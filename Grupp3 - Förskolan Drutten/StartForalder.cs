@@ -27,6 +27,11 @@ namespace Grupp3___Förskolan_Drutten
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
+            informationButton.BackgroundImage = Properties.Resources.ButtonDrutten2;
+        }
+        private void informationButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            informationButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
         }
 
         private void mittKontoButton_Click(object sender, EventArgs e)// Mitt Konto-knappen
@@ -34,6 +39,29 @@ namespace Grupp3___Förskolan_Drutten
             //  .Visable Effekter.            
             MittKontoTabControl.Visible = true;
             informationTabControl.Visible = false;
+            mittKontoButton.BackgroundImage = Properties.Resources.ButtonDrutten2;
+        }
+        private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            mittKontoButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
+        }
+
+        private void tiderButton_Click(object sender, EventArgs e)
+        {
+            tiderButton.BackgroundImage = Properties.Resources.ButtonDrutten2;
+        }
+        private void tiderButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            tiderButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
+        }
+
+        private void närvaroButton_Click(object sender, EventArgs e)
+        {
+            närvaroButton.BackgroundImage = Properties.Resources.ButtonDrutten2;
+        }
+        private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            närvaroButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
         }
 
         private void loggaBox_Click(object sender, EventArgs e)
@@ -57,5 +85,7 @@ namespace Grupp3___Förskolan_Drutten
  
            
         }
+
+
     }
 }
