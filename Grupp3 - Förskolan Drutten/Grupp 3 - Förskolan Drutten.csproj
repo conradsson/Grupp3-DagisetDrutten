@@ -162,6 +162,21 @@
   <ItemGroup>
     <None Include="Resources\ButtonDruttenPushed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parentIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clockIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\childIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

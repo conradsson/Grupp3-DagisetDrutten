@@ -121,40 +121,55 @@
   <data name="DruttenMeny1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DruttenMeny1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonDrutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="parentIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\parentIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonDrutten1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Background1024x600" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background1024x600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ButtonDrutten2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButtonDrutten1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DruttenMeny" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DruttenMeny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BlådruttenMellan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlådruttenMellan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="druttenMindre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\druttenMindre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="druttenMellan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\druttenMellan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Blådrutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blådrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="drutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ButtonDruttenPushed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonDruttenPushed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonDruttenPushed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonDruttenPushed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonDruttenPushed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButtonDruttenPushed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DruttenMeny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DruttenMeny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background1024x600" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background1024x600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notesIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notesIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blådrutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blådrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonDrutten1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="drutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clockIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clockIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonDrutten2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonDrutten1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlådruttenMellan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlådruttenMellan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonDrutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druttenMellan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\druttenMellan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druttenMindre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\druttenMindre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="childIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\childIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
