@@ -177,6 +177,48 @@
   <ItemGroup>
     <None Include="Resources\childIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informationButtonDrutten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mittKontoButtonDrutten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiderButtonDrutten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\närvaroButtonDrutten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informationButtonDruttenPushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mittKontoButtonPushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\närvaroButtonDruttenPushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiderButtonDruttenPushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barnButtonDrutten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barnButtonDruttenPushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inloggadButtonDrutten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inloggadButtonPushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loggaUtButtonDrutten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loggaUtButtonDruttenPushed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -73,6 +73,26 @@ namespace Grupp3___Förskolan_Drutten.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barnButtonDrutten {
+            get {
+                object obj = ResourceManager.GetObject("barnButtonDrutten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barnButtonDruttenPushed {
+            get {
+                object obj = ResourceManager.GetObject("barnButtonDruttenPushed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Blådrutten {
             get {
                 object obj = ResourceManager.GetObject("Blådrutten", resourceCulture);
@@ -223,6 +243,106 @@ namespace Grupp3___Förskolan_Drutten.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap informationButtonDrutten {
+            get {
+                object obj = ResourceManager.GetObject("informationButtonDrutten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap informationButtonDruttenPushed {
+            get {
+                object obj = ResourceManager.GetObject("informationButtonDruttenPushed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inloggadButtonDrutten {
+            get {
+                object obj = ResourceManager.GetObject("inloggadButtonDrutten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inloggadButtonPushed {
+            get {
+                object obj = ResourceManager.GetObject("inloggadButtonPushed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loggaUtButtonDrutten {
+            get {
+                object obj = ResourceManager.GetObject("loggaUtButtonDrutten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loggaUtButtonDruttenPushed {
+            get {
+                object obj = ResourceManager.GetObject("loggaUtButtonDruttenPushed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mittKontoButtonDrutten {
+            get {
+                object obj = ResourceManager.GetObject("mittKontoButtonDrutten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mittKontoButtonPushed {
+            get {
+                object obj = ResourceManager.GetObject("mittKontoButtonPushed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap närvaroButtonDrutten {
+            get {
+                object obj = ResourceManager.GetObject("närvaroButtonDrutten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap närvaroButtonDruttenPushed {
+            get {
+                object obj = ResourceManager.GetObject("närvaroButtonDruttenPushed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap notesIcon {
             get {
                 object obj = ResourceManager.GetObject("notesIcon", resourceCulture);
@@ -236,6 +356,26 @@ namespace Grupp3___Förskolan_Drutten.Properties {
         internal static System.Drawing.Bitmap parentIcon {
             get {
                 object obj = ResourceManager.GetObject("parentIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tiderButtonDrutten {
+            get {
+                object obj = ResourceManager.GetObject("tiderButtonDrutten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tiderButtonDruttenPushed {
+            get {
+                object obj = ResourceManager.GetObject("tiderButtonDruttenPushed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

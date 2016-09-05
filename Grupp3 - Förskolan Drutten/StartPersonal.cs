@@ -29,11 +29,11 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
             BarntabControl.Visible = false;
             NärvarotabControl.Visible = false;
-            informationButton.BackgroundImage = Properties.Resources.ButtonDrutten2;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
         }
         private void informationButton_MouseDown(object sender, MouseEventArgs e)
         {
-            informationButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDruttenPushed;
         }
 
         private void mittKontoButton_Click(object sender, EventArgs e)// Mitt Konto-knappen
@@ -43,11 +43,11 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             BarntabControl.Visible = false;
             NärvarotabControl.Visible = false;
-            mittKontoButton.BackgroundImage = Properties.Resources.ButtonDrutten2;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
         {
-            mittKontoButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonPushed;
         }
 
         private void barnButton_Click(object sender, EventArgs e) // Barn-knappen
@@ -57,20 +57,20 @@ namespace Grupp3___Förskolan_Drutten
             NärvarotabControl.Visible = false;
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
-            barnButton.BackgroundImage = Properties.Resources.ButtonDrutten2;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
         }
         private void barnButton_MouseDown(object sender, MouseEventArgs e)
         {
-            barnButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonDruttenPushed;
         }
 
         private void tiderButton_Click(object sender, EventArgs e) // Tider-knappen
         {
-
+            barnButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
         }
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
         {
-            barnButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
+            barnButton.BackgroundImage = Properties.Resources.tiderButtonDruttenPushed;
         }
 
         private void närvaroButton_Click(object sender, EventArgs e) // Närvaro-knappen
@@ -80,12 +80,12 @@ namespace Grupp3___Förskolan_Drutten
             BarntabControl.Visible = false;
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
-            närvaroButton.BackgroundImage = Properties.Resources.ButtonDrutten2;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
 
-            närvaroButton.BackgroundImage = Properties.Resources.ButtonDruttenPushed1;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDruttenPushed;
         }
 
         private void loggaBox_Click(object sender, EventArgs e)// Drutten loggan
@@ -95,9 +95,10 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
         }
 
-        private void LoggaUtLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
 
+        private void loggaUtButton_Click(object sender, EventArgs e)
+        {
+            loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonDrutten;
 
             DialogResult result = MessageBox.Show("Är du säker på att du vill logga ut?", "Logga ut", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -107,6 +108,24 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
+        private void loggaUtButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonDruttenPushed;
+        }
 
+        private void inloggadButton_Click(object sender, EventArgs e)
+        {
+            //  .Visable Effekter
+            MittKontoTabControl.Visible = true;
+            informationTabControl.Visible = false;
+            BarntabControl.Visible = false;
+            NärvarotabControl.Visible = false;
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDrutten;
+        }
+
+        private void inloggadButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonPushed;
+        }
     }
 }
