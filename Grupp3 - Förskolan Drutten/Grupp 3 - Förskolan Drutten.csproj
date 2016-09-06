@@ -85,6 +85,7 @@
     <Compile Include="StartForalder.Designer.cs">
       <DependentUpon>StartForalder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
