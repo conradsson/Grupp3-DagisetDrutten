@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForalder));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
+            this.inloggadButton = new System.Windows.Forms.Button();
+            this.loggaUtButton = new System.Windows.Forms.Button();
             this.TidertabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
@@ -94,9 +97,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.loggaBox = new System.Windows.Forms.PictureBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.inloggadButton = new System.Windows.Forms.Button();
-            this.loggaUtButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -140,6 +141,64 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
             this.panel1.TabIndex = 17;
+            // 
+            // label42
+            // 
+            this.label42.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Gainsboro;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.label42.Location = new System.Drawing.Point(148, 12);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(22, 12);
+            this.label42.TabIndex = 29;
+            this.label42.Text = "ankl";
+            // 
+            // inloggadButton
+            // 
+            this.inloggadButton.BackColor = System.Drawing.Color.Transparent;
+            this.inloggadButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.inloggadButtonDrutten;
+            this.inloggadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.inloggadButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.inloggadButton.FlatAppearance.BorderSize = 0;
+            this.inloggadButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.inloggadButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.inloggadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.inloggadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inloggadButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inloggadButton.ForeColor = System.Drawing.Color.Black;
+            this.inloggadButton.Location = new System.Drawing.Point(102, 5);
+            this.inloggadButton.Name = "inloggadButton";
+            this.inloggadButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.inloggadButton.Size = new System.Drawing.Size(94, 28);
+            this.inloggadButton.TabIndex = 28;
+            this.inloggadButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.inloggadButton.UseVisualStyleBackColor = false;
+            this.inloggadButton.Click += new System.EventHandler(this.inloggadButton_Click);
+            this.inloggadButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.inloggadButton_MouseDown);
+            // 
+            // loggaUtButton
+            // 
+            this.loggaUtButton.BackColor = System.Drawing.Color.Transparent;
+            this.loggaUtButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.loggaUtButtonDrutten;
+            this.loggaUtButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loggaUtButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.loggaUtButton.FlatAppearance.BorderSize = 0;
+            this.loggaUtButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.loggaUtButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.loggaUtButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.loggaUtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loggaUtButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggaUtButton.ForeColor = System.Drawing.Color.Black;
+            this.loggaUtButton.Location = new System.Drawing.Point(6, 5);
+            this.loggaUtButton.Name = "loggaUtButton";
+            this.loggaUtButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.loggaUtButton.Size = new System.Drawing.Size(94, 28);
+            this.loggaUtButton.TabIndex = 27;
+            this.loggaUtButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loggaUtButton.UseVisualStyleBackColor = false;
+            this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
+            this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
             // 
             // TidertabControl
             // 
@@ -806,63 +865,17 @@
             this.loggaBox.TabStop = false;
             this.loggaBox.Click += new System.EventHandler(this.loggaBox_Click);
             // 
-            // label42
+            // exitButton
             // 
-            this.label42.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Gainsboro;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label42.Location = new System.Drawing.Point(148, 12);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(22, 12);
-            this.label42.TabIndex = 29;
-            this.label42.Text = "ankl";
-            // 
-            // inloggadButton
-            // 
-            this.inloggadButton.BackColor = System.Drawing.Color.Transparent;
-            this.inloggadButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.inloggadButtonDrutten;
-            this.inloggadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.inloggadButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.inloggadButton.FlatAppearance.BorderSize = 0;
-            this.inloggadButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.inloggadButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.inloggadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.inloggadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inloggadButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inloggadButton.ForeColor = System.Drawing.Color.Black;
-            this.inloggadButton.Location = new System.Drawing.Point(102, 5);
-            this.inloggadButton.Name = "inloggadButton";
-            this.inloggadButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.inloggadButton.Size = new System.Drawing.Size(94, 28);
-            this.inloggadButton.TabIndex = 28;
-            this.inloggadButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inloggadButton.UseVisualStyleBackColor = false;
-            this.inloggadButton.Click += new System.EventHandler(this.inloggadButton_Click);
-            this.inloggadButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.inloggadButton_MouseDown);
-            // 
-            // loggaUtButton
-            // 
-            this.loggaUtButton.BackColor = System.Drawing.Color.Transparent;
-            this.loggaUtButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.loggaUtButtonDrutten;
-            this.loggaUtButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.loggaUtButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.loggaUtButton.FlatAppearance.BorderSize = 0;
-            this.loggaUtButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.loggaUtButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.loggaUtButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.loggaUtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loggaUtButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loggaUtButton.ForeColor = System.Drawing.Color.Black;
-            this.loggaUtButton.Location = new System.Drawing.Point(6, 5);
-            this.loggaUtButton.Name = "loggaUtButton";
-            this.loggaUtButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.loggaUtButton.Size = new System.Drawing.Size(94, 28);
-            this.loggaUtButton.TabIndex = 27;
-            this.loggaUtButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.loggaUtButton.UseVisualStyleBackColor = false;
-            this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
-            this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.Red;
+            this.exitButton.Location = new System.Drawing.Point(972, 12);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(24, 23);
+            this.exitButton.TabIndex = 5;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // StartForalder
             // 
@@ -871,6 +884,7 @@
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.Background1024x600;
             this.ClientSize = new System.Drawing.Size(1008, 561);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.kontoTypLabel);
             this.Controls.Add(this.loggaBox);
             this.Controls.Add(this.groupBox1);
@@ -975,5 +989,6 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Button inloggadButton;
         private System.Windows.Forms.Button loggaUtButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }

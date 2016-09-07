@@ -26,14 +26,13 @@ namespace Grupp3___Förskolan_Drutten
             {
                 this.Visible = false;
                 StartForalder foralder = new StartForalder();
-                // this.Visible = false;.
                 foralder.Show();
+
             }
-            else if(andvandarnamnTextbox.Text == "Personal" || andvandarnamnTextbox.Text == "personal")
+            else if(andvandarnamnTextbox.Text.ToUpper() == "PERSONAL")
             {
                 this.Visible = false;
                 StartPersonal personal = new StartPersonal();
-                // this.Visible = false;.
                 personal.Show();
             }
             else

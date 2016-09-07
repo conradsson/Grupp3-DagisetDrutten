@@ -127,5 +127,14 @@ namespace Grupp3___Förskolan_Drutten
         {
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonPushed;
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Är du säker på att du vill avsluta? ", "Avsluta", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
