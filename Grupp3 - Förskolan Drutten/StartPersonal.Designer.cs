@@ -87,35 +87,17 @@
             this.BarntabControl = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.barnAvdl2ListBox = new System.Windows.Forms.ListBox();
             this.label39 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.barnAvdl1ListBox = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -177,7 +159,7 @@
             // informationTabControl
             // 
             this.informationTabControl.Controls.Add(this.senasteTabPage);
-            this.informationTabControl.Location = new System.Drawing.Point(193, 30);
+            this.informationTabControl.Location = new System.Drawing.Point(193, 190);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
             this.informationTabControl.Size = new System.Drawing.Size(748, 389);
@@ -224,7 +206,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(560, 186);
             this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.Text = "";
             // 
             // groupBox1
             // 
@@ -242,6 +224,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.label42);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.informationButton);
@@ -249,10 +232,9 @@
             this.panel1.Controls.Add(this.barnButton);
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.NärvarotabControl);
-            this.panel1.Controls.Add(this.BarntabControl);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
+            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -262,13 +244,13 @@
             // 
             this.label42.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Gainsboro;
+            this.label42.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.label42.Location = new System.Drawing.Point(148, 12);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(22, 12);
+            this.label42.Size = new System.Drawing.Size(113, 12);
             this.label42.TabIndex = 26;
-            this.label42.Text = "ankl";
+            this.label42.Text = "inloggadesAnvändarnamn";
             // 
             // informationButton
             // 
@@ -365,7 +347,7 @@
             this.NärvarotabControl.Controls.Add(this.tabPage5);
             this.NärvarotabControl.Controls.Add(this.tabPage6);
             this.NärvarotabControl.Controls.Add(this.tabPage2);
-            this.NärvarotabControl.Location = new System.Drawing.Point(193, 30);
+            this.NärvarotabControl.Location = new System.Drawing.Point(181, 60);
             this.NärvarotabControl.Name = "NärvarotabControl";
             this.NärvarotabControl.SelectedIndex = 0;
             this.NärvarotabControl.Size = new System.Drawing.Size(748, 389);
@@ -395,7 +377,7 @@
             // 
             // monthCalendar2
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(250, 12);
+            this.monthCalendar2.Location = new System.Drawing.Point(220, 15);
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.TabIndex = 13;
             this.monthCalendar2.TodayDate = new System.DateTime(2016, 9, 7, 0, 0, 0, 0);
@@ -607,7 +589,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(231, 14);
+            this.monthCalendar1.Location = new System.Drawing.Point(220, 15);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             this.monthCalendar1.TodayDate = new System.DateTime(2016, 9, 7, 0, 0, 0, 0);
@@ -615,7 +597,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 26);
+            this.label1.Location = new System.Drawing.Point(41, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 3;
@@ -624,7 +606,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(46, 74);
+            this.radioButton2.Location = new System.Drawing.Point(44, 74);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(81, 17);
             this.radioButton2.TabIndex = 2;
@@ -635,7 +617,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(46, 51);
+            this.radioButton1.Location = new System.Drawing.Point(44, 51);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(81, 17);
             this.radioButton1.TabIndex = 1;
@@ -702,7 +684,7 @@
             // 
             // monthCalendar3
             // 
-            this.monthCalendar3.Location = new System.Drawing.Point(250, 13);
+            this.monthCalendar3.Location = new System.Drawing.Point(220, 15);
             this.monthCalendar3.Name = "monthCalendar3";
             this.monthCalendar3.TabIndex = 21;
             this.monthCalendar3.TodayDate = new System.DateTime(2016, 9, 7, 0, 0, 0, 0);
@@ -710,7 +692,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(62, 25);
+            this.label41.Location = new System.Drawing.Point(41, 26);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(76, 13);
             this.label41.TabIndex = 20;
@@ -719,7 +701,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(65, 73);
+            this.radioButton5.Location = new System.Drawing.Point(44, 74);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(81, 17);
             this.radioButton5.TabIndex = 19;
@@ -730,7 +712,7 @@
             // 
             this.radioButton6.AutoSize = true;
             this.radioButton6.Checked = true;
-            this.radioButton6.Location = new System.Drawing.Point(65, 50);
+            this.radioButton6.Location = new System.Drawing.Point(44, 51);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(81, 17);
             this.radioButton6.TabIndex = 18;
@@ -753,18 +735,10 @@
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage4.Controls.Add(this.label27);
-            this.tabPage4.Controls.Add(this.label28);
-            this.tabPage4.Controls.Add(this.richTextBox3);
-            this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Controls.Add(this.label30);
+            this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
             this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.label32);
-            this.tabPage4.Controls.Add(this.label33);
-            this.tabPage4.Controls.Add(this.label34);
             this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.label36);
-            this.tabPage4.Controls.Add(this.label37);
-            this.tabPage4.Controls.Add(this.listBox2);
+            this.tabPage4.Controls.Add(this.barnAvdl2ListBox);
             this.tabPage4.Controls.Add(this.label39);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -777,129 +751,52 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(279, 219);
+            this.label27.Location = new System.Drawing.Point(268, 218);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(38, 13);
             this.label27.TabIndex = 30;
             this.label27.Text = "Övrigt:";
             // 
-            // label28
+            // barnOverigtrichTextBox
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(283, 251);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(140, 26);
-            this.label28.TabIndex = 29;
-            this.label28.Text = "Mikael är allergiskt mot gräs.\r\nFår INTE fotograferas.";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(275, 241);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(288, 96);
-            this.richTextBox3.TabIndex = 28;
-            this.richTextBox3.Text = "";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(499, 115);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(93, 15);
-            this.label29.TabIndex = 27;
-            this.label29.Text = "073 - 333 33 33";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(499, 94);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(96, 15);
-            this.label30.TabIndex = 26;
-            this.label30.Text = "Ullaredsvägen 1";
+            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(275, 240);
+            this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
+            this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 96);
+            this.barnOverigtrichTextBox.TabIndex = 28;
+            this.barnOverigtrichTextBox.Text = "";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(466, 40);
+            this.label31.Location = new System.Drawing.Point(466, 39);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(160, 20);
             this.label31.TabIndex = 25;
             this.label31.Text = "Vårdnadshavare 2:";
             // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(279, 115);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(93, 15);
-            this.label32.TabIndex = 24;
-            this.label32.Text = "070 - 000 00 00";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(279, 94);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(96, 15);
-            this.label33.TabIndex = 23;
-            this.label33.Text = "Ullaredsvägen 1";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(279, 74);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(115, 15);
-            this.label34.TabIndex = 22;
-            this.label34.Text = "Ola-Conny Karlsson";
-            // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(246, 40);
+            this.label35.Location = new System.Drawing.Point(246, 39);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(160, 20);
             this.label35.TabIndex = 21;
             this.label35.Text = "Vårdnadshavare 1:";
             // 
-            // label36
+            // barnAvdl2ListBox
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(46, 44);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(92, 13);
-            this.label36.TabIndex = 20;
-            this.label36.Text = "Mikael Persbrandt";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(46, 67);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(80, 13);
-            this.label37.TabIndex = 19;
-            this.label37.Text = "Thorsten Flinck";
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(40, 40);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 134);
-            this.listBox2.TabIndex = 17;
+            this.barnAvdl2ListBox.FormattingEnabled = true;
+            this.barnAvdl2ListBox.Location = new System.Drawing.Point(40, 39);
+            this.barnAvdl2ListBox.Name = "barnAvdl2ListBox";
+            this.barnAvdl2ListBox.Size = new System.Drawing.Size(120, 134);
+            this.barnAvdl2ListBox.TabIndex = 17;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(35, 21);
+            this.label39.Location = new System.Drawing.Point(35, 20);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(32, 13);
             this.label39.TabIndex = 16;
@@ -909,20 +806,10 @@
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage3.Controls.Add(this.label26);
-            this.tabPage3.Controls.Add(this.label25);
             this.tabPage3.Controls.Add(this.richTextBox2);
-            this.tabPage3.Controls.Add(this.label21);
-            this.tabPage3.Controls.Add(this.label22);
-            this.tabPage3.Controls.Add(this.label23);
             this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.listBox1);
+            this.tabPage3.Controls.Add(this.barnAvdl1ListBox);
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -936,148 +823,52 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(279, 225);
+            this.label26.Location = new System.Drawing.Point(268, 218);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(38, 13);
             this.label26.TabIndex = 15;
             this.label26.Text = "Övrigt:";
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(283, 257);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(156, 26);
-            this.label25.TabIndex = 14;
-            this.label25.Text = "Maja är allergiskt mot jordnötter.\r\nFår fotograferas.";
-            // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(275, 247);
+            this.richTextBox2.Location = new System.Drawing.Point(275, 240);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(288, 96);
             this.richTextBox2.TabIndex = 13;
             this.richTextBox2.Text = "";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(499, 121);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(93, 15);
-            this.label21.TabIndex = 12;
-            this.label21.Text = "073 - 333 33 33";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(499, 100);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(96, 15);
-            this.label22.TabIndex = 11;
-            this.label22.Text = "Ullaredsvägen 1";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(499, 80);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(101, 15);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "Morgan Karlsson";
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(466, 46);
+            this.label24.Location = new System.Drawing.Point(466, 39);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(160, 20);
             this.label24.TabIndex = 9;
             this.label24.Text = "Vårdnadshavare 2:";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(279, 121);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(93, 15);
-            this.label20.TabIndex = 8;
-            this.label20.Text = "070 - 000 00 00";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(279, 100);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(96, 15);
-            this.label19.TabIndex = 7;
-            this.label19.Text = "Ullaredsvägen 1";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(279, 80);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(115, 15);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "Ola-Conny Karlsson";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(246, 46);
+            this.label17.Location = new System.Drawing.Point(246, 39);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(160, 20);
             this.label17.TabIndex = 5;
             this.label17.Text = "Vårdnadshavare 1:";
             // 
-            // label16
+            // barnAvdl1ListBox
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(46, 50);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(79, 13);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Maja Gräddnos";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(46, 73);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 13);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Pelle Svanslös";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(46, 92);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 13);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Lisa Eriksson";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(40, 46);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 134);
-            this.listBox1.TabIndex = 1;
+            this.barnAvdl1ListBox.FormattingEnabled = true;
+            this.barnAvdl1ListBox.Location = new System.Drawing.Point(40, 39);
+            this.barnAvdl1ListBox.Name = "barnAvdl1ListBox";
+            this.barnAvdl1ListBox.Size = new System.Drawing.Size(120, 134);
+            this.barnAvdl1ListBox.TabIndex = 1;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(35, 27);
+            this.label13.Location = new System.Drawing.Point(35, 20);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 13);
             this.label13.TabIndex = 0;
@@ -1118,7 +909,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(81, 198);
+            this.label7.Location = new System.Drawing.Point(77, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 9;
@@ -1126,7 +917,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 195);
+            this.textBox5.Location = new System.Drawing.Point(79, 211);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 8;
@@ -1134,7 +925,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 162);
+            this.label5.Location = new System.Drawing.Point(77, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 7;
@@ -1142,7 +933,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 159);
+            this.textBox3.Location = new System.Drawing.Point(79, 173);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 6;
@@ -1150,7 +941,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(76, 129);
+            this.label6.Location = new System.Drawing.Point(76, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 5;
@@ -1158,7 +949,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 126);
+            this.textBox4.Location = new System.Drawing.Point(79, 135);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 4;
@@ -1166,7 +957,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 95);
+            this.label4.Location = new System.Drawing.Point(76, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 3;
@@ -1174,7 +965,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 92);
+            this.textBox2.Location = new System.Drawing.Point(79, 97);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
@@ -1182,7 +973,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 62);
+            this.label3.Location = new System.Drawing.Point(76, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 1;
@@ -1190,7 +981,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 59);
+            this.textBox1.Location = new System.Drawing.Point(79, 56);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
@@ -1360,34 +1151,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HämtasAv;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox barnAvdl1ListBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.RichTextBox barnOverigtrichTextBox;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox barnAvdl2ListBox;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.MonthCalendar monthCalendar2;
         private System.Windows.Forms.TabPage tabPage2;
