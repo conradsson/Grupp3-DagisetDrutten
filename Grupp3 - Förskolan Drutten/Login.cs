@@ -22,7 +22,7 @@ namespace Grupp3___Förskolan_Drutten
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
 
-            if(andvandarnamnTextbox.Text == "Förälder" || andvandarnamnTextbox.Text == "förälder")
+            if(andvandarnamnTextbox.Text.ToUpper() == "FÖRÄLDER")
             {
                 this.Visible = false;
                 StartForalder foralder = new StartForalder();
