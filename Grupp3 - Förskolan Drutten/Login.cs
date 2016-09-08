@@ -18,6 +18,7 @@ namespace Grupp3___Förskolan_Drutten
             InitializeComponent();
         }
 
+        Postgres p = new Postgres();
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
@@ -109,7 +110,9 @@ namespace Grupp3___Förskolan_Drutten
         private void TestJohanButton_Click(object sender, EventArgs e)
         {
 
-            testJohanListBox.DataSource = p.HämtaAnvändare();
+            //testJohanListBox.DataSource = p.HämtaAnvändare();
+
+
 
         }
 
