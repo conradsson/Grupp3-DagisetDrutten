@@ -113,22 +113,6 @@ namespace Grupp3___Förskolan_Drutten
             
             p.KontrolleraAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
 
-            //if (p.inskrivetAnvändarnamn == person.Användarnamn && p.inskrivetLösenord == person.Lösenord)
-            //{
-            //    MessageBox.Show("Inloggningen lyckades!");
-            //}
-            //else
-            //{
-            //    if(p.inskrivetAnvändarnamn != person.Användarnamn)
-            //    {
-            //        MessageBox.Show("Felaktigt användarnamn");
-            //    }
-            //    else if(p.inskrivetLösenord != person.Lösenord)
-            //    {
-            //        MessageBox.Show("Felaktigt lösenord");
-            //    }
-            //}
-            //testJohanListBox.DataSource = p.HämtaAnvändare();
 
 
 
