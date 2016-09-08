@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avdelning.cs" />
     <Compile Include="Barn.cs" />
     <Compile Include="Errorhandler.cs" />
     <Compile Include="Login.cs">
