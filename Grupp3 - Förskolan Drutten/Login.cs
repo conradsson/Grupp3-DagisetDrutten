@@ -103,8 +103,13 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         // Johan 
+
+        Postgres p = new Postgres();
+
         private void TestJohanButton_Click(object sender, EventArgs e)
         {
+
+            testJohanListBox.DataSource = p.HämtaAnvändare();
 
         }
 

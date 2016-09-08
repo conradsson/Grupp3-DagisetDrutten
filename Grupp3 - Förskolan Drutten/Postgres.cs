@@ -115,10 +115,9 @@ namespace Grupp3___Förskolan_Drutten
 
 
 
-        // Johan
-
-
-
+            // Johan
+      
+     
         public List<Person> HämtaAnvändare()
         {
             string sql = "SELECT * FROM dagis.person dp";
@@ -164,10 +163,10 @@ namespace Grupp3___Förskolan_Drutten
 
         //Hischam
 
-        public void VisaNärvaro(string aktuelltDatum)
+        public void  VisaNärvaro (string aktuelltDatum)
         {
-            string sql = "select * from dagis.narvaro where datum = ('" + aktuelltDatum + "')";
-
+            string sql = "select * from dagis.narvaro where datum = ('" + aktuelltDatum + "')";  
+         
             tabell.Clear();
             tabell = sqlFråga(sql);
             List<Närvaro> närvarolista = new List<Närvaro>();
@@ -175,7 +174,7 @@ namespace Grupp3___Förskolan_Drutten
 
             while (dr.Read())
             {
-
+ 
                 {
                     närvaro = new Närvaro();
                     närvaro.Närvaroid = (int)dr["närvaroid"];
@@ -183,12 +182,11 @@ namespace Grupp3___Förskolan_Drutten
                 };
                 närvarolista.Add(närvaro);
 
-            }
-
-
-            // Martin
-
-
         }
+
+
+        // Martin
+
+
     }
 }
