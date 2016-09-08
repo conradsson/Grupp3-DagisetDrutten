@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Grupp3___Förskolan_Drutten
 {
-    class Postgres 
+    class Postgres
     {
         private NpgsqlConnection conn;
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable tabell;
-        
+
         //Kontaktar databasen.
         public Postgres()
         {
@@ -51,7 +51,7 @@ namespace Grupp3___Förskolan_Drutten
                 tabell.Columns.Add(c1);
                 tabell.Columns.Add(c2);
 
-                
+
 
                 DataRow rad = tabell.NewRow();
                 rad[c1] = true;
@@ -65,8 +65,8 @@ namespace Grupp3___Förskolan_Drutten
             {
                 conn.Close();
             }
-        } 
-         
+        }
+
         //Metod att utgå ifrån vid SQLfrågor
         //public List<Barn> HämtanBarn()
         //{
@@ -96,32 +96,35 @@ namespace Grupp3___Förskolan_Drutten
         //            barn.Förnamn = rad[1].ToString();
         //            barn.Efternamn = rad[2].ToString();
         //            barn.Avdelningsid = (int)rad[3];
-                    
+
         //            BarnNamn.Add(barn);
         //        }
         //    }
         //    return BarnNamn;
 
         //}
+
+
+        //Mathilda
+
+
+
+
+
+
+        // Johan
+
+
+
+
+
+        //Hischam
+
+
+
+
+        // Martin
+
+
     }
-
-    //Mathilda
-
-
-
-
-
-
-    // Johan
-
-
-
-
-
-    //Hischam
-
-
-
-
-    // Martin
 }
