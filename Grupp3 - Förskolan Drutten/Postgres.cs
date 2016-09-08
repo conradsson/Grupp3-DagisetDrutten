@@ -51,6 +51,7 @@ namespace Grupp3___Förskolan_Drutten
                 tabell.Columns.Add(c1);
                 tabell.Columns.Add(c2);
 
+                //Hischam
 
                 DataRow rad = tabell.NewRow();
                 rad[c1] = true;

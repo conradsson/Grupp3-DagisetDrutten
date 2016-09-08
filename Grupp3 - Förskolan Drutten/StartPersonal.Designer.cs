@@ -224,6 +224,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.label42);
             this.panel1.Controls.Add(this.informationTabControl);
@@ -231,7 +232,6 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.barnButton);
             this.panel1.Controls.Add(this.mittKontoButton);
-            this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
             this.panel1.Controls.Add(this.BarntabControl);
@@ -459,7 +459,7 @@
             this.NärvarotabControl.Controls.Add(this.tabPage5);
             this.NärvarotabControl.Controls.Add(this.tabPage6);
             this.NärvarotabControl.Controls.Add(this.tabPage2);
-            this.NärvarotabControl.Location = new System.Drawing.Point(181, 60);
+            this.NärvarotabControl.Location = new System.Drawing.Point(189, 30);
             this.NärvarotabControl.Name = "NärvarotabControl";
             this.NärvarotabControl.SelectedIndex = 0;
             this.NärvarotabControl.Size = new System.Drawing.Size(748, 389);
