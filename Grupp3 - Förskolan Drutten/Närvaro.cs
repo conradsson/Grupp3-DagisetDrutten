@@ -23,7 +23,7 @@ namespace Grupp3___Förskolan_Drutten
 
         public override string ToString()
         {
-            return Närvaroid + " " + Datum + " " + Barnid + " " + TidLämnad + " " + TidHämtad + " " + HämtasAv;
+            return Närvaroid + " " + Datum;
         }
     }
 }

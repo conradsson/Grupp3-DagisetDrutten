@@ -13,10 +13,13 @@ namespace Grupp3___Förskolan_Drutten
 {
     class Postgres
     {
+
+
         private NpgsqlConnection conn;
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable tabell;
+
 
         //Kontaktar databasen.
         public Postgres()
@@ -120,7 +123,26 @@ namespace Grupp3___Förskolan_Drutten
 
         //Hischam
 
+        public void  VisaNärvaro (string aktuelltDatum)
+        {
+            string sql = "select * from dagis.narvaro where datum = ('" + aktuelltDatum + "')";  
+         
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Närvaro> närvarolista = new List<Närvaro>();
+            Närvaro närvaro;
 
+            while (dr.Read())
+            {
+ 
+                {
+                    närvaro = new Närvaro();
+                    närvaro.Närvaroid = (int)dr["närvaroid"];
+
+                };
+                närvarolista.Add(närvaro);
+
+        }
 
 
         // Martin

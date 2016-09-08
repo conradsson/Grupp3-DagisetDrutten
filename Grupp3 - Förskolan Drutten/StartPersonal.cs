@@ -19,6 +19,8 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = true;
         }
 
+        public BindingList<Närvaro> närvarolista = new BindingList<Närvaro>();
+
 
         // Knapp Effekter
 
@@ -135,6 +137,16 @@ namespace Grupp3___Förskolan_Drutten
             {
                 Application.Exit();
             }
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+
+
+            MessageBox.Show(p.VisaNärvaro(monthCalendar2.SelectionStart.ToString());
+
+
         }
     }
 }
