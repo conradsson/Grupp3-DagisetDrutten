@@ -114,7 +114,9 @@
             this.barnAvdl1ListBox = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
-            this.NärvaroListan = new System.Windows.Forms.ListBox();
+            this.frånvarandeListBox = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -256,7 +258,9 @@
             // tabPage5
             // 
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage5.Controls.Add(this.NärvaroListan);
+            this.tabPage5.Controls.Add(this.label15);
+            this.tabPage5.Controls.Add(this.label14);
+            this.tabPage5.Controls.Add(this.frånvarandeListBox);
             this.tabPage5.Controls.Add(this.monthCalendar2);
             this.tabPage5.Controls.Add(this.checkBox2);
             this.tabPage5.Controls.Add(this.checkBox1);
@@ -381,7 +385,6 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Avdelning 1";
             this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // tabPage6
             // 
@@ -1047,13 +1050,31 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // NärvaroListan
+            // frånvarandeListBox
             // 
-            this.NärvaroListan.FormattingEnabled = true;
-            this.NärvaroListan.Location = new System.Drawing.Point(485, 196);
-            this.NärvaroListan.Name = "NärvaroListan";
-            this.NärvaroListan.Size = new System.Drawing.Size(234, 147);
-            this.NärvaroListan.TabIndex = 14;
+            this.frånvarandeListBox.FormattingEnabled = true;
+            this.frånvarandeListBox.Location = new System.Drawing.Point(510, 196);
+            this.frånvarandeListBox.Name = "frånvarandeListBox";
+            this.frånvarandeListBox.Size = new System.Drawing.Size(161, 147);
+            this.frånvarandeListBox.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(507, 181);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Frånvarande:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(36, 180);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 13);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Närvarande:";
             // 
             // StartPersonal
             // 
@@ -1188,6 +1209,8 @@
         private System.Windows.Forms.Button inloggadButton;
         private System.Windows.Forms.Button loggaUtButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.ListBox NärvaroListan;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ListBox frånvarandeListBox;
     }
 }
