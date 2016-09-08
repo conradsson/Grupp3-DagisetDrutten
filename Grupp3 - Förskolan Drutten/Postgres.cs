@@ -116,13 +116,13 @@ namespace Grupp3___Förskolan_Drutten
 
         
 
-        public void HämtaAnvändare()
+        public List<Person> HämtaAnvändare()
         {
             string sql = "SELECT * FROM dagis.person dp";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
-            List<Person> InloggUppgifterList = new List<Person>();
+            List<Person> AnvändarList = new List<Person>();
             Person person;
 
 
@@ -132,7 +132,7 @@ namespace Grupp3___Förskolan_Drutten
                 i.Error = true;
                 i.ErrorMeddelande = tabell.Rows[0][1].ToString();
 
-                InloggUppgifterList.Add(i);
+                AnvändarList.Add(i);
             }
             else
             {
@@ -149,10 +149,10 @@ namespace Grupp3___Förskolan_Drutten
                     person.ÄrPersonal = rad[6].ToString();
                     person.ÄrFörälder = rad[7].ToString();
 
-                    InloggUppgifterList.Add(person);
+                    AnvändarList.Add(person);
                 }
             }
-            //return BarnNamn;
+            return AnvändarList;
 
         }
 

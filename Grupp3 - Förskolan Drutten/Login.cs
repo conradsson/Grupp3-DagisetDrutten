@@ -101,5 +101,21 @@ namespace Grupp3___Förskolan_Drutten
             StartPersonal personal = new StartPersonal();
             personal.Show();
         }
+
+        // Johan 
+        private void TestJohanButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Mathilda
+
+
+        // Hischam
+
+
+        //Martin
+
+
     }
 }
