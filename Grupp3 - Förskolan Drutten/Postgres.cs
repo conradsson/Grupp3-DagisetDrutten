@@ -182,9 +182,29 @@ namespace Grupp3___Förskolan_Drutten
             public string inskrivetAnvändarnamn { get; set; }
             public string inskrivetLösenord { get; set; }
 
-        public void KontrolleraAnvändare()
+        public void KontrolleraAnvändare(string användarnamn, string lösenord)
         {
 
+                try
+                {
+                    string sql = "SELECT Count(*) FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
+
+                     cmd = new NpgsqlCommand(sql, conn);
+
+                    //cmd.Parameters.AddWithValue("@uname", användarnamn);
+                    //cmd.Parameters.AddWithValue("@pass", lösenord);
+
+                    int result = (int)cmd.ExecuteScalar();
+                    if (result > 0)
+                        MessageBox.Show("Login Success");
+                    else
+                        MessageBox.Show("Incorrect login");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fel: " + ex.Message);
+                }
+            
         }
      
         public List<Person> HämtaAnvändare()
