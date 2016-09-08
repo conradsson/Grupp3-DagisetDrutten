@@ -19,7 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         public DateTime TidLämnad { get; set; }
         public DateTime TidHämtad { get; set; }
         public string HämtasAv { get; set; }
-
+         
 
         public override string ToString()
         {
