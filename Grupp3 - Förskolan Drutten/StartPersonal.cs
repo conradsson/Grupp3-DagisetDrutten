@@ -19,7 +19,6 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = true;
         }
 
-
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
@@ -135,6 +134,16 @@ namespace Grupp3___Förskolan_Drutten
             {
                 Application.Exit();
             }
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+
+
+            //MessageBox.Show(p.VisaNärvaro(monthCalendar2.SelectionStart.ToString());
+
+
         }
     }
 }

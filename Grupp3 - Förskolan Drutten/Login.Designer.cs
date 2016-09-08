@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.personalTillfälligButton = new System.Windows.Forms.Button();
+            this.förälderTillfälligButton = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.losenordTextbox = new System.Windows.Forms.TextBox();
@@ -39,9 +42,8 @@
             this.LoggaInButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.förälderTillfälligButton = new System.Windows.Forms.Button();
-            this.personalTillfälligButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.TestJohanButton = new System.Windows.Forms.Button();
+            this.testJohanListBox = new System.Windows.Forms.ListBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -72,6 +74,33 @@
             this.groupBox2.Size = new System.Drawing.Size(387, 273);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(21, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(346, 198);
+            this.panel2.TabIndex = 9;
+            // 
+            // personalTillfälligButton
+            // 
+            this.personalTillfälligButton.Location = new System.Drawing.Point(209, 236);
+            this.personalTillfälligButton.Name = "personalTillfälligButton";
+            this.personalTillfälligButton.Size = new System.Drawing.Size(75, 23);
+            this.personalTillfälligButton.TabIndex = 8;
+            this.personalTillfälligButton.Text = "Personal";
+            this.personalTillfälligButton.UseVisualStyleBackColor = true;
+            this.personalTillfälligButton.Click += new System.EventHandler(this.personalTillfälligButton_Click);
+            // 
+            // förälderTillfälligButton
+            // 
+            this.förälderTillfälligButton.Location = new System.Drawing.Point(105, 236);
+            this.förälderTillfälligButton.Name = "förälderTillfälligButton";
+            this.förälderTillfälligButton.Size = new System.Drawing.Size(75, 23);
+            this.förälderTillfälligButton.TabIndex = 7;
+            this.förälderTillfälligButton.Text = "Förälder";
+            this.förälderTillfälligButton.UseVisualStyleBackColor = true;
+            this.förälderTillfälligButton.Click += new System.EventHandler(this.förälderTillfälligButton_Click);
             // 
             // richTextBox1
             // 
@@ -156,32 +185,23 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // förälderTillfälligButton
+            // TestJohanButton
             // 
-            this.förälderTillfälligButton.Location = new System.Drawing.Point(105, 236);
-            this.förälderTillfälligButton.Name = "förälderTillfälligButton";
-            this.förälderTillfälligButton.Size = new System.Drawing.Size(75, 23);
-            this.förälderTillfälligButton.TabIndex = 7;
-            this.förälderTillfälligButton.Text = "Förälder";
-            this.förälderTillfälligButton.UseVisualStyleBackColor = true;
-            this.förälderTillfälligButton.Click += new System.EventHandler(this.förälderTillfälligButton_Click);
+            this.TestJohanButton.Location = new System.Drawing.Point(652, 29);
+            this.TestJohanButton.Name = "TestJohanButton";
+            this.TestJohanButton.Size = new System.Drawing.Size(75, 23);
+            this.TestJohanButton.TabIndex = 1;
+            this.TestJohanButton.Text = "Test Johan";
+            this.TestJohanButton.UseVisualStyleBackColor = true;
+            this.TestJohanButton.Click += new System.EventHandler(this.TestJohanButton_Click);
             // 
-            // personalTillfälligButton
+            // testJohanListBox
             // 
-            this.personalTillfälligButton.Location = new System.Drawing.Point(209, 236);
-            this.personalTillfälligButton.Name = "personalTillfälligButton";
-            this.personalTillfälligButton.Size = new System.Drawing.Size(75, 23);
-            this.personalTillfälligButton.TabIndex = 8;
-            this.personalTillfälligButton.Text = "Personal";
-            this.personalTillfälligButton.UseVisualStyleBackColor = true;
-            this.personalTillfälligButton.Click += new System.EventHandler(this.personalTillfälligButton_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(21, 8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(346, 198);
-            this.panel2.TabIndex = 9;
+            this.testJohanListBox.FormattingEnabled = true;
+            this.testJohanListBox.Location = new System.Drawing.Point(652, 58);
+            this.testJohanListBox.Name = "testJohanListBox";
+            this.testJohanListBox.Size = new System.Drawing.Size(120, 95);
+            this.testJohanListBox.TabIndex = 2;
             // 
             // Login
             // 
@@ -189,6 +209,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.testJohanListBox);
+            this.Controls.Add(this.TestJohanButton);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -220,6 +242,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button personalTillfälligButton;
         private System.Windows.Forms.Button förälderTillfälligButton;
+        private System.Windows.Forms.Button TestJohanButton;
+        private System.Windows.Forms.ListBox testJohanListBox;
     }
 }
 

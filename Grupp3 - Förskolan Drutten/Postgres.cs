@@ -13,10 +13,13 @@ namespace Grupp3___Förskolan_Drutten
 {
     class Postgres
     {
+
+
         private NpgsqlConnection conn;
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable tabell;
+
 
         //Kontaktar databasen.
         public Postgres()
@@ -169,15 +172,74 @@ namespace Grupp3___Förskolan_Drutten
 
 
 
-        // Johan
+            // Johan
+      
+     
+        public List<Person> HämtaAnvändare()
+        {
+            string sql = "SELECT * FROM dagis.person dp";
 
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Person> AnvändarList = new List<Person>();
+            Person person;
+
+
+            if (tabell.Columns[0].ColumnName.Equals("Error"))
+            {
+                Person i = new Person();
+                i.Error = true;
+                i.ErrorMeddelande = tabell.Rows[0][1].ToString();
+
+                AnvändarList.Add(i);
+            }
+            else
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    person = new Person();
+
+                    person.Personid = (int)rad[0];
+                    person.Förnamn = rad[1].ToString();
+                    person.Efternamn = rad[2].ToString();
+                    person.Telefonnr = rad[3].ToString();
+                    person.Användarnamn = rad[4].ToString();
+                    person.Lösenord = rad[5].ToString();
+                    person.ÄrPersonal = rad[6].ToString();
+                    person.ÄrFörälder = rad[7].ToString();
+
+                    AnvändarList.Add(person);
+                }
+            }
+            return AnvändarList;
+
+        }
 
 
 
 
         //Hischam
 
+        public void  VisaNärvaro (string aktuelltDatum)
+        {
+            string sql = "select * from dagis.narvaro where datum = ('" + aktuelltDatum + "')";  
+         
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Närvaro> närvarolista = new List<Närvaro>();
+            Närvaro närvaro;
 
+            while (dr.Read())
+            {
+ 
+                {
+                    närvaro = new Närvaro();
+                    närvaro.Närvaroid = (int)dr["närvaroid"];
+
+                };
+                närvarolista.Add(närvaro);
+
+        }
 
 
         // Martin
