@@ -87,5 +87,11 @@ namespace Grupp3___Förskolan_Drutten
                  Om texten är Lösenord så ska INTE PasswordChar vara aktiv
             }*/
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.VisaNamn();
+        }
     }
 }

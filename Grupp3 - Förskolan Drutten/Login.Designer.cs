@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.LoggaInButton = new System.Windows.Forms.Button();
-            this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.losenordTextbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.losenordTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
+            this.LoggaInButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -55,6 +56,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.losenordTextbox);
@@ -67,36 +69,23 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // LoggaInButton
+            // richTextBox1
             // 
-            this.LoggaInButton.Location = new System.Drawing.Point(221, 204);
-            this.LoggaInButton.Name = "LoggaInButton";
-            this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
-            this.LoggaInButton.TabIndex = 1;
-            this.LoggaInButton.Text = "Logga in";
-            this.LoggaInButton.UseVisualStyleBackColor = true;
-            this.LoggaInButton.Click += new System.EventHandler(this.LoggaInButton_Click);
+            this.richTextBox1.Location = new System.Drawing.Point(70, 28);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(260, 55);
+            this.richTextBox1.TabIndex = 6;
+            this.richTextBox1.Text = "Skriv endast: personal eller: förälder, utan lösenord \nför att komma till respekt" +
+    "ive Form";
             // 
-            // andvandarnamnTextbox
+            // label2
             // 
-            this.andvandarnamnTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.andvandarnamnTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.andvandarnamnTextbox.Location = new System.Drawing.Point(126, 112);
-            this.andvandarnamnTextbox.Name = "andvandarnamnTextbox";
-            this.andvandarnamnTextbox.Size = new System.Drawing.Size(123, 20);
-            this.andvandarnamnTextbox.TabIndex = 2;
-            this.andvandarnamnTextbox.Text = "Användarnamn";
-            this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
-            this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Användarnamn:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(126, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Lösenord:";
             // 
             // losenordTextbox
             // 
@@ -110,23 +99,36 @@
             this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
             this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Lösenord:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(126, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Användarnamn:";
             // 
-            // richTextBox1
+            // andvandarnamnTextbox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(70, 28);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(260, 55);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "Skriv endast: personal eller: förälder, utan lösenord \nför att komma till respekt" +
-    "ive Form";
+            this.andvandarnamnTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.andvandarnamnTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.andvandarnamnTextbox.Location = new System.Drawing.Point(126, 112);
+            this.andvandarnamnTextbox.Name = "andvandarnamnTextbox";
+            this.andvandarnamnTextbox.Size = new System.Drawing.Size(123, 20);
+            this.andvandarnamnTextbox.TabIndex = 2;
+            this.andvandarnamnTextbox.Text = "Användarnamn";
+            this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
+            this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
+            // 
+            // LoggaInButton
+            // 
+            this.LoggaInButton.Location = new System.Drawing.Point(221, 204);
+            this.LoggaInButton.Name = "LoggaInButton";
+            this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
+            this.LoggaInButton.TabIndex = 1;
+            this.LoggaInButton.Text = "Logga in";
+            this.LoggaInButton.UseVisualStyleBackColor = true;
+            this.LoggaInButton.Click += new System.EventHandler(this.LoggaInButton_Click);
             // 
             // pictureBox1
             // 
@@ -149,6 +151,16 @@
             this.groupBox1.Size = new System.Drawing.Size(524, 443);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(92, 204);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 
@@ -184,6 +196,7 @@
         private System.Windows.Forms.Button LoggaInButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
