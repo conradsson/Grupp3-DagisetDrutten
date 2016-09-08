@@ -14,6 +14,7 @@ namespace Grupp3___Förskolan_Drutten
     class Postgres
     {
 
+
         private NpgsqlConnection conn;
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
@@ -146,26 +147,34 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Metod för att lägga till tider till ett barn
-        public void LäggTillTid(DateTime datum, int barnid, DateTime lämnas, DateTime hämtas)
+        // Metod för att lägga till tider till ett barn  + datum +
+        public void LäggTillTid(DateTime datum, int barnid, string lamnas, string hamtas)
         {
 
+            string meddelande;
             try
             {
                 string sql = "insert into dagis.narvaro (datum, barnid, tid_lamnad, tid_hamtad)"
-                   + " values (" + datum + ", " + barnid + ", " + lämnas + ", " + hämtas +")";
+                   + " values (@datum, @barnid, @tid_lamnad, @tid_hamtad)";
+
                 cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+                cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
+                cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
+               
+
                 dr = cmd.ExecuteReader();
                 dr.Close();
-
-                System.Windows.Forms.MessageBox.Show("Tiden för barnet har lagts till.");
+                meddelande = "Tiden är tillagd ";
 
             }
             catch (NpgsqlException ex)
             {
-
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                meddelande = ex.Message;
             }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+
 
         }
 
@@ -173,47 +182,8 @@ namespace Grupp3___Förskolan_Drutten
 
         // Johan
 
-        public string inskrivetAnvändarnamn { get; set; }
-        public string inskrivetLösenord { get; set; }
 
-        public void KontrolleraAnvändare()
-        {
-
-            string sql = "SELECT dp.användarnamn, dp.lösenord FROM dagis.person dp WHERE användarnamn='" + inskrivetAnvändarnamn.ToString() + "' AND lösenord='" + inskrivetLösenord.ToString() + "'";
-
-            tabell.Clear();
-            tabell = sqlFråga(sql);
-           // List<Person> AnvändarList = new List<Person>();
-            Person person;
-
-
-            if (tabell.Columns[0].ColumnName.Equals("Error"))
-            {
-                Person i = new Person();
-                i.Error = true;
-                i.ErrorMeddelande = tabell.Rows[0][1].ToString();
-
-               // AnvändarList.Add(i);
-            }
-            else
-            {
-                foreach (DataRow rad in tabell.Rows)
-                {
-                    person = new Person();
-
-                    person.Användarnamn = rad[0].ToString();
-                    person.Lösenord = rad[1].ToString();
-                    person.ÄrPersonal = rad[2].ToString();
-                    person.ÄrFörälder = rad[3].ToString();
-
-                  //  AnvändarList.Add(person);
-                }
-            }
-        }
-
-
-        // Metoden som hämtar användare och lägger i ett List objekt.
-        public List<Person> HämtaAnvändare()  
+        public List<Person> HämtaAnvändare()
         {
             string sql = "SELECT * FROM dagis.person dp";
 

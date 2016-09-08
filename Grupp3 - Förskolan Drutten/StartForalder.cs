@@ -139,8 +139,8 @@ namespace Grupp3___Förskolan_Drutten
             Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
             DateTime datum = monthCalendar3.SelectionStart;
             int barnid = aktuelltbarn.Barnid;
-            DateTime hämtas = Convert.ToDateTime(lämnasTextBox.Text);
-            DateTime lämnas = Convert.ToDateTime(hämtasTextBox.Text);
+            string hämtas = lämnasTextBox.Text;
+            string lämnas = hämtasTextBox.Text;
 
             Postgres p = new Postgres();
             p.LäggTillTid(datum, barnid, hämtas, lämnas);
