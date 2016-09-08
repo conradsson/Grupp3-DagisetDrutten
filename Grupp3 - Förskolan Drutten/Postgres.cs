@@ -182,6 +182,13 @@ namespace Grupp3___Förskolan_Drutten
 
         // Johan
 
+            public string inskrivetAnvändarnamn { get; set; }
+            public string inskrivetLösenord { get; set; }
+
+        public void KontrolleraAnvändare()
+        {
+
+        }
 
         public List<Person> HämtaAnvändare()
         {

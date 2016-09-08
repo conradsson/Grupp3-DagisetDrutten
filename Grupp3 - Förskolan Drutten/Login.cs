@@ -110,26 +110,26 @@ namespace Grupp3___Förskolan_Drutten
 
         private void TestJohanButton_Click(object sender, EventArgs e)
         {
-
+            
             andvandarnamnTextbox.Text = p.inskrivetAnvändarnamn;
             losenordTextbox.Text = p.inskrivetLösenord;
             p.KontrolleraAnvändare();
 
-            if (p.inskrivetAnvändarnamn == person.Användarnamn && p.inskrivetLösenord == person.Lösenord)
-            {
-                MessageBox.Show("Inloggningen lyckades!");
-            }
-            else
-            {
-                if(p.inskrivetAnvändarnamn != person.Användarnamn)
-                {
-                    MessageBox.Show("Felaktigt användarnamn");
-                }
-                else if(p.inskrivetLösenord != person.Lösenord)
-                {
-                    MessageBox.Show("Felaktigt lösenord");
-                }
-            }
+            //if (p.inskrivetAnvändarnamn == person.Användarnamn && p.inskrivetLösenord == person.Lösenord)
+            //{
+            //    MessageBox.Show("Inloggningen lyckades!");
+            //}
+            //else
+            //{
+            //    if(p.inskrivetAnvändarnamn != person.Användarnamn)
+            //    {
+            //        MessageBox.Show("Felaktigt användarnamn");
+            //    }
+            //    else if(p.inskrivetLösenord != person.Lösenord)
+            //    {
+            //        MessageBox.Show("Felaktigt lösenord");
+            //    }
+            //}
             //testJohanListBox.DataSource = p.HämtaAnvändare();
 
 
