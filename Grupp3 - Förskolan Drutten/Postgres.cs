@@ -110,8 +110,65 @@ namespace Grupp3___Förskolan_Drutten
 
         //Mathilda
 
+        //Metod för att hämta barn till en lista
+        public List<Barn> HämtanBarn()
+        {
+            string sql = "select * from dagis.barn";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnNamn = new List<Barn>();
+            Barn barn;
 
 
+            if (tabell.Columns[0].ColumnName.Equals("Error"))
+            {
+                Barn b = new Barn();
+                b.Error = true;
+                b.ErrorMeddelande = tabell.Rows[0][1].ToString();
+
+                BarnNamn.Add(b);
+            }
+            else
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    barn = new Barn();
+
+                    barn.Barnid = (int)rad[0];
+                    barn.Förnamn = rad[1].ToString();
+                    barn.Efternamn = rad[2].ToString();
+                    barn.Avdelningsid = (int)rad[3];
+
+                    BarnNamn.Add(barn);
+                }
+            }
+            return BarnNamn;
+
+        }
+
+        // Metod för att lägga till tider till ett barn
+        public void LäggTillTid(DateTime datum, int barnid, DateTime lämnas, DateTime hämtas)
+        {
+
+            try
+            {
+                string sql = "insert into dagis.narvaro (datum, barnid, tid_lamnad, tid_hamtad)"
+                   + " values (" + datum + ", " + barnid + ", " + lämnas + ", " + hämtas +")";
+                cmd = new NpgsqlCommand(sql, conn);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+                System.Windows.Forms.MessageBox.Show("Tiden för barnet har lagts till.");
+
+            }
+            catch (NpgsqlException ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
 
 
 

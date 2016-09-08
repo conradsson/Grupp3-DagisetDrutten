@@ -38,12 +38,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.hämtasTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lämnasTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tiderBarnListBox = new System.Windows.Forms.CheckedListBox();
             this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
@@ -98,6 +97,7 @@
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
+            this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -215,14 +215,14 @@
             // tabPage3
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage3.Controls.Add(this.tiderBarnListBox);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.hämtasTextBox);
             this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.lämnasTextBox);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.tiderBarnListBox);
             this.tabPage3.Controls.Add(this.monthCalendar3);
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -241,6 +241,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Meddela";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -251,12 +252,12 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Till:";
             // 
-            // textBox2
+            // hämtasTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(338, 272);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.hämtasTextBox.Location = new System.Drawing.Point(338, 272);
+            this.hämtasTextBox.Name = "hämtasTextBox";
+            this.hämtasTextBox.Size = new System.Drawing.Size(100, 20);
+            this.hämtasTextBox.TabIndex = 8;
             // 
             // label4
             // 
@@ -267,12 +268,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Från:";
             // 
-            // textBox1
+            // lämnasTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(338, 221);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.lämnasTextBox.Location = new System.Drawing.Point(338, 221);
+            this.lämnasTextBox.Name = "lämnasTextBox";
+            this.lämnasTextBox.Size = new System.Drawing.Size(100, 20);
+            this.lämnasTextBox.TabIndex = 6;
             // 
             // label3
             // 
@@ -291,14 +292,6 @@
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Välj barn:";
-            // 
-            // tiderBarnListBox
-            // 
-            this.tiderBarnListBox.FormattingEnabled = true;
-            this.tiderBarnListBox.Location = new System.Drawing.Point(68, 47);
-            this.tiderBarnListBox.Name = "tiderBarnListBox";
-            this.tiderBarnListBox.Size = new System.Drawing.Size(120, 94);
-            this.tiderBarnListBox.TabIndex = 3;
             // 
             // monthCalendar3
             // 
@@ -877,6 +870,14 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // tiderBarnListBox
+            // 
+            this.tiderBarnListBox.FormattingEnabled = true;
+            this.tiderBarnListBox.Location = new System.Drawing.Point(72, 45);
+            this.tiderBarnListBox.Name = "tiderBarnListBox";
+            this.tiderBarnListBox.Size = new System.Drawing.Size(120, 95);
+            this.tiderBarnListBox.TabIndex = 11;
+            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -949,12 +950,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox hämtasTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox lämnasTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckedListBox tiderBarnListBox;
         private System.Windows.Forms.MonthCalendar monthCalendar3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6;
@@ -990,5 +990,6 @@
         private System.Windows.Forms.Button inloggadButton;
         private System.Windows.Forms.Button loggaUtButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.ListBox tiderBarnListBox;
     }
 }
