@@ -112,10 +112,9 @@ namespace Grupp3___Förskolan_Drutten
 
 
 
-        // Johan
-
-        
-
+            // Johan
+      
+     
         public List<Person> HämtaAnvändare()
         {
             string sql = "SELECT * FROM dagis.person dp";
