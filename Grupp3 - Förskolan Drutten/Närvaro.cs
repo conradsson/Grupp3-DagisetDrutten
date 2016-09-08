@@ -16,14 +16,14 @@ namespace Grupp3___Förskolan_Drutten
         public int Närvaroid { get; set; }
         public DateTime Datum { get; set; }
         public int Barnid { get; set; }
-        public DateTime TidLämnad { get; set; }
-        public DateTime TidHämtad { get; set; }
+        public string TidLämnad { get; set; }
+        public string TidHämtad { get; set; }
         public string HämtasAv { get; set; }
 
 
         public override string ToString()
         {
-            return Närvaroid + " " + Datum;
+            return Närvaroid + " " + Datum.ToString("yyyy:MM.dd");
         }
     }
 }

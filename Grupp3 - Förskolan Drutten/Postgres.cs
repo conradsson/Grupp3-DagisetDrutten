@@ -147,34 +147,42 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Metod för att lägga till tider till ett barn
-        public void LäggTillTid(DateTime datum, int barnid, DateTime lämnas, DateTime hämtas)
+        // Metod för att lägga till tider till ett barn  + datum +
+        public void LäggTillTid(DateTime datum, int barnid, string lamnas, string hamtas)
         {
 
+            string meddelande;
             try
             {
                 string sql = "insert into dagis.narvaro (datum, barnid, tid_lamnad, tid_hamtad)"
-                   + " values (" + datum + ", " + barnid + ", " + lämnas + ", " + hämtas +")";
+                   + " values (@datum, @barnid, @tid_lamnad, @tid_hamtad)";
+
                 cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+                cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
+                cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
+               
+
                 dr = cmd.ExecuteReader();
                 dr.Close();
-
-                System.Windows.Forms.MessageBox.Show("Tiden för barnet har lagts till.");
+                meddelande = "Tiden är tillagd ";
 
             }
             catch (NpgsqlException ex)
             {
-
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                meddelande = ex.Message;
             }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+
 
         }
 
 
 
-            // Johan
-      
-     
+        // Johan
+
+
         public List<Person> HämtaAnvändare()
         {
             string sql = "SELECT * FROM dagis.person dp";
@@ -220,10 +228,10 @@ namespace Grupp3___Förskolan_Drutten
 
         //Hischam
 
-        public void  VisaNärvaro (string aktuelltDatum)
+        public void VisaNärvaro(string aktuelltDatum)
         {
-            string sql = "select * from dagis.narvaro where datum = ('" + aktuelltDatum + "')";  
-         
+            string sql = "select * from dagis.narvaro where datum = ('" + aktuelltDatum + "')";
+
             tabell.Clear();
             tabell = sqlFråga(sql);
             List<Närvaro> närvarolista = new List<Närvaro>();
@@ -231,7 +239,7 @@ namespace Grupp3___Förskolan_Drutten
 
             while (dr.Read())
             {
- 
+
                 {
                     närvaro = new Närvaro();
                     närvaro.Närvaroid = (int)dr["närvaroid"];
@@ -239,11 +247,12 @@ namespace Grupp3___Förskolan_Drutten
                 };
                 närvarolista.Add(närvaro);
 
+            }
+
+
+            // Martin
+
+
         }
-
-
-        // Martin
-
-
     }
 }
