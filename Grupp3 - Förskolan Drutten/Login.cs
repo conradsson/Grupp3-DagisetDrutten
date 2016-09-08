@@ -88,13 +88,18 @@ namespace Grupp3___Förskolan_Drutten
             }*/
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void förälderTillfälligButton_Click(object sender, EventArgs e)
         {
-            List<Barn> barn = new List<Barn>();
-            Postgres p = new Postgres();
-            barn = p.HämtanBarn();
-            listBox1.DataSource = null;
-            listBox1.DataSource = barn;
+            this.Visible = false;
+            StartForalder foralder = new StartForalder();
+            foralder.Show();
+        }
+
+        private void personalTillfälligButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            StartPersonal personal = new StartPersonal();
+            personal.Show();
         }
     }
 }

@@ -39,6 +39,9 @@
             this.LoggaInButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.förälderTillfälligButton = new System.Windows.Forms.Button();
+            this.personalTillfälligButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -55,6 +58,9 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.panel2);
+            this.groupBox2.Controls.Add(this.personalTillfälligButton);
+            this.groupBox2.Controls.Add(this.förälderTillfälligButton);
             this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.losenordTextbox);
@@ -120,7 +126,7 @@
             // 
             // LoggaInButton
             // 
-            this.LoggaInButton.Location = new System.Drawing.Point(221, 204);
+            this.LoggaInButton.Location = new System.Drawing.Point(222, 180);
             this.LoggaInButton.Name = "LoggaInButton";
             this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
             this.LoggaInButton.TabIndex = 1;
@@ -149,6 +155,33 @@
             this.groupBox1.Size = new System.Drawing.Size(524, 443);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // förälderTillfälligButton
+            // 
+            this.förälderTillfälligButton.Location = new System.Drawing.Point(105, 236);
+            this.förälderTillfälligButton.Name = "förälderTillfälligButton";
+            this.förälderTillfälligButton.Size = new System.Drawing.Size(75, 23);
+            this.förälderTillfälligButton.TabIndex = 7;
+            this.förälderTillfälligButton.Text = "Förälder";
+            this.förälderTillfälligButton.UseVisualStyleBackColor = true;
+            this.förälderTillfälligButton.Click += new System.EventHandler(this.förälderTillfälligButton_Click);
+            // 
+            // personalTillfälligButton
+            // 
+            this.personalTillfälligButton.Location = new System.Drawing.Point(209, 236);
+            this.personalTillfälligButton.Name = "personalTillfälligButton";
+            this.personalTillfälligButton.Size = new System.Drawing.Size(75, 23);
+            this.personalTillfälligButton.TabIndex = 8;
+            this.personalTillfälligButton.Text = "Personal";
+            this.personalTillfälligButton.UseVisualStyleBackColor = true;
+            this.personalTillfälligButton.Click += new System.EventHandler(this.personalTillfälligButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(21, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(346, 198);
+            this.panel2.TabIndex = 9;
             // 
             // Login
             // 
@@ -184,6 +217,9 @@
         private System.Windows.Forms.Button LoggaInButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button personalTillfälligButton;
+        private System.Windows.Forms.Button förälderTillfälligButton;
     }
 }
 
