@@ -40,16 +40,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.NärvarotabControl = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.frånvarandeListBox = new System.Windows.Forms.ListBox();
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Namn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lämnad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hämtad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -114,9 +109,7 @@
             this.barnAvdl1ListBox = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
-            this.frånvarandeListBox = new System.Windows.Forms.ListBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -124,7 +117,6 @@
             this.panel1.SuspendLayout();
             this.NärvarotabControl.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -134,6 +126,7 @@
             this.BarntabControl.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // kontoTypLabel
@@ -258,14 +251,11 @@
             // tabPage5
             // 
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.button3);
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Controls.Add(this.label14);
             this.tabPage5.Controls.Add(this.frånvarandeListBox);
             this.tabPage5.Controls.Add(this.monthCalendar2);
-            this.tabPage5.Controls.Add(this.checkBox2);
-            this.tabPage5.Controls.Add(this.checkBox1);
-            this.tabPage5.Controls.Add(this.label9);
-            this.tabPage5.Controls.Add(this.label8);
             this.tabPage5.Controls.Add(this.dataGridView1);
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Controls.Add(this.radioButton3);
@@ -279,81 +269,48 @@
             this.tabPage5.Text = "Närvarohantering";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(39, 143);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(36, 180);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 13);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Närvarande:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(493, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Frånvarande:";
+            // 
+            // frånvarandeListBox
+            // 
+            this.frånvarandeListBox.FormattingEnabled = true;
+            this.frånvarandeListBox.Location = new System.Drawing.Point(569, 5);
+            this.frånvarandeListBox.Name = "frånvarandeListBox";
+            this.frånvarandeListBox.Size = new System.Drawing.Size(161, 147);
+            this.frånvarandeListBox.TabIndex = 14;
+            // 
             // monthCalendar2
             // 
             this.monthCalendar2.Location = new System.Drawing.Point(220, 15);
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.TabIndex = 13;
             this.monthCalendar2.TodayDate = new System.DateTime(2016, 9, 7, 0, 0, 0, 0);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(413, 221);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(318, 221);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(191, 220);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "07.45  -  15.00";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(81, 220);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Lisa Eriksson";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Namn,
-            this.Tider,
-            this.Lämnad,
-            this.Hämtad});
-            this.dataGridView1.Location = new System.Drawing.Point(35, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(444, 150);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // Namn
-            // 
-            this.Namn.HeaderText = "Namn";
-            this.Namn.Name = "Namn";
-            // 
-            // Tider
-            // 
-            this.Tider.HeaderText = "Tider";
-            this.Tider.Name = "Tider";
-            // 
-            // Lämnad
-            // 
-            this.Lämnad.HeaderText = "Lämnad";
-            this.Lämnad.Name = "Lämnad";
-            // 
-            // Hämtad
-            // 
-            this.Hämtad.HeaderText = "Hämtad";
-            this.Hämtad.Name = "Hämtad";
             // 
             // label2
             // 
@@ -1050,31 +1007,13 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // frånvarandeListBox
+            // dataGridView1
             // 
-            this.frånvarandeListBox.FormattingEnabled = true;
-            this.frånvarandeListBox.Location = new System.Drawing.Point(510, 196);
-            this.frånvarandeListBox.Name = "frånvarandeListBox";
-            this.frånvarandeListBox.Size = new System.Drawing.Size(161, 147);
-            this.frånvarandeListBox.TabIndex = 14;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(507, 181);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Frånvarande:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(36, 180);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(66, 13);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Närvarande:";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(35, 196);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(528, 150);
+            this.dataGridView1.TabIndex = 8;
             // 
             // StartPersonal
             // 
@@ -1103,7 +1042,6 @@
             this.NärvarotabControl.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -1118,6 +1056,7 @@
             this.tabPage4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1161,15 +1100,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Namn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tider;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lämnad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hämtad;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
@@ -1212,5 +1142,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ListBox frånvarandeListBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
