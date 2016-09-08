@@ -19,9 +19,6 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = true;
         }
 
-        public BindingList<Närvaro> närvarolista = new BindingList<Närvaro>();
-
-
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
@@ -144,7 +141,7 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
 
 
-            MessageBox.Show(p.VisaNärvaro(monthCalendar2.SelectionStart.ToString());
+            //MessageBox.Show(p.VisaNärvaro(monthCalendar2.SelectionStart.ToString());
 
 
         }
