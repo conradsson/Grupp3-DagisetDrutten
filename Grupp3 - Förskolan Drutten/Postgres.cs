@@ -115,10 +115,53 @@ namespace Grupp3___Förskolan_Drutten
 
 
 
-            // Johan
-      
-     
-        public List<Person> HämtaAnvändare()
+        // Johan
+
+        public string inskrivetAnvändarnamn { get; set; }
+        public string inskrivetLösenord { get; set; }
+
+        public void KontrolleraAnvändare()
+        {
+
+            string sql = "SELECT dp.användarnamn, dp.lösenord FROM dagis.person dp WHERE användarnamn='" + inskrivetAnvändarnamn.ToString() + "' AND lösenord='" + inskrivetLösenord.ToString() + "'";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+           // List<Person> AnvändarList = new List<Person>();
+            Person person;
+
+
+            if (tabell.Columns[0].ColumnName.Equals("Error"))
+            {
+                Person i = new Person();
+                i.Error = true;
+                i.ErrorMeddelande = tabell.Rows[0][1].ToString();
+
+               // AnvändarList.Add(i);
+            }
+            else
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    person = new Person();
+
+                    person.Personid = (int)rad[0];
+                    person.Förnamn = rad[1].ToString();
+                    person.Efternamn = rad[2].ToString();
+                    person.Telefonnr = rad[3].ToString();
+                    person.Användarnamn = rad[4].ToString();
+                    person.Lösenord = rad[5].ToString();
+                    person.ÄrPersonal = rad[6].ToString();
+                    person.ÄrFörälder = rad[7].ToString();
+
+                  //  AnvändarList.Add(person);
+                }
+            }
+        }
+
+
+        // Metoden som hämtar användare och lägger i ett List objekt.
+        public List<Person> HämtaAnvändare()  
         {
             string sql = "SELECT * FROM dagis.person dp";
 
@@ -163,10 +206,10 @@ namespace Grupp3___Förskolan_Drutten
 
         //Hischam
 
-        public void  VisaNärvaro (string aktuelltDatum)
+        public void VisaNärvaro(string aktuelltDatum)
         {
-            string sql = "select * from dagis.narvaro where datum = ('" + aktuelltDatum + "')";  
-         
+            string sql = "select * from dagis.narvaro where datum = ('" + aktuelltDatum + "')";
+
             tabell.Clear();
             tabell = sqlFråga(sql);
             List<Närvaro> närvarolista = new List<Närvaro>();
@@ -174,7 +217,7 @@ namespace Grupp3___Förskolan_Drutten
 
             while (dr.Read())
             {
- 
+
                 {
                     närvaro = new Närvaro();
                     närvaro.Närvaroid = (int)dr["närvaroid"];
@@ -182,11 +225,12 @@ namespace Grupp3___Förskolan_Drutten
                 };
                 närvarolista.Add(närvaro);
 
+            }
+
+
+            // Martin
+
+
         }
-
-
-        // Martin
-
-
     }
 }
