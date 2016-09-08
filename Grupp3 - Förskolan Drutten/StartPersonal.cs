@@ -146,7 +146,18 @@ namespace Grupp3___Förskolan_Drutten
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = p.HämtaNärvaro();
+            
+            dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+            
+
+
+        }
+
+        private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            dataGridView2.DataSource = null;
+            dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+            
         }
     }
 }

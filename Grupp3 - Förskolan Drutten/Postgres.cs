@@ -30,9 +30,10 @@ namespace Grupp3___Förskolan_Drutten
         //Test av fråga.
         public DataTable sqlFråga(string sql)
         {
+
             try
             {
-
+               
                 cmd = new NpgsqlCommand(sql, conn);
                 dr = cmd.ExecuteReader();
 
@@ -51,8 +52,6 @@ namespace Grupp3___Förskolan_Drutten
 
                 tabell.Columns.Add(c1);
                 tabell.Columns.Add(c2);
-
-
 
                 DataRow rad = tabell.NewRow();
                 rad[c1] = true;
@@ -230,14 +229,52 @@ namespace Grupp3___Förskolan_Drutten
 
         //Hischam
 
-        public List<Närvaro> HämtaNärvaro()
-        {
-            string sql = "select * from dagis.narvaro";
+        //public List<Närvaro> HämtaNärvaro()
+        //{
+        //    string sql = "select * from dagis.narvaro";
          
+        //    tabell.Clear();
+        //    tabell = sqlFråga(sql);
+        //    List<Närvaro> Närvarolista = new List<Närvaro>();
+        //    Närvaro närvaro;
+
+        //    if (tabell.Columns[0].ColumnName.Equals("Error"))
+        //    {
+        //        Närvaro n = new Närvaro();
+        //        n.Error = true;
+        //        n.ErrorMeddelande = tabell.Rows[0][1].ToString();
+ 
+        //        Närvarolista.Add(n);
+        //    }
+        //    else
+        //    {
+        //        foreach (DataRow rad in tabell.Rows)
+        //        {
+        //            närvaro = new Närvaro();
+
+        //            närvaro.Närvaroid = (int)rad[0];
+        //            närvaro.Datum = (DateTime)rad[1];
+        //            närvaro.Barnid = (int)rad[2];
+        //            närvaro.TidLämnad = rad[4].ToString();
+        //            närvaro.TidHämtad = rad[5].ToString();
+        //            närvaro.HämtasAv = rad[3].ToString();
+
+        //            Närvarolista.Add(närvaro);  
+        //        }
+        //}
+        //    return Närvarolista;
+        //}
+        public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
+        {
+
+            string sql = "select * from dagis.narvaro where datum = ('" + AktuelltDatum + "')";
+
+
             tabell.Clear();
             tabell = sqlFråga(sql);
             List<Närvaro> Närvarolista = new List<Närvaro>();
             Närvaro närvaro;
+
 
             if (tabell.Columns[0].ColumnName.Equals("Error"))
             {
@@ -260,10 +297,12 @@ namespace Grupp3___Förskolan_Drutten
                     närvaro.TidHämtad = rad[5].ToString();
                     närvaro.HämtasAv = rad[3].ToString();
 
-                    Närvarolista.Add(närvaro);  
+                    Närvarolista.Add(närvaro);
+
                 }
         }
             return Närvarolista;
+            
         }
 
 
