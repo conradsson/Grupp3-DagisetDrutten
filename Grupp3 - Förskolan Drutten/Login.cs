@@ -19,6 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         Postgres p = new Postgres();
+        Person person = new Person();
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
@@ -105,11 +106,30 @@ namespace Grupp3___Förskolan_Drutten
 
         // Johan 
 
-        Postgres p = new Postgres();
+            
 
         private void TestJohanButton_Click(object sender, EventArgs e)
         {
 
+            andvandarnamnTextbox.Text = p.inskrivetAnvändarnamn;
+            losenordTextbox.Text = p.inskrivetLösenord;
+            p.KontrolleraAnvändare();
+
+            if (p.inskrivetAnvändarnamn == person.Användarnamn && p.inskrivetLösenord == person.Lösenord)
+            {
+                MessageBox.Show("Inloggningen lyckades!");
+            }
+            else
+            {
+                if(p.inskrivetAnvändarnamn != person.Användarnamn)
+                {
+                    MessageBox.Show("Felaktigt användarnamn");
+                }
+                else if(p.inskrivetLösenord != person.Lösenord)
+                {
+                    MessageBox.Show("Felaktigt lösenord");
+                }
+            }
             //testJohanListBox.DataSource = p.HämtaAnvändare();
 
 

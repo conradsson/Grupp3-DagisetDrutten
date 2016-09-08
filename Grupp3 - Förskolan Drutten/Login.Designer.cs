@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.personalTillfälligButton = new System.Windows.Forms.Button();
             this.förälderTillfälligButton = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -60,7 +59,6 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.personalTillfälligButton);
             this.groupBox2.Controls.Add(this.förälderTillfälligButton);
             this.groupBox2.Controls.Add(this.richTextBox1);
@@ -74,13 +72,6 @@
             this.groupBox2.Size = new System.Drawing.Size(387, 273);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(21, 8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(346, 198);
-            this.panel2.TabIndex = 9;
             // 
             // personalTillfälligButton
             // 
@@ -239,7 +230,6 @@
         private System.Windows.Forms.Button LoggaInButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button personalTillfälligButton;
         private System.Windows.Forms.Button förälderTillfälligButton;
         private System.Windows.Forms.Button TestJohanButton;

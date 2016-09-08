@@ -14,7 +14,6 @@ namespace Grupp3___Förskolan_Drutten
     class Postgres
     {
 
-
         private NpgsqlConnection conn;
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
@@ -202,14 +201,10 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     person = new Person();
 
-                    person.Personid = (int)rad[0];
-                    person.Förnamn = rad[1].ToString();
-                    person.Efternamn = rad[2].ToString();
-                    person.Telefonnr = rad[3].ToString();
-                    person.Användarnamn = rad[4].ToString();
-                    person.Lösenord = rad[5].ToString();
-                    person.ÄrPersonal = rad[6].ToString();
-                    person.ÄrFörälder = rad[7].ToString();
+                    person.Användarnamn = rad[0].ToString();
+                    person.Lösenord = rad[1].ToString();
+                    person.ÄrPersonal = rad[2].ToString();
+                    person.ÄrFörälder = rad[3].ToString();
 
                   //  AnvändarList.Add(person);
                 }
