@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Grupp3___Förskolan_Drutten
 {
-    class Postgres // Johan
+    class Postgres 
     {
         private NpgsqlConnection conn;
         private NpgsqlCommand cmd;
@@ -51,7 +51,7 @@ namespace Grupp3___Förskolan_Drutten
                 tabell.Columns.Add(c1);
                 tabell.Columns.Add(c2);
 
-                //Hischam
+                
 
                 DataRow rad = tabell.NewRow();
                 rad[c1] = true;
@@ -106,4 +106,22 @@ namespace Grupp3___Förskolan_Drutten
     }
 
     //Mathilda
+
+
+
+
+
+
+    // Johan
+
+
+
+
+
+    //Hischam
+
+
+
+
+    // Martin
 }
