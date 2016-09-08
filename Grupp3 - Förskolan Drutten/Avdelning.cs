@@ -14,6 +14,6 @@ namespace Grupp3___Förskolan_Drutten
     {
         public int Avdelningsid { get; set; }
         public string Namn { get; set; }
-
+         
     }
 }
