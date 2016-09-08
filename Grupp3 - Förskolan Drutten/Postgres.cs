@@ -114,6 +114,47 @@ namespace Grupp3___Förskolan_Drutten
 
         // Johan
 
+        
+
+        public void HämtaAnvändare()
+        {
+            string sql = "SELECT * FROM dagis.person dp";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Person> InloggUppgifterList = new List<Person>();
+            Person person;
+
+
+            if (tabell.Columns[0].ColumnName.Equals("Error"))
+            {
+                Person i = new Person();
+                i.Error = true;
+                i.ErrorMeddelande = tabell.Rows[0][1].ToString();
+
+                InloggUppgifterList.Add(i);
+            }
+            else
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    person = new Person();
+
+                    person.Personid = (int)rad[0];
+                    person.Förnamn = rad[1].ToString();
+                    person.Efternamn = rad[2].ToString();
+                    person.Telefonnr = rad[3].ToString();
+                    person.Användarnamn = rad[4].ToString();
+                    person.Lösenord = rad[5].ToString();
+                    person.ÄrPersonal = rad[6].ToString();
+                    person.ÄrFörälder = rad[7].ToString();
+
+                    InloggUppgifterList.Add(person);
+                }
+            }
+            //return BarnNamn;
+
+        }
 
 
 
