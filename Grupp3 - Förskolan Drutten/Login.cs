@@ -20,27 +20,33 @@ namespace Grupp3___Förskolan_Drutten
 
         Postgres p = new Postgres();
         Person person = new Person();
+        Person aktuellPerson = new Person();
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
+            // Fungerade inloggning, utan behörighet.
+            p.KontrolleraAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
 
-            if(andvandarnamnTextbox.Text.ToUpper() == "FÖRÄLDER")
-            {
-                this.Visible = false;
-                StartForalder foralder = new StartForalder();
-                foralder.Show();
 
-            }
-            else if(andvandarnamnTextbox.Text.ToUpper() == "PERSONAL")
-            {
-                this.Visible = false;
-                StartPersonal personal = new StartPersonal();
-                personal.Show();
-            }
-            else
-            {
-                MessageBox.Show("Felaktigt användarnamn.");
-            }
+            // TILLFÄLLIG INLOGGNING TILL FÖRÄLDER OCH PERSONAL
+            //
+            //if(andvandarnamnTextbox.Text.ToUpper() == "FÖRÄLDER")
+            //{
+            //    this.Visible = false;
+            //    StartForalder foralder = new StartForalder();
+            //    foralder.Show();
+
+            //}
+            //else if(andvandarnamnTextbox.Text.ToUpper() == "PERSONAL")
+            //{
+            //    this.Visible = false;
+            //    StartPersonal personal = new StartPersonal();
+            //    personal.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Felaktigt användarnamn.");
+            //}
 
         }
 
@@ -111,7 +117,7 @@ namespace Grupp3___Förskolan_Drutten
         private void TestJohanButton_Click(object sender, EventArgs e)
         {
             
-            p.KontrolleraAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
+
 
 
 

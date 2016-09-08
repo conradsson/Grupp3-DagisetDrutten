@@ -177,34 +177,48 @@ namespace Grupp3___Förskolan_Drutten
 
 
 
-            // Johan
-      
+        // Johan
 
-            // Inloggningskontrollerare. Fungerar EJ ännu
+        // Inloggningskontrollerare. Fungerar EJ ännu
         public void KontrolleraAnvändare(string användarnamn, string lösenord)  
         {
-            NpgsqlConnection connect = new NpgsqlConnection();
-
                 try
                 {
-                    string sql = "SELECT Count(*) FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
+                    string sql = "SELECT dp.användarnamn, dp.lösenord, dp.personal,  dp.förälder FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
 
                      cmd = new NpgsqlCommand(sql, conn);
 
-                //cmd.Parameters.AddWithValue("@uname", användarnamn);
-                //cmd.Parameters.AddWithValue("@pass", lösenord);
+                      dr = cmd.ExecuteReader();
 
-                int result = (int)cmd.ExecuteScalar();
-                    if (result > 0)
-                        MessageBox.Show("Login Success");
-                    else
-                        MessageBox.Show("Incorrect login");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Fel: " + ex.Message);
-                }
-            
+                
+                int count = 0;
+                while (dr.Read())
+                 {
+                   count += 1;
+                  }
+                // Lyckad inloggning.  Här skall behörighet bestämmas!
+                if (count == 1/* &&*/ )  // inlogging med förälderbehörighet
+                      {
+                            StartForalder f = new StartForalder();
+                            
+                            f.Show();
+
+                      }
+                     //   else if (count == 1 /*&&*/ ) // Inloggning med personalbehörighet
+                     //{
+
+                     //}
+                     else // Misslyckad inloggning.
+                      {
+                         MessageBox.Show("Felaktigt användarnamn eller lösenord.");
+                      }
+    
+                      }
+                      catch (Exception ex)
+                     {
+                          MessageBox.Show("Ett fel har uppstått: " + ex.Message);
+                     }
+            dr.Close();
         }
      
         public List<Person> HämtaAnvändare()

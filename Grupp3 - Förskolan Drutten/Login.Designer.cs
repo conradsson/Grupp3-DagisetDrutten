@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.personalTillfälligButton = new System.Windows.Forms.Button();
             this.förälderTillfälligButton = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.losenordTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +43,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TestJohanButton = new System.Windows.Forms.Button();
             this.testJohanListBox = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -59,9 +61,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.personalTillfälligButton);
             this.groupBox2.Controls.Add(this.förälderTillfälligButton);
-            this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.losenordTextbox);
             this.groupBox2.Controls.Add(this.label1);
@@ -72,6 +76,16 @@
             this.groupBox2.Size = new System.Drawing.Size(387, 273);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(102, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(192, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Logga in med uppgifter från databasen.";
             // 
             // personalTillfälligButton
             // 
@@ -92,15 +106,6 @@
             this.förälderTillfälligButton.Text = "Förälder";
             this.förälderTillfälligButton.UseVisualStyleBackColor = true;
             this.förälderTillfälligButton.Click += new System.EventHandler(this.förälderTillfälligButton_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(70, 28);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(260, 55);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "Skriv endast: personal eller: förälder, utan lösenord \nför att komma till respekt" +
-    "ive Form";
             // 
             // label2
             // 
@@ -194,6 +199,24 @@
             this.testJohanListBox.Size = new System.Drawing.Size(120, 95);
             this.testJohanListBox.TabIndex = 2;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(99, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "t.ex. Användarnamn: jaho  Lösenord: 1234";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(341, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "inga behörigheter aktiverade, Logga in-knappen går till StartFörälder.cs";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,7 +245,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox losenordTextbox;
         private System.Windows.Forms.Label label1;
@@ -234,6 +256,9 @@
         private System.Windows.Forms.Button förälderTillfälligButton;
         private System.Windows.Forms.Button TestJohanButton;
         private System.Windows.Forms.ListBox testJohanListBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 
