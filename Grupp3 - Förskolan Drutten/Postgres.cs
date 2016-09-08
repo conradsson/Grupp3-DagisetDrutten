@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
+using System.Windows.Forms;
 
 
 namespace Grupp3___Förskolan_Drutten
@@ -18,7 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         private DataTable tabell;
         public string Förnamn { get; set; }
         
-       // ConfigurationManager.ConnectionStrings["sträng"].ConnectionString
+
         public Postgres()
         {
             conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=pgmvaru_g3;User Id=pgmvaru_g3;Password=gunga;Database=pgmvaru_g3;SslMode=Require;trustServerCertificate=true;");
@@ -28,8 +29,6 @@ namespace Grupp3___Förskolan_Drutten
 
         public void VisaNamn()
         {
-            
-
             try
             {
                 string sql = "SELECT förnamn FROM dagis.barn";
@@ -43,25 +42,24 @@ namespace Grupp3___Förskolan_Drutten
                         Förnamn = dr["förnamn"].ToString();
                     };
                     
-                    System.Windows.Forms.MessageBox.Show(Förnamn);
+                    MessageBox.Show(Förnamn);
                 }
             }
             catch (NpgsqlException ex)
             {
-                //if (ex.Code.Equals("28P01"))
-                //{
-                //    MessageBox.Show("Fel lösenord.");
-                //}
-                //if (ex.Code.Equals("42501"))
-                //{
-                //    MessageBox.Show("Användaren saknar nödvändiga rättigheter.");
-                //}
-                //else
-                //{
-                //    MessageBox.Show(ex.Code);
-                //}
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-
+                if (ex.ErrorCode.Equals("28P01"))
+                {
+                    MessageBox.Show("Fel lösenord.");
+                }
+                if (ex.ErrorCode.Equals("42501"))
+                {
+                    MessageBox.Show("Användaren saknar nödvändiga rättigheter.");
+                }
+                else
+                {
+                    MessageBox.Show(ex.ErrorCode.ToString());
+                }
+                MessageBox.Show(ex.Message);
             }
             finally
             {
