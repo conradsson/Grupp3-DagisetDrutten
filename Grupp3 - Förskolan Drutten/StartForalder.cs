@@ -16,7 +16,13 @@ namespace Grupp3___Förskolan_Drutten
         {
             InitializeComponent();
             //  Start Effekter.
-            informationTabControl.Visible = true; 
+            informationTabControl.Visible = true;
+
+            List<Barn> barnlista = new List<Barn>();
+            Postgres p = new Postgres();
+            barnlista = p.HämtanBarn();
+            tiderBarnListBox.DataSource = null;
+            tiderBarnListBox.DataSource = barnlista;
         }
 
 
@@ -72,6 +78,7 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
+            
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -125,6 +132,18 @@ namespace Grupp3___Förskolan_Drutten
             {
                 Application.Exit();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            DateTime datum = monthCalendar3.SelectionStart;
+            int barnid = aktuelltbarn.Barnid;
+            string hämtas = lämnasTextBox.Text;
+            string lämnas = hämtasTextBox.Text;
+
+            Postgres p = new Postgres();
+            p.LäggTillTid(datum, barnid, hämtas, lämnas);
         }
     }
 }

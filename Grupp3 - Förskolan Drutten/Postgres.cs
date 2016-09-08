@@ -108,11 +108,86 @@ namespace Grupp3___Förskolan_Drutten
 
         //Mathilda
 
+        //Metod för att hämta barn till en lista
+        public List<Barn> HämtanBarn()
+        {
+            string sql = "select * from dagis.barn";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnNamn = new List<Barn>();
+            Barn barn;
 
 
-        // Johan
+            if (tabell.Columns[0].ColumnName.Equals("Error"))
+            {
+                Barn b = new Barn();
+                b.Error = true;
+                b.ErrorMeddelande = tabell.Rows[0][1].ToString();
+
+                BarnNamn.Add(b);
+            }
+            else
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    barn = new Barn();
+
+                    barn.Barnid = (int)rad[0];
+                    barn.Förnamn = rad[1].ToString();
+                    barn.Efternamn = rad[2].ToString();
+                    barn.Avdelningsid = (int)rad[3];
+
+                    BarnNamn.Add(barn);
+                }
+            }
+            return BarnNamn;
+
+        }
+
+        // Metod för att lägga till tider till ett barn  + datum +
+        public void LäggTillTid(DateTime datum, int barnid, string lamnas, string hamtas)
+        {
+
+            string meddelande;
+            try
+            {
+                string sql = "insert into dagis.narvaro (datum, barnid, tid_lamnad, tid_hamtad)"
+                   + " values (@datum, @barnid, @tid_lamnad, @tid_hamtad)";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+                cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
+                cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
+               
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Tiden är tillagd ";
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
 
 
+        }
+
+
+
+            // Johan
+      
+            public string inskrivetAnvändarnamn { get; set; }
+            public string inskrivetLösenord { get; set; }
+
+        public void KontrolleraAnvändare()
+        {
+
+        }
+     
         public List<Person> HämtaAnvändare()
         {
             string sql = "SELECT * FROM dagis.person dp";
@@ -158,7 +233,7 @@ namespace Grupp3___Förskolan_Drutten
         public List<Närvaro> HämtaNärvaro()
         {
             string sql = "select * from dagis.narvaro";
-
+         
             tabell.Clear();
             tabell = sqlFråga(sql);
             List<Närvaro> Närvarolista = new List<Närvaro>();
@@ -169,7 +244,7 @@ namespace Grupp3___Förskolan_Drutten
                 Närvaro n = new Närvaro();
                 n.Error = true;
                 n.ErrorMeddelande = tabell.Rows[0][1].ToString();
-
+ 
                 Närvarolista.Add(n);
             }
             else
@@ -192,9 +267,9 @@ namespace Grupp3___Förskolan_Drutten
         }
 
 
-            // Martin
+        // Martin
 
 
-        }
     }
+}
 
