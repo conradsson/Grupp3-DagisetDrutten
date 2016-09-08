@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Grupp3___Förskolan_Drutten
 {
-    class Postgres
+    class Postgres // Johan
     {
         private NpgsqlConnection conn;
         private NpgsqlCommand cmd;
@@ -65,7 +65,7 @@ namespace Grupp3___Förskolan_Drutten
                 conn.Close();
             }
         } 
-
+         
         //Metod att utgå ifrån vid SQLfrågor
         //public List<Barn> HämtanBarn()
         //{
