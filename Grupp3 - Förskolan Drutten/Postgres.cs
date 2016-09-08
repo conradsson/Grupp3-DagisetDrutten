@@ -17,9 +17,8 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable tabell;
-        public string Förnamn { get; set; }
         
-
+        //Kontaktar databasen.
         public Postgres()
         {
             conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=pgmvaru_g3;User Id=pgmvaru_g3;Password=gunga;Database=pgmvaru_g3;SslMode=Require;trustServerCertificate=true;");
@@ -27,46 +26,7 @@ namespace Grupp3___Förskolan_Drutten
             tabell = new DataTable();
         }
 
-        public void VisaNamn()
-        {
-            try
-            {
-                string sql = "SELECT förnamn FROM dagis.barn";
-                
-                NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
-                NpgsqlDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    {
-                        Förnamn = dr["förnamn"].ToString();
-                    };
-                    
-                    MessageBox.Show(Förnamn);
-                }
-            }
-            catch (NpgsqlException ex)
-            {
-                if (ex.ErrorCode.Equals("28P01"))
-                {
-                    MessageBox.Show("Fel lösenord.");
-                }
-                if (ex.ErrorCode.Equals("42501"))
-                {
-                    MessageBox.Show("Användaren saknar nödvändiga rättigheter.");
-                }
-                else
-                {
-                    MessageBox.Show(ex.ErrorCode.ToString());
-                }
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
+        //Test av fråga.
         public DataTable sqlFråga(string sql)
         {
             try
@@ -102,44 +62,45 @@ namespace Grupp3___Förskolan_Drutten
             }
             finally
             {
-                //conn.Close();
+                conn.Close();
             }
         } 
 
-        public List<Barn> HämtanBarn()
-        {
-            string sql = "select * from dagis.barn";
+        //Metod att utgå ifrån vid SQLfrågor
+        //public List<Barn> HämtanBarn()
+        //{
+        //    string sql = "select * from dagis.barn";
 
-            tabell.Clear();
-            tabell = sqlFråga(sql);
-            List<Barn> BarnNamn = new List<Barn>();
-            Barn barn;
+        //    tabell.Clear();
+        //    tabell = sqlFråga(sql);
+        //    List<Barn> BarnNamn = new List<Barn>();
+        //    Barn barn;
 
 
-            if (tabell.Columns[0].ColumnName.Equals("Error"))
-            {
-                Barn b = new Barn();
-                b.Error = true;
-                b.ErrorMeddelande = tabell.Rows[0][1].ToString();
+        //    if (tabell.Columns[0].ColumnName.Equals("Error"))
+        //    {
+        //        Barn b = new Barn();
+        //        b.Error = true;
+        //        b.ErrorMeddelande = tabell.Rows[0][1].ToString();
 
-                BarnNamn.Add(b);
-            }
-            else
-            {
-                foreach (DataRow rad in tabell.Rows)
-                {
-                    barn = new Barn();
+        //        BarnNamn.Add(b);
+        //    }
+        //    else
+        //    {
+        //        foreach (DataRow rad in tabell.Rows)
+        //        {
+        //            barn = new Barn();
 
-                    barn.Barnid = (int)rad[0];
-                    barn.Förnamn = rad[1].ToString();
-                    barn.Efternamn = rad[2].ToString();
-                    barn.Avdelningsid = (int)rad[3];
+        //            barn.Barnid = (int)rad[0];
+        //            barn.Förnamn = rad[1].ToString();
+        //            barn.Efternamn = rad[2].ToString();
+        //            barn.Avdelningsid = (int)rad[3];
                     
-                    BarnNamn.Add(barn);
-                }
-            }
-            return BarnNamn;
+        //            BarnNamn.Add(barn);
+        //        }
+        //    }
+        //    return BarnNamn;
 
-        }
+        //}
     }
 }

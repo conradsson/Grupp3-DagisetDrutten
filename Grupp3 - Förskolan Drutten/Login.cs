@@ -91,8 +91,6 @@ namespace Grupp3___Förskolan_Drutten
         private void button1_Click(object sender, EventArgs e)
         {
             List<Barn> barn = new List<Barn>();
-            //Postgres p = new Postgres();
-            //p.VisaNamn();
             Postgres p = new Postgres();
             barn = p.HämtanBarn();
             listBox1.DataSource = null;
