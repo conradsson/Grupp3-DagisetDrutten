@@ -11,9 +11,7 @@ using System.Windows.Forms;
 namespace Grupp3___Förskolan_Drutten
 {
     class Errorhandler
-    {
-       
-        
+    {        
             public bool Error { get; set; }
             public string ErrorMeddelande { get; set; }
 
