@@ -179,11 +179,11 @@ namespace Grupp3___Förskolan_Drutten
 
             // Johan
       
-            public string inskrivetAnvändarnamn { get; set; }
-            public string inskrivetLösenord { get; set; }
 
-        public void KontrolleraAnvändare(string användarnamn, string lösenord)
+            // Inloggningskontrollerare. Fungerar EJ ännu
+        public void KontrolleraAnvändare(string användarnamn, string lösenord)  
         {
+            NpgsqlConnection connect = new NpgsqlConnection();
 
                 try
                 {
@@ -191,10 +191,10 @@ namespace Grupp3___Förskolan_Drutten
 
                      cmd = new NpgsqlCommand(sql, conn);
 
-                    //cmd.Parameters.AddWithValue("@uname", användarnamn);
-                    //cmd.Parameters.AddWithValue("@pass", lösenord);
+                //cmd.Parameters.AddWithValue("@uname", användarnamn);
+                //cmd.Parameters.AddWithValue("@pass", lösenord);
 
-                    int result = (int)cmd.ExecuteScalar();
+                int result = (int)cmd.ExecuteScalar();
                     if (result > 0)
                         MessageBox.Show("Login Success");
                     else
