@@ -331,7 +331,8 @@ namespace Grupp3___Förskolan_Drutten
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
         {
 
-            string sql = "select * from dagis.narvaro where datum = ('" + AktuelltDatum + "')";
+            string sql = "select dp.datum, db.förnamn, db.efternamn, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av from dagis.narvaro dp, dagis.barn db where datum = ('" + AktuelltDatum + "') AND dp.barnid = db.barnid";
+
 
 
             tabell.Clear();
@@ -344,12 +345,12 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     närvaro = new Närvaro();
 
-                    närvaro.Närvaroid = (int)rad[0];
-                    närvaro.Datum = (DateTime)rad[1];
-                    närvaro.Barnid = (int)rad[2];
-                    närvaro.TidLämnad = rad[4].ToString();
-                    närvaro.TidHämtad = rad[5].ToString();
-                    närvaro.HämtasAv = rad[3].ToString();
+                    närvaro.Datum = (DateTime)rad[0];
+                    närvaro.Förnamn = rad[1].ToString();
+                    närvaro.Efternamn = rad[2].ToString();
+                    närvaro.TidLämnad = rad[3].ToString();
+                    närvaro.TidHämtad = rad[4].ToString();
+                    närvaro.HämtasAv = rad[5].ToString();
 
                     Närvarolista.Add(närvaro);
 
@@ -358,6 +359,38 @@ namespace Grupp3___Förskolan_Drutten
             return Närvarolista;
             
         }
+        public List<Frånvaro> HämtaFrånvaro(DateTime AktuelltDatum)
+        {
+
+            string sql = "select df.datum, db.förnamn, db.efternamn, df.sjuk, df.ledig from dagis.franvaro df, dagis.barn db where datum = ('" + AktuelltDatum + "') AND df.barnid = db.barnid";
+
+
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Frånvaro> Frånvarolista = new List<Frånvaro>();
+            Frånvaro frånvaro;
+
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    frånvaro = new Frånvaro();
+
+                    frånvaro.Datum = (DateTime)rad[0];
+                    frånvaro.Förnamn = rad[1].ToString();
+                    frånvaro.Efternamn = rad[2].ToString();
+                    frånvaro.Sjuk = Convert.ToBoolean(rad[4]);
+                    frånvaro.Ledig = (bool)rad[3];
+
+
+                    Frånvarolista.Add(frånvaro);
+
+                }
+            }
+            return Frånvarolista;
+
+        }
+
 
 
         // Martin
