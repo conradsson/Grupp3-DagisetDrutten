@@ -22,26 +22,23 @@ namespace Grupp3___Förskolan_Drutten
         //Kontaktar databasen.
         public Postgres()
         {
-            
             conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=pgmvaru_g3;User Id=pgmvaru_g3;Password=gunga;Database=pgmvaru_g3;SslMode=Require;trustServerCertificate=true;");
             conn.Open();
             tabell = new DataTable();
-
         }
 
         //Test av fråga.
         public DataTable sqlFråga(string sql)
         {
-           
+
             try
             {
-                cmd = new NpgsqlCommand(sql, conn);
                
+                cmd = new NpgsqlCommand(sql, conn);
                 dr = cmd.ExecuteReader();
 
                 tabell.Load(dr);
                 return tabell;
-                
 
             }
             catch (NpgsqlException ex)
@@ -50,8 +47,8 @@ namespace Grupp3___Förskolan_Drutten
                 DataColumn c1 = new DataColumn("Error");
                 DataColumn c2 = new DataColumn("ErrorMeddelande");
 
-                c1.DataType = Type.GetType("System.Boolean");
-                c2.DataType = Type.GetType("System.String");
+                c1.DataType = System.Type.GetType("System.Boolean");
+                c2.DataType = System.Type.GetType("System.String");
 
                 tabell.Columns.Add(c1);
                 tabell.Columns.Add(c2);
@@ -61,14 +58,12 @@ namespace Grupp3___Förskolan_Drutten
                 rad[c2] = ex.Message;
                 tabell.Rows.Add(rad);
 
-                return tabell;
 
+                return tabell;
             }
             finally
             {
-                
                 conn.Close();
-                
             }
         }
 
@@ -182,36 +177,67 @@ namespace Grupp3___Förskolan_Drutten
 
 
 
-            // Johan
-      
-            public string inskrivetAnvändarnamn { get; set; }
-            public string inskrivetLösenord { get; set; }
+        // Johan
 
-        public void KontrolleraAnvändare(string användarnamn, string lösenord)
+        // Inloggningskontrollerare. Fungerar EJ ännu
+        public void KontrolleraAnvändare(string användarnamn, string lösenord)  
         {
-
                 try
                 {
-                    string sql = "SELECT Count(*) FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
+                    string sql1 = "SELECT dp.användarnamn, dp.lösenord, dp.personal,  dp.förälder FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = t";
+                    string sql2 = "SELECT dp.användarnamn, dp.lösenord, dp.personal,  dp.förälder FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = t";
 
-                     cmd = new NpgsqlCommand(sql, conn);
+                cmd = new NpgsqlCommand(sql1, conn); // Kör sql1
 
-                    //cmd.Parameters.AddWithValue("@uname", användarnamn);
-                    //cmd.Parameters.AddWithValue("@pass", lösenord);
+                      dr = cmd.ExecuteReader();
 
+                
+                int count = 0;
+                while (dr.Read())
+                 {
+                   count += 1;
+                  }
+                
+                if (count == 1)  // Lyckad inlogging med personalbehörighet
+                   {
+                            StartForalder f = new StartForalder();
+                            
+                            f.Show();
+                            dr.Close();
 
+                }
 
-                    int result = ((int)cmd.ExecuteScalar());
-                    if (result > 0)
-                        MessageBox.Show("Login Success");
+                else // Testar om kontot är förälder istället, annars misslyckad inloggning.
+                   {
+                         cmd = new NpgsqlCommand(sql2, conn); // Kör sql2
+
+                          dr = cmd.ExecuteReader();
+
+                        
+                        while (dr.Read())
+                        {
+                          count += 1;
+                        }
+                    if (count == 1)
+                         {
+                         StartForalder f = new StartForalder();
+
+                        f.Show();
+                        dr.Close();
+                    }
                     else
-                        MessageBox.Show("Incorrect login");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Fel: " + ex.Message);
-                }
-            
+                    {
+                        MessageBox.Show("Felaktigt användarnamn eller lösenord.");
+                    }
+                        
+                   }
+    
+                  }
+            catch (Exception ex)
+               {
+                          MessageBox.Show("Ett fel har uppstått: " + ex.Message);
+               }
+            dr.Close();
         }
      
         public List<Person> HämtaAnvändare()
@@ -299,7 +325,6 @@ namespace Grupp3___Förskolan_Drutten
 
             tabell.Clear();
             tabell = sqlFråga(sql);
-            
             List<Närvaro> Närvarolista = new List<Närvaro>();
             Närvaro närvaro;
 
@@ -309,7 +334,7 @@ namespace Grupp3___Förskolan_Drutten
                 Närvaro n = new Närvaro();
                 n.Error = true;
                 n.ErrorMeddelande = tabell.Rows[0][1].ToString();
-
+ 
                 Närvarolista.Add(n);
             }
             else
@@ -321,19 +346,16 @@ namespace Grupp3___Förskolan_Drutten
                     närvaro.Närvaroid = (int)rad[0];
                     närvaro.Datum = (DateTime)rad[1];
                     närvaro.Barnid = (int)rad[2];
-                    närvaro.HämtasAv = rad[3].ToString();
                     närvaro.TidLämnad = rad[4].ToString();
                     närvaro.TidHämtad = rad[5].ToString();
-                    
+                    närvaro.HämtasAv = rad[3].ToString();
 
                     Närvarolista.Add(närvaro);
 
-
-            }
+                }
         }
-            
             return Närvarolista;
-
+            
         }
 
 
