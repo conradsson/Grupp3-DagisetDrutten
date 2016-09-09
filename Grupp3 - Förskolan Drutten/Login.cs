@@ -17,7 +17,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             InitializeComponent();
         }
-
+        Postgres p = new Postgres();
         
         Person person = new Person();
 
@@ -120,9 +120,26 @@ namespace Grupp3___Förskolan_Drutten
             personal.Show();
         }
 
+
+
         // Johan 
 
-           
+        private void EncryptTestButton_Click(object sender, EventArgs e)
+        {
+            encryptTextBox.Clear();
+            encryptTextBox.Text = p.LösenordsEncrypt(losenordENCRYPTtextBox.Text);
+        }
+
+        private void copyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(encryptTextBox.Text);
+        }
+
+        private void rensaEncryptButton_Click(object sender, EventArgs e)
+        {
+            encryptTextBox.Clear();
+            losenordENCRYPTtextBox.Clear();
+        }
 
         // Mathilda
 

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 
 namespace Grupp3___Förskolan_Drutten
@@ -272,7 +273,15 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-
+        public string LösenordsEncrypt(string lösenord)
+        {
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                UTF8Encoding utf8 = new UTF8Encoding();
+                byte[] data = md5.ComputeHash(utf8.GetBytes(lösenord));
+                return Convert.ToBase64String(data);
+            }
+        }
 
         //Hischam
 
