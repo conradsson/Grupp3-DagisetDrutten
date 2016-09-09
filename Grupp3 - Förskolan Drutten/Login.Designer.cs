@@ -34,8 +34,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.personalTillfälligButton = new System.Windows.Forms.Button();
-            this.förälderTillfälligButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.losenordTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,8 +62,6 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.personalTillfälligButton);
-            this.groupBox2.Controls.Add(this.förälderTillfälligButton);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.losenordTextbox);
             this.groupBox2.Controls.Add(this.label1);
@@ -105,26 +101,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Logga in med uppgifter från databasen.";
             // 
-            // personalTillfälligButton
-            // 
-            this.personalTillfälligButton.Location = new System.Drawing.Point(209, 236);
-            this.personalTillfälligButton.Name = "personalTillfälligButton";
-            this.personalTillfälligButton.Size = new System.Drawing.Size(75, 23);
-            this.personalTillfälligButton.TabIndex = 8;
-            this.personalTillfälligButton.Text = "Personal";
-            this.personalTillfälligButton.UseVisualStyleBackColor = true;
-            this.personalTillfälligButton.Click += new System.EventHandler(this.personalTillfälligButton_Click);
-            // 
-            // förälderTillfälligButton
-            // 
-            this.förälderTillfälligButton.Location = new System.Drawing.Point(105, 236);
-            this.förälderTillfälligButton.Name = "förälderTillfälligButton";
-            this.förälderTillfälligButton.Size = new System.Drawing.Size(75, 23);
-            this.förälderTillfälligButton.TabIndex = 7;
-            this.förälderTillfälligButton.Text = "Förälder";
-            this.förälderTillfälligButton.UseVisualStyleBackColor = true;
-            this.förälderTillfälligButton.Click += new System.EventHandler(this.förälderTillfälligButton_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -141,7 +117,7 @@
             this.losenordTextbox.Location = new System.Drawing.Point(126, 154);
             this.losenordTextbox.Name = "losenordTextbox";
             this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
-            this.losenordTextbox.TabIndex = 3;
+            this.losenordTextbox.TabIndex = 2;
             this.losenordTextbox.Text = "Lösenord";
             this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
             this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
@@ -162,17 +138,17 @@
             this.andvandarnamnTextbox.Location = new System.Drawing.Point(126, 112);
             this.andvandarnamnTextbox.Name = "andvandarnamnTextbox";
             this.andvandarnamnTextbox.Size = new System.Drawing.Size(123, 20);
-            this.andvandarnamnTextbox.TabIndex = 2;
+            this.andvandarnamnTextbox.TabIndex = 1;
             this.andvandarnamnTextbox.Text = "Användarnamn";
             this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
             this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
             // 
             // LoggaInButton
             // 
-            this.LoggaInButton.Location = new System.Drawing.Point(222, 180);
+            this.LoggaInButton.Location = new System.Drawing.Point(126, 193);
             this.LoggaInButton.Name = "LoggaInButton";
             this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
-            this.LoggaInButton.TabIndex = 1;
+            this.LoggaInButton.TabIndex = 3;
             this.LoggaInButton.Text = "Logga in";
             this.LoggaInButton.UseVisualStyleBackColor = true;
             this.LoggaInButton.Click += new System.EventHandler(this.LoggaInButton_Click);
@@ -204,7 +180,7 @@
             this.TestJohanButton.Location = new System.Drawing.Point(652, 29);
             this.TestJohanButton.Name = "TestJohanButton";
             this.TestJohanButton.Size = new System.Drawing.Size(75, 23);
-            this.TestJohanButton.TabIndex = 1;
+            this.TestJohanButton.TabIndex = 5;
             this.TestJohanButton.Text = "Test Johan";
             this.TestJohanButton.UseVisualStyleBackColor = true;
             this.TestJohanButton.Click += new System.EventHandler(this.TestJohanButton_Click);
@@ -215,7 +191,7 @@
             this.testJohanListBox.Location = new System.Drawing.Point(652, 58);
             this.testJohanListBox.Name = "testJohanListBox";
             this.testJohanListBox.Size = new System.Drawing.Size(120, 95);
-            this.testJohanListBox.TabIndex = 2;
+            this.testJohanListBox.TabIndex = 6;
             // 
             // Login
             // 
@@ -252,8 +228,6 @@
         private System.Windows.Forms.Button LoggaInButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button personalTillfälligButton;
-        private System.Windows.Forms.Button förälderTillfälligButton;
         private System.Windows.Forms.Button TestJohanButton;
         private System.Windows.Forms.ListBox testJohanListBox;
         private System.Windows.Forms.Label label3;

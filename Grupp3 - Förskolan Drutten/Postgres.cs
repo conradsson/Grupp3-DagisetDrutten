@@ -111,7 +111,7 @@ namespace Grupp3___Förskolan_Drutten
         //Metod för att hämta barn till en lista
         public List<Barn> HämtanBarn()
         {
-            string sql = "select * from dagis.barn";
+            string sql = "select * from dagis.barn ORDER BY förnamn";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
@@ -174,6 +174,27 @@ namespace Grupp3___Förskolan_Drutten
             return aktuellPerson.Användarnamn;
         }
 
+        //Metod för att hämta barn som tillhör en viss förälder
+        public List<Barn> HämtaFöräldersBarn()
+        {
+            string sql = "SELECT barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnLista = new List<Barn>();
+            Barn barn;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Förnamn = rad[0].ToString();
+                barn.Efternamn = rad[1].ToString();
+
+                BarnLista.Add(barn);
+            }
+            return BarnLista;
+        }
 
         // Johan
 
@@ -235,15 +256,19 @@ namespace Grupp3___Förskolan_Drutten
         {
             if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
             {
-
+                
+                StartFP fp = new StartFP();
+                fp.Show();
             }
             else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
             {
+                
                 StartForalder f = new StartForalder();
                 f.Show();
             }
             else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
             {
+                
                 StartPersonal p = new StartPersonal();
                 p.Show();
 
