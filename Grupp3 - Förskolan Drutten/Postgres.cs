@@ -34,7 +34,7 @@ namespace Grupp3___Förskolan_Drutten
 
             try
             {
-               
+
                 cmd = new NpgsqlCommand(sql, conn);
                 dr = cmd.ExecuteReader();
 
@@ -118,16 +118,16 @@ namespace Grupp3___Förskolan_Drutten
             List<Barn> BarnNamn = new List<Barn>();
             Barn barn;
 
-                foreach (DataRow rad in tabell.Rows)
-                {
-                    barn = new Barn();
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
 
-                    barn.Barnid = (int)rad[0];
-                    barn.Förnamn = rad[1].ToString();
-                    barn.Efternamn = rad[2].ToString();
-                    barn.Avdelningsid = (int)rad[3];
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
+                barn.Avdelningsid = (int)rad[3];
 
-                    BarnNamn.Add(barn);
+                BarnNamn.Add(barn);
 
             }
             return BarnNamn;
@@ -149,7 +149,7 @@ namespace Grupp3___Förskolan_Drutten
                 cmd.Parameters.AddWithValue("@barnid", barnid);
                 cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
                 cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
-               
+
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
@@ -178,7 +178,7 @@ namespace Grupp3___Förskolan_Drutten
         // Johan
 
         // Letar efter användare i DB
-        public void HämtaAnvändare(string användarnamn, string lösenord)  
+        public void HämtaAnvändare(string användarnamn, string lösenord)
         {
             try
             {
@@ -192,7 +192,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 if (dr.Read())
                 {
-
+                    
 
                     if (dr.HasRows)  // Hittad användare
                     {
@@ -208,19 +208,19 @@ namespace Grupp3___Förskolan_Drutten
                             ÄrFörälder = (bool)dr["förälder"]
                         };
 
-                        KontrolleraAnvändartyp(); 
+                        KontrolleraAnvändartyp();
                     }
 
 
 
-                  }
+                }
                 else
                 {
                     MessageBox.Show("Felaktigt användarnamn eller lösenord.");
                 }
 
             }
-            
+
             catch (Exception ex)
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
@@ -228,7 +228,7 @@ namespace Grupp3___Förskolan_Drutten
             }
             dr.Close();
         }
-     
+
 
         // Kontrollerar behörigheten hos användaren och skickar den till rätt Form.
         public void KontrolleraAnvändartyp()
@@ -253,20 +253,22 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
 
+
+
         }
 
         public void LoggaUt() // Rensar Person-klassen vid utloggning.
         {
 
         }
-       
+
 
         //Hischam
 
         //public List<Närvaro> HämtaNärvaro()
         //{
         //    string sql = "select * from dagis.narvaro";
-         
+
         //    tabell.Clear();
         //    tabell = sqlFråga(sql);
         //    List<Närvaro> Närvarolista = new List<Närvaro>();
@@ -277,7 +279,7 @@ namespace Grupp3___Förskolan_Drutten
         //        Närvaro n = new Närvaro();
         //        n.Error = true;
         //        n.ErrorMeddelande = tabell.Rows[0][1].ToString();
- 
+
         //        Närvarolista.Add(n);
         //    }
         //    else
@@ -298,6 +300,18 @@ namespace Grupp3___Förskolan_Drutten
         //}
         //    return Närvarolista;
         //}
+        public void ReturneraVärdenAvAktuellperson()
+        {
+            
+
+            if (aktuellPerson.Förnamn == "James")
+            {
+                MessageBox.Show("hej");
+            }
+           
+            
+
+        }
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
         {
 
@@ -324,10 +338,10 @@ namespace Grupp3___Förskolan_Drutten
 
                     Närvarolista.Add(närvaro);
 
+                }
             }
-        }
             return Närvarolista;
-            
+
         }
         public List<Frånvaro> HämtaFrånvaro(DateTime AktuelltDatum)
         {
@@ -425,7 +439,10 @@ namespace Grupp3___Förskolan_Drutten
         //    }
         //    return BarnNamn;
 
+        //}
 
-        }
+
+    }
+
 }
 

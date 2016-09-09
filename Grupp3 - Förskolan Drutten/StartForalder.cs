@@ -57,6 +57,10 @@ namespace Grupp3___Förskolan_Drutten
             TidertabControl.Visible = false;
            // NärvarotabControl.Visible = false;
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+
+            Postgres apa = new Postgres();
+            apa.ReturneraVärdenAvAktuellperson();
+
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
         {

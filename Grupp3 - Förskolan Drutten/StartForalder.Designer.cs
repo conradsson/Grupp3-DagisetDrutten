@@ -34,15 +34,15 @@
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxEpostMittKonto = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxTelefonnummerMittKonto = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxAdressMittKonto = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxEfternamnMittKonto = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxFörnamnMittKonto = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listAktuellaBarn = new System.Windows.Forms.ListBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -158,15 +158,15 @@
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.textBoxEpostMittKonto);
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.textBoxTelefonnummerMittKonto);
             this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.textBox9);
+            this.tabPage1.Controls.Add(this.textBoxAdressMittKonto);
             this.tabPage1.Controls.Add(this.label18);
-            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.textBoxEfternamnMittKonto);
             this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.textBox11);
+            this.tabPage1.Controls.Add(this.textBoxFörnamnMittKonto);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -185,12 +185,12 @@
             this.label15.TabIndex = 19;
             this.label15.Text = "Epost:";
             // 
-            // textBox5
+            // textBoxEpostMittKonto
             // 
-            this.textBox5.Location = new System.Drawing.Point(113, 189);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 18;
+            this.textBoxEpostMittKonto.Location = new System.Drawing.Point(113, 189);
+            this.textBoxEpostMittKonto.Name = "textBoxEpostMittKonto";
+            this.textBoxEpostMittKonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEpostMittKonto.TabIndex = 18;
             // 
             // label16
             // 
@@ -201,12 +201,12 @@
             this.label16.TabIndex = 17;
             this.label16.Text = "Telefonnummer:";
             // 
-            // textBox4
+            // textBoxTelefonnummerMittKonto
             // 
-            this.textBox4.Location = new System.Drawing.Point(113, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 16;
+            this.textBoxTelefonnummerMittKonto.Location = new System.Drawing.Point(113, 153);
+            this.textBoxTelefonnummerMittKonto.Name = "textBoxTelefonnummerMittKonto";
+            this.textBoxTelefonnummerMittKonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefonnummerMittKonto.TabIndex = 16;
             // 
             // label17
             // 
@@ -217,12 +217,12 @@
             this.label17.TabIndex = 15;
             this.label17.Text = "Adress:";
             // 
-            // textBox9
+            // textBoxAdressMittKonto
             // 
-            this.textBox9.Location = new System.Drawing.Point(113, 120);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 14;
+            this.textBoxAdressMittKonto.Location = new System.Drawing.Point(113, 120);
+            this.textBoxAdressMittKonto.Name = "textBoxAdressMittKonto";
+            this.textBoxAdressMittKonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAdressMittKonto.TabIndex = 14;
             // 
             // label18
             // 
@@ -233,12 +233,12 @@
             this.label18.TabIndex = 13;
             this.label18.Text = "Efternamn:";
             // 
-            // textBox10
+            // textBoxEfternamnMittKonto
             // 
-            this.textBox10.Location = new System.Drawing.Point(113, 86);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 12;
+            this.textBoxEfternamnMittKonto.Location = new System.Drawing.Point(113, 86);
+            this.textBoxEfternamnMittKonto.Name = "textBoxEfternamnMittKonto";
+            this.textBoxEfternamnMittKonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEfternamnMittKonto.TabIndex = 12;
             // 
             // label19
             // 
@@ -249,12 +249,12 @@
             this.label19.TabIndex = 11;
             this.label19.Text = "Förnamn:";
             // 
-            // textBox11
+            // textBoxFörnamnMittKonto
             // 
-            this.textBox11.Location = new System.Drawing.Point(113, 53);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 10;
+            this.textBoxFörnamnMittKonto.Location = new System.Drawing.Point(113, 53);
+            this.textBoxFörnamnMittKonto.Name = "textBoxFörnamnMittKonto";
+            this.textBoxFörnamnMittKonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFörnamnMittKonto.TabIndex = 10;
             // 
             // tabPage2
             // 
@@ -981,15 +981,15 @@
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.MonthCalendar monthCalendar2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxEpostMittKonto;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxTelefonnummerMittKonto;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxAdressMittKonto;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxEfternamnMittKonto;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBoxFörnamnMittKonto;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Label label20;
