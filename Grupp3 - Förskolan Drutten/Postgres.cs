@@ -144,7 +144,7 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Metod för att lägga till tider till ett barn  + datum +
+        // Metod för att lägga till tider till ett barn
         public void LäggTillTid(DateTime datum, int barnid, string lamnas, string hamtas)
         {
 
@@ -175,6 +175,11 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
+        //Metod för att kunna hämta användarnamnet som kan användas till att hämta rätt barn till rätt förälder
+        public string HämtaAnvändare(string användare)
+        {
+            return användare;
+        }
 
 
         // Johan
