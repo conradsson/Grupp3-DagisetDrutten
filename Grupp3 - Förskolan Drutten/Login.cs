@@ -18,14 +18,15 @@ namespace Grupp3___Förskolan_Drutten
             InitializeComponent();
         }
 
-        Postgres p = new Postgres();
+        
         Person person = new Person();
-        Person aktuellPerson = new Person();
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
+            Postgres p = new Postgres();
             // Fungerade inloggning, utan behörighet.
             p.KontrolleraAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
+            
 
 
             // TILLFÄLLIG INLOGGNING TILL FÖRÄLDER OCH PERSONAL
