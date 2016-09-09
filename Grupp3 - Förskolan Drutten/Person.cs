@@ -18,8 +18,8 @@ namespace Grupp3___Förskolan_Drutten
         public string Telefonnr { get; set; }
         public string Användarnamn { get; set; }
         public string Lösenord { get; set; }
-        public string ÄrFörälder { get; set; }
-        public string ÄrPersonal { get; set; }
+        public bool ÄrFörälder { get; set; }
+        public bool ÄrPersonal { get; set; }
 
 
         public override string ToString()

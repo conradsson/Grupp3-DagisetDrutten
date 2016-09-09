@@ -27,8 +27,8 @@ namespace Grupp3___Förskolan_Drutten
             //string användare;
             //användare = L.Användaren();
             //inloggadesAnvändarnamn.Text = användare;
-            Person person = new Person();
-            inloggadesAnvändarnamn.Text = person.Användarnamn;
+
+            inloggadesAnvändarnamn.Text = "hej"; 
 
         }
 

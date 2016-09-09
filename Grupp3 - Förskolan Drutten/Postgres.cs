@@ -168,83 +168,67 @@ namespace Grupp3___Förskolan_Drutten
         //Metod för att kunna hämta användarnamnet som kan användas till att hämta rätt barn till rätt förälder
         public string HämtaAnvändare(string användare)
         {
-            Person p = new Person();
-            p.Användarnamn = användare;
-            return användare;
+            aktuellPerson = new Person();
+
+            aktuellPerson.Användarnamn = användare;
+            return aktuellPerson.Användarnamn;
         }
 
 
         // Johan
 
         // Inloggningskontrollerare.
-        public void KontrolleraAnvändare(string användarnamn, string lösenord)  
+        public void HämtaAnvändare(string användarnamn, string lösenord)  
         {
-                try
-                {
-                    string sql1 = "SELECT *  FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = TRUE";
-                    string sql2 = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = TRUE";
+            try
+            {
+                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
 
-                cmd = new NpgsqlCommand(sql1, conn); // Kör sql1
+
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql1
 
                 dr = cmd.ExecuteReader();
 
-                
-                
-                int count = 0;
-                while (dr.Read())
-                 {
-                   count += 1;
+
+                if (dr.Read())
+                {
+
+
+                    if (dr.HasRows)  // Hittad användare
+                    {
+                        aktuellPerson = new Person()
+                        {
+                            Personid = (int)dr["personid"],
+                            Förnamn = dr["förnamn"].ToString(),
+                            Efternamn = dr["efternamn"].ToString(),
+                            Telefonnr = dr["telefonnummer"].ToString(),
+                            Användarnamn = dr["användarnamn"].ToString(),
+                            Lösenord = dr["lösenord"].ToString(),
+                            ÄrPersonal = (bool)dr["personal"],
+                            ÄrFörälder = (bool)dr["förälder"]
+                        };
+
+                    }
+
+
+
                   }
-                
-                if (count == 1)  // Lyckad inlogging med personalbehörighet
-                   {
-
-                    StartPersonal p = new StartPersonal();
-                            
-                            p.Show();
-                    
-                            dr.Close();
-
+                else
+                {
+                    MessageBox.Show("Felaktigt användarnamn eller lösenord.");
                 }
 
-                else // Testar om kontot är förälder istället, annars misslyckad inloggning.
-                   {
-                    dr.Close();
-
-                    cmd = new NpgsqlCommand(sql2, conn); // Kör sql2
-
-                          dr = cmd.ExecuteReader();
-
-                        
-                        while (dr.Read())
-                        {
-                          count += 1;
-                        }
-                    if (count == 1) // Lyckad inloggning med förälderinloggning
-                         {
-
-                        StartForalder f = new StartForalder();
-
-                        f.Show();
-                        dr.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Felaktigt användarnamn eller lösenord.");
-                    }
-                        
-                   }
-    
-                  }
+            }
+            
             catch (Exception ex)
-               {
-                          MessageBox.Show("Ett fel har uppstått: " + ex.Message);
-                         
+            {
+                MessageBox.Show("Ett fel har uppstått: " + ex.Message);
+
             }
             dr.Close();
         }
      
-        public List<Person> HämtaAnvändare()
+       /* public List<Person> HämtaAnvändare()
         {
             string sql = "SELECT * FROM dagis.person dp";
 
@@ -280,7 +264,7 @@ namespace Grupp3___Förskolan_Drutten
             }
             return AnvändarList;
 
-        }
+        }*/
 
         //Hischam
 
