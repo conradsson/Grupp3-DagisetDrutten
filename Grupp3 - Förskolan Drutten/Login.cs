@@ -122,17 +122,7 @@ namespace Grupp3___Förskolan_Drutten
 
         // Johan 
 
-            
-
-        private void TestJohanButton_Click(object sender, EventArgs e)
-        {
-            
-
-
-
-
-
-        }
+           
 
         // Mathilda
 

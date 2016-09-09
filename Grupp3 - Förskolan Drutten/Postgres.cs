@@ -205,16 +205,12 @@ namespace Grupp3___Förskolan_Drutten
             {
                 string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
 
-
                 cmd = new NpgsqlCommand(sql, conn); // Kör sql
 
                 dr = cmd.ExecuteReader();
 
-
                 if (dr.Read())
                 {
-                    
-
                     if (dr.HasRows)  // Hittad användare
                     {
                         aktuellPerson = new Person()
@@ -231,9 +227,6 @@ namespace Grupp3___Förskolan_Drutten
 
                         KontrolleraAnvändartyp();
                     }
-
-
-
                 }
                 else
                 {
@@ -277,15 +270,8 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
-
-
-
         }
 
-        public void LoggaUt() // Rensar Person-klassen vid utloggning.
-        {
-
-        }
 
 
         //Hischam

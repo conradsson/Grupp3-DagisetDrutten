@@ -41,8 +41,6 @@
             this.LoggaInButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TestJohanButton = new System.Windows.Forms.Button();
-            this.testJohanListBox = new System.Windows.Forms.ListBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -175,32 +173,12 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // TestJohanButton
-            // 
-            this.TestJohanButton.Location = new System.Drawing.Point(652, 29);
-            this.TestJohanButton.Name = "TestJohanButton";
-            this.TestJohanButton.Size = new System.Drawing.Size(75, 23);
-            this.TestJohanButton.TabIndex = 5;
-            this.TestJohanButton.Text = "Test Johan";
-            this.TestJohanButton.UseVisualStyleBackColor = true;
-            this.TestJohanButton.Click += new System.EventHandler(this.TestJohanButton_Click);
-            // 
-            // testJohanListBox
-            // 
-            this.testJohanListBox.FormattingEnabled = true;
-            this.testJohanListBox.Location = new System.Drawing.Point(652, 58);
-            this.testJohanListBox.Name = "testJohanListBox";
-            this.testJohanListBox.Size = new System.Drawing.Size(120, 95);
-            this.testJohanListBox.TabIndex = 6;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.testJohanListBox);
-            this.Controls.Add(this.TestJohanButton);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -228,8 +206,6 @@
         private System.Windows.Forms.Button LoggaInButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button TestJohanButton;
-        private System.Windows.Forms.ListBox testJohanListBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
