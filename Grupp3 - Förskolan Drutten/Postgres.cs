@@ -111,7 +111,7 @@ namespace Grupp3___Förskolan_Drutten
         //Metod för att hämta barn till en lista
         public List<Barn> HämtanBarn()
         {
-            string sql = "select * from dagis.barn";
+            string sql = "select * from dagis.barn ORDER BY förnamn";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
