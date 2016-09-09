@@ -144,7 +144,7 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Metod för att lägga till tider till ett barn  + datum +
+        // Metod för att lägga till tider till ett barn
         public void LäggTillTid(DateTime datum, int barnid, string lamnas, string hamtas)
         {
 
@@ -175,6 +175,11 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
+        //Metod för att kunna hämta användarnamnet som kan användas till att hämta rätt barn till rätt förälder
+        public string HämtaAnvändare(string användare)
+        {
+            return användare;
+        }
 
 
         // Johan
@@ -184,8 +189,8 @@ namespace Grupp3___Förskolan_Drutten
         {
                 try
                 {
-                    string sql1 = "SELECT dp.användarnamn, dp.lösenord, dp.personal,  dp.förälder FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = t";
-                    string sql2 = "SELECT dp.användarnamn, dp.lösenord, dp.personal,  dp.förälder FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = t";
+                    string sql1 = "SELECT dp.användarnamn, dp.lösenord  FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = TRUE";
+                    string sql2 = "SELECT dp.användarnamn, dp.lösenord FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = TRUE";
 
                 cmd = new NpgsqlCommand(sql1, conn); // Kör sql1
 
@@ -200,16 +205,18 @@ namespace Grupp3___Förskolan_Drutten
                 
                 if (count == 1)  // Lyckad inlogging med personalbehörighet
                    {
-                            StartForalder f = new StartForalder();
+                            StartPersonal p = new StartPersonal();
                             
-                            f.Show();
+                            p.Show();
                             dr.Close();
 
                 }
 
                 else // Testar om kontot är förälder istället, annars misslyckad inloggning.
                    {
-                         cmd = new NpgsqlCommand(sql2, conn); // Kör sql2
+                    dr.Close();
+
+                    cmd = new NpgsqlCommand(sql2, conn); // Kör sql2
 
                           dr = cmd.ExecuteReader();
 
@@ -218,7 +225,7 @@ namespace Grupp3___Förskolan_Drutten
                         {
                           count += 1;
                         }
-                    if (count == 1)
+                    if (count == 1) // Lyckad inloggning med förälderinloggning
                          {
                          StartForalder f = new StartForalder();
 
@@ -236,7 +243,8 @@ namespace Grupp3___Förskolan_Drutten
             catch (Exception ex)
                {
                           MessageBox.Show("Ett fel har uppstått: " + ex.Message);
-               }
+                         
+            }
             dr.Close();
         }
      
