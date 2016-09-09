@@ -87,7 +87,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
+            this.inloggadesAnvändarnamn = new System.Windows.Forms.Label();
             this.informationButton = new System.Windows.Forms.Button();
             this.närvaroButton = new System.Windows.Forms.Button();
             this.barnButton = new System.Windows.Forms.Button();
@@ -222,7 +222,7 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.label42);
+            this.panel1.Controls.Add(this.inloggadesAnvändarnamn);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.informationButton);
             this.panel1.Controls.Add(this.närvaroButton);
@@ -702,17 +702,16 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // label42
+            // inloggadesAnvändarnamn
             // 
-            this.label42.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label42.Location = new System.Drawing.Point(148, 12);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(113, 12);
-            this.label42.TabIndex = 26;
-            this.label42.Text = "inloggadesAnvändarnamn";
+            this.inloggadesAnvändarnamn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.inloggadesAnvändarnamn.AutoSize = true;
+            this.inloggadesAnvändarnamn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.inloggadesAnvändarnamn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.inloggadesAnvändarnamn.Location = new System.Drawing.Point(148, 12);
+            this.inloggadesAnvändarnamn.Name = "inloggadesAnvändarnamn";
+            this.inloggadesAnvändarnamn.Size = new System.Drawing.Size(0, 12);
+            this.inloggadesAnvändarnamn.TabIndex = 26;
             // 
             // informationButton
             // 
@@ -1136,7 +1135,7 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label inloggadesAnvändarnamn;
         private System.Windows.Forms.Button inloggadButton;
         private System.Windows.Forms.Button loggaUtButton;
         private System.Windows.Forms.Button exitButton;

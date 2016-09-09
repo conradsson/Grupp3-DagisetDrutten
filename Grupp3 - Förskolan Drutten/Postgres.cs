@@ -17,6 +17,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable tabell;
+        public Person aktuellPerson;
 
 
         //Kontaktar databasen.
@@ -181,6 +182,7 @@ namespace Grupp3___Förskolan_Drutten
             return användare;
         }
 
+
         // Johan
 
         // Inloggningskontrollerare.
@@ -188,14 +190,14 @@ namespace Grupp3___Förskolan_Drutten
         {
                 try
                 {
-                    HämtaAnvändare(användarnamn);
-                    string sql1 = "SELECT dp.användarnamn, dp.lösenord  FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = TRUE";
-                    string sql2 = "SELECT dp.användarnamn, dp.lösenord FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = TRUE";
+                    string sql1 = "SELECT *  FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = TRUE";
+                    string sql2 = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = TRUE";
 
                 cmd = new NpgsqlCommand(sql1, conn); // Kör sql1
 
-                      dr = cmd.ExecuteReader();
+                dr = cmd.ExecuteReader();
 
+                
                 
                 int count = 0;
                 while (dr.Read())
@@ -205,9 +207,24 @@ namespace Grupp3___Förskolan_Drutten
                 
                 if (count == 1)  // Lyckad inlogging med personalbehörighet
                    {
-                            StartPersonal p = new StartPersonal();
+
+                    aktuellPerson = new Person()
+                    {
+                        Personid = (int)dr["personid"],
+                        Förnamn = dr["förnamn"].ToString(),
+                        Efternamn = dr["efternamn"].ToString(),
+                        Telefonnr = dr["telefonnummer"].ToString(),
+                        Användarnamn = dr["användarnamn"].ToString(),
+                        Lösenord = dr["lösenord"].ToString(),
+                        ÄrFörälder = dr["förälder"].ToString(),
+                        ÄrPersonal = dr["personal"].ToString()
+
+                    };
+
+                    StartPersonal p = new StartPersonal();
                             
                             p.Show();
+                    
                             dr.Close();
 
                 }
@@ -227,7 +244,18 @@ namespace Grupp3___Förskolan_Drutten
                         }
                     if (count == 1) // Lyckad inloggning med förälderinloggning
                          {
-                         StartForalder f = new StartForalder();
+
+                        aktuellPerson = new Person()
+                        {
+                            Personid = (int)dr["personid"],
+                            Förnamn = dr["förnamn"].ToString(),
+                            Efternamn = dr["efternamn"].ToString(),
+                            Telefonnr = dr["telefonnummer"].ToString(),
+                            Användarnamn = dr["användarnamn"].ToString(),
+                            Lösenord = dr["lösenord"].ToString()
+
+                        };
+                        StartForalder f = new StartForalder();
 
                         f.Show();
                         dr.Close();
@@ -278,8 +306,6 @@ namespace Grupp3___Förskolan_Drutten
                     person.Telefonnr = rad[3].ToString();
                     person.Användarnamn = rad[4].ToString();
                     person.Lösenord = rad[5].ToString();
-                    person.ÄrPersonal = rad[6].ToString();
-                    person.ÄrFörälder = rad[7].ToString();
 
                     AnvändarList.Add(person);
                 }

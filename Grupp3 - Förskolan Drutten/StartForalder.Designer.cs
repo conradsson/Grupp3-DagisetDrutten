@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForalder));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label42 = new System.Windows.Forms.Label();
+            this.inloggadesAnvändarnamn = new System.Windows.Forms.Label();
             this.inloggadButton = new System.Windows.Forms.Button();
             this.loggaUtButton = new System.Windows.Forms.Button();
             this.TidertabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.hämtasTextBox = new System.Windows.Forms.TextBox();
@@ -97,7 +98,6 @@
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -127,7 +127,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
-            this.panel1.Controls.Add(this.label42);
+            this.panel1.Controls.Add(this.inloggadesAnvändarnamn);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
             this.panel1.Controls.Add(this.TidertabControl);
@@ -142,17 +142,16 @@
             this.panel1.Size = new System.Drawing.Size(957, 435);
             this.panel1.TabIndex = 17;
             // 
-            // label42
+            // inloggadesAnvändarnamn
             // 
-            this.label42.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Gainsboro;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label42.Location = new System.Drawing.Point(148, 12);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(22, 12);
-            this.label42.TabIndex = 29;
-            this.label42.Text = "ankl";
+            this.inloggadesAnvändarnamn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.inloggadesAnvändarnamn.AutoSize = true;
+            this.inloggadesAnvändarnamn.BackColor = System.Drawing.Color.Gainsboro;
+            this.inloggadesAnvändarnamn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.inloggadesAnvändarnamn.Location = new System.Drawing.Point(148, 12);
+            this.inloggadesAnvändarnamn.Name = "inloggadesAnvändarnamn";
+            this.inloggadesAnvändarnamn.Size = new System.Drawing.Size(0, 12);
+            this.inloggadesAnvändarnamn.TabIndex = 29;
             // 
             // inloggadButton
             // 
@@ -232,6 +231,14 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Meddela tider";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tiderBarnListBox
+            // 
+            this.tiderBarnListBox.FormattingEnabled = true;
+            this.tiderBarnListBox.Location = new System.Drawing.Point(72, 45);
+            this.tiderBarnListBox.Name = "tiderBarnListBox";
+            this.tiderBarnListBox.Size = new System.Drawing.Size(120, 95);
+            this.tiderBarnListBox.TabIndex = 11;
             // 
             // button2
             // 
@@ -870,14 +877,6 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // tiderBarnListBox
-            // 
-            this.tiderBarnListBox.FormattingEnabled = true;
-            this.tiderBarnListBox.Location = new System.Drawing.Point(72, 45);
-            this.tiderBarnListBox.Name = "tiderBarnListBox";
-            this.tiderBarnListBox.Size = new System.Drawing.Size(120, 95);
-            this.tiderBarnListBox.TabIndex = 11;
-            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -986,7 +985,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Button närvaroButton;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label inloggadesAnvändarnamn;
         private System.Windows.Forms.Button inloggadButton;
         private System.Windows.Forms.Button loggaUtButton;
         private System.Windows.Forms.Button exitButton;
