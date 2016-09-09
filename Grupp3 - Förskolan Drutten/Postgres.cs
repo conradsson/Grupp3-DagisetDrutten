@@ -235,15 +235,19 @@ namespace Grupp3___Förskolan_Drutten
         {
             if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
             {
-
+                
+                StartFP fp = new StartFP();
+                fp.Show();
             }
             else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
             {
+                
                 StartForalder f = new StartForalder();
                 f.Show();
             }
             else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
             {
+                
                 StartPersonal p = new StartPersonal();
                 p.Show();
 
