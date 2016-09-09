@@ -31,9 +31,39 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForalder));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MittKontoTabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listAktuellaBarn = new System.Windows.Forms.ListBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.inloggadesAnvändarnamn = new System.Windows.Forms.Label();
             this.inloggadButton = new System.Windows.Forms.Button();
             this.loggaUtButton = new System.Windows.Forms.Button();
+            this.informationButton = new System.Windows.Forms.Button();
+            this.närvaroButton = new System.Windows.Forms.Button();
+            this.tiderButton = new System.Windows.Forms.Button();
+            this.mittKontoButton = new System.Windows.Forms.Button();
             this.TidertabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tiderBarnListBox = new System.Windows.Forms.ListBox();
@@ -66,40 +96,14 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.omTabPage = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.informationButton = new System.Windows.Forms.Button();
-            this.närvaroButton = new System.Windows.Forms.Button();
-            this.tiderButton = new System.Windows.Forms.Button();
-            this.mittKontoButton = new System.Windows.Forms.Button();
-            this.MittKontoTabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label21 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.MittKontoTabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.TidertabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -107,9 +111,6 @@
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
             this.omTabPage.SuspendLayout();
-            this.MittKontoTabControl.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,20 +128,265 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.inloggadesAnvändarnamn);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
-            this.panel1.Controls.Add(this.TidertabControl);
-            this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.informationButton);
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
+            this.panel1.Controls.Add(this.TidertabControl);
+            this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
             this.panel1.TabIndex = 17;
+            // 
+            // MittKontoTabControl
+            // 
+            this.MittKontoTabControl.Controls.Add(this.tabPage1);
+            this.MittKontoTabControl.Controls.Add(this.tabPage2);
+            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 30);
+            this.MittKontoTabControl.Name = "MittKontoTabControl";
+            this.MittKontoTabControl.SelectedIndex = 0;
+            this.MittKontoTabControl.Size = new System.Drawing.Size(748, 389);
+            this.MittKontoTabControl.TabIndex = 16;
+            this.MittKontoTabControl.Visible = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.textBox9);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.textBox11);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(740, 363);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Kontouppgifter";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(74, 192);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(37, 13);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Epost:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(113, 189);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 18;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(30, 156);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(83, 13);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Telefonnummer:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(113, 153);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 16;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(69, 123);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(42, 13);
+            this.label17.TabIndex = 15;
+            this.label17.Text = "Adress:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(113, 120);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 14;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(54, 89);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(58, 13);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Efternamn:";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(113, 86);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 12;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(56, 56);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Förnamn:";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(113, 53);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 20);
+            this.textBox11.TabIndex = 10;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.listAktuellaBarn);
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.richTextBox2);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.textBox12);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.textBox8);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.textBox6);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.textBox7);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(740, 363);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Mina Barn";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // listAktuellaBarn
+            // 
+            this.listAktuellaBarn.FormattingEnabled = true;
+            this.listAktuellaBarn.Location = new System.Drawing.Point(55, 80);
+            this.listAktuellaBarn.Name = "listAktuellaBarn";
+            this.listAktuellaBarn.Size = new System.Drawing.Size(194, 251);
+            this.listAktuellaBarn.TabIndex = 24;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(292, 237);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(38, 13);
+            this.label21.TabIndex = 23;
+            this.label21.Text = "Annat:";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(338, 237);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(182, 94);
+            this.richTextBox2.TabIndex = 22;
+            this.richTextBox2.Text = "";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(279, 189);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(47, 13);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Allergier:";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(338, 186);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 20);
+            this.textBox12.TabIndex = 20;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(549, 297);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 34);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Uppdatera information";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(279, 152);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Efternamn:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(338, 149);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(52, 48);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 16);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Barn:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(279, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Förnamn:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(338, 113);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(258, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Personnummer:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(338, 80);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 12;
             // 
             // inloggadesAnvändarnamn
             // 
@@ -198,6 +444,97 @@
             this.loggaUtButton.UseVisualStyleBackColor = false;
             this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
             this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
+            // 
+            // informationButton
+            // 
+            this.informationButton.BackColor = System.Drawing.Color.LightGray;
+            this.informationButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.informationButtonDrutten;
+            this.informationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.informationButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.informationButton.FlatAppearance.BorderSize = 0;
+            this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.informationButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informationButton.ForeColor = System.Drawing.Color.Black;
+            this.informationButton.Location = new System.Drawing.Point(31, 84);
+            this.informationButton.Name = "informationButton";
+            this.informationButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.informationButton.Size = new System.Drawing.Size(163, 45);
+            this.informationButton.TabIndex = 13;
+            this.informationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.informationButton.UseVisualStyleBackColor = false;
+            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
+            this.informationButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.informationButton_MouseDown);
+            // 
+            // närvaroButton
+            // 
+            this.närvaroButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.närvaroButtonDrutten;
+            this.närvaroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.närvaroButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.närvaroButton.FlatAppearance.BorderSize = 0;
+            this.närvaroButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.närvaroButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.närvaroButton.ForeColor = System.Drawing.Color.Black;
+            this.närvaroButton.Location = new System.Drawing.Point(31, 234);
+            this.närvaroButton.Name = "närvaroButton";
+            this.närvaroButton.Size = new System.Drawing.Size(163, 45);
+            this.närvaroButton.TabIndex = 16;
+            this.närvaroButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.närvaroButton.UseVisualStyleBackColor = false;
+            this.närvaroButton.Visible = false;
+            this.närvaroButton.Click += new System.EventHandler(this.närvaroButton_Click);
+            this.närvaroButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.närvaroButton_MouseDown);
+            // 
+            // tiderButton
+            // 
+            this.tiderButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.tiderButtonDrutten;
+            this.tiderButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tiderButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.tiderButton.FlatAppearance.BorderSize = 0;
+            this.tiderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.tiderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tiderButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiderButton.ForeColor = System.Drawing.Color.Black;
+            this.tiderButton.Location = new System.Drawing.Point(31, 184);
+            this.tiderButton.Name = "tiderButton";
+            this.tiderButton.Size = new System.Drawing.Size(163, 45);
+            this.tiderButton.TabIndex = 15;
+            this.tiderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tiderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.tiderButton.UseVisualStyleBackColor = false;
+            this.tiderButton.Click += new System.EventHandler(this.tiderButton_Click);
+            this.tiderButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tiderButton_MouseDown);
+            // 
+            // mittKontoButton
+            // 
+            this.mittKontoButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.mittKontoButtonDrutten;
+            this.mittKontoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mittKontoButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.mittKontoButton.FlatAppearance.BorderSize = 0;
+            this.mittKontoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mittKontoButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mittKontoButton.ForeColor = System.Drawing.Color.Black;
+            this.mittKontoButton.Location = new System.Drawing.Point(31, 134);
+            this.mittKontoButton.Name = "mittKontoButton";
+            this.mittKontoButton.Size = new System.Drawing.Size(163, 45);
+            this.mittKontoButton.TabIndex = 14;
+            this.mittKontoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mittKontoButton.UseVisualStyleBackColor = false;
+            this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
+            this.mittKontoButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mittKontoButton_MouseDown);
             // 
             // TidertabControl
             // 
@@ -515,333 +852,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Druttens förskola är ....";
             // 
-            // informationButton
-            // 
-            this.informationButton.BackColor = System.Drawing.Color.LightGray;
-            this.informationButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.informationButtonDrutten;
-            this.informationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.informationButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.informationButton.FlatAppearance.BorderSize = 0;
-            this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.informationButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.informationButton.ForeColor = System.Drawing.Color.Black;
-            this.informationButton.Location = new System.Drawing.Point(31, 84);
-            this.informationButton.Name = "informationButton";
-            this.informationButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.informationButton.Size = new System.Drawing.Size(163, 45);
-            this.informationButton.TabIndex = 13;
-            this.informationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.informationButton.UseVisualStyleBackColor = false;
-            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
-            this.informationButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.informationButton_MouseDown);
-            // 
-            // närvaroButton
-            // 
-            this.närvaroButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.närvaroButtonDrutten;
-            this.närvaroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.närvaroButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.närvaroButton.FlatAppearance.BorderSize = 0;
-            this.närvaroButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.närvaroButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.närvaroButton.ForeColor = System.Drawing.Color.Black;
-            this.närvaroButton.Location = new System.Drawing.Point(31, 234);
-            this.närvaroButton.Name = "närvaroButton";
-            this.närvaroButton.Size = new System.Drawing.Size(163, 45);
-            this.närvaroButton.TabIndex = 16;
-            this.närvaroButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.närvaroButton.UseVisualStyleBackColor = false;
-            this.närvaroButton.Visible = false;
-            this.närvaroButton.Click += new System.EventHandler(this.närvaroButton_Click);
-            this.närvaroButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.närvaroButton_MouseDown);
-            // 
-            // tiderButton
-            // 
-            this.tiderButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.tiderButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.tiderButtonDrutten;
-            this.tiderButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tiderButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.tiderButton.FlatAppearance.BorderSize = 0;
-            this.tiderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.tiderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.tiderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.tiderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tiderButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiderButton.ForeColor = System.Drawing.Color.Black;
-            this.tiderButton.Location = new System.Drawing.Point(31, 184);
-            this.tiderButton.Name = "tiderButton";
-            this.tiderButton.Size = new System.Drawing.Size(163, 45);
-            this.tiderButton.TabIndex = 15;
-            this.tiderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tiderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.tiderButton.UseVisualStyleBackColor = false;
-            this.tiderButton.Click += new System.EventHandler(this.tiderButton_Click);
-            this.tiderButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tiderButton_MouseDown);
-            // 
-            // mittKontoButton
-            // 
-            this.mittKontoButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.mittKontoButtonDrutten;
-            this.mittKontoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mittKontoButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.mittKontoButton.FlatAppearance.BorderSize = 0;
-            this.mittKontoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mittKontoButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mittKontoButton.ForeColor = System.Drawing.Color.Black;
-            this.mittKontoButton.Location = new System.Drawing.Point(31, 134);
-            this.mittKontoButton.Name = "mittKontoButton";
-            this.mittKontoButton.Size = new System.Drawing.Size(163, 45);
-            this.mittKontoButton.TabIndex = 14;
-            this.mittKontoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.mittKontoButton.UseVisualStyleBackColor = false;
-            this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
-            this.mittKontoButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mittKontoButton_MouseDown);
-            // 
-            // MittKontoTabControl
-            // 
-            this.MittKontoTabControl.Controls.Add(this.tabPage1);
-            this.MittKontoTabControl.Controls.Add(this.tabPage2);
-            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 30);
-            this.MittKontoTabControl.Name = "MittKontoTabControl";
-            this.MittKontoTabControl.SelectedIndex = 0;
-            this.MittKontoTabControl.Size = new System.Drawing.Size(748, 389);
-            this.MittKontoTabControl.TabIndex = 16;
-            this.MittKontoTabControl.Visible = false;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.textBox9);
-            this.tabPage1.Controls.Add(this.label18);
-            this.tabPage1.Controls.Add(this.textBox10);
-            this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.textBox11);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(740, 363);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Kontouppgifter";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(74, 192);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 13);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Epost:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(113, 189);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 18;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 156);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 13);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Telefonnummer:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(113, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 16;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(69, 123);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(42, 13);
-            this.label17.TabIndex = 15;
-            this.label17.Text = "Adress:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(113, 120);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 14;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(54, 89);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 13);
-            this.label18.TabIndex = 13;
-            this.label18.Text = "Efternamn:";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(113, 86);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 12;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(56, 56);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 13);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "Förnamn:";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(113, 53);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 10;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.richTextBox2);
-            this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.textBox12);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.textBox8);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.textBox7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(740, 363);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mina Barn";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(75, 246);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(38, 13);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "Annat:";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(121, 246);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(182, 96);
-            this.richTextBox2.TabIndex = 22;
-            this.richTextBox2.Text = "";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(62, 198);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(47, 13);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "Allergier:";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(121, 195);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(328, 146);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 34);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Lägg till barn";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(62, 161);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Efternamn:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(121, 158);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(52, 48);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 16);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Barn 1:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(62, 125);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Förnamn:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(121, 122);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 14;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(41, 92);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Personnummer:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(121, 89);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 12;
-            // 
             // kontoTypLabel
             // 
             this.kontoTypLabel.AutoSize = true;
@@ -897,6 +907,11 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.MittKontoTabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.TidertabControl.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -908,11 +923,6 @@
             this.senasteTabPage.ResumeLayout(false);
             this.omTabPage.ResumeLayout(false);
             this.omTabPage.PerformLayout();
-            this.MittKontoTabControl.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -990,5 +1000,6 @@
         private System.Windows.Forms.Button loggaUtButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.ListBox tiderBarnListBox;
+        private System.Windows.Forms.ListBox listAktuellaBarn;
     }
 }
