@@ -22,23 +22,26 @@ namespace Grupp3___Förskolan_Drutten
         //Kontaktar databasen.
         public Postgres()
         {
+            
             conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=pgmvaru_g3;User Id=pgmvaru_g3;Password=gunga;Database=pgmvaru_g3;SslMode=Require;trustServerCertificate=true;");
             conn.Open();
             tabell = new DataTable();
+
         }
 
         //Test av fråga.
         public DataTable sqlFråga(string sql)
         {
-
+           
             try
             {
-               
                 cmd = new NpgsqlCommand(sql, conn);
+               
                 dr = cmd.ExecuteReader();
 
                 tabell.Load(dr);
                 return tabell;
+                
 
             }
             catch (NpgsqlException ex)
@@ -47,8 +50,8 @@ namespace Grupp3___Förskolan_Drutten
                 DataColumn c1 = new DataColumn("Error");
                 DataColumn c2 = new DataColumn("ErrorMeddelande");
 
-                c1.DataType = System.Type.GetType("System.Boolean");
-                c2.DataType = System.Type.GetType("System.String");
+                c1.DataType = Type.GetType("System.Boolean");
+                c2.DataType = Type.GetType("System.String");
 
                 tabell.Columns.Add(c1);
                 tabell.Columns.Add(c2);
@@ -58,12 +61,14 @@ namespace Grupp3___Förskolan_Drutten
                 rad[c2] = ex.Message;
                 tabell.Rows.Add(rad);
 
-
                 return tabell;
+
             }
             finally
             {
+                
                 conn.Close();
+                
             }
         }
 
@@ -194,7 +199,9 @@ namespace Grupp3___Förskolan_Drutten
                     //cmd.Parameters.AddWithValue("@uname", användarnamn);
                     //cmd.Parameters.AddWithValue("@pass", lösenord);
 
-                    int result = (int)cmd.ExecuteScalar();
+
+
+                    int result = ((int)cmd.ExecuteScalar());
                     if (result > 0)
                         MessageBox.Show("Login Success");
                     else
@@ -292,6 +299,7 @@ namespace Grupp3___Förskolan_Drutten
 
             tabell.Clear();
             tabell = sqlFråga(sql);
+            
             List<Närvaro> Närvarolista = new List<Närvaro>();
             Närvaro närvaro;
 
@@ -301,7 +309,7 @@ namespace Grupp3___Förskolan_Drutten
                 Närvaro n = new Närvaro();
                 n.Error = true;
                 n.ErrorMeddelande = tabell.Rows[0][1].ToString();
- 
+
                 Närvarolista.Add(n);
             }
             else
@@ -313,16 +321,19 @@ namespace Grupp3___Förskolan_Drutten
                     närvaro.Närvaroid = (int)rad[0];
                     närvaro.Datum = (DateTime)rad[1];
                     närvaro.Barnid = (int)rad[2];
+                    närvaro.HämtasAv = rad[3].ToString();
                     närvaro.TidLämnad = rad[4].ToString();
                     närvaro.TidHämtad = rad[5].ToString();
-                    närvaro.HämtasAv = rad[3].ToString();
+                    
 
                     Närvarolista.Add(närvaro);
 
-                }
+
+            }
         }
-            return Närvarolista;
             
+            return Närvarolista;
+
         }
 
 
