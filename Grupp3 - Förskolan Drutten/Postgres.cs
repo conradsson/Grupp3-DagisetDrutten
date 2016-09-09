@@ -208,6 +208,7 @@ namespace Grupp3___Förskolan_Drutten
                             ÄrFörälder = (bool)dr["förälder"]
                         };
 
+                        KontrolleraAnvändartyp(); 
                     }
 
 
@@ -228,43 +229,37 @@ namespace Grupp3___Förskolan_Drutten
             dr.Close();
         }
      
-       /* public List<Person> HämtaAnvändare()
+
+        // Kontrollerar behörigheten hos användaren och skickar den till rätt Form.
+        public void KontrolleraAnvändartyp()
         {
-            string sql = "SELECT * FROM dagis.person dp";
-
-            tabell.Clear();
-            tabell = sqlFråga(sql);
-            List<Person> AnvändarList = new List<Person>();
-            Person person;
-
-
-            if (tabell.Columns[0].ColumnName.Equals("Error"))
+            if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
             {
-                Person i = new Person();
-                i.Error = true;
-                i.ErrorMeddelande = tabell.Rows[0][1].ToString();
 
-                AnvändarList.Add(i);
+            }
+            else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
+            {
+                StartForalder f = new StartForalder();
+                f.Show();
+            }
+            else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
+            {
+                StartPersonal p = new StartPersonal();
+                p.Show();
+
             }
             else
             {
-                foreach (DataRow rad in tabell.Rows)
-                {
-                    person = new Person();
-
-                    person.Personid = (int)rad[0];
-                    person.Förnamn = rad[1].ToString();
-                    person.Efternamn = rad[2].ToString();
-                    person.Telefonnr = rad[3].ToString();
-                    person.Användarnamn = rad[4].ToString();
-                    person.Lösenord = rad[5].ToString();
-
-                    AnvändarList.Add(person);
-                }
+                MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
-            return AnvändarList;
 
-        }*/
+        }
+
+        public void LoggaUt() // Rensar Person-klassen vid utloggning.
+        {
+
+        }
+       
 
         //Hischam
 
