@@ -328,16 +328,6 @@ namespace Grupp3___Förskolan_Drutten
             List<Närvaro> Närvarolista = new List<Närvaro>();
             Närvaro närvaro;
 
-
-            if (tabell.Columns[0].ColumnName.Equals("Error"))
-            {
-                Närvaro n = new Närvaro();
-                n.Error = true;
-                n.ErrorMeddelande = tabell.Rows[0][1].ToString();
- 
-                Närvarolista.Add(n);
-            }
-            else
             {
                 foreach (DataRow rad in tabell.Rows)
                 {
@@ -352,7 +342,7 @@ namespace Grupp3___Förskolan_Drutten
 
                     Närvarolista.Add(närvaro);
 
-                }
+            }
         }
             return Närvarolista;
             
