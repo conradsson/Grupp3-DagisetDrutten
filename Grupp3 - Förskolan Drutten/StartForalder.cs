@@ -20,14 +20,14 @@ namespace Grupp3___Förskolan_Drutten
 
             List<Barn> barnlista = new List<Barn>();
             Postgres p = new Postgres();
-            barnlista = p.HämtanBarn();
+            barnlista = p.HämtaFöräldersBarn();
             tiderBarnListBox.DataSource = null;
             tiderBarnListBox.DataSource = barnlista;
             //Login L = new Login();
             //string användare;
             //användare = L.Användaren();
             //inloggadesAnvändarnamn.Text = användare;
-
+            
             inloggadesAnvändarnamn.Text = "hej"; 
 
         }
