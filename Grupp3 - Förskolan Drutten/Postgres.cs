@@ -179,6 +179,8 @@ namespace Grupp3___Förskolan_Drutten
         //Metod för att kunna hämta användarnamnet som kan användas till att hämta rätt barn till rätt förälder
         public string HämtaAnvändare(string användare)
         {
+            Person p = new Person();
+            p.Användarnamn = användare;
             return användare;
         }
 

@@ -21,21 +21,19 @@ namespace Grupp3___Förskolan_Drutten
         
         Person person = new Person();
 
-        public string Användaren()
-        {
-            string användare;
-            användare = andvandarnamnTextbox.Text;
-            return användare;
-        }
+        //public string Användaren()
+        //{
+        //    string användare;
+        //    användare = andvandarnamnTextbox.Text;
+        //    return användare;
+        //}
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
             // Fungerade inloggning, utan behörighet.
             p.KontrolleraAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
-
-            
-            
+            p.HämtaAnvändare(andvandarnamnTextbox.Text);
 
 
             // TILLFÄLLIG INLOGGNING TILL FÖRÄLDER OCH PERSONAL
