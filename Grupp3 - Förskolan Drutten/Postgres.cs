@@ -174,6 +174,27 @@ namespace Grupp3___Förskolan_Drutten
             return aktuellPerson.Användarnamn;
         }
 
+        //Metod för att hämta barn som tillhör en viss förälder
+        public List<Barn> HämtaFöräldersBarn()
+        {
+            string sql = "SELECT barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnLista = new List<Barn>();
+            Barn barn;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Förnamn = rad[0].ToString();
+                barn.Efternamn = rad[1].ToString();
+
+                BarnLista.Add(barn);
+            }
+            return BarnLista;
+        }
 
         // Johan
 
