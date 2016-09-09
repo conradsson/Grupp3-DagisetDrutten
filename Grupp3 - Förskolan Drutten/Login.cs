@@ -18,7 +18,6 @@ namespace Grupp3___Förskolan_Drutten
             InitializeComponent();
         }
         Postgres p = new Postgres();
-        
         Person person = new Person();
 
         //public string Användaren()
@@ -30,12 +29,8 @@ namespace Grupp3___Förskolan_Drutten
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             Postgres p = new Postgres();
-            // Fungerade inloggning, utan behörighet.
-            
             p.HämtaAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
-            //p.HämtaAnvändare(andvandarnamnTextbox.Text);
 
 
             // TILLFÄLLIG INLOGGNING TILL FÖRÄLDER OCH PERSONAL
@@ -61,7 +56,7 @@ namespace Grupp3___Förskolan_Drutten
         }
 
 
-        //  TextBox Effekter
+            
         private void andvandarnamnTextbox_Enter(object sender, EventArgs e)
         {
 
@@ -73,16 +68,19 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
+             //  Används för attoch för att döjla lösenordet. AVSTÄNGD!
         private void losenordTextbox_Enter(object sender, EventArgs e)
         {
-            if (losenordTextbox.Text == "Lösenord")
+            losenordTextbox.Text = "1234";
+           /* if (losenordTextbox.Text == "Lösenord")
             {
                 losenordTextbox.Text = "";
                 losenordTextbox.PasswordChar = '*';
                 losenordTextbox.ForeColor = System.Drawing.Color.Black;
-            }
+            }*/
         }
 
+          // Om användarnamn är tomt blir texten "Användarnamn". 
         private void andvandarnamnTextbox_Leave(object sender, EventArgs e)
         {
             if (andvandarnamnTextbox.Text == "")
@@ -92,18 +90,16 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
+        // Om lösenord är tomt blir texten "Lösenord". AVSTÄNGD!
         private void losenordTextbox_Leave(object sender, EventArgs e)
         {
-            if (losenordTextbox.Text == "")
-            {
-                losenordTextbox.Text = "Lösenord";
-                losenordTextbox.ForeColor = System.Drawing.Color.Gray;
-                
-            }
-           /* else if (losenordTextbox.Text == "Lösenord")
-            {
-                 Om texten är Lösenord så ska INTE PasswordChar vara aktiv
-            }*/
+            losenordTextbox.Text = "1234";
+
+            /* if (losenordTextbox.Text == "")
+             {
+                 losenordTextbox.Text = "Lösenord";
+                 losenordTextbox.ForeColor = System.Drawing.Color.Gray;
+             }*/
         }
 
         private void förälderTillfälligButton_Click(object sender, EventArgs e)
@@ -139,6 +135,15 @@ namespace Grupp3___Förskolan_Drutten
         {
             encryptTextBox.Clear();
             losenordENCRYPTtextBox.Clear();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Är du säker på att du vill avsluta? ", "Avsluta", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         // Mathilda

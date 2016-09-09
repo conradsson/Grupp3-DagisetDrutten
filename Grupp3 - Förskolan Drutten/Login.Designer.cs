@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,9 +49,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.rensaEncryptButton = new System.Windows.Forms.Button();
             this.copyButton = new System.Windows.Forms.Button();
+            this.rensaEncryptButton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -69,6 +72,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -83,29 +88,47 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(25, 60);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(180, 13);
+            this.label10.TabIndex = 13;
+            this.label10.Text = " Användarnamn för Mellanläget: otsv";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(262, 46);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "alla lösenord är: 1234";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 70);
+            this.label5.Location = new System.Drawing.Point(24, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(275, 13);
+            this.label5.Size = new System.Drawing.Size(208, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "t.ex. Användarnamn: arwe Lösenord: 4567 . För personal";
+            this.label5.Text = " Användarnamn för Personal Formen: arwe";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 52);
+            this.label4.Location = new System.Drawing.Point(24, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(267, 13);
+            this.label4.Size = new System.Drawing.Size(202, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "t.ex. Användarnamn: jaho  Lösenord: 1234. För förälder";
+            this.label4.Text = " Användarnamn för Förälder Formen: jagu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 31);
+            this.label3.Location = new System.Drawing.Point(102, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 13);
             this.label3.TabIndex = 9;
@@ -123,12 +146,12 @@
             // losenordTextbox
             // 
             this.losenordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.losenordTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.losenordTextbox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.losenordTextbox.Location = new System.Drawing.Point(126, 154);
             this.losenordTextbox.Name = "losenordTextbox";
             this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
             this.losenordTextbox.TabIndex = 2;
-            this.losenordTextbox.Text = "Lösenord";
+            this.losenordTextbox.Text = "1234";
             this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
             this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
             // 
@@ -245,28 +268,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(252, 105);
             this.panel2.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(68, 2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 18);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Johan´s Påhitt";
-            // 
-            // rensaEncryptButton
-            // 
-            this.rensaEncryptButton.Location = new System.Drawing.Point(76, 76);
-            this.rensaEncryptButton.Name = "rensaEncryptButton";
-            this.rensaEncryptButton.Size = new System.Drawing.Size(75, 23);
-            this.rensaEncryptButton.TabIndex = 6;
-            this.rensaEncryptButton.Text = "Rensa";
-            this.rensaEncryptButton.UseVisualStyleBackColor = true;
-            this.rensaEncryptButton.Click += new System.EventHandler(this.rensaEncryptButton_Click);
+            this.panel2.Visible = false;
             // 
             // copyButton
             // 
@@ -279,12 +281,51 @@
             this.copyButton.UseVisualStyleBackColor = true;
             this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
+            // rensaEncryptButton
+            // 
+            this.rensaEncryptButton.Location = new System.Drawing.Point(76, 76);
+            this.rensaEncryptButton.Name = "rensaEncryptButton";
+            this.rensaEncryptButton.Size = new System.Drawing.Size(75, 23);
+            this.rensaEncryptButton.TabIndex = 6;
+            this.rensaEncryptButton.Text = "Rensa";
+            this.rensaEncryptButton.UseVisualStyleBackColor = true;
+            this.rensaEncryptButton.Click += new System.EventHandler(this.rensaEncryptButton_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(41, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(164, 18);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Lösenordskrypterare";
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.Red;
+            this.exitButton.Location = new System.Drawing.Point(758, 3);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(24, 23);
+            this.exitButton.TabIndex = 7;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -327,6 +368,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button copyButton;
         private System.Windows.Forms.Button rensaEncryptButton;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 

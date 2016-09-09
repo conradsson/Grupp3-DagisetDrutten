@@ -204,7 +204,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             try
             {
-                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
+                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + LösenordsEncrypt(lösenord) + "'";
 
                 cmd = new NpgsqlCommand(sql, conn); // Kör sql
 
@@ -229,11 +229,12 @@ namespace Grupp3___Förskolan_Drutten
                         KontrolleraAnvändartyp();
                     }
                 }
-                else
+                else 
                 {
-                    MessageBox.Show("Felaktigt användarnamn eller lösenord.");
-                }
+                    MessageBox.Show("Felaktigt användarnamn eller lösenord." + "\n" + "\n" + "Om du har glömt ditt användarnamn eller lösenord" + "\n" + "vänligen kontakta systemansvarig.");
 
+                }
+                
             }
 
             catch (Exception ex)
@@ -273,7 +274,7 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        public string LösenordsEncrypt(string lösenord)
+        public string LösenordsEncrypt(string lösenord) // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {
