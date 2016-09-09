@@ -57,6 +57,10 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
             barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
+
+            dataGridAllaBarn.DataSource = null;
+            Postgres p = new Postgres();
+            dataGridAllaBarn.DataSource = p.HämtanBarn();
         }
         private void barnButton_MouseDown(object sender, MouseEventArgs e)
         {

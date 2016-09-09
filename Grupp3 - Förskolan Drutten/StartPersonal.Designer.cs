@@ -1000,7 +1000,7 @@
             // dataGridAllaBarn
             // 
             this.dataGridAllaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAllaBarn.Location = new System.Drawing.Point(38, 62);
+            this.dataGridAllaBarn.Location = new System.Drawing.Point(38, 36);
             this.dataGridAllaBarn.Name = "dataGridAllaBarn";
             this.dataGridAllaBarn.Size = new System.Drawing.Size(407, 150);
             this.dataGridAllaBarn.TabIndex = 31;
