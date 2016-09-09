@@ -143,16 +143,21 @@ namespace Grupp3___Förskolan_Drutten
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (NärvarandeRadioButton.Checked)
+            {
+                label15.Text = "Närvarande:";
+                dataGridView1.DataSource = null;
+                Postgres p = new Postgres();
+                dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+            }
+            else if (FrånvarandeRadioButton.Checked)
+            {
+                label15.Text = "Frånvarande:";
+                dataGridView1.DataSource = null;
+                Postgres p = new Postgres();
+                dataGridView1.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
 
-            dataGridView1.DataSource = null;
-            Postgres p = new Postgres();
-
-
-            dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
-            
-
-
-
+            } 
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)

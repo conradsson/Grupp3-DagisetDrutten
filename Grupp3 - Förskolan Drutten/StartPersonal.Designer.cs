@@ -42,13 +42,11 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.frånvarandeListBox = new System.Windows.Forms.ListBox();
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.FrånvarandeRadioButton = new System.Windows.Forms.RadioButton();
+            this.NärvarandeRadioButton = new System.Windows.Forms.RadioButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -87,7 +85,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.inloggadesAnvändarnamn = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.informationButton = new System.Windows.Forms.Button();
             this.närvaroButton = new System.Windows.Forms.Button();
             this.barnButton = new System.Windows.Forms.Button();
@@ -110,6 +108,7 @@
             this.barnAvdl1ListBox = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
+            this.dataGridAllaBarn = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -127,6 +126,7 @@
             this.BarntabControl.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).BeginInit();
             this.SuspendLayout();
             // 
             // kontoTypLabel
@@ -155,7 +155,7 @@
             // informationTabControl
             // 
             this.informationTabControl.Controls.Add(this.senasteTabPage);
-            this.informationTabControl.Location = new System.Drawing.Point(193, 30);
+            this.informationTabControl.Location = new System.Drawing.Point(186, 30);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
             this.informationTabControl.Size = new System.Drawing.Size(748, 389);
@@ -220,10 +220,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.NärvarotabControl);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.inloggadesAnvändarnamn);
-            this.panel1.Controls.Add(this.informationTabControl);
+            this.panel1.Controls.Add(this.label42);
             this.panel1.Controls.Add(this.informationButton);
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.barnButton);
@@ -231,6 +228,9 @@
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
             this.panel1.Controls.Add(this.BarntabControl);
+            this.panel1.Controls.Add(this.NärvarotabControl);
+            this.panel1.Controls.Add(this.MittKontoTabControl);
+            this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -241,7 +241,7 @@
             this.NärvarotabControl.Controls.Add(this.tabPage5);
             this.NärvarotabControl.Controls.Add(this.tabPage6);
             this.NärvarotabControl.Controls.Add(this.tabPage2);
-            this.NärvarotabControl.Location = new System.Drawing.Point(193, 30);
+            this.NärvarotabControl.Location = new System.Drawing.Point(196, 30);
             this.NärvarotabControl.Name = "NärvarotabControl";
             this.NärvarotabControl.SelectedIndex = 0;
             this.NärvarotabControl.Size = new System.Drawing.Size(748, 389);
@@ -253,13 +253,11 @@
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage5.Controls.Add(this.button3);
             this.tabPage5.Controls.Add(this.label15);
-            this.tabPage5.Controls.Add(this.label14);
-            this.tabPage5.Controls.Add(this.frånvarandeListBox);
             this.tabPage5.Controls.Add(this.monthCalendar2);
             this.tabPage5.Controls.Add(this.dataGridView1);
             this.tabPage5.Controls.Add(this.label2);
-            this.tabPage5.Controls.Add(this.radioButton3);
-            this.tabPage5.Controls.Add(this.radioButton4);
+            this.tabPage5.Controls.Add(this.FrånvarandeRadioButton);
+            this.tabPage5.Controls.Add(this.NärvarandeRadioButton);
             this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -284,26 +282,8 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(36, 180);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(66, 13);
+            this.label15.Size = new System.Drawing.Size(0, 13);
             this.label15.TabIndex = 16;
-            this.label15.Text = "Närvarande:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(493, 3);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Frånvarande:";
-            // 
-            // frånvarandeListBox
-            // 
-            this.frånvarandeListBox.FormattingEnabled = true;
-            this.frånvarandeListBox.Location = new System.Drawing.Point(569, 5);
-            this.frånvarandeListBox.Name = "frånvarandeListBox";
-            this.frånvarandeListBox.Size = new System.Drawing.Size(161, 147);
-            this.frånvarandeListBox.TabIndex = 14;
             // 
             // monthCalendar2
             // 
@@ -318,39 +298,39 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(35, 196);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(528, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(541, 150);
             this.dataGridView1.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(272, 13);
+            this.label2.Location = new System.Drawing.Point(264, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Välj avdelning:";
+            this.label2.Text = "Välj status:";
             // 
-            // radioButton3
+            // FrånvarandeRadioButton
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(275, 61);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(81, 17);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.Text = "Avdelning 2";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.FrånvarandeRadioButton.AutoSize = true;
+            this.FrånvarandeRadioButton.Location = new System.Drawing.Point(267, 58);
+            this.FrånvarandeRadioButton.Name = "FrånvarandeRadioButton";
+            this.FrånvarandeRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.FrånvarandeRadioButton.TabIndex = 6;
+            this.FrånvarandeRadioButton.Text = "Frånvarande";
+            this.FrånvarandeRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // NärvarandeRadioButton
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Checked = true;
-            this.radioButton4.Location = new System.Drawing.Point(275, 38);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(81, 17);
-            this.radioButton4.TabIndex = 5;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Avdelning 1";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.NärvarandeRadioButton.AutoSize = true;
+            this.NärvarandeRadioButton.Checked = true;
+            this.NärvarandeRadioButton.Location = new System.Drawing.Point(267, 35);
+            this.NärvarandeRadioButton.Name = "NärvarandeRadioButton";
+            this.NärvarandeRadioButton.Size = new System.Drawing.Size(81, 17);
+            this.NärvarandeRadioButton.TabIndex = 5;
+            this.NärvarandeRadioButton.TabStop = true;
+            this.NärvarandeRadioButton.Text = "Närvarande";
+            this.NärvarandeRadioButton.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
@@ -702,16 +682,17 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // inloggadesAnvändarnamn
+            // label42
             // 
-            this.inloggadesAnvändarnamn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.inloggadesAnvändarnamn.AutoSize = true;
-            this.inloggadesAnvändarnamn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.inloggadesAnvändarnamn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.inloggadesAnvändarnamn.Location = new System.Drawing.Point(148, 12);
-            this.inloggadesAnvändarnamn.Name = "inloggadesAnvändarnamn";
-            this.inloggadesAnvändarnamn.Size = new System.Drawing.Size(0, 12);
-            this.inloggadesAnvändarnamn.TabIndex = 26;
+            this.label42.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.label42.Location = new System.Drawing.Point(148, 12);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(113, 12);
+            this.label42.TabIndex = 26;
+            this.label42.Text = "inloggadesAnvändarnamn";
             // 
             // informationButton
             // 
@@ -863,6 +844,7 @@
             // tabPage4
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.dataGridAllaBarn);
             this.tabPage4.Controls.Add(this.label27);
             this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
             this.tabPage4.Controls.Add(this.label31);
@@ -898,7 +880,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(466, 39);
+            this.label31.Location = new System.Drawing.Point(563, 43);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(160, 20);
             this.label31.TabIndex = 25;
@@ -908,7 +890,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(246, 39);
+            this.label35.Location = new System.Drawing.Point(563, 14);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(160, 20);
             this.label35.TabIndex = 21;
@@ -917,7 +899,7 @@
             // barnAvdl2ListBox
             // 
             this.barnAvdl2ListBox.FormattingEnabled = true;
-            this.barnAvdl2ListBox.Location = new System.Drawing.Point(40, 39);
+            this.barnAvdl2ListBox.Location = new System.Drawing.Point(585, 195);
             this.barnAvdl2ListBox.Name = "barnAvdl2ListBox";
             this.barnAvdl2ListBox.Size = new System.Drawing.Size(120, 134);
             this.barnAvdl2ListBox.TabIndex = 17;
@@ -1015,6 +997,14 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // dataGridAllaBarn
+            // 
+            this.dataGridAllaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAllaBarn.Location = new System.Drawing.Point(38, 62);
+            this.dataGridAllaBarn.Name = "dataGridAllaBarn";
+            this.dataGridAllaBarn.Size = new System.Drawing.Size(407, 150);
+            this.dataGridAllaBarn.TabIndex = 31;
+            // 
             // StartPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1057,6 +1047,7 @@
             this.tabPage4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1081,8 +1072,8 @@
         private System.Windows.Forms.TabControl NärvarotabControl;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton FrånvarandeRadioButton;
+        private System.Windows.Forms.RadioButton NärvarandeRadioButton;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -1135,14 +1126,13 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Label inloggadesAnvändarnamn;
+        private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Button inloggadButton;
         private System.Windows.Forms.Button loggaUtButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ListBox frånvarandeListBox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridAllaBarn;
     }
 }

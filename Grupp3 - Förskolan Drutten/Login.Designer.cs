@@ -142,6 +142,7 @@
             this.losenordTextbox.Name = "losenordTextbox";
             this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
             this.losenordTextbox.TabIndex = 3;
+            this.losenordTextbox.Text = "Lösenord";
             this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
             this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
             // 
@@ -162,6 +163,7 @@
             this.andvandarnamnTextbox.Name = "andvandarnamnTextbox";
             this.andvandarnamnTextbox.Size = new System.Drawing.Size(123, 20);
             this.andvandarnamnTextbox.TabIndex = 2;
+            this.andvandarnamnTextbox.Text = "Användarnamn";
             this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
             this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
             // 
