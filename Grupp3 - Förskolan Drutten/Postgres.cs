@@ -118,17 +118,6 @@ namespace Grupp3___Förskolan_Drutten
             List<Barn> BarnNamn = new List<Barn>();
             Barn barn;
 
-
-            if (tabell.Columns[0].ColumnName.Equals("Error"))
-            {
-                Barn b = new Barn();
-                b.Error = true;
-                b.ErrorMeddelande = tabell.Rows[0][1].ToString();
-
-                BarnNamn.Add(b);
-            }
-            else
-            {
                 foreach (DataRow rad in tabell.Rows)
                 {
                     barn = new Barn();
@@ -139,7 +128,7 @@ namespace Grupp3___Förskolan_Drutten
                     barn.Avdelningsid = (int)rad[3];
 
                     BarnNamn.Add(barn);
-                }
+
             }
             return BarnNamn;
 
@@ -392,12 +381,72 @@ namespace Grupp3___Förskolan_Drutten
             return Frånvarolista;
 
         }
+        //public List<Barn> HämtaBarnochFöräldrar()
+        //{
 
+        //    string sql = "SELECT db.barnid, db.förnamn, db.efternamn, db.avdelningsid FROM dagis.barn db";
+
+        //    tabell.Clear();
+        //    tabell = sqlFråga(sql);
+        //    List<Barn> BarnochFörälderlista = new List<Barn>();
+        //    Barn barn;
+
+        //    {
+        //        foreach (DataRow rad in tabell.Rows)
+        //        {
+        //            barn = new Närvaro();
+
+        //            barn.Barnid = (int)rad[0];
+        //            barn.Förnamn = rad[1].ToString();
+        //            barn.Efternamn = rad[2].ToString();
+        //            barn.Avdelningsid = (int)rad[3];
+
+        //            Närvarolista.Add(närvaro);
+
+        //        }
+        //    }
+        //    return Närvarolista;
+
+        //}
 
 
         // Martin
+        //Hämta aktuella barn
+        //public List<AktuellaBarn> AktuellaBarn()
+        //{
+        //    string sql = "select * from dagis.barn";
+
+        //    tabell.Clear();
+        //    tabell = sqlFråga(sql);
+        //    List<AktuellaBarn> BarnNamn = new List<AktuellaBarn>();
+        //    Barn barn;
 
 
-    }
+        //    if (tabell.Columns[0].ColumnName.Equals("Error"))
+        //    {
+        //        Barn b = new Barn();
+        //        b.Error = true;
+        //        b.ErrorMeddelande = tabell.Rows[0][1].ToString();
+
+        //        BarnNamn.Add(b);
+        //    }
+        //    else
+        //    {
+        //        foreach (DataRow rad in tabell.Rows)
+        //        {
+        //            barn = new Barn();
+
+        //            barn.Barnid = (int)rad[0];
+        //            barn.Förnamn = rad[1].ToString();
+        //            barn.Efternamn = rad[2].ToString();
+        //            barn.Avdelningsid = (int)rad[3];
+
+        //            BarnNamn.Add(barn);
+        //        }
+        //    }
+        //    return BarnNamn;
+
+
+        }
 }
 
