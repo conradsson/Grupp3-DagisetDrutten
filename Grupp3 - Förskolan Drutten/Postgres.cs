@@ -181,7 +181,6 @@ namespace Grupp3___Förskolan_Drutten
             return användare;
         }
 
-
         // Johan
 
         // Inloggningskontrollerare. Fungerar EJ ännu
@@ -189,6 +188,7 @@ namespace Grupp3___Förskolan_Drutten
         {
                 try
                 {
+                    HämtaAnvändare(användarnamn);
                     string sql1 = "SELECT dp.användarnamn, dp.lösenord  FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = TRUE";
                     string sql2 = "SELECT dp.användarnamn, dp.lösenord FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = TRUE";
 
