@@ -23,6 +23,10 @@ namespace Grupp3___Förskolan_Drutten
             barnlista = p.HämtanBarn();
             tiderBarnListBox.DataSource = null;
             tiderBarnListBox.DataSource = barnlista;
+            Login L = new Login();
+            string användare;
+            användare = L.Användaren();
+            inloggadesAnvändarnamn.Text = användare;
         }
 
 

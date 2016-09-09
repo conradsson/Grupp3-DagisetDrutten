@@ -17,6 +17,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable tabell;
+        public Person aktuellPerson;
 
 
         //Kontaktar databasen.
@@ -184,18 +185,19 @@ namespace Grupp3___Förskolan_Drutten
 
         // Johan
 
-        // Inloggningskontrollerare. Fungerar EJ ännu
+        // Inloggningskontrollerare.
         public void KontrolleraAnvändare(string användarnamn, string lösenord)  
         {
                 try
                 {
-                    string sql1 = "SELECT dp.användarnamn, dp.lösenord  FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = TRUE";
-                    string sql2 = "SELECT dp.användarnamn, dp.lösenord FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = TRUE";
+                    string sql1 = "SELECT *  FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = TRUE";
+                    string sql2 = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = TRUE";
 
                 cmd = new NpgsqlCommand(sql1, conn); // Kör sql1
 
-                      dr = cmd.ExecuteReader();
+                dr = cmd.ExecuteReader();
 
+                
                 
                 int count = 0;
                 while (dr.Read())
@@ -205,9 +207,11 @@ namespace Grupp3___Förskolan_Drutten
                 
                 if (count == 1)  // Lyckad inlogging med personalbehörighet
                    {
-                            StartPersonal p = new StartPersonal();
+
+                    StartPersonal p = new StartPersonal();
                             
                             p.Show();
+                    
                             dr.Close();
 
                 }
@@ -227,7 +231,8 @@ namespace Grupp3___Förskolan_Drutten
                         }
                     if (count == 1) // Lyckad inloggning med förälderinloggning
                          {
-                         StartForalder f = new StartForalder();
+
+                        StartForalder f = new StartForalder();
 
                         f.Show();
                         dr.Close();
@@ -278,8 +283,6 @@ namespace Grupp3___Förskolan_Drutten
                     person.Telefonnr = rad[3].ToString();
                     person.Användarnamn = rad[4].ToString();
                     person.Lösenord = rad[5].ToString();
-                    person.ÄrPersonal = rad[6].ToString();
-                    person.ÄrFörälder = rad[7].ToString();
 
                     AnvändarList.Add(person);
                 }

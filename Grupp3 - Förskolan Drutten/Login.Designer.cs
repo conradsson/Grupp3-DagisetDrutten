@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.personalTillfälligButton = new System.Windows.Forms.Button();
             this.förälderTillfälligButton = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TestJohanButton = new System.Windows.Forms.Button();
             this.testJohanListBox = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -76,6 +76,24 @@
             this.groupBox2.Size = new System.Drawing.Size(387, 273);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(68, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(275, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "t.ex. Användarnamn: arwe Lösenord: 4567 . För personal";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(66, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(267, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "t.ex. Användarnamn: jaho  Lösenord: 1234. För förälder";
             // 
             // label3
             // 
@@ -124,7 +142,6 @@
             this.losenordTextbox.Name = "losenordTextbox";
             this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
             this.losenordTextbox.TabIndex = 3;
-            this.losenordTextbox.Text = "Lösenord";
             this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
             this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
             // 
@@ -145,7 +162,6 @@
             this.andvandarnamnTextbox.Name = "andvandarnamnTextbox";
             this.andvandarnamnTextbox.Size = new System.Drawing.Size(123, 20);
             this.andvandarnamnTextbox.TabIndex = 2;
-            this.andvandarnamnTextbox.Text = "Användarnamn";
             this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
             this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
             // 
@@ -198,24 +214,6 @@
             this.testJohanListBox.Name = "testJohanListBox";
             this.testJohanListBox.Size = new System.Drawing.Size(120, 95);
             this.testJohanListBox.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(99, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "t.ex. Användarnamn: jaho  Lösenord: 1234";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(341, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "inga behörigheter aktiverade, Logga in-knappen går till StartFörälder.cs";
             // 
             // Login
             // 
