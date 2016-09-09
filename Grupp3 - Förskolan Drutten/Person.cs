@@ -20,7 +20,7 @@ namespace Grupp3___Förskolan_Drutten
         public string Lösenord { get; set; }
         public string ÄrPersonal { get; set; }
         public string ÄrFörälder { get; set; }
-         
+        
         public override string ToString()
         {
             return Personid + " -  " + Förnamn + " " + Efternamn;
