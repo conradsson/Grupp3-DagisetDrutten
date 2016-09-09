@@ -208,19 +208,6 @@ namespace Grupp3___Förskolan_Drutten
                 if (count == 1)  // Lyckad inlogging med personalbehörighet
                    {
 
-                    aktuellPerson = new Person()
-                    {
-                        Personid = (int)dr["personid"],
-                        Förnamn = dr["förnamn"].ToString(),
-                        Efternamn = dr["efternamn"].ToString(),
-                        Telefonnr = dr["telefonnummer"].ToString(),
-                        Användarnamn = dr["användarnamn"].ToString(),
-                        Lösenord = dr["lösenord"].ToString(),
-                        ÄrFörälder = dr["förälder"].ToString(),
-                        ÄrPersonal = dr["personal"].ToString()
-
-                    };
-
                     StartPersonal p = new StartPersonal();
                             
                             p.Show();
@@ -245,16 +232,6 @@ namespace Grupp3___Förskolan_Drutten
                     if (count == 1) // Lyckad inloggning med förälderinloggning
                          {
 
-                        aktuellPerson = new Person()
-                        {
-                            Personid = (int)dr["personid"],
-                            Förnamn = dr["förnamn"].ToString(),
-                            Efternamn = dr["efternamn"].ToString(),
-                            Telefonnr = dr["telefonnummer"].ToString(),
-                            Användarnamn = dr["användarnamn"].ToString(),
-                            Lösenord = dr["lösenord"].ToString()
-
-                        };
                         StartForalder f = new StartForalder();
 
                         f.Show();

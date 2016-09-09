@@ -21,12 +21,12 @@ namespace Grupp3___Förskolan_Drutten
         
         Person person = new Person();
 
-        //public string Användaren()
-        //{
-        //    string användare;
-        //    användare = andvandarnamnTextbox.Text;
-        //    return användare;
-        //}
+        public string Användaren()
+        {
+            string användare;
+            användare = andvandarnamnTextbox.Text;
+            return användare;
+        }
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
