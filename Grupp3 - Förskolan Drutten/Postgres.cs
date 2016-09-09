@@ -177,7 +177,7 @@ namespace Grupp3___Förskolan_Drutten
 
         // Johan
 
-        // Inloggningskontrollerare.
+        // Letar efter användare i DB
         public void HämtaAnvändare(string användarnamn, string lösenord)  
         {
             try
@@ -185,7 +185,7 @@ namespace Grupp3___Förskolan_Drutten
                 string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
 
 
-                cmd = new NpgsqlCommand(sql, conn); // Kör sql1
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
 
                 dr = cmd.ExecuteReader();
 
