@@ -184,7 +184,7 @@ namespace Grupp3___Förskolan_Drutten
 
         // Johan
 
-        // Inloggningskontrollerare. Fungerar EJ ännu
+        // Inloggningskontrollerare.
         public void KontrolleraAnvändare(string användarnamn, string lösenord)  
         {
                 try
