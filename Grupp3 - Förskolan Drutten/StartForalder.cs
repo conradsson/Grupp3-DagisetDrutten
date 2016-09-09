@@ -123,8 +123,9 @@ namespace Grupp3___Förskolan_Drutten
         private void inloggadButton_MouseDown(object sender, MouseEventArgs e)
         {
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonPushed;
+            
         }
-
+        
         private void exitButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Är du säker på att du vill avsluta? ", "Avsluta", MessageBoxButtons.YesNo);
