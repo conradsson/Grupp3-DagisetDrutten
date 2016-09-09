@@ -33,6 +33,8 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             // Fungerade inloggning, utan behörighet.
             p.KontrolleraAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
+
+            
             
 
 
