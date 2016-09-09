@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Grupp3___Förskolan_Drutten
 {
-    class Närvaro : Errorhandler
+    class Närvaro
     {
         public int Närvaroid { get; set; }
         public DateTime Datum { get; set; }

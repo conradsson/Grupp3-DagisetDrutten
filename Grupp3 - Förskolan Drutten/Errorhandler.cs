@@ -17,7 +17,7 @@ namespace Grupp3___Förskolan_Drutten
 
         public override string ToString()
         {
-            return null; /*Error + ErrorMeddelande;*/
+            return Error + ErrorMeddelande;
         }
 
     }
