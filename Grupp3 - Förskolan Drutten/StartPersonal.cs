@@ -18,10 +18,7 @@ namespace Grupp3___Förskolan_Drutten
             //  Start Effekter..
             informationTabControl.Visible = true;
         }
-
-        //instans av postgres
-        Postgres p = new Postgres();
-
+        
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
@@ -146,18 +143,26 @@ namespace Grupp3___Förskolan_Drutten
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
+            dataGridView1.DataSource = null;
+            Postgres p = new Postgres();
+
+
             dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
             
+
 
 
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
         {
-            dataGridView2.DataSource = null;
-            dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
-            
+
+
+            //frånvarandeListBox.DataSource = null;
+            //frånvarandeListBox.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+
+
         }
     }
 }

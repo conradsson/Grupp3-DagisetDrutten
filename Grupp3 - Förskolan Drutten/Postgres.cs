@@ -189,9 +189,10 @@ namespace Grupp3___Förskolan_Drutten
         {
                 try
                 {
-                    string sql = "SELECT dp.användarnamn, dp.lösenord, dp.personal,  dp.förälder FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
+                    string sql1 = "SELECT dp.användarnamn, dp.lösenord, dp.personal,  dp.förälder FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND personal = t";
+                    string sql2 = "SELECT dp.användarnamn, dp.lösenord, dp.personal,  dp.förälder FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "' AND förälder = t";
 
-                     cmd = new NpgsqlCommand(sql, conn);
+                cmd = new NpgsqlCommand(sql1, conn); // Kör sql1
 
                       dr = cmd.ExecuteReader();
 
@@ -201,28 +202,46 @@ namespace Grupp3___Förskolan_Drutten
                  {
                    count += 1;
                   }
-                // Lyckad inloggning.  Här skall behörighet bestämmas!
-                if (count == 1/* &&*/ )  // inlogging med förälderbehörighet
-                      {
+                
+                if (count == 1)  // Lyckad inlogging med personalbehörighet
+                   {
                             StartForalder f = new StartForalder();
                             
                             f.Show();
+                            dr.Close();
 
-                      }
-                     //   else if (count == 1 /*&&*/ ) // Inloggning med personalbehörighet
-                     //{
+                }
 
-                     //}
-                     else // Misslyckad inloggning.
-                      {
-                         MessageBox.Show("Felaktigt användarnamn eller lösenord.");
-                      }
+                else // Testar om kontot är förälder istället, annars misslyckad inloggning.
+                   {
+                         cmd = new NpgsqlCommand(sql2, conn); // Kör sql2
+
+                          dr = cmd.ExecuteReader();
+
+                        
+                        while (dr.Read())
+                        {
+                          count += 1;
+                        }
+                    if (count == 1)
+                         {
+                         StartForalder f = new StartForalder();
+
+                        f.Show();
+                        dr.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Felaktigt användarnamn eller lösenord.");
+                    }
+                        
+                   }
     
-                      }
-                      catch (Exception ex)
-                     {
+                  }
+            catch (Exception ex)
+               {
                           MessageBox.Show("Ett fel har uppstått: " + ex.Message);
-                     }
+               }
             dr.Close();
         }
      
