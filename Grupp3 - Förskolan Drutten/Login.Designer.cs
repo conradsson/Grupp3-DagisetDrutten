@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,16 +43,27 @@
             this.LoggaInButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TestJohanButton = new System.Windows.Forms.Button();
-            this.testJohanListBox = new System.Windows.Forms.ListBox();
+            this.EncryptTestButton = new System.Windows.Forms.Button();
+            this.encryptTextBox = new System.Windows.Forms.TextBox();
+            this.losenordENCRYPTtextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.copyButton = new System.Windows.Forms.Button();
+            this.rensaEncryptButton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(524, 443);
@@ -59,6 +72,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -73,29 +88,47 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(25, 60);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(180, 13);
+            this.label10.TabIndex = 13;
+            this.label10.Text = " Användarnamn för Mellanläget: otsv";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(262, 46);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "alla lösenord är: 1234";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 74);
+            this.label5.Location = new System.Drawing.Point(24, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(275, 13);
+            this.label5.Size = new System.Drawing.Size(208, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "t.ex. Användarnamn: arwe Lösenord: 4567 . För personal";
+            this.label5.Text = " Användarnamn för Personal Formen: arwe";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 52);
+            this.label4.Location = new System.Drawing.Point(24, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(267, 13);
+            this.label4.Size = new System.Drawing.Size(202, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "t.ex. Användarnamn: jaho  Lösenord: 1234. För förälder";
+            this.label4.Text = " Användarnamn för Förälder Formen: jagu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 31);
+            this.label3.Location = new System.Drawing.Point(102, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 13);
             this.label3.TabIndex = 9;
@@ -113,12 +146,12 @@
             // losenordTextbox
             // 
             this.losenordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.losenordTextbox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.losenordTextbox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.losenordTextbox.Location = new System.Drawing.Point(126, 154);
             this.losenordTextbox.Name = "losenordTextbox";
             this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
             this.losenordTextbox.TabIndex = 2;
-            this.losenordTextbox.Text = "Lösenord";
+            this.losenordTextbox.Text = "1234";
             this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
             this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
             // 
@@ -175,23 +208,116 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // TestJohanButton
+            // EncryptTestButton
             // 
-            this.TestJohanButton.Location = new System.Drawing.Point(652, 29);
-            this.TestJohanButton.Name = "TestJohanButton";
-            this.TestJohanButton.Size = new System.Drawing.Size(75, 23);
-            this.TestJohanButton.TabIndex = 5;
-            this.TestJohanButton.Text = "Test Johan";
-            this.TestJohanButton.UseVisualStyleBackColor = true;
-            this.TestJohanButton.Click += new System.EventHandler(this.TestJohanButton_Click);
+            this.EncryptTestButton.Location = new System.Drawing.Point(157, 76);
+            this.EncryptTestButton.Name = "EncryptTestButton";
+            this.EncryptTestButton.Size = new System.Drawing.Size(75, 23);
+            this.EncryptTestButton.TabIndex = 1;
+            this.EncryptTestButton.Text = "Kör";
+            this.EncryptTestButton.UseVisualStyleBackColor = true;
+            this.EncryptTestButton.Click += new System.EventHandler(this.EncryptTestButton_Click);
             // 
-            // testJohanListBox
+            // encryptTextBox
             // 
-            this.testJohanListBox.FormattingEnabled = true;
-            this.testJohanListBox.Location = new System.Drawing.Point(652, 58);
-            this.testJohanListBox.Name = "testJohanListBox";
-            this.testJohanListBox.Size = new System.Drawing.Size(120, 95);
-            this.testJohanListBox.TabIndex = 6;
+            this.encryptTextBox.Location = new System.Drawing.Point(57, 50);
+            this.encryptTextBox.Name = "encryptTextBox";
+            this.encryptTextBox.Size = new System.Drawing.Size(159, 20);
+            this.encryptTextBox.TabIndex = 2;
+            // 
+            // losenordENCRYPTtextBox
+            // 
+            this.losenordENCRYPTtextBox.Location = new System.Drawing.Point(57, 24);
+            this.losenordENCRYPTtextBox.Name = "losenordENCRYPTtextBox";
+            this.losenordENCRYPTtextBox.Size = new System.Drawing.Size(133, 20);
+            this.losenordENCRYPTtextBox.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(4, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Lösenord:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(8, 53);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Resultat:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.copyButton);
+            this.panel2.Controls.Add(this.rensaEncryptButton);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.EncryptTestButton);
+            this.panel2.Controls.Add(this.encryptTextBox);
+            this.panel2.Controls.Add(this.losenordENCRYPTtextBox);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(1, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(252, 105);
+            this.panel2.TabIndex = 6;
+            this.panel2.Visible = false;
+            // 
+            // copyButton
+            // 
+            this.copyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.copyButton.Location = new System.Drawing.Point(219, 48);
+            this.copyButton.Name = "copyButton";
+            this.copyButton.Size = new System.Drawing.Size(30, 23);
+            this.copyButton.TabIndex = 7;
+            this.copyButton.Text = "Copy";
+            this.copyButton.UseVisualStyleBackColor = true;
+            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
+            // 
+            // rensaEncryptButton
+            // 
+            this.rensaEncryptButton.Location = new System.Drawing.Point(76, 76);
+            this.rensaEncryptButton.Name = "rensaEncryptButton";
+            this.rensaEncryptButton.Size = new System.Drawing.Size(75, 23);
+            this.rensaEncryptButton.TabIndex = 6;
+            this.rensaEncryptButton.Text = "Rensa";
+            this.rensaEncryptButton.UseVisualStyleBackColor = true;
+            this.rensaEncryptButton.Click += new System.EventHandler(this.rensaEncryptButton_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(41, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(164, 18);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Lösenordskrypterare";
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.Red;
+            this.exitButton.Location = new System.Drawing.Point(758, 3);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(24, 23);
+            this.exitButton.TabIndex = 7;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // Login
             // 
@@ -199,8 +325,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.testJohanListBox);
-            this.Controls.Add(this.TestJohanButton);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -213,6 +339,8 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -228,11 +356,21 @@
         private System.Windows.Forms.Button LoggaInButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button TestJohanButton;
-        private System.Windows.Forms.ListBox testJohanListBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button EncryptTestButton;
+        private System.Windows.Forms.TextBox encryptTextBox;
+        private System.Windows.Forms.TextBox losenordENCRYPTtextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button copyButton;
+        private System.Windows.Forms.Button rensaEncryptButton;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 

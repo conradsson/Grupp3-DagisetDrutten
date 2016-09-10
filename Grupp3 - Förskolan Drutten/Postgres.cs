@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 
 namespace Grupp3___Förskolan_Drutten
@@ -203,25 +204,16 @@ namespace Grupp3___Förskolan_Drutten
         {
             try
             {
-                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + lösenord + "'";
-
+                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + LösenordsEncrypt(lösenord) + "'";
 
                 cmd = new NpgsqlCommand(sql, conn); // Kör sql
 
                 dr = cmd.ExecuteReader();
 
-
-                if (!dr.Read())
+                if (dr.Read())
                 {
-                    MessageBox.Show("Felaktigt användarnamn eller lösenord.");
-                }
-                else
-                {
-
                     if (dr.HasRows)  // Hittad användare
                     {
-                        
-
                         aktuellPerson = new Person()
                         {
                             Personid = (int)dr["personid"],
@@ -234,12 +226,15 @@ namespace Grupp3___Förskolan_Drutten
                             ÄrFörälder = (bool)dr["förälder"]
                         };
 
-                        
                         KontrolleraAnvändartyp();
-
                     }
+                }
+                else 
+                {
+                    MessageBox.Show("Felaktigt användarnamn eller lösenord." + "\n" + "\n" + "Om du har glömt ditt användarnamn eller lösenord" + "\n" + "vänligen kontakta systemansvarig.");
 
                 }
+                
             }
 
             catch (Exception ex)
@@ -256,35 +251,38 @@ namespace Grupp3___Förskolan_Drutten
         {
             if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
             {
+                
                 StartFP fp = new StartFP();
                 fp.Show();
             }
             else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
             {
-
+                
                 StartForalder f = new StartForalder();
                 f.Show();
             }
             else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
             {
+                
                 StartPersonal p = new StartPersonal();
                 p.Show();
-                
+
             }
             else
             {
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
-
-
-
         }
 
-        public void LoggaUt() // Rensar Person-klassen vid utloggning.
+        public string LösenordsEncrypt(string lösenord) // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
         {
-
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                UTF8Encoding utf8 = new UTF8Encoding();
+                byte[] data = md5.ComputeHash(utf8.GetBytes(lösenord));
+                return Convert.ToBase64String(data);
+            }
         }
-
 
         //Hischam
 
@@ -323,13 +321,16 @@ namespace Grupp3___Förskolan_Drutten
         //}
         //    return Närvarolista;
         //}
-
-
-        public void ReturneraVärdenAvAktuellperson(Label label)
+        public void ReturneraVärdenAvAktuellperson()
         {
+            
 
-            label.Text = aktuellPerson.Förnamn;
-
+            if (aktuellPerson.Förnamn == "James")
+            {
+                MessageBox.Show("hej");
+            }
+           
+            
 
         }
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
@@ -461,9 +462,8 @@ namespace Grupp3___Förskolan_Drutten
 
         //}
 
-        }
-
 
     }
 
+}
 
