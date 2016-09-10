@@ -211,12 +211,17 @@ namespace Grupp3___Förskolan_Drutten
                 dr = cmd.ExecuteReader();
 
 
-                if (dr.Read())
+                if (!dr.Read())
                 {
-                    
+                    MessageBox.Show("Felaktigt användarnamn eller lösenord.");
+                }
+                else
+                {
 
                     if (dr.HasRows)  // Hittad användare
                     {
+                        
+
                         aktuellPerson = new Person()
                         {
                             Personid = (int)dr["personid"],
@@ -229,17 +234,12 @@ namespace Grupp3___Förskolan_Drutten
                             ÄrFörälder = (bool)dr["förälder"]
                         };
 
+                        
                         KontrolleraAnvändartyp();
+
                     }
 
-
-
                 }
-                else
-                {
-                    MessageBox.Show("Felaktigt användarnamn eller lösenord.");
-                }
-
             }
 
             catch (Exception ex)
@@ -256,22 +256,20 @@ namespace Grupp3___Förskolan_Drutten
         {
             if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
             {
-                
                 StartFP fp = new StartFP();
                 fp.Show();
             }
             else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
             {
-                
+
                 StartForalder f = new StartForalder();
                 f.Show();
             }
             else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
             {
-                
                 StartPersonal p = new StartPersonal();
                 p.Show();
-
+                
             }
             else
             {
@@ -325,16 +323,13 @@ namespace Grupp3___Förskolan_Drutten
         //}
         //    return Närvarolista;
         //}
-        public void ReturneraVärdenAvAktuellperson()
-        {
-            
 
-            if (aktuellPerson.Förnamn == "James")
-            {
-                MessageBox.Show("hej");
-            }
-           
-            
+
+        public void ReturneraVärdenAvAktuellperson(Label label)
+        {
+
+            label.Text = aktuellPerson.Förnamn;
+
 
         }
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
@@ -466,8 +461,9 @@ namespace Grupp3___Förskolan_Drutten
 
         //}
 
+        }
+
 
     }
 
-}
 

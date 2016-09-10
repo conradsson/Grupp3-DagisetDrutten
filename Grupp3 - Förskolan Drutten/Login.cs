@@ -30,7 +30,7 @@ namespace Grupp3___Förskolan_Drutten
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            //this.Visible = false;
             Postgres p = new Postgres();
             // Fungerade inloggning, utan behörighet.
             
