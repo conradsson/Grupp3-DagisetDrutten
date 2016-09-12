@@ -350,7 +350,49 @@ namespace Grupp3___Förskolan_Drutten
                 return Convert.ToBase64String(data);
             }
         }
+        public void HämtaInloggadAnvändare(string användarnamn, string lösenord)
+        {
+            try
+            {
+                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + LösenordsEncrypt(lösenord) + "'";
 
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr.HasRows)  // Hittad användare
+                    {
+                        aktuellPerson = new Person()
+                        {
+                            Personid = (int)dr["personid"],
+                            Förnamn = dr["förnamn"].ToString(),
+                            Efternamn = dr["efternamn"].ToString(),
+                            Telefonnr = dr["telefonnummer"].ToString(),
+                            Användarnamn = dr["användarnamn"].ToString(),
+                            Lösenord = dr["lösenord"].ToString(),
+                            ÄrPersonal = (bool)dr["personal"],
+                            ÄrFörälder = (bool)dr["förälder"]
+                        };
+
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("Kunde inte hämta användarens uppgifter.");
+
+                }
+
+            }
+
+            catch (Exception ex) // Annat fel
+            {
+                MessageBox.Show("Ett fel har uppstått: " + ex.Message);
+
+            }
+            dr.Close();
+        }
         //Hischam
 
         //public List<Närvaro> HämtaNärvaro()

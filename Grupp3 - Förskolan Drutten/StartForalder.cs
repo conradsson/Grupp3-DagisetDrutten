@@ -20,6 +20,7 @@ namespace Grupp3___Förskolan_Drutten
 
             List<Barn> barnlista = new List<Barn>();
             Postgres p = new Postgres();
+            Login l = new Login();
             barnlista = p.HämtaFöräldersBarn();
             tiderBarnListBox.DataSource = null;
             tiderBarnListBox.DataSource = barnlista;
@@ -27,20 +28,25 @@ namespace Grupp3___Förskolan_Drutten
             listBoxMeddelaHämtning.DataSource = barnlista;
             listBoxMeddelaFrånvaro.DataSource = null;
             listBoxMeddelaFrånvaro.DataSource = barnlista;
-            //Login L = new Login();
-            //string användare;
-            //användare = L.Användaren();
-            //inloggadesAnvändarnamn.Text = användare;
+
+
             
-            inloggadesAnvändarnamn.Text = "hej"; 
+
 
         }
-
+        //
 
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
+            Postgres p = new Postgres();  
+            Login l = new Login();
+
+            p.HämtaInloggadAnvändare(l.inskrivetAnvändarnamn, l.inskrivetLösenord);  // Testar lösning på "aktuellPerson"
+            MessageBox.Show(p.aktuellPerson.Användarnamn);
+
+
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
