@@ -169,5 +169,29 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             p.LäggTillTid(datum, barnid, hämtas, lämnas);
         }
+
+        private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Barn aktuelltbarn = new Barn();
+            //aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+
+            //Postgres p = new Postgres();
+            //string tid;
+            //DateTime datum = monthCalendar3.SelectionStart;
+            //tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+            //hämtasTextBox.Text = tid;
+        }
+
+        private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+
+            Postgres p = new Postgres();
+            string tid;
+            DateTime datum = monthCalendar3.SelectionStart;
+            tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+            hämtasTextBox.Text = tid;
+        }
     }
 }

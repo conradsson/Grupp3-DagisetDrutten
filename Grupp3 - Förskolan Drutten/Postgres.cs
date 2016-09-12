@@ -178,7 +178,7 @@ namespace Grupp3___Förskolan_Drutten
         //Metod för att hämta barn som tillhör en viss förälder
         public List<Barn> HämtaFöräldersBarn()
         {
-            string sql = "SELECT barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
+            string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
@@ -189,13 +189,51 @@ namespace Grupp3___Förskolan_Drutten
             {
                 barn = new Barn();
 
-                barn.Förnamn = rad[0].ToString();
-                barn.Efternamn = rad[1].ToString();
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
 
                 BarnLista.Add(barn);
             }
             return BarnLista;
         }
+
+        public string BarnetsHämtaTid(int barnid, DateTime datum)
+        {
+            string svar = "";
+                  try
+            {
+
+                string sql = "select tid_hamtad from dagis.narvaro where barnid = '" + barnid + "' and datum = '" + datum + "';";
+
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                        Närvaro n = new Närvaro();
+                        
+                            n.TidHämtad = dr["tid_hamtad"].ToString();
+                            svar = n.TidHämtad;
+                            return svar;
+                }
+             
+               }
+
+            catch (Exception ex)
+            {
+                
+                svar = ex.Message;
+                return svar;
+                
+            } 
+            dr.Close();
+            return svar;
+           
+        }
+        
+        
 
         // Johan
 

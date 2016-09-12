@@ -576,6 +576,7 @@
             this.tiderBarnListBox.Name = "tiderBarnListBox";
             this.tiderBarnListBox.Size = new System.Drawing.Size(120, 95);
             this.tiderBarnListBox.TabIndex = 11;
+            this.tiderBarnListBox.SelectedIndexChanged += new System.EventHandler(this.tiderBarnListBox_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -642,6 +643,7 @@
             this.monthCalendar3.Location = new System.Drawing.Point(63, 181);
             this.monthCalendar3.Name = "monthCalendar3";
             this.monthCalendar3.TabIndex = 2;
+            this.monthCalendar3.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar3_DateChanged);
             // 
             // tabPage4
             // 
