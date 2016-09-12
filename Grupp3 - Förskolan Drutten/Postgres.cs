@@ -109,7 +109,10 @@ namespace Grupp3___Förskolan_Drutten
 
         //Mathilda
 
-        //Metod för att hämta barn till en lista
+        /// <summary>
+        /// Metod för att hämta barn till en lista
+        /// </summary>
+        /// <returns></returns>
         public List<Barn> HämtanBarn()
         {
             string sql = "select * from dagis.barn ORDER BY förnamn";
@@ -137,7 +140,13 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Metod för att lägga till tider till ett barn
+        /// <summary>
+        ///  Metod för att lägga till tider till ett barn
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="lamnas"></param>
+        /// <param name="hamtas"></param>
         public void LäggTillTid(DateTime datum, int barnid, string lamnas, string hamtas)
         {
 
@@ -168,7 +177,13 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        //Metod för att uppdatera tider barnet lämnas och hämtas
+        /// <summary>
+        /// Metod för att uppdatera tider barnet lämnas och hämtas
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="lamnas"></param>
+        /// <param name="hamtas"></param>
         public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas)
         {
             
@@ -202,7 +217,6 @@ namespace Grupp3___Förskolan_Drutten
         /// Metod för att hämta barn som tillhör en viss förälder
         /// </summary>
         /// <returns></returns>
-
         public List<Barn> HämtaFöräldersBarn()
         {
             string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
@@ -231,7 +245,6 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="barnid"></param>
         /// <param name="datum"></param>
         /// <returns></returns>
-
         public string BarnetsLämnaTid(int barnid, DateTime datum)
         {
             string svar1 = "";
@@ -269,7 +282,6 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="barnid"></param>
         /// <param name="datum"></param>
         /// <returns></returns>
-
         public string BarnetsHämtaTid(int barnid, DateTime datum)
         {
             string svar = "";
