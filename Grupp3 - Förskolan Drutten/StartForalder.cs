@@ -186,7 +186,7 @@ namespace Grupp3___Förskolan_Drutten
             string tid;
             DateTime datum = monthCalendar3.SelectionStart;
             tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-            hämtasTextBox.Text = tid;
+            textBoxUppdateraTill.Text = tid;
         }
 
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
