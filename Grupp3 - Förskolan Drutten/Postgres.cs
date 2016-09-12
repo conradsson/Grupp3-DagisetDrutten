@@ -127,6 +127,8 @@ namespace Grupp3___Förskolan_Drutten
                 barn.Förnamn = rad[1].ToString();
                 barn.Efternamn = rad[2].ToString();
                 barn.Avdelningsid = (int)rad[3];
+                barn.Allergier = rad[4].ToString();
+                barn.Annat = rad[5].ToString();
 
                 BarnNamn.Add(barn);
 
@@ -267,7 +269,7 @@ namespace Grupp3___Förskolan_Drutten
                         KontrolleraAnvändartyp();
                     }
                 }
-                else 
+                else // Ingen användare hittad.
                 {
                     MessageBox.Show("Felaktigt användarnamn eller lösenord." + "\n" + "\n" + "Om du har glömt ditt användarnamn eller lösenord" + "\n" + "vänligen kontakta systemansvarig.");
 
@@ -275,7 +277,7 @@ namespace Grupp3___Förskolan_Drutten
                 
             }
 
-            catch (Exception ex)
+            catch (Exception ex) // Annat fel
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
 
@@ -311,8 +313,8 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
         }
-
-        public string LösenordsEncrypt(string lösenord) // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        public string LösenordsEncrypt(string lösenord) 
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {
@@ -463,8 +465,36 @@ namespace Grupp3___Förskolan_Drutten
 
 
         // Martin
-        
 
+        public void UppdateraBarn(int barnid, string förnamn, string efternamn, string allergier, string annat)
+        {
+
+            string meddelande;
+            try
+            {
+                string sql = "insert into barn (barnid, förnamn, efternamn, allergier, annat)"
+                   + " values (@barnid, @förnamn, @efternamn, @allergier, @annat)";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+                cmd.Parameters.AddWithValue("@förnamn", förnamn);
+                cmd.Parameters.AddWithValue("@efternamn", efternamn);
+                cmd.Parameters.AddWithValue("@allergier", allergier);
+                cmd.Parameters.AddWithValue("@annat", annat);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Uppgifterna är uppdaterade.";
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+
+
+        }
 
     }
 
