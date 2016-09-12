@@ -133,6 +133,7 @@ namespace Grupp3___Förskolan_Drutten
             loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonDruttenPushed;
         }
 
+
         private void inloggadButton_Click(object sender, EventArgs e)
         {
             //  .Visable Effekter
@@ -172,14 +173,14 @@ namespace Grupp3___Förskolan_Drutten
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Barn aktuelltbarn = new Barn();
-            //aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
 
-            //Postgres p = new Postgres();
-            //string tid;
-            //DateTime datum = monthCalendar3.SelectionStart;
-            //tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-            //hämtasTextBox.Text = tid;
+            Postgres p = new Postgres();
+            string tid;
+            DateTime datum = monthCalendar3.SelectionStart;
+            tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+            hämtasTextBox.Text = tid;
         }
 
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
