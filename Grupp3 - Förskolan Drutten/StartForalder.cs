@@ -18,16 +18,16 @@ namespace Grupp3___Förskolan_Drutten
             //  Start Effekter.
             informationTabControl.Visible = true;
 
-            List<Barn> barnlista = new List<Barn>();
-            Postgres p = new Postgres();
-            Login l = new Login();
-            barnlista = p.HämtaFöräldersBarn();
-            tiderBarnListBox.DataSource = null;
-            tiderBarnListBox.DataSource = barnlista;
-            listBoxMeddelaHämtning.DataSource = null;
-            listBoxMeddelaHämtning.DataSource = barnlista;
-            listBoxMeddelaFrånvaro.DataSource = null;
-            listBoxMeddelaFrånvaro.DataSource = barnlista;
+            //List<Barn> barnlista = new List<Barn>();
+            //Postgres p = new Postgres();
+            //Login l = new Login();
+            //barnlista = p.HämtaFöräldersBarn();
+            //tiderBarnListBox.DataSource = null;
+            //tiderBarnListBox.DataSource = barnlista;
+            //listBoxMeddelaHämtning.DataSource = null;
+            //listBoxMeddelaHämtning.DataSource = barnlista;
+            //listBoxMeddelaFrånvaro.DataSource = null;
+            //listBoxMeddelaFrånvaro.DataSource = barnlista;
 
 
             
@@ -93,6 +93,18 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
             tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
+
+            List<Barn> barnlista = new List<Barn>();
+            Postgres p = new Postgres();
+            Login l = new Login();
+            barnlista = p.HämtaFöräldersBarn();
+            tiderBarnListBox.DataSource = null;
+            tiderBarnListBox.DataSource = barnlista;
+            listBoxMeddelaHämtning.DataSource = null;
+            listBoxMeddelaHämtning.DataSource = barnlista;
+            listBoxMeddelaFrånvaro.DataSource = null;
+            listBoxMeddelaFrånvaro.DataSource = barnlista;
+            
         }
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -107,7 +119,8 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
-            
+
+    
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
