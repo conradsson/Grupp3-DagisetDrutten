@@ -23,6 +23,10 @@ namespace Grupp3___Förskolan_Drutten
             barnlista = p.HämtaFöräldersBarn();
             tiderBarnListBox.DataSource = null;
             tiderBarnListBox.DataSource = barnlista;
+            listBoxMeddelaHämtning.DataSource = null;
+            listBoxMeddelaHämtning.DataSource = barnlista;
+            listBoxMeddelaFrånvaro.DataSource = null;
+            listBoxMeddelaFrånvaro.DataSource = barnlista;
             //Login L = new Login();
             //string användare;
             //användare = L.Användaren();
@@ -58,11 +62,16 @@ namespace Grupp3___Förskolan_Drutten
            // NärvarotabControl.Visible = false;
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
 
-            Postgres p = new Postgres();
-            
-            //inloggadesAnvändarnamn.Text = p.aktuellPerson.Användarnamn;
 
-           // p.ReturneraVärdenAvAktuellperson(label19);
+            Postgres p = new Postgres();
+            //p.ReturneraVärdenAvAktuellperson(label19);
+
+            List<Barn> barnlista = new List<Barn>();
+            barnlista = p.HämtaFöräldersBarn();
+            listAktuellaBarn.DataSource = null;
+            listAktuellaBarn.DataSource = barnlista;
+            listAktuellaBarn.ClearSelected();
+
 
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
@@ -159,6 +168,30 @@ namespace Grupp3___Förskolan_Drutten
 
             Postgres p = new Postgres();
             p.LäggTillTid(datum, barnid, hämtas, lämnas);
+        }
+
+        private void listAktuellaBarn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+            Barn valdBarn = new Barn();
+            valdBarn = (Barn)listAktuellaBarn.SelectedItem;
+
+            if (valdBarn != null)
+            {
+                textBoxFornamn.Text = valdBarn.Förnamn;
+                textBoxEfternamn.Text = valdBarn.Efternamn;
+                textBoxAllergier.Text = valdBarn.Allergier;
+                richTextBoxAnnat.Text = valdBarn.Annat;
+            }
+            else
+            {
+                textBoxFornamn.Text = "";
+                textBoxEfternamn.Text = "";
+                textBoxAllergier.Text = "";
+                richTextBoxAnnat.Text = "";
+            }
+            
         }
     }
 }
