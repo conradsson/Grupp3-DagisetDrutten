@@ -99,7 +99,7 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFrån = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.textBoxUppdateraTill = new System.Windows.Forms.TextBox();
@@ -892,7 +892,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.textBoxFrån);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.textBoxUppdateraTill);
@@ -904,12 +904,12 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Uppdatera befintliga tider";
             // 
-            // textBox1
+            // textBoxFrån
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBoxFrån.Location = new System.Drawing.Point(15, 36);
+            this.textBoxFrån.Name = "textBoxFrån";
+            this.textBoxFrån.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFrån.TabIndex = 6;
             // 
             // label9
             // 
@@ -1062,7 +1062,7 @@
         private System.Windows.Forms.ListBox listBoxMeddelaHämtning;
         private System.Windows.Forms.ListBox listBoxMeddelaFrånvaro;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFrån;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBoxUppdateraTill;

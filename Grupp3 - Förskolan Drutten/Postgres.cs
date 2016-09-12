@@ -230,7 +230,51 @@ namespace Grupp3___Förskolan_Drutten
             return BarnLista;
         }
 
-        //Metod som hämtar barnets tid när det ska hämtas från dagis
+        /// <summary>
+        /// Metod som hämtar barnets tid när det ska lämnas på dagis
+        /// </summary>
+        /// <param name="barnid"></param>
+        /// <param name="datum"></param>
+        /// <returns></returns>
+
+        public string BarnetsLämnaTid(int barnid, DateTime datum)
+        {
+            string svar1 = "";
+            try
+            {
+                string sql = "select tid_lamnad from dagis.narvaro where barnid = '" + barnid + "' and datum = '" + datum + "';";
+
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Närvaro n = new Närvaro();
+
+                    n.TidHämtad = dr["tid_lamnad"].ToString();
+                    svar1 = n.TidHämtad;
+                    return svar1;
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+                svar1 = ex.Message;
+                return svar1;
+            }
+
+            dr.Close();
+            return svar1;
+        }
+
+        /// <summary>
+        /// Metod som hämtar barnets tid när det ska hämtas från dagis
+        /// </summary>
+        /// <param name="barnid"></param>
+        /// <param name="datum"></param>
+        /// <returns></returns>
+
         public string BarnetsHämtaTid(int barnid, DateTime datum)
         {
             string svar = "";

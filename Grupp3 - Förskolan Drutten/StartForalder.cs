@@ -187,6 +187,12 @@ namespace Grupp3___Förskolan_Drutten
             DateTime datum = monthCalendar3.SelectionStart;
             tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
             textBoxUppdateraTill.Text = tid;
+   
+
+            Postgres p2 = new Postgres();
+            string tidLämnas;
+            tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+            textBoxFrån.Text = tidLämnas;
         }
 
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
@@ -199,6 +205,11 @@ namespace Grupp3___Förskolan_Drutten
             DateTime datum = monthCalendar3.SelectionStart;
             tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
             textBoxUppdateraTill.Text = tid;
+
+            Postgres p2 = new Postgres();
+            string tidLämnas;
+            tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+            textBoxFrån.Text = tidLämnas;
         }
 
         private void listAktuellaBarn_SelectedIndexChanged(object sender, EventArgs e)
