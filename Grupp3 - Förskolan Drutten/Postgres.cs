@@ -19,6 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlDataReader dr;
         private DataTable tabell;
         public Person aktuellPerson;
+        List<Person> personlista = new List<Person>();
 
 
         //Kontaktar databasen.
@@ -265,6 +266,8 @@ namespace Grupp3___Förskolan_Drutten
                             ÄrPersonal = (bool)dr["personal"],
                             ÄrFörälder = (bool)dr["förälder"]
                         };
+                    
+                        //personlista.Add(aktuellPerson);
 
                         KontrolleraAnvändartyp();
                     }
@@ -275,6 +278,49 @@ namespace Grupp3___Förskolan_Drutten
 
                 }
                 
+            }
+
+            catch (Exception ex) // Annat fel
+            {
+                MessageBox.Show("Ett fel har uppstått: " + ex.Message);
+
+            }
+            dr.Close();
+        }
+
+        public void HämtaAnvändarensUppgifter(string användarnamn, string lösenord)
+        {
+            try
+            {
+                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + LösenordsEncrypt(lösenord) + "'";
+
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr.HasRows)  // Hittad användare
+                    {
+                        aktuellPerson = new Person()
+                        {
+                            Personid = (int)dr["personid"],
+                            Förnamn = dr["förnamn"].ToString(),
+                            Efternamn = dr["efternamn"].ToString(),
+                            Telefonnr = dr["telefonnummer"].ToString(),
+                            Användarnamn = dr["användarnamn"].ToString(),
+                            Lösenord = dr["lösenord"].ToString(),
+                            ÄrPersonal = (bool)dr["personal"],
+                            ÄrFörälder = (bool)dr["förälder"]
+                        };
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Kan inte hämta användarens uppgifter.");
+
+                }
+
             }
 
             catch (Exception ex) // Annat fel

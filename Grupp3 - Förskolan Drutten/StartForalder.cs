@@ -27,20 +27,35 @@ namespace Grupp3___Förskolan_Drutten
             listBoxMeddelaHämtning.DataSource = barnlista;
             listBoxMeddelaFrånvaro.DataSource = null;
             listBoxMeddelaFrånvaro.DataSource = barnlista;
-            //Login L = new Login();
+            Login l = new Login();
             //string användare;
             //användare = L.Användaren();
             //inloggadesAnvändarnamn.Text = användare;
-            
-            inloggadesAnvändarnamn.Text = "hej"; 
+            p.HämtaAnvändarensUppgifter(l.inskrivetAnvändarnamn,l.inskrivetLösenord);
+
 
         }
+
 
 
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
+            Postgres p = new Postgres();
+            Person pers = new Person();
+
+            MessageBox.Show(pers.Användarnamn);
+
+           
+
+            if (p.aktuellPerson != null)  // Tipset från N
+            {
+                inloggadesAnvändarnamn.Text = p.aktuellPerson.Användarnamn;
+            }
+
+
+
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;

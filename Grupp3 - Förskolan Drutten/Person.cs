@@ -21,6 +21,7 @@ namespace Grupp3___Förskolan_Drutten
         public bool ÄrFörälder { get; set; }
         public bool ÄrPersonal { get; set; }
 
+       // public List<Person> personlista = new List<Person>();
 
         public override string ToString()
         {
