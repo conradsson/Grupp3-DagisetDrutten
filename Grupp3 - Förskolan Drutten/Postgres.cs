@@ -137,7 +137,6 @@ namespace Grupp3___Förskolan_Drutten
 
             }
             return BarnNamn;
-
         }
 
         /// <summary>
@@ -149,7 +148,6 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="hamtas"></param>
         public void LäggTillTid(DateTime datum, int barnid, string lamnas, string hamtas)
         {
-
             string meddelande;
             try
             {
@@ -173,8 +171,6 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
-
-
         }
 
         /// <summary>
@@ -186,19 +182,16 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="hamtas"></param>
         public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas)
         {
-            
             string meddelande;
             try
             {
                 string sql = "update dagis.narvaro SET tid_lamnad = '" + lamnas + "', tid_hamtad ='" + hamtas + "' where barnid = '" + barnid +"' and datum = '" + datum + "';";
                    
-
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@datum", datum);
                 cmd.Parameters.AddWithValue("@barnid", barnid);
                 cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
                 cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
-
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
@@ -210,7 +203,6 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
-
         }
 
         /// <summary>
