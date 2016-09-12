@@ -60,7 +60,14 @@ namespace Grupp3___Förskolan_Drutten
 
 
             Postgres p = new Postgres();
-            p.ReturneraVärdenAvAktuellperson(label19);
+            //p.ReturneraVärdenAvAktuellperson(label19);
+
+            List<Barn> barnlista = new List<Barn>();
+            barnlista = p.HämtaFöräldersBarn();
+            listAktuellaBarn.DataSource = null;
+            listAktuellaBarn.DataSource = barnlista;
+            listAktuellaBarn.ClearSelected();
+
 
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)

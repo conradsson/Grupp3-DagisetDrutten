@@ -19,7 +19,7 @@ namespace Grupp3___Förskolan_Drutten
 
         public override string ToString()
         {
-            return Barnid + " " + Förnamn + " " + Efternamn + " " + Avdelningsid;
+            return Förnamn + " " + Efternamn;
         }
     }
 }
