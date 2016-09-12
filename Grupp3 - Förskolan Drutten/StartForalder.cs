@@ -66,6 +66,8 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             //p.ReturneraVärdenAvAktuellperson(label19);
 
+           // inloggadesAnvändarnamn.Text = p.aktuellPerson.Användarnamn;
+
             List<Barn> barnlista = new List<Barn>();
             barnlista = p.HämtaFöräldersBarn();
             listAktuellaBarn.DataSource = null;
