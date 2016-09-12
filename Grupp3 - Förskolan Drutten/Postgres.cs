@@ -267,7 +267,9 @@ namespace Grupp3___Förskolan_Drutten
             }
 
             dr.Close();
+            conn.Close();
             return svar1;
+            
         }
 
         /// <summary>
@@ -304,6 +306,7 @@ namespace Grupp3___Förskolan_Drutten
                 } 
 
                 dr.Close();
+                conn.Close();
                 return svar;
         }
         
