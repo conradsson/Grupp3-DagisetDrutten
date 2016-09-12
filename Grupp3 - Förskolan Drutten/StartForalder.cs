@@ -194,18 +194,27 @@ namespace Grupp3___Förskolan_Drutten
         {
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
-
-            Postgres p = new Postgres();
-            string tid;
-            DateTime datum = monthCalendar3.SelectionStart;
-            tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-            textBoxUppdateraTill.Text = tid;
+            if (aktuelltbarn!= null)
+            {
+                Postgres p = new Postgres();
+                string tid;
+                DateTime datum = monthCalendar3.SelectionStart;
+                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+                textBoxUppdateraTill.Text = tid;
+            
+                Postgres p2 = new Postgres();
+                string tidLämnas;
+                tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+                textBoxFrån.Text = tidLämnas;
+            }
+            else
+            {
+                MessageBox.Show("Välj ett barn i listan.");
+            }
+           
    
 
-            Postgres p2 = new Postgres();
-            string tidLämnas;
-            tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
-            textBoxFrån.Text = tidLämnas;
+            
         }
 
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
@@ -213,16 +222,24 @@ namespace Grupp3___Förskolan_Drutten
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
 
-            Postgres p = new Postgres();
-            string tid;
-            DateTime datum = monthCalendar3.SelectionStart;
-            tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-            textBoxUppdateraTill.Text = tid;
+            if (aktuelltbarn != null)
+            {
+                Postgres p = new Postgres();
+                string tid;
+                DateTime datum = monthCalendar3.SelectionStart;
+                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+                textBoxUppdateraTill.Text = tid;
 
-            Postgres p2 = new Postgres();
-            string tidLämnas;
-            tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
-            textBoxFrån.Text = tidLämnas;
+                Postgres p2 = new Postgres();
+                string tidLämnas;
+                tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+                textBoxFrån.Text = tidLämnas;
+            }
+            else
+            {
+                MessageBox.Show("Välj ett barn i listan.");
+            }
+            
         }
 
         private void listAktuellaBarn_SelectedIndexChanged(object sender, EventArgs e)
