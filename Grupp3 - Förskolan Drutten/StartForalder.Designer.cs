@@ -81,7 +81,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -89,7 +88,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.informationTabControl = new System.Windows.Forms.TabControl();
             this.senasteTabPage = new System.Windows.Forms.TabPage();
@@ -99,6 +97,8 @@
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
+            this.listBoxMeddelaHämtning = new System.Windows.Forms.ListBox();
+            this.listBoxMeddelaFrånvaro = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
@@ -128,7 +128,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
-            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.inloggadesAnvändarnamn);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
@@ -138,6 +137,7 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -646,12 +646,12 @@
             // tabPage4
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.listBoxMeddelaHämtning);
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Controls.Add(this.textBox3);
             this.tabPage4.Controls.Add(this.label12);
             this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.checkedListBox1);
             this.tabPage4.Controls.Add(this.monthCalendar1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -704,14 +704,6 @@
             this.label13.TabIndex = 13;
             this.label13.Text = "Välj barn:";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(60, 48);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox1.TabIndex = 12;
-            // 
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(55, 182);
@@ -721,12 +713,12 @@
             // tabPage5
             // 
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.listBoxMeddelaFrånvaro);
             this.tabPage5.Controls.Add(this.checkBox2);
             this.tabPage5.Controls.Add(this.checkBox1);
             this.tabPage5.Controls.Add(this.button4);
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.label14);
-            this.tabPage5.Controls.Add(this.checkedListBox2);
             this.tabPage5.Controls.Add(this.monthCalendar2);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -782,14 +774,6 @@
             this.label14.Size = new System.Drawing.Size(51, 13);
             this.label14.TabIndex = 22;
             this.label14.Text = "Välj barn:";
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(65, 43);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox2.TabIndex = 21;
             // 
             // monthCalendar2
             // 
@@ -887,6 +871,22 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // listBoxMeddelaHämtning
+            // 
+            this.listBoxMeddelaHämtning.FormattingEnabled = true;
+            this.listBoxMeddelaHämtning.Location = new System.Drawing.Point(63, 46);
+            this.listBoxMeddelaHämtning.Name = "listBoxMeddelaHämtning";
+            this.listBoxMeddelaHämtning.Size = new System.Drawing.Size(120, 95);
+            this.listBoxMeddelaHämtning.TabIndex = 20;
+            // 
+            // listBoxMeddelaFrånvaro
+            // 
+            this.listBoxMeddelaFrånvaro.FormattingEnabled = true;
+            this.listBoxMeddelaFrånvaro.Location = new System.Drawing.Point(68, 41);
+            this.listBoxMeddelaFrånvaro.Name = "listBoxMeddelaFrånvaro";
+            this.listBoxMeddelaFrånvaro.Size = new System.Drawing.Size(120, 95);
+            this.listBoxMeddelaFrånvaro.TabIndex = 27;
+            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -970,7 +970,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.CheckBox checkBox2;
@@ -978,7 +977,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.MonthCalendar monthCalendar2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBoxEpostMittKonto;
@@ -1001,5 +999,7 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.ListBox tiderBarnListBox;
         private System.Windows.Forms.ListBox listAktuellaBarn;
+        private System.Windows.Forms.ListBox listBoxMeddelaHämtning;
+        private System.Windows.Forms.ListBox listBoxMeddelaFrånvaro;
     }
 }
