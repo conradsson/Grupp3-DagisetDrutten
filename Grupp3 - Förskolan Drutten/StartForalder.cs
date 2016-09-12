@@ -73,7 +73,7 @@ namespace Grupp3___Förskolan_Drutten
             //p.ReturneraVärdenAvAktuellperson(label19);
 
             List<Barn> barnlista = new List<Barn>();
-           // barnlista = p.HämtaAktuellaBarn();
+            barnlista = p.HämtaAktuellaBarn();
             listAktuellaBarn.DataSource = null;
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
@@ -252,8 +252,8 @@ namespace Grupp3___Förskolan_Drutten
                 {
                 textBoxFornamn.Text = valdBarn.Förnamn.ToString();
                 textBoxEfternamn.Text = valdBarn.Efternamn.ToString();
-                textBoxAllergier.Text = valdBarn.Allergier.ToString();
-                richTextBoxAnnat.Text = valdBarn.Annat.ToString();
+                //textBoxAllergier.Text = valdBarn.Allergier.ToString();
+                //richTextBoxAnnat.Text = valdBarn.Annat.ToString();
 
                 listAktuellaBarn.DisplayMember = "visaBarn";
                 
@@ -275,6 +275,21 @@ namespace Grupp3___Förskolan_Drutten
                 p.UppdateraTider(datum, id, lamnas, hamtas);
             }
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)listAktuellaBarn.SelectedItem;
+
+            if (aktuelltbarn != null)
+            {
+                Postgres p = new Postgres();
+                int id = aktuelltbarn.Barnid;
+                string förnamn = textBoxFornamn.Text;
+                string efternamn = textBoxEfternamn.Text;
+                p.UppdateraBarn(id, förnamn, efternamn);
+            }
         }
     }
 }

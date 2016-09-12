@@ -519,7 +519,7 @@ namespace Grupp3___Förskolan_Drutten
                 }
             }
             return Närvarolista;
-
+            
         }
         public List<Frånvaro> HämtaFrånvaro(DateTime AktuelltDatum)
         {
@@ -583,21 +583,19 @@ namespace Grupp3___Förskolan_Drutten
 
         // Martin
 
-        public void UppdateraBarn(int barnid, string förnamn, string efternamn, string allergier, string annat)
+        public void UppdateraBarn(int barnid, string förnamn, string efternamn)
         {
-
+            
             string meddelande;
             try
             {
-                string sql = "insert into barn (barnid, förnamn, efternamn, allergier, annat)"
-                   + " values (@barnid, @förnamn, @efternamn, @allergier, @annat)";
+                string sql = "UPDATE barn SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "' where barnid = '" + barnid + "';";
 
                 cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@barnid", barnid);
                 cmd.Parameters.AddWithValue("@förnamn", förnamn);
                 cmd.Parameters.AddWithValue("@efternamn", efternamn);
-                cmd.Parameters.AddWithValue("@allergier", allergier);
-                cmd.Parameters.AddWithValue("@annat", annat);
+                //cmd.Parameters.AddWithValue("@allergier", allergier);
+                //cmd.Parameters.AddWithValue("@annat", annat);
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
@@ -610,7 +608,7 @@ namespace Grupp3___Förskolan_Drutten
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
 
-
+            conn.Close();
         }
 
         public List<Barn> HämtaAktuellaBarn()
@@ -634,6 +632,7 @@ namespace Grupp3___Förskolan_Drutten
                 BarnLista.Add(barn);
             }
             return BarnLista;
+            
         }
     }
 
