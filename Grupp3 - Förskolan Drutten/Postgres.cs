@@ -168,6 +168,37 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
+        //Metod för att uppdatera tider barnet lämnas och hämtas
+        public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas)
+        {
+            
+            
+            string meddelande;
+            try
+            {
+                string sql = "update dagis.narvaro SET tid_lamnad = '" + lamnas + "', tid_hamtad ='" + hamtas + "' where barnid = '" + barnid +"' and datum = '" + datum + "';";
+                   
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+                cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
+                cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
+
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Tiden är uppdaterad ";
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+
+        }
+
         //Metod för att kunna hämta användarnamnet som kan användas till att hämta rätt barn till rätt förälder
         public string HämtaAnvändare(string användare)
         {
