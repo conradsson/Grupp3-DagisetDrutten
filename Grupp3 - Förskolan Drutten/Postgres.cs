@@ -187,7 +187,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Tiden är uppdaterad ";
+                meddelande = "Tiden är uppdaterad. ";
 
             }
             catch (NpgsqlException ex)
@@ -198,16 +198,11 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        //Metod för att kunna hämta användarnamnet som kan användas till att hämta rätt barn till rätt förälder
-        public string HämtaAnvändare(string användare)
-        {
-            aktuellPerson = new Person();
+        /// <summary>
+        /// Metod för att hämta barn som tillhör en viss förälder
+        /// </summary>
+        /// <returns></returns>
 
-            aktuellPerson.Användarnamn = användare;
-            return aktuellPerson.Användarnamn;
-        }
-
-        //Metod för att hämta barn som tillhör en viss förälder
         public List<Barn> HämtaFöräldersBarn()
         {
             string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
@@ -269,7 +264,7 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         /// <summary>
-        /// Metod som hämtar barnets tid när det ska hämtas från dagis
+        /// Metod som hämtar ut barnets tid när det ska hämtas från dagis
         /// </summary>
         /// <param name="barnid"></param>
         /// <param name="datum"></param>

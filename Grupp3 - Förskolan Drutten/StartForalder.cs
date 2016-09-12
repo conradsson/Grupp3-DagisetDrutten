@@ -229,5 +229,17 @@ namespace Grupp3___Förskolan_Drutten
                 
                 }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            Postgres p = new Postgres();
+            int id = aktuelltbarn.Barnid;
+            DateTime datum = monthCalendar3.SelectionStart;
+            string lamnas = textBoxFrån.Text;
+            string hamtas = textBoxUppdateraTill.Text;
+            p.UppdateraTider(datum, id, lamnas, hamtas);
+        }
     }
 }
