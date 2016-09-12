@@ -172,7 +172,6 @@ namespace Grupp3___Förskolan_Drutten
         public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas)
         {
             
-            
             string meddelande;
             try
             {
@@ -231,39 +230,36 @@ namespace Grupp3___Förskolan_Drutten
             return BarnLista;
         }
 
+        //Metod som hämtar barnets tid när det ska hämtas från dagis
         public string BarnetsHämtaTid(int barnid, DateTime datum)
         {
             string svar = "";
-                  try
-            {
-
+                try
+                {
                 string sql = "select tid_hamtad from dagis.narvaro where barnid = '" + barnid + "' and datum = '" + datum + "';";
 
                 cmd = new NpgsqlCommand(sql, conn); // Kör sql
-
                 dr = cmd.ExecuteReader();
 
-                while (dr.Read())
-                {
+                    while (dr.Read())
+                    {
                         Närvaro n = new Närvaro();
                         
-                            n.TidHämtad = dr["tid_hamtad"].ToString();
-                            svar = n.TidHämtad;
-                            return svar;
+                        n.TidHämtad = dr["tid_hamtad"].ToString();
+                        svar = n.TidHämtad;
+                        return svar;
+                    }
                 }
-             
-               }
 
-            catch (Exception ex)
-            {
+                catch (Exception ex)
+                {
                 
                 svar = ex.Message;
                 return svar;
-                
-            } 
-            dr.Close();
-            return svar;
-           
+                } 
+
+                dr.Close();
+                return svar;
         }
         
         
@@ -526,28 +522,7 @@ namespace Grupp3___Förskolan_Drutten
 
 
         }
-        public List<Barn> HämtaAktuellaBarn()
-        {
-            string sql = "SELECT * FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
 
-            tabell.Clear();
-            tabell = sqlFråga(sql);
-            List<Barn> AktuellaBarnLista = new List<Barn>();
-            Barn barn;
-
-            foreach (DataRow rad in tabell.Rows)
-            {
-                barn = new Barn();
-
-                barn.Barnid = (int)rad[0];
-                barn.Förnamn = rad[1].ToString();
-                barn.Efternamn = rad[2].ToString();
-                barn.Allergier = rad[3].ToString();
-                barn.Annat = rad[4].ToString();
-                AktuellaBarnLista.Add(barn);
-            }
-            return AktuellaBarnLista;
-        }
     }
 
 }

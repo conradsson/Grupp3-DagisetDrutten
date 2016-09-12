@@ -67,7 +67,7 @@ namespace Grupp3___Förskolan_Drutten
             //p.ReturneraVärdenAvAktuellperson(label19);
 
             List<Barn> barnlista = new List<Barn>();
-            barnlista = p.HämtaAktuellaBarn();
+           // barnlista = p.HämtaAktuellaBarn();
             listAktuellaBarn.DataSource = null;
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
