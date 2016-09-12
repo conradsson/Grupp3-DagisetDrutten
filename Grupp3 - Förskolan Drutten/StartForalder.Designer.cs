@@ -102,7 +102,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxUppdateraTill = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -895,14 +895,14 @@
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBoxUppdateraTill);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Location = new System.Drawing.Point(491, 167);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(154, 159);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Uppdatera tider";
+            this.groupBox3.Text = "Uppdatera befintliga tider";
             // 
             // textBox1
             // 
@@ -929,12 +929,12 @@
             this.button5.Text = "Uppdatera";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBoxUppdateraTill
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.textBoxUppdateraTill.Location = new System.Drawing.Point(15, 87);
+            this.textBoxUppdateraTill.Name = "textBoxUppdateraTill";
+            this.textBoxUppdateraTill.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUppdateraTill.TabIndex = 8;
             // 
             // label22
             // 
@@ -1065,7 +1065,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxUppdateraTill;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox2;
     }
