@@ -171,6 +171,7 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
         }
 
         /// <summary>
@@ -203,6 +204,7 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
         }
 
         /// <summary>
