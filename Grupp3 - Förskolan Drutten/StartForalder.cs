@@ -176,7 +176,7 @@ namespace Grupp3___Förskolan_Drutten
 
             Barn valdBarn = new Barn();
             valdBarn = (Barn)listAktuellaBarn.SelectedItem;
-
+            Postgres p = new Postgres();
             if (valdBarn != null)
             {
                 textBoxFornamn.Text = valdBarn.Förnamn;
@@ -193,5 +193,28 @@ namespace Grupp3___Förskolan_Drutten
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            if (textBoxFornamn.Text == "" || textBoxEfternamn.Text == "")
+            {
+                MessageBox.Show("Vänligen fyll i både förnamn och efternamn.");
+            }
+            else
+            {
+                
+                int barnid = aktuelltbarn.Barnid;
+                string förnamn = textBoxFornamn.Text;
+                string efternamn = textBoxEfternamn.Text;
+                string allergier = textBoxAllergier.Text;
+                string annat = richTextBoxAnnat.Text;
+
+                Postgres p = new Postgres();
+                p.UppdateraBarn(barnid, förnamn, efternamn, allergier, annat);
+
+            }
+        }
+            
     }
 }
