@@ -495,7 +495,28 @@ namespace Grupp3___Förskolan_Drutten
 
 
         }
+        public List<Barn> HämtaAktuellaBarn()
+        {
+            string sql = "SELECT * FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
 
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> AktuellaBarnLista = new List<Barn>();
+            Barn barn;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
+                barn.Allergier = rad[3].ToString();
+                barn.Annat = rad[4].ToString();
+                AktuellaBarnLista.Add(barn);
+            }
+            return AktuellaBarnLista;
+        }
     }
 
 }

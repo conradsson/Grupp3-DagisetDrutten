@@ -23,5 +23,13 @@ namespace Grupp3___Förskolan_Drutten
         {
             return Förnamn + " " + Efternamn;
         }
+
+        public string visaBarn
+        {
+            get
+            {
+                return Förnamn + " " + Efternamn + " " + Allergier + " " + Annat;
+            }
+        }
     }
 }

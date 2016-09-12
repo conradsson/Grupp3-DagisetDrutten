@@ -67,7 +67,7 @@ namespace Grupp3___Förskolan_Drutten
             //p.ReturneraVärdenAvAktuellperson(label19);
 
             List<Barn> barnlista = new List<Barn>();
-            barnlista = p.HämtaFöräldersBarn();
+            barnlista = p.HämtaAktuellaBarn();
             listAktuellaBarn.DataSource = null;
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
@@ -193,6 +193,24 @@ namespace Grupp3___Förskolan_Drutten
             DateTime datum = monthCalendar3.SelectionStart;
             tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
             hämtasTextBox.Text = tid;
+        }
+
+        private void listAktuellaBarn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            Barn valdBarn = new Barn();
+            valdBarn = (Barn)listAktuellaBarn.SelectedItem;
+
+                if(valdBarn != null)
+                {
+                textBoxFornamn.Text = valdBarn.Förnamn.ToString();
+                textBoxEfternamn.Text = valdBarn.Efternamn.ToString();
+                textBoxAllergier.Text = valdBarn.Allergier.ToString();
+                richTextBoxAnnat.Text = valdBarn.Annat.ToString();
+
+                listAktuellaBarn.DisplayMember = "visaBarn";
+                
+                }
         }
     }
 }
