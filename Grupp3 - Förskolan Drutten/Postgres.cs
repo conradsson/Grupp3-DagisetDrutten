@@ -273,8 +273,8 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
         }
-
-        public string LösenordsEncrypt(string lösenord) // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        public string LösenordsEncrypt(string lösenord) 
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {

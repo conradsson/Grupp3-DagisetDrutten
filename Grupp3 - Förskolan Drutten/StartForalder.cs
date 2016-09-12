@@ -58,9 +58,11 @@ namespace Grupp3___Förskolan_Drutten
            // NärvarotabControl.Visible = false;
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
 
-
             Postgres p = new Postgres();
-            p.ReturneraVärdenAvAktuellperson(label19);
+            
+            //inloggadesAnvändarnamn.Text = p.aktuellPerson.Användarnamn;
+
+           // p.ReturneraVärdenAvAktuellperson(label19);
 
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
