@@ -231,7 +231,7 @@ namespace Grupp3___Förskolan_Drutten
                         KontrolleraAnvändartyp();
                     }
                 }
-                else 
+                else // Ingen användare hittad.
                 {
                     MessageBox.Show("Felaktigt användarnamn eller lösenord." + "\n" + "\n" + "Om du har glömt ditt användarnamn eller lösenord" + "\n" + "vänligen kontakta systemansvarig.");
 
@@ -239,7 +239,7 @@ namespace Grupp3___Förskolan_Drutten
                 
             }
 
-            catch (Exception ex)
+            catch (Exception ex) // Annat fel
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
 
@@ -275,8 +275,8 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
         }
-
-        public string LösenordsEncrypt(string lösenord) // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        public string LösenordsEncrypt(string lösenord) 
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {
