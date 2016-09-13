@@ -763,48 +763,48 @@ namespace Grupp3___Förskolan_Drutten
             }
             return PersonLista;
         }
-        public List<Person> HämtaBarnsFörälderAvdelning1(int aktuellbarnid)
-        {
-            string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = ('" + aktuellbarnid + "') AND avdelningsid = 1";
+        //public List<Person> HämtaBarnsFörälderAvdelning1(int aktuellbarnid)
+        //{
+        //    string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = ('" + aktuellbarnid + "') AND avdelningsid = 1";
 
-            tabell.Clear();
-            tabell = sqlFråga(sql);
-            List<Person> PersonLista = new List<Person>();
-            Person person;
+        //    tabell.Clear();
+        //    tabell = sqlFråga(sql);
+        //    List<Person> PersonLista = new List<Person>();
+        //    Person person;
 
-            foreach (DataRow rad in tabell.Rows)
-            {
-                person = new Person();
+        //    foreach (DataRow rad in tabell.Rows)
+        //    {
+        //        person = new Person();
 
-                person.Förnamn = rad[0].ToString();
-                person.Efternamn = rad[1].ToString();
-                person.Telefonnr = rad[2].ToString();
+        //        person.Förnamn = rad[0].ToString();
+        //        person.Efternamn = rad[1].ToString();
+        //        person.Telefonnr = rad[2].ToString();
 
-                PersonLista.Add(person);
-            }
-            return PersonLista;
-        }
-        public List<Person> HämtaBarnsFörälderAvdelning2(int aktuellbarnid)
-        {
-            string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = ('" + aktuellbarnid + "') AND barn.avdelningsid = 2";
+        //        PersonLista.Add(person);
+        //    }
+        //    return PersonLista;
+        //}
+        //public List<Person> HämtaBarnsFörälderAvdelning2(int aktuellbarnid)
+        //{
+        //    string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = ('" + aktuellbarnid + "') AND barn.avdelningsid = 2";
 
-            tabell.Clear();
-            tabell = sqlFråga(sql);
-            List<Person> PersonLista = new List<Person>();
-            Person person;
+        //    tabell.Clear();
+        //    tabell = sqlFråga(sql);
+        //    List<Person> PersonLista = new List<Person>();
+        //    Person person;
 
-            foreach (DataRow rad in tabell.Rows)
-            {
-                person = new Person();
+        //    foreach (DataRow rad in tabell.Rows)
+        //    {
+        //        person = new Person();
 
-                person.Förnamn = rad[0].ToString();
-                person.Efternamn = rad[1].ToString();
-                person.Telefonnr = rad[2].ToString();
+        //        person.Förnamn = rad[0].ToString();
+        //        person.Efternamn = rad[1].ToString();
+        //        person.Telefonnr = rad[2].ToString();
 
-                PersonLista.Add(person);
-            }
-            return PersonLista;
-        }
+        //        PersonLista.Add(person);
+        //    }
+        //    return PersonLista;
+        //}
         public List<Barn> HämtaBarnAvdelning1()
         {
             string sql = "select * from dagis.barn WHERE avdelningsid = 1 ORDER BY förnamn";
@@ -833,6 +833,31 @@ namespace Grupp3___Förskolan_Drutten
         public List<Barn> HämtaBarnAvdelning2()
         {
             string sql = "select * from dagis.barn WHERE avdelningsid = 2 ORDER BY förnamn";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnNamn = new List<Barn>();
+            Barn barn;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
+                barn.Avdelningsid = (int)rad[3];
+                barn.Allergier = rad[4].ToString();
+                barn.Annat = rad[5].ToString();
+
+                BarnNamn.Add(barn);
+
+            }
+            return BarnNamn;
+        }
+        public List<Barn> HämtaBarnEfterSök(string söktext)
+        {
+            string sql = "select * from dagis.barn WHERE barn.förnamn LIKE '%" + söktext + "%' ORDER BY förnamn";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
