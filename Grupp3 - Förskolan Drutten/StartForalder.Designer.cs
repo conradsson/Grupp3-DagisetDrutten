@@ -47,9 +47,15 @@
             this.textBoxUppdateraTill = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxTill2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxTill1 = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.comboBoxFrån2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboBoxFrån1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,12 +104,7 @@
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.comboBoxFrån1 = new System.Windows.Forms.ComboBox();
-            this.comboBoxFrån2 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBoxTill2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxTill1 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.uppdateraförälder = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -142,9 +143,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -402,6 +403,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lägg till nya tider";
             // 
+            // comboBoxTill2
+            // 
+            this.comboBoxTill2.FormattingEnabled = true;
+            this.comboBoxTill2.Items.AddRange(new object[] {
+            "00",
+            "05",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55"});
+            this.comboBoxTill2.Location = new System.Drawing.Point(63, 87);
+            this.comboBoxTill2.Name = "comboBoxTill2";
+            this.comboBoxTill2.Size = new System.Drawing.Size(42, 21);
+            this.comboBoxTill2.TabIndex = 18;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -410,6 +432,59 @@
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Från:";
+            // 
+            // comboBoxTill1
+            // 
+            this.comboBoxTill1.FormattingEnabled = true;
+            this.comboBoxTill1.Items.AddRange(new object[] {
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"});
+            this.comboBoxTill1.Location = new System.Drawing.Point(14, 87);
+            this.comboBoxTill1.Name = "comboBoxTill1";
+            this.comboBoxTill1.Size = new System.Drawing.Size(42, 21);
+            this.comboBoxTill1.TabIndex = 17;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(54, 88);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(13, 17);
+            this.label17.TabIndex = 19;
+            this.label17.Text = ":";
+            // 
+            // comboBoxFrån2
+            // 
+            this.comboBoxFrån2.FormattingEnabled = true;
+            this.comboBoxFrån2.Items.AddRange(new object[] {
+            "00",
+            "05",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55"});
+            this.comboBoxFrån2.Location = new System.Drawing.Point(63, 37);
+            this.comboBoxFrån2.Name = "comboBoxFrån2";
+            this.comboBoxFrån2.Size = new System.Drawing.Size(42, 21);
+            this.comboBoxFrån2.TabIndex = 15;
             // 
             // button2
             // 
@@ -421,6 +496,28 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // comboBoxFrån1
+            // 
+            this.comboBoxFrån1.FormattingEnabled = true;
+            this.comboBoxFrån1.Items.AddRange(new object[] {
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"});
+            this.comboBoxFrån1.Location = new System.Drawing.Point(14, 37);
+            this.comboBoxFrån1.Name = "comboBoxFrån1";
+            this.comboBoxFrån1.Size = new System.Drawing.Size(42, 21);
+            this.comboBoxFrån1.TabIndex = 14;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -429,6 +526,16 @@
             this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Till:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(54, 38);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 17);
+            this.label15.TabIndex = 16;
+            this.label15.Text = ":";
             // 
             // tiderBarnListBox
             // 
@@ -690,6 +797,7 @@
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.uppdateraförälder);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.textBoxTelefonnummerMittKonto);
             this.tabPage1.Controls.Add(this.label18);
@@ -904,111 +1012,15 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // comboBoxFrån1
+            // uppdateraförälder
             // 
-            this.comboBoxFrån1.FormattingEnabled = true;
-            this.comboBoxFrån1.Items.AddRange(new object[] {
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18"});
-            this.comboBoxFrån1.Location = new System.Drawing.Point(14, 37);
-            this.comboBoxFrån1.Name = "comboBoxFrån1";
-            this.comboBoxFrån1.Size = new System.Drawing.Size(42, 21);
-            this.comboBoxFrån1.TabIndex = 14;
-            // 
-            // comboBoxFrån2
-            // 
-            this.comboBoxFrån2.FormattingEnabled = true;
-            this.comboBoxFrån2.Items.AddRange(new object[] {
-            "00",
-            "05",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55"});
-            this.comboBoxFrån2.Location = new System.Drawing.Point(63, 37);
-            this.comboBoxFrån2.Name = "comboBoxFrån2";
-            this.comboBoxFrån2.Size = new System.Drawing.Size(42, 21);
-            this.comboBoxFrån2.TabIndex = 15;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(54, 38);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 17);
-            this.label15.TabIndex = 16;
-            this.label15.Text = ":";
-            // 
-            // comboBoxTill2
-            // 
-            this.comboBoxTill2.FormattingEnabled = true;
-            this.comboBoxTill2.Items.AddRange(new object[] {
-            "00",
-            "05",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55"});
-            this.comboBoxTill2.Location = new System.Drawing.Point(63, 87);
-            this.comboBoxTill2.Name = "comboBoxTill2";
-            this.comboBoxTill2.Size = new System.Drawing.Size(42, 21);
-            this.comboBoxTill2.TabIndex = 18;
-            // 
-            // comboBoxTill1
-            // 
-            this.comboBoxTill1.FormattingEnabled = true;
-            this.comboBoxTill1.Items.AddRange(new object[] {
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18"});
-            this.comboBoxTill1.Location = new System.Drawing.Point(14, 87);
-            this.comboBoxTill1.Name = "comboBoxTill1";
-            this.comboBoxTill1.Size = new System.Drawing.Size(42, 21);
-            this.comboBoxTill1.TabIndex = 17;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(54, 88);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(13, 17);
-            this.label17.TabIndex = 19;
-            this.label17.Text = ":";
+            this.uppdateraförälder.Location = new System.Drawing.Point(114, 145);
+            this.uppdateraförälder.Name = "uppdateraförälder";
+            this.uppdateraförälder.Size = new System.Drawing.Size(99, 34);
+            this.uppdateraförälder.TabIndex = 20;
+            this.uppdateraförälder.Text = "Uppdatera information";
+            this.uppdateraförälder.UseVisualStyleBackColor = true;
+            this.uppdateraförälder.Click += new System.EventHandler(this.uppdateraförälder_Click_1);
             // 
             // StartForalder
             // 
@@ -1133,5 +1145,6 @@
         private System.Windows.Forms.ComboBox comboBoxTill2;
         private System.Windows.Forms.ComboBox comboBoxTill1;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button uppdateraförälder;
     }
 }
