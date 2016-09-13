@@ -77,7 +77,10 @@ namespace Grupp3___Förskolan_Drutten
             listAktuellaBarn.DataSource = null;
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
-
+            textBoxFornamn.Clear();
+            textBoxEfternamn.Clear();
+            textBoxAllergier.Clear();
+            richTextBoxAnnat.Clear();
 
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
@@ -279,17 +282,30 @@ namespace Grupp3___Förskolan_Drutten
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Postgres p = new Postgres();
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)listAktuellaBarn.SelectedItem;
+            
+            
 
             if (aktuelltbarn != null)
             {
-                Postgres p = new Postgres();
                 int id = aktuelltbarn.Barnid;
                 string förnamn = textBoxFornamn.Text;
                 string efternamn = textBoxEfternamn.Text;
                 p.UppdateraBarn(id, förnamn, efternamn);
+
+                
             }
+            listAktuellaBarn.DataSource = null;
+            List<Barn> barnlista = new List<Barn>();
+            barnlista = p.HämtaAktuellaBarn();
+            listAktuellaBarn.DataSource = barnlista;
+            listAktuellaBarn.ClearSelected();
+            textBoxFornamn.Clear();
+            textBoxEfternamn.Clear();
+            textBoxAllergier.Clear();
+            richTextBoxAnnat.Clear();
         }
     }
 }

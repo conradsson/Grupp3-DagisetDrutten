@@ -589,7 +589,7 @@ namespace Grupp3___Förskolan_Drutten
             string meddelande;
             try
             {
-                string sql = "UPDATE barn SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "' where barnid = '" + barnid + "';";
+                string sql = "UPDATE dagis.barn SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "' where barnid = '" + barnid + "';";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@förnamn", förnamn);
@@ -608,7 +608,9 @@ namespace Grupp3___Förskolan_Drutten
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
 
-            conn.Close();
+            //conn.Close();
+
+            
         }
 
         public List<Barn> HämtaAktuellaBarn()
