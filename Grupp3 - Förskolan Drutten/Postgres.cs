@@ -311,6 +311,12 @@ namespace Grupp3___Förskolan_Drutten
                 return svar;
         }
 
+        /// <summary>
+        /// Hämtar ut information om vem som hämtar barnet
+        /// </summary>
+        /// <param name="barnid"></param>
+        /// <param name="datum"></param>
+        /// <returns></returns>
         public string BarnetHämtasAv(int barnid, DateTime datum)
         {
             string svar = "";
@@ -342,6 +348,13 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
             return svar;
         }
+
+        /// <summary>
+        /// Meddelar vem som hämtar barnet
+        /// </summary>
+        /// <param name="barnid"></param>
+        /// <param name="hamtas"></param>
+        /// <param name="datum"></param>
         public void MeddelaHämtning(int barnid, string hamtas, DateTime datum)
         {
             string meddelande;
