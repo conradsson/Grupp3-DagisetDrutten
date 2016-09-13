@@ -18,16 +18,16 @@ namespace Grupp3___Förskolan_Drutten
             //  Start Effekter.
             informationTabControl.Visible = true;
 
-            List<Barn> barnlista = new List<Barn>();
-            Postgres p = new Postgres();
-            Login l = new Login();
-            barnlista = p.HämtaFöräldersBarn();
-            tiderBarnListBox.DataSource = null;
-            tiderBarnListBox.DataSource = barnlista;
-            listBoxMeddelaHämtning.DataSource = null;
-            listBoxMeddelaHämtning.DataSource = barnlista;
-            listBoxMeddelaFrånvaro.DataSource = null;
-            listBoxMeddelaFrånvaro.DataSource = barnlista;
+            //List<Barn> barnlista = new List<Barn>();
+            //Postgres p = new Postgres();
+            //Login l = new Login();
+            //barnlista = p.HämtaFöräldersBarn();
+            //tiderBarnListBox.DataSource = null;
+            //tiderBarnListBox.DataSource = barnlista;
+            //listBoxMeddelaHämtning.DataSource = null;
+            //listBoxMeddelaHämtning.DataSource = barnlista;
+            //listBoxMeddelaFrånvaro.DataSource = null;
+            //listBoxMeddelaFrånvaro.DataSource = barnlista;
 
 
             
@@ -73,7 +73,7 @@ namespace Grupp3___Förskolan_Drutten
             //p.ReturneraVärdenAvAktuellperson(label19);
 
             List<Barn> barnlista = new List<Barn>();
-           // barnlista = p.HämtaAktuellaBarn();
+            barnlista = p.HämtaAktuellaBarn();
             listAktuellaBarn.DataSource = null;
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
@@ -93,6 +93,18 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
             tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
+
+            List<Barn> barnlista = new List<Barn>();
+            Postgres p = new Postgres();
+            //Login l = new Login();
+            barnlista = p.HämtaFöräldersBarn();
+            tiderBarnListBox.DataSource = null;
+            tiderBarnListBox.DataSource = barnlista;
+            listBoxMeddelaHämtning.DataSource = null;
+            listBoxMeddelaHämtning.DataSource = barnlista;
+            listBoxMeddelaFrånvaro.DataSource = null;
+            listBoxMeddelaFrånvaro.DataSource = barnlista;
+            
         }
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -107,7 +119,8 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
-            
+
+    
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -181,12 +194,27 @@ namespace Grupp3___Förskolan_Drutten
         {
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            if (aktuelltbarn!= null)
+            {
+                Postgres p = new Postgres();
+                string tid;
+                DateTime datum = monthCalendar3.SelectionStart;
+                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+                textBoxUppdateraTill.Text = tid;
+            
+                Postgres p2 = new Postgres();
+                string tidLämnas;
+                tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+                textBoxFrån.Text = tidLämnas;
+            }
+            else
+            {
+                MessageBox.Show("Välj ett barn i listan.");
+            }
+           
+   
 
-            Postgres p = new Postgres();
-            string tid;
-            DateTime datum = monthCalendar3.SelectionStart;
-            tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-            hämtasTextBox.Text = tid;
+            
         }
 
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
@@ -194,11 +222,24 @@ namespace Grupp3___Förskolan_Drutten
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
 
-            Postgres p = new Postgres();
-            string tid;
-            DateTime datum = monthCalendar3.SelectionStart;
-            tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-            textBoxUppdateraTill.Text = tid;
+            if (aktuelltbarn != null)
+            {
+                Postgres p = new Postgres();
+                string tid;
+                DateTime datum = monthCalendar3.SelectionStart;
+                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+                textBoxUppdateraTill.Text = tid;
+
+                Postgres p2 = new Postgres();
+                string tidLämnas;
+                tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+                textBoxFrån.Text = tidLämnas;
+            }
+            else
+            {
+                MessageBox.Show("Välj ett barn i listan.");
+            }
+            
         }
 
         private void listAktuellaBarn_SelectedIndexChanged(object sender, EventArgs e)
@@ -211,12 +252,44 @@ namespace Grupp3___Förskolan_Drutten
                 {
                 textBoxFornamn.Text = valdBarn.Förnamn.ToString();
                 textBoxEfternamn.Text = valdBarn.Efternamn.ToString();
-                textBoxAllergier.Text = valdBarn.Allergier.ToString();
-                richTextBoxAnnat.Text = valdBarn.Annat.ToString();
+                //textBoxAllergier.Text = valdBarn.Allergier.ToString();
+                //richTextBoxAnnat.Text = valdBarn.Annat.ToString();
 
                 listAktuellaBarn.DisplayMember = "visaBarn";
                 
                 }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+
+            if (aktuelltbarn != null)
+            {
+                Postgres p = new Postgres();
+                int id = aktuelltbarn.Barnid;
+                DateTime datum = monthCalendar3.SelectionStart;
+                string lamnas = textBoxFrån.Text;
+                string hamtas = textBoxUppdateraTill.Text;
+                p.UppdateraTider(datum, id, lamnas, hamtas);
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)listAktuellaBarn.SelectedItem;
+
+            if (aktuelltbarn != null)
+            {
+                Postgres p = new Postgres();
+                int id = aktuelltbarn.Barnid;
+                string förnamn = textBoxFornamn.Text;
+                string efternamn = textBoxEfternamn.Text;
+                p.UppdateraBarn(id, förnamn, efternamn);
+            }
         }
     }
 }
