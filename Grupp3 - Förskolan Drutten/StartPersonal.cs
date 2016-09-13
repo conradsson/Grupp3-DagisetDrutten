@@ -251,8 +251,9 @@ namespace Grupp3___Förskolan_Drutten
             {
                 Postgres p = new Postgres();
                 listBox1.DataSource = null;
-                barnAvdl2ListBox.DataSource = p.HämtanBarn();
-                
+                //barnAvdl2ListBox.DataSource = p.HämtanBarn();
+                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+
             }
 
             else if (checkBoxAvdelning1.Checked == true)
@@ -260,7 +261,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning1();
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök1(textBoxSökRuta.Text);
             }
             else if (checkBoxAvdelning2.Checked == true)
             {
@@ -269,16 +270,19 @@ namespace Grupp3___Förskolan_Drutten
                 //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning2();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
             }
+            else
+            {
+                Postgres p = new Postgres();
+                listBox1.DataSource = null;
+                //barnAvdl2ListBox.DataSource = p.HämtanBarn();
+                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+            }
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            Postgres p = new Postgres();
-            listBox1.DataSource = null;
-            barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
         }
 
         private void textBoxSökRuta_TextChanged(object sender, EventArgs e)

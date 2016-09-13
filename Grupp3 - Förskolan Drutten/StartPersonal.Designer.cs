@@ -114,7 +114,6 @@
             this.textBoxSökRuta = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -1022,7 +1021,7 @@
             // 
             // buttonSök
             // 
-            this.buttonSök.Location = new System.Drawing.Point(241, 19);
+            this.buttonSök.Location = new System.Drawing.Point(241, 53);
             this.buttonSök.Name = "buttonSök";
             this.buttonSök.Size = new System.Drawing.Size(75, 23);
             this.buttonSök.TabIndex = 35;
@@ -1050,7 +1049,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.buttonSök);
             this.groupBox2.Controls.Add(this.textBoxSökRuta);
@@ -1071,16 +1069,6 @@
             this.label13.Size = new System.Drawing.Size(53, 13);
             this.label13.TabIndex = 38;
             this.label13.Text = "Sök barn:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(241, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Sök";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StartPersonal
             // 
@@ -1218,6 +1206,5 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBoxSökRuta;
-        private System.Windows.Forms.Button button1;
     }
 }
