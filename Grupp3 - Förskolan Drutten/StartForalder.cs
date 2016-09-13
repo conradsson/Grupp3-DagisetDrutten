@@ -20,9 +20,6 @@ namespace Grupp3___Förskolan_Drutten
             //  Start Effekter.
             informationTabControl.Visible = true;
 
-            string aktuellFörnamn = aktuellperson.Förnamn;
-            string aktuellEfternamn = aktuellperson.Efternamn;
-
             AktuellPerson = aktuellperson;
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
