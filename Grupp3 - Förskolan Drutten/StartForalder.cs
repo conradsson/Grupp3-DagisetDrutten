@@ -61,7 +61,7 @@ namespace Grupp3___Förskolan_Drutten
 
 
             List<Barn> barnlista = new List<Barn>();
-            barnlista = p.HämtaAktuellaBarn();
+            barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
             listAktuellaBarn.DataSource = null;
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
@@ -251,8 +251,8 @@ namespace Grupp3___Förskolan_Drutten
                 {
                 textBoxFornamn.Text = valdBarn.Förnamn.ToString();
                 textBoxEfternamn.Text = valdBarn.Efternamn.ToString();
-                //textBoxAllergier.Text = valdBarn.Allergier.ToString();
-                //richTextBoxAnnat.Text = valdBarn.Annat.ToString();
+                textBoxAllergier.Text = valdBarn.Allergier.ToString();
+                richTextBoxAnnat.Text = valdBarn.Annat.ToString();
 
                 listAktuellaBarn.DisplayMember = "visaBarn";
                 
@@ -289,13 +289,19 @@ namespace Grupp3___Förskolan_Drutten
                 int id = aktuelltbarn.Barnid;
                 string förnamn = textBoxFornamn.Text;
                 string efternamn = textBoxEfternamn.Text;
-                p.UppdateraBarn(id, förnamn, efternamn);
-
-                
+                string allergier = textBoxAllergier.Text;
+                string annat = richTextBoxAnnat.Text;
+                p.UppdateraBarn(id, förnamn, efternamn, allergier, annat);     
             }
+            else
+            {
+                MessageBox.Show("Välj ett barn i listan.");
+            }
+
+
             listAktuellaBarn.DataSource = null;
             List<Barn> barnlista = new List<Barn>();
-            barnlista = p.HämtaAktuellaBarn();
+            barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
             textBoxFornamn.Clear();

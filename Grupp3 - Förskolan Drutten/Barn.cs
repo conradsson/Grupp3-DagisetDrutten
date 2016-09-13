@@ -28,7 +28,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             get
             {
-                return Förnamn + " " + Efternamn + " " + Allergier + " " + Annat;
+                return Förnamn + " " + Efternamn;
             }
         }
     }
