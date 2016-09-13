@@ -38,6 +38,29 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.inloggadesAnvändarnamn = new System.Windows.Forms.Label();
+            this.informationButton = new System.Windows.Forms.Button();
+            this.närvaroButton = new System.Windows.Forms.Button();
+            this.barnButton = new System.Windows.Forms.Button();
+            this.mittKontoButton = new System.Windows.Forms.Button();
+            this.inloggadButton = new System.Windows.Forms.Button();
+            this.loggaUtButton = new System.Windows.Forms.Button();
+            this.BarntabControl = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridAllaBarn = new System.Windows.Forms.DataGridView();
+            this.label27 = new System.Windows.Forms.Label();
+            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.barnAvdl2ListBox = new System.Windows.Forms.ListBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.barnAvdl1ListBox = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.NärvarotabControl = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
@@ -85,35 +108,16 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.informationButton = new System.Windows.Forms.Button();
-            this.närvaroButton = new System.Windows.Forms.Button();
-            this.barnButton = new System.Windows.Forms.Button();
-            this.mittKontoButton = new System.Windows.Forms.Button();
-            this.inloggadButton = new System.Windows.Forms.Button();
-            this.loggaUtButton = new System.Windows.Forms.Button();
-            this.BarntabControl = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label27 = new System.Windows.Forms.Label();
-            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.barnAvdl2ListBox = new System.Windows.Forms.ListBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label26 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.barnAvdl1ListBox = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
-            this.dataGridAllaBarn = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.BarntabControl.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.NärvarotabControl.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -123,10 +127,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.BarntabControl.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).BeginInit();
             this.SuspendLayout();
             // 
             // kontoTypLabel
@@ -220,7 +220,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.label42);
+            this.panel1.Controls.Add(this.inloggadesAnvändarnamn);
             this.panel1.Controls.Add(this.informationButton);
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.barnButton);
@@ -235,6 +235,316 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
             this.panel1.TabIndex = 4;
+            // 
+            // inloggadesAnvändarnamn
+            // 
+            this.inloggadesAnvändarnamn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.inloggadesAnvändarnamn.AutoSize = true;
+            this.inloggadesAnvändarnamn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.inloggadesAnvändarnamn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.inloggadesAnvändarnamn.Location = new System.Drawing.Point(148, 12);
+            this.inloggadesAnvändarnamn.Name = "inloggadesAnvändarnamn";
+            this.inloggadesAnvändarnamn.Size = new System.Drawing.Size(0, 12);
+            this.inloggadesAnvändarnamn.TabIndex = 26;
+            // 
+            // informationButton
+            // 
+            this.informationButton.BackColor = System.Drawing.Color.LightGray;
+            this.informationButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.informationButtonDrutten;
+            this.informationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.informationButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.informationButton.FlatAppearance.BorderSize = 0;
+            this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.informationButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informationButton.ForeColor = System.Drawing.Color.Black;
+            this.informationButton.Location = new System.Drawing.Point(31, 84);
+            this.informationButton.Name = "informationButton";
+            this.informationButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.informationButton.Size = new System.Drawing.Size(163, 45);
+            this.informationButton.TabIndex = 5;
+            this.informationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.informationButton.UseVisualStyleBackColor = false;
+            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
+            this.informationButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.informationButton_MouseDown);
+            // 
+            // närvaroButton
+            // 
+            this.närvaroButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.närvaroButtonDrutten;
+            this.närvaroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.närvaroButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.närvaroButton.FlatAppearance.BorderSize = 0;
+            this.närvaroButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.närvaroButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.närvaroButton.ForeColor = System.Drawing.Color.Black;
+            this.närvaroButton.Location = new System.Drawing.Point(31, 234);
+            this.närvaroButton.Name = "närvaroButton";
+            this.närvaroButton.Size = new System.Drawing.Size(163, 45);
+            this.närvaroButton.TabIndex = 8;
+            this.närvaroButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.närvaroButton.UseVisualStyleBackColor = false;
+            this.närvaroButton.Click += new System.EventHandler(this.närvaroButton_Click);
+            this.närvaroButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.närvaroButton_MouseDown);
+            // 
+            // barnButton
+            // 
+            this.barnButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.barnButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.barnButtonDrutten;
+            this.barnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.barnButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.barnButton.FlatAppearance.BorderSize = 0;
+            this.barnButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.barnButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.barnButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.barnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.barnButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barnButton.ForeColor = System.Drawing.Color.Black;
+            this.barnButton.Location = new System.Drawing.Point(31, 184);
+            this.barnButton.Name = "barnButton";
+            this.barnButton.Size = new System.Drawing.Size(163, 45);
+            this.barnButton.TabIndex = 7;
+            this.barnButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.barnButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.barnButton.UseVisualStyleBackColor = false;
+            this.barnButton.Click += new System.EventHandler(this.barnButton_Click);
+            this.barnButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barnButton_MouseDown);
+            // 
+            // mittKontoButton
+            // 
+            this.mittKontoButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.mittKontoButtonDrutten;
+            this.mittKontoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mittKontoButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.mittKontoButton.FlatAppearance.BorderSize = 0;
+            this.mittKontoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mittKontoButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mittKontoButton.ForeColor = System.Drawing.Color.Black;
+            this.mittKontoButton.Location = new System.Drawing.Point(31, 134);
+            this.mittKontoButton.Name = "mittKontoButton";
+            this.mittKontoButton.Size = new System.Drawing.Size(163, 45);
+            this.mittKontoButton.TabIndex = 6;
+            this.mittKontoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mittKontoButton.UseVisualStyleBackColor = false;
+            this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
+            this.mittKontoButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mittKontoButton_MouseDown);
+            // 
+            // inloggadButton
+            // 
+            this.inloggadButton.BackColor = System.Drawing.Color.Transparent;
+            this.inloggadButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.inloggadButtonDrutten;
+            this.inloggadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.inloggadButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.inloggadButton.FlatAppearance.BorderSize = 0;
+            this.inloggadButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.inloggadButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.inloggadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.inloggadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inloggadButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inloggadButton.ForeColor = System.Drawing.Color.Black;
+            this.inloggadButton.Location = new System.Drawing.Point(102, 5);
+            this.inloggadButton.Name = "inloggadButton";
+            this.inloggadButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.inloggadButton.Size = new System.Drawing.Size(94, 28);
+            this.inloggadButton.TabIndex = 25;
+            this.inloggadButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.inloggadButton.UseVisualStyleBackColor = false;
+            this.inloggadButton.Click += new System.EventHandler(this.inloggadButton_Click);
+            this.inloggadButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.inloggadButton_MouseDown);
+            // 
+            // loggaUtButton
+            // 
+            this.loggaUtButton.BackColor = System.Drawing.Color.Transparent;
+            this.loggaUtButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.loggaUtButtonDrutten;
+            this.loggaUtButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loggaUtButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.loggaUtButton.FlatAppearance.BorderSize = 0;
+            this.loggaUtButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.loggaUtButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.loggaUtButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.loggaUtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loggaUtButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggaUtButton.ForeColor = System.Drawing.Color.Black;
+            this.loggaUtButton.Location = new System.Drawing.Point(6, 5);
+            this.loggaUtButton.Name = "loggaUtButton";
+            this.loggaUtButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.loggaUtButton.Size = new System.Drawing.Size(94, 28);
+            this.loggaUtButton.TabIndex = 24;
+            this.loggaUtButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loggaUtButton.UseVisualStyleBackColor = false;
+            this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
+            this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
+            // 
+            // BarntabControl
+            // 
+            this.BarntabControl.Controls.Add(this.tabPage4);
+            this.BarntabControl.Controls.Add(this.tabPage3);
+            this.BarntabControl.Location = new System.Drawing.Point(193, 30);
+            this.BarntabControl.Name = "BarntabControl";
+            this.BarntabControl.SelectedIndex = 0;
+            this.BarntabControl.Size = new System.Drawing.Size(748, 389);
+            this.BarntabControl.TabIndex = 22;
+            this.BarntabControl.Visible = false;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.dataGridAllaBarn);
+            this.tabPage4.Controls.Add(this.label27);
+            this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
+            this.tabPage4.Controls.Add(this.label31);
+            this.tabPage4.Controls.Add(this.label35);
+            this.tabPage4.Controls.Add(this.barnAvdl2ListBox);
+            this.tabPage4.Controls.Add(this.label39);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(740, 363);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Avdelning 2";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridAllaBarn
+            // 
+            this.dataGridAllaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAllaBarn.Location = new System.Drawing.Point(38, 36);
+            this.dataGridAllaBarn.Name = "dataGridAllaBarn";
+            this.dataGridAllaBarn.Size = new System.Drawing.Size(407, 150);
+            this.dataGridAllaBarn.TabIndex = 31;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(268, 218);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(38, 13);
+            this.label27.TabIndex = 30;
+            this.label27.Text = "Övrigt:";
+            // 
+            // barnOverigtrichTextBox
+            // 
+            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(275, 240);
+            this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
+            this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 96);
+            this.barnOverigtrichTextBox.TabIndex = 28;
+            this.barnOverigtrichTextBox.Text = "";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(563, 43);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(160, 20);
+            this.label31.TabIndex = 25;
+            this.label31.Text = "Vårdnadshavare 2:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(563, 14);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(160, 20);
+            this.label35.TabIndex = 21;
+            this.label35.Text = "Vårdnadshavare 1:";
+            // 
+            // barnAvdl2ListBox
+            // 
+            this.barnAvdl2ListBox.FormattingEnabled = true;
+            this.barnAvdl2ListBox.Location = new System.Drawing.Point(585, 195);
+            this.barnAvdl2ListBox.Name = "barnAvdl2ListBox";
+            this.barnAvdl2ListBox.Size = new System.Drawing.Size(120, 134);
+            this.barnAvdl2ListBox.TabIndex = 17;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(35, 20);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(32, 13);
+            this.label39.TabIndex = 16;
+            this.label39.Text = "Barn:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage3.Controls.Add(this.label26);
+            this.tabPage3.Controls.Add(this.richTextBox2);
+            this.tabPage3.Controls.Add(this.label24);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.barnAvdl1ListBox);
+            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(740, 363);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Avdelning 1";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(268, 218);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(38, 13);
+            this.label26.TabIndex = 15;
+            this.label26.Text = "Övrigt:";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(275, 240);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(288, 96);
+            this.richTextBox2.TabIndex = 13;
+            this.richTextBox2.Text = "";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(466, 39);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(160, 20);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "Vårdnadshavare 2:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(246, 39);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(160, 20);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Vårdnadshavare 1:";
+            // 
+            // barnAvdl1ListBox
+            // 
+            this.barnAvdl1ListBox.FormattingEnabled = true;
+            this.barnAvdl1ListBox.Location = new System.Drawing.Point(40, 39);
+            this.barnAvdl1ListBox.Name = "barnAvdl1ListBox";
+            this.barnAvdl1ListBox.Size = new System.Drawing.Size(120, 134);
+            this.barnAvdl1ListBox.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(35, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Barn:";
             // 
             // NärvarotabControl
             // 
@@ -682,309 +992,6 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // label42
-            // 
-            this.label42.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label42.Location = new System.Drawing.Point(148, 12);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(113, 12);
-            this.label42.TabIndex = 26;
-            this.label42.Text = "inloggadesAnvändarnamn";
-            // 
-            // informationButton
-            // 
-            this.informationButton.BackColor = System.Drawing.Color.LightGray;
-            this.informationButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.informationButtonDrutten;
-            this.informationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.informationButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.informationButton.FlatAppearance.BorderSize = 0;
-            this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.informationButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.informationButton.ForeColor = System.Drawing.Color.Black;
-            this.informationButton.Location = new System.Drawing.Point(31, 84);
-            this.informationButton.Name = "informationButton";
-            this.informationButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.informationButton.Size = new System.Drawing.Size(163, 45);
-            this.informationButton.TabIndex = 5;
-            this.informationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.informationButton.UseVisualStyleBackColor = false;
-            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
-            this.informationButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.informationButton_MouseDown);
-            // 
-            // närvaroButton
-            // 
-            this.närvaroButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.närvaroButtonDrutten;
-            this.närvaroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.närvaroButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.närvaroButton.FlatAppearance.BorderSize = 0;
-            this.närvaroButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.närvaroButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.närvaroButton.ForeColor = System.Drawing.Color.Black;
-            this.närvaroButton.Location = new System.Drawing.Point(31, 234);
-            this.närvaroButton.Name = "närvaroButton";
-            this.närvaroButton.Size = new System.Drawing.Size(163, 45);
-            this.närvaroButton.TabIndex = 8;
-            this.närvaroButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.närvaroButton.UseVisualStyleBackColor = false;
-            this.närvaroButton.Click += new System.EventHandler(this.närvaroButton_Click);
-            this.närvaroButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.närvaroButton_MouseDown);
-            // 
-            // barnButton
-            // 
-            this.barnButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.barnButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.barnButtonDrutten;
-            this.barnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.barnButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.barnButton.FlatAppearance.BorderSize = 0;
-            this.barnButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.barnButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.barnButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.barnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.barnButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barnButton.ForeColor = System.Drawing.Color.Black;
-            this.barnButton.Location = new System.Drawing.Point(31, 184);
-            this.barnButton.Name = "barnButton";
-            this.barnButton.Size = new System.Drawing.Size(163, 45);
-            this.barnButton.TabIndex = 7;
-            this.barnButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.barnButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.barnButton.UseVisualStyleBackColor = false;
-            this.barnButton.Click += new System.EventHandler(this.barnButton_Click);
-            this.barnButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barnButton_MouseDown);
-            // 
-            // mittKontoButton
-            // 
-            this.mittKontoButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.mittKontoButtonDrutten;
-            this.mittKontoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mittKontoButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.mittKontoButton.FlatAppearance.BorderSize = 0;
-            this.mittKontoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mittKontoButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mittKontoButton.ForeColor = System.Drawing.Color.Black;
-            this.mittKontoButton.Location = new System.Drawing.Point(31, 134);
-            this.mittKontoButton.Name = "mittKontoButton";
-            this.mittKontoButton.Size = new System.Drawing.Size(163, 45);
-            this.mittKontoButton.TabIndex = 6;
-            this.mittKontoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.mittKontoButton.UseVisualStyleBackColor = false;
-            this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
-            this.mittKontoButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mittKontoButton_MouseDown);
-            // 
-            // inloggadButton
-            // 
-            this.inloggadButton.BackColor = System.Drawing.Color.Transparent;
-            this.inloggadButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.inloggadButtonDrutten;
-            this.inloggadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.inloggadButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.inloggadButton.FlatAppearance.BorderSize = 0;
-            this.inloggadButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.inloggadButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.inloggadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.inloggadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inloggadButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inloggadButton.ForeColor = System.Drawing.Color.Black;
-            this.inloggadButton.Location = new System.Drawing.Point(102, 5);
-            this.inloggadButton.Name = "inloggadButton";
-            this.inloggadButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.inloggadButton.Size = new System.Drawing.Size(94, 28);
-            this.inloggadButton.TabIndex = 25;
-            this.inloggadButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inloggadButton.UseVisualStyleBackColor = false;
-            this.inloggadButton.Click += new System.EventHandler(this.inloggadButton_Click);
-            this.inloggadButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.inloggadButton_MouseDown);
-            // 
-            // loggaUtButton
-            // 
-            this.loggaUtButton.BackColor = System.Drawing.Color.Transparent;
-            this.loggaUtButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.loggaUtButtonDrutten;
-            this.loggaUtButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.loggaUtButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.loggaUtButton.FlatAppearance.BorderSize = 0;
-            this.loggaUtButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.loggaUtButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.loggaUtButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.loggaUtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loggaUtButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loggaUtButton.ForeColor = System.Drawing.Color.Black;
-            this.loggaUtButton.Location = new System.Drawing.Point(6, 5);
-            this.loggaUtButton.Name = "loggaUtButton";
-            this.loggaUtButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.loggaUtButton.Size = new System.Drawing.Size(94, 28);
-            this.loggaUtButton.TabIndex = 24;
-            this.loggaUtButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.loggaUtButton.UseVisualStyleBackColor = false;
-            this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
-            this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
-            // 
-            // BarntabControl
-            // 
-            this.BarntabControl.Controls.Add(this.tabPage4);
-            this.BarntabControl.Controls.Add(this.tabPage3);
-            this.BarntabControl.Location = new System.Drawing.Point(193, 30);
-            this.BarntabControl.Name = "BarntabControl";
-            this.BarntabControl.SelectedIndex = 0;
-            this.BarntabControl.Size = new System.Drawing.Size(748, 389);
-            this.BarntabControl.TabIndex = 22;
-            this.BarntabControl.Visible = false;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.dataGridAllaBarn);
-            this.tabPage4.Controls.Add(this.label27);
-            this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.barnAvdl2ListBox);
-            this.tabPage4.Controls.Add(this.label39);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(740, 363);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Avdelning 2";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(268, 218);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(38, 13);
-            this.label27.TabIndex = 30;
-            this.label27.Text = "Övrigt:";
-            // 
-            // barnOverigtrichTextBox
-            // 
-            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(275, 240);
-            this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
-            this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 96);
-            this.barnOverigtrichTextBox.TabIndex = 28;
-            this.barnOverigtrichTextBox.Text = "";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(563, 43);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(160, 20);
-            this.label31.TabIndex = 25;
-            this.label31.Text = "Vårdnadshavare 2:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(563, 14);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(160, 20);
-            this.label35.TabIndex = 21;
-            this.label35.Text = "Vårdnadshavare 1:";
-            // 
-            // barnAvdl2ListBox
-            // 
-            this.barnAvdl2ListBox.FormattingEnabled = true;
-            this.barnAvdl2ListBox.Location = new System.Drawing.Point(585, 195);
-            this.barnAvdl2ListBox.Name = "barnAvdl2ListBox";
-            this.barnAvdl2ListBox.Size = new System.Drawing.Size(120, 134);
-            this.barnAvdl2ListBox.TabIndex = 17;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(35, 20);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(32, 13);
-            this.label39.TabIndex = 16;
-            this.label39.Text = "Barn:";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage3.Controls.Add(this.label26);
-            this.tabPage3.Controls.Add(this.richTextBox2);
-            this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.barnAvdl1ListBox);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(740, 363);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Avdelning 1";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(268, 218);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(38, 13);
-            this.label26.TabIndex = 15;
-            this.label26.Text = "Övrigt:";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(275, 240);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(288, 96);
-            this.richTextBox2.TabIndex = 13;
-            this.richTextBox2.Text = "";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(466, 39);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(160, 20);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "Vårdnadshavare 2:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(246, 39);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(160, 20);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Vårdnadshavare 1:";
-            // 
-            // barnAvdl1ListBox
-            // 
-            this.barnAvdl1ListBox.FormattingEnabled = true;
-            this.barnAvdl1ListBox.Location = new System.Drawing.Point(40, 39);
-            this.barnAvdl1ListBox.Name = "barnAvdl1ListBox";
-            this.barnAvdl1ListBox.Size = new System.Drawing.Size(120, 134);
-            this.barnAvdl1ListBox.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(35, 20);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Barn:";
-            // 
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -996,14 +1003,6 @@
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
-            // dataGridAllaBarn
-            // 
-            this.dataGridAllaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAllaBarn.Location = new System.Drawing.Point(38, 36);
-            this.dataGridAllaBarn.Name = "dataGridAllaBarn";
-            this.dataGridAllaBarn.Size = new System.Drawing.Size(407, 150);
-            this.dataGridAllaBarn.TabIndex = 31;
             // 
             // StartPersonal
             // 
@@ -1029,6 +1028,12 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.BarntabControl.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.NärvarotabControl.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -1042,12 +1047,6 @@
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.BarntabControl.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1126,7 +1125,7 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label inloggadesAnvändarnamn;
         private System.Windows.Forms.Button inloggadButton;
         private System.Windows.Forms.Button loggaUtButton;
         private System.Windows.Forms.Button exitButton;

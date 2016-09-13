@@ -15,20 +15,23 @@ namespace Grupp3___Förskolan_Drutten
         public StartFP()
         {
             InitializeComponent();
+
+           
         }
 
+        
         private void förälderButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+           /* this.Visible = false;
             StartForalder f = new StartForalder();
-            f.Show();
+            f.Show();*/
         }
 
         private void personalButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+           /* this.Visible = false;
             StartPersonal p = new StartPersonal();
-            p.Show();
+            p.Show();*/
         }
     }
 }
