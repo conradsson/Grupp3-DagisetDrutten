@@ -185,8 +185,17 @@ namespace Grupp3___Förskolan_Drutten
             string lämnas = comboBoxFrån1.Text + ":" + comboBoxFrån2.Text; 
             string hämtas = comboBoxTill1.Text + ":" + comboBoxTill2.Text;
             
-            Postgres p = new Postgres();
-            p.LäggTillTid(datum, barnid, lämnas, hämtas);
+            if (lämnas == ":" && hämtas == ":")
+            {
+                
+               MessageBox.Show("Var vänlig och fyll i tider");
+            }
+            else
+            {
+                Postgres p = new Postgres();
+                p.LäggTillTid(datum, barnid, lämnas, hämtas);
+            }
+          
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
