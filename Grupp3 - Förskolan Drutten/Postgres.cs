@@ -342,17 +342,18 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
             return svar;
         }
-        public void MeddelaHämtning(int barnid, string hamtas)
+        public void MeddelaHämtning(int barnid, string hamtas, DateTime datum)
         {
             string meddelande;
             try
             {
                 string sql = "UPDATE dagis.narvaro SET hamtas_av = @hamtas_av"
-                   + " WHERE narvaro.barnid = @barnid;";
+                   + " WHERE narvaro.barnid = @barnid AND datum = @datum;";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@hamtas_av", hamtas);
                 cmd.Parameters.AddWithValue("@barnid", barnid);
+                cmd.Parameters.AddWithValue("@datum", datum);
                 
                 dr = cmd.ExecuteReader();
                 dr.Close();

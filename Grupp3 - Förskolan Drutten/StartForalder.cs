@@ -312,19 +312,16 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonMeddelaHämtning_Click(object sender, EventArgs e)
         {   
-           
-            Barn aktuelltbarn = new Barn();
-            aktuelltbarn = (Barn)listAktuellaBarn.SelectedItem;
+                Barn aktuelltbarn = (Barn)listBoxMeddelaHämtning.SelectedItem;
             
                 int barnid = aktuelltbarn.Barnid;
                 string hamtas = textBoxMeddelaHämtning.Text;
-
-            if (aktuelltbarn != null)
-            { 
+                DateTime datum = monthCalendar1.SelectionStart;
+          
                 Postgres p = new Postgres();
                 
-                p.MeddelaHämtning(barnid, hamtas);
-            }
+                p.MeddelaHämtning(barnid, hamtas, datum);
+            
             
         }
 
