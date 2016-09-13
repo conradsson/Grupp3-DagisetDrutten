@@ -18,8 +18,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable tabell;
-        Person aktuellPerson;
-
+        public Person aktuellPerson;
 
 
         //Kontaktar databasen.
@@ -110,7 +109,10 @@ namespace Grupp3___Förskolan_Drutten
 
         //Mathilda
 
-        //Metod för att hämta barn till en lista
+        /// <summary>
+        /// Metod för att hämta barn till en lista
+        /// </summary>
+        /// <returns></returns>
         public List<Barn> HämtanBarn()
         {
             string sql = "select * from dagis.barn ORDER BY förnamn";
@@ -128,18 +130,24 @@ namespace Grupp3___Förskolan_Drutten
                 barn.Förnamn = rad[1].ToString();
                 barn.Efternamn = rad[2].ToString();
                 barn.Avdelningsid = (int)rad[3];
+                barn.Allergier = rad[4].ToString();
+                barn.Annat = rad[5].ToString();
 
                 BarnNamn.Add(barn);
 
             }
             return BarnNamn;
-
         }
 
-        // Metod för att lägga till tider till ett barn
+        /// <summary>
+        ///  Metod för att lägga till tider till ett barn
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="lamnas"></param>
+        /// <param name="hamtas"></param>
         public void LäggTillTid(DateTime datum, int barnid, string lamnas, string hamtas)
         {
-
             string meddelande;
             try
             {
@@ -163,23 +171,49 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
-
-
+            conn.Close();
         }
 
-        //Metod för att kunna hämta användarnamnet som kan användas till att hämta rätt barn till rätt förälder
-        public string HämtaAnvändare(string användare)
+        /// <summary>
+        /// Metod för att uppdatera tider barnet lämnas och hämtas
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="lamnas"></param>
+        /// <param name="hamtas"></param>
+        public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas)
         {
-            aktuellPerson = new Person();
+            string meddelande;
+            try
+            {
+                string sql = "update dagis.narvaro SET tid_lamnad = '" + lamnas + "', tid_hamtad ='" + hamtas + "' where barnid = '" + barnid +"' and datum = '" + datum + "';";
+                   
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+                cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
+                cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
 
-            aktuellPerson.Användarnamn = användare;
-            return aktuellPerson.Användarnamn;
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Tiden är uppdaterad. ";
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
         }
 
-        //Metod för att hämta barn som tillhör en viss förälder
+        /// <summary>
+        /// Metod för att hämta barn som tillhör en viss förälder
+        /// </summary>
+        /// <returns></returns>
         public List<Barn> HämtaFöräldersBarn()
         {
-            string sql = "SELECT barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
+            string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
@@ -190,13 +224,93 @@ namespace Grupp3___Förskolan_Drutten
             {
                 barn = new Barn();
 
-                barn.Förnamn = rad[0].ToString();
-                barn.Efternamn = rad[1].ToString();
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
 
                 BarnLista.Add(barn);
             }
             return BarnLista;
         }
+
+        /// <summary>
+        /// Metod som hämtar barnets tid när det ska lämnas på dagis
+        /// </summary>
+        /// <param name="barnid"></param>
+        /// <param name="datum"></param>
+        /// <returns></returns>
+        public string BarnetsLämnaTid(int barnid, DateTime datum)
+        {
+            string svar1 = "";
+            try
+            {
+                string sql = "select tid_lamnad from dagis.narvaro where barnid = '" + barnid + "' and datum = '" + datum + "';";
+
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Närvaro n = new Närvaro();
+
+                    n.TidHämtad = dr["tid_lamnad"].ToString();
+                    svar1 = n.TidHämtad;
+                    return svar1;
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+                svar1 = ex.Message;
+                return svar1;
+            }
+
+            dr.Close();
+            conn.Close();
+            return svar1;
+            
+        }
+
+        /// <summary>
+        /// Metod som hämtar ut barnets tid när det ska hämtas från dagis
+        /// </summary>
+        /// <param name="barnid"></param>
+        /// <param name="datum"></param>
+        /// <returns></returns>
+        public string BarnetsHämtaTid(int barnid, DateTime datum)
+        {
+            string svar = "";
+                try
+                {
+                string sql = "select tid_hamtad from dagis.narvaro where barnid = '" + barnid + "' and datum = '" + datum + "';";
+
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+                dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        Närvaro n = new Närvaro();
+                        
+                        n.TidHämtad = dr["tid_hamtad"].ToString();
+                        svar = n.TidHämtad;
+                        return svar;
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                
+                svar = ex.Message;
+                return svar;
+                } 
+
+                dr.Close();
+                conn.Close();
+                return svar;
+        }
+        
+        
 
         // Johan
 
@@ -212,7 +326,6 @@ namespace Grupp3___Förskolan_Drutten
                 dr = cmd.ExecuteReader();
 
                 if (dr.Read())
-
                 {
                     if (dr.HasRows)  // Hittad användare
                     {
@@ -228,27 +341,23 @@ namespace Grupp3___Förskolan_Drutten
                             ÄrFörälder = (bool)dr["förälder"]
                         };
 
-
                         KontrolleraAnvändartyp();
-                        dr.Close();
                     }
                 }
-                else
+                else // Ingen användare hittad.
                 {
                     MessageBox.Show("Felaktigt användarnamn eller lösenord." + "\n" + "\n" + "Om du har glömt ditt användarnamn eller lösenord" + "\n" + "vänligen kontakta systemansvarig.");
 
                 }
+                
             }
 
-            catch (Exception ex)
+            catch (Exception ex) // Annat fel
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
 
             }
-            finally
-            {
-                
-            }
+            dr.Close();
         }
 
 
@@ -260,14 +369,12 @@ namespace Grupp3___Förskolan_Drutten
                 
                 StartFP fp = new StartFP();
                 fp.Show();
-               
             }
             else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
             {
                 
                 StartForalder f = new StartForalder();
                 f.Show();
-                              
             }
             else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
             {
@@ -280,10 +387,9 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
-            
         }
-
-        public string LösenordsEncrypt(string lösenord) // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        public string LösenordsEncrypt(string lösenord) 
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {
@@ -292,7 +398,49 @@ namespace Grupp3___Förskolan_Drutten
                 return Convert.ToBase64String(data);
             }
         }
+        public void HämtaInloggadAnvändare(string användarnamn, string lösenord)
+        {
+            try
+            {
+                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + LösenordsEncrypt(lösenord) + "'";
 
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr.HasRows)  // Hittad användare
+                    {
+                        aktuellPerson = new Person()
+                        {
+                            Personid = (int)dr["personid"],
+                            Förnamn = dr["förnamn"].ToString(),
+                            Efternamn = dr["efternamn"].ToString(),
+                            Telefonnr = dr["telefonnummer"].ToString(),
+                            Användarnamn = dr["användarnamn"].ToString(),
+                            Lösenord = dr["lösenord"].ToString(),
+                            ÄrPersonal = (bool)dr["personal"],
+                            ÄrFörälder = (bool)dr["förälder"]
+                        };
+
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("Kunde inte hämta användarens uppgifter.");
+
+                }
+
+            }
+
+            catch (Exception ex) // Annat fel
+            {
+                MessageBox.Show("Ett fel har uppstått: " + ex.Message);
+
+            }
+            dr.Close();
+        }
         //Hischam
 
         //public List<Närvaro> HämtaNärvaro()
@@ -332,11 +480,13 @@ namespace Grupp3___Förskolan_Drutten
         //}
         public void ReturneraVärdenAvAktuellperson()
         {
+            
 
-            if (aktuellPerson.ÄrFörälder == true)
+            if (aktuellPerson.Förnamn == "James")
             {
-                MessageBox.Show("Hej");
+                MessageBox.Show("hej");
             }
+           
             
 
         }
@@ -369,7 +519,7 @@ namespace Grupp3___Förskolan_Drutten
                 }
             }
             return Närvarolista;
-
+            
         }
         public List<Frånvaro> HämtaFrånvaro(DateTime AktuelltDatum)
         {
@@ -432,44 +582,60 @@ namespace Grupp3___Förskolan_Drutten
 
 
         // Martin
-        //Hämta aktuella barn
-        //public List<AktuellaBarn> AktuellaBarn()
-        //{
-        //    string sql = "select * from dagis.barn";
 
-        //    tabell.Clear();
-        //    tabell = sqlFråga(sql);
-        //    List<AktuellaBarn> BarnNamn = new List<AktuellaBarn>();
-        //    Barn barn;
+        public void UppdateraBarn(int barnid, string förnamn, string efternamn)
+        {
+            
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.barn SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "' where barnid = '" + barnid + "';";
 
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@förnamn", förnamn);
+                cmd.Parameters.AddWithValue("@efternamn", efternamn);
+                //cmd.Parameters.AddWithValue("@allergier", allergier);
+                //cmd.Parameters.AddWithValue("@annat", annat);
 
-        //    if (tabell.Columns[0].ColumnName.Equals("Error"))
-        //    {
-        //        Barn b = new Barn();
-        //        b.Error = true;
-        //        b.ErrorMeddelande = tabell.Rows[0][1].ToString();
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Uppgifterna är uppdaterade.";
 
-        //        BarnNamn.Add(b);
-        //    }
-        //    else
-        //    {
-        //        foreach (DataRow rad in tabell.Rows)
-        //        {
-        //            barn = new Barn();
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
 
-        //            barn.Barnid = (int)rad[0];
-        //            barn.Förnamn = rad[1].ToString();
-        //            barn.Efternamn = rad[2].ToString();
-        //            barn.Avdelningsid = (int)rad[3];
+            //conn.Close();
 
-        //            BarnNamn.Add(barn);
-        //        }
-        //    }
-        //    return BarnNamn;
+            
+        }
 
-        //}
+        public List<Barn> HämtaAktuellaBarn()
+        {
+            string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
 
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnLista = new List<Barn>();
+            Barn barn;
 
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
+                //barn.Allergier = rad[3].ToString();
+                //barn.Annat = rad[4].ToString();
+                BarnLista.Add(barn);
+            }
+            return BarnLista;
+            
+        }
     }
 
 }

@@ -16,10 +16,20 @@ namespace Grupp3___Förskolan_Drutten
         public string Förnamn { get; set; }
         public string Efternamn { get; set; }
         public int Avdelningsid { get; set; }
+        public string Allergier { get; set; }
+        public string Annat { get; set; }
 
         public override string ToString()
         {
-            return Barnid + " " + Förnamn + " " + Efternamn + " " + Avdelningsid;
+            return Förnamn + " " + Efternamn;
+        }
+
+        public string visaBarn
+        {
+            get
+            {
+                return Förnamn + " " + Efternamn + " " + Allergier + " " + Annat;
+            }
         }
     }
 }
