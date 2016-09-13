@@ -12,13 +12,18 @@ namespace Grupp3___Förskolan_Drutten
 {
     public partial class StartPersonal : Form
     {
+        Person AktuellPerson = new Person();
+
         public StartPersonal(Person aktuellperson)
         {
             InitializeComponent();
             //  Start Effekter..
             informationTabControl.Visible = true;
+
+            AktuellPerson = aktuellperson;
+
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
-            
+
         }
         
         // Knapp Effekter
