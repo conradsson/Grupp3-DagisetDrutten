@@ -188,7 +188,7 @@ namespace Grupp3___Förskolan_Drutten
             if (lämnas == ":" && hämtas == ":")
             {
                 
-               MessageBox.Show("Var vänlig och fyll i tider");
+               MessageBox.Show("Var vänlig och fyll i tider.");
             }
             else
             {
@@ -242,11 +242,13 @@ namespace Grupp3___Förskolan_Drutten
                 
                 if (tid == "")
                 {
+                    groupBox3.Visible = false;
                     comboBoxUppdateraTill1.Text = "";
                     comboBoxUppdateraTill2.Text = "";
                 }
                 else
                 {
+                    groupBox3.Visible = true;
                     comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
                     comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
                 }
@@ -305,7 +307,16 @@ namespace Grupp3___Förskolan_Drutten
                 DateTime datum = monthCalendar3.SelectionStart;
                 string lamnas = comboBoxUppdateraFrån1.Text + ":" + comboBoxUppdateraFrån2.Text;
                 string hamtas = comboBoxUppdateraTill1.Text + ":" + comboBoxUppdateraTill2.Text;
-                p.UppdateraTider(datum, id, lamnas, hamtas);
+
+                if (lamnas == ":" && hamtas == ":")
+                {
+                    MessageBox.Show("Var vänlig och fyll i tider.");
+                }
+                else
+                {
+                    p.UppdateraTider(datum, id, lamnas, hamtas);
+                }
+               
             }
             
         }
