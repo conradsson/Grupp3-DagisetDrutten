@@ -226,7 +226,7 @@ namespace Grupp3___Förskolan_Drutten
 
         private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Postgres p = new Postgres();
+            Postgres p = new Postgres(); 
             Barn AktuelltBarn = (Barn)barnAvdl2ListBox.SelectedItem;
 
             if (AktuelltBarn != null)
