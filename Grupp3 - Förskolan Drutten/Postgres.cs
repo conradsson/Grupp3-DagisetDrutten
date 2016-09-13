@@ -616,9 +616,9 @@ namespace Grupp3___Förskolan_Drutten
             
         }
 
-        public List<Barn> HämtaAktuellaBarn()
+        public List<Barn> HämtaAktuellaBarn(int aktuellpersonid)
         {
-            string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = 30;";
+            string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = '" + aktuellpersonid + "';;";
 
             tabell.Clear();
             tabell = sqlFråga(sql);

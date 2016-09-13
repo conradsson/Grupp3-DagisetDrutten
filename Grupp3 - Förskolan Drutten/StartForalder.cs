@@ -61,7 +61,7 @@ namespace Grupp3___Förskolan_Drutten
 
 
             List<Barn> barnlista = new List<Barn>();
-            barnlista = p.HämtaAktuellaBarn();
+            barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
             listAktuellaBarn.DataSource = null;
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
@@ -294,7 +294,7 @@ namespace Grupp3___Förskolan_Drutten
             }
             listAktuellaBarn.DataSource = null;
             List<Barn> barnlista = new List<Barn>();
-            barnlista = p.HämtaAktuellaBarn();
+            barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
             textBoxFornamn.Clear();
