@@ -12,6 +12,8 @@ namespace Grupp3___Förskolan_Drutten
 {
     public partial class StartForalder : Form
     {
+        Person AktuellPerson = new Person();
+
         public StartForalder(Person aktuellperson)
         {
             InitializeComponent();
@@ -20,15 +22,12 @@ namespace Grupp3___Förskolan_Drutten
 
             string aktuellFörnamn = aktuellperson.Förnamn;
             string aktuellEfternamn = aktuellperson.Efternamn;
-            
+
+            AktuellPerson = aktuellperson;
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
-            //MessageBox.Show(aktuellperson.Förnamn + "\n" + aktuellperson.Efternamn + aktuellperson.Telefonnr);
-
-            //textBoxFörnamnMittKonto.Text = aktuellperson.Förnamn;
-            //textBoxEfternamnMittKonto.Text = aktuellperson.Efternamn;
-            //textBoxAdressMittKonto.Text = aktuellperson.Telefonnr;
+ 
         }
         
 
@@ -58,9 +57,9 @@ namespace Grupp3___Förskolan_Drutten
         {
             Postgres p = new Postgres();
 
-            p.HämtaInloggadAnvändare(inloggadesAnvändarnamn.Text);
 
-            
+            textBoxFörnamnMittKonto.Text = AktuellPerson.Förnamn;
+
 
 
             List<Barn> barnlista = new List<Barn>();
