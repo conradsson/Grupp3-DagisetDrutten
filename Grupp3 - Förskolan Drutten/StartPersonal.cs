@@ -252,19 +252,22 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 listBox1.DataSource = null;
                 barnAvdl2ListBox.DataSource = p.HämtanBarn();
+                
             }
 
             else if (checkBoxAvdelning1.Checked == true)
             {
                 Postgres p = new Postgres();
                 listBox1.DataSource = null;
-                barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning1();
+                //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning1();
+                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
             }
             else if (checkBoxAvdelning2.Checked == true)
             {
                 Postgres p = new Postgres();
                 listBox1.DataSource = null;
-                barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning2();
+                //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning2();
+                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
             }
 
 
@@ -277,20 +280,10 @@ namespace Grupp3___Förskolan_Drutten
             listBox1.DataSource = null;
             barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
         }
-        static string UppercaseFirst(string s)
-        {
-            // Check for empty string.
-            if (string.IsNullOrEmpty(s))
-            {
-                return string.Empty;
-            }
-            // Return char and concat substring.
-            return char.ToUpper(s[0]) + s.Substring(1);
-        }
 
         private void textBoxSökRuta_TextChanged(object sender, EventArgs e)
         {
-            UppercaseFirst(textBoxSökRuta.Text);
+          
         }
     }
 }
