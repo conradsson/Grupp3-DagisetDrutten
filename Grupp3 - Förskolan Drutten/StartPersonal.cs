@@ -269,5 +269,28 @@ namespace Grupp3___Förskolan_Drutten
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Postgres p = new Postgres();
+            listBox1.DataSource = null;
+            barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+        }
+        static string UppercaseFirst(string s)
+        {
+            // Check for empty string.
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            // Return char and concat substring.
+            return char.ToUpper(s[0]) + s.Substring(1);
+        }
+
+        private void textBoxSökRuta_TextChanged(object sender, EventArgs e)
+        {
+            UppercaseFirst(textBoxSökRuta.Text);
+        }
     }
 }

@@ -111,7 +111,7 @@
             this.checkBoxAvdelning2 = new System.Windows.Forms.CheckBox();
             this.buttonSök = new System.Windows.Forms.Button();
             this.BarntabControl = new System.Windows.Forms.TabControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSökRuta = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -1040,19 +1040,20 @@
             this.BarntabControl.TabIndex = 22;
             this.BarntabControl.Visible = false;
             // 
-            // textBox1
+            // textBoxSökRuta
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 36;
+            this.textBoxSökRuta.Location = new System.Drawing.Point(9, 55);
+            this.textBoxSökRuta.Name = "textBoxSökRuta";
+            this.textBoxSökRuta.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSökRuta.TabIndex = 36;
+            this.textBoxSökRuta.TextChanged += new System.EventHandler(this.textBoxSökRuta_TextChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.buttonSök);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBoxSökRuta);
             this.groupBox2.Controls.Add(this.checkBoxAvdelning2);
             this.groupBox2.Controls.Add(this.checkBoxAvdelning1);
             this.groupBox2.Location = new System.Drawing.Point(20, 4);
@@ -1079,6 +1080,7 @@
             this.button1.TabIndex = 39;
             this.button1.Text = "Sök";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StartPersonal
             // 
@@ -1215,7 +1217,7 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSökRuta;
         private System.Windows.Forms.Button button1;
     }
 }
