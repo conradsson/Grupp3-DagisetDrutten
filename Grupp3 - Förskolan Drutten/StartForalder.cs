@@ -362,5 +362,21 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Välj ett barn i listan.");
             }
         }
+
+        private void uppdateraFörälder_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            //Person aktuellPerson = new Person();
+
+            int id = AktuellPerson.Personid;
+            string förnamn = textBoxFörnamnMittKonto.Text;
+            string efternamn = textBoxEfternamnMittKonto.Text;
+            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
+
+            p.UppdateraFörälder(id, förnamn, efternamn, telefonnummer);
+            
+            
+        
+        }
     }
 }
