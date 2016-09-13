@@ -43,7 +43,7 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();  
             Login l = new Login();
 
-           // p.HämtaInloggadAnvändare(l.inskrivetAnvändarnamn, l.inskrivetLösenord);  // Testar lösning på "aktuellPerson"
+           p.HämtaInloggadAnvändare(l.inskrivetAnvändarnamn, l.inskrivetLösenord);  // Testar lösning på "aktuellPerson"
             //MessageBox.Show(p.aktuellPerson.Användarnamn);
 
 
