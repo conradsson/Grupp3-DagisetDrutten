@@ -73,6 +73,7 @@
     <Compile Include="Barn.cs" />
     <Compile Include="Errorhandler.cs" />
     <Compile Include="Frånvaro.cs" />
+    <Compile Include="Information.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

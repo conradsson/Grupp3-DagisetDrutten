@@ -34,8 +34,14 @@
             this.informationTabControl = new System.Windows.Forms.TabControl();
             this.senasteTabPage = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.nyttInläggButton = new System.Windows.Forms.Button();
+            this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
+            this.nyttInläggPanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.avbrytButton = new System.Windows.Forms.Button();
+            this.publiceraButton = new System.Windows.Forms.Button();
+            this.richTextBoxNyttInlägg = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.inloggadesAnvändarnamn = new System.Windows.Forms.Label();
@@ -47,9 +53,11 @@
             this.loggaUtButton = new System.Windows.Forms.Button();
             this.BarntabControl = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dataGridAllaBarn = new System.Windows.Forms.DataGridView();
             this.label27 = new System.Windows.Forms.Label();
             this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.barnAvdl2ListBox = new System.Windows.Forms.ListBox();
             this.label39 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -96,25 +104,27 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxTelefonnrMittkonto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxEfternamnMittkonto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
+            this.listBoxInlägg = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.textBoxSkrivetAv = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.redigeraButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
+            this.nyttInläggPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.BarntabControl.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.NärvarotabControl.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -153,7 +163,7 @@
             // informationTabControl
             // 
             this.informationTabControl.Controls.Add(this.senasteTabPage);
-            this.informationTabControl.Location = new System.Drawing.Point(186, 30);
+            this.informationTabControl.Location = new System.Drawing.Point(193, 30);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
             this.informationTabControl.Size = new System.Drawing.Size(748, 389);
@@ -163,9 +173,14 @@
             // senasteTabPage
             // 
             this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.senasteTabPage.Controls.Add(this.redigeraButton);
+            this.senasteTabPage.Controls.Add(this.label9);
+            this.senasteTabPage.Controls.Add(this.textBoxSkrivetAv);
+            this.senasteTabPage.Controls.Add(this.label8);
+            this.senasteTabPage.Controls.Add(this.listBoxInlägg);
             this.senasteTabPage.Controls.Add(this.button2);
-            this.senasteTabPage.Controls.Add(this.button1);
-            this.senasteTabPage.Controls.Add(this.richTextBox1);
+            this.senasteTabPage.Controls.Add(this.nyttInläggButton);
+            this.senasteTabPage.Controls.Add(this.richTextBoxPubliceradeInlägg);
             this.senasteTabPage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.senasteTabPage.Location = new System.Drawing.Point(4, 22);
             this.senasteTabPage.Name = "senasteTabPage";
@@ -177,30 +192,96 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(212, 21);
+            this.button2.Location = new System.Drawing.Point(361, 40);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Redigera inlägg";
+            this.button2.Text = "Ta bort inlägg";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // nyttInläggButton
             // 
-            this.button1.Location = new System.Drawing.Point(88, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Skapa inlägg";
-            this.button1.UseVisualStyleBackColor = true;
+            this.nyttInläggButton.Location = new System.Drawing.Point(139, 39);
+            this.nyttInläggButton.Name = "nyttInläggButton";
+            this.nyttInläggButton.Size = new System.Drawing.Size(91, 23);
+            this.nyttInläggButton.TabIndex = 2;
+            this.nyttInläggButton.Text = "Nytt inlägg";
+            this.nyttInläggButton.UseVisualStyleBackColor = true;
+            this.nyttInläggButton.Click += new System.EventHandler(this.nyttInläggButton_Click);
             // 
-            // richTextBox1
+            // richTextBoxPubliceradeInlägg
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(88, 86);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(560, 186);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.richTextBoxPubliceradeInlägg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxPubliceradeInlägg.Location = new System.Drawing.Point(139, 91);
+            this.richTextBoxPubliceradeInlägg.Name = "richTextBoxPubliceradeInlägg";
+            this.richTextBoxPubliceradeInlägg.ReadOnly = true;
+            this.richTextBoxPubliceradeInlägg.Size = new System.Drawing.Size(560, 218);
+            this.richTextBoxPubliceradeInlägg.TabIndex = 1;
+            this.richTextBoxPubliceradeInlägg.Text = "";
+            // 
+            // nyttInläggPanel
+            // 
+            this.nyttInläggPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.nyttInläggPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.nyttInläggPanel.Controls.Add(this.label7);
+            this.nyttInläggPanel.Controls.Add(this.label6);
+            this.nyttInläggPanel.Controls.Add(this.avbrytButton);
+            this.nyttInläggPanel.Controls.Add(this.publiceraButton);
+            this.nyttInläggPanel.Controls.Add(this.richTextBoxNyttInlägg);
+            this.nyttInläggPanel.Location = new System.Drawing.Point(300, 55);
+            this.nyttInläggPanel.MaximumSize = new System.Drawing.Size(560, 340);
+            this.nyttInläggPanel.MinimumSize = new System.Drawing.Size(560, 340);
+            this.nyttInläggPanel.Name = "nyttInläggPanel";
+            this.nyttInläggPanel.Size = new System.Drawing.Size(560, 340);
+            this.nyttInläggPanel.TabIndex = 27;
+            this.nyttInläggPanel.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 15);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Nytt inlägg";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(49, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Fyll i inläggets text:";
+            // 
+            // avbrytButton
+            // 
+            this.avbrytButton.Location = new System.Drawing.Point(325, 300);
+            this.avbrytButton.Name = "avbrytButton";
+            this.avbrytButton.Size = new System.Drawing.Size(75, 23);
+            this.avbrytButton.TabIndex = 2;
+            this.avbrytButton.Text = "Avbryt";
+            this.avbrytButton.UseVisualStyleBackColor = true;
+            this.avbrytButton.Click += new System.EventHandler(this.avbrytButton_Click);
+            // 
+            // publiceraButton
+            // 
+            this.publiceraButton.Location = new System.Drawing.Point(431, 300);
+            this.publiceraButton.Name = "publiceraButton";
+            this.publiceraButton.Size = new System.Drawing.Size(75, 23);
+            this.publiceraButton.TabIndex = 1;
+            this.publiceraButton.Text = "Publicera";
+            this.publiceraButton.UseVisualStyleBackColor = true;
+            this.publiceraButton.Click += new System.EventHandler(this.publiceraButton_Click);
+            // 
+            // richTextBoxNyttInlägg
+            // 
+            this.richTextBoxNyttInlägg.Location = new System.Drawing.Point(52, 60);
+            this.richTextBoxNyttInlägg.Name = "richTextBoxNyttInlägg";
+            this.richTextBoxNyttInlägg.Size = new System.Drawing.Size(454, 218);
+            this.richTextBoxNyttInlägg.TabIndex = 0;
+            this.richTextBoxNyttInlägg.Text = "";
             // 
             // groupBox1
             // 
@@ -225,10 +306,11 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
+            this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.informationTabControl);
+            this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -395,10 +477,11 @@
             // tabPage4
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.listBox1);
+            this.tabPage4.Controls.Add(this.dataGridAllaBarn);
             this.tabPage4.Controls.Add(this.label27);
             this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
+            this.tabPage4.Controls.Add(this.label31);
+            this.tabPage4.Controls.Add(this.label35);
             this.tabPage4.Controls.Add(this.barnAvdl2ListBox);
             this.tabPage4.Controls.Add(this.label39);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -409,18 +492,18 @@
             this.tabPage4.Text = "Avdelning 2";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // dataGridAllaBarn
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(479, 35);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(237, 134);
-            this.listBox1.TabIndex = 36;
+            this.dataGridAllaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAllaBarn.Location = new System.Drawing.Point(38, 36);
+            this.dataGridAllaBarn.Name = "dataGridAllaBarn";
+            this.dataGridAllaBarn.Size = new System.Drawing.Size(407, 150);
+            this.dataGridAllaBarn.TabIndex = 31;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(39, 218);
+            this.label27.Location = new System.Drawing.Point(268, 218);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(38, 13);
             this.label27.TabIndex = 30;
@@ -428,20 +511,39 @@
             // 
             // barnOverigtrichTextBox
             // 
-            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(42, 250);
+            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(275, 240);
             this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
             this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 96);
             this.barnOverigtrichTextBox.TabIndex = 28;
             this.barnOverigtrichTextBox.Text = "";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(563, 43);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(160, 20);
+            this.label31.TabIndex = 25;
+            this.label31.Text = "Vårdnadshavare 2:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(563, 14);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(160, 20);
+            this.label35.TabIndex = 21;
+            this.label35.Text = "Vårdnadshavare 1:";
+            // 
             // barnAvdl2ListBox
             // 
             this.barnAvdl2ListBox.FormattingEnabled = true;
-            this.barnAvdl2ListBox.Location = new System.Drawing.Point(38, 35);
+            this.barnAvdl2ListBox.Location = new System.Drawing.Point(585, 195);
             this.barnAvdl2ListBox.Name = "barnAvdl2ListBox";
-            this.barnAvdl2ListBox.Size = new System.Drawing.Size(377, 134);
+            this.barnAvdl2ListBox.Size = new System.Drawing.Size(120, 134);
             this.barnAvdl2ListBox.TabIndex = 17;
-            this.barnAvdl2ListBox.SelectedIndexChanged += new System.EventHandler(this.barnAvdl2ListBox_SelectedIndexChanged);
             // 
             // label39
             // 
@@ -871,16 +973,12 @@
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.textBoxTelefonnrMittkonto);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.textBoxEfternamnMittkonto);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.textBoxFörnamnMittkonto);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -890,53 +988,21 @@
             this.tabPage1.Text = "Kontouppgifter";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(77, 195);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Epost:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(79, 211);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 8;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(77, 157);
+            this.label5.Location = new System.Drawing.Point(77, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Telefonnummer:";
             // 
-            // textBox3
+            // textBoxTelefonnrMittkonto
             // 
-            this.textBox3.Location = new System.Drawing.Point(79, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(76, 120);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Adress:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(79, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.textBoxTelefonnrMittkonto.Location = new System.Drawing.Point(79, 142);
+            this.textBoxTelefonnrMittkonto.Name = "textBoxTelefonnrMittkonto";
+            this.textBoxTelefonnrMittkonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefonnrMittkonto.TabIndex = 6;
             // 
             // label4
             // 
@@ -947,12 +1013,12 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Efternamn:";
             // 
-            // textBox2
+            // textBoxEfternamnMittkonto
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.textBoxEfternamnMittkonto.Location = new System.Drawing.Point(79, 97);
+            this.textBoxEfternamnMittkonto.Name = "textBoxEfternamnMittkonto";
+            this.textBoxEfternamnMittkonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEfternamnMittkonto.TabIndex = 2;
             // 
             // label3
             // 
@@ -963,12 +1029,12 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Förnamn:";
             // 
-            // textBox1
+            // textBoxFörnamnMittkonto
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxFörnamnMittkonto.Location = new System.Drawing.Point(79, 56);
+            this.textBoxFörnamnMittkonto.Name = "textBoxFörnamnMittkonto";
+            this.textBoxFörnamnMittkonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFörnamnMittkonto.TabIndex = 0;
             // 
             // exitButton
             // 
@@ -982,14 +1048,51 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // listBoxInlägg
+            // 
+            this.listBoxInlägg.FormattingEnabled = true;
+            this.listBoxInlägg.Location = new System.Drawing.Point(20, 91);
+            this.listBoxInlägg.Name = "listBoxInlägg";
+            this.listBoxInlägg.Size = new System.Drawing.Size(120, 186);
+            this.listBoxInlägg.TabIndex = 28;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(476, 20);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(17, 75);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 13);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Vårnadshavare:";
+            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Välj inlägg:";
+            // 
+            // textBoxSkrivetAv
+            // 
+            this.textBoxSkrivetAv.Location = new System.Drawing.Point(532, 309);
+            this.textBoxSkrivetAv.Name = "textBoxSkrivetAv";
+            this.textBoxSkrivetAv.ReadOnly = true;
+            this.textBoxSkrivetAv.Size = new System.Drawing.Size(167, 20);
+            this.textBoxSkrivetAv.TabIndex = 29;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(474, 312);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Skrivet av:";
+            // 
+            // redigeraButton
+            // 
+            this.redigeraButton.Location = new System.Drawing.Point(251, 39);
+            this.redigeraButton.Name = "redigeraButton";
+            this.redigeraButton.Size = new System.Drawing.Size(91, 23);
+            this.redigeraButton.TabIndex = 31;
+            this.redigeraButton.Text = "Redigera inlägg";
+            this.redigeraButton.UseVisualStyleBackColor = true;
+            this.redigeraButton.Click += new System.EventHandler(this.redigeraButton_Click);
             // 
             // StartPersonal
             // 
@@ -1012,12 +1115,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.informationTabControl.ResumeLayout(false);
             this.senasteTabPage.ResumeLayout(false);
+            this.senasteTabPage.PerformLayout();
+            this.nyttInläggPanel.ResumeLayout(false);
+            this.nyttInläggPanel.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.BarntabControl.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.NärvarotabControl.ResumeLayout(false);
@@ -1063,19 +1170,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxTelefonnrMittkonto;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxEfternamnMittkonto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFörnamnMittkonto;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button nyttInläggButton;
+        private System.Windows.Forms.RichTextBox richTextBoxPubliceradeInlägg;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
@@ -1096,6 +1199,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.RichTextBox barnOverigtrichTextBox;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ListBox barnAvdl2ListBox;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.MonthCalendar monthCalendar2;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1115,8 +1221,17 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox barnAvdl2ListBox;
+        private System.Windows.Forms.DataGridView dataGridAllaBarn;
+        private System.Windows.Forms.Panel nyttInläggPanel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button avbrytButton;
+        private System.Windows.Forms.Button publiceraButton;
+        private System.Windows.Forms.RichTextBox richTextBoxNyttInlägg;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox listBoxInlägg;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxSkrivetAv;
+        private System.Windows.Forms.Button redigeraButton;
     }
 }

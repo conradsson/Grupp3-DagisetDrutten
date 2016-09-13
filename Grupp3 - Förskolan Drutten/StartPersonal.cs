@@ -13,7 +13,7 @@ namespace Grupp3___Förskolan_Drutten
     public partial class StartPersonal : Form
     {
         Person AktuellPerson = new Person();
-        //Barn AktuelltBarn = new Barn();
+        Postgres p = new Postgres();
 
         public StartPersonal(Person aktuellperson)
         {
@@ -25,12 +25,19 @@ namespace Grupp3___Förskolan_Drutten
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
+            p.HämtaInlägg();
+            listBoxInlägg.DisplayMember = "InläggDisplay";
+            listBoxInlägg.DataSource = p.inläggslista;
         }
-
+        
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
+            p.HämtaInlägg();
+            listBoxInlägg.DisplayMember = "InläggDisplay";
+            listBoxInlägg.DataSource = p.inläggslista;
+
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
@@ -45,6 +52,10 @@ namespace Grupp3___Förskolan_Drutten
 
         private void mittKontoButton_Click(object sender, EventArgs e)// Mitt Konto-knappen
         {
+            textBoxFörnamnMittkonto.Text = AktuellPerson.Förnamn;
+            textBoxEfternamnMittkonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnrMittkonto.Text = AktuellPerson.Telefonnr;
+
             //  .Visable Effekter
             MittKontoTabControl.Visible = true;
             informationTabControl.Visible = false;
@@ -130,6 +141,8 @@ namespace Grupp3___Förskolan_Drutten
 
         private void inloggadButton_Click(object sender, EventArgs e)
         {
+            p.HämtaInlägg();
+
             //  .Visable Effekter
             MittKontoTabControl.Visible = true;
             informationTabControl.Visible = false;
@@ -173,7 +186,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
 
-            }
+            } 
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
@@ -186,34 +199,29 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        private void dataGridAllaBarn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void nyttInläggButton_Click(object sender, EventArgs e)
         {
-            //Postgres p = new Postgres();
-
-            //Barn AktuelltBarn = (Barn)this.dataGridAllaBarn.SelectedRows[0];
-
-            //if (AktuelltBarn != null)
-            //{
-            //    listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
-
-
-
-
-            //}
+            richTextBoxNyttInlägg.Clear();
+            nyttInläggPanel.Visible = true;
 
         }
 
-        private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void avbrytButton_Click(object sender, EventArgs e)
         {
-            Postgres p = new Postgres();
+            // METOD FÖR ATT TA BORT SELECTED INLÄGG (DROP)
+            richTextBoxNyttInlägg.Clear();
+            nyttInläggPanel.Visible = false;
+        }
 
-            Barn AktuelltBarn = (Barn)barnAvdl2ListBox.SelectedItem;
+        private void publiceraButton_Click(object sender, EventArgs e)
+        {
+            p.HämtaInlägg();
+            //METOD FÖR ATT PUBLICERA INLÄGG (INSERT)
+        }
 
-            if (AktuelltBarn != null)
-            {
-                listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
-
-            }
+        private void redigeraButton_Click(object sender, EventArgs e)
+        {
+            // METOD FÖR ATT REDIGERA SELECTED INLÄGG (UPDATE)
         }
     }
 }
