@@ -19,6 +19,8 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlDataReader dr;
         private DataTable tabell;
         public Person aktuellPerson;
+        public Information inläggInformation;
+        public List<Information> inläggslista;
         //StartForalder f = new StartForalder();
 
 
@@ -469,38 +471,37 @@ namespace Grupp3___Förskolan_Drutten
                 return Convert.ToBase64String(data);
             }
         }
-        public void HämtaInloggadAnvändare(string användarnamn)
+   
+
+        public void HämtaInlägg()
         {
-            
+
             try
             {
-                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "'";
+                string sql = "SELECT * FROM dagis.information";
 
-                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+                cmd = new NpgsqlCommand(sql, conn);
 
                 dr = cmd.ExecuteReader();
 
                 if (dr.Read())
                 {
-                    if (dr.HasRows)  // Hittad användare
+                    if (dr.HasRows)
                     {
-                        aktuellPerson = new Person()
+                        inläggInformation = new Information()
                         {
-                            Personid = (int)dr["personid"],
-                            Förnamn = dr["förnamn"].ToString(),
-                            Efternamn = dr["efternamn"].ToString(),
-                            Telefonnr = dr["telefonnummer"].ToString(),
-                            Användarnamn = dr["användarnamn"].ToString(),
-                            Lösenord = dr["lösenord"].ToString(),
-                            ÄrPersonal = (bool)dr["personal"],
-                            ÄrFörälder = (bool)dr["förälder"]
+                            InläggsId = (int)dr["inläggsid"],
+                            Datum = dr["datum"].ToString(),
+                            InläggsRubrik = dr["inläggsrubrik"].ToString(),
+                            InläggsText = dr["inläggstext"].ToString(),
+                            SkrivetAv = dr["skrivet_av"].ToString(),
                         };
-
+                        inläggslista.Add(inläggInformation);
                     }
                 }
-                else 
+                else
                 {
-                    MessageBox.Show("Kunde inte hämta användarens uppgifter.");
+                    MessageBox.Show("Kunde inte hämta senaste inläggen.");
 
                 }
 

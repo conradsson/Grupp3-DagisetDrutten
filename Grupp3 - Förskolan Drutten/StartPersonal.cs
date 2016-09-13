@@ -13,6 +13,7 @@ namespace Grupp3___Förskolan_Drutten
     public partial class StartPersonal : Form
     {
         Person AktuellPerson = new Person();
+        Postgres p = new Postgres();
 
         public StartPersonal(Person aktuellperson)
         {
@@ -24,12 +25,19 @@ namespace Grupp3___Förskolan_Drutten
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
+            p.HämtaInlägg();
+            listBoxInlägg.DisplayMember = "InläggDisplay";
+            listBoxInlägg.DataSource = p.inläggslista;
         }
         
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
+            p.HämtaInlägg();
+            listBoxInlägg.DisplayMember = "InläggDisplay";
+            listBoxInlägg.DataSource = p.inläggslista;
+
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
@@ -44,6 +52,10 @@ namespace Grupp3___Förskolan_Drutten
 
         private void mittKontoButton_Click(object sender, EventArgs e)// Mitt Konto-knappen
         {
+            textBoxFörnamnMittkonto.Text = AktuellPerson.Förnamn;
+            textBoxEfternamnMittkonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnrMittkonto.Text = AktuellPerson.Telefonnr;
+
             //  .Visable Effekter
             MittKontoTabControl.Visible = true;
             informationTabControl.Visible = false;
@@ -125,6 +137,8 @@ namespace Grupp3___Förskolan_Drutten
 
         private void inloggadButton_Click(object sender, EventArgs e)
         {
+            p.HämtaInlägg();
+
             //  .Visable Effekter
             MittKontoTabControl.Visible = true;
             informationTabControl.Visible = false;
@@ -179,6 +193,31 @@ namespace Grupp3___Förskolan_Drutten
             //frånvarandeListBox.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
 
 
+        }
+
+        private void nyttInläggButton_Click(object sender, EventArgs e)
+        {
+            richTextBoxNyttInlägg.Clear();
+            nyttInläggPanel.Visible = true;
+
+        }
+
+        private void avbrytButton_Click(object sender, EventArgs e)
+        {
+            // METOD FÖR ATT TA BORT SELECTED INLÄGG (DROP)
+            richTextBoxNyttInlägg.Clear();
+            nyttInläggPanel.Visible = false;
+        }
+
+        private void publiceraButton_Click(object sender, EventArgs e)
+        {
+            p.HämtaInlägg();
+            //METOD FÖR ATT PUBLICERA INLÄGG (INSERT)
+        }
+
+        private void redigeraButton_Click(object sender, EventArgs e)
+        {
+            // METOD FÖR ATT REDIGERA SELECTED INLÄGG (UPDATE)
         }
     }
 }
