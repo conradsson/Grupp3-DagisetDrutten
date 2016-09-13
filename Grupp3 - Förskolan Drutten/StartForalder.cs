@@ -37,7 +37,7 @@ namespace Grupp3___Förskolan_Drutten
           // p.HämtaInloggadAnvändare(l.inskrivetAnvändarnamn);  // Testar lösning på "aktuellPerson"
             //MessageBox.Show(p.aktuellPerson.Användarnamn);
 
-
+  
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;

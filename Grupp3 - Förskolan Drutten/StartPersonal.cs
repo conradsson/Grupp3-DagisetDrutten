@@ -12,6 +12,8 @@ namespace Grupp3___Förskolan_Drutten
 {
     public partial class StartPersonal : Form
     {
+
+
         public StartPersonal(Person aktuellperson)
         {
             InitializeComponent();
