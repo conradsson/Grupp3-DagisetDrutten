@@ -586,19 +586,19 @@ namespace Grupp3___Förskolan_Drutten
 
         // Martin
 
-        public void UppdateraBarn(int barnid, string förnamn, string efternamn)
+        public void UppdateraBarn(int barnid, string förnamn, string efternamn, string allergier, string annat)
         {
             
             string meddelande;
             try
             {
-                string sql = "UPDATE dagis.barn SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "' where barnid = '" + barnid + "';";
+                string sql = "UPDATE dagis.barn SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "', allergier = '" + allergier + "', annat = '" + annat + "' where barnid = '" + barnid + "';";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@förnamn", förnamn);
                 cmd.Parameters.AddWithValue("@efternamn", efternamn);
-                //cmd.Parameters.AddWithValue("@allergier", allergier);
-                //cmd.Parameters.AddWithValue("@annat", annat);
+                cmd.Parameters.AddWithValue("@allergier", allergier);
+                cmd.Parameters.AddWithValue("@annat", annat);
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
@@ -618,7 +618,7 @@ namespace Grupp3___Förskolan_Drutten
 
         public List<Barn> HämtaAktuellaBarn(int aktuellpersonid)
         {
-            string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = '" + aktuellpersonid + "';;";
+            string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn, barn.allergier, barn.annat FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = '" + aktuellpersonid + "';;";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
@@ -632,8 +632,8 @@ namespace Grupp3___Förskolan_Drutten
                 barn.Barnid = (int)rad[0];
                 barn.Förnamn = rad[1].ToString();
                 barn.Efternamn = rad[2].ToString();
-                //barn.Allergier = rad[3].ToString();
-                //barn.Annat = rad[4].ToString();
+                barn.Allergier = rad[3].ToString();
+                barn.Annat = rad[4].ToString();
                 BarnLista.Add(barn);
             }
             return BarnLista;

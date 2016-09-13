@@ -250,8 +250,8 @@ namespace Grupp3___Förskolan_Drutten
                 {
                 textBoxFornamn.Text = valdBarn.Förnamn.ToString();
                 textBoxEfternamn.Text = valdBarn.Efternamn.ToString();
-                //textBoxAllergier.Text = valdBarn.Allergier.ToString();
-                //richTextBoxAnnat.Text = valdBarn.Annat.ToString();
+                textBoxAllergier.Text = valdBarn.Allergier.ToString();
+                richTextBoxAnnat.Text = valdBarn.Annat.ToString();
 
                 listAktuellaBarn.DisplayMember = "visaBarn";
                 
@@ -288,7 +288,9 @@ namespace Grupp3___Förskolan_Drutten
                 int id = aktuelltbarn.Barnid;
                 string förnamn = textBoxFornamn.Text;
                 string efternamn = textBoxEfternamn.Text;
-                p.UppdateraBarn(id, förnamn, efternamn);     
+                string allergier = textBoxAllergier.Text;
+                string annat = richTextBoxAnnat.Text;
+                p.UppdateraBarn(id, förnamn, efternamn, allergier, annat);     
             }
             else
             {
