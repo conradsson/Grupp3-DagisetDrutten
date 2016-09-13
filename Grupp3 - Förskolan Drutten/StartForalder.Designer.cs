@@ -62,8 +62,6 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.listBoxMeddelaFrånvaro = new System.Windows.Forms.ListBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -108,6 +106,8 @@
             this.comboBoxUppdateraTill2 = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.radioButtonLedig = new System.Windows.Forms.RadioButton();
+            this.radioButtonSjuk = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -539,9 +539,9 @@
             // tabPage5
             // 
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.radioButtonSjuk);
+            this.tabPage5.Controls.Add(this.radioButtonLedig);
             this.tabPage5.Controls.Add(this.listBoxMeddelaFrånvaro);
-            this.tabPage5.Controls.Add(this.checkBox2);
-            this.tabPage5.Controls.Add(this.checkBox1);
             this.tabPage5.Controls.Add(this.button4);
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.label14);
@@ -562,34 +562,15 @@
             this.listBoxMeddelaFrånvaro.Size = new System.Drawing.Size(120, 95);
             this.listBoxMeddelaFrånvaro.TabIndex = 27;
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(328, 210);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(52, 17);
-            this.checkBox2.TabIndex = 26;
-            this.checkBox2.Text = "Ledig";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(328, 177);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(47, 17);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "Sjuk";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(465, 316);
+            this.button4.Location = new System.Drawing.Point(328, 235);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 24;
             this.button4.Text = "Meddela";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label7
             // 
@@ -1110,6 +1091,28 @@
             this.label24.TabIndex = 20;
             this.label24.Text = ":";
             // 
+            // radioButtonLedig
+            // 
+            this.radioButtonLedig.AutoSize = true;
+            this.radioButtonLedig.Location = new System.Drawing.Point(328, 200);
+            this.radioButtonLedig.Name = "radioButtonLedig";
+            this.radioButtonLedig.Size = new System.Drawing.Size(51, 17);
+            this.radioButtonLedig.TabIndex = 28;
+            this.radioButtonLedig.TabStop = true;
+            this.radioButtonLedig.Text = "Ledig";
+            this.radioButtonLedig.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSjuk
+            // 
+            this.radioButtonSjuk.AutoSize = true;
+            this.radioButtonSjuk.Location = new System.Drawing.Point(328, 177);
+            this.radioButtonSjuk.Name = "radioButtonSjuk";
+            this.radioButtonSjuk.Size = new System.Drawing.Size(46, 17);
+            this.radioButtonSjuk.TabIndex = 29;
+            this.radioButtonSjuk.TabStop = true;
+            this.radioButtonSjuk.Text = "Sjuk";
+            this.radioButtonSjuk.UseVisualStyleBackColor = true;
+            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1195,8 +1198,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
@@ -1237,5 +1238,7 @@
         private System.Windows.Forms.ComboBox comboBoxUppdateraFrån1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.RadioButton radioButtonSjuk;
+        private System.Windows.Forms.RadioButton radioButtonLedig;
     }
 }

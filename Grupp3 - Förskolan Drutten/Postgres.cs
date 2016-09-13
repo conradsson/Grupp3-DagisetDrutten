@@ -142,6 +142,33 @@ namespace Grupp3___Förskolan_Drutten
             return BarnNamn;
         }
 
+        public void LäggTillFånvaro(DateTime datum, int barnid, bool sjuk, bool ledig)
+        {
+            string meddelande;
+            try
+            {
+                string sql = "insert into dagis.franvaro (datum, barnid, sjuk, ledig) values (@datum, @barnid, @sjuk, @ledig);";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+                cmd.Parameters.AddWithValue("@sjuk", sjuk);
+                cmd.Parameters.AddWithValue("@ledig", ledig);
+
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Tiden är tillagd ";
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
+        }
+
         /// <summary>
         ///  Metod för att lägga till tider till ett barn
         /// </summary>

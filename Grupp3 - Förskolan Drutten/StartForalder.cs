@@ -419,5 +419,34 @@ namespace Grupp3___Förskolan_Drutten
 
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)listBoxMeddelaFrånvaro.SelectedItem;
+           
+
+            if (aktuelltbarn != null)
+            { 
+                Postgres p = new Postgres(); 
+                int id = aktuelltbarn.Barnid;
+                DateTime datum = monthCalendar2.SelectionStart;
+                bool sjuk;
+                bool ledig;
+
+                if (radioButtonSjuk.Checked)
+                {
+                    sjuk = true;
+                    ledig = false;
+                }
+                else
+                {
+                    sjuk = false;
+                    ledig = true;
+                }
+
+                p.LäggTillFånvaro(datum, id, sjuk, ledig);
+            }
+        }
     }
 }
