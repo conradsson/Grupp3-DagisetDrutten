@@ -56,7 +56,8 @@ namespace Grupp3___Förskolan_Drutten
 
 
             textBoxFörnamnMittKonto.Text = AktuellPerson.Förnamn;
-
+            textBoxEfternamnMittKonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnummerMittKonto.Text = AktuellPerson.Telefonnr;
 
 
             List<Barn> barnlista = new List<Barn>();
