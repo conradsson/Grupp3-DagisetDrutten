@@ -789,7 +789,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 meddelande = ex.Message;
             }
-            System.Windows.Forms.MessageBox.Show(meddelande);
+            System.Windows.Forms.MessageBox.Show(meddelande); 
         }
         }
 
