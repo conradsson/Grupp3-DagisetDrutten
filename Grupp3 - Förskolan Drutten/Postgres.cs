@@ -648,8 +648,8 @@ namespace Grupp3___Förskolan_Drutten
                     frånvaro.Datum = (DateTime)rad[0];
                     frånvaro.Förnamn = rad[1].ToString();
                     frånvaro.Efternamn = rad[2].ToString();
-                    frånvaro.Sjuk = Convert.ToBoolean(rad[4]);
-                    frånvaro.Ledig = (bool)rad[3];
+                    frånvaro.Sjuk = Convert.ToBoolean(rad[3]);
+                    frånvaro.Ledig = (bool)rad[4];
 
 
                     Frånvarolista.Add(frånvaro);
