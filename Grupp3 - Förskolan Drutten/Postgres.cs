@@ -736,7 +736,35 @@ namespace Grupp3___Förskolan_Drutten
             }
             return PersonLista;
         }
-    }
+        /// <summary>
+        /// Uppdaterar barn på inloggad förälder.
+        /// </summary>
+        public void UppdateraFörälder(int id, string förnamn, string efternamn, string telefonnummer)
+        {
+
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.person SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "', telefonnummer = '" + telefonnummer + "' where personid = '" + id + "';";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@förnamn", förnamn);
+                cmd.Parameters.AddWithValue("@efternamn", efternamn);
+                cmd.Parameters.AddWithValue("@telefonnummer", telefonnummer);
+
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Uppgifterna är uppdaterade.";
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+        }
+        }
 
 }
 
