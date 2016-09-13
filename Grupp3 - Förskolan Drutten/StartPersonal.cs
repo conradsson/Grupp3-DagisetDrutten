@@ -236,6 +236,8 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DisplayMember = "VisaFörälder";
                 listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
 
+                barnOverigtrichTextBox.Text = AktuelltBarn.Allergier + "\n" + AktuelltBarn.Annat;
+
                
             }
         }
