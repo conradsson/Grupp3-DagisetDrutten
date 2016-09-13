@@ -863,7 +863,32 @@ namespace Grupp3___Förskolan_Drutten
         }
         public List<Barn> HämtaBarnEfterSök(string söktext)
         {
-            string sql = "select * from dagis.barn WHERE avdelningsid = 1 AND barn.förnamn LIKE '%" + LowercaseFirst(söktext) + "%' OR barn.förnamn LIKE '%" + UppercaseFirst(söktext) + "%' ORDER BY förnamn";
+            string sql = "select * from dagis.barn WHERE barn.förnamn LIKE '%" + LowercaseFirst(söktext) + "%' OR barn.förnamn LIKE '%" + UppercaseFirst(söktext) + "%' ORDER BY förnamn";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnNamn = new List<Barn>();
+            Barn barn;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
+                barn.Avdelningsid = (int)rad[3];
+                barn.Allergier = rad[4].ToString();
+                barn.Annat = rad[5].ToString();
+
+                BarnNamn.Add(barn);
+
+            }
+            return BarnNamn;
+        }
+        public List<Barn> HämtaBarnEfterSök1(string söktext)
+        {
+            string sql = "select * from dagis.barn WHERE avdelningsid = 1 AND (barn.förnamn LIKE '%" + LowercaseFirst(söktext) + "%' OR barn.förnamn LIKE '%" + UppercaseFirst(söktext) + "%') ORDER BY förnamn";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
@@ -888,7 +913,7 @@ namespace Grupp3___Förskolan_Drutten
         }
         public List<Barn> HämtaBarnEfterSök2(string söktext)
         {
-            string sql = "select * from dagis.barn WHERE avdelningsid = 2 AND barn.förnamn LIKE '%" + LowercaseFirst(söktext) + "%' OR barn.förnamn LIKE '%" + UppercaseFirst(söktext) + "%' ORDER BY förnamn";
+            string sql = "select * from dagis.barn WHERE avdelningsid = 2 AND (barn.förnamn LIKE '%" + LowercaseFirst(söktext) + "%' OR barn.förnamn LIKE '%" + UppercaseFirst(söktext) + "%') ORDER BY förnamn";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
