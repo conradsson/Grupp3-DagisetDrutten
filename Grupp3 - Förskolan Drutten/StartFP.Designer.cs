@@ -35,6 +35,8 @@
             this.personalButton = new System.Windows.Forms.Button();
             this.förälderButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblInloggad = new System.Windows.Forms.Label();
+            this.inloggadanvändare = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +53,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.inloggadanvändare);
+            this.groupBox2.Controls.Add(this.lblInloggad);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.personalButton);
             this.groupBox2.Controls.Add(this.förälderButton);
@@ -98,6 +102,24 @@
             this.panel1.Size = new System.Drawing.Size(524, 321);
             this.panel1.TabIndex = 6;
             // 
+            // lblInloggad
+            // 
+            this.lblInloggad.AutoSize = true;
+            this.lblInloggad.Location = new System.Drawing.Point(7, 10);
+            this.lblInloggad.Name = "lblInloggad";
+            this.lblInloggad.Size = new System.Drawing.Size(54, 13);
+            this.lblInloggad.TabIndex = 10;
+            this.lblInloggad.Text = "Inloggad: ";
+            // 
+            // inloggadanvändare
+            // 
+            this.inloggadanvändare.AutoSize = true;
+            this.inloggadanvändare.Location = new System.Drawing.Point(58, 10);
+            this.inloggadanvändare.Name = "inloggadanvändare";
+            this.inloggadanvändare.Size = new System.Drawing.Size(35, 13);
+            this.inloggadanvändare.TabIndex = 11;
+            this.inloggadanvändare.Text = "label1";
+            // 
             // StartFP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,5 +149,7 @@
         private System.Windows.Forms.Button personalButton;
         private System.Windows.Forms.Button förälderButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label inloggadanvändare;
+        private System.Windows.Forms.Label lblInloggad;
     }
 }
