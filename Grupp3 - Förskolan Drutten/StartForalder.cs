@@ -18,6 +18,7 @@ namespace Grupp3___Förskolan_Drutten
             //  Start Effekter.
             informationTabControl.Visible = true;
 
+            
             string aktuellFörnamn = aktuellperson.Förnamn;
             string aktuellEfternamn = aktuellperson.Efternamn;
             
@@ -58,7 +59,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             Postgres p = new Postgres();
 
-            p.HämtaInloggadAnvändare(inloggadesAnvändarnamn.Text);
+            //p.HämtaInloggadAnvändare(inloggadesAnvändarnamn.Text);
 
             
 
