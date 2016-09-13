@@ -226,7 +226,7 @@ namespace Grupp3___Förskolan_Drutten
 
         private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Postgres p = new Postgres();
+            Postgres p = new Postgres(); 
             Barn AktuelltBarn = (Barn)barnAvdl2ListBox.SelectedItem;
 
             if (AktuelltBarn != null)
@@ -235,6 +235,8 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 listBox1.DisplayMember = "VisaFörälder";
                 listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
+
+                barnOverigtrichTextBox.Text = AktuelltBarn.Allergier + "\n" + AktuelltBarn.Annat;
 
                
             }
