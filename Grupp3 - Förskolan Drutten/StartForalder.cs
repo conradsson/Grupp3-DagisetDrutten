@@ -56,7 +56,8 @@ namespace Grupp3___Förskolan_Drutten
 
 
             textBoxFörnamnMittKonto.Text = AktuellPerson.Förnamn;
-
+            textBoxEfternamnMittKonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnummerMittKonto.Text = AktuellPerson.Telefonnr;
 
 
             List<Barn> barnlista = new List<Barn>();
@@ -94,7 +95,7 @@ namespace Grupp3___Förskolan_Drutten
             List<Barn> barnlista = new List<Barn>();
             Postgres p = new Postgres();
             //Login l = new Login();
-            barnlista = p.HämtaFöräldersBarn();
+            barnlista = p.HämtaFöräldersBarn(AktuellPerson.Personid);
             tiderBarnListBox.DataSource = null;
             tiderBarnListBox.DataSource = barnlista;
             listBoxMeddelaHämtning.DataSource = null;
