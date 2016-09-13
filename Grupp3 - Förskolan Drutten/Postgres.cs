@@ -655,7 +655,9 @@ namespace Grupp3___Förskolan_Drutten
 
 
         // Martin
-
+        /// <summary>
+        /// Uppdaterar barn på inloggad förälder.
+        /// </summary>
         public void UppdateraBarn(int barnid, string förnamn, string efternamn, string allergier, string annat)
         {
             
@@ -685,7 +687,9 @@ namespace Grupp3___Förskolan_Drutten
 
             
         }
-
+        /// <summary>
+        /// Hämtar aktuella barn på inloggad förälder
+        /// </summary>
         public List<Barn> HämtaAktuellaBarn(int aktuellpersonid)
         {
             string sql = "SELECT barn.barnid, barn.förnamn, barn.efternamn, barn.allergier, barn.annat FROM dagis.barn, dagis.person, dagis.person_barn WHERE barn.barnid = person_barn.fk_barnid AND person.personid = person_barn.fk_personid AND personid = '" + aktuellpersonid + "';;";
