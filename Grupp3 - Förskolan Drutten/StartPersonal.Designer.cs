@@ -47,11 +47,9 @@
             this.loggaUtButton = new System.Windows.Forms.Button();
             this.BarntabControl = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridAllaBarn = new System.Windows.Forms.DataGridView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label27 = new System.Windows.Forms.Label();
             this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
             this.barnAvdl2ListBox = new System.Windows.Forms.ListBox();
             this.label39 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -109,6 +107,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -116,7 +115,6 @@
             this.panel1.SuspendLayout();
             this.BarntabControl.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.NärvarotabControl.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -397,11 +395,10 @@
             // tabPage4
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.dataGridAllaBarn);
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.listBox1);
             this.tabPage4.Controls.Add(this.label27);
             this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.label35);
             this.tabPage4.Controls.Add(this.barnAvdl2ListBox);
             this.tabPage4.Controls.Add(this.label39);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -412,18 +409,18 @@
             this.tabPage4.Text = "Avdelning 2";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dataGridAllaBarn
+            // listBox1
             // 
-            this.dataGridAllaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAllaBarn.Location = new System.Drawing.Point(38, 36);
-            this.dataGridAllaBarn.Name = "dataGridAllaBarn";
-            this.dataGridAllaBarn.Size = new System.Drawing.Size(407, 150);
-            this.dataGridAllaBarn.TabIndex = 31;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(479, 35);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(237, 134);
+            this.listBox1.TabIndex = 36;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(268, 218);
+            this.label27.Location = new System.Drawing.Point(39, 218);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(38, 13);
             this.label27.TabIndex = 30;
@@ -431,39 +428,20 @@
             // 
             // barnOverigtrichTextBox
             // 
-            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(275, 240);
+            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(42, 250);
             this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
             this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 96);
             this.barnOverigtrichTextBox.TabIndex = 28;
             this.barnOverigtrichTextBox.Text = "";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(563, 43);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(160, 20);
-            this.label31.TabIndex = 25;
-            this.label31.Text = "Vårdnadshavare 2:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(563, 14);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(160, 20);
-            this.label35.TabIndex = 21;
-            this.label35.Text = "Vårdnadshavare 1:";
-            // 
             // barnAvdl2ListBox
             // 
             this.barnAvdl2ListBox.FormattingEnabled = true;
-            this.barnAvdl2ListBox.Location = new System.Drawing.Point(585, 195);
+            this.barnAvdl2ListBox.Location = new System.Drawing.Point(38, 35);
             this.barnAvdl2ListBox.Name = "barnAvdl2ListBox";
-            this.barnAvdl2ListBox.Size = new System.Drawing.Size(120, 134);
+            this.barnAvdl2ListBox.Size = new System.Drawing.Size(377, 134);
             this.barnAvdl2ListBox.TabIndex = 17;
+            this.barnAvdl2ListBox.SelectedIndexChanged += new System.EventHandler(this.barnAvdl2ListBox_SelectedIndexChanged);
             // 
             // label39
             // 
@@ -1004,6 +982,15 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(476, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Vårnadshavare:";
+            // 
             // StartPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1031,7 +1018,6 @@
             this.BarntabControl.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllaBarn)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.NärvarotabControl.ResumeLayout(false);
@@ -1110,9 +1096,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.RichTextBox barnOverigtrichTextBox;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ListBox barnAvdl2ListBox;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.MonthCalendar monthCalendar2;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1132,6 +1115,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridAllaBarn;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox barnAvdl2ListBox;
+        private System.Windows.Forms.Label label8;
     }
 }

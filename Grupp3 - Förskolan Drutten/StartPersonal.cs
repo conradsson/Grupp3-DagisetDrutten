@@ -13,6 +13,7 @@ namespace Grupp3___Förskolan_Drutten
     public partial class StartPersonal : Form
     {
         Person AktuellPerson = new Person();
+        //Barn AktuelltBarn = new Barn();
 
         public StartPersonal(Person aktuellperson)
         {
@@ -25,7 +26,7 @@ namespace Grupp3___Förskolan_Drutten
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
         }
-        
+
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
@@ -65,9 +66,13 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
 
-            dataGridAllaBarn.DataSource = null;
+            //dataGridAllaBarn.DataSource = null;
             Postgres p = new Postgres();
-            dataGridAllaBarn.DataSource = p.HämtanBarn();
+
+            barnAvdl2ListBox.DataSource = p.HämtanBarn();
+
+            //dataGridAllaBarn.DataSource = p.HämtanBarn();
+
         }
         private void barnButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -168,7 +173,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
 
-            } 
+            }
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
@@ -179,6 +184,36 @@ namespace Grupp3___Förskolan_Drutten
             //frånvarandeListBox.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
 
 
+        }
+
+        private void dataGridAllaBarn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Postgres p = new Postgres();
+
+            //Barn AktuelltBarn = (Barn)this.dataGridAllaBarn.SelectedRows[0];
+
+            //if (AktuelltBarn != null)
+            //{
+            //    listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
+
+
+
+
+            //}
+
+        }
+
+        private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+
+            Barn AktuelltBarn = (Barn)barnAvdl2ListBox.SelectedItem;
+
+            if (AktuelltBarn != null)
+            {
+                listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
+
+            }
         }
     }
 }
