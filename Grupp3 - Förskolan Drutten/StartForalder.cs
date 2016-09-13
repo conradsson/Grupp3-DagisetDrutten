@@ -30,6 +30,8 @@ namespace Grupp3___Förskolan_Drutten
             
             inloggadesAnvändarnamn.Text = "hej"; 
 
+            
+
         }
 
 
@@ -60,7 +62,7 @@ namespace Grupp3___Förskolan_Drutten
 
 
             Postgres p = new Postgres();
-            p.ReturneraVärdenAvAktuellperson(label19);
+            p.ReturneraVärdenAvAktuellperson();
 
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)

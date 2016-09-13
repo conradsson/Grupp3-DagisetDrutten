@@ -18,7 +18,8 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable tabell;
-        public Person aktuellPerson;
+        Person aktuellPerson;
+
 
 
         //Kontaktar databasen.
@@ -211,6 +212,7 @@ namespace Grupp3___Förskolan_Drutten
                 dr = cmd.ExecuteReader();
 
                 if (dr.Read())
+
                 {
                     if (dr.HasRows)  // Hittad användare
                     {
@@ -226,15 +228,16 @@ namespace Grupp3___Förskolan_Drutten
                             ÄrFörälder = (bool)dr["förälder"]
                         };
 
+
                         KontrolleraAnvändartyp();
+                        dr.Close();
                     }
                 }
-                else 
+                else
                 {
                     MessageBox.Show("Felaktigt användarnamn eller lösenord." + "\n" + "\n" + "Om du har glömt ditt användarnamn eller lösenord" + "\n" + "vänligen kontakta systemansvarig.");
 
                 }
-                
             }
 
             catch (Exception ex)
@@ -242,7 +245,10 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
 
             }
-            dr.Close();
+            finally
+            {
+                
+            }
         }
 
 
@@ -254,12 +260,14 @@ namespace Grupp3___Förskolan_Drutten
                 
                 StartFP fp = new StartFP();
                 fp.Show();
+               
             }
             else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
             {
                 
                 StartForalder f = new StartForalder();
                 f.Show();
+                              
             }
             else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
             {
@@ -272,6 +280,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
+            
         }
 
         public string LösenordsEncrypt(string lösenord) // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
@@ -323,13 +332,11 @@ namespace Grupp3___Förskolan_Drutten
         //}
         public void ReturneraVärdenAvAktuellperson()
         {
-            
 
-            if (aktuellPerson.Förnamn == "James")
+            if (aktuellPerson.ÄrFörälder == true)
             {
-                MessageBox.Show("hej");
+                MessageBox.Show("Hej");
             }
-           
             
 
         }
