@@ -29,10 +29,6 @@ namespace Grupp3___Förskolan_Drutten
             //listBoxMeddelaFrånvaro.DataSource = null;
             //listBoxMeddelaFrånvaro.DataSource = barnlista;
 
-
-            
-
-
         }
         //
 

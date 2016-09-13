@@ -127,6 +127,8 @@ namespace Grupp3___Förskolan_Drutten
 
         private void EncryptTestButton_Click(object sender, EventArgs e)
         {
+
+
             encryptTextBox.Clear();
             encryptTextBox.Text = p.LösenordsEncrypt(losenordENCRYPTtextBox.Text);
         }
