@@ -78,9 +78,9 @@
             this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listBoxMeddelaHämtning = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonMeddelaHämtning = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxMeddelaHämtning = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -138,9 +138,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
+            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -667,9 +667,9 @@
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage4.Controls.Add(this.listBoxMeddelaHämtning);
-            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.buttonMeddelaHämtning);
             this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.textBox3);
+            this.tabPage4.Controls.Add(this.textBoxMeddelaHämtning);
             this.tabPage4.Controls.Add(this.label12);
             this.tabPage4.Controls.Add(this.label13);
             this.tabPage4.Controls.Add(this.monthCalendar1);
@@ -688,15 +688,17 @@
             this.listBoxMeddelaHämtning.Name = "listBoxMeddelaHämtning";
             this.listBoxMeddelaHämtning.Size = new System.Drawing.Size(120, 95);
             this.listBoxMeddelaHämtning.TabIndex = 20;
+            this.listBoxMeddelaHämtning.SelectedIndexChanged += new System.EventHandler(this.listBoxMeddelaHämtning_SelectedIndexChanged);
             // 
-            // button3
+            // buttonMeddelaHämtning
             // 
-            this.button3.Location = new System.Drawing.Point(460, 321);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Meddela";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonMeddelaHämtning.Location = new System.Drawing.Point(328, 245);
+            this.buttonMeddelaHämtning.Name = "buttonMeddelaHämtning";
+            this.buttonMeddelaHämtning.Size = new System.Drawing.Size(75, 23);
+            this.buttonMeddelaHämtning.TabIndex = 19;
+            this.buttonMeddelaHämtning.Text = "Meddela";
+            this.buttonMeddelaHämtning.UseVisualStyleBackColor = true;
+            this.buttonMeddelaHämtning.Click += new System.EventHandler(this.buttonMeddelaHämtning_Click);
             // 
             // label6
             // 
@@ -707,12 +709,12 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Hämtas av:";
             // 
-            // textBox3
+            // textBoxMeddelaHämtning
             // 
-            this.textBox3.Location = new System.Drawing.Point(328, 219);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 17;
+            this.textBoxMeddelaHämtning.Location = new System.Drawing.Point(328, 219);
+            this.textBoxMeddelaHämtning.Name = "textBoxMeddelaHämtning";
+            this.textBoxMeddelaHämtning.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMeddelaHämtning.TabIndex = 17;
             // 
             // label12
             // 
@@ -737,6 +739,7 @@
             this.monthCalendar1.Location = new System.Drawing.Point(55, 182);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 11;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // tabPage5
             // 
@@ -987,9 +990,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MonthCalendar monthCalendar3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonMeddelaHämtning;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxMeddelaHämtning;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
