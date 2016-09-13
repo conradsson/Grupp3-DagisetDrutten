@@ -182,11 +182,11 @@ namespace Grupp3___Förskolan_Drutten
             Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
             DateTime datum = monthCalendar3.SelectionStart;
             int barnid = aktuelltbarn.Barnid;
-            string hämtas = lämnasTextBox.Text;
-            string lämnas = hämtasTextBox.Text;
-
+            string lämnas = comboBoxFrån1.Text + ":" + comboBoxFrån2.Text; 
+            string hämtas = comboBoxTill1.Text + ":" + comboBoxTill2.Text;
+            
             Postgres p = new Postgres();
-            p.LäggTillTid(datum, barnid, hämtas, lämnas);
+            p.LäggTillTid(datum, barnid, lämnas, hämtas);
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -199,12 +199,15 @@ namespace Grupp3___Förskolan_Drutten
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-                textBoxUppdateraTill.Text = tid;
+                comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
+                comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+                
             
                 Postgres p2 = new Postgres();
                 string tidLämnas;
                 tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
-                textBoxFrån.Text = tidLämnas;
+                comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
+                comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
             }
             else
             {
@@ -227,12 +230,34 @@ namespace Grupp3___Förskolan_Drutten
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-                textBoxUppdateraTill.Text = tid;
+                
+                if (tid == "")
+                {
+                    comboBoxUppdateraTill1.Text = "";
+                    comboBoxUppdateraTill2.Text = "";
+                }
+                else
+                {
+                    comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
+                    comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+                }
+              
 
                 Postgres p2 = new Postgres();
                 string tidLämnas;
                 tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
-                textBoxFrån.Text = tidLämnas;
+                
+                if (tid == "")
+                {
+                    comboBoxUppdateraFrån1.Text = "";
+                    comboBoxUppdateraFrån2.Text = "";
+                }
+                else
+                {
+                    comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
+                    comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
+                }
+               
             }
             else
             {
@@ -269,8 +294,8 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 int id = aktuelltbarn.Barnid;
                 DateTime datum = monthCalendar3.SelectionStart;
-                string lamnas = textBoxFrån.Text;
-                string hamtas = textBoxUppdateraTill.Text;
+                string lamnas = comboBoxUppdateraFrån1.Text + ":" + comboBoxUppdateraFrån2.Text;
+                string hamtas = comboBoxUppdateraTill1.Text + ":" + comboBoxUppdateraTill2.Text;
                 p.UppdateraTider(datum, id, lamnas, hamtas);
             }
             
@@ -360,6 +385,67 @@ namespace Grupp3___Förskolan_Drutten
             else
             {
                 MessageBox.Show("Välj ett barn i listan.");
+            }
+        }
+
+        private void uppdateraFörälder_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            //Person aktuellPerson = new Person();
+
+            int id = AktuellPerson.Personid;
+            string förnamn = textBoxFörnamnMittKonto.Text;
+            string efternamn = textBoxEfternamnMittKonto.Text;
+            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
+
+            p.UppdateraFörälder(id, förnamn, efternamn, telefonnummer);
+            
+            
+        
+        }
+
+        private void uppdateraförälder_Click_1(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            //Person aktuellPerson = new Person();
+
+            int id = AktuellPerson.Personid;
+            string förnamn = textBoxFörnamnMittKonto.Text;
+            string efternamn = textBoxEfternamnMittKonto.Text;
+            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
+
+            p.UppdateraFörälder(id, förnamn, efternamn, telefonnummer);
+
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)listBoxMeddelaFrånvaro.SelectedItem;
+           
+
+            if (aktuelltbarn != null)
+            { 
+                Postgres p = new Postgres(); 
+                int id = aktuelltbarn.Barnid;
+                DateTime datum = monthCalendar2.SelectionStart;
+                bool sjuk;
+                bool ledig;
+
+                if (radioButtonSjuk.Checked)
+                {
+                    sjuk = true;
+                    ledig = false;
+                }
+                else
+                {
+                    sjuk = false;
+                    ledig = true;
+                }
+
+                p.LäggTillFånvaro(datum, id, sjuk, ledig);
             }
         }
     }

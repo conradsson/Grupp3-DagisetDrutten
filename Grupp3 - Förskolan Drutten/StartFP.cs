@@ -12,26 +12,29 @@ namespace Grupp3___Förskolan_Drutten
 {
     public partial class StartFP : Form
     {
-        public StartFP()
+        Person AktuellPerson = new Person();
+        public StartFP(Person aktuellperson)
         {
             InitializeComponent();
+            AktuellPerson = aktuellperson;
 
-           
+            inloggadanvändare.Text = aktuellperson.Användarnamn;
+
         }
 
         
         private void förälderButton_Click(object sender, EventArgs e)
         {
-           /* this.Visible = false;
-            StartForalder f = new StartForalder();
-            f.Show();*/
+            this.Visible = false;
+            StartForalder f = new StartForalder(AktuellPerson);
+            f.Show();
         }
 
         private void personalButton_Click(object sender, EventArgs e)
         {
-           /* this.Visible = false;
-            StartPersonal p = new StartPersonal();
-            p.Show();*/
+            this.Visible = false;
+            StartPersonal p = new StartPersonal(AktuellPerson);
+            p.Show();
         }
     }
 }
