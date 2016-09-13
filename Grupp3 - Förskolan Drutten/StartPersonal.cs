@@ -27,7 +27,7 @@ namespace Grupp3___Förskolan_Drutten
 
             p.HämtaInlägg();
             listBoxInlägg.DisplayMember = "InläggDisplay";
-            listBoxInlägg.DataSource = p.inläggslista;
+            //listBoxInlägg.DataSource = p.inläggslista;
         }
         
         // Knapp Effekter
@@ -36,7 +36,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             p.HämtaInlägg();
             listBoxInlägg.DisplayMember = "InläggDisplay";
-            listBoxInlägg.DataSource = p.inläggslista;
+            //listBoxInlägg.DataSource = p.inläggslista;
 
             //  .Visable Effekter
             informationTabControl.Visible = true;
@@ -222,6 +222,52 @@ namespace Grupp3___Förskolan_Drutten
         private void redigeraButton_Click(object sender, EventArgs e)
         {
             // METOD FÖR ATT REDIGERA SELECTED INLÄGG (UPDATE)
+        }
+
+        private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            Barn AktuelltBarn = (Barn)barnAvdl2ListBox.SelectedItem;
+
+            if (AktuelltBarn != null)
+            {
+
+                listBox1.DataSource = null;
+                listBox1.DisplayMember = "VisaFörälder";
+                listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
+
+               
+            }
+        }
+
+        private void checkBoxAvdelning1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSök_Click(object sender, EventArgs e)
+        {
+             if (checkBoxAvdelning1.Checked == true && checkBoxAvdelning2.Checked == true)
+            {
+                Postgres p = new Postgres();
+                listBox1.DataSource = null;
+                barnAvdl2ListBox.DataSource = p.HämtanBarn();
+            }
+
+            else if (checkBoxAvdelning1.Checked == true)
+            {
+                Postgres p = new Postgres();
+                listBox1.DataSource = null;
+                barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning1();
+            }
+            else if (checkBoxAvdelning2.Checked == true)
+            {
+                Postgres p = new Postgres();
+                listBox1.DataSource = null;
+                barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning2();
+            }
+
+
         }
     }
 }

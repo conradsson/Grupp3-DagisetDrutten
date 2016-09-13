@@ -20,7 +20,7 @@ namespace Grupp3___Förskolan_Drutten
         private DataTable tabell;
         public Person aktuellPerson;
         public Information inläggInformation;
-        public List<Information> inläggslista;
+        //public List<Information> inläggslista;
         //StartForalder f = new StartForalder();
 
 
@@ -496,7 +496,7 @@ namespace Grupp3___Förskolan_Drutten
                             InläggsText = dr["inläggstext"].ToString(),
                             SkrivetAv = dr["skrivet_av"].ToString(),
                         };
-                        inläggslista.Add(inläggInformation);
+                        //inläggslista.Add(inläggInformation);
                     }
                 }
                 else
@@ -735,6 +735,98 @@ namespace Grupp3___Förskolan_Drutten
                 PersonLista.Add(person);
             }
             return PersonLista;
+        }
+        public List<Person> HämtaBarnsFörälderAvdelning1(int aktuellbarnid)
+        {
+            string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = ('" + aktuellbarnid + "') AND avdelningsid = 1";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Person> PersonLista = new List<Person>();
+            Person person;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                person = new Person();
+
+                person.Förnamn = rad[0].ToString();
+                person.Efternamn = rad[1].ToString();
+                person.Telefonnr = rad[2].ToString();
+
+                PersonLista.Add(person);
+            }
+            return PersonLista;
+        }
+        public List<Person> HämtaBarnsFörälderAvdelning2(int aktuellbarnid)
+        {
+            string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = ('" + aktuellbarnid + "') AND barn.avdelningsid = 2";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Person> PersonLista = new List<Person>();
+            Person person;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                person = new Person();
+
+                person.Förnamn = rad[0].ToString();
+                person.Efternamn = rad[1].ToString();
+                person.Telefonnr = rad[2].ToString();
+
+                PersonLista.Add(person);
+            }
+            return PersonLista;
+        }
+        public List<Barn> HämtaBarnAvdelning1()
+        {
+            string sql = "select * from dagis.barn WHERE avdelningsid = 1 ORDER BY förnamn";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnNamn = new List<Barn>();
+            Barn barn;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
+                barn.Avdelningsid = (int)rad[3];
+                barn.Allergier = rad[4].ToString();
+                barn.Annat = rad[5].ToString();
+
+                BarnNamn.Add(barn);
+
+            }
+            return BarnNamn;
+        }
+        public List<Barn> HämtaBarnAvdelning2()
+        {
+            string sql = "select * from dagis.barn WHERE avdelningsid = 2 ORDER BY förnamn";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnNamn = new List<Barn>();
+            Barn barn;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
+                barn.Avdelningsid = (int)rad[3];
+                barn.Allergier = rad[4].ToString();
+                barn.Annat = rad[5].ToString();
+
+                BarnNamn.Add(barn);
+
+            }
+            return BarnNamn;
         }
     }
 

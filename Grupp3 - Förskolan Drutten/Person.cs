@@ -24,7 +24,14 @@ namespace Grupp3___Förskolan_Drutten
 
         public override string ToString()
         {
-            return Personid + " -  " + Förnamn + " " + Efternamn;
+            return Personid + " -  " + Förnamn + " " + Efternamn + " " + Telefonnr;
+        }
+        public string visaFörälder
+        {
+            get
+            {
+                return Förnamn + " " + Efternamn + " " + Telefonnr;
+            }
         }
     }
 }
