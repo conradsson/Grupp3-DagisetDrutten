@@ -182,11 +182,11 @@ namespace Grupp3___Förskolan_Drutten
             Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
             DateTime datum = monthCalendar3.SelectionStart;
             int barnid = aktuelltbarn.Barnid;
-            string hämtas = lämnasTextBox.Text;
-            string lämnas = hämtasTextBox.Text;
-
+            string lämnas = comboBoxFrån1.Text + ":" + comboBoxFrån2.Text; 
+            string hämtas = comboBoxTill1.Text + ":" + comboBoxTill2.Text;
+            
             Postgres p = new Postgres();
-            p.LäggTillTid(datum, barnid, hämtas, lämnas);
+            p.LäggTillTid(datum, barnid, lämnas, hämtas);
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
