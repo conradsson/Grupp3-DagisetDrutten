@@ -288,10 +288,14 @@ namespace Grupp3___Förskolan_Drutten
                 int id = aktuelltbarn.Barnid;
                 string förnamn = textBoxFornamn.Text;
                 string efternamn = textBoxEfternamn.Text;
-                p.UppdateraBarn(id, förnamn, efternamn);
-
-                
+                p.UppdateraBarn(id, förnamn, efternamn);     
             }
+            else
+            {
+                MessageBox.Show("Välj ett barn i listan.");
+            }
+
+
             listAktuellaBarn.DataSource = null;
             List<Barn> barnlista = new List<Barn>();
             barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
