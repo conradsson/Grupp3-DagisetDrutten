@@ -141,7 +141,13 @@ namespace Grupp3___Förskolan_Drutten
             }
             return BarnNamn;
         }
-
+        /// <summary>
+        /// Lägger in information i databasen om barnet är sjuk eller ledig
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="sjuk"></param>
+        /// <param name="ledig"></param>
         public void LäggTillFånvaro(DateTime datum, int barnid, bool sjuk, bool ledig)
         {
             string meddelande;
@@ -158,7 +164,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Tiden är tillagd ";
+                meddelande = "Frånvaron är registrerad.";
 
             }
             catch (NpgsqlException ex)
@@ -226,7 +232,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Tiden är uppdaterad. ";
+                meddelande = "Tiden är uppdaterad.";
 
             }
             catch (NpgsqlException ex)
@@ -399,7 +405,7 @@ namespace Grupp3___Förskolan_Drutten
                 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Hämtningen är meddelad. ";
+                meddelande = "Hämtningen är meddelad.";
 
             }
             catch (NpgsqlException ex)
