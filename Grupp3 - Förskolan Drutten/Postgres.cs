@@ -19,6 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlDataReader dr;
         private DataTable tabell;
         public Person aktuellPerson;
+        //StartForalder f = new StartForalder();
 
 
         //Kontaktar databasen.
@@ -373,13 +374,13 @@ namespace Grupp3___Förskolan_Drutten
             else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
             {
                 
-                StartForalder f = new StartForalder();
+                StartForalder f = new StartForalder(aktuellPerson);
                 f.Show();
             }
             else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
             {
                 
-                StartPersonal p = new StartPersonal();
+                StartPersonal p = new StartPersonal(aktuellPerson);
                 p.Show();
 
             }
@@ -398,11 +399,12 @@ namespace Grupp3___Förskolan_Drutten
                 return Convert.ToBase64String(data);
             }
         }
-        public void HämtaInloggadAnvändare(string användarnamn, string lösenord)
+        public void HämtaInloggadAnvändare(string användarnamn)
         {
+            
             try
             {
-                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "' AND lösenord = '" + LösenordsEncrypt(lösenord) + "'";
+                string sql = "SELECT * FROM dagis.person dp WHERE användarnamn = '" + användarnamn + "'";
 
                 cmd = new NpgsqlCommand(sql, conn); // Kör sql
 
@@ -441,6 +443,7 @@ namespace Grupp3___Förskolan_Drutten
             }
             dr.Close();
         }
+
         //Hischam
 
         //public List<Närvaro> HämtaNärvaro()

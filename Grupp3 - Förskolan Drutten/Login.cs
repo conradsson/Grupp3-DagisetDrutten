@@ -32,7 +32,7 @@ namespace Grupp3___Förskolan_Drutten
 
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
-            Postgres p = new Postgres();
+            
             p.HämtaAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
 
             inskrivetAnvändarnamn = andvandarnamnTextbox.Text;
@@ -107,19 +107,6 @@ namespace Grupp3___Förskolan_Drutten
              }*/
         }
 
-        private void förälderTillfälligButton_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            StartForalder foralder = new StartForalder();
-            foralder.Show();
-        }
-
-        private void personalTillfälligButton_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            StartPersonal personal = new StartPersonal();
-            personal.Show();
-        }
 
 
 

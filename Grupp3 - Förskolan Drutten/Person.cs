@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Grupp3___Förskolan_Drutten
 {
-    class Person : Errorhandler
+   public class Person : Errorhandler
     {
         public int Personid { get; set; }
         public string Förnamn { get; set; }

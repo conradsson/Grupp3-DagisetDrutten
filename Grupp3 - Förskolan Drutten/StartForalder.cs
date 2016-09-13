@@ -12,38 +12,33 @@ namespace Grupp3___Förskolan_Drutten
 {
     public partial class StartForalder : Form
     {
-        public StartForalder()
+        public StartForalder(Person aktuellperson)
         {
             InitializeComponent();
             //  Start Effekter.
             informationTabControl.Visible = true;
 
-            //List<Barn> barnlista = new List<Barn>();
-            //Postgres p = new Postgres();
-            //Login l = new Login();
-            //barnlista = p.HämtaFöräldersBarn();
-            //tiderBarnListBox.DataSource = null;
-            //tiderBarnListBox.DataSource = barnlista;
-            //listBoxMeddelaHämtning.DataSource = null;
-            //listBoxMeddelaHämtning.DataSource = barnlista;
-            //listBoxMeddelaFrånvaro.DataSource = null;
-            //listBoxMeddelaFrånvaro.DataSource = barnlista;
-
-
+            string aktuellFörnamn = aktuellperson.Förnamn;
+            string aktuellEfternamn = aktuellperson.Efternamn;
             
 
+            inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
+            //MessageBox.Show(aktuellperson.Förnamn + "\n" + aktuellperson.Efternamn + aktuellperson.Telefonnr);
+
+            //textBoxFörnamnMittKonto.Text = aktuellperson.Förnamn;
+            //textBoxEfternamnMittKonto.Text = aktuellperson.Efternamn;
+            //textBoxAdressMittKonto.Text = aktuellperson.Telefonnr;
         }
-        //
-
-        // Knapp Effekter
+        
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
             Postgres p = new Postgres();  
             Login l = new Login();
 
-           p.HämtaInloggadAnvändare(l.inskrivetAnvändarnamn, l.inskrivetLösenord);  // Testar lösning på "aktuellPerson"
+
+          // p.HämtaInloggadAnvändare(l.inskrivetAnvändarnamn);  // Testar lösning på "aktuellPerson"
             //MessageBox.Show(p.aktuellPerson.Användarnamn);
 
 
@@ -61,16 +56,12 @@ namespace Grupp3___Förskolan_Drutten
 
         private void mittKontoButton_Click(object sender, EventArgs e)// Mitt Konto-knappen
         {
-            //  .Visable Effekter
-            MittKontoTabControl.Visible = true;
-            informationTabControl.Visible = false;
-            TidertabControl.Visible = false;
-           // NärvarotabControl.Visible = false;
-            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
-
-
             Postgres p = new Postgres();
-            //p.ReturneraVärdenAvAktuellperson(label19);
+
+            p.HämtaInloggadAnvändare(inloggadesAnvändarnamn.Text);
+
+            
+
 
             List<Barn> barnlista = new List<Barn>();
             barnlista = p.HämtaAktuellaBarn();
@@ -81,6 +72,13 @@ namespace Grupp3___Förskolan_Drutten
             textBoxEfternamn.Clear();
             textBoxAllergier.Clear();
             richTextBoxAnnat.Clear();
+
+            //  .Visable Effekter
+            MittKontoTabControl.Visible = true;
+            informationTabControl.Visible = false;
+            TidertabControl.Visible = false;
+            // NärvarotabControl.Visible = false;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
 
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
