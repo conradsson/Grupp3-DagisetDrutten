@@ -26,7 +26,7 @@ namespace Grupp3___Förskolan_Drutten
         //Kontaktar databasen.
         public Postgres()
         {
-            conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=pgmvaru_g3;User Id=pgmvaru_g3;Password=gunga;Database=pgmvaru_g3;SslMode=Require;trustServerCertificate=true;");
+            conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=pgmvaru_g3;User Id=pgmvaru_g3;Password=gunga;Database=pgmvaru_g3;SslMode=Require;trustServerCertificate=true;Pooling=true;");
             conn.Open();
             tabell = new DataTable();
         }
@@ -34,10 +34,8 @@ namespace Grupp3___Förskolan_Drutten
         //Test av fråga.
         public DataTable sqlFråga(string sql)
         {
-
             try
             {
-
                 cmd = new NpgsqlCommand(sql, conn);
                 dr = cmd.ExecuteReader();
 
