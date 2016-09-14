@@ -27,7 +27,7 @@ namespace Grupp3___Förskolan_Drutten
             //listBoxInlägg.DataSource = p.HämtaInlägg();
 
 
-            inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
+            inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
 
         }
 
@@ -152,12 +152,12 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             BarntabControl.Visible = false;
             NärvarotabControl.Visible = false;
-            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDrutten;
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
         }
 
         private void inloggadButton_MouseDown(object sender, MouseEventArgs e)
         {
-            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonPushed;
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenPushedLängre;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
