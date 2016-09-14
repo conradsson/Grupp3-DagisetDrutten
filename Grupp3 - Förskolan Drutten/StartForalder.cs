@@ -42,6 +42,7 @@ namespace Grupp3___Förskolan_Drutten
             TidertabControl.Visible = false;
             //NärvarotabControl.Visible = false;
             informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            
         }
         private void informationButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -101,7 +102,9 @@ namespace Grupp3___Förskolan_Drutten
             listBoxMeddelaFrånvaro.DataSource = null;
             listBoxMeddelaFrånvaro.DataSource = barnlista;
 
-
+            //tiderBarnListBox.ClearSelected();
+            //listBoxMeddelaHämtning.ClearSelected();
+            //listBoxMeddelaFrånvaro.ClearSelected();
         }
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -194,6 +197,10 @@ namespace Grupp3___Förskolan_Drutten
                 p.LäggTillTid(datum, barnid, lämnas, hämtas);
             }
 
+            comboBoxFrån1.Text = "";
+            comboBoxFrån2.Text = "";
+            comboBoxTill1.Text = "";
+            comboBoxTill2.Text = "";
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -206,20 +213,40 @@ namespace Grupp3___Förskolan_Drutten
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-                comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
-                comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+
+                if (tid == "")
+                {
+                     comboBoxUppdateraTill1.Text = "";
+                     comboBoxUppdateraTill2.Text = "";
+                }
+                else
+                {
+                    comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
+                    comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+                }
+                
 
 
                 Postgres p2 = new Postgres();
                 string tidLämnas;
                 tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
-                comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
-                comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
+
+                if (tidLämnas == "")
+                {
+                      comboBoxUppdateraFrån1.Text = "";
+                      comboBoxUppdateraFrån2.Text = "";
+                }
+                else
+                {
+                    comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
+                    comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
+                }
+             
             }
-            else
-            {
-                MessageBox.Show("Välj ett barn i listan.");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Välj ett barn i listan.");
+            //}
 
         }
 
@@ -255,20 +282,22 @@ namespace Grupp3___Förskolan_Drutten
 
                 if (tid == "")
                 {
+                    groupBox2.Visible = true;
                     comboBoxUppdateraFrån1.Text = "";
                     comboBoxUppdateraFrån2.Text = "";
                 }
                 else
                 {
+                    groupBox2.Visible = false;
                     comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
                 }
 
             }
-            else
-            {
-                MessageBox.Show("Välj ett barn i listan.");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Välj ett barn i listan.");
+            //}
 
         }
 
@@ -321,8 +350,6 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)listAktuellaBarn.SelectedItem;
-
-
 
             if (aktuelltbarn != null)
             {
@@ -378,10 +405,10 @@ namespace Grupp3___Förskolan_Drutten
                 tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
                 textBoxMeddelaHämtning.Text = tid;
             }
-            else
-            {
-                MessageBox.Show("Välj ett barn i listan.");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Välj ett barn i listan.");
+            //}
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -397,10 +424,10 @@ namespace Grupp3___Förskolan_Drutten
                 tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
                 textBoxMeddelaHämtning.Text = tid;
             }
-            else
-            {
-                MessageBox.Show("Välj ett barn i listan.");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Välj ett barn i listan.");
+            //}
         }
 
         private void uppdateraFörälder_Click(object sender, EventArgs e)
@@ -414,9 +441,6 @@ namespace Grupp3___Förskolan_Drutten
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
 
             p.UppdateraFörälder(id, förnamn, efternamn, telefonnummer);
-
-
-
         }
 
         private void uppdateraförälder_Click_1(object sender, EventArgs e)
