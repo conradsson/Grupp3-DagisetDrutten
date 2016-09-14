@@ -28,6 +28,7 @@ namespace Grupp3___Förskolan_Drutten
             p.HämtaInlägg();
             listBoxInlägg.DisplayMember = "InläggDisplay";
             //listBoxInlägg.DataSource = p.inläggslista;
+
         }
         
         // Knapp Effekter
@@ -107,6 +108,8 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
+
+            
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -292,10 +295,9 @@ namespace Grupp3___Förskolan_Drutten
           
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void label16_Click(object sender, EventArgs e)
         {
-            klocklabel2.Text = DateTime.Now.ToLongTimeString().ToString();
-            klocklabel1.Text = DateTime.Now.ToLongDateString().ToString();
+
         }
     }
 }

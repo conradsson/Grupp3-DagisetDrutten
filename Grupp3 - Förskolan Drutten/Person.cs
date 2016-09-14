@@ -30,7 +30,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             get
             {
-                return Förnamn + " " + Efternamn + " " + Telefonnr;
+                return Förnamn + "\t " + Efternamn + "\t  " + Telefonnr;
             }
         }
     }
