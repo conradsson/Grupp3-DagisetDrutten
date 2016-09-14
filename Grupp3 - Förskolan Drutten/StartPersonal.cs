@@ -13,19 +13,18 @@ namespace Grupp3___Förskolan_Drutten
     public partial class StartPersonal : Form
     {
         Person AktuellPerson = new Person();
-       // Postgres p = new Postgres();
+       
 
         public StartPersonal(Person aktuellperson)
         {
             InitializeComponent();
-            //  Start Effekter..
+            Postgres p = new Postgres();
             informationTabControl.Visible = true;
 
             AktuellPerson = aktuellperson;
 
-            //listBoxInlägg.DataSource = null;
-            //listBoxInlägg.DataSource = p.HämtaInlägg();
-
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtaInlägg();
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
