@@ -541,7 +541,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@inläggsid", random.Next(1000));
-                cmd.Parameters.AddWithValue("@inläggsid", datum);
+                cmd.Parameters.AddWithValue("@datum", datum);
                 cmd.Parameters.AddWithValue("@inläggsrubrik", inläggsrubrik);
                 cmd.Parameters.AddWithValue("@inläggstext", inläggstext);
                 cmd.Parameters.AddWithValue("@skrivet_av", skrivetav);
