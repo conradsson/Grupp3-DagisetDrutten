@@ -13,18 +13,19 @@ namespace Grupp3___Förskolan_Drutten
     public partial class StartPersonal : Form
     {
         Person AktuellPerson = new Person();
-       
+        //Postgres p = new Postgres();
 
         public StartPersonal(Person aktuellperson)
         {
             InitializeComponent();
-            Postgres p = new Postgres();
+            //  Start Effekter..
             informationTabControl.Visible = true;
 
             AktuellPerson = aktuellperson;
 
-            listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInlägg();
+            //listBoxInlägg.DataSource = null;
+            //listBoxInlägg.DataSource = p.HämtaInlägg();
+
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
@@ -106,6 +107,8 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
 
+            Postgres p = new Postgres();
+            dataGridView2.DataSource = p.HämtaNärvaro(DateTime.Today);
 
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
@@ -243,10 +246,10 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
 
-            p.NyttInlägg(klocklabel1.Text, textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn);
+            //p.NyttInlägg(klocklabel1.Text, textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn);
 
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInlägg();
+            //listBoxInlägg.DataSource = p.HämtaInlägg();
         }
 
         private void redigeraButton_Click(object sender, EventArgs e)
@@ -338,6 +341,28 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label10.Visible = true;
+            label1.Visible = true;
+
+            int kollaTid = 07;
+            int tid = 07;
+            for (int i = 0; i < 11; i++)
+            {
+                Postgres p = new Postgres();
+                this.chart1.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
+
+        }
+            int kollaTid2 = 07;
+            int tid2 = 07;
+            for (int i = 0; i < 11; i++)
+            {
+                Postgres p = new Postgres();
+                this.chart1.Series["Barn hämtas"].Points.AddXY(tid2++, p.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
+
+            }
 
     }
+}
 }
