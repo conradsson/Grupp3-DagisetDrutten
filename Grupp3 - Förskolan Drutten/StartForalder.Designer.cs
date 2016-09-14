@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForalder));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.klocklabel2 = new System.Windows.Forms.Label();
+            this.klocklabel1 = new System.Windows.Forms.Label();
+            this.Klockan = new System.Windows.Forms.Button();
             this.inloggadesAnvändarnamn = new System.Windows.Forms.Label();
             this.inloggadButton = new System.Windows.Forms.Button();
             this.loggaUtButton = new System.Windows.Forms.Button();
@@ -111,9 +114,6 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.klocklabel2 = new System.Windows.Forms.Label();
-            this.klocklabel1 = new System.Windows.Forms.Label();
-            this.Klockan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -162,6 +162,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
             this.panel1.TabIndex = 17;
+            // 
+            // klocklabel2
+            // 
+            this.klocklabel2.AutoSize = true;
+            this.klocklabel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.klocklabel2.Location = new System.Drawing.Point(758, 11);
+            this.klocklabel2.Name = "klocklabel2";
+            this.klocklabel2.Size = new System.Drawing.Size(22, 13);
+            this.klocklabel2.TabIndex = 32;
+            this.klocklabel2.Text = "Tid";
+            // 
+            // klocklabel1
+            // 
+            this.klocklabel1.AutoSize = true;
+            this.klocklabel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.klocklabel1.Location = new System.Drawing.Point(811, 11);
+            this.klocklabel1.Name = "klocklabel1";
+            this.klocklabel1.Size = new System.Drawing.Size(38, 13);
+            this.klocklabel1.TabIndex = 31;
+            this.klocklabel1.Text = "Datum";
+            // 
+            // Klockan
+            // 
+            this.Klockan.BackColor = System.Drawing.Color.Transparent;
+            this.Klockan.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.Klockan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Klockan.FlatAppearance.BorderSize = 0;
+            this.Klockan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Klockan.Location = new System.Drawing.Point(748, 5);
+            this.Klockan.Name = "Klockan";
+            this.Klockan.Size = new System.Drawing.Size(191, 28);
+            this.Klockan.TabIndex = 30;
+            this.Klockan.UseVisualStyleBackColor = false;
             // 
             // inloggadesAnvändarnamn
             // 
@@ -1137,39 +1170,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // klocklabel2
-            // 
-            this.klocklabel2.AutoSize = true;
-            this.klocklabel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.klocklabel2.Location = new System.Drawing.Point(758, 11);
-            this.klocklabel2.Name = "klocklabel2";
-            this.klocklabel2.Size = new System.Drawing.Size(22, 13);
-            this.klocklabel2.TabIndex = 32;
-            this.klocklabel2.Text = "Tid";
-            // 
-            // klocklabel1
-            // 
-            this.klocklabel1.AutoSize = true;
-            this.klocklabel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.klocklabel1.Location = new System.Drawing.Point(811, 11);
-            this.klocklabel1.Name = "klocklabel1";
-            this.klocklabel1.Size = new System.Drawing.Size(38, 13);
-            this.klocklabel1.TabIndex = 31;
-            this.klocklabel1.Text = "Datum";
-            // 
-            // Klockan
-            // 
-            this.Klockan.BackColor = System.Drawing.Color.Transparent;
-            this.Klockan.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
-            this.Klockan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Klockan.FlatAppearance.BorderSize = 0;
-            this.Klockan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Klockan.Location = new System.Drawing.Point(748, 5);
-            this.Klockan.Name = "Klockan";
-            this.Klockan.Size = new System.Drawing.Size(191, 28);
-            this.Klockan.TabIndex = 30;
-            this.Klockan.UseVisualStyleBackColor = false;
             // 
             // StartForalder
             // 
