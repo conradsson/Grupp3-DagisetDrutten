@@ -13,7 +13,7 @@ namespace Grupp3___Förskolan_Drutten
     public partial class StartPersonal : Form
     {
         Person AktuellPerson = new Person();
-        Postgres p = new Postgres();
+        //Postgres p = new Postgres();
 
         public StartPersonal(Person aktuellperson)
         {
@@ -22,9 +22,9 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = true;
 
             AktuellPerson = aktuellperson;
-
-            listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtanInlägg();
+           
+            //listBoxInlägg.DataSource = null;
+            //listBoxInlägg.DataSource = p.HämtaInlägg();
 
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
@@ -36,15 +36,13 @@ namespace Grupp3___Förskolan_Drutten
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
 
-            listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtanInlägg();
+                //  .Visable Effekter
+                informationTabControl.Visible = true;
+                MittKontoTabControl.Visible = false;
+                BarntabControl.Visible = false;
+                NärvarotabControl.Visible = false;
+                informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
 
-            //  .Visable Effekter
-            informationTabControl.Visible = true;
-            MittKontoTabControl.Visible = false;
-            BarntabControl.Visible = false;
-            NärvarotabControl.Visible = false;
-            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
         }
         private void informationButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -109,6 +107,8 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
 
+            Postgres p = new Postgres();
+            dataGridView2.DataSource = p.HämtaNärvaro(DateTime.Today);
 
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
@@ -206,25 +206,49 @@ namespace Grupp3___Förskolan_Drutten
 
         private void nyttInläggButton_Click(object sender, EventArgs e)
         {
-            richTextBoxNyttInlägg.Clear();
+            richTextBoxNyText.Clear();
+            textBoxNyRubrik.Clear();
             skyddpanel.Visible = true;
+            nyttInläggPanel.Location = new Point(304, 54);
             nyttInläggPanel.Visible = true;
 
         }
 
         private void avbrytButton_Click(object sender, EventArgs e)
         {
+            if (textBoxNyRubrik.Text == "" || richTextBoxNyText.Text == "")
+            {
+                richTextBoxNyText.Clear();
+                textBoxNyRubrik.Clear();
+                skyddpanel.Visible = false;
+                nyttInläggPanel.Visible = false;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Är du säker på att du vill avbryta? " + "\n" + "Ändringar kommer att tas bort.", "Avbryt", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    richTextBoxNyText.Clear();
+                    textBoxNyRubrik.Clear();
+                    skyddpanel.Visible = false;
+                    nyttInläggPanel.Visible = false;
+                }
+            }
+        }
+
+        private void tabortButton_Click(object sender, EventArgs e)
+        {
             // METOD FÖR ATT TA BORT SELECTED INLÄGG (DROP)
-            richTextBoxNyttInlägg.Clear();
-            skyddpanel.Visible = false;
-            nyttInläggPanel.Visible = false;
         }
 
         private void publiceraButton_Click(object sender, EventArgs e)
         {
-            //METOD FÖR ATT PUBLICERA INLÄGG (INSERT)
+            string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+
+            //p.NyttInlägg(klocklabel1.Text, textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn);
+
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtanInlägg();
+            //listBoxInlägg.DataSource = p.HämtaInlägg();
         }
 
         private void redigeraButton_Click(object sender, EventArgs e)
@@ -305,7 +329,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 listBoxInlägg.ClearSelected();
                 listBoxInlägg.DataSource = null;
-                listBoxInlägg.DataSource = p.HämtanInlägg();
+                listBoxInlägg.DataSource = p.HämtaInlägg();
 
                 textBoxDatum.Text = AktuelltInlägg.Datum;
                 textBoxRubrik.Text = AktuelltInlägg.InläggsRubrik;
@@ -314,6 +338,30 @@ namespace Grupp3___Förskolan_Drutten
                 textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label10.Visible = true;
+            label1.Visible = true;
+
+            int kollaTid = 07;
+            int tid = 07;
+            for (int i = 0; i < 11; i++)
+            {
+                Postgres p = new Postgres();
+                this.chart1.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
+
+            }
+            int kollaTid2 = 07;
+            int tid2 = 07;
+            for (int i = 0; i < 11; i++)
+            {
+                Postgres p = new Postgres();
+                this.chart1.Series["Barn hämtas"].Points.AddXY(tid2++, p.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
+
+            }
+
         }
     }
 }
