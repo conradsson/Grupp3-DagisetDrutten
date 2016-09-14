@@ -117,11 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>17/10-2016 Hej alla föräldrar. På onsdag den 2:a oktober ska vi på utflykt i Hallonskogen. Matsäck och kläder efter väder för barnen behövs.
-
-20/10-2016 Hej alla föräldrar. På fredag den 4:e oktober så är det möte här på förskolan klockan 19:30. Bulle och fika finns.</value>
-  </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

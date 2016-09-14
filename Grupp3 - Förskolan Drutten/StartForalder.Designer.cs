@@ -88,7 +88,6 @@
             this.omTabPage = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.senasteTabPage = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.uppdateraförälder = new System.Windows.Forms.Button();
@@ -114,6 +113,13 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBoxSkrivetAv = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.listBoxInlägg = new System.Windows.Forms.ListBox();
+            this.textBoxRubrik = new System.Windows.Forms.TextBox();
+            this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -155,9 +161,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
-            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
+            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -908,7 +914,13 @@
             // senasteTabPage
             // 
             this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.senasteTabPage.Controls.Add(this.richTextBox1);
+            this.senasteTabPage.Controls.Add(this.richTextBoxPubliceradeInlägg);
+            this.senasteTabPage.Controls.Add(this.label25);
+            this.senasteTabPage.Controls.Add(this.textBoxSkrivetAv);
+            this.senasteTabPage.Controls.Add(this.label26);
+            this.senasteTabPage.Controls.Add(this.listBoxInlägg);
+            this.senasteTabPage.Controls.Add(this.textBoxRubrik);
+            this.senasteTabPage.Controls.Add(this.textBoxDatum);
             this.senasteTabPage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.senasteTabPage.Location = new System.Drawing.Point(4, 22);
             this.senasteTabPage.Name = "senasteTabPage";
@@ -917,15 +929,6 @@
             this.senasteTabPage.TabIndex = 0;
             this.senasteTabPage.Text = "Senaste";
             this.senasteTabPage.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(88, 80);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(560, 186);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // MittKontoTabControl
             // 
@@ -1171,6 +1174,72 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // richTextBoxPubliceradeInlägg
+            // 
+            this.richTextBoxPubliceradeInlägg.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBoxPubliceradeInlägg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxPubliceradeInlägg.Location = new System.Drawing.Point(164, 111);
+            this.richTextBoxPubliceradeInlägg.Name = "richTextBoxPubliceradeInlägg";
+            this.richTextBoxPubliceradeInlägg.ReadOnly = true;
+            this.richTextBoxPubliceradeInlägg.Size = new System.Drawing.Size(560, 172);
+            this.richTextBoxPubliceradeInlägg.TabIndex = 34;
+            this.richTextBoxPubliceradeInlägg.Text = "";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(499, 286);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 13);
+            this.label25.TabIndex = 38;
+            this.label25.Text = "Skrivet av:";
+            // 
+            // textBoxSkrivetAv
+            // 
+            this.textBoxSkrivetAv.Location = new System.Drawing.Point(557, 283);
+            this.textBoxSkrivetAv.Name = "textBoxSkrivetAv";
+            this.textBoxSkrivetAv.ReadOnly = true;
+            this.textBoxSkrivetAv.Size = new System.Drawing.Size(167, 20);
+            this.textBoxSkrivetAv.TabIndex = 37;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(12, 56);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(58, 13);
+            this.label26.TabIndex = 35;
+            this.label26.Text = "Välj inlägg:";
+            // 
+            // listBoxInlägg
+            // 
+            this.listBoxInlägg.FormattingEnabled = true;
+            this.listBoxInlägg.Location = new System.Drawing.Point(14, 72);
+            this.listBoxInlägg.Name = "listBoxInlägg";
+            this.listBoxInlägg.Size = new System.Drawing.Size(151, 186);
+            this.listBoxInlägg.TabIndex = 36;
+            this.listBoxInlägg.SelectedIndexChanged += new System.EventHandler(this.listBoxInlägg_SelectedIndexChanged);
+            // 
+            // textBoxRubrik
+            // 
+            this.textBoxRubrik.Location = new System.Drawing.Point(164, 92);
+            this.textBoxRubrik.Name = "textBoxRubrik";
+            this.textBoxRubrik.ReadOnly = true;
+            this.textBoxRubrik.Size = new System.Drawing.Size(167, 20);
+            this.textBoxRubrik.TabIndex = 40;
+            this.textBoxRubrik.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxDatum
+            // 
+            this.textBoxDatum.Location = new System.Drawing.Point(164, 72);
+            this.textBoxDatum.Name = "textBoxDatum";
+            this.textBoxDatum.ReadOnly = true;
+            this.textBoxDatum.Size = new System.Drawing.Size(167, 20);
+            this.textBoxDatum.TabIndex = 39;
+            this.textBoxDatum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1206,6 +1275,7 @@
             this.omTabPage.ResumeLayout(false);
             this.omTabPage.PerformLayout();
             this.senasteTabPage.ResumeLayout(false);
+            this.senasteTabPage.PerformLayout();
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1241,7 +1311,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxFornamn;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
@@ -1303,5 +1372,12 @@
         private System.Windows.Forms.Label klocklabel2;
         private System.Windows.Forms.Label klocklabel1;
         private System.Windows.Forms.Button Klockan;
+        private System.Windows.Forms.RichTextBox richTextBoxPubliceradeInlägg;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBoxSkrivetAv;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ListBox listBoxInlägg;
+        private System.Windows.Forms.TextBox textBoxRubrik;
+        private System.Windows.Forms.TextBox textBoxDatum;
     }
 }

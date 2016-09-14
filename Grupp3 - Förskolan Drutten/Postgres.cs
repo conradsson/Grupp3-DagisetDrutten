@@ -19,7 +19,6 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlDataReader dr;
         private DataTable tabell;
         public Person aktuellPerson;
-        public Information inläggInformation;
         //public List<Information> inläggslista;
         //StartForalder f = new StartForalder();
 
@@ -504,9 +503,33 @@ namespace Grupp3___Förskolan_Drutten
                 return Convert.ToBase64String(data);
             }
         }
-   
 
-        public void HämtaInlägg()
+        // Hämtar informationsinlägg från db
+        public List<Information> HämtanInlägg()
+        {
+            string sql = "SELECT * FROM dagis.information ORDER BY  datum DESC";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Information> Inlägg = new List<Information>();
+            Information i;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                i = new Information();
+
+                i.InläggsId = (int)rad[0];
+                i.Datum = rad[1].ToString();
+                i.InläggsRubrik = rad[2].ToString();
+                i.InläggsText = rad[3].ToString();
+                i.SkrivetAv = rad[4].ToString();
+
+                Inlägg.Add(i);
+
+            }
+            return Inlägg;
+        }
+       /* public void HämtaInlägg()
         {
 
             try
@@ -529,7 +552,7 @@ namespace Grupp3___Förskolan_Drutten
                             InläggsText = dr["inläggstext"].ToString(),
                             SkrivetAv = dr["skrivet_av"].ToString(),
                         };
-                        //inläggslista.Add(inläggInformation);
+                        inläggslista.Add(inläggInformation);
                     }
                 }
                 else
@@ -546,7 +569,7 @@ namespace Grupp3___Förskolan_Drutten
 
             }
             dr.Close();
-        }
+        }*/
 
         //Hischam
 

@@ -23,21 +23,21 @@ namespace Grupp3___Förskolan_Drutten
 
             AktuellPerson = aktuellperson;
 
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtanInlägg();
+
+
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
-            p.HämtaInlägg();
-            listBoxInlägg.DisplayMember = "InläggDisplay";
-            //listBoxInlägg.DataSource = p.inläggslista;
-            
         }
-        
+
         // Knapp Effekter
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
-            p.HämtaInlägg();
-            listBoxInlägg.DisplayMember = "InläggDisplay";
-            //listBoxInlägg.DataSource = p.inläggslista;
+
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtanInlägg();
 
             //  .Visable Effekter
             informationTabControl.Visible = true;
@@ -109,7 +109,7 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
 
-            
+
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -144,7 +144,6 @@ namespace Grupp3___Förskolan_Drutten
 
         private void inloggadButton_Click(object sender, EventArgs e)
         {
-            p.HämtaInlägg();
 
             //  .Visable Effekter
             MittKontoTabControl.Visible = true;
@@ -192,7 +191,7 @@ namespace Grupp3___Förskolan_Drutten
                 label17.Text = dataGridView1.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens frånvarolista";
 
-            } 
+            }
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
@@ -208,6 +207,7 @@ namespace Grupp3___Förskolan_Drutten
         private void nyttInläggButton_Click(object sender, EventArgs e)
         {
             richTextBoxNyttInlägg.Clear();
+            skyddpanel.Visible = true;
             nyttInläggPanel.Visible = true;
 
         }
@@ -216,13 +216,15 @@ namespace Grupp3___Förskolan_Drutten
         {
             // METOD FÖR ATT TA BORT SELECTED INLÄGG (DROP)
             richTextBoxNyttInlägg.Clear();
+            skyddpanel.Visible = false;
             nyttInläggPanel.Visible = false;
         }
 
         private void publiceraButton_Click(object sender, EventArgs e)
         {
-            p.HämtaInlägg();
             //METOD FÖR ATT PUBLICERA INLÄGG (INSERT)
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtanInlägg();
         }
 
         private void redigeraButton_Click(object sender, EventArgs e)
@@ -232,7 +234,7 @@ namespace Grupp3___Förskolan_Drutten
 
         private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Postgres p = new Postgres(); 
+            Postgres p = new Postgres();
             Barn AktuelltBarn = (Barn)barnAvdl2ListBox.SelectedItem;
 
             if (AktuelltBarn != null)
@@ -244,13 +246,13 @@ namespace Grupp3___Förskolan_Drutten
 
                 barnOverigtrichTextBox.Text = AktuelltBarn.Allergier + "\n" + AktuelltBarn.Annat;
 
-               
+
             }
         }
 
         private void buttonSök_Click(object sender, EventArgs e)
         {
-             if (checkBoxAvdelning1.Checked == true && checkBoxAvdelning2.Checked == true)
+            if (checkBoxAvdelning1.Checked == true && checkBoxAvdelning2.Checked == true)
             {
                 Postgres p = new Postgres();
                 listBox1.DataSource = null;
@@ -292,6 +294,26 @@ namespace Grupp3___Förskolan_Drutten
         {
             klocklabel2.Text = DateTime.Now.ToLongTimeString().ToString();
             klocklabel1.Text = DateTime.Now.ToLongDateString().ToString();
+        }
+
+        private void listBoxInlägg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
+
+            if (AktuelltInlägg != null)
+            {
+                listBoxInlägg.ClearSelected();
+                listBoxInlägg.DataSource = null;
+                listBoxInlägg.DataSource = p.HämtanInlägg();
+
+                textBoxDatum.Text = AktuelltInlägg.Datum;
+                textBoxRubrik.Text = AktuelltInlägg.InläggsRubrik;
+                richTextBoxPubliceradeInlägg.Text = AktuelltInlägg.InläggsText;
+
+                textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
+
+            }
         }
     }
 }

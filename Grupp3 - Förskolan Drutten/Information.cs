@@ -14,11 +14,16 @@ namespace Grupp3___Förskolan_Drutten
         public string InläggsText { get; set; }
         public string SkrivetAv { get; set; }
 
-        public string InäggsDisplay
+        public override string ToString()
+        {
+            return Datum + " - " + InläggsRubrik;
+        }
+
+        public string VisaInläggsText
         {
             get
             {
-                return Datum + " - " + InläggsRubrik;
+                return Datum + "\n" + "\n" + InläggsRubrik + "\n" + InläggsText;
             }
         }
     }
