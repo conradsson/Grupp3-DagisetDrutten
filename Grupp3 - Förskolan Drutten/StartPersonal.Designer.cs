@@ -361,11 +361,11 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
+            this.panel1.Controls.Add(this.informationTabControl);
+            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.nyttInläggPanel);
-            this.panel1.Controls.Add(this.informationTabControl);
-            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -1036,7 +1036,6 @@
             this.textBoxSökRuta.Name = "textBoxSökRuta";
             this.textBoxSökRuta.Size = new System.Drawing.Size(100, 20);
             this.textBoxSökRuta.TabIndex = 36;
-            this.textBoxSökRuta.TextChanged += new System.EventHandler(this.textBoxSökRuta_TextChanged);
             // 
             // checkBoxAvdelning2
             // 
@@ -1057,7 +1056,6 @@
             this.checkBoxAvdelning1.TabIndex = 33;
             this.checkBoxAvdelning1.Text = "Avdelning 1";
             this.checkBoxAvdelning1.UseVisualStyleBackColor = true;
-            this.checkBoxAvdelning1.CheckedChanged += new System.EventHandler(this.checkBoxAvdelning1_CheckedChanged);
             // 
             // listBox1
             // 

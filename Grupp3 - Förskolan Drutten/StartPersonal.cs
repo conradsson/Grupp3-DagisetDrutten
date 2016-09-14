@@ -168,10 +168,7 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -251,11 +248,6 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        private void checkBoxAvdelning1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonSök_Click(object sender, EventArgs e)
         {
              if (checkBoxAvdelning1.Checked == true && checkBoxAvdelning2.Checked == true)
@@ -293,36 +285,6 @@ namespace Grupp3___Förskolan_Drutten
                 label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
             }
 
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void textBoxSökRuta_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-            //klocklabel2.Text = DateTime.Now.ToLongTimeString().ToString();
-            //klocklabel1.Text = DateTime.Now.ToLongDateString().ToString();
-
-        }
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
 
         }
 

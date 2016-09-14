@@ -222,9 +222,6 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Välj ett barn i listan.");
             }
-           
-   
-
             
         }
 
@@ -435,8 +432,6 @@ namespace Grupp3___Förskolan_Drutten
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
 
             p.UppdateraFörälder(id, förnamn, efternamn, telefonnummer);
-
-
 
         }
 
