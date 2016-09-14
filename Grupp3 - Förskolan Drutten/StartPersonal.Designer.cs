@@ -39,7 +39,7 @@
             this.textBoxSkrivetAv = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.listBoxInlägg = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tabortButton = new System.Windows.Forms.Button();
             this.nyttInläggButton = new System.Windows.Forms.Button();
             this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
             this.nyttInläggPanel = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.avbrytButton = new System.Windows.Forms.Button();
             this.publiceraButton = new System.Windows.Forms.Button();
-            this.richTextBoxNyttInlägg = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxNyText = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.klocklabel2 = new System.Windows.Forms.Label();
@@ -126,7 +126,7 @@
             this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.skyddpanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNyRubrik = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
@@ -184,17 +184,17 @@
             // senasteTabPage
             // 
             this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.senasteTabPage.Controls.Add(this.skyddpanel);
             this.senasteTabPage.Controls.Add(this.richTextBoxPubliceradeInlägg);
             this.senasteTabPage.Controls.Add(this.redigeraButton);
             this.senasteTabPage.Controls.Add(this.label9);
             this.senasteTabPage.Controls.Add(this.textBoxSkrivetAv);
             this.senasteTabPage.Controls.Add(this.label8);
             this.senasteTabPage.Controls.Add(this.listBoxInlägg);
-            this.senasteTabPage.Controls.Add(this.button2);
+            this.senasteTabPage.Controls.Add(this.tabortButton);
             this.senasteTabPage.Controls.Add(this.nyttInläggButton);
             this.senasteTabPage.Controls.Add(this.textBoxRubrik);
             this.senasteTabPage.Controls.Add(this.textBoxDatum);
-            this.senasteTabPage.Controls.Add(this.skyddpanel);
             this.senasteTabPage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.senasteTabPage.Location = new System.Drawing.Point(4, 22);
             this.senasteTabPage.Name = "senasteTabPage";
@@ -251,14 +251,15 @@
             this.listBoxInlägg.TabIndex = 28;
             this.listBoxInlägg.SelectedIndexChanged += new System.EventHandler(this.listBoxInlägg_SelectedIndexChanged);
             // 
-            // button2
+            // tabortButton
             // 
-            this.button2.Location = new System.Drawing.Point(361, 40);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Ta bort inlägg";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tabortButton.Location = new System.Drawing.Point(361, 40);
+            this.tabortButton.Name = "tabortButton";
+            this.tabortButton.Size = new System.Drawing.Size(91, 23);
+            this.tabortButton.TabIndex = 3;
+            this.tabortButton.Text = "Ta bort inlägg";
+            this.tabortButton.UseVisualStyleBackColor = true;
+            this.tabortButton.Click += new System.EventHandler(this.tabortButton_Click);
             // 
             // nyttInläggButton
             // 
@@ -286,13 +287,13 @@
             this.nyttInläggPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.nyttInläggPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.nyttInläggPanel.Controls.Add(this.label18);
-            this.nyttInläggPanel.Controls.Add(this.textBox1);
+            this.nyttInläggPanel.Controls.Add(this.textBoxNyRubrik);
             this.nyttInläggPanel.Controls.Add(this.label7);
             this.nyttInläggPanel.Controls.Add(this.label6);
             this.nyttInläggPanel.Controls.Add(this.avbrytButton);
             this.nyttInläggPanel.Controls.Add(this.publiceraButton);
-            this.nyttInläggPanel.Controls.Add(this.richTextBoxNyttInlägg);
-            this.nyttInläggPanel.Location = new System.Drawing.Point(304, 54);
+            this.nyttInläggPanel.Controls.Add(this.richTextBoxNyText);
+            this.nyttInläggPanel.Location = new System.Drawing.Point(304, 38);
             this.nyttInläggPanel.MaximumSize = new System.Drawing.Size(560, 361);
             this.nyttInläggPanel.MinimumSize = new System.Drawing.Size(560, 361);
             this.nyttInläggPanel.Name = "nyttInläggPanel";
@@ -341,13 +342,13 @@
             this.publiceraButton.UseVisualStyleBackColor = true;
             this.publiceraButton.Click += new System.EventHandler(this.publiceraButton_Click);
             // 
-            // richTextBoxNyttInlägg
+            // richTextBoxNyText
             // 
-            this.richTextBoxNyttInlägg.Location = new System.Drawing.Point(48, 93);
-            this.richTextBoxNyttInlägg.Name = "richTextBoxNyttInlägg";
-            this.richTextBoxNyttInlägg.Size = new System.Drawing.Size(454, 209);
-            this.richTextBoxNyttInlägg.TabIndex = 0;
-            this.richTextBoxNyttInlägg.Text = "";
+            this.richTextBoxNyText.Location = new System.Drawing.Point(48, 93);
+            this.richTextBoxNyText.Name = "richTextBoxNyText";
+            this.richTextBoxNyText.Size = new System.Drawing.Size(454, 209);
+            this.richTextBoxNyText.TabIndex = 0;
+            this.richTextBoxNyText.Text = "";
             // 
             // groupBox1
             // 
@@ -365,6 +366,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Controls.Add(this.klocklabel2);
             this.panel1.Controls.Add(this.klocklabel1);
             this.panel1.Controls.Add(this.Klockan);
@@ -375,11 +377,10 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
-            this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.nyttInläggPanel);
+            this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -1202,12 +1203,12 @@
             this.skyddpanel.TabIndex = 28;
             this.skyddpanel.Visible = false;
             // 
-            // textBox1
+            // textBoxNyRubrik
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxNyRubrik.Location = new System.Drawing.Point(48, 50);
+            this.textBoxNyRubrik.Name = "textBoxNyRubrik";
+            this.textBoxNyRubrik.Size = new System.Drawing.Size(151, 20);
+            this.textBoxNyRubrik.TabIndex = 5;
             // 
             // label18
             // 
@@ -1297,7 +1298,7 @@
         private System.Windows.Forms.TextBox textBoxEfternamnMittkonto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxFörnamnMittkonto;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button tabortButton;
         private System.Windows.Forms.Button nyttInläggButton;
         private System.Windows.Forms.RichTextBox richTextBoxPubliceradeInlägg;
         private System.Windows.Forms.Label label12;
@@ -1335,7 +1336,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button avbrytButton;
         private System.Windows.Forms.Button publiceraButton;
-        private System.Windows.Forms.RichTextBox richTextBoxNyttInlägg;
+        private System.Windows.Forms.RichTextBox richTextBoxNyText;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox listBoxInlägg;
         private System.Windows.Forms.Label label9;
@@ -1367,6 +1368,6 @@
         private System.Windows.Forms.TextBox textBoxDatum;
         private System.Windows.Forms.Panel skyddpanel;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNyRubrik;
     }
 }

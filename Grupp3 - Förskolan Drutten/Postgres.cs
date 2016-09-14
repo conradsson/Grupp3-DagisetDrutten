@@ -505,7 +505,7 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         // Hämtar informationsinlägg från db
-        public List<Information> HämtanInlägg()
+        public List<Information> HämtaInlägg()
         {
             string sql = "SELECT * FROM dagis.information ORDER BY  datum DESC";
 
@@ -529,47 +529,36 @@ namespace Grupp3___Förskolan_Drutten
             }
             return Inlägg;
         }
-       /* public void HämtaInlägg()
+
+        public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav)
         {
+            Random random = new Random();
 
             try
             {
-                string sql = "SELECT * FROM dagis.information";
+                string sql = "insert into dagis.information (inläggsid, datum, inläggsrubrik, inläggstext, skrivet_av)"
+                   + " values (@inläggsid, @datum, @inläggsrubrik, @inläggstext, @skrivet_av)";
 
                 cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@inläggsid", random.Next(1000));
+                cmd.Parameters.AddWithValue("@inläggsid", datum);
+                cmd.Parameters.AddWithValue("@inläggsrubrik", inläggsrubrik);
+                cmd.Parameters.AddWithValue("@inläggstext", inläggstext);
+                cmd.Parameters.AddWithValue("@skrivet_av", skrivetav);
+
 
                 dr = cmd.ExecuteReader();
+                dr.Close();
 
-                if (dr.Read())
-                {
-                    if (dr.HasRows)
-                    {
-                        inläggInformation = new Information()
-                        {
-                            InläggsId = (int)dr["inläggsid"],
-                            Datum = dr["datum"].ToString(),
-                            InläggsRubrik = dr["inläggsrubrik"].ToString(),
-                            InläggsText = dr["inläggstext"].ToString(),
-                            SkrivetAv = dr["skrivet_av"].ToString(),
-                        };
-                        inläggslista.Add(inläggInformation);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Kunde inte hämta senaste inläggen.");
-
-                }
+                MessageBox.Show("Inlägget har publicerats!");
 
             }
-
-            catch (Exception ex) // Annat fel
+            catch (NpgsqlException ex)
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
-
             }
-            dr.Close();
-        }*/
+            //conn.Close();
+        }
 
         //Hischam
 
@@ -610,14 +599,14 @@ namespace Grupp3___Förskolan_Drutten
         //}
         //public void ReturneraVärdenAvAktuellperson()
         //{
-            
+
 
         //    if (aktuellPerson.Förnamn == "James")
         //    {
         //        MessageBox.Show("hej");
         //    }
-           
-            
+
+
 
         //}
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)

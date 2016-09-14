@@ -24,7 +24,7 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson = aktuellperson;
 
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtanInlägg();
+            listBoxInlägg.DataSource = p.HämtaInlägg();
 
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
@@ -36,15 +36,13 @@ namespace Grupp3___Förskolan_Drutten
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
 
-            listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtanInlägg();
+                //  .Visable Effekter
+                informationTabControl.Visible = true;
+                MittKontoTabControl.Visible = false;
+                BarntabControl.Visible = false;
+                NärvarotabControl.Visible = false;
+                informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
 
-            //  .Visable Effekter
-            informationTabControl.Visible = true;
-            MittKontoTabControl.Visible = false;
-            BarntabControl.Visible = false;
-            NärvarotabControl.Visible = false;
-            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
         }
         private void informationButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -206,25 +204,49 @@ namespace Grupp3___Förskolan_Drutten
 
         private void nyttInläggButton_Click(object sender, EventArgs e)
         {
-            richTextBoxNyttInlägg.Clear();
+            richTextBoxNyText.Clear();
+            textBoxNyRubrik.Clear();
             skyddpanel.Visible = true;
+            nyttInläggPanel.Location = new Point(304, 54);
             nyttInläggPanel.Visible = true;
 
         }
 
         private void avbrytButton_Click(object sender, EventArgs e)
         {
+            if (textBoxNyRubrik.Text == "" || richTextBoxNyText.Text == "")
+            {
+                richTextBoxNyText.Clear();
+                textBoxNyRubrik.Clear();
+                skyddpanel.Visible = false;
+                nyttInläggPanel.Visible = false;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Är du säker på att du vill avbryta? " + "\n" + "Ändringar kommer att tas bort.", "Avbryt", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    richTextBoxNyText.Clear();
+                    textBoxNyRubrik.Clear();
+                    skyddpanel.Visible = false;
+                    nyttInläggPanel.Visible = false;
+                }
+            }
+        }
+
+        private void tabortButton_Click(object sender, EventArgs e)
+        {
             // METOD FÖR ATT TA BORT SELECTED INLÄGG (DROP)
-            richTextBoxNyttInlägg.Clear();
-            skyddpanel.Visible = false;
-            nyttInläggPanel.Visible = false;
         }
 
         private void publiceraButton_Click(object sender, EventArgs e)
         {
-            //METOD FÖR ATT PUBLICERA INLÄGG (INSERT)
+            string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+
+            p.NyttInlägg(klocklabel1.Text, textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn);
+
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtanInlägg();
+            listBoxInlägg.DataSource = p.HämtaInlägg();
         }
 
         private void redigeraButton_Click(object sender, EventArgs e)
@@ -305,7 +327,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 listBoxInlägg.ClearSelected();
                 listBoxInlägg.DataSource = null;
-                listBoxInlägg.DataSource = p.HämtanInlägg();
+                listBoxInlägg.DataSource = p.HämtaInlägg();
 
                 textBoxDatum.Text = AktuelltInlägg.Datum;
                 textBoxRubrik.Text = AktuelltInlägg.InläggsRubrik;
@@ -315,5 +337,7 @@ namespace Grupp3___Förskolan_Drutten
 
             }
         }
+
+
     }
 }
