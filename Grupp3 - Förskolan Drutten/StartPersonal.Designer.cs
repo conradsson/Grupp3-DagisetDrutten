@@ -710,7 +710,7 @@
             this.monthCalendar2.Location = new System.Drawing.Point(35, 13);
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.TabIndex = 13;
-            this.monthCalendar2.TodayDate = new System.DateTime(2016, 9, 7, 0, 0, 0, 0);
+            this.monthCalendar2.TodayDate = new System.DateTime(2016, 9, 14, 0, 0, 0, 0);
             this.monthCalendar2.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar2_DateChanged);
             // 
             // dataGridView1
