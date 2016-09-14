@@ -106,6 +106,8 @@ namespace Grupp3___Förskolan_Drutten
             listBoxMeddelaFrånvaro.DataSource = null;
             listBoxMeddelaFrånvaro.DataSource = barnlista;
 
+            groupBox2.Visible = false;
+            groupBox3.Visible = false;
             //tiderBarnListBox.ClearSelected();
             //listBoxMeddelaHämtning.ClearSelected();
             //listBoxMeddelaFrånvaro.ClearSelected();
@@ -253,6 +255,7 @@ namespace Grupp3___Förskolan_Drutten
             //}
 
         }
+        
 
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -279,7 +282,7 @@ namespace Grupp3___Förskolan_Drutten
                     comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
                 }
 
-
+                
                 Postgres p2 = new Postgres();
                 string tidLämnas;
                 tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
