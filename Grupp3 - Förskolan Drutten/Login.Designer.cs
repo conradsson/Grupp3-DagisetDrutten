@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,33 +40,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
             this.LoggaInButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.EncryptTestButton = new System.Windows.Forms.Button();
-            this.encryptTextBox = new System.Windows.Forms.TextBox();
-            this.losenordENCRYPTtextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.copyButton = new System.Windows.Forms.Button();
             this.rensaEncryptButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.exitButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.EncryptTestButton = new System.Windows.Forms.Button();
+            this.encryptTextBox = new System.Windows.Forms.TextBox();
+            this.losenordENCRYPTtextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(524, 443);
-            this.panel1.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -186,15 +176,6 @@
             this.LoggaInButton.UseVisualStyleBackColor = true;
             this.LoggaInButton.Click += new System.EventHandler(this.LoggaInButton_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
-            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -208,49 +189,21 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // EncryptTestButton
+            // exitButton
             // 
-            this.EncryptTestButton.Location = new System.Drawing.Point(157, 76);
-            this.EncryptTestButton.Name = "EncryptTestButton";
-            this.EncryptTestButton.Size = new System.Drawing.Size(75, 23);
-            this.EncryptTestButton.TabIndex = 1;
-            this.EncryptTestButton.Text = "Kör";
-            this.EncryptTestButton.UseVisualStyleBackColor = true;
-            this.EncryptTestButton.Click += new System.EventHandler(this.EncryptTestButton_Click);
-            // 
-            // encryptTextBox
-            // 
-            this.encryptTextBox.Location = new System.Drawing.Point(57, 50);
-            this.encryptTextBox.Name = "encryptTextBox";
-            this.encryptTextBox.Size = new System.Drawing.Size(159, 20);
-            this.encryptTextBox.TabIndex = 2;
-            // 
-            // losenordENCRYPTtextBox
-            // 
-            this.losenordENCRYPTtextBox.Location = new System.Drawing.Point(57, 24);
-            this.losenordENCRYPTtextBox.Name = "losenordENCRYPTtextBox";
-            this.losenordENCRYPTtextBox.Size = new System.Drawing.Size(133, 20);
-            this.losenordENCRYPTtextBox.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(4, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Lösenord:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(8, 53);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Resultat:";
+            this.exitButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.Red;
+            this.exitButton.Location = new System.Drawing.Point(758, 3);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(24, 23);
+            this.exitButton.TabIndex = 7;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // panel2
             // 
@@ -303,21 +256,68 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Lösenordskrypterare";
             // 
-            // exitButton
+            // label7
             // 
-            this.exitButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.ForeColor = System.Drawing.Color.Red;
-            this.exitButton.Location = new System.Drawing.Point(758, 3);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(24, 23);
-            this.exitButton.TabIndex = 7;
-            this.exitButton.Text = "X";
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(8, 53);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Resultat:";
+            // 
+            // EncryptTestButton
+            // 
+            this.EncryptTestButton.Location = new System.Drawing.Point(157, 76);
+            this.EncryptTestButton.Name = "EncryptTestButton";
+            this.EncryptTestButton.Size = new System.Drawing.Size(75, 23);
+            this.EncryptTestButton.TabIndex = 1;
+            this.EncryptTestButton.Text = "Kör";
+            this.EncryptTestButton.UseVisualStyleBackColor = true;
+            this.EncryptTestButton.Click += new System.EventHandler(this.EncryptTestButton_Click);
+            // 
+            // encryptTextBox
+            // 
+            this.encryptTextBox.Location = new System.Drawing.Point(57, 50);
+            this.encryptTextBox.Name = "encryptTextBox";
+            this.encryptTextBox.Size = new System.Drawing.Size(159, 20);
+            this.encryptTextBox.TabIndex = 2;
+            // 
+            // losenordENCRYPTtextBox
+            // 
+            this.losenordENCRYPTtextBox.Location = new System.Drawing.Point(57, 24);
+            this.losenordENCRYPTtextBox.Name = "losenordENCRYPTtextBox";
+            this.losenordENCRYPTtextBox.Size = new System.Drawing.Size(133, 20);
+            this.losenordENCRYPTtextBox.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(4, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Lösenord:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
+            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(524, 443);
+            this.panel1.TabIndex = 3;
             // 
             // Login
             // 
@@ -337,10 +337,10 @@
             this.Text = "Inloggning";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
