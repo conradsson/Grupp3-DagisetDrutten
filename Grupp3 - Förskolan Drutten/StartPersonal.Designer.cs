@@ -50,7 +50,7 @@
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.nyttInläggPanel = new System.Windows.Forms.Panel();
-            this.textBoxNyRubrik = new System.Windows.Forms.TextBox();
+            this.textBoxNyRubrik = new System.Windows.Forms.TextBox(); 
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.avbrytButton = new System.Windows.Forms.Button();
