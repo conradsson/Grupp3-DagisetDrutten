@@ -181,6 +181,8 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridView1.DataSource = null;
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+                label16.Text = dataGridView1.RowCount.ToString() + " Barn";
+                
             }
             else if (FrånvarandeRadioButton.Checked)
             {
@@ -188,6 +190,7 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridView1.DataSource = null;
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
+                label16.Text = dataGridView1.RowCount.ToString() + " Barn";
 
             } 
         }
@@ -300,6 +303,16 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
         {
 
         }

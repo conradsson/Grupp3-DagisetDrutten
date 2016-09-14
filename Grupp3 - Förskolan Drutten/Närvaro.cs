@@ -25,5 +25,6 @@ namespace Grupp3___Förskolan_Drutten
         {
             return Datum + " " + Förnamn + " " + Efternamn + " " + TidLämnad + " " + TidHämtad + " " + HämtasAv;
         }
+
     }
 }
