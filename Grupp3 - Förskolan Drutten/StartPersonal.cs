@@ -182,7 +182,9 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
                 label16.Text = dataGridView1.RowCount.ToString() + " Barn";
-                
+                label18.Text = "Skriv ut dagens närvarolista";
+
+
             }
             else if (FrånvarandeRadioButton.Checked)
             {
@@ -191,6 +193,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
                 label16.Text = dataGridView1.RowCount.ToString() + " Barn";
+                label18.Text = "Skriv ut dagens frånvarolista";
 
             } 
         }
