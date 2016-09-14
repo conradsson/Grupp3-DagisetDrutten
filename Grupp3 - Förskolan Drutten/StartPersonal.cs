@@ -28,7 +28,7 @@ namespace Grupp3___Förskolan_Drutten
             p.HämtaInlägg();
             listBoxInlägg.DisplayMember = "InläggDisplay";
             //listBoxInlägg.DataSource = p.inläggslista;
-
+            
         }
         
         // Knapp Effekter
@@ -82,7 +82,7 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
 
             barnAvdl2ListBox.DataSource = p.HämtanBarn();
-
+            labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
             //dataGridAllaBarn.DataSource = p.HämtanBarn();
 
         }
@@ -258,6 +258,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtanBarn();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+                labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
 
             }
 
@@ -267,6 +268,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning1();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök1(textBoxSökRuta.Text);
+                labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
             }
             else if (checkBoxAvdelning2.Checked == true)
             {
@@ -274,6 +276,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning2();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
+                labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
             }
             else
             {
@@ -281,6 +284,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtanBarn();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+                labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
             }
 
 
