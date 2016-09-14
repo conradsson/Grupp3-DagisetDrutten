@@ -35,9 +35,11 @@ namespace Grupp3___Förskolan_Drutten
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
-
-                //  .Visable Effekter
-                informationTabControl.Visible = true;
+            Postgres p = new Postgres();
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtaInlägg();
+            //  .Visable Effekter
+            informationTabControl.Visible = true;
                 MittKontoTabControl.Visible = false;
                 BarntabControl.Visible = false;
                 NärvarotabControl.Visible = false;
@@ -247,10 +249,12 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
 
-            //p.NyttInlägg(klocklabel1.Text, textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn);
+            p.NyttInlägg(DateTime.Now.ToShortDateString(), textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn);
+            skyddpanel.Visible = false;
+            nyttInläggPanel.Visible = false;
 
             listBoxInlägg.DataSource = null;
-            //listBoxInlägg.DataSource = p.HämtaInlägg();
+            listBoxInlägg.DataSource = p.HämtaInlägg();
         }
 
         private void redigeraButton_Click(object sender, EventArgs e)
@@ -365,5 +369,5 @@ namespace Grupp3___Förskolan_Drutten
             }
 
     }
-}
+    }
 }
