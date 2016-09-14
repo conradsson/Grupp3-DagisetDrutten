@@ -283,6 +283,26 @@ namespace Grupp3___Förskolan_Drutten.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inloggadButtonDruttenLängre {
+            get {
+                object obj = ResourceManager.GetObject("inloggadButtonDruttenLängre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inloggadButtonDruttenPushedLängre {
+            get {
+                object obj = ResourceManager.GetObject("inloggadButtonDruttenPushedLängre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap inloggadButtonPushed {
             get {
                 object obj = ResourceManager.GetObject("inloggadButtonPushed", resourceCulture);

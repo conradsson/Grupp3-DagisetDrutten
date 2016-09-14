@@ -208,7 +208,7 @@
             this.inloggadesAnvändarnamn.AutoSize = true;
             this.inloggadesAnvändarnamn.BackColor = System.Drawing.Color.Gainsboro;
             this.inloggadesAnvändarnamn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.inloggadesAnvändarnamn.Location = new System.Drawing.Point(148, 12);
+            this.inloggadesAnvändarnamn.Location = new System.Drawing.Point(160, 12);
             this.inloggadesAnvändarnamn.Name = "inloggadesAnvändarnamn";
             this.inloggadesAnvändarnamn.Size = new System.Drawing.Size(0, 12);
             this.inloggadesAnvändarnamn.TabIndex = 29;
@@ -216,7 +216,7 @@
             // inloggadButton
             // 
             this.inloggadButton.BackColor = System.Drawing.Color.Transparent;
-            this.inloggadButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.inloggadButtonDrutten;
+            this.inloggadButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.inloggadButtonDruttenLängre;
             this.inloggadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inloggadButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.inloggadButton.FlatAppearance.BorderSize = 0;
@@ -229,7 +229,7 @@
             this.inloggadButton.Location = new System.Drawing.Point(102, 5);
             this.inloggadButton.Name = "inloggadButton";
             this.inloggadButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.inloggadButton.Size = new System.Drawing.Size(94, 28);
+            this.inloggadButton.Size = new System.Drawing.Size(170, 28);
             this.inloggadButton.TabIndex = 28;
             this.inloggadButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.inloggadButton.UseVisualStyleBackColor = false;

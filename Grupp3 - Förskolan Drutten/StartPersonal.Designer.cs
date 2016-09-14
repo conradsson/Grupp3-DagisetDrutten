@@ -50,7 +50,6 @@
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.nyttInläggPanel = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.textBoxNyRubrik = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -311,7 +310,6 @@
             // 
             this.nyttInläggPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.nyttInläggPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.nyttInläggPanel.Controls.Add(this.label11);
             this.nyttInläggPanel.Controls.Add(this.textBoxNyRubrik);
             this.nyttInläggPanel.Controls.Add(this.label7);
             this.nyttInläggPanel.Controls.Add(this.label6);
@@ -326,15 +324,6 @@
             this.nyttInläggPanel.Size = new System.Drawing.Size(560, 361);
             this.nyttInläggPanel.TabIndex = 27;
             this.nyttInläggPanel.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(272, 33);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "label11";
             // 
             // textBoxNyRubrik
             // 
@@ -418,6 +407,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Controls.Add(this.klocklabel2);
             this.panel1.Controls.Add(this.klocklabel1);
             this.panel1.Controls.Add(this.Klockan);
@@ -428,11 +418,10 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
-            this.panel1.Controls.Add(this.NärvarotabControl);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.BarntabControl);
+            this.panel1.Controls.Add(this.NärvarotabControl);
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -477,7 +466,7 @@
             this.inloggadesAnvändarnamn.AutoSize = true;
             this.inloggadesAnvändarnamn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.inloggadesAnvändarnamn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.inloggadesAnvändarnamn.Location = new System.Drawing.Point(148, 12);
+            this.inloggadesAnvändarnamn.Location = new System.Drawing.Point(160, 12);
             this.inloggadesAnvändarnamn.Name = "inloggadesAnvändarnamn";
             this.inloggadesAnvändarnamn.Size = new System.Drawing.Size(0, 12);
             this.inloggadesAnvändarnamn.TabIndex = 26;
@@ -575,7 +564,7 @@
             // inloggadButton
             // 
             this.inloggadButton.BackColor = System.Drawing.Color.Transparent;
-            this.inloggadButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.inloggadButtonDrutten;
+            this.inloggadButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.inloggadButtonDruttenLängre;
             this.inloggadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inloggadButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.inloggadButton.FlatAppearance.BorderSize = 0;
@@ -588,7 +577,7 @@
             this.inloggadButton.Location = new System.Drawing.Point(102, 5);
             this.inloggadButton.Name = "inloggadButton";
             this.inloggadButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.inloggadButton.Size = new System.Drawing.Size(94, 28);
+            this.inloggadButton.Size = new System.Drawing.Size(170, 28);
             this.inloggadButton.TabIndex = 25;
             this.inloggadButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.inloggadButton.UseVisualStyleBackColor = false;
@@ -955,7 +944,6 @@
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Barn lämnas";
-            series1.YValuesPerPoint = 2;
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Barn hämtas";
@@ -1301,6 +1289,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
     }
 }
