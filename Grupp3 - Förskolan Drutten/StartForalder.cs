@@ -198,6 +198,10 @@ namespace Grupp3___Förskolan_Drutten
                 p.LäggTillTid(datum, barnid, lämnas, hämtas);
             }
 
+            comboBoxFrån1.Text = "";
+            comboBoxFrån2.Text = "";
+            comboBoxTill1.Text = "";
+            comboBoxTill2.Text = "";
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -259,11 +263,13 @@ namespace Grupp3___Förskolan_Drutten
 
                 if (tid == "")
                 {
+                    groupBox2.Visible = true;
                     comboBoxUppdateraFrån1.Text = "";
                     comboBoxUppdateraFrån2.Text = "";
                 }
                 else
                 {
+                    groupBox2.Visible = false;
                     comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
                 }
