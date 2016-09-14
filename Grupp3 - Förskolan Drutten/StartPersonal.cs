@@ -325,5 +325,11 @@ namespace Grupp3___Förskolan_Drutten
         {
 
         }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            klocklabel2.Text = DateTime.Now.ToLongTimeString().ToString();
+            klocklabel1.Text = DateTime.Now.ToLongDateString().ToString();
+        }
     }
 }
