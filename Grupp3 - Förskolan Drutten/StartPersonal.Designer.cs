@@ -949,7 +949,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(28, 110);
+            this.label39.Location = new System.Drawing.Point(28, 121);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(32, 13);
             this.label39.TabIndex = 16;
@@ -958,7 +958,7 @@
             // barnAvdl2ListBox
             // 
             this.barnAvdl2ListBox.FormattingEnabled = true;
-            this.barnAvdl2ListBox.Location = new System.Drawing.Point(31, 129);
+            this.barnAvdl2ListBox.Location = new System.Drawing.Point(31, 140);
             this.barnAvdl2ListBox.Name = "barnAvdl2ListBox";
             this.barnAvdl2ListBox.Size = new System.Drawing.Size(220, 134);
             this.barnAvdl2ListBox.TabIndex = 17;
@@ -966,7 +966,7 @@
             // 
             // barnOverigtrichTextBox
             // 
-            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(269, 196);
+            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(269, 207);
             this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
             this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 69);
             this.barnOverigtrichTextBox.TabIndex = 28;
@@ -975,7 +975,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(266, 178);
+            this.label27.Location = new System.Drawing.Point(266, 189);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(38, 13);
             this.label27.TabIndex = 30;
@@ -984,7 +984,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(266, 110);
+            this.label14.Location = new System.Drawing.Point(266, 121);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 13);
             this.label14.TabIndex = 31;
@@ -993,7 +993,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(269, 130);
+            this.listBox1.Location = new System.Drawing.Point(269, 141);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(262, 43);
             this.listBox1.TabIndex = 32;
@@ -1001,7 +1001,7 @@
             // checkBoxAvdelning1
             // 
             this.checkBoxAvdelning1.AutoSize = true;
-            this.checkBoxAvdelning1.Location = new System.Drawing.Point(14, 19);
+            this.checkBoxAvdelning1.Location = new System.Drawing.Point(18, 64);
             this.checkBoxAvdelning1.Name = "checkBoxAvdelning1";
             this.checkBoxAvdelning1.Size = new System.Drawing.Size(82, 17);
             this.checkBoxAvdelning1.TabIndex = 33;
@@ -1012,7 +1012,7 @@
             // checkBoxAvdelning2
             // 
             this.checkBoxAvdelning2.AutoSize = true;
-            this.checkBoxAvdelning2.Location = new System.Drawing.Point(115, 19);
+            this.checkBoxAvdelning2.Location = new System.Drawing.Point(106, 64);
             this.checkBoxAvdelning2.Name = "checkBoxAvdelning2";
             this.checkBoxAvdelning2.Size = new System.Drawing.Size(82, 17);
             this.checkBoxAvdelning2.TabIndex = 34;
@@ -1021,7 +1021,7 @@
             // 
             // buttonSök
             // 
-            this.buttonSök.Location = new System.Drawing.Point(241, 53);
+            this.buttonSök.Location = new System.Drawing.Point(220, 62);
             this.buttonSök.Name = "buttonSök";
             this.buttonSök.Size = new System.Drawing.Size(75, 23);
             this.buttonSök.TabIndex = 35;
@@ -1041,7 +1041,7 @@
             // 
             // textBoxSökRuta
             // 
-            this.textBoxSökRuta.Location = new System.Drawing.Point(9, 55);
+            this.textBoxSökRuta.Location = new System.Drawing.Point(16, 33);
             this.textBoxSökRuta.Name = "textBoxSökRuta";
             this.textBoxSökRuta.Size = new System.Drawing.Size(100, 20);
             this.textBoxSökRuta.TabIndex = 36;
@@ -1054,9 +1054,9 @@
             this.groupBox2.Controls.Add(this.textBoxSökRuta);
             this.groupBox2.Controls.Add(this.checkBoxAvdelning2);
             this.groupBox2.Controls.Add(this.checkBoxAvdelning1);
-            this.groupBox2.Location = new System.Drawing.Point(20, 4);
+            this.groupBox2.Location = new System.Drawing.Point(31, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(322, 94);
+            this.groupBox2.Size = new System.Drawing.Size(311, 94);
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sökfunktioner";
@@ -1064,7 +1064,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(8, 39);
+            this.label13.Location = new System.Drawing.Point(15, 17);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 13);
             this.label13.TabIndex = 38;
