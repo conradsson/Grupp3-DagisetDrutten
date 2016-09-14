@@ -82,7 +82,7 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
 
             barnAvdl2ListBox.DataSource = p.HämtanBarn();
-            labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
+            //labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
             //dataGridAllaBarn.DataSource = p.HämtanBarn();
 
         }
@@ -181,8 +181,8 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridView1.DataSource = null;
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
-                label16.Text = dataGridView1.RowCount.ToString() + " Barn";
-                label18.Text = "Skriv ut dagens närvarolista";
+                //label16.Text = dataGridView1.RowCount.ToString() + " Barn";
+                //label18.Text = "Skriv ut dagens närvarolista";
 
 
             }
@@ -192,8 +192,8 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridView1.DataSource = null;
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
-                label16.Text = dataGridView1.RowCount.ToString() + " Barn";
-                label18.Text = "Skriv ut dagens frånvarolista";
+                //label16.Text = dataGridView1.RowCount.ToString() + " Barn";
+                //label18.Text = "Skriv ut dagens frånvarolista";
 
             } 
         }
@@ -264,7 +264,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtanBarn();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
-                labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
+                //labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
 
             }
 
@@ -274,7 +274,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning1();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök1(textBoxSökRuta.Text);
-                labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
+                //labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
             }
             else if (checkBoxAvdelning2.Checked == true)
             {
@@ -282,7 +282,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning2();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
-                labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
+                //labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
             }
             else
             {
@@ -290,7 +290,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBox1.DataSource = null;
                 //barnAvdl2ListBox.DataSource = p.HämtanBarn();
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
-                labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
+                //labelAntalBarn.Text = barnAvdl2ListBox.Items.Count.ToString();
             }
 
 
@@ -307,8 +307,8 @@ namespace Grupp3___Förskolan_Drutten
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            klocklabel2.Text = DateTime.Now.ToLongTimeString().ToString();
-            klocklabel1.Text = DateTime.Now.ToLongDateString().ToString();
+            //klocklabel2.Text = DateTime.Now.ToLongTimeString().ToString();
+            //klocklabel1.Text = DateTime.Now.ToLongDateString().ToString();
 
         }
         private void label16_Click(object sender, EventArgs e)
