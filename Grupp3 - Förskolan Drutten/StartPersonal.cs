@@ -112,6 +112,7 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             dataGridView2.DataSource = p.HämtaNärvaro(DateTime.Today);
 
+
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
