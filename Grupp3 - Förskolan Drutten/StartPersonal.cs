@@ -22,7 +22,7 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = true;
 
             AktuellPerson = aktuellperson;
-           
+
             //listBoxInlägg.DataSource = null;
             //listBoxInlägg.DataSource = p.HämtaInlägg();
 
@@ -243,6 +243,7 @@ namespace Grupp3___Förskolan_Drutten
 
         private void publiceraButton_Click(object sender, EventArgs e)
         {
+            Postgres p = new Postgres();
             string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
 
             //p.NyttInlägg(klocklabel1.Text, textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn);
@@ -352,7 +353,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 this.chart1.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
 
-            }
+        }
             int kollaTid2 = 07;
             int tid2 = 07;
             for (int i = 0; i < 11; i++)
@@ -362,6 +363,6 @@ namespace Grupp3___Förskolan_Drutten
 
             }
 
-        }
     }
+}
 }

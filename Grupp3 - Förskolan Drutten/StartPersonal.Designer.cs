@@ -378,7 +378,7 @@
             this.richTextBoxNyText.Location = new System.Drawing.Point(48, 93);
             this.richTextBoxNyText.Name = "richTextBoxNyText";
             this.richTextBoxNyText.Size = new System.Drawing.Size(454, 209);
-            this.richTextBoxNyText.TabIndex = 0;
+            this.richTextBoxNyText.TabIndex = 6;
             this.richTextBoxNyText.Text = "";
             // 
             // label18
