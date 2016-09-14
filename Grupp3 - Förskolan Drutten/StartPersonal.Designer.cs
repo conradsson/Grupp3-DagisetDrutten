@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -115,10 +114,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.klocklabel2 = new System.Windows.Forms.Label();
-            this.klocklabel1 = new System.Windows.Forms.Label();
-            this.Klockan = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.labelSkrivut = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -347,9 +346,6 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.klocklabel2);
-            this.panel1.Controls.Add(this.klocklabel1);
-            this.panel1.Controls.Add(this.Klockan);
             this.panel1.Controls.Add(this.inloggadesAnvändarnamn);
             this.panel1.Controls.Add(this.informationButton);
             this.panel1.Controls.Add(this.närvaroButton);
@@ -357,11 +353,11 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
-            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Controls.Add(this.informationTabControl);
+            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -527,6 +523,7 @@
             // tabPage4
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.label16);
             this.tabPage4.Controls.Add(this.groupBox2);
             this.tabPage4.Controls.Add(this.listBox1);
             this.tabPage4.Controls.Add(this.label14);
@@ -671,6 +668,9 @@
             // tabPage5
             // 
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.label17);
+            this.tabPage5.Controls.Add(this.labelSkrivut);
+            this.tabPage5.Controls.Add(this.button1);
             this.tabPage5.Controls.Add(this.button3);
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Controls.Add(this.monthCalendar2);
@@ -1078,43 +1078,42 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // timer1
+            // label16
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(28, 280);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(61, 13);
+            this.label16.TabIndex = 38;
+            this.label16.Text = "Antal barn: ";
             // 
-            // klocklabel2
+            // button1
             // 
-            this.klocklabel2.AutoSize = true;
-            this.klocklabel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.klocklabel2.Location = new System.Drawing.Point(758, 11);
-            this.klocklabel2.Name = "klocklabel2";
-            this.klocklabel2.Size = new System.Drawing.Size(22, 13);
-            this.klocklabel2.TabIndex = 35;
-            this.klocklabel2.Text = "Tid";
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(610, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 61);
+            this.button1.TabIndex = 18;
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // klocklabel1
+            // labelSkrivut
             // 
-            this.klocklabel1.AutoSize = true;
-            this.klocklabel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.klocklabel1.Location = new System.Drawing.Point(811, 11);
-            this.klocklabel1.Name = "klocklabel1";
-            this.klocklabel1.Size = new System.Drawing.Size(38, 13);
-            this.klocklabel1.TabIndex = 34;
-            this.klocklabel1.Text = "Datum";
+            this.labelSkrivut.AutoSize = true;
+            this.labelSkrivut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSkrivut.Location = new System.Drawing.Point(575, 101);
+            this.labelSkrivut.Name = "labelSkrivut";
+            this.labelSkrivut.Size = new System.Drawing.Size(0, 13);
+            this.labelSkrivut.TabIndex = 19;
             // 
-            // Klockan
+            // label17
             // 
-            this.Klockan.BackColor = System.Drawing.Color.Transparent;
-            this.Klockan.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
-            this.Klockan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Klockan.FlatAppearance.BorderSize = 0;
-            this.Klockan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Klockan.Location = new System.Drawing.Point(748, 5);
-            this.Klockan.Name = "Klockan";
-            this.Klockan.Size = new System.Drawing.Size(191, 28);
-            this.Klockan.TabIndex = 33;
-            this.Klockan.UseVisualStyleBackColor = false;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(509, 180);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(0, 13);
+            this.label17.TabIndex = 20;
             // 
             // StartPersonal
             // 
@@ -1252,9 +1251,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBoxSökRuta;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label klocklabel2;
-        private System.Windows.Forms.Label klocklabel1;
-        private System.Windows.Forms.Button Klockan;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label labelSkrivut;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label17;
     }
 }
