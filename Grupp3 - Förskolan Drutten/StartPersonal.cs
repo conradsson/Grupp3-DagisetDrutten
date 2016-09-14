@@ -36,6 +36,7 @@ namespace Grupp3___Förskolan_Drutten
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
             Postgres p = new Postgres();
+
             listBoxInlägg.DataSource = null;
             listBoxInlägg.DataSource = p.HämtaInlägg();
             //  .Visable Effekter
@@ -215,6 +216,8 @@ namespace Grupp3___Förskolan_Drutten
             skyddpanel.Visible = true;
             nyttInläggPanel.Location = new Point(304, 54);
             nyttInläggPanel.Visible = true;
+            publiceraButton.Visible = true;
+            uppdateraInläggButton.Visible = false;
 
         }
 
@@ -242,7 +245,19 @@ namespace Grupp3___Förskolan_Drutten
 
         private void tabortButton_Click(object sender, EventArgs e)
         {
-            // METOD FÖR ATT TA BORT SELECTED INLÄGG (DROP)
+            Postgres p = new Postgres();
+            Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
+            DialogResult result = MessageBox.Show("Är du säker på att du vill ta bort det markerade inlägget? " + "\n" + "Inlägget kommer inte kunna återställas.", "Ta bort inlägg", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                if (AktuelltInlägg != null)
+                {
+                    p.TaBortInlägg(AktuelltInlägg.Datum, AktuelltInlägg.InläggsId);
+
+                }
+            }
+
+
         }
 
         private void publiceraButton_Click(object sender, EventArgs e)
@@ -260,7 +275,33 @@ namespace Grupp3___Förskolan_Drutten
 
         private void redigeraButton_Click(object sender, EventArgs e)
         {
-            // METOD FÖR ATT REDIGERA SELECTED INLÄGG (UPDATE)
+            Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
+
+            richTextBoxNyText.Text = AktuelltInlägg.InläggsText;
+            textBoxNyRubrik.Text = AktuelltInlägg.InläggsRubrik;
+
+            publiceraButton.Visible = false;
+            uppdateraInläggButton.Visible = true;
+            skyddpanel.Visible = true;
+            nyttInläggPanel.Visible = true;
+            nyttInläggPanel.Location = new Point(304, 60);
+        }
+
+        private void uppdateraInläggButton_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
+
+            if (AktuelltInlägg != null)
+            {
+                p.UppdateraInlägg(AktuelltInlägg.Datum, textBoxNyRubrik.Text, richTextBoxNyText.Text, AktuelltInlägg.InläggsId);
+                skyddpanel.Visible = false;
+                nyttInläggPanel.Visible = false;
+
+                listBoxInlägg.DataSource = null;
+                listBoxInlägg.DataSource = p.HämtaInlägg();
+
+            }
         }
 
         private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -334,7 +375,6 @@ namespace Grupp3___Förskolan_Drutten
 
             if (AktuelltInlägg != null)
             {
-                listBoxInlägg.ClearSelected();
                 listBoxInlägg.DataSource = null;
                 listBoxInlägg.DataSource = p.HämtaInlägg();
 
@@ -370,5 +410,7 @@ namespace Grupp3___Förskolan_Drutten
             }
 
     }
+
+
     }
 }

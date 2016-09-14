@@ -559,6 +559,51 @@ namespace Grupp3___Förskolan_Drutten
             }
             //conn.Close();
         }
+        public void UppdateraInlägg(string datum, string inläggsrubrik, string inläggstext, int inläggsid)
+        {
+            try
+            {
+                string sql = "update dagis.information SET inläggsrubrik = '" + inläggsrubrik + "', inläggstext ='" + inläggstext + "', datum = '" + DateTime.Now.ToShortDateString() + "' where inläggsid = '" + inläggsid + "' and datum = '" + datum + "';";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", DateTime.Now.ToShortDateString());
+                cmd.Parameters.AddWithValue("@inläggsrubrik", inläggsrubrik);
+                cmd.Parameters.AddWithValue("@inläggstext", inläggstext);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                MessageBox.Show("Inlägget har uppdaterats!");
+
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show("Ett fel uppstod: " + ex);
+            }
+
+            //conn.Close();
+        }
+        public void TaBortInlägg(string datum, int inläggsid)
+        {
+            try
+            {
+                string sql = "DELETE FROM dagis.information WHERE inläggsid = '" + inläggsid + "' AND datum = '" + datum + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                dr = cmd.ExecuteReader();
+
+                HämtaInlägg();  // HÄMTAR INLÄGG
+
+                dr.Close();
+                MessageBox.Show("Inlägget har tagits bort!");
+
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show("Ett fel uppstod: " + ex);
+            }
+
+            //conn.Close();
+        }
 
         //Hischam
 

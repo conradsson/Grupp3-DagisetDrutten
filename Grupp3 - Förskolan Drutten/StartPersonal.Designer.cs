@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -50,7 +50,7 @@
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.nyttInläggPanel = new System.Windows.Forms.Panel();
-            this.textBoxNyRubrik = new System.Windows.Forms.TextBox(); 
+            this.textBoxNyRubrik = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.avbrytButton = new System.Windows.Forms.Button();
@@ -122,6 +122,7 @@
             this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.uppdateraInläggButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -169,7 +170,7 @@
             // informationTabControl
             // 
             this.informationTabControl.Controls.Add(this.senasteTabPage);
-            this.informationTabControl.Location = new System.Drawing.Point(193, 30);
+            this.informationTabControl.Location = new System.Drawing.Point(193, 36);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
             this.informationTabControl.Size = new System.Drawing.Size(748, 389);
@@ -310,6 +311,7 @@
             // 
             this.nyttInläggPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.nyttInläggPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.nyttInläggPanel.Controls.Add(this.uppdateraInläggButton);
             this.nyttInläggPanel.Controls.Add(this.textBoxNyRubrik);
             this.nyttInläggPanel.Controls.Add(this.label7);
             this.nyttInläggPanel.Controls.Add(this.label6);
@@ -317,7 +319,7 @@
             this.nyttInläggPanel.Controls.Add(this.publiceraButton);
             this.nyttInläggPanel.Controls.Add(this.richTextBoxNyText);
             this.nyttInläggPanel.Controls.Add(this.label18);
-            this.nyttInläggPanel.Location = new System.Drawing.Point(304, 11);
+            this.nyttInläggPanel.Location = new System.Drawing.Point(304, 10);
             this.nyttInläggPanel.MaximumSize = new System.Drawing.Size(560, 361);
             this.nyttInläggPanel.MinimumSize = new System.Drawing.Size(560, 361);
             this.nyttInläggPanel.Name = "nyttInläggPanel";
@@ -371,6 +373,7 @@
             this.publiceraButton.TabIndex = 1;
             this.publiceraButton.Text = "Publicera";
             this.publiceraButton.UseVisualStyleBackColor = true;
+            this.publiceraButton.Visible = false;
             this.publiceraButton.Click += new System.EventHandler(this.publiceraButton_Click);
             // 
             // richTextBoxNyText
@@ -610,7 +613,7 @@
             // BarntabControl
             // 
             this.BarntabControl.Controls.Add(this.tabPage4);
-            this.BarntabControl.Location = new System.Drawing.Point(193, 30);
+            this.BarntabControl.Location = new System.Drawing.Point(193, 36);
             this.BarntabControl.Name = "BarntabControl";
             this.BarntabControl.SelectedIndex = 0;
             this.BarntabControl.Size = new System.Drawing.Size(748, 389);
@@ -762,7 +765,7 @@
             this.NärvarotabControl.Controls.Add(this.tabPage5);
             this.NärvarotabControl.Controls.Add(this.tabPage6);
             this.NärvarotabControl.Controls.Add(this.tabPage2);
-            this.NärvarotabControl.Location = new System.Drawing.Point(196, 30);
+            this.NärvarotabControl.Location = new System.Drawing.Point(196, 36);
             this.NärvarotabControl.Name = "NärvarotabControl";
             this.NärvarotabControl.SelectedIndex = 0;
             this.NärvarotabControl.Size = new System.Drawing.Size(748, 389);
@@ -934,21 +937,21 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(-24, 13);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Barn lämnas";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Barn hämtas";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "Barn lämnas";
+            series14.ChartArea = "ChartArea1";
+            series14.Legend = "Legend1";
+            series14.Name = "Barn hämtas";
+            this.chart1.Series.Add(series13);
+            this.chart1.Series.Add(series14);
             this.chart1.Size = new System.Drawing.Size(779, 184);
             this.chart1.TabIndex = 11;
             this.chart1.Text = "chart1";
@@ -1059,7 +1062,7 @@
             // MittKontoTabControl
             // 
             this.MittKontoTabControl.Controls.Add(this.tabPage1);
-            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 30);
+            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 36);
             this.MittKontoTabControl.Name = "MittKontoTabControl";
             this.MittKontoTabControl.SelectedIndex = 0;
             this.MittKontoTabControl.Size = new System.Drawing.Size(748, 389);
@@ -1148,6 +1151,17 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // uppdateraInläggButton
+            // 
+            this.uppdateraInläggButton.Location = new System.Drawing.Point(427, 312);
+            this.uppdateraInläggButton.Name = "uppdateraInläggButton";
+            this.uppdateraInläggButton.Size = new System.Drawing.Size(75, 23);
+            this.uppdateraInläggButton.TabIndex = 7;
+            this.uppdateraInläggButton.Text = "Uppdatera";
+            this.uppdateraInläggButton.UseVisualStyleBackColor = true;
+            this.uppdateraInläggButton.Visible = false;
+            this.uppdateraInläggButton.Click += new System.EventHandler(this.uppdateraInläggButton_Click);
             // 
             // StartPersonal
             // 
@@ -1289,5 +1303,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button uppdateraInläggButton;
     }
 }

@@ -85,8 +85,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.informationTabControl = new System.Windows.Forms.TabControl();
-            this.omTabPage = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.senasteTabPage = new System.Windows.Forms.TabPage();
             this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -129,7 +127,6 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.informationTabControl.SuspendLayout();
-            this.omTabPage.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -161,9 +158,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
-            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
+            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -355,7 +352,7 @@
             this.TidertabControl.Controls.Add(this.tabPage3);
             this.TidertabControl.Controls.Add(this.tabPage4);
             this.TidertabControl.Controls.Add(this.tabPage5);
-            this.TidertabControl.Location = new System.Drawing.Point(193, 30);
+            this.TidertabControl.Location = new System.Drawing.Point(193, 36);
             this.TidertabControl.Name = "TidertabControl";
             this.TidertabControl.SelectedIndex = 0;
             this.TidertabControl.Size = new System.Drawing.Size(748, 389);
@@ -880,36 +877,13 @@
             // 
             // informationTabControl
             // 
-            this.informationTabControl.Controls.Add(this.omTabPage);
             this.informationTabControl.Controls.Add(this.senasteTabPage);
-            this.informationTabControl.Location = new System.Drawing.Point(193, 30);
+            this.informationTabControl.Location = new System.Drawing.Point(193, 36);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
             this.informationTabControl.Size = new System.Drawing.Size(748, 389);
             this.informationTabControl.TabIndex = 15;
             this.informationTabControl.Visible = false;
-            // 
-            // omTabPage
-            // 
-            this.omTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.omTabPage.Controls.Add(this.label1);
-            this.omTabPage.Location = new System.Drawing.Point(4, 22);
-            this.omTabPage.Name = "omTabPage";
-            this.omTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.omTabPage.Size = new System.Drawing.Size(740, 363);
-            this.omTabPage.TabIndex = 1;
-            this.omTabPage.Text = "Om Druttens förskola";
-            this.omTabPage.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Druttens förskola är ....";
             // 
             // senasteTabPage
             // 
@@ -1000,7 +974,7 @@
             // 
             this.MittKontoTabControl.Controls.Add(this.tabPage1);
             this.MittKontoTabControl.Controls.Add(this.tabPage2);
-            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 30);
+            this.MittKontoTabControl.Location = new System.Drawing.Point(193, 36);
             this.MittKontoTabControl.Name = "MittKontoTabControl";
             this.MittKontoTabControl.SelectedIndex = 0;
             this.MittKontoTabControl.Size = new System.Drawing.Size(748, 389);
@@ -1272,8 +1246,6 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.informationTabControl.ResumeLayout(false);
-            this.omTabPage.ResumeLayout(false);
-            this.omTabPage.PerformLayout();
             this.senasteTabPage.ResumeLayout(false);
             this.senasteTabPage.PerformLayout();
             this.MittKontoTabControl.ResumeLayout(false);
@@ -1294,7 +1266,6 @@
         private System.Windows.Forms.Label kontoTypLabel;
         private System.Windows.Forms.TabControl informationTabControl;
         private System.Windows.Forms.TabPage senasteTabPage;
-        private System.Windows.Forms.TabPage omTabPage;
         private System.Windows.Forms.TabControl MittKontoTabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1311,7 +1282,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxFornamn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
