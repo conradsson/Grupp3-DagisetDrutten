@@ -143,6 +143,16 @@ namespace Grupp3___Förskolan_Drutten.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButtonDrutten3 {
+            get {
+                object obj = ResourceManager.GetObject("ButtonDrutten3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ButtonDruttenPushed {
             get {
                 object obj = ResourceManager.GetObject("ButtonDruttenPushed", resourceCulture);
