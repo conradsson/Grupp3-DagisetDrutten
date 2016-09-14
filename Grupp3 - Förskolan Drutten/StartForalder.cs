@@ -25,7 +25,7 @@ namespace Grupp3___Förskolan_Drutten
 
             listBoxInlägg.ClearSelected();
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtanInlägg();
+            listBoxInlägg.DataSource = p.HämtaInlägg();
 
             inloggadesAnvändarnamn.Text = aktuellperson.Användarnamn;
 
@@ -35,10 +35,6 @@ namespace Grupp3___Förskolan_Drutten
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
-
-            listBoxInlägg.ClearSelected();
-            listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtanInlägg();
 
             //  .Visable Effekter
             informationTabControl.Visible = true;
@@ -523,7 +519,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 listBoxInlägg.ClearSelected();
                 listBoxInlägg.DataSource = null;
-                listBoxInlägg.DataSource = p.HämtanInlägg();
+                listBoxInlägg.DataSource = p.HämtaInlägg();
 
                 textBoxDatum.Text = AktuelltInlägg.Datum;
                 textBoxRubrik.Text = AktuelltInlägg.InläggsRubrik;
