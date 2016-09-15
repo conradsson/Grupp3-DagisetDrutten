@@ -446,7 +446,7 @@ namespace Grupp3___Förskolan_Drutten
             string efternamn = textBoxEfternamnMittKonto.Text;
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
 
-            p.UppdateraFörälder(id, förnamn, efternamn, telefonnummer);
+            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
         }
 
         private void uppdateraförälder_Click_1(object sender, EventArgs e)
@@ -459,7 +459,7 @@ namespace Grupp3___Förskolan_Drutten
             string efternamn = textBoxEfternamnMittKonto.Text;
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
 
-            p.UppdateraFörälder(id, förnamn, efternamn, telefonnummer);
+            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
 
         }
 
@@ -501,7 +501,7 @@ namespace Grupp3___Förskolan_Drutten
             string efternamn = textBoxEfternamnMittKonto.Text;
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
             
-            p.UppdateraFörälder(id, förnamn, efternamn, telefonnummer);
+            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
 
             AktuellPerson.Förnamn =    textBoxFörnamnMittKonto.Text;
             AktuellPerson.Efternamn=    textBoxEfternamnMittKonto.Text;
