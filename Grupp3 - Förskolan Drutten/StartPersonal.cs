@@ -112,6 +112,8 @@ namespace Grupp3___Förskolan_Drutten
 
             Postgres p = new Postgres();
             dataGridView2.DataSource = p.HämtaNärvaro(DateTime.Today);
+
+            
             
 
 
