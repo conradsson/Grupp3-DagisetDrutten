@@ -13,6 +13,7 @@ namespace Grupp3___Förskolan_Drutten
         public string InläggsRubrik { get; set; }
         public string InläggsText { get; set; }
         public string SkrivetAv { get; set; }
+        public bool EndastFörPersonal { get; set; }
 
         public override string ToString()
         {

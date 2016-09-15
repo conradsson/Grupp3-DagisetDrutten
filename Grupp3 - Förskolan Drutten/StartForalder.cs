@@ -25,7 +25,7 @@ namespace Grupp3___Förskolan_Drutten
 
             listBoxInlägg.ClearSelected();
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInlägg();
+            listBoxInlägg.DataSource = p.HämtaInläggFörälder();
 
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn + " " + aktuellperson.Efternamn;
 
@@ -38,7 +38,7 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
 
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInlägg();
+            listBoxInlägg.DataSource = p.HämtaInläggFörälder();
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
