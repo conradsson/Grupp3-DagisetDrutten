@@ -18,6 +18,7 @@ namespace Grupp3___Förskolan_Drutten
         public int Avdelningsid { get; set; }
         public string Allergier { get; set; }
         public string Annat { get; set; }
+        public Int64 AntalDagar { get; set; }
 
         public override string ToString()
         {
@@ -31,5 +32,6 @@ namespace Grupp3___Förskolan_Drutten
                 return Förnamn + " " + Efternamn;
             }
         }
+
     }
 }

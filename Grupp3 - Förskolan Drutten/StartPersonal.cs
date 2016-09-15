@@ -435,11 +435,17 @@ namespace Grupp3___Förskolan_Drutten
         private void button4_Click(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
-            //MessageBox.Show(p.HämtaFramtidaTider(dateTimePicker1.Value, dateTimePicker2.Value).ToString());
+            Postgres p1 = new Postgres();
 
-            labelTotaltAntalBarn.Text = "Totalt antal barn på förskolan mellan " + dateTimePicker1.Value.ToString("yy-MM-dd") + " och " + dateTimePicker2.Value.ToString("yy-MM-dd") + ": " + p.HämtaFramtidaTider(dateTimePicker1.Value, dateTimePicker2.Value).ToString();
+            labelTotaltAntalBarn.Visible = true;
+            label11.Visible = true;
+            labelTotaltAntalBarn.Text = "Totalt antal barn på förskolan mellan " + dateTimePicker1.Value.ToString("yy-MM-dd") + " och " + dateTimePicker2.Value.ToString("yy-MM-dd") + ": ";
+            label11.Text = p1.HämtaFramtidaTider(dateTimePicker1.Value, dateTimePicker2.Value).ToString() + " Barn";
 
+            dataGridView3.DataSource = p.HämtaFramtidaBarn(dateTimePicker1.Value, dateTimePicker2.Value);
 
+            dataGridView3.Columns[0].Visible = false;
+            dataGridView3.Columns[7].Visible = false;
 
         }
     }
