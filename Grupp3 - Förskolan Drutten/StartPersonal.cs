@@ -13,7 +13,7 @@ namespace Grupp3___Förskolan_Drutten
     public partial class StartPersonal : Form
     {
         Person AktuellPerson = new Person();
-        //Postgres p = new Postgres();
+        Postgres p = new Postgres();
 
         public StartPersonal(Person aktuellperson)
         {
@@ -23,8 +23,8 @@ namespace Grupp3___Förskolan_Drutten
 
             AktuellPerson = aktuellperson;
 
-            //listBoxInlägg.DataSource = null;
-            //listBoxInlägg.DataSource = p.HämtaInlägg();
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtaInlägg();
 
 
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
