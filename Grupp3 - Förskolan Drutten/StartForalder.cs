@@ -212,9 +212,12 @@ namespace Grupp3___Förskolan_Drutten
         {
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            List<Närvaro> BarnTider = new List<Närvaro>();
+
             if (aktuelltbarn != null)
             {
                 Postgres p = new Postgres();
+                BarnTider = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
@@ -246,6 +249,8 @@ namespace Grupp3___Förskolan_Drutten
                     comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
                 }
+                dataGridViewBarnTider.DataSource = null;
+                dataGridViewBarnTider.DataSource = BarnTider;
              
             }
             //else

@@ -152,7 +152,9 @@ namespace Grupp3___Förskolan_Drutten
             string meddelande;
             try
             {
-                string sql = "insert into dagis.franvaro (datum, barnid, sjuk, ledig) values (@datum, @barnid, @sjuk, @ledig);";
+
+                string sql = "insert into dagis.franvaro (datum, barnid, sjuk, ledig) values (@datum, @barnid, @sjuk, @ledig); "
+                            + "delete from dagis.narvaro where narvaro.datum = @datum and narvaro.barnid = @barnid";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@datum", datum);
@@ -177,6 +179,7 @@ namespace Grupp3___Förskolan_Drutten
             System.Windows.Forms.MessageBox.Show(meddelande);
             conn.Close();
         }
+
 
         /// <summary>
         ///  Metod för att lägga till tider till ett barn
@@ -418,8 +421,33 @@ namespace Grupp3___Förskolan_Drutten
             System.Windows.Forms.MessageBox.Show(meddelande);
             conn.Close();
         }
-        
-        
+
+        public List<Närvaro> HämtaBarnetsTider(int barnid)
+        {
+
+            string sql = "select dp.datum, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av from dagis.narvaro dp where dp.barnid = '" + barnid + "' ORDER BY dp.datum";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Närvaro> BarnTider = new List<Närvaro>();
+            Närvaro närvaro;
+
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    närvaro = new Närvaro();
+
+                    närvaro.Datum = (DateTime)rad[0];
+                    närvaro.TidLämnad = rad[1].ToString();
+                    närvaro.TidHämtad = rad[2].ToString();
+                    närvaro.HämtasAv = rad[3].ToString();
+
+                    BarnTider.Add(närvaro);
+
+                }
+            
+            return BarnTider;
+
+        }
 
         // Johan
 
@@ -844,6 +872,38 @@ namespace Grupp3___Förskolan_Drutten
             {
                 string sql = "SELECT COUNT(narvaro.datum) as antal FROM dagis.narvaro WHERE datum = ('" + AktuelltDatum + "') AND tid_lamnad  LIKE '%" + tid + "_%'";
 
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+
+
+                    svar = (Int64)dr["antal"];
+
+                    return svar;
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+                svar = Convert.ToInt32(ex.Message);
+                return svar;
+            }
+
+            dr.Close();
+            conn.Close();
+            return svar;
+        }
+        public Int64 HämtaFramtidaTider(DateTime AktuelltDatumFrån, DateTime AktuelltDatumTill)
+        {
+            Int64 svar = 0;
+
+            try
+            {
+                string sql = "SELECT COUNT(narvaro.datum) as antal FROM dagis.narvaro WHERE datum BETWEEN('" + AktuelltDatumFrån + "') AND ('" + AktuelltDatumTill + "')";
+                
                 cmd = new NpgsqlCommand(sql, conn); // Kör sql
                 dr = cmd.ExecuteReader();
 
