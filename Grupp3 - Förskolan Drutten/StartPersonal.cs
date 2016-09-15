@@ -414,6 +414,23 @@ namespace Grupp3___Förskolan_Drutten
 
     }
 
+        private void uppdateraförälder_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
 
+            int id = AktuellPerson.Personid;
+            string förnamn = textBoxFörnamnMittkonto.Text;
+            string efternamn = textBoxEfternamnMittkonto.Text;
+            string telefonnummer = textBoxTelefonnrMittkonto.Text;
+
+            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
+
+            AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
+            AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
+            AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
+
+
+
+        }
     }
 }
