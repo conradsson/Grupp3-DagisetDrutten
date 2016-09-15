@@ -431,5 +431,11 @@ namespace Grupp3___Förskolan_Drutten
 
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            MessageBox.Show(p.HämtaFramtidaTider(monthCalendar1.SelectionStart, monthCalendar3.SelectionStart).ToString());
+        }
     }
 }
