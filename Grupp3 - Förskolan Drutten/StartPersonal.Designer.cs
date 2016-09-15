@@ -119,6 +119,8 @@
             this.label39 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelTotaltAntalBarn = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -834,6 +836,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.listBox2);
+            this.tabPage2.Controls.Add(this.labelTotaltAntalBarn);
             this.tabPage2.Controls.Add(this.dateTimePicker2);
             this.tabPage2.Controls.Add(this.dateTimePicker1);
             this.tabPage2.Controls.Add(this.button4);
@@ -1123,6 +1127,23 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // labelTotaltAntalBarn
+            // 
+            this.labelTotaltAntalBarn.AutoSize = true;
+            this.labelTotaltAntalBarn.Location = new System.Drawing.Point(31, 99);
+            this.labelTotaltAntalBarn.Name = "labelTotaltAntalBarn";
+            this.labelTotaltAntalBarn.Size = new System.Drawing.Size(41, 13);
+            this.labelTotaltAntalBarn.TabIndex = 6;
+            this.labelTotaltAntalBarn.Text = "label11";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(30, 144);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(494, 95);
+            this.listBox2.TabIndex = 7;
+            // 
             // StartPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1159,6 +1180,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1258,5 +1280,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label labelTotaltAntalBarn;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }

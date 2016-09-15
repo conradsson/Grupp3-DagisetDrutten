@@ -959,6 +959,30 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
             return svar;
         }
+        public List<Barn> HämtaFramtidaBarn(DateTime AktuelltDatumFrån, DateTime AktuelltDatumTill)
+        {
+            string sql = " SELECT COUNT(narvaro.datum) as antal, barn.förnamn, barn.efternamn, barn.avdelningsid, barn.allergier, barn.annat FROM dagis.narvaro, dagis.barn WHERE narvaro.barnid = barn.barnid AND datum BETWEEN('" + AktuelltDatumFrån + "') AND('" + AktuelltDatumTill + "')  GROUP BY barn.förnamn, barn.efternamn, barn.avdelningsid, barn.allergier, barn.annat";
+           
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Barn> BarnLista = new List<Barn>();
+            Barn barn;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                barn = new Barn();
+
+                barn.Barnid = (int)rad[0];
+                barn.Förnamn = rad[1].ToString();
+                barn.Efternamn = rad[2].ToString();
+                barn.Allergier = rad[3].ToString();
+                barn.Annat = rad[4].ToString();
+                BarnLista.Add(barn);
+            }
+            return BarnLista;
+
+        }
+
 
         public List<Person> HämtaBarnsFörälder(int aktuellbarnid)
         {
