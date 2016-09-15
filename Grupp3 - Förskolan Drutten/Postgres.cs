@@ -421,8 +421,33 @@ namespace Grupp3___Förskolan_Drutten
             System.Windows.Forms.MessageBox.Show(meddelande);
             conn.Close();
         }
-        
-        
+
+        public List<Närvaro> HämtaBarnetsTider(int barnid)
+        {
+
+            string sql = "select dp.datum, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av from dagis.narvaro dp where dp.barnid = '" + barnid + "' ORDER BY dp.datum";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Närvaro> BarnTider = new List<Närvaro>();
+            Närvaro närvaro;
+
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    närvaro = new Närvaro();
+
+                    närvaro.Datum = (DateTime)rad[0];
+                    närvaro.TidLämnad = rad[1].ToString();
+                    närvaro.TidHämtad = rad[2].ToString();
+                    närvaro.HämtasAv = rad[3].ToString();
+
+                    BarnTider.Add(närvaro);
+
+                }
+            
+            return BarnTider;
+
+        }
 
         // Johan
 

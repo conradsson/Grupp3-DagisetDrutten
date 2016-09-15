@@ -140,6 +140,13 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
+        private void MobilLink_Click(object sender, EventArgs e)
+        {
+            StartFörälderMobil m = new StartFörälderMobil();
+
+            m.Show();
+        }
+
         // Mathilda
 
 

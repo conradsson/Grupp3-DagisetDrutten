@@ -93,6 +93,12 @@
     <Compile Include="StartFP.Designer.cs">
       <DependentUpon>StartFP.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartFörälderMobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartFörälderMobil.Designer.cs">
+      <DependentUpon>StartFörälderMobil.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="StartFP.resx">
       <DependentUpon>StartFP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartFörälderMobil.resx">
+      <DependentUpon>StartFörälderMobil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartPersonal.resx">
       <DependentUpon>StartPersonal.cs</DependentUpon>
@@ -253,6 +262,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\inloggadButtonDruttenPushedLängre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MiniMobilButtonDrutten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MiniMobilButtonDruttenPushed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
