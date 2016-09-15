@@ -29,7 +29,7 @@ namespace Grupp3___Förskolan_Drutten
 
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn + " " + aktuellperson.Efternamn;
 
-
+            tiderBarnListBox.ClearSelected();
         }
 
 
@@ -95,13 +95,14 @@ namespace Grupp3___Förskolan_Drutten
             tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
 
             List<Barn> barnlista = new List<Barn>();
-            List<Närvaro> BarnTider = new List<Närvaro>();
+            
             Postgres p = new Postgres();
-            //Login l = new Login();
-
+            
             barnlista = p.HämtaFöräldersBarn(AktuellPerson.Personid);
             tiderBarnListBox.DataSource = null;
+            
             tiderBarnListBox.DataSource = barnlista;
+            tiderBarnListBox.ClearSelected();
             listBoxMeddelaHämtning.DataSource = null;
             listBoxMeddelaHämtning.DataSource = barnlista;
             listBoxMeddelaFrånvaro.DataSource = null;
@@ -110,20 +111,6 @@ namespace Grupp3___Förskolan_Drutten
             groupBox2.Visible = false;
             groupBox3.Visible = false;
 
-            Postgres p1 = new Postgres();
-            Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
-            if (aktuelltbarn != null)
-            {  
-                BarnTider = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
-                listBoxBarnetsTider.ClearSelected();
-                listBoxBarnetsTider.ValueMember = "visaBarnTider";
-                listBoxBarnetsTider.DataSource = null;
-                listBoxBarnetsTider.DataSource = BarnTider;
-            }
-           
-            //tiderBarnListBox.ClearSelected();
-            //listBoxMeddelaHämtning.ClearSelected();
-            //listBoxMeddelaFrånvaro.ClearSelected();
         }
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -224,49 +211,45 @@ namespace Grupp3___Förskolan_Drutten
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Barn aktuelltbarn = new Barn();
-            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
-            List<Närvaro> BarnTider = new List<Närvaro>();
+            Postgres p = new Postgres();
+            Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+             
 
             if (aktuelltbarn != null)
             {
-                Postgres p = new Postgres();
-                //BarnTider = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
-                //listBoxBarnetsTider.ClearSelected();
-                //listBoxBarnetsTider.ValueMember = "visaBarnTider";
-                //listBoxBarnetsTider.DataSource = null;
-                //listBoxBarnetsTider.DataSource = BarnTider;
+                listBoxBarnetsTider.DataSource = null;
+                listBoxBarnetsTider.ValueMember = "visaBarnTider";
+                listBoxBarnetsTider.DataSource = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
+
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
 
                 if (tid == "")
-                {
+                    {
                      comboBoxUppdateraTill1.Text = "";
                      comboBoxUppdateraTill2.Text = "";
-                }
+                    }
                 else
-                {
+                    {
                     comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
                     comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
-                }
-                
-
+                    }
 
                 Postgres p2 = new Postgres();
                 string tidLämnas;
                 tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
 
                 if (tidLämnas == "")
-                {
+                    {
                       comboBoxUppdateraFrån1.Text = "";
                       comboBoxUppdateraFrån2.Text = "";
-                }
+                    }
                 else
-                {
+                    {
                     comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
-                }
+                    }
                 
                 }
             //else
