@@ -82,6 +82,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MobilBankId.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobilBankId.Designer.cs">
+      <DependentUpon>MobilBankId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Närvaro.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Postgres.cs" />
@@ -113,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobilBankId.resx">
+      <DependentUpon>MobilBankId.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -268,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MiniMobilButtonDruttenPushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bankid.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
