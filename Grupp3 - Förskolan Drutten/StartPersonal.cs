@@ -401,7 +401,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 this.chart1.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
 
-        }
+          }
             int kollaTid2 = 07;
             int tid2 = 07;
             for (int i = 0; i < 11; i++)
@@ -436,6 +436,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             Postgres p = new Postgres();
             MessageBox.Show(p.HämtaFramtidaTider(dateTimePicker1.Value, dateTimePicker2.Value).ToString());
+
 
 
 
