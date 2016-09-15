@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -50,6 +50,7 @@
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.nyttInläggPanel = new System.Windows.Forms.Panel();
+            this.EndastFörPersonalCheckBox = new System.Windows.Forms.CheckBox();
             this.uppdateraInläggButton = new System.Windows.Forms.Button();
             this.textBoxNyRubrik = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,26 +71,9 @@
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.inloggadButton = new System.Windows.Forms.Button();
             this.loggaUtButton = new System.Windows.Forms.Button();
-            this.NärvarotabControl = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label17 = new System.Windows.Forms.Label();
-            this.labelSkrivut = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.FrånvarandeRadioButton = new System.Windows.Forms.RadioButton();
-            this.NärvarandeRadioButton = new System.Windows.Forms.RadioButton();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.uppdateraförälder = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxTelefonnrMittkonto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -111,27 +95,43 @@
             this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
             this.barnAvdl2ListBox = new System.Windows.Forms.ListBox();
             this.label39 = new System.Windows.Forms.Label();
+            this.NärvarotabControl = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.labelSkrivut = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.FrånvarandeRadioButton = new System.Windows.Forms.RadioButton();
+            this.NärvarandeRadioButton = new System.Windows.Forms.RadioButton();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.uppdateraförälder = new System.Windows.Forms.Button();
-            this.EndastFörPersonalCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
             this.nyttInläggPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.MittKontoTabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.BarntabControl.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.NärvarotabControl.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.MittKontoTabControl.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.BarntabControl.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // kontoTypLabel
@@ -310,13 +310,24 @@
             this.nyttInläggPanel.Controls.Add(this.publiceraButton);
             this.nyttInläggPanel.Controls.Add(this.richTextBoxNyText);
             this.nyttInläggPanel.Controls.Add(this.label18);
-            this.nyttInläggPanel.Location = new System.Drawing.Point(112, 52);
+            this.nyttInläggPanel.Location = new System.Drawing.Point(16, 390);
             this.nyttInläggPanel.MaximumSize = new System.Drawing.Size(560, 361);
             this.nyttInläggPanel.MinimumSize = new System.Drawing.Size(560, 361);
             this.nyttInläggPanel.Name = "nyttInläggPanel";
             this.nyttInläggPanel.Size = new System.Drawing.Size(560, 361);
             this.nyttInläggPanel.TabIndex = 27;
             this.nyttInläggPanel.Visible = false;
+            // 
+            // EndastFörPersonalCheckBox
+            // 
+            this.EndastFörPersonalCheckBox.AutoSize = true;
+            this.EndastFörPersonalCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.EndastFörPersonalCheckBox.Location = new System.Drawing.Point(220, 51);
+            this.EndastFörPersonalCheckBox.Name = "EndastFörPersonalCheckBox";
+            this.EndastFörPersonalCheckBox.Size = new System.Drawing.Size(117, 17);
+            this.EndastFörPersonalCheckBox.TabIndex = 8;
+            this.EndastFörPersonalCheckBox.Text = "Endast för personal";
+            this.EndastFörPersonalCheckBox.UseVisualStyleBackColor = false;
             // 
             // uppdateraInläggButton
             // 
@@ -413,6 +424,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Controls.Add(this.klocklabel2);
             this.panel1.Controls.Add(this.klocklabel1);
             this.panel1.Controls.Add(this.Klockan);
@@ -426,7 +438,6 @@
             this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.BarntabControl);
-            this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -613,209 +624,6 @@
             this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
             this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
             // 
-            // NärvarotabControl
-            // 
-            this.NärvarotabControl.Controls.Add(this.tabPage5);
-            this.NärvarotabControl.Controls.Add(this.tabPage6);
-            this.NärvarotabControl.Location = new System.Drawing.Point(196, 36);
-            this.NärvarotabControl.Name = "NärvarotabControl";
-            this.NärvarotabControl.SelectedIndex = 0;
-            this.NärvarotabControl.Size = new System.Drawing.Size(748, 389);
-            this.NärvarotabControl.TabIndex = 23;
-            this.NärvarotabControl.Visible = false;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage5.Controls.Add(this.label17);
-            this.tabPage5.Controls.Add(this.labelSkrivut);
-            this.tabPage5.Controls.Add(this.button1);
-            this.tabPage5.Controls.Add(this.button3);
-            this.tabPage5.Controls.Add(this.label15);
-            this.tabPage5.Controls.Add(this.monthCalendar2);
-            this.tabPage5.Controls.Add(this.dataGridView1);
-            this.tabPage5.Controls.Add(this.label2);
-            this.tabPage5.Controls.Add(this.FrånvarandeRadioButton);
-            this.tabPage5.Controls.Add(this.NärvarandeRadioButton);
-            this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(740, 363);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "Närvarohantering";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(509, 180);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(0, 13);
-            this.label17.TabIndex = 20;
-            // 
-            // labelSkrivut
-            // 
-            this.labelSkrivut.AutoSize = true;
-            this.labelSkrivut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSkrivut.Location = new System.Drawing.Point(575, 101);
-            this.labelSkrivut.Name = "labelSkrivut";
-            this.labelSkrivut.Size = new System.Drawing.Size(0, 13);
-            this.labelSkrivut.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(610, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 61);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(267, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Sök valt datum";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(36, 180);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 13);
-            this.label15.TabIndex = 16;
-            // 
-            // monthCalendar2
-            // 
-            this.monthCalendar2.Location = new System.Drawing.Point(35, 13);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 13;
-            this.monthCalendar2.TodayDate = new System.DateTime(2016, 9, 14, 0, 0, 0, 0);
-            this.monthCalendar2.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar2_DateChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(541, 150);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(264, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Välj status:";
-            // 
-            // FrånvarandeRadioButton
-            // 
-            this.FrånvarandeRadioButton.AutoSize = true;
-            this.FrånvarandeRadioButton.Location = new System.Drawing.Point(267, 58);
-            this.FrånvarandeRadioButton.Name = "FrånvarandeRadioButton";
-            this.FrånvarandeRadioButton.Size = new System.Drawing.Size(85, 17);
-            this.FrånvarandeRadioButton.TabIndex = 6;
-            this.FrånvarandeRadioButton.Text = "Frånvarande";
-            this.FrånvarandeRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // NärvarandeRadioButton
-            // 
-            this.NärvarandeRadioButton.AutoSize = true;
-            this.NärvarandeRadioButton.Checked = true;
-            this.NärvarandeRadioButton.Location = new System.Drawing.Point(267, 35);
-            this.NärvarandeRadioButton.Name = "NärvarandeRadioButton";
-            this.NärvarandeRadioButton.Size = new System.Drawing.Size(81, 17);
-            this.NärvarandeRadioButton.TabIndex = 5;
-            this.NärvarandeRadioButton.TabStop = true;
-            this.NärvarandeRadioButton.Text = "Närvarande";
-            this.NärvarandeRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage6.Controls.Add(this.label10);
-            this.tabPage6.Controls.Add(this.label1);
-            this.tabPage6.Controls.Add(this.button2);
-            this.tabPage6.Controls.Add(this.chart1);
-            this.tabPage6.Controls.Add(this.dataGridView2);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(740, 363);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Dagsöversikt";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(2, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Antal barn";
-            this.label10.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(604, 170);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Tid";
-            this.label1.Visible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(612, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Visa diagram";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(-24, 13);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Barn lämnas";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Barn hämtas";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(779, 184);
-            this.chart1.TabIndex = 11;
-            this.chart1.Text = "chart1";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(34, 204);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(542, 150);
-            this.dataGridView2.TabIndex = 10;
-            // 
             // MittKontoTabControl
             // 
             this.MittKontoTabControl.Controls.Add(this.tabPage1);
@@ -844,6 +652,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Kontouppgifter";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // uppdateraförälder
+            // 
+            this.uppdateraförälder.Location = new System.Drawing.Point(80, 168);
+            this.uppdateraförälder.Name = "uppdateraförälder";
+            this.uppdateraförälder.Size = new System.Drawing.Size(99, 34);
+            this.uppdateraförälder.TabIndex = 21;
+            this.uppdateraförälder.Text = "Uppdatera information";
+            this.uppdateraförälder.UseVisualStyleBackColor = true;
+            this.uppdateraförälder.Click += new System.EventHandler(this.uppdateraförälder_Click);
             // 
             // label5
             // 
@@ -1043,6 +861,209 @@
             this.label39.TabIndex = 16;
             this.label39.Text = "Barn:";
             // 
+            // NärvarotabControl
+            // 
+            this.NärvarotabControl.Controls.Add(this.tabPage5);
+            this.NärvarotabControl.Controls.Add(this.tabPage6);
+            this.NärvarotabControl.Location = new System.Drawing.Point(196, 36);
+            this.NärvarotabControl.Name = "NärvarotabControl";
+            this.NärvarotabControl.SelectedIndex = 0;
+            this.NärvarotabControl.Size = new System.Drawing.Size(748, 389);
+            this.NärvarotabControl.TabIndex = 23;
+            this.NärvarotabControl.Visible = false;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.label17);
+            this.tabPage5.Controls.Add(this.labelSkrivut);
+            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.label15);
+            this.tabPage5.Controls.Add(this.monthCalendar2);
+            this.tabPage5.Controls.Add(this.dataGridView1);
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Controls.Add(this.FrånvarandeRadioButton);
+            this.tabPage5.Controls.Add(this.NärvarandeRadioButton);
+            this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(740, 363);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Närvarohantering";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(509, 180);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(0, 13);
+            this.label17.TabIndex = 20;
+            // 
+            // labelSkrivut
+            // 
+            this.labelSkrivut.AutoSize = true;
+            this.labelSkrivut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSkrivut.Location = new System.Drawing.Point(575, 101);
+            this.labelSkrivut.Name = "labelSkrivut";
+            this.labelSkrivut.Size = new System.Drawing.Size(0, 13);
+            this.labelSkrivut.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(610, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 61);
+            this.button1.TabIndex = 18;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(267, 150);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 23);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Sök valt datum";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(36, 180);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 13);
+            this.label15.TabIndex = 16;
+            // 
+            // monthCalendar2
+            // 
+            this.monthCalendar2.Location = new System.Drawing.Point(35, 13);
+            this.monthCalendar2.Name = "monthCalendar2";
+            this.monthCalendar2.TabIndex = 13;
+            this.monthCalendar2.TodayDate = new System.DateTime(2016, 9, 14, 0, 0, 0, 0);
+            this.monthCalendar2.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar2_DateChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(35, 196);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(541, 150);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(264, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Välj status:";
+            // 
+            // FrånvarandeRadioButton
+            // 
+            this.FrånvarandeRadioButton.AutoSize = true;
+            this.FrånvarandeRadioButton.Location = new System.Drawing.Point(267, 58);
+            this.FrånvarandeRadioButton.Name = "FrånvarandeRadioButton";
+            this.FrånvarandeRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.FrånvarandeRadioButton.TabIndex = 6;
+            this.FrånvarandeRadioButton.Text = "Frånvarande";
+            this.FrånvarandeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // NärvarandeRadioButton
+            // 
+            this.NärvarandeRadioButton.AutoSize = true;
+            this.NärvarandeRadioButton.Checked = true;
+            this.NärvarandeRadioButton.Location = new System.Drawing.Point(267, 35);
+            this.NärvarandeRadioButton.Name = "NärvarandeRadioButton";
+            this.NärvarandeRadioButton.Size = new System.Drawing.Size(81, 17);
+            this.NärvarandeRadioButton.TabIndex = 5;
+            this.NärvarandeRadioButton.TabStop = true;
+            this.NärvarandeRadioButton.Text = "Närvarande";
+            this.NärvarandeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage6.Controls.Add(this.label10);
+            this.tabPage6.Controls.Add(this.label1);
+            this.tabPage6.Controls.Add(this.button2);
+            this.tabPage6.Controls.Add(this.chart1);
+            this.tabPage6.Controls.Add(this.dataGridView2);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(740, 363);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Dagsöversikt";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(2, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Antal barn";
+            this.label10.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(604, 170);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Tid";
+            this.label1.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(612, 252);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Visa diagram";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(-24, 13);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Barn lämnas";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Barn hämtas";
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(779, 184);
+            this.chart1.TabIndex = 11;
+            this.chart1.Text = "chart1";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(34, 204);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(542, 150);
+            this.dataGridView2.TabIndex = 10;
+            // 
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1059,27 +1080,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // uppdateraförälder
-            // 
-            this.uppdateraförälder.Location = new System.Drawing.Point(80, 168);
-            this.uppdateraförälder.Name = "uppdateraförälder";
-            this.uppdateraförälder.Size = new System.Drawing.Size(99, 34);
-            this.uppdateraförälder.TabIndex = 21;
-            this.uppdateraförälder.Text = "Uppdatera information";
-            this.uppdateraförälder.UseVisualStyleBackColor = true;
-            this.uppdateraförälder.Click += new System.EventHandler(this.uppdateraförälder_Click);
-            // 
-            // EndastFörPersonalCheckBox
-            // 
-            this.EndastFörPersonalCheckBox.AutoSize = true;
-            this.EndastFörPersonalCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.EndastFörPersonalCheckBox.Location = new System.Drawing.Point(220, 51);
-            this.EndastFörPersonalCheckBox.Name = "EndastFörPersonalCheckBox";
-            this.EndastFörPersonalCheckBox.Size = new System.Drawing.Size(117, 17);
-            this.EndastFörPersonalCheckBox.TabIndex = 8;
-            this.EndastFörPersonalCheckBox.Text = "Endast för personal";
-            this.EndastFörPersonalCheckBox.UseVisualStyleBackColor = false;
             // 
             // StartPersonal
             // 
@@ -1108,14 +1108,6 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.NärvarotabControl.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1124,6 +1116,14 @@
             this.tabPage4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.NärvarotabControl.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
