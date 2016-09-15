@@ -118,6 +118,11 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.omTabPage = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.informationTabControl.SuspendLayout();
@@ -132,6 +137,7 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
+            this.omTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -350,6 +356,7 @@
             // informationTabControl
             // 
             this.informationTabControl.Controls.Add(this.senasteTabPage);
+            this.informationTabControl.Controls.Add(this.omTabPage);
             this.informationTabControl.Location = new System.Drawing.Point(193, 36);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
@@ -1214,6 +1221,57 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // omTabPage
+            // 
+            this.omTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.omTabPage.Controls.Add(this.label29);
+            this.omTabPage.Controls.Add(this.label28);
+            this.omTabPage.Controls.Add(this.label27);
+            this.omTabPage.Controls.Add(this.label1);
+            this.omTabPage.Location = new System.Drawing.Point(4, 22);
+            this.omTabPage.Name = "omTabPage";
+            this.omTabPage.Size = new System.Drawing.Size(740, 363);
+            this.omTabPage.TabIndex = 1;
+            this.omTabPage.Text = "Om förskolan Drutten";
+            this.omTabPage.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(238, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Om förskolan Drutten";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(104, 129);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(91, 13);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Vi som jobbar här:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(104, 272);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(88, 13);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "Kontaktuppgifter:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(104, 191);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(59, 13);
+            this.label29.TabIndex = 3;
+            this.label29.Text = "Öppettider:";
+            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1254,6 +1312,8 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
+            this.omTabPage.ResumeLayout(false);
+            this.omTabPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1349,5 +1409,10 @@
         private System.Windows.Forms.ListBox listBoxInlägg;
         private System.Windows.Forms.TextBox textBoxRubrik;
         private System.Windows.Forms.TextBox textBoxDatum;
+        private System.Windows.Forms.TabPage omTabPage;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label29;
     }
 }
