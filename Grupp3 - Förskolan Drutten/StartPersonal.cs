@@ -25,7 +25,7 @@ namespace Grupp3___Förskolan_Drutten
 
             listBoxInlägg.ClearSelected();
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInlägg();
+            listBoxInlägg.DataSource = p.HämtaInläggPersonal();
 
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
 
@@ -38,7 +38,7 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
 
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInlägg();
+            listBoxInlägg.DataSource = p.HämtaInläggPersonal();
             //  .Visable Effekter
             informationTabControl.Visible = true;
                 MittKontoTabControl.Visible = false;
@@ -256,7 +256,7 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     p.TaBortInlägg(AktuelltInlägg.Datum, AktuelltInlägg.InläggsId);
                     listBoxInlägg.DataSource = null;
-                    listBoxInlägg.DataSource = p.HämtaInlägg();
+                    listBoxInlägg.DataSource = p.HämtaInläggPersonal();
 
                 }
             }
@@ -269,12 +269,12 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
 
-            p.NyttInlägg(DateTime.Now.ToShortDateString(), textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn);
+            p.NyttInlägg(DateTime.Now.ToShortDateString(), textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn,EndastFörPersonalCheckBox.Checked);
             skyddpanel.Visible = false;
             nyttInläggPanel.Visible = false;
 
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInlägg();
+            listBoxInlägg.DataSource = p.HämtaInläggPersonal();
         }
 
         private void redigeraButton_Click(object sender, EventArgs e)
@@ -298,12 +298,12 @@ namespace Grupp3___Förskolan_Drutten
 
             if (AktuelltInlägg != null)
             {
-                p.UppdateraInlägg(AktuelltInlägg.Datum, textBoxNyRubrik.Text, richTextBoxNyText.Text, AktuelltInlägg.InläggsId);
+                p.UppdateraInlägg(AktuelltInlägg.Datum, textBoxNyRubrik.Text, richTextBoxNyText.Text, AktuelltInlägg.InläggsId,EndastFörPersonalCheckBox.Checked);
                 skyddpanel.Visible = false;
                 nyttInläggPanel.Visible = false;
 
                 listBoxInlägg.DataSource = null;
-                listBoxInlägg.DataSource = p.HämtaInlägg();
+                listBoxInlägg.DataSource = p.HämtaInläggPersonal();
 
             }
         }
@@ -362,8 +362,7 @@ namespace Grupp3___Förskolan_Drutten
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
                 label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
             }
-
-
+            
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)

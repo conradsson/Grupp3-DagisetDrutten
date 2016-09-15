@@ -512,7 +512,7 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         // Hämtar informationsinlägg från db
-        public List<Information> HämtaInlägg()
+        public List<Information> HämtaInläggPersonal()
         {
             string sql = "SELECT * FROM dagis.information ORDER BY  datum DESC";
 
@@ -530,6 +530,32 @@ namespace Grupp3___Förskolan_Drutten
                 i.InläggsRubrik = rad[2].ToString();
                 i.InläggsText = rad[3].ToString();
                 i.SkrivetAv = rad[4].ToString();
+                i.EndastFörPersonal = (bool)rad[5];
+
+                Inlägg.Add(i);
+
+            }
+            return Inlägg;
+        }
+        public List<Information> HämtaInläggFörälder()
+        {
+            string sql = "SELECT i.inläggsid,i.datum,i.inläggsrubrik,i.inläggstext,i.skrivet_av FROM dagis.information i WHERE endast_för_personal = 'FALSE'ORDER BY  datum DESC";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Information> Inlägg = new List<Information>();
+            Information i;
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                i = new Information();
+
+                i.InläggsId = (int)rad[0];
+                i.Datum = rad[1].ToString();
+                i.InläggsRubrik = rad[2].ToString();
+                i.InläggsText = rad[3].ToString();
+                i.SkrivetAv = rad[4].ToString();
+                i.EndastFörPersonal = false;
 
                 Inlägg.Add(i);
 
@@ -537,14 +563,14 @@ namespace Grupp3___Förskolan_Drutten
             return Inlägg;
         }
 
-        public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav)
+        public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav,bool endastFörPersonal)
         {
             Random random = new Random();
 
             try
             {
-                string sql = "insert into dagis.information (inläggsid, datum, inläggsrubrik, inläggstext, skrivet_av)"
-                   + " values (@inläggsid, @datum, @inläggsrubrik, @inläggstext, @skrivet_av)";
+                string sql = "insert into dagis.information (inläggsid, datum, inläggsrubrik, inläggstext, skrivet_av, endast_för_personal)"
+                   + " values (@inläggsid, @datum, @inläggsrubrik, @inläggstext, @skrivet_av, @endast_för_personal)";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@inläggsid", random.Next(1000));
@@ -552,6 +578,7 @@ namespace Grupp3___Förskolan_Drutten
                 cmd.Parameters.AddWithValue("@inläggsrubrik", inläggsrubrik);
                 cmd.Parameters.AddWithValue("@inläggstext", inläggstext);
                 cmd.Parameters.AddWithValue("@skrivet_av", skrivetav);
+                cmd.Parameters.AddWithValue("@endast_för_personal", endastFörPersonal);
 
 
                 dr = cmd.ExecuteReader();
@@ -566,16 +593,17 @@ namespace Grupp3___Förskolan_Drutten
             }
             //conn.Close();
         }
-        public void UppdateraInlägg(string datum, string inläggsrubrik, string inläggstext, int inläggsid)
+        public void UppdateraInlägg(string datum, string inläggsrubrik, string inläggstext, int inläggsid, bool endastFörPersonal)
         {
             try
             {
-                string sql = "update dagis.information SET inläggsrubrik = '" + inläggsrubrik + "', inläggstext ='" + inläggstext + "', datum = '" + DateTime.Now.ToShortDateString() + "' where inläggsid = '" + inläggsid + "' and datum = '" + datum + "';";
+                string sql = "update dagis.information SET inläggsrubrik = '" + inläggsrubrik + "', inläggstext ='" + inläggstext + "', datum = '" + DateTime.Now.ToShortDateString() + "', endast_för_personal = '"+ endastFörPersonal +"' where inläggsid = '" + inläggsid + "' and datum = '" + datum + "';";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@datum", DateTime.Now.ToShortDateString());
                 cmd.Parameters.AddWithValue("@inläggsrubrik", inläggsrubrik);
                 cmd.Parameters.AddWithValue("@inläggstext", inläggstext);
+                cmd.Parameters.AddWithValue("@endast_för_personal", endastFörPersonal);
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
@@ -598,7 +626,7 @@ namespace Grupp3___Förskolan_Drutten
                 cmd = new NpgsqlCommand(sql, conn);
                 dr = cmd.ExecuteReader();
 
-                //HämtaInlägg();  // HÄMTAR INLÄGG
+                //HämtaInläggPersonal();  // HÄMTAR INLÄGG
 
                 dr.Close();
                 MessageBox.Show("Inlägget har tagits bort!");
