@@ -35,7 +35,10 @@ namespace Grupp3___Förskolan_Drutten
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
+            Postgres p = new Postgres();
 
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtaInlägg();
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
@@ -524,9 +527,6 @@ namespace Grupp3___Förskolan_Drutten
 
             if (AktuelltInlägg != null)
             {
-                listBoxInlägg.ClearSelected();
-                listBoxInlägg.DataSource = null;
-                listBoxInlägg.DataSource = p.HämtaInlägg();
 
                 textBoxDatum.Text = AktuelltInlägg.Datum;
                 textBoxRubrik.Text = AktuelltInlägg.InläggsRubrik;
