@@ -435,8 +435,9 @@ namespace Grupp3___Förskolan_Drutten
         private void button4_Click(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
-            MessageBox.Show(p.HämtaFramtidaTider(dateTimePicker1.Value, dateTimePicker2.Value).ToString());
+            //MessageBox.Show(p.HämtaFramtidaTider(dateTimePicker1.Value, dateTimePicker2.Value).ToString());
 
+            labelTotaltAntalBarn.Text = "Totalt antal barn på förskolan mellan " + dateTimePicker1.Value.ToString("yy-MM-dd") + " och " + dateTimePicker2.Value.ToString("yy-MM-dd") + ": " + p.HämtaFramtidaTider(dateTimePicker1.Value, dateTimePicker2.Value).ToString();
 
 
 

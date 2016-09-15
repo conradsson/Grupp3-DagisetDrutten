@@ -142,9 +142,9 @@ namespace Grupp3___Förskolan_Drutten
 
         private void MobilLink_Click(object sender, EventArgs e)
         {
-            StartFörälderMobil m = new StartFörälderMobil();
+            MobilBankId b = new MobilBankId();
 
-            m.Show();
+            b.Show();
         }
 
         // Mathilda
