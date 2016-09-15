@@ -152,7 +152,9 @@ namespace Grupp3___Förskolan_Drutten
             string meddelande;
             try
             {
-                string sql = "insert into dagis.franvaro (datum, barnid, sjuk, ledig) values (@datum, @barnid, @sjuk, @ledig);";
+
+                string sql = "insert into dagis.franvaro (datum, barnid, sjuk, ledig) values (@datum, @barnid, @sjuk, @ledig); "
+                            + "delete from dagis.narvaro where narvaro.datum = @datum and narvaro.barnid = @barnid";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@datum", datum);
@@ -177,6 +179,7 @@ namespace Grupp3___Förskolan_Drutten
             System.Windows.Forms.MessageBox.Show(meddelande);
             conn.Close();
         }
+
 
         /// <summary>
         ///  Metod för att lägga till tider till ett barn
