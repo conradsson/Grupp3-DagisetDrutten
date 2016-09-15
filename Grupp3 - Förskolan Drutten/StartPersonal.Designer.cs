@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -90,6 +90,9 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.labelTotaltAntalBarn = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
@@ -119,9 +122,8 @@
             this.label39 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.labelTotaltAntalBarn = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -135,12 +137,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.BarntabControl.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // kontoTypLabel
@@ -169,7 +171,7 @@
             // informationTabControl
             // 
             this.informationTabControl.Controls.Add(this.senasteTabPage);
-            this.informationTabControl.Location = new System.Drawing.Point(446, -152);
+            this.informationTabControl.Location = new System.Drawing.Point(193, 36);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
             this.informationTabControl.Size = new System.Drawing.Size(748, 389);
@@ -446,6 +448,7 @@
             this.panel1.Controls.Add(this.loggaUtButton);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
+            this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -809,21 +812,21 @@
             // 
             // chart1
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart1.Legends.Add(legend10);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(-24, 13);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series19.ChartArea = "ChartArea1";
-            series19.Legend = "Legend1";
-            series19.Name = "Barn lämnas";
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Barn hämtas";
-            this.chart1.Series.Add(series19);
-            this.chart1.Series.Add(series20);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Barn lämnas";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Barn hämtas";
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(779, 184);
             this.chart1.TabIndex = 11;
             this.chart1.Text = "chart1";
@@ -838,6 +841,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.dataGridView3);
             this.tabPage2.Controls.Add(this.labelTotaltAntalBarn);
@@ -851,23 +856,54 @@
             this.tabPage2.Text = "Framtidsöversikt";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(322, 97);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "label11";
+            this.label11.Visible = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(30, 115);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(642, 232);
+            this.dataGridView3.TabIndex = 8;
+            // 
+            // labelTotaltAntalBarn
+            // 
+            this.labelTotaltAntalBarn.AutoSize = true;
+            this.labelTotaltAntalBarn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotaltAntalBarn.Location = new System.Drawing.Point(31, 97);
+            this.labelTotaltAntalBarn.Name = "labelTotaltAntalBarn";
+            this.labelTotaltAntalBarn.Size = new System.Drawing.Size(41, 13);
+            this.labelTotaltAntalBarn.TabIndex = 6;
+            this.labelTotaltAntalBarn.Text = "label11";
+            this.labelTotaltAntalBarn.Visible = false;
+            // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(356, 19);
+            this.dateTimePicker2.Location = new System.Drawing.Point(356, 30);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 5;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(30, 19);
+            this.dateTimePicker1.Location = new System.Drawing.Point(30, 30);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(600, 16);
+            this.button4.Location = new System.Drawing.Point(600, 27);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 23);
             this.button4.TabIndex = 2;
@@ -983,7 +1019,6 @@
             this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
             this.tabPage4.Controls.Add(this.barnAvdl2ListBox);
             this.tabPage4.Controls.Add(this.label39);
-            this.tabPage4.Controls.Add(this.informationTabControl);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1130,35 +1165,27 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // labelTotaltAntalBarn
+            // label12
             // 
-            this.labelTotaltAntalBarn.AutoSize = true;
-            this.labelTotaltAntalBarn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotaltAntalBarn.Location = new System.Drawing.Point(31, 97);
-            this.labelTotaltAntalBarn.Name = "labelTotaltAntalBarn";
-            this.labelTotaltAntalBarn.Size = new System.Drawing.Size(41, 13);
-            this.labelTotaltAntalBarn.TabIndex = 6;
-            this.labelTotaltAntalBarn.Text = "label11";
-            this.labelTotaltAntalBarn.Visible = false;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(29, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Från:";
+            this.label12.Visible = false;
             // 
-            // dataGridView3
+            // label19
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(30, 115);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(642, 180);
-            this.dataGridView3.TabIndex = 8;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(322, 97);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "label11";
-            this.label11.Visible = false;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(355, 14);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(23, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Till:";
+            this.label19.Visible = false;
             // 
             // StartPersonal
             // 
@@ -1197,6 +1224,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1205,7 +1233,6 @@
             this.tabPage4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1300,5 +1327,7 @@
         private System.Windows.Forms.Label labelTotaltAntalBarn;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label12;
     }
 }
