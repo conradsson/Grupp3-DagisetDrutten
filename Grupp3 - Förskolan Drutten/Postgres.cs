@@ -442,7 +442,6 @@ namespace Grupp3___Förskolan_Drutten
                     närvaro.HämtasAv = rad[3].ToString();
 
                     BarnTider.Add(närvaro);
-
                 }
             
             return BarnTider;

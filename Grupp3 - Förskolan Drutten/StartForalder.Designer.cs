@@ -123,7 +123,7 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridViewBarnTider = new System.Windows.Forms.DataGridView();
+            this.listBoxBarnetsTider = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
@@ -139,7 +139,6 @@
             this.senasteTabPage.SuspendLayout();
             this.omTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarnTider)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -574,7 +573,7 @@
             // tabPage3
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage3.Controls.Add(this.dataGridViewBarnTider);
+            this.tabPage3.Controls.Add(this.listBoxBarnetsTider);
             this.tabPage3.Controls.Add(this.tiderBarnListBox);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.label2);
@@ -1275,13 +1274,13 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // dataGridViewBarnTider
+            // listBoxBarnetsTider
             // 
-            this.dataGridViewBarnTider.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBarnTider.Location = new System.Drawing.Point(272, 23);
-            this.dataGridViewBarnTider.Name = "dataGridViewBarnTider";
-            this.dataGridViewBarnTider.Size = new System.Drawing.Size(429, 132);
-            this.dataGridViewBarnTider.TabIndex = 14;
+            this.listBoxBarnetsTider.FormattingEnabled = true;
+            this.listBoxBarnetsTider.Location = new System.Drawing.Point(391, 24);
+            this.listBoxBarnetsTider.Name = "listBoxBarnetsTider";
+            this.listBoxBarnetsTider.Size = new System.Drawing.Size(290, 95);
+            this.listBoxBarnetsTider.TabIndex = 14;
             // 
             // StartForalder
             // 
@@ -1325,7 +1324,6 @@
             this.omTabPage.ResumeLayout(false);
             this.omTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarnTider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1426,6 +1424,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.DataGridView dataGridViewBarnTider;
+        private System.Windows.Forms.ListBox listBoxBarnetsTider;
     }
 }

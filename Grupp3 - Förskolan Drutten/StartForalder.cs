@@ -249,10 +249,9 @@ namespace Grupp3___Förskolan_Drutten
                     comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
                 }
-                dataGridViewBarnTider.DataSource = null;
-                dataGridViewBarnTider.DataSource = BarnTider;
-             
-            }
+                listBoxBarnetsTider.DataSource = null;
+                listBoxBarnetsTider.DataSource = BarnTider;
+                }
             //else
             //{
             //    MessageBox.Show("Välj ett barn i listan.");
