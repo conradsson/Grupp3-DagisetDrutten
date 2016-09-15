@@ -90,6 +90,8 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.labelTotaltAntalBarn = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
@@ -119,8 +121,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.labelTotaltAntalBarn = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -167,7 +167,7 @@
             // informationTabControl
             // 
             this.informationTabControl.Controls.Add(this.senasteTabPage);
-            this.informationTabControl.Location = new System.Drawing.Point(446, -152);
+            this.informationTabControl.Location = new System.Drawing.Point(193, 36);
             this.informationTabControl.Name = "informationTabControl";
             this.informationTabControl.SelectedIndex = 0;
             this.informationTabControl.Size = new System.Drawing.Size(748, 389);
@@ -200,7 +200,7 @@
             // skyddpanel
             // 
             this.skyddpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.skyddpanel.Location = new System.Drawing.Point(0, -2);
+            this.skyddpanel.Location = new System.Drawing.Point(0, -1);
             this.skyddpanel.MaximumSize = new System.Drawing.Size(735, 363);
             this.skyddpanel.MinimumSize = new System.Drawing.Size(735, 363);
             this.skyddpanel.Name = "skyddpanel";
@@ -439,12 +439,13 @@
             this.panel1.Controls.Add(this.informationButton);
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.barnButton);
+            this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
+            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -848,6 +849,23 @@
             this.tabPage2.Text = "Framtidsöversikt";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(30, 144);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(494, 95);
+            this.listBox2.TabIndex = 7;
+            // 
+            // labelTotaltAntalBarn
+            // 
+            this.labelTotaltAntalBarn.AutoSize = true;
+            this.labelTotaltAntalBarn.Location = new System.Drawing.Point(31, 99);
+            this.labelTotaltAntalBarn.Name = "labelTotaltAntalBarn";
+            this.labelTotaltAntalBarn.Size = new System.Drawing.Size(41, 13);
+            this.labelTotaltAntalBarn.TabIndex = 6;
+            this.labelTotaltAntalBarn.Text = "label11";
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(356, 19);
@@ -980,7 +998,6 @@
             this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
             this.tabPage4.Controls.Add(this.barnAvdl2ListBox);
             this.tabPage4.Controls.Add(this.label39);
-            this.tabPage4.Controls.Add(this.informationTabControl);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1126,23 +1143,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // labelTotaltAntalBarn
-            // 
-            this.labelTotaltAntalBarn.AutoSize = true;
-            this.labelTotaltAntalBarn.Location = new System.Drawing.Point(31, 99);
-            this.labelTotaltAntalBarn.Name = "labelTotaltAntalBarn";
-            this.labelTotaltAntalBarn.Size = new System.Drawing.Size(41, 13);
-            this.labelTotaltAntalBarn.TabIndex = 6;
-            this.labelTotaltAntalBarn.Text = "label11";
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(30, 144);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(494, 95);
-            this.listBox2.TabIndex = 7;
             // 
             // StartPersonal
             // 

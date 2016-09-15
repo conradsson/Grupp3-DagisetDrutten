@@ -44,6 +44,10 @@
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.TidertabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.listBoxBarnetsTider = new System.Windows.Forms.ListBox();
             this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -124,10 +128,6 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -169,9 +169,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -392,6 +392,42 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Meddela tider";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(524, 20);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(61, 13);
+            this.label33.TabIndex = 18;
+            this.label33.Text = "Hämtas av:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(463, 20);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(34, 13);
+            this.label32.TabIndex = 17;
+            this.label32.Text = "Till kl:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(415, 20);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(42, 13);
+            this.label31.TabIndex = 16;
+            this.label31.Text = "Från kl:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(316, 20);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(41, 13);
+            this.label30.TabIndex = 15;
+            this.label30.Text = "Datum:";
             // 
             // listBoxBarnetsTider
             // 
@@ -1290,42 +1326,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(316, 20);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(41, 13);
-            this.label30.TabIndex = 15;
-            this.label30.Text = "Datum:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(415, 20);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(42, 13);
-            this.label31.TabIndex = 16;
-            this.label31.Text = "Från kl:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(463, 20);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(34, 13);
-            this.label32.TabIndex = 17;
-            this.label32.Text = "Till kl:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(524, 20);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 13);
-            this.label33.TabIndex = 18;
-            this.label33.Text = "Hämtas av:";
             // 
             // StartForalder
             // 

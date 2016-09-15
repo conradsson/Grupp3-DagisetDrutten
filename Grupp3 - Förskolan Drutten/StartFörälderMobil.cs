@@ -12,9 +12,30 @@ namespace Grupp3___Förskolan_Drutten
 {
     public partial class StartFörälderMobil : Form
     {
+        Postgres p = new Postgres();
+        Person AktuellPerson = new Person()
+        {
+            Användarnamn = "jaho",
+            Förnamn = "James",
+            Efternamn = "Hooper",
+            Personid = 11,
+            Telefonnr = "070-7591018",
+            Lösenord = "1234",
+            ÄrFörälder = true,
+            ÄrPersonal = false,
+
+    };
+        
         public StartFörälderMobil()
         {
             InitializeComponent();
+            listBoxInlägg.ClearSelected();
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtaInläggFörälder();
+
+            informationTabControl.Visible = true;
+
+            inloggadAnvändareLabel.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
         }
 
         private void menyButton_Click(object sender, EventArgs e)
@@ -70,10 +91,28 @@ namespace Grupp3___Förskolan_Drutten
 
         private void mittKontoButton_Click(object sender, EventArgs e)
         {
+            Postgres p = new Postgres();
 
+
+            textBoxFörnamnMittKonto.Text = AktuellPerson.Förnamn;
+            textBoxEfternamnMittKonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnummerMittKonto.Text = AktuellPerson.Telefonnr;
+
+
+            List<Barn> barnlista = new List<Barn>();
+            barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
+            listAktuellaBarn.DataSource = null;
+            listAktuellaBarn.DataSource = barnlista;
+            listAktuellaBarn.ClearSelected();
+            textBoxFornamn.Clear();
+            textBoxEfternamn.Clear();
+            textBoxAllergier.Clear();
+            richTextBoxAnnat.Clear();
 
             MenyPanel.Visible = false;
             menyButtonÖppnad.Visible = false;
+            MittKontoTabControl.Visible = true;
+            informationTabControl.Visible = false;
             menyButtonÖppnad.BackgroundImage = Properties.Resources.MiniMobilButtonDrutten;
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
         }
@@ -95,6 +134,27 @@ namespace Grupp3___Förskolan_Drutten
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
         {
             tiderButton.BackgroundImage = Properties.Resources.tiderButtonDruttenPushed;
+        }
+
+        private void listBoxInlägg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+            Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
+
+            if (AktuelltInlägg != null)
+            {
+
+                textBoxDatum.Text = AktuelltInlägg.Datum;
+                textBoxRubrik.Text = AktuelltInlägg.InläggsRubrik;
+                richTextBoxPubliceradeInlägg.Text = AktuelltInlägg.InläggsText;
+
+                textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
+            }
+        }
+
+        private void listAktuellaBarn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
