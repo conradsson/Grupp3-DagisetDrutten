@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -50,6 +50,7 @@
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.nyttInläggPanel = new System.Windows.Forms.Panel();
+            this.uppdateraInläggButton = new System.Windows.Forms.Button();
             this.textBoxNyRubrik = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -122,7 +123,6 @@
             this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.uppdateraInläggButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -327,9 +327,21 @@
             this.nyttInläggPanel.TabIndex = 27;
             this.nyttInläggPanel.Visible = false;
             // 
+            // uppdateraInläggButton
+            // 
+            this.uppdateraInläggButton.Location = new System.Drawing.Point(427, 312);
+            this.uppdateraInläggButton.Name = "uppdateraInläggButton";
+            this.uppdateraInläggButton.Size = new System.Drawing.Size(75, 23);
+            this.uppdateraInläggButton.TabIndex = 7;
+            this.uppdateraInläggButton.Text = "Uppdatera";
+            this.uppdateraInläggButton.UseVisualStyleBackColor = true;
+            this.uppdateraInläggButton.Visible = false;
+            this.uppdateraInläggButton.Click += new System.EventHandler(this.uppdateraInläggButton_Click);
+            // 
             // textBoxNyRubrik
             // 
             this.textBoxNyRubrik.Location = new System.Drawing.Point(48, 50);
+            this.textBoxNyRubrik.MaxLength = 20;
             this.textBoxNyRubrik.Name = "textBoxNyRubrik";
             this.textBoxNyRubrik.Size = new System.Drawing.Size(151, 20);
             this.textBoxNyRubrik.TabIndex = 5;
@@ -937,21 +949,21 @@
             // 
             // chart1
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(-24, 13);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series13.ChartArea = "ChartArea1";
-            series13.Legend = "Legend1";
-            series13.Name = "Barn lämnas";
-            series14.ChartArea = "ChartArea1";
-            series14.Legend = "Legend1";
-            series14.Name = "Barn hämtas";
-            this.chart1.Series.Add(series13);
-            this.chart1.Series.Add(series14);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Barn lämnas";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Barn hämtas";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(779, 184);
             this.chart1.TabIndex = 11;
             this.chart1.Text = "chart1";
@@ -1151,17 +1163,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // uppdateraInläggButton
-            // 
-            this.uppdateraInläggButton.Location = new System.Drawing.Point(427, 312);
-            this.uppdateraInläggButton.Name = "uppdateraInläggButton";
-            this.uppdateraInläggButton.Size = new System.Drawing.Size(75, 23);
-            this.uppdateraInläggButton.TabIndex = 7;
-            this.uppdateraInläggButton.Text = "Uppdatera";
-            this.uppdateraInläggButton.UseVisualStyleBackColor = true;
-            this.uppdateraInläggButton.Visible = false;
-            this.uppdateraInläggButton.Click += new System.EventHandler(this.uppdateraInläggButton_Click);
             // 
             // StartPersonal
             // 

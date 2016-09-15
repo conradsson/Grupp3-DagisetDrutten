@@ -23,9 +23,9 @@ namespace Grupp3___Förskolan_Drutten
 
             AktuellPerson = aktuellperson;
 
+            listBoxInlägg.ClearSelected();
             listBoxInlägg.DataSource = null;
             listBoxInlägg.DataSource = p.HämtaInlägg();
-
 
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
 
@@ -253,6 +253,8 @@ namespace Grupp3___Förskolan_Drutten
                 if (AktuelltInlägg != null)
                 {
                     p.TaBortInlägg(AktuelltInlägg.Datum, AktuelltInlägg.InläggsId);
+                    listBoxInlägg.DataSource = null;
+                    listBoxInlägg.DataSource = p.HämtaInlägg();
 
                 }
             }
