@@ -169,6 +169,10 @@ namespace Grupp3___Förskolan_Drutten
             catch (NpgsqlException ex)
             {
                 meddelande = ex.Message;
+                if (meddelande.Contains("23505"))
+                {
+                    meddelande = "Frånvaro är redan registrerat detta datum.";
+                }
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
             conn.Close();
