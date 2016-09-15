@@ -19,12 +19,27 @@ namespace Grupp3___Förskolan_Drutten
 
         private void menyButton_Click(object sender, EventArgs e)
         {
+            MenyPanel.Visible = true;
+            menyButtonÖppnad.Visible = true;
             menyButton.BackgroundImage = Properties.Resources.MiniMobilButtonDrutten;
         }
-
         private void menyButton_MouseDown(object sender, MouseEventArgs e)
         {
             menyButton.BackgroundImage = Properties.Resources.MiniMobilButtonDruttenPushed;
         }
+        private void menyButtonÖppnad_Click(object sender, EventArgs e)
+        {
+            MenyPanel.Visible = false;
+            menyButtonÖppnad.Visible = false;
+            menyButtonÖppnad.BackgroundImage = Properties.Resources.MiniMobilButtonDrutten;
+        }
+        private void menyButtonÖppnad_MouseDown(object sender, MouseEventArgs e)
+        {
+            menyButtonÖppnad.BackgroundImage = Properties.Resources.MiniMobilButtonDruttenPushed;
+        }
+
+
+
+
     }
 }
