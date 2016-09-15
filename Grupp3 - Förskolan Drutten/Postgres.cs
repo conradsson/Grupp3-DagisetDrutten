@@ -591,7 +591,7 @@ namespace Grupp3___Förskolan_Drutten
                 cmd = new NpgsqlCommand(sql, conn);
                 dr = cmd.ExecuteReader();
 
-                HämtaInlägg();  // HÄMTAR INLÄGG
+                //HämtaInlägg();  // HÄMTAR INLÄGG
 
                 dr.Close();
                 MessageBox.Show("Inlägget har tagits bort!");
