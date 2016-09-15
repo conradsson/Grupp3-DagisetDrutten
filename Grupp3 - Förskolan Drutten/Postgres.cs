@@ -1060,7 +1060,7 @@ namespace Grupp3___Förskolan_Drutten
         /// <summary>
         /// Uppdaterar barn på inloggad förälder.
         /// </summary>
-        public void UppdateraFörälder(int id, string förnamn, string efternamn, string telefonnummer)
+        public void UppdateraPerson(int id, string förnamn, string efternamn, string telefonnummer)
         {
 
             string meddelande;
