@@ -53,6 +53,7 @@
             this.encryptTextBox = new System.Windows.Forms.TextBox();
             this.losenordENCRYPTtextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.MobilLink = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +63,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.MobilLink);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label5);
@@ -323,6 +325,18 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Lösenord:";
             // 
+            // MobilLink
+            // 
+            this.MobilLink.AutoSize = true;
+            this.MobilLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobilLink.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.MobilLink.Location = new System.Drawing.Point(162, 260);
+            this.MobilLink.Name = "MobilLink";
+            this.MobilLink.Size = new System.Drawing.Size(32, 13);
+            this.MobilLink.TabIndex = 14;
+            this.MobilLink.Text = "Mobil";
+            this.MobilLink.Click += new System.EventHandler(this.MobilLink_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +389,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Label MobilLink;
     }
 }
 
