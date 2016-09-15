@@ -41,6 +41,8 @@
             this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
             this.LoggaInButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.copyButton = new System.Windows.Forms.Button();
@@ -51,12 +53,10 @@
             this.encryptTextBox = new System.Windows.Forms.TextBox();
             this.losenordENCRYPTtextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -86,6 +86,7 @@
             this.label10.Size = new System.Drawing.Size(180, 13);
             this.label10.TabIndex = 13;
             this.label10.Text = " Användarnamn för Mellanläget: otsv";
+            this.label10.Visible = false;
             // 
             // label9
             // 
@@ -95,6 +96,7 @@
             this.label9.Size = new System.Drawing.Size(108, 13);
             this.label9.TabIndex = 12;
             this.label9.Text = "alla lösenord är: 1234";
+            this.label9.Visible = false;
             // 
             // label5
             // 
@@ -104,6 +106,7 @@
             this.label5.Size = new System.Drawing.Size(208, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = " Användarnamn för Personal Formen: arwe";
+            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -113,6 +116,7 @@
             this.label4.Size = new System.Drawing.Size(202, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = " Användarnamn för Förälder Formen: jagu";
+            this.label4.Visible = false;
             // 
             // label3
             // 
@@ -139,9 +143,9 @@
             this.losenordTextbox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.losenordTextbox.Location = new System.Drawing.Point(126, 154);
             this.losenordTextbox.Name = "losenordTextbox";
+            this.losenordTextbox.PasswordChar = '*';
             this.losenordTextbox.Size = new System.Drawing.Size(123, 20);
             this.losenordTextbox.TabIndex = 2;
-            this.losenordTextbox.Text = "1234";
             this.losenordTextbox.Enter += new System.EventHandler(this.losenordTextbox_Enter);
             this.losenordTextbox.Leave += new System.EventHandler(this.losenordTextbox_Leave);
             // 
@@ -188,6 +192,25 @@
             this.groupBox1.Size = new System.Drawing.Size(524, 443);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
+            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(524, 443);
+            this.panel1.TabIndex = 3;
             // 
             // exitButton
             // 
@@ -300,25 +323,6 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Lösenord:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
-            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(524, 443);
-            this.panel1.TabIndex = 3;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,9 +342,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
