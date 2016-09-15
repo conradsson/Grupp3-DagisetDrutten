@@ -95,8 +95,10 @@ namespace Grupp3___Förskolan_Drutten
             tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
 
             List<Barn> barnlista = new List<Barn>();
+            List<Närvaro> BarnTider = new List<Närvaro>();
             Postgres p = new Postgres();
             //Login l = new Login();
+
             barnlista = p.HämtaFöräldersBarn(AktuellPerson.Personid);
             tiderBarnListBox.DataSource = null;
             tiderBarnListBox.DataSource = barnlista;
@@ -107,6 +109,18 @@ namespace Grupp3___Förskolan_Drutten
 
             groupBox2.Visible = false;
             groupBox3.Visible = false;
+
+            Postgres p1 = new Postgres();
+            Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            if (aktuelltbarn != null)
+            {  
+                BarnTider = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                listBoxBarnetsTider.ClearSelected();
+                listBoxBarnetsTider.ValueMember = "visaBarnTider";
+                listBoxBarnetsTider.DataSource = null;
+                listBoxBarnetsTider.DataSource = BarnTider;
+            }
+           
             //tiderBarnListBox.ClearSelected();
             //listBoxMeddelaHämtning.ClearSelected();
             //listBoxMeddelaFrånvaro.ClearSelected();
@@ -217,8 +231,11 @@ namespace Grupp3___Förskolan_Drutten
             if (aktuelltbarn != null)
             {
                 Postgres p = new Postgres();
-                BarnTider = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
-                listBoxBarnetsTider.ClearSelected();
+                //BarnTider = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                //listBoxBarnetsTider.ClearSelected();
+                //listBoxBarnetsTider.ValueMember = "visaBarnTider";
+                //listBoxBarnetsTider.DataSource = null;
+                //listBoxBarnetsTider.DataSource = BarnTider;
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
@@ -250,9 +267,7 @@ namespace Grupp3___Förskolan_Drutten
                     comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
                 }
-                listBoxBarnetsTider.ValueMember = "visaBarnTider";
-                listBoxBarnetsTider.DataSource = null;
-                listBoxBarnetsTider.DataSource = BarnTider;
+                
                 }
             //else
             //{
