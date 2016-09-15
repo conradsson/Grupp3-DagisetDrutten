@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -113,6 +113,7 @@
             this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.EndastFörPersonalCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -299,6 +300,7 @@
             // 
             this.nyttInläggPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.nyttInläggPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.nyttInläggPanel.Controls.Add(this.EndastFörPersonalCheckBox);
             this.nyttInläggPanel.Controls.Add(this.uppdateraInläggButton);
             this.nyttInläggPanel.Controls.Add(this.textBoxNyRubrik);
             this.nyttInläggPanel.Controls.Add(this.label7);
@@ -936,21 +938,21 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(-24, 13);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Barn lämnas";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Barn hämtas";
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Barn lämnas";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Barn hämtas";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(779, 184);
             this.chart1.TabIndex = 11;
             this.chart1.Text = "chart1";
@@ -1055,6 +1057,17 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // EndastFörPersonalCheckBox
+            // 
+            this.EndastFörPersonalCheckBox.AutoSize = true;
+            this.EndastFörPersonalCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.EndastFörPersonalCheckBox.Location = new System.Drawing.Point(220, 51);
+            this.EndastFörPersonalCheckBox.Name = "EndastFörPersonalCheckBox";
+            this.EndastFörPersonalCheckBox.Size = new System.Drawing.Size(117, 17);
+            this.EndastFörPersonalCheckBox.TabIndex = 8;
+            this.EndastFörPersonalCheckBox.Text = "Endast för personal";
+            this.EndastFörPersonalCheckBox.UseVisualStyleBackColor = false;
             // 
             // StartPersonal
             // 
@@ -1184,5 +1197,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button uppdateraInläggButton;
+        private System.Windows.Forms.CheckBox EndastFörPersonalCheckBox;
     }
 }
