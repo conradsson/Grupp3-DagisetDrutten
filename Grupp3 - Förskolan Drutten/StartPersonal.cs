@@ -375,8 +375,7 @@ namespace Grupp3___Förskolan_Drutten
 
             if (AktuelltInlägg != null)
             {
-                listBoxInlägg.DataSource = null;
-                listBoxInlägg.DataSource = p.HämtaInlägg();
+
 
                 textBoxDatum.Text = AktuelltInlägg.Datum;
                 textBoxRubrik.Text = AktuelltInlägg.InläggsRubrik;
