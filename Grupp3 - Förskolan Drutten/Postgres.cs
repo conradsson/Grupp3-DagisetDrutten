@@ -868,6 +868,38 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
             return svar;
         }
+        public Int64 HämtaFramtidaTider(DateTime AktuelltDatumFrån, DateTime AktuelltDatumTill)
+        {
+            Int64 svar = 0;
+
+            try
+            {
+                string sql = "SELECT COUNT(narvaro.datum) as antal FROM dagis.narvaro WHERE datum BETWEEN('" + AktuelltDatumFrån + "') AND ('" + AktuelltDatumTill + "')";
+                
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+
+
+                    svar = (Int64)dr["antal"];
+
+                    return svar;
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+                svar = Convert.ToInt32(ex.Message);
+                return svar;
+            }
+
+            dr.Close();
+            conn.Close();
+            return svar;
+        }
         public Int64 HämtaDagensTiderHämtas(DateTime AktuelltDatum, int tid)
         {
             Int64 svar = 0;
