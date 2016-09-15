@@ -227,10 +227,11 @@ namespace Grupp3___Förskolan_Drutten
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
             List<Närvaro> BarnTider = new List<Närvaro>();
+            Postgres p = new Postgres();
 
             if (aktuelltbarn != null)
             {
-                Postgres p = new Postgres();
+                
                 //BarnTider = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
                 //listBoxBarnetsTider.ClearSelected();
                 //listBoxBarnetsTider.ValueMember = "visaBarnTider";
