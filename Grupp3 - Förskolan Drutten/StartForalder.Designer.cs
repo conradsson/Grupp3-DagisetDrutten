@@ -452,7 +452,7 @@
             this.groupBox3.Size = new System.Drawing.Size(154, 159);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Uppdatera befintliga tider";
+            this.groupBox3.Text = "Uppdatera befintlig tid";
             // 
             // comboBoxUppdateraTill2
             // 
@@ -604,7 +604,7 @@
             this.groupBox2.Size = new System.Drawing.Size(154, 159);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lägg till nya tider";
+            this.groupBox2.Text = "Lägg till ny tid";
             // 
             // comboBoxTill2
             // 
