@@ -362,8 +362,7 @@ namespace Grupp3___Förskolan_Drutten
                 barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
                 label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
             }
-
-
+            
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
