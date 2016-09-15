@@ -81,6 +81,8 @@ namespace Grupp3___Förskolan_Drutten
 
             MenyPanel.Visible = false;
             menyButtonÖppnad.Visible = false;
+            informationTabControl.Visible = true;
+            MittKontoTabControl.Visible = false;
             menyButtonÖppnad.BackgroundImage = Properties.Resources.MiniMobilButtonDrutten;
             informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
         }
@@ -154,7 +156,37 @@ namespace Grupp3___Förskolan_Drutten
 
         private void listAktuellaBarn_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Postgres p = new Postgres();
+            Barn valdBarn = new Barn();
+            valdBarn = (Barn)listAktuellaBarn.SelectedItem;
 
+            if (valdBarn != null)
+            {
+                textBoxFornamn.Text = valdBarn.Förnamn.ToString();
+                textBoxEfternamn.Text = valdBarn.Efternamn.ToString();
+                textBoxAllergier.Text = valdBarn.Allergier.ToString();
+                richTextBoxAnnat.Text = valdBarn.Annat.ToString();
+
+                listAktuellaBarn.DisplayMember = "visaBarn";
+
+            }
+        }
+
+        private void loggaUtButton_Click(object sender, EventArgs e)
+        {
+            loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonDrutten;
+
+            DialogResult result = MessageBox.Show("Är du säker på att du vill logga ut?", "Logga ut", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                new Login().Show();
+            }
+        }
+
+        private void loggaUtButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonDruttenPushed;
         }
     }
 }

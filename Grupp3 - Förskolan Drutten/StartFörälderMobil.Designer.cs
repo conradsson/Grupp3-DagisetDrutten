@@ -79,6 +79,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxFornamn = new System.Windows.Forms.TextBox();
+            this.loggaUtButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenyPanel.SuspendLayout();
             this.informationTabControl.SuspendLayout();
@@ -131,6 +132,7 @@
             this.MenyPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.MenyPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MenyPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MenyPanel.Controls.Add(this.loggaUtButton);
             this.MenyPanel.Controls.Add(this.informationButton);
             this.MenyPanel.Controls.Add(this.tiderButton);
             this.MenyPanel.Controls.Add(this.mittKontoButton);
@@ -646,13 +648,35 @@
             this.textBoxFornamn.Size = new System.Drawing.Size(100, 20);
             this.textBoxFornamn.TabIndex = 14;
             // 
+            // loggaUtButton
+            // 
+            this.loggaUtButton.BackColor = System.Drawing.Color.Transparent;
+            this.loggaUtButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.loggaUtButtonDrutten;
+            this.loggaUtButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loggaUtButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.loggaUtButton.FlatAppearance.BorderSize = 0;
+            this.loggaUtButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.loggaUtButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.loggaUtButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.loggaUtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loggaUtButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggaUtButton.ForeColor = System.Drawing.Color.Black;
+            this.loggaUtButton.Location = new System.Drawing.Point(56, 3);
+            this.loggaUtButton.Name = "loggaUtButton";
+            this.loggaUtButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.loggaUtButton.Size = new System.Drawing.Size(94, 28);
+            this.loggaUtButton.TabIndex = 28;
+            this.loggaUtButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loggaUtButton.UseVisualStyleBackColor = false;
+            this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
+            this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
+            // 
             // StartFörälderMobil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.Background1024x600;
             this.ClientSize = new System.Drawing.Size(344, 563);
-            this.Controls.Add(this.MittKontoTabControl);
             this.Controls.Add(this.inloggadAnvändareLabel);
             this.Controls.Add(this.inloggadButton);
             this.Controls.Add(this.klocklabel2);
@@ -663,6 +687,7 @@
             this.Controls.Add(this.MenyPanel);
             this.Controls.Add(this.menyButton);
             this.Controls.Add(this.informationTabControl);
+            this.Controls.Add(this.MittKontoTabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -737,5 +762,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxFornamn;
+        private System.Windows.Forms.Button loggaUtButton;
     }
 }
