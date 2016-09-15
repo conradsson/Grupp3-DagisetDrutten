@@ -26,12 +26,12 @@ namespace Grupp3___Förskolan_Drutten
             return Datum + " " + Förnamn + " " + Efternamn + " " + TidLämnad + " " + TidHämtad + " " + HämtasAv;
         }
 
-        public string visaBarnTider
-        {
-            get
-            {
-                return Datum.ToString("yyyy-MM-dd") + "\t " + TidLämnad + "\t" + TidHämtad + "\t     " + HämtasAv;
-            }
-        }
+        //public string visaBarnTider
+        //{
+        //    get
+        //    {
+        //        return Datum.ToString("yyyy-MM-dd") + "\t " + TidLämnad + "\t" + TidHämtad + "\t     " + HämtasAv;
+        //    }
+        //}
     }
 }

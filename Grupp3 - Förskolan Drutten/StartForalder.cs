@@ -217,39 +217,39 @@ namespace Grupp3___Förskolan_Drutten
 
             if (aktuelltbarn != null)
             {
-                listBoxBarnetsTider.DataSource = null;
-                listBoxBarnetsTider.ValueMember = "visaBarnTider";
-                listBoxBarnetsTider.DataSource = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                dataGridViewTiderBarn.DataSource = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                dataGridViewTiderBarn.Columns[1].Visible = false;
+                dataGridViewTiderBarn.Columns[2].Visible = false;
 
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
 
                 if (tid == "")
-                    {
-                     comboBoxUppdateraTill1.Text = "";
-                     comboBoxUppdateraTill2.Text = "";
-                    }
+                {
+                    comboBoxUppdateraTill1.Text = "";
+                    comboBoxUppdateraTill2.Text = "";
+                }
                 else
-                    {
+                {
                     comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
                     comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
-                    }
+                }
 
                 Postgres p2 = new Postgres();
                 string tidLämnas;
                 tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
 
                 if (tidLämnas == "")
-                    {
-                      comboBoxUppdateraFrån1.Text = "";
-                      comboBoxUppdateraFrån2.Text = "";
-                    }
+                {
+                    comboBoxUppdateraFrån1.Text = "";
+                    comboBoxUppdateraFrån2.Text = "";
+                }
                 else
-                    {
+                {
                     comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
-                    }
+                }
                 
                 }
             //else

@@ -44,7 +44,6 @@
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.TidertabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listBoxBarnetsTider = new System.Windows.Forms.ListBox();
             this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -124,10 +123,7 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.dataGridViewTiderBarn = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -143,6 +139,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTiderBarn)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -373,11 +370,7 @@
             // tabPage3
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage3.Controls.Add(this.label33);
-            this.tabPage3.Controls.Add(this.label32);
-            this.tabPage3.Controls.Add(this.label31);
-            this.tabPage3.Controls.Add(this.label30);
-            this.tabPage3.Controls.Add(this.listBoxBarnetsTider);
+            this.tabPage3.Controls.Add(this.dataGridViewTiderBarn);
             this.tabPage3.Controls.Add(this.tiderBarnListBox);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.label2);
@@ -392,15 +385,6 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Meddela tider";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // listBoxBarnetsTider
-            // 
-            this.listBoxBarnetsTider.FormattingEnabled = true;
-            this.listBoxBarnetsTider.Location = new System.Drawing.Point(319, 33);
-            this.listBoxBarnetsTider.Name = "listBoxBarnetsTider";
-            this.listBoxBarnetsTider.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBoxBarnetsTider.Size = new System.Drawing.Size(290, 95);
-            this.listBoxBarnetsTider.TabIndex = 14;
             // 
             // tiderBarnListBox
             // 
@@ -1291,41 +1275,14 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label30
+            // dataGridViewTiderBarn
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(316, 20);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(41, 13);
-            this.label30.TabIndex = 15;
-            this.label30.Text = "Datum:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(415, 20);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(42, 13);
-            this.label31.TabIndex = 16;
-            this.label31.Text = "Från kl:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(463, 20);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(34, 13);
-            this.label32.TabIndex = 17;
-            this.label32.Text = "Till kl:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(524, 20);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 13);
-            this.label33.TabIndex = 18;
-            this.label33.Text = "Hämtas av:";
+            this.dataGridViewTiderBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTiderBarn.Location = new System.Drawing.Point(274, 24);
+            this.dataGridViewTiderBarn.Name = "dataGridViewTiderBarn";
+            this.dataGridViewTiderBarn.ReadOnly = true;
+            this.dataGridViewTiderBarn.Size = new System.Drawing.Size(461, 131);
+            this.dataGridViewTiderBarn.TabIndex = 14;
             // 
             // StartForalder
             // 
@@ -1369,6 +1326,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTiderBarn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1469,10 +1427,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.ListBox listBoxBarnetsTider;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DataGridView dataGridViewTiderBarn;
     }
 }
