@@ -865,6 +865,7 @@
             this.label19.Size = new System.Drawing.Size(23, 13);
             this.label19.TabIndex = 11;
             this.label19.Text = "Till:";
+            this.label19.Visible = false;
             // 
             // label12
             // 
@@ -875,6 +876,7 @@
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 10;
             this.label12.Text = "Från:";
+            this.label12.Visible = false;
             // 
             // label11
             // 
@@ -1192,6 +1194,7 @@
             this.BackColor = System.Drawing.Color.SaddleBrown;
             this.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.Background1024x600;
             this.ClientSize = new System.Drawing.Size(1008, 561);
+            this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.kontoTypLabel);
             this.Controls.Add(this.pictureBox1);
