@@ -146,6 +146,8 @@
       <DependentUpon>StartForalder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Frånvaro.datasource" />
+    <None Include="Properties\DataSources\Närvaro.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

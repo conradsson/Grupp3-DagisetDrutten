@@ -217,9 +217,10 @@ namespace Grupp3___Förskolan_Drutten
 
             if (aktuelltbarn != null)
             {
+                dataGridViewTiderBarn.DataSource = null;
                 dataGridViewTiderBarn.DataSource = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
-                dataGridViewTiderBarn.Columns[1].Visible = false;
-                dataGridViewTiderBarn.Columns[2].Visible = false;
+                //dataGridViewTiderBarn.Columns[1].Visible = false;
+                //dataGridViewTiderBarn.Columns[2].Visible = false;
 
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
