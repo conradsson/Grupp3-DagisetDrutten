@@ -19,8 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlDataReader dr;
         private DataTable tabell;
         public Person aktuellPerson;
-        //public List<Information> inläggslista;
-        //StartForalder f = new StartForalder();
+
 
 
         //Kontaktar databasen.
@@ -70,44 +69,6 @@ namespace Grupp3___Förskolan_Drutten
                 conn.Close();
             }
         }
-
-        //Metod att utgå ifrån vid SQLfrågor
-        //public List<Barn> HämtanBarn()
-        //{
-        //    string sql = "select * from dagis.barn";
-
-        //    tabell.Clear();
-        //    tabell = sqlFråga(sql);
-        //    List<Barn> BarnNamn = new List<Barn>();
-        //    Barn barn;
-
-
-        //    if (tabell.Columns[0].ColumnName.Equals("Error"))
-        //    {
-        //        Barn b = new Barn();
-        //        b.Error = true;
-        //        b.ErrorMeddelande = tabell.Rows[0][1].ToString();
-
-        //        BarnNamn.Add(b);
-        //    }
-        //    else
-        //    {
-        //        foreach (DataRow rad in tabell.Rows)
-        //        {
-        //            barn = new Barn();
-
-        //            barn.Barnid = (int)rad[0];
-        //            barn.Förnamn = rad[1].ToString();
-        //            barn.Efternamn = rad[2].ToString();
-        //            barn.Avdelningsid = (int)rad[3];
-
-        //            BarnNamn.Add(barn);
-        //        }
-        //    }
-        //    return BarnNamn;
-
-        //}
-
 
         /// <summary>
         /// Metod för att hämta barn till en lista
