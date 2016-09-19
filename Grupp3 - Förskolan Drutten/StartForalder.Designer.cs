@@ -67,11 +67,9 @@
             this.TidertabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridViewTiderBarn = new System.Windows.Forms.DataGridView();
-            this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TidLämnad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TidHämtad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HämtasAv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,7 +96,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridViewHämtning = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -135,7 +132,6 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ändraLösenPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
@@ -147,6 +143,10 @@
             this.label33 = new System.Windows.Forms.Label();
             this.ändraLösenAvbryt = new System.Windows.Forms.Button();
             this.ändralösenBekräfta = new System.Windows.Forms.Button();
+            this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
@@ -155,7 +155,6 @@
             this.TidertabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTiderBarn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -165,9 +164,10 @@
             this.senasteTabPage.SuspendLayout();
             this.omTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
             this.ändraLösenPanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -647,13 +647,6 @@
             this.dataGridViewTiderBarn.Size = new System.Drawing.Size(461, 131);
             this.dataGridViewTiderBarn.TabIndex = 14;
             // 
-            // datumDataGridViewTextBoxColumn
-            // 
-            this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
-            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
-            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
-            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // TidLämnad
             // 
             this.TidLämnad.DataPropertyName = "TidLämnad";
@@ -674,10 +667,6 @@
             this.HämtasAv.HeaderText = "Hämtas av";
             this.HämtasAv.Name = "HämtasAv";
             this.HämtasAv.ReadOnly = true;
-            // 
-            // närvaroBindingSource
-            // 
-            this.närvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Närvaro);
             // 
             // tiderBarnListBox
             // 
@@ -1053,13 +1042,6 @@
             this.dataGridViewHämtning.Size = new System.Drawing.Size(461, 131);
             this.dataGridViewHämtning.TabIndex = 21;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Datum";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Datum";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "TidLämnad";
@@ -1410,16 +1392,12 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // frånvaroBindingSource
-            // 
-            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
-            // 
             // ändraLösenPanel
             // 
             this.ändraLösenPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.ändraLösenPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ändraLösenPanel.Controls.Add(this.label30);
             this.ändraLösenPanel.Controls.Add(this.panel2);
+            this.ändraLösenPanel.Controls.Add(this.label30);
             this.ändraLösenPanel.Location = new System.Drawing.Point(33, 53);
             this.ändraLösenPanel.Name = "ändraLösenPanel";
             this.ändraLösenPanel.Size = new System.Drawing.Size(419, 267);
@@ -1443,7 +1421,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(366, 226);
             this.panel2.TabIndex = 23;
-            this.panel2.Visible = false;
             // 
             // label30
             // 
@@ -1511,6 +1488,7 @@
             this.ändraLösenAvbryt.TabIndex = 6;
             this.ändraLösenAvbryt.Text = "Avbryt";
             this.ändraLösenAvbryt.UseVisualStyleBackColor = true;
+            this.ändraLösenAvbryt.Click += new System.EventHandler(this.ändraLösenAvbryt_Click);
             // 
             // ändralösenBekräfta
             // 
@@ -1520,6 +1498,29 @@
             this.ändralösenBekräfta.TabIndex = 7;
             this.ändralösenBekräfta.Text = "Bekräfta";
             this.ändralösenBekräfta.UseVisualStyleBackColor = true;
+            this.ändralösenBekräfta.Click += new System.EventHandler(this.ändralösenBekräfta_Click);
+            // 
+            // datumDataGridViewTextBoxColumn
+            // 
+            this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
+            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // närvaroBindingSource
+            // 
+            this.närvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Närvaro);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Datum";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Datum";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // frånvaroBindingSource
+            // 
+            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
             // StartForalder
             // 
@@ -1551,7 +1552,6 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTiderBarn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1567,11 +1567,12 @@
             this.omTabPage.ResumeLayout(false);
             this.omTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.ändraLösenPanel.ResumeLayout(false);
             this.ändraLösenPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
