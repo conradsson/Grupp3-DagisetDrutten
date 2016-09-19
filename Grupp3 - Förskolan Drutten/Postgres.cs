@@ -558,7 +558,11 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Letar efter användare i DB
+        /// <summary>
+        /// Letar, hämtar och sparar användaren som loggar in, kontrolleras med lösenord.
+        /// </summary>
+        /// <param name="användarnamn"></param>
+        /// <param name="lösenord"></param>
         public void HämtaAnvändare(string användarnamn, string lösenord)
         {
             try
@@ -605,7 +609,9 @@ namespace Grupp3___Förskolan_Drutten
         }
 
 
-        // Kontrollerar behörigheten hos användaren och skickar den till rätt Form.
+        /// <summary>
+        /// Kontrollerar behörigheten hos användaren och skickar den till rätt Form.
+        /// </summary>
         public void KontrolleraAnvändartyp()
         {
             if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
@@ -632,7 +638,11 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
         }
-        // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        /// <summary>
+        /// Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        /// </summary>
+        /// <param name="lösenord"></param>
+        /// <returns></returns>
         public string LösenordsEncrypt(string lösenord) 
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
@@ -666,7 +676,10 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Hämtar informationsinlägg från db
+        /// <summary>
+        /// Hämtar informationsinlägg från databasen.
+        /// </summary>
+        /// <returns></returns>
         public List<Information> HämtaInläggPersonal()
         {
             string sql = "SELECT * FROM dagis.information ORDER BY  datum DESC";
@@ -746,7 +759,6 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
             }
-            //conn.Close();
         }
         public void UppdateraInlägg(string datum, string inläggsrubrik, string inläggstext, int inläggsid, bool endastFörPersonal)
         {
@@ -769,8 +781,6 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
-
-            //conn.Close();
         }
         public void TaBortInlägg(string datum, int inläggsid)
         {

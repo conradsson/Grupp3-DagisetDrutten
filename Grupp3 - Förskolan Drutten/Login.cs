@@ -23,13 +23,7 @@ namespace Grupp3___Förskolan_Drutten
         public string inskrivetAnvändarnamn;
         public string inskrivetLösenord;
 
-        //public string Användaren()
-        //{
-        //    string användare;
-        //    användare = andvandarnamnTextbox.Text;
-        //    return användare;
-        //}
-
+        // Logga in-knappen.
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
             
@@ -37,31 +31,9 @@ namespace Grupp3___Förskolan_Drutten
 
             inskrivetAnvändarnamn = andvandarnamnTextbox.Text;
             inskrivetLösenord = losenordTextbox.Text;
-
-            // TILLFÄLLIG INLOGGNING TILL FÖRÄLDER OCH PERSONAL
-            //
-            //if(andvandarnamnTextbox.Text.ToUpper() == "FÖRÄLDER")
-            //{
-            //    this.Visible = false;
-            //    StartForalder foralder = new StartForalder();
-            //    foralder.Show();
-
-            //}
-            //else if(andvandarnamnTextbox.Text.ToUpper() == "PERSONAL")
-            //{
-            //    this.Visible = false;
-            //    StartPersonal personal = new StartPersonal();
-            //    personal.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Felaktigt användarnamn.");
-            //}
+            this.Visible = false;
 
         }
-
-
-            
         private void andvandarnamnTextbox_Enter(object sender, EventArgs e)
         {
 
@@ -73,16 +45,11 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-             //  Används för attoch för att döjla lösenordet. AVSTÄNGD!
+             //  Används för att och för att döjla lösenordet. TA BORT DENNA INNAN FINAL RELEASE!
         private void losenordTextbox_Enter(object sender, EventArgs e)
         {
             losenordTextbox.Text = "1234";
-           /* if (losenordTextbox.Text == "Lösenord")
-            {
-                losenordTextbox.Text = "";
-                losenordTextbox.PasswordChar = '*';
-                losenordTextbox.ForeColor = System.Drawing.Color.Black;
-            }*/
+
         }
 
           // Om användarnamn är tomt blir texten "Användarnamn". 
@@ -100,37 +67,27 @@ namespace Grupp3___Förskolan_Drutten
         {
            // losenordTextbox.Text = "1234";
 
-            /* if (losenordTextbox.Text == "")
-             {
-                 losenordTextbox.Text = "Lösenord";
-                 losenordTextbox.ForeColor = System.Drawing.Color.Gray;
-             }*/
         }
 
-
-
-
-        // Johan 
-
+        // Lösenordskrypteraren. mini-applikation som krypterar det inmatade lösenordet.
         private void EncryptTestButton_Click(object sender, EventArgs e)
         {
-
-
             encryptTextBox.Clear();
             encryptTextBox.Text = p.LösenordsEncrypt(losenordENCRYPTtextBox.Text);
         }
-
+        // Tillhör Lösenordskrypteraren.
         private void copyButton_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(encryptTextBox.Text);
         }
-
+        // Tillhör Lösenordskrypteraren.
         private void rensaEncryptButton_Click(object sender, EventArgs e)
         {
             encryptTextBox.Clear();
             losenordENCRYPTtextBox.Clear();
         }
 
+        // Avsluta-knapp, högst upp till höger.
         private void exitButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Är du säker på att du vill avsluta? ", "Avsluta", MessageBoxButtons.YesNo);
@@ -139,22 +96,12 @@ namespace Grupp3___Förskolan_Drutten
                 Application.Exit();
             }
         }
-
+        // Öppnar formen för Mobil. Endast för presentation.
         private void MobilLink_Click(object sender, EventArgs e)
         {
             MobilBankId b = new MobilBankId();
 
             b.Show();
         }
-
-        // Mathilda
-
-
-        // Hischam
-
-
-        //Martin
-
-
     }
 }
