@@ -484,5 +484,55 @@ namespace Grupp3___Förskolan_Drutten
             }
             
         }
+
+        //private void skrivut_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelskrivut.Visible = true;
+            panelskrivut.Location = new Point(144, 17);
+
+            if (NärvarandeRadioButton.Checked)
+            {
+                statuspanel.Text = "närvarande.";
+                dataGridSkrivut.DataSource = null;
+                Postgres p = new Postgres();
+                dataGridSkrivut.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+                
+
+
+            }
+            else if (FrånvarandeRadioButton.Checked)
+            {
+                statuspanel.Text = "Frånvarande.";
+                dataGridSkrivut.DataSource = null;
+                Postgres p = new Postgres();
+                dataGridSkrivut.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
+                
+
+            }
+
+
+        }
+
+        private void panelskriv_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void panelavbryt_Click(object sender, EventArgs e)
+        {
+            panelskrivut.Visible = false;
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dataGridSkrivut.Width, this.dataGridSkrivut.Height);
+            dataGridSkrivut.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridSkrivut.Width, this.dataGridSkrivut.Height));
+            e.Graphics.DrawImage(bm,10,10);
+        }
     }
 }
