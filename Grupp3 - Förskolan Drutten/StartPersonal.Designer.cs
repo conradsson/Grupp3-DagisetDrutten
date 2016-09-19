@@ -71,21 +71,6 @@
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.inloggadButton = new System.Windows.Forms.Button();
             this.loggaUtButton = new System.Windows.Forms.Button();
-            this.BarntabControl = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.labelAntalSöktaBarn = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.buttonSök = new System.Windows.Forms.Button();
-            this.textBoxSökRuta = new System.Windows.Forms.TextBox();
-            this.checkBoxAvdelning2 = new System.Windows.Forms.CheckBox();
-            this.checkBoxAvdelning1 = new System.Windows.Forms.CheckBox();
-            this.listBoxVårnadshavare = new System.Windows.Forms.ListBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
-            this.listBoxSöktaBarn = new System.Windows.Forms.ListBox();
-            this.label39 = new System.Windows.Forms.Label();
             this.NärvarotabControl = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridViewFrånvarandeINärvarohantering = new System.Windows.Forms.DataGridView();
@@ -148,10 +133,34 @@
             this.textBoxEfternamnMittkonto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
+            this.BarntabControl = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.labelAntalSöktaBarn = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.buttonSök = new System.Windows.Forms.Button();
+            this.textBoxSökRuta = new System.Windows.Forms.TextBox();
+            this.checkBoxAvdelning2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxAvdelning1 = new System.Windows.Forms.CheckBox();
+            this.listBoxVårnadshavare = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
+            this.listBoxSöktaBarn = new System.Windows.Forms.ListBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.panelskrivut = new System.Windows.Forms.Panel();
+            this.dataGridViewFrånvaroSkrivut = new System.Windows.Forms.DataGridView();
+            this.datumDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.förnamnDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.efternamnDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sjuk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Ledig = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statuspanel = new System.Windows.Forms.Label();
             this.panelavbryt = new System.Windows.Forms.Button();
             this.panelskriv = new System.Windows.Forms.Button();
+            this.lblskrivut = new System.Windows.Forms.Label();
+            this.status = new System.Windows.Forms.Label();
             this.dataGridSkrivut = new System.Windows.Forms.DataGridView();
             this.datumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.förnamnDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -159,27 +168,15 @@
             this.tidLämnadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tidHämtadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hämtasAvDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblskrivut = new System.Windows.Forms.Label();
-            this.status = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.dataGridViewFrånvaroSkrivut = new System.Windows.Forms.DataGridView();
-            this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.datumDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.förnamnDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.efternamnDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sjuk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Ledig = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
             this.nyttInläggPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.BarntabControl.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.NärvarotabControl.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvarandeINärvarohantering)).BeginInit();
@@ -194,10 +191,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.barnBindingSource)).BeginInit();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.BarntabControl.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.panelskrivut.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridSkrivut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvaroSkrivut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSkrivut)).BeginInit();
             this.SuspendLayout();
             // 
             // kontoTypLabel
@@ -689,156 +689,6 @@
             this.loggaUtButton.UseVisualStyleBackColor = false;
             this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
             this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
-            // 
-            // BarntabControl
-            // 
-            this.BarntabControl.Controls.Add(this.tabPage4);
-            this.BarntabControl.Location = new System.Drawing.Point(193, 36);
-            this.BarntabControl.Name = "BarntabControl";
-            this.BarntabControl.SelectedIndex = 0;
-            this.BarntabControl.Size = new System.Drawing.Size(748, 389);
-            this.BarntabControl.TabIndex = 22;
-            this.BarntabControl.Visible = false;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.labelAntalSöktaBarn);
-            this.tabPage4.Controls.Add(this.groupBox2);
-            this.tabPage4.Controls.Add(this.listBoxVårnadshavare);
-            this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.label27);
-            this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
-            this.tabPage4.Controls.Add(this.listBoxSöktaBarn);
-            this.tabPage4.Controls.Add(this.label39);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(740, 363);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Barnöversikt";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // labelAntalSöktaBarn
-            // 
-            this.labelAntalSöktaBarn.AutoSize = true;
-            this.labelAntalSöktaBarn.Location = new System.Drawing.Point(28, 280);
-            this.labelAntalSöktaBarn.Name = "labelAntalSöktaBarn";
-            this.labelAntalSöktaBarn.Size = new System.Drawing.Size(61, 13);
-            this.labelAntalSöktaBarn.TabIndex = 38;
-            this.labelAntalSöktaBarn.Text = "Antal barn: ";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.buttonSök);
-            this.groupBox2.Controls.Add(this.textBoxSökRuta);
-            this.groupBox2.Controls.Add(this.checkBoxAvdelning2);
-            this.groupBox2.Controls.Add(this.checkBoxAvdelning1);
-            this.groupBox2.Location = new System.Drawing.Point(31, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(311, 94);
-            this.groupBox2.TabIndex = 37;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Sökfunktioner";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 13);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Sök barn:";
-            // 
-            // buttonSök
-            // 
-            this.buttonSök.Location = new System.Drawing.Point(220, 62);
-            this.buttonSök.Name = "buttonSök";
-            this.buttonSök.Size = new System.Drawing.Size(75, 23);
-            this.buttonSök.TabIndex = 35;
-            this.buttonSök.Text = "Sök";
-            this.buttonSök.UseVisualStyleBackColor = true;
-            this.buttonSök.Click += new System.EventHandler(this.buttonSök_Click);
-            // 
-            // textBoxSökRuta
-            // 
-            this.textBoxSökRuta.Location = new System.Drawing.Point(16, 33);
-            this.textBoxSökRuta.Name = "textBoxSökRuta";
-            this.textBoxSökRuta.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSökRuta.TabIndex = 36;
-            // 
-            // checkBoxAvdelning2
-            // 
-            this.checkBoxAvdelning2.AutoSize = true;
-            this.checkBoxAvdelning2.Location = new System.Drawing.Point(106, 64);
-            this.checkBoxAvdelning2.Name = "checkBoxAvdelning2";
-            this.checkBoxAvdelning2.Size = new System.Drawing.Size(82, 17);
-            this.checkBoxAvdelning2.TabIndex = 34;
-            this.checkBoxAvdelning2.Text = "Avdelning 2";
-            this.checkBoxAvdelning2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAvdelning1
-            // 
-            this.checkBoxAvdelning1.AutoSize = true;
-            this.checkBoxAvdelning1.Location = new System.Drawing.Point(18, 64);
-            this.checkBoxAvdelning1.Name = "checkBoxAvdelning1";
-            this.checkBoxAvdelning1.Size = new System.Drawing.Size(82, 17);
-            this.checkBoxAvdelning1.TabIndex = 33;
-            this.checkBoxAvdelning1.Text = "Avdelning 1";
-            this.checkBoxAvdelning1.UseVisualStyleBackColor = true;
-            // 
-            // listBoxVårnadshavare
-            // 
-            this.listBoxVårnadshavare.FormattingEnabled = true;
-            this.listBoxVårnadshavare.Location = new System.Drawing.Point(269, 141);
-            this.listBoxVårnadshavare.Name = "listBoxVårnadshavare";
-            this.listBoxVårnadshavare.Size = new System.Drawing.Size(262, 43);
-            this.listBoxVårnadshavare.TabIndex = 32;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(266, 121);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 13);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Vårnadshavare:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(266, 189);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(38, 13);
-            this.label27.TabIndex = 30;
-            this.label27.Text = "Övrigt:";
-            // 
-            // barnOverigtrichTextBox
-            // 
-            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(269, 207);
-            this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
-            this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 69);
-            this.barnOverigtrichTextBox.TabIndex = 28;
-            this.barnOverigtrichTextBox.Text = "";
-            // 
-            // listBoxSöktaBarn
-            // 
-            this.listBoxSöktaBarn.FormattingEnabled = true;
-            this.listBoxSöktaBarn.Location = new System.Drawing.Point(31, 140);
-            this.listBoxSöktaBarn.Name = "listBoxSöktaBarn";
-            this.listBoxSöktaBarn.Size = new System.Drawing.Size(220, 134);
-            this.listBoxSöktaBarn.TabIndex = 17;
-            this.listBoxSöktaBarn.SelectedIndexChanged += new System.EventHandler(this.listBoxSöktaBarn_SelectedIndexChanged);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(28, 121);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(32, 13);
-            this.label39.TabIndex = 16;
-            this.label39.Text = "Barn:";
             // 
             // NärvarotabControl
             // 
@@ -1432,6 +1282,156 @@
             this.textBoxFörnamnMittkonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxFörnamnMittkonto.TabIndex = 0;
             // 
+            // BarntabControl
+            // 
+            this.BarntabControl.Controls.Add(this.tabPage4);
+            this.BarntabControl.Location = new System.Drawing.Point(193, 36);
+            this.BarntabControl.Name = "BarntabControl";
+            this.BarntabControl.SelectedIndex = 0;
+            this.BarntabControl.Size = new System.Drawing.Size(748, 389);
+            this.BarntabControl.TabIndex = 22;
+            this.BarntabControl.Visible = false;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.labelAntalSöktaBarn);
+            this.tabPage4.Controls.Add(this.groupBox2);
+            this.tabPage4.Controls.Add(this.listBoxVårnadshavare);
+            this.tabPage4.Controls.Add(this.label14);
+            this.tabPage4.Controls.Add(this.label27);
+            this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
+            this.tabPage4.Controls.Add(this.listBoxSöktaBarn);
+            this.tabPage4.Controls.Add(this.label39);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(740, 363);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Barnöversikt";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // labelAntalSöktaBarn
+            // 
+            this.labelAntalSöktaBarn.AutoSize = true;
+            this.labelAntalSöktaBarn.Location = new System.Drawing.Point(28, 280);
+            this.labelAntalSöktaBarn.Name = "labelAntalSöktaBarn";
+            this.labelAntalSöktaBarn.Size = new System.Drawing.Size(61, 13);
+            this.labelAntalSöktaBarn.TabIndex = 38;
+            this.labelAntalSöktaBarn.Text = "Antal barn: ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.buttonSök);
+            this.groupBox2.Controls.Add(this.textBoxSökRuta);
+            this.groupBox2.Controls.Add(this.checkBoxAvdelning2);
+            this.groupBox2.Controls.Add(this.checkBoxAvdelning1);
+            this.groupBox2.Location = new System.Drawing.Point(31, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(311, 94);
+            this.groupBox2.TabIndex = 37;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sökfunktioner";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(15, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 13);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Sök barn:";
+            // 
+            // buttonSök
+            // 
+            this.buttonSök.Location = new System.Drawing.Point(220, 62);
+            this.buttonSök.Name = "buttonSök";
+            this.buttonSök.Size = new System.Drawing.Size(75, 23);
+            this.buttonSök.TabIndex = 35;
+            this.buttonSök.Text = "Sök";
+            this.buttonSök.UseVisualStyleBackColor = true;
+            this.buttonSök.Click += new System.EventHandler(this.buttonSök_Click);
+            // 
+            // textBoxSökRuta
+            // 
+            this.textBoxSökRuta.Location = new System.Drawing.Point(16, 33);
+            this.textBoxSökRuta.Name = "textBoxSökRuta";
+            this.textBoxSökRuta.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSökRuta.TabIndex = 36;
+            // 
+            // checkBoxAvdelning2
+            // 
+            this.checkBoxAvdelning2.AutoSize = true;
+            this.checkBoxAvdelning2.Location = new System.Drawing.Point(106, 64);
+            this.checkBoxAvdelning2.Name = "checkBoxAvdelning2";
+            this.checkBoxAvdelning2.Size = new System.Drawing.Size(82, 17);
+            this.checkBoxAvdelning2.TabIndex = 34;
+            this.checkBoxAvdelning2.Text = "Avdelning 2";
+            this.checkBoxAvdelning2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAvdelning1
+            // 
+            this.checkBoxAvdelning1.AutoSize = true;
+            this.checkBoxAvdelning1.Location = new System.Drawing.Point(18, 64);
+            this.checkBoxAvdelning1.Name = "checkBoxAvdelning1";
+            this.checkBoxAvdelning1.Size = new System.Drawing.Size(82, 17);
+            this.checkBoxAvdelning1.TabIndex = 33;
+            this.checkBoxAvdelning1.Text = "Avdelning 1";
+            this.checkBoxAvdelning1.UseVisualStyleBackColor = true;
+            // 
+            // listBoxVårnadshavare
+            // 
+            this.listBoxVårnadshavare.FormattingEnabled = true;
+            this.listBoxVårnadshavare.Location = new System.Drawing.Point(269, 141);
+            this.listBoxVårnadshavare.Name = "listBoxVårnadshavare";
+            this.listBoxVårnadshavare.Size = new System.Drawing.Size(262, 43);
+            this.listBoxVårnadshavare.TabIndex = 32;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(266, 121);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Vårnadshavare:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(266, 189);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(38, 13);
+            this.label27.TabIndex = 30;
+            this.label27.Text = "Övrigt:";
+            // 
+            // barnOverigtrichTextBox
+            // 
+            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(269, 207);
+            this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
+            this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 69);
+            this.barnOverigtrichTextBox.TabIndex = 28;
+            this.barnOverigtrichTextBox.Text = "";
+            // 
+            // listBoxSöktaBarn
+            // 
+            this.listBoxSöktaBarn.FormattingEnabled = true;
+            this.listBoxSöktaBarn.Location = new System.Drawing.Point(31, 140);
+            this.listBoxSöktaBarn.Name = "listBoxSöktaBarn";
+            this.listBoxSöktaBarn.Size = new System.Drawing.Size(220, 134);
+            this.listBoxSöktaBarn.TabIndex = 17;
+            this.listBoxSöktaBarn.SelectedIndexChanged += new System.EventHandler(this.listBoxSöktaBarn_SelectedIndexChanged);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(28, 121);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(32, 13);
+            this.label39.TabIndex = 16;
+            this.label39.Text = "Barn:";
+            // 
             // panelskrivut
             // 
             this.panelskrivut.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
@@ -1450,6 +1450,57 @@
             this.panelskrivut.Size = new System.Drawing.Size(660, 500);
             this.panelskrivut.TabIndex = 28;
             this.panelskrivut.Visible = false;
+            // 
+            // dataGridViewFrånvaroSkrivut
+            // 
+            this.dataGridViewFrånvaroSkrivut.AutoGenerateColumns = false;
+            this.dataGridViewFrånvaroSkrivut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFrånvaroSkrivut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.datumDataGridViewTextBoxColumn2,
+            this.förnamnDataGridViewTextBoxColumn4,
+            this.efternamnDataGridViewTextBoxColumn4,
+            this.Sjuk,
+            this.Ledig});
+            this.dataGridViewFrånvaroSkrivut.DataSource = this.frånvaroBindingSource;
+            this.dataGridViewFrånvaroSkrivut.Location = new System.Drawing.Point(7, 20);
+            this.dataGridViewFrånvaroSkrivut.Name = "dataGridViewFrånvaroSkrivut";
+            this.dataGridViewFrånvaroSkrivut.Size = new System.Drawing.Size(545, 434);
+            this.dataGridViewFrånvaroSkrivut.TabIndex = 11;
+            this.dataGridViewFrånvaroSkrivut.Visible = false;
+            // 
+            // datumDataGridViewTextBoxColumn2
+            // 
+            this.datumDataGridViewTextBoxColumn2.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn2.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn2.Name = "datumDataGridViewTextBoxColumn2";
+            // 
+            // förnamnDataGridViewTextBoxColumn4
+            // 
+            this.förnamnDataGridViewTextBoxColumn4.DataPropertyName = "Förnamn";
+            this.förnamnDataGridViewTextBoxColumn4.HeaderText = "Förnamn";
+            this.förnamnDataGridViewTextBoxColumn4.Name = "förnamnDataGridViewTextBoxColumn4";
+            // 
+            // efternamnDataGridViewTextBoxColumn4
+            // 
+            this.efternamnDataGridViewTextBoxColumn4.DataPropertyName = "Efternamn";
+            this.efternamnDataGridViewTextBoxColumn4.HeaderText = "Efternamn";
+            this.efternamnDataGridViewTextBoxColumn4.Name = "efternamnDataGridViewTextBoxColumn4";
+            // 
+            // Sjuk
+            // 
+            this.Sjuk.DataPropertyName = "Sjuk";
+            this.Sjuk.HeaderText = "Sjuk";
+            this.Sjuk.Name = "Sjuk";
+            // 
+            // Ledig
+            // 
+            this.Ledig.DataPropertyName = "Ledig";
+            this.Ledig.HeaderText = "Ledig";
+            this.Ledig.Name = "Ledig";
+            // 
+            // frånvaroBindingSource
+            // 
+            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
             // statuspanel
             // 
@@ -1479,6 +1530,26 @@
             this.panelskriv.Text = "Skriv ut";
             this.panelskriv.UseVisualStyleBackColor = true;
             this.panelskriv.Click += new System.EventHandler(this.panelskriv_Click);
+            // 
+            // lblskrivut
+            // 
+            this.lblskrivut.AutoSize = true;
+            this.lblskrivut.BackColor = System.Drawing.Color.Transparent;
+            this.lblskrivut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblskrivut.Location = new System.Drawing.Point(6, 0);
+            this.lblskrivut.Name = "lblskrivut";
+            this.lblskrivut.Size = new System.Drawing.Size(54, 15);
+            this.lblskrivut.TabIndex = 4;
+            this.lblskrivut.Text = "Skriv ut";
+            // 
+            // status
+            // 
+            this.status.AutoSize = true;
+            this.status.BackColor = System.Drawing.Color.Transparent;
+            this.status.Location = new System.Drawing.Point(66, 0);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(0, 13);
+            this.status.TabIndex = 6;
             // 
             // dataGridSkrivut
             // 
@@ -1533,26 +1604,6 @@
             this.hämtasAvDataGridViewTextBoxColumn1.HeaderText = "HämtasAv";
             this.hämtasAvDataGridViewTextBoxColumn1.Name = "hämtasAvDataGridViewTextBoxColumn1";
             // 
-            // lblskrivut
-            // 
-            this.lblskrivut.AutoSize = true;
-            this.lblskrivut.BackColor = System.Drawing.Color.Transparent;
-            this.lblskrivut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblskrivut.Location = new System.Drawing.Point(6, 0);
-            this.lblskrivut.Name = "lblskrivut";
-            this.lblskrivut.Size = new System.Drawing.Size(54, 15);
-            this.lblskrivut.TabIndex = 4;
-            this.lblskrivut.Text = "Skriv ut";
-            // 
-            // status
-            // 
-            this.status.AutoSize = true;
-            this.status.BackColor = System.Drawing.Color.Transparent;
-            this.status.Location = new System.Drawing.Point(66, 0);
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(0, 13);
-            this.status.TabIndex = 6;
-            // 
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1573,57 +1624,6 @@
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // dataGridViewFrånvaroSkrivut
-            // 
-            this.dataGridViewFrånvaroSkrivut.AutoGenerateColumns = false;
-            this.dataGridViewFrånvaroSkrivut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFrånvaroSkrivut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.datumDataGridViewTextBoxColumn2,
-            this.förnamnDataGridViewTextBoxColumn4,
-            this.efternamnDataGridViewTextBoxColumn4,
-            this.Sjuk,
-            this.Ledig});
-            this.dataGridViewFrånvaroSkrivut.DataSource = this.frånvaroBindingSource;
-            this.dataGridViewFrånvaroSkrivut.Location = new System.Drawing.Point(7, 20);
-            this.dataGridViewFrånvaroSkrivut.Name = "dataGridViewFrånvaroSkrivut";
-            this.dataGridViewFrånvaroSkrivut.Size = new System.Drawing.Size(545, 434);
-            this.dataGridViewFrånvaroSkrivut.TabIndex = 11;
-            this.dataGridViewFrånvaroSkrivut.Visible = false;
-            // 
-            // frånvaroBindingSource
-            // 
-            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
-            // 
-            // datumDataGridViewTextBoxColumn2
-            // 
-            this.datumDataGridViewTextBoxColumn2.DataPropertyName = "Datum";
-            this.datumDataGridViewTextBoxColumn2.HeaderText = "Datum";
-            this.datumDataGridViewTextBoxColumn2.Name = "datumDataGridViewTextBoxColumn2";
-            // 
-            // förnamnDataGridViewTextBoxColumn4
-            // 
-            this.förnamnDataGridViewTextBoxColumn4.DataPropertyName = "Förnamn";
-            this.förnamnDataGridViewTextBoxColumn4.HeaderText = "Förnamn";
-            this.förnamnDataGridViewTextBoxColumn4.Name = "förnamnDataGridViewTextBoxColumn4";
-            // 
-            // efternamnDataGridViewTextBoxColumn4
-            // 
-            this.efternamnDataGridViewTextBoxColumn4.DataPropertyName = "Efternamn";
-            this.efternamnDataGridViewTextBoxColumn4.HeaderText = "Efternamn";
-            this.efternamnDataGridViewTextBoxColumn4.Name = "efternamnDataGridViewTextBoxColumn4";
-            // 
-            // Sjuk
-            // 
-            this.Sjuk.DataPropertyName = "Sjuk";
-            this.Sjuk.HeaderText = "Sjuk";
-            this.Sjuk.Name = "Sjuk";
-            // 
-            // Ledig
-            // 
-            this.Ledig.DataPropertyName = "Ledig";
-            this.Ledig.HeaderText = "Ledig";
-            this.Ledig.Name = "Ledig";
             // 
             // StartPersonal
             // 
@@ -1654,11 +1654,6 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.BarntabControl.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.NärvarotabControl.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -1677,11 +1672,16 @@
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.BarntabControl.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.panelskrivut.ResumeLayout(false);
             this.panelskrivut.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridSkrivut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvaroSkrivut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSkrivut)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
