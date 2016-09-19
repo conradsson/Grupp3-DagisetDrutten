@@ -178,6 +178,11 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        /// <summary>
+        /// Tar bort närvaro ur närvarotabellen om en tid är registrerad i närvaron
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
         public void TaBortNärvaro(DateTime datum, int barnid)
         {
             conn.Open();
@@ -204,6 +209,11 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        /// <summary>
+        /// Kontrollerar om en tid är registrerad i närvarotabellen när en frånvaro registreras
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
         public void KontrolleraNärvaro(DateTime datum, int barnid)
         {
             string sql = "select * from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
@@ -481,6 +491,12 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        /// <summary>
+        /// Kontrollerar så att det finns en tid registrerad det valda datumet
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="hämtasAv"></param>
         public void KontrolleraHämtning(DateTime datum, int barnid, string hämtasAv)
         {
             string sql = "select * from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
@@ -511,6 +527,11 @@ namespace Grupp3___Förskolan_Drutten
                 }
         }
 
+        /// <summary>
+        /// Hämtar ett barns registrerade närvarotider
+        /// </summary>
+        /// <param name="barnid"></param>
+        /// <returns></returns>
         public List<Närvaro> HämtaBarnetsTider(int barnid)
         {
 
