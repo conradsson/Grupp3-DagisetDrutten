@@ -109,8 +109,6 @@ namespace Grupp3___Förskolan_Drutten
         //}
 
 
-        //Mathilda
-
         /// <summary>
         /// Metod för att hämta barn till en lista
         /// </summary>
@@ -610,9 +608,11 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Johan
-
-        // Letar efter användare i DB
+        /// <summary>
+        /// Letar, hämtar och sparar användaren som loggar in, kontrolleras med lösenord.
+        /// </summary>
+        /// <param name="användarnamn"></param>
+        /// <param name="lösenord"></param>
         public void HämtaAnvändare(string användarnamn, string lösenord)
         {
             try
@@ -659,7 +659,9 @@ namespace Grupp3___Förskolan_Drutten
         }
 
 
-        // Kontrollerar behörigheten hos användaren och skickar den till rätt Form.
+        /// <summary>
+        /// Kontrollerar behörigheten hos användaren och skickar den till rätt Form.
+        /// </summary>
         public void KontrolleraAnvändartyp()
         {
             if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
@@ -686,7 +688,11 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
         }
-        // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        /// <summary>
+        /// Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        /// </summary>
+        /// <param name="lösenord"></param>
+        /// <returns></returns>
         public string LösenordsEncrypt(string lösenord) 
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
@@ -720,7 +726,10 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Hämtar informationsinlägg från db
+        /// <summary>
+        /// Hämtar informationsinlägg från databasen.
+        /// </summary>
+        /// <returns></returns>
         public List<Information> HämtaInläggPersonal()
         {
             string sql = "SELECT * FROM dagis.information ORDER BY  datum DESC";
@@ -800,7 +809,6 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
             }
-            //conn.Close();
         }
         public void UppdateraInlägg(string datum, string inläggsrubrik, string inläggstext, int inläggsid, bool endastFörPersonal)
         {
@@ -823,8 +831,6 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
-
-            //conn.Close();
         }
         public void TaBortInlägg(string datum, int inläggsid)
         {
@@ -849,7 +855,6 @@ namespace Grupp3___Förskolan_Drutten
             //conn.Close();
         }
 
-        //Hischam
         /// <summary>
         /// Hämta närvaron utifrån valt datum
         /// </summary>
@@ -928,6 +933,11 @@ namespace Grupp3___Förskolan_Drutten
             return Närvarolista;
 
         }
+        /// <summary>
+        /// Hämtar frånvaro uti från vald datum
+        /// </summary>
+        /// <param name="AktuelltDatum"></param>
+        /// <returns></returns>
         public List<Frånvaro> HämtaFrånvaro(DateTime AktuelltDatum)
         {
 
@@ -959,7 +969,6 @@ namespace Grupp3___Förskolan_Drutten
             return Frånvarolista;
 
         }
-         // Martin
         /// <summary>
         /// Uppdaterar barn på inloggad förälder.
         /// </summary>
@@ -1018,6 +1027,12 @@ namespace Grupp3___Förskolan_Drutten
             return BarnLista;
             
         }
+        /// <summary>
+        /// Hämtar dagens tider utifrån datum
+        /// </summary>
+        /// <param name="AktuelltDatum"></param>
+        /// <param name="tid"></param>
+        /// <returns></returns>
         public Int64 HämtaDagensTider(DateTime AktuelltDatum, int tid)
         {
             Int64 svar = 0;
@@ -1050,6 +1065,12 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
             return svar;
         }
+        /// <summary>
+        /// Hämta Framtida tider utifrån datum
+        /// </summary>
+        /// <param name="AktuelltDatumFrån"></param>
+        /// <param name="AktuelltDatumTill"></param>
+        /// <returns></returns>
         public Int64 HämtaFramtidaTider(DateTime AktuelltDatumFrån, DateTime AktuelltDatumTill)
         {
             Int64 svar = 0;
@@ -1082,6 +1103,12 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
             return svar;
         }
+        /// <summary>
+        /// Hämta dagens tider till diagrammet utifrån när de hämtas
+        /// </summary>
+        /// <param name="AktuelltDatum"></param>
+        /// <param name="tid"></param>
+        /// <returns></returns>
         public Int64 HämtaDagensTiderHämtas(DateTime AktuelltDatum, int tid)
         {
             Int64 svar = 0;
@@ -1114,6 +1141,12 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
             return svar;
         }
+        /// <summary>
+        /// Hämtas alla framtida barn utifrån datum, framtidsöversikt.
+        /// </summary>
+        /// <param name="AktuelltDatumFrån"></param>
+        /// <param name="AktuelltDatumTill"></param>
+        /// <returns></returns>
         public List<Barn> HämtaFramtidaBarn(DateTime AktuelltDatumFrån, DateTime AktuelltDatumTill)
         {
             string sql = " SELECT COUNT(narvaro.datum) as antal, barn.förnamn, barn.efternamn, barn.avdelningsid, barn.allergier, barn.annat FROM dagis.narvaro, dagis.barn WHERE narvaro.barnid = barn.barnid AND datum BETWEEN('" + AktuelltDatumFrån + "') AND('" + AktuelltDatumTill + "')  GROUP BY barn.förnamn, barn.efternamn, barn.avdelningsid, barn.allergier, barn.annat ORDER BY antal DESC";
@@ -1139,6 +1172,11 @@ namespace Grupp3___Förskolan_Drutten
             return BarnLista;
 
         }
+        /// <summary>
+        /// Hämtar barns föräldar
+        /// </summary>
+        /// <param name="aktuellbarnid"></param>
+        /// <returns></returns>
         public List<Person> HämtaBarnsFörälder(int aktuellbarnid)
         {
             string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = '" + aktuellbarnid + "';";
@@ -1160,6 +1198,10 @@ namespace Grupp3___Förskolan_Drutten
             }
             return PersonLista;
         }
+        /// <summary>
+        /// Hämtar barn utifrån avdelning 1
+        /// </summary>
+        /// <returns></returns>
         public List<Barn> HämtaBarnAvdelning1()
         {
             string sql = "select * from dagis.barn WHERE avdelningsid = 1 ORDER BY förnamn";
@@ -1185,6 +1227,10 @@ namespace Grupp3___Förskolan_Drutten
             }
             return BarnNamn;
         }
+        /// <summary>
+        /// Hämtar barn utifrån avdelning 2
+        /// </summary>
+        /// <returns></returns>
         public List<Barn> HämtaBarnAvdelning2()
         {
             string sql = "select * from dagis.barn WHERE avdelningsid = 2 ORDER BY förnamn";
@@ -1210,6 +1256,11 @@ namespace Grupp3___Förskolan_Drutten
             }
             return BarnNamn;
         }
+        /// <summary>
+        /// Hämtar barn utifrån söktexten.
+        /// </summary>
+        /// <param name="söktext"></param>
+        /// <returns></returns>
         public List<Barn> HämtaBarnEfterSök(string söktext)
         {
             string sql = "select * from dagis.barn WHERE barn.förnamn LIKE '%" + LowercaseFirst(söktext) + "%' OR barn.förnamn LIKE '%" + UppercaseFirst(söktext) + "%' ORDER BY förnamn";
@@ -1235,6 +1286,11 @@ namespace Grupp3___Förskolan_Drutten
             }
             return BarnNamn;
         }
+        /// <summary>
+        /// Hämtar barn utifrån söktexten + avdelning 1
+        /// </summary>
+        /// <param name="söktext"></param>
+        /// <returns></returns>
         public List<Barn> HämtaBarnEfterSök1(string söktext)
         {
             string sql = "select * from dagis.barn WHERE avdelningsid = 1 AND (barn.förnamn LIKE '%" + LowercaseFirst(söktext) + "%' OR barn.förnamn LIKE '%" + UppercaseFirst(söktext) + "%') ORDER BY förnamn";
@@ -1260,6 +1316,11 @@ namespace Grupp3___Förskolan_Drutten
             }
             return BarnNamn;
         }
+        /// <summary>
+        /// Hämtar barn utifrån söktexten + avdelning 2
+        /// </summary>
+        /// <param name="söktext"></param>
+        /// <returns></returns>
         public List<Barn> HämtaBarnEfterSök2(string söktext)
         {
             string sql = "select * from dagis.barn WHERE avdelningsid = 2 AND (barn.förnamn LIKE '%" + LowercaseFirst(söktext) + "%' OR barn.förnamn LIKE '%" + UppercaseFirst(söktext) + "%') ORDER BY förnamn";
@@ -1313,6 +1374,12 @@ namespace Grupp3___Förskolan_Drutten
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
         }
+        /// <summary>
+        /// ///Uppdaterar databasen med ett barns närvarande för dagen.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="närvarande"></param>
         public void LäggTillNärvaroFörIdag(DateTime datum, int barnid, bool närvarande)
         {
             string meddelande;
@@ -1333,6 +1400,12 @@ namespace Grupp3___Förskolan_Drutten
 
             conn.Close();
         }
+        /// <summary>
+        /// Tar bort närvarar idag från databasen.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="närvarande"></param>
         public void TaBortNärvaroFörIdag(DateTime datum, int barnid, bool närvarande)
         {
             string meddelande;
@@ -1353,6 +1426,12 @@ namespace Grupp3___Förskolan_Drutten
 
             conn.Close();
         }
+        /// <summary>
+        /// Uppdaterar databasen med ett barns hämtande(av vårdnadshavare) för dagen
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="närvarande"></param>
         public void LäggTillHämtadFörIdag(DateTime datum, int barnid, bool närvarande)
         {
             string meddelande;
@@ -1375,6 +1454,12 @@ namespace Grupp3___Förskolan_Drutten
 
             conn.Close();
         }
+        /// <summary>
+        /// Tar bort hämtad idag från databasen.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        /// <param name="närvarande"></param>
         public void TaBortHämtadFörIdag(DateTime datum, int barnid, bool närvarande)
         {
             string meddelande;
@@ -1397,6 +1482,11 @@ namespace Grupp3___Förskolan_Drutten
 
             conn.Close();
         }
+        /// <summary>
+        /// Metoder för stor samt liten första bokstav
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         static string UppercaseFirst(string s)
         {
             // Check for empty string.
