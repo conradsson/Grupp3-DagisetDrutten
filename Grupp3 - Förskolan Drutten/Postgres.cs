@@ -224,7 +224,6 @@ namespace Grupp3___Förskolan_Drutten
 
             foreach (DataRow rad in tabell.Rows)
             {
-                
                 narvaro.Närvaroid = (int)rad[0];
                 narvaro.Datum = (DateTime)rad[1];
                 narvaro.Barnid = (int)rad[2];
@@ -232,15 +231,67 @@ namespace Grupp3___Förskolan_Drutten
                 narvaro.TidLämnad = rad[4].ToString();
                 narvaro.TidHämtad = rad[5].ToString();
 
-     
             if(narvaro.Datum == datum && narvaro.Barnid == barnid)
             {
                 TaBortNärvaro(datum, barnid);
             }
+            }
+        }
+
+        /// <summary>
+        /// Tar bort från frånvarotabellen om en tid registreras samma datum som en frånvaro
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        public void TaBortFrånvaro(DateTime datum, int barnid)
+        {
+            conn.Open();
+            string meddelande;
+            try
+            {
+                string sql = "delete from dagis.franvaro where franvaro.datum = @datum and franvaro.barnid = @barnid;";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Frånvaron är borttagen.";
 
             }
-       
-            
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
+        }
+
+        /// <summary>
+        /// Kontrollerar om tiden som läggs in har samma datum som en frånvaro, i så fall tas frånvaron bort
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
+        public void KontrolleraFrånvaro(DateTime datum, int barnid)
+        {
+            string sql = "select franvaro.datum, franvaro.barnid from dagis.franvaro where franvaro.datum = '" + datum + "' AND franvaro.barnid = '" + barnid + "';";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            Frånvaro f = new Frånvaro();
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                f.Datum = (DateTime)rad[0];
+                f.Barnid = (int)rad[1];
+
+                if (f.Datum == datum && f.Barnid == barnid)
+                {
+                    TaBortFrånvaro(datum, barnid);
+                }
+            }
         }
 
         /// <summary>
@@ -558,7 +609,11 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Letar efter användare i DB
+        /// <summary>
+        /// Letar, hämtar och sparar användaren som loggar in, kontrolleras med lösenord.
+        /// </summary>
+        /// <param name="användarnamn"></param>
+        /// <param name="lösenord"></param>
         public void HämtaAnvändare(string användarnamn, string lösenord)
         {
             try
@@ -605,7 +660,9 @@ namespace Grupp3___Förskolan_Drutten
         }
 
 
-        // Kontrollerar behörigheten hos användaren och skickar den till rätt Form.
+        /// <summary>
+        /// Kontrollerar behörigheten hos användaren och skickar den till rätt Form.
+        /// </summary>
         public void KontrolleraAnvändartyp()
         {
             if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
@@ -632,7 +689,11 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
             }
         }
-        // Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        /// <summary>
+        /// Lätt-krypterar lösenordet. Används i HämtaAnvändare();
+        /// </summary>
+        /// <param name="lösenord"></param>
+        /// <returns></returns>
         public string LösenordsEncrypt(string lösenord) 
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
@@ -666,7 +727,10 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Hämtar informationsinlägg från db
+        /// <summary>
+        /// Hämtar informationsinlägg från databasen till ett personal-konto.
+        /// </summary>
+        /// <returns></returns>
         public List<Information> HämtaInläggPersonal()
         {
             string sql = "SELECT * FROM dagis.information ORDER BY  datum DESC";
@@ -692,6 +756,10 @@ namespace Grupp3___Förskolan_Drutten
             }
             return Inlägg;
         }
+        /// <summary>
+        /// Hämtar informationsinlägg från databasen till ett förälder-konto.
+        /// </summary>
+        /// <returns></returns>
         public List<Information> HämtaInläggFörälder()
         {
             string sql = "SELECT i.inläggsid,i.datum,i.inläggsrubrik,i.inläggstext,i.skrivet_av FROM dagis.information i WHERE endast_för_personal = 'FALSE'ORDER BY  datum DESC";
@@ -717,7 +785,14 @@ namespace Grupp3___Förskolan_Drutten
             }
             return Inlägg;
         }
-
+        /// <summary>
+        /// Skapar ett nytt informationsinlägg.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="inläggsrubrik"></param>
+        /// <param name="inläggstext"></param>
+        /// <param name="skrivetav"></param>
+        /// <param name="endastFörPersonal"></param>
         public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav,bool endastFörPersonal)
         {
             Random random = new Random();
@@ -746,8 +821,15 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
             }
-            //conn.Close();
         }
+        /// <summary>
+        /// Redigerar och uppdaterar informationsinlägg.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="inläggsrubrik"></param>
+        /// <param name="inläggstext"></param>
+        /// <param name="inläggsid"></param>
+        /// <param name="endastFörPersonal"></param>
         public void UppdateraInlägg(string datum, string inläggsrubrik, string inläggstext, int inläggsid, bool endastFörPersonal)
         {
             try
@@ -769,9 +851,12 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
-
-            //conn.Close();
         }
+        /// <summary>
+        /// Tar bort informationsinlägg.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="inläggsid"></param>
         public void TaBortInlägg(string datum, int inläggsid)
         {
             try
@@ -781,8 +866,6 @@ namespace Grupp3___Förskolan_Drutten
                 cmd = new NpgsqlCommand(sql, conn);
                 dr = cmd.ExecuteReader();
 
-                //HämtaInläggPersonal();  // HÄMTAR INLÄGG
-
                 dr.Close();
                 MessageBox.Show("Inlägget har tagits bort!");
 
@@ -791,8 +874,6 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
-
-            //conn.Close();
         }
 
         /// <summary>

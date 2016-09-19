@@ -9,6 +9,7 @@ namespace Grupp3___Förskolan_Drutten
     class Frånvaro
     {
         public DateTime Datum { get; set; }
+        public int Barnid { get; set; }
         public string Förnamn { get; set; }
         public string Efternamn { get; set; }
         public bool Sjuk { get; set; }
