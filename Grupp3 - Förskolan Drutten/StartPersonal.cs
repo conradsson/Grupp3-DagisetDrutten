@@ -447,8 +447,12 @@ namespace Grupp3___Förskolan_Drutten
 
             dataGridView3.DataSource = p.HämtaFramtidaBarn(dateTimePicker1.Value, dateTimePicker2.Value);
 
-            dataGridView3.Columns[0].Visible = false;
-            dataGridView3.Columns[7].Visible = false;
+            
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
