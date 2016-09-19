@@ -553,5 +553,10 @@ namespace Grupp3___Förskolan_Drutten
                 textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
             }
         }
+
+        private void ändraLösenordButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
