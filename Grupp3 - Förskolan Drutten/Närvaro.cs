@@ -13,8 +13,10 @@ namespace Grupp3___Förskolan_Drutten
 {
     class Närvaro
     {
+        public int Närvaroid { get; set; }
         public DateTime Datum { get; set; }
         public int barnid { get; set; }
+        public int Barnid { get; set; }
         public string Förnamn { get; set; }
         public string Efternamn { get; set; }
         public string TidLämnad { get; set; }
@@ -22,7 +24,7 @@ namespace Grupp3___Förskolan_Drutten
         public string HämtasAv { get; set; }
         public bool närvarande { get; set; }
         public bool hämtad { get; set; }
-
+         
 
         public override string ToString()
         {

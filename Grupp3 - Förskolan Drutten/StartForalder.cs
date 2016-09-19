@@ -29,7 +29,7 @@ namespace Grupp3___Förskolan_Drutten
 
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn + " " + aktuellperson.Efternamn;
 
-            tiderBarnListBox.ClearSelected();
+            //tiderBarnListBox.ClearSelected();
         }
 
 
@@ -102,7 +102,7 @@ namespace Grupp3___Förskolan_Drutten
             tiderBarnListBox.DataSource = null;
             
             tiderBarnListBox.DataSource = barnlista;
-            tiderBarnListBox.ClearSelected();
+            //tiderBarnListBox.ClearSelected();
             listBoxMeddelaHämtning.DataSource = null;
             listBoxMeddelaHämtning.DataSource = barnlista;
             listBoxMeddelaFrånvaro.DataSource = null;
@@ -201,6 +201,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 Postgres p = new Postgres();
                 p.LäggTillTid(datum, barnid, lämnas, hämtas);
+                
             }
 
             comboBoxFrån1.Text = "";
@@ -222,9 +223,10 @@ namespace Grupp3___Förskolan_Drutten
                 //dataGridViewTiderBarn.Columns[1].Visible = false;
                 //dataGridViewTiderBarn.Columns[2].Visible = false;
 
+                Postgres po = new Postgres();
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
-                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+                tid = po.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
 
                 if (tid == "")
                 {
@@ -392,14 +394,23 @@ namespace Grupp3___Förskolan_Drutten
         {
             Barn aktuelltbarn = (Barn)listBoxMeddelaHämtning.SelectedItem;
 
-            int barnid = aktuelltbarn.Barnid;
-            string hamtas = textBoxMeddelaHämtning.Text;
-            DateTime datum = monthCalendar1.SelectionStart;
+            if (aktuelltbarn != null)
+            {
+                int barnid = aktuelltbarn.Barnid;
+                string hamtas = textBoxMeddelaHämtning.Text;
+                DateTime datum = monthCalendar1.SelectionStart;
 
-            Postgres p = new Postgres();
+                Postgres p = new Postgres();
 
-            p.MeddelaHämtning(barnid, hamtas, datum);
+                p.MeddelaHämtning(barnid, hamtas, datum);
+            }
 
+            Postgres p1 = new Postgres();
+            dataGridViewHämtning.DataSource = null;
+            dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
+            Postgres p2 = new Postgres();
+            dataGridViewTiderBarn.DataSource = null;
+            dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid);
 
         }
 
@@ -415,6 +426,10 @@ namespace Grupp3___Förskolan_Drutten
                 DateTime datum = monthCalendar1.SelectionStart;
                 tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
                 textBoxMeddelaHämtning.Text = tid;
+
+                Postgres p1 = new Postgres();
+                dataGridViewHämtning.DataSource = null;
+                dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltb.Barnid);
             }
             //else
             //{
@@ -473,7 +488,6 @@ namespace Grupp3___Förskolan_Drutten
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)listBoxMeddelaFrånvaro.SelectedItem;
 
-
             if (aktuelltbarn != null)
             {
                 Postgres p = new Postgres();
@@ -492,8 +506,10 @@ namespace Grupp3___Förskolan_Drutten
                     sjuk = false;
                     ledig = true;
                 }
-
+                
                 p.LäggTillFånvaro(datum, id, sjuk, ledig);
+                Postgres p1 = new Postgres();
+                p1.KontrolleraNärvaro(datum, id);
             }
         }
 
@@ -511,9 +527,6 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson.Förnamn =    textBoxFörnamnMittKonto.Text;
             AktuellPerson.Efternamn=    textBoxEfternamnMittKonto.Text;
             AktuellPerson.Telefonnr=    textBoxTelefonnummerMittKonto.Text;
-
-            
-
 
         }
 
@@ -539,6 +552,11 @@ namespace Grupp3___Förskolan_Drutten
 
                 textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
             }
+        }
+
+        private void ändraLösenordButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
