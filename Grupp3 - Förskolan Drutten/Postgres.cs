@@ -187,12 +187,12 @@ namespace Grupp3___Förskolan_Drutten
             {
                 narvaro.Närvaroid = (int)rad[0];
                 narvaro.Datum = (DateTime)rad[1];
-                narvaro.Barnid = (int)rad[2];
+                narvaro.barnid = (int)rad[2];
                 narvaro.HämtasAv = rad[3].ToString();
                 narvaro.TidLämnad = rad[4].ToString();
                 narvaro.TidHämtad = rad[5].ToString();
 
-            if(narvaro.Datum == datum && narvaro.Barnid == barnid)
+            if(narvaro.Datum == datum && narvaro.barnid == barnid)
             {
                 TaBortNärvaro(datum, barnid);
             }
@@ -552,13 +552,13 @@ namespace Grupp3___Förskolan_Drutten
 
                     narvaro.Närvaroid = (int)rad[0];
                     narvaro.Datum = (DateTime)rad[1];
-                    narvaro.Barnid = (int)rad[2];
+                    narvaro.barnid = (int)rad[2];
                     narvaro.HämtasAv = rad[3].ToString();
                     narvaro.TidLämnad = rad[4].ToString();
                     narvaro.TidHämtad = rad[5].ToString();
 
                 }
-                if (narvaro.Datum == datum && narvaro.Barnid == barnid)
+                if (narvaro.Datum == datum && narvaro.barnid == barnid)
                 {
                     MeddelaHämtning(barnid, hämtasAv, datum);
                 }

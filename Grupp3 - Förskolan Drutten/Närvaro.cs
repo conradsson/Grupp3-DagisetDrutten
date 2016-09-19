@@ -16,7 +16,6 @@ namespace Grupp3___Förskolan_Drutten
         public int Närvaroid { get; set; }
         public DateTime Datum { get; set; }
         public int barnid { get; set; }
-        public int Barnid { get; set; }
         public string Allergier { get; set; }
         public string Förnamn { get; set; }
         public string Efternamn { get; set; }
@@ -31,13 +30,5 @@ namespace Grupp3___Förskolan_Drutten
         {
             return Datum + " " + barnid + " " + Förnamn + " " + Efternamn + " " + TidLämnad + " " + TidHämtad + " " + HämtasAv + " " + närvarande + " " + hämtad + " " + Allergier;
         }
-
-        //public string visaBarnTider
-        //{
-        //    get
-        //    {
-        //        return Datum.ToString("yyyy-MM-dd") + "\t " + TidLämnad + "\t" + TidHämtad + "\t     " + HämtasAv;
-        //    }
-        //}
     }
 }
