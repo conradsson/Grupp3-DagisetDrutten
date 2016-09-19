@@ -514,7 +514,8 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 dataGridSkrivut.DataSource = p.HämtaNärvaro(monthCalendar23INärvarohantering.SelectionStart);
                 dataGridSkrivut.Visible = true;
-                panelskrivfrånvaro.Visable = false;
+                panelskrivfrånvaro.Visible = false;
+                panelskriv.Visible = true;
 
             }
             else if (FrånvarandeRadioButton.Checked)
@@ -525,7 +526,7 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridViewFrånvaroSkrivut.DataSource = p.HämtaFrånvaro(monthCalendar23INärvarohantering.SelectionStart);
                 dataGridViewFrånvaroSkrivut.Visible = true;
                 panelskriv.Visible = false;
-                
+                panelskrivfrånvaro.Visible = true;
 
             }
             
@@ -551,6 +552,22 @@ namespace Grupp3___Förskolan_Drutten
             e.Graphics.DrawImage(newImage, 25, 25, newImage.Width, newImage.Height);
             e.Graphics.DrawString(statuspanel.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(21, 120));
             e.Graphics.DrawImage(bm,21,140);
+        }
+
+        private void panelskrivfrånvaro_Click(object sender, EventArgs e)
+        {
+            printDocument2.Print();
+        }
+
+        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dataGridViewFrånvaroSkrivut.Width, this.dataGridViewFrånvaroSkrivut.Height);
+            dataGridViewFrånvaroSkrivut.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridViewFrånvaroSkrivut.Width, this.dataGridViewFrånvaroSkrivut.Height));
+            Bitmap bmp = Properties.Resources.BlådruttenMellan;
+            Image newImage = bmp;
+            e.Graphics.DrawImage(newImage, 25, 25, newImage.Width, newImage.Height);
+            e.Graphics.DrawString(statuspanel.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(21, 120));
+            e.Graphics.DrawImage(bm, 21, 140);
         }
     }
 }
