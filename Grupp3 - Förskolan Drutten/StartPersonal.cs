@@ -514,15 +514,17 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 dataGridSkrivut.DataSource = p.HämtaNärvaro(monthCalendar23INärvarohantering.SelectionStart);
                 dataGridSkrivut.Visible = true;
-
+                panelskrivfrånvaro.Visable = false;
 
             }
             else if (FrånvarandeRadioButton.Checked)
             {
                 statuspanel.Text = "Frånvarande.";
-                dataGridSkrivut.DataSource = null;
+                dataGridViewFrånvaroSkrivut.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridSkrivut.DataSource = p.HämtaFrånvaro(monthCalendar23INärvarohantering.SelectionStart);
+                dataGridViewFrånvaroSkrivut.DataSource = p.HämtaFrånvaro(monthCalendar23INärvarohantering.SelectionStart);
+                dataGridViewFrånvaroSkrivut.Visible = true;
+                panelskriv.Visible = false;
                 
 
             }
@@ -547,9 +549,8 @@ namespace Grupp3___Förskolan_Drutten
             Bitmap bmp = Properties.Resources.BlådruttenMellan;
             Image newImage = bmp;
             e.Graphics.DrawImage(newImage, 25, 25, newImage.Width, newImage.Height);
-            e.Graphics.DrawString(statuspanel.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(50, 10));
-
-            e.Graphics.DrawImage(bm,100,40);
+            e.Graphics.DrawString(statuspanel.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(21, 120));
+            e.Graphics.DrawImage(bm,21,140);
         }
     }
 }
