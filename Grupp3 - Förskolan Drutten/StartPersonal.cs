@@ -475,14 +475,15 @@ namespace Grupp3___Förskolan_Drutten
 
                         p.LäggTillNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
                     }
-                    if (row.Cells[4].Value == null)
+                    else
                     {
-                        Postgres p = new Postgres();
-                        aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
-                        aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[4].Value);
-                        aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
+                            Postgres p = new Postgres();
+                            aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
+                            aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[4].Value);
+                            aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
-                        p.TaBortNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
+                            p.TaBortNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
+
                     }
                 }
                 if (row.Cells[5].Value != null)
@@ -496,9 +497,18 @@ namespace Grupp3___Förskolan_Drutten
 
                         p.LäggTillHämtadFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.hämtad);
                     }
+                    else
+                    {
+                        Postgres p = new Postgres();
+                        aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
+                        aktuelltBarn.hämtad = Convert.ToBoolean(row.Cells[4].Value);
+                        aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
+
+                        p.TaBortHämtadFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.hämtad);
+                    }
                 }
+
             }
-            
         }
     }
 }

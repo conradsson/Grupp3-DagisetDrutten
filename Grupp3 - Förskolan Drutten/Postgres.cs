@@ -1328,8 +1328,6 @@ namespace Grupp3___Förskolan_Drutten
 
                 cmd = new NpgsqlCommand(sql, conn);
 
-                //cmd.Parameters.AddWithValue("@närvarande", närvarande);
-
                 dr = cmd.ExecuteReader();
                 dr.Close();
 
@@ -1350,8 +1348,6 @@ namespace Grupp3___Förskolan_Drutten
 
                 cmd = new NpgsqlCommand(sql, conn);
 
-                //cmd.Parameters.AddWithValue("@närvarande", närvarande);
-
                 dr = cmd.ExecuteReader();
                 dr.Close();
 
@@ -1369,6 +1365,28 @@ namespace Grupp3___Förskolan_Drutten
             try
             {
                 string sql = "UPDATE dagis.narvaro SET hämtad = TRUE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+
+                //cmd.Parameters.AddWithValue("@närvarande", närvarande);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+
+            conn.Close();
+        }
+        public void TaBortHämtadFörIdag(DateTime datum, int barnid, bool närvarande)
+        {
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.narvaro SET hämtad = FALSE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
 
                 cmd = new NpgsqlCommand(sql, conn);
 
