@@ -57,9 +57,10 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
 
 
-            textBoxFörnamnMittKonto.Text = AktuellPerson.Förnamn;
-            textBoxEfternamnMittKonto.Text = AktuellPerson.Efternamn;
-            textBoxTelefonnummerMittKonto.Text = AktuellPerson.Telefonnr;
+            textBoxFörnamnMittkonto.Text = AktuellPerson.Förnamn;
+            textBoxEfternamnMittkonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnrMittkonto.Text = AktuellPerson.Telefonnr;
+            
 
 
             List<Barn> barnlista = new List<Barn>();
@@ -447,26 +448,17 @@ namespace Grupp3___Förskolan_Drutten
             //Person aktuellPerson = new Person();
 
             int id = AktuellPerson.Personid;
-            string förnamn = textBoxFörnamnMittKonto.Text;
-            string efternamn = textBoxEfternamnMittKonto.Text;
-            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
-
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
-        }
-
-        private void uppdateraförälder_Click_1(object sender, EventArgs e)
-        {
-            Postgres p = new Postgres();
-            //Person aktuellPerson = new Person();
-
-            int id = AktuellPerson.Personid;
-            string förnamn = textBoxFörnamnMittKonto.Text;
-            string efternamn = textBoxEfternamnMittKonto.Text;
-            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
+            string förnamn = textBoxFörnamnMittkonto.Text;
+            string efternamn = textBoxEfternamnMittkonto.Text;
+            string telefonnummer = textBoxTelefonnrMittkonto.Text;
 
             p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
 
+            AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
+            AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
+            AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -497,25 +489,6 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        private void uppdateraförälder_Click_2(object sender, EventArgs e)
-        {
-            Postgres p = new Postgres();
-
-            int id = AktuellPerson.Personid;
-            string förnamn = textBoxFörnamnMittKonto.Text;
-            string efternamn = textBoxEfternamnMittKonto.Text;
-            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
-            
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
-
-            AktuellPerson.Förnamn =    textBoxFörnamnMittKonto.Text;
-            AktuellPerson.Efternamn=    textBoxEfternamnMittKonto.Text;
-            AktuellPerson.Telefonnr=    textBoxTelefonnummerMittKonto.Text;
-
-            
-
-
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -539,6 +512,42 @@ namespace Grupp3___Förskolan_Drutten
 
                 textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
             }
+        }
+
+        private void ändraLösenordButton_Click(object sender, EventArgs e)
+        {
+            textBoxtNuvarandeLösenord.Clear();
+            textBoxNyttLösenord.Clear();
+            textBoxNyttLösenord2.Clear();
+            ändraLösenordPanel.Visible = true;
+        }
+
+        private void ändraLösenordBekräftaButton_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+
+            int id = AktuellPerson.Personid;
+            string nuvarandeLösenord = textBoxtNuvarandeLösenord.Text;
+            string nyttLösenord = textBoxNyttLösenord.Text;
+            string nyttLösenord2 = textBoxNyttLösenord2.Text;
+
+            if (p.LösenordsEncrypt(nuvarandeLösenord) == AktuellPerson.Lösenord)
+            {
+                if (textBoxNyttLösenord.Text == textBoxNyttLösenord2.Text)
+                {
+                    p.ÄndraLösenord(id, nuvarandeLösenord, nyttLösenord);
+                    ändraLösenordPanel.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Det nya lösenordet var inte lika.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Det nuvarande lösenordet var fel.");
+            }
+
         }
     }
 }

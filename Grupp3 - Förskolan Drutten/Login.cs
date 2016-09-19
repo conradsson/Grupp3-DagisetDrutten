@@ -98,7 +98,7 @@ namespace Grupp3___Förskolan_Drutten
         // Om lösenord är tomt blir texten "Lösenord". AVSTÄNGD!
         private void losenordTextbox_Leave(object sender, EventArgs e)
         {
-            losenordTextbox.Text = "1234";
+           // losenordTextbox.Text = "1234";
 
             /* if (losenordTextbox.Text == "")
              {

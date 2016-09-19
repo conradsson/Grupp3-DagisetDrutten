@@ -105,12 +105,6 @@
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.uppdateraförälder = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBoxTelefonnummerMittKonto = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxEfternamnMittKonto = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBoxFörnamnMittKonto = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listAktuellaBarn = new System.Windows.Forms.ListBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -127,6 +121,23 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBoxTelefonnrMittkonto = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxEfternamnMittkonto = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
+            this.ändraLösenordButton = new System.Windows.Forms.Button();
+            this.ändraLösenordPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBoxtNuvarandeLösenord = new System.Windows.Forms.TextBox();
+            this.textBoxNyttLösenord = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBoxNyttLösenord2 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.ändraLösenordBekräftaButton = new System.Windows.Forms.Button();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -146,6 +157,8 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
+            this.ändraLösenordPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -174,9 +187,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -1091,13 +1104,15 @@
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage1.Controls.Add(this.uppdateraförälder);
+            this.tabPage1.Controls.Add(this.ändraLösenordPanel);
+            this.tabPage1.Controls.Add(this.ändraLösenordButton);
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.textBoxTelefonnummerMittKonto);
+            this.tabPage1.Controls.Add(this.textBoxTelefonnrMittkonto);
             this.tabPage1.Controls.Add(this.label18);
-            this.tabPage1.Controls.Add(this.textBoxEfternamnMittKonto);
+            this.tabPage1.Controls.Add(this.textBoxEfternamnMittkonto);
             this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.textBoxFörnamnMittKonto);
+            this.tabPage1.Controls.Add(this.textBoxFörnamnMittkonto);
+            this.tabPage1.Controls.Add(this.uppdateraförälder);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -1109,61 +1124,13 @@
             // 
             // uppdateraförälder
             // 
-            this.uppdateraförälder.Location = new System.Drawing.Point(114, 145);
+            this.uppdateraförälder.Location = new System.Drawing.Point(70, 174);
             this.uppdateraförälder.Name = "uppdateraförälder";
             this.uppdateraförälder.Size = new System.Drawing.Size(99, 34);
             this.uppdateraförälder.TabIndex = 20;
             this.uppdateraförälder.Text = "Uppdatera information";
             this.uppdateraförälder.UseVisualStyleBackColor = true;
-            this.uppdateraförälder.Click += new System.EventHandler(this.uppdateraförälder_Click_2);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 115);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 13);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Telefonnummer:";
-            // 
-            // textBoxTelefonnummerMittKonto
-            // 
-            this.textBoxTelefonnummerMittKonto.Location = new System.Drawing.Point(113, 112);
-            this.textBoxTelefonnummerMittKonto.Name = "textBoxTelefonnummerMittKonto";
-            this.textBoxTelefonnummerMittKonto.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTelefonnummerMittKonto.TabIndex = 16;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(54, 89);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 13);
-            this.label18.TabIndex = 13;
-            this.label18.Text = "Efternamn:";
-            // 
-            // textBoxEfternamnMittKonto
-            // 
-            this.textBoxEfternamnMittKonto.Location = new System.Drawing.Point(113, 86);
-            this.textBoxEfternamnMittKonto.Name = "textBoxEfternamnMittKonto";
-            this.textBoxEfternamnMittKonto.Size = new System.Drawing.Size(100, 20);
-            this.textBoxEfternamnMittKonto.TabIndex = 12;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(56, 56);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 13);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "Förnamn:";
-            // 
-            // textBoxFörnamnMittKonto
-            // 
-            this.textBoxFörnamnMittKonto.Location = new System.Drawing.Point(113, 53);
-            this.textBoxFörnamnMittKonto.Name = "textBoxFörnamnMittKonto";
-            this.textBoxFörnamnMittKonto.Size = new System.Drawing.Size(100, 20);
-            this.textBoxFörnamnMittKonto.TabIndex = 10;
+            this.uppdateraförälder.Click += new System.EventHandler(this.uppdateraFörälder_Click);
             // 
             // tabPage2
             // 
@@ -1321,6 +1288,165 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(67, 126);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(83, 13);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "Telefonnummer:";
+            // 
+            // textBoxTelefonnrMittkonto
+            // 
+            this.textBoxTelefonnrMittkonto.Location = new System.Drawing.Point(69, 142);
+            this.textBoxTelefonnrMittkonto.Name = "textBoxTelefonnrMittkonto";
+            this.textBoxTelefonnrMittkonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefonnrMittkonto.TabIndex = 29;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(66, 81);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(58, 13);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Efternamn:";
+            // 
+            // textBoxEfternamnMittkonto
+            // 
+            this.textBoxEfternamnMittkonto.Location = new System.Drawing.Point(69, 97);
+            this.textBoxEfternamnMittkonto.Name = "textBoxEfternamnMittkonto";
+            this.textBoxEfternamnMittkonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEfternamnMittkonto.TabIndex = 27;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(66, 40);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 13);
+            this.label19.TabIndex = 26;
+            this.label19.Text = "Förnamn:";
+            // 
+            // textBoxFörnamnMittkonto
+            // 
+            this.textBoxFörnamnMittkonto.Location = new System.Drawing.Point(69, 56);
+            this.textBoxFörnamnMittkonto.Name = "textBoxFörnamnMittkonto";
+            this.textBoxFörnamnMittkonto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFörnamnMittkonto.TabIndex = 25;
+            // 
+            // ändraLösenordButton
+            // 
+            this.ändraLösenordButton.Location = new System.Drawing.Point(70, 219);
+            this.ändraLösenordButton.Name = "ändraLösenordButton";
+            this.ändraLösenordButton.Size = new System.Drawing.Size(99, 34);
+            this.ändraLösenordButton.TabIndex = 31;
+            this.ändraLösenordButton.Text = "Ändra lösenord";
+            this.ändraLösenordButton.UseVisualStyleBackColor = true;
+            this.ändraLösenordButton.Click += new System.EventHandler(this.ändraLösenordButton_Click);
+            // 
+            // ändraLösenordPanel
+            // 
+            this.ändraLösenordPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.ändraLösenordPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ändraLösenordPanel.Controls.Add(this.label30);
+            this.ändraLösenordPanel.Controls.Add(this.panel2);
+            this.ändraLösenordPanel.Location = new System.Drawing.Point(48, 6);
+            this.ändraLösenordPanel.MaximumSize = new System.Drawing.Size(410, 347);
+            this.ändraLösenordPanel.MinimumSize = new System.Drawing.Size(410, 347);
+            this.ändraLösenordPanel.Name = "ändraLösenordPanel";
+            this.ändraLösenordPanel.Size = new System.Drawing.Size(410, 347);
+            this.ändraLösenordPanel.TabIndex = 32;
+            this.ändraLösenordPanel.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.ändraLösenordBekräftaButton);
+            this.panel2.Controls.Add(this.textBoxNyttLösenord2);
+            this.panel2.Controls.Add(this.label33);
+            this.panel2.Controls.Add(this.textBoxNyttLösenord);
+            this.panel2.Controls.Add(this.label32);
+            this.panel2.Controls.Add(this.textBoxtNuvarandeLösenord);
+            this.panel2.Controls.Add(this.label31);
+            this.panel2.Location = new System.Drawing.Point(62, 47);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(284, 260);
+            this.panel2.TabIndex = 0;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(4, 3);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(92, 13);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Ändra lösenord";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(21, 71);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(106, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Nuvarande lösenord:";
+            // 
+            // textBoxtNuvarandeLösenord
+            // 
+            this.textBoxtNuvarandeLösenord.Location = new System.Drawing.Point(24, 89);
+            this.textBoxtNuvarandeLösenord.Name = "textBoxtNuvarandeLösenord";
+            this.textBoxtNuvarandeLösenord.PasswordChar = '*';
+            this.textBoxtNuvarandeLösenord.Size = new System.Drawing.Size(145, 20);
+            this.textBoxtNuvarandeLösenord.TabIndex = 1;
+            // 
+            // textBoxNyttLösenord
+            // 
+            this.textBoxNyttLösenord.Location = new System.Drawing.Point(24, 136);
+            this.textBoxNyttLösenord.Name = "textBoxNyttLösenord";
+            this.textBoxNyttLösenord.PasswordChar = '*';
+            this.textBoxNyttLösenord.Size = new System.Drawing.Size(145, 20);
+            this.textBoxNyttLösenord.TabIndex = 3;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(21, 118);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(72, 13);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "Nytt lösenord:";
+            // 
+            // textBoxNyttLösenord2
+            // 
+            this.textBoxNyttLösenord2.Location = new System.Drawing.Point(24, 186);
+            this.textBoxNyttLösenord2.Name = "textBoxNyttLösenord2";
+            this.textBoxNyttLösenord2.PasswordChar = '*';
+            this.textBoxNyttLösenord2.Size = new System.Drawing.Size(145, 20);
+            this.textBoxNyttLösenord2.TabIndex = 5;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(21, 168);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(113, 13);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "Bekräfta nytt lösenord:";
+            // 
+            // ändraLösenordBekräftaButton
+            // 
+            this.ändraLösenordBekräftaButton.Location = new System.Drawing.Point(128, 224);
+            this.ändraLösenordBekräftaButton.Name = "ändraLösenordBekräftaButton";
+            this.ändraLösenordBekräftaButton.Size = new System.Drawing.Size(75, 23);
+            this.ändraLösenordBekräftaButton.TabIndex = 6;
+            this.ändraLösenordBekräftaButton.Text = "Bekräfta";
+            this.ändraLösenordBekräftaButton.UseVisualStyleBackColor = true;
+            this.ändraLösenordBekräftaButton.Click += new System.EventHandler(this.ändraLösenordBekräftaButton_Click);
+            // 
             // datumDataGridViewTextBoxColumn
             // 
             this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
@@ -1380,6 +1506,10 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
+            this.ändraLösenordPanel.ResumeLayout(false);
+            this.ändraLösenordPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -1427,12 +1557,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.MonthCalendar monthCalendar2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBoxTelefonnummerMittKonto;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBoxEfternamnMittKonto;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBoxFörnamnMittKonto;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.RichTextBox richTextBoxAnnat;
         private System.Windows.Forms.Label label20;
@@ -1489,5 +1613,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TidLämnad;
         private System.Windows.Forms.DataGridViewTextBoxColumn TidHämtad;
         private System.Windows.Forms.DataGridViewTextBoxColumn HämtasAv;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBoxTelefonnrMittkonto;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBoxEfternamnMittkonto;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxFörnamnMittkonto;
+        private System.Windows.Forms.Button ändraLösenordButton;
+        private System.Windows.Forms.Panel ändraLösenordPanel;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button ändraLösenordBekräftaButton;
+        private System.Windows.Forms.TextBox textBoxNyttLösenord2;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBoxNyttLösenord;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBoxtNuvarandeLösenord;
+        private System.Windows.Forms.Label label31;
     }
 }
