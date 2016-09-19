@@ -869,7 +869,7 @@ namespace Grupp3___Förskolan_Drutten
 
             try
             {
-                string sql = "SELECT COUNT(narvaro.datum) as antal FROM dagis.narvaro WHERE datum = ('" + AktuelltDatum + "') AND tid_lamnad  LIKE '%" + tid + "_%'";
+                string sql = "SELECT COUNT(narvaro.datum) as antal FROM dagis.narvaro WHERE datum = ('" + AktuelltDatum + "') AND tid_lamnad  LIKE '%" + tid + "_%'"; 
 
                 cmd = new NpgsqlCommand(sql, conn); // Kör sql
                 dr = cmd.ExecuteReader();
