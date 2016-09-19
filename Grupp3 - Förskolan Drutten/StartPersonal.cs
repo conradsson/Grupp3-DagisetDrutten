@@ -112,7 +112,8 @@ namespace Grupp3___Förskolan_Drutten
 
             Postgres p = new Postgres();
             dataGridView2.DataSource = p.HämtaNärvaro(DateTime.Today);
-            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[1].Visible = false;
+            
 
             labelAntalBarnIdag.Text = dataGridView2.RowCount.ToString() + " Barn på förskolan idag";
 
@@ -454,6 +455,34 @@ namespace Grupp3___Förskolan_Drutten
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buttonUppdateraNärvaro_Click(object sender, EventArgs e)
+        {
+            Närvaro aktuelltBarn = new Närvaro();
+
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                Postgres p = new Postgres();
+
+                if (row.Cells[4].Value != null)
+                {
+
+                    if (Convert.ToBoolean(row.Cells[4].Value))
+                    {
+
+                        aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
+                        aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[4].Value);
+                        aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
+
+
+                        p.LäggTillNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
+
+                        //MessageBox.Show(aktuelltBarn.barnid.ToString() + aktuelltBarn.närvarande);
+                    }
+                }
+            }
+            
         }
     }
 }
