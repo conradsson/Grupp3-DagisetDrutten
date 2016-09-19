@@ -153,8 +153,8 @@ namespace Grupp3___Förskolan_Drutten
             try
             {
 
-                string sql = "insert into dagis.franvaro (datum, barnid, sjuk, ledig) values (@datum, @barnid, @sjuk, @ledig); "
-                            + "delete from dagis.narvaro where narvaro.datum = @datum and narvaro.barnid = @barnid";
+                string sql = "insert into dagis.franvaro (datum, barnid, sjuk, ledig) values (@datum, @barnid, @sjuk, @ledig); ";
+                            //+ "delete from dagis.narvaro where narvaro.datum = @datum and narvaro.barnid = @barnid";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@datum", datum);
@@ -180,6 +180,67 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        public void TaBortNärvaro(DateTime datum, int barnid)
+        {
+            conn.Open();
+            string meddelande;
+            try
+            {
+                string sql = "delete from dagis.narvaro where narvaro.datum = @datum and narvaro.barnid = @barnid;";
+           
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Närvaron är borttagen.";
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+                //if (meddelande.Contains("23505"))
+                //{
+                //    meddelande = "Frånvaro är redan registrerat detta datum.";
+                //}
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
+        }
+
+        public void KontrolleraNärvaro(DateTime datum, int barnid)
+        {
+            string sql = "select * from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            Närvaro narvaro = new Närvaro();
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                
+                narvaro.Närvaroid = (int)rad[0];
+                narvaro.Datum = (DateTime)rad[1];
+                narvaro.Barnid = (int)rad[2];
+                narvaro.HämtasAv = rad[3].ToString();
+                narvaro.TidLämnad = rad[4].ToString();
+                narvaro.TidHämtad = rad[5].ToString();
+
+     
+            if(narvaro.Datum == datum && narvaro.Barnid == barnid)
+            {
+                TaBortNärvaro(datum, barnid);
+            }
+            else
+            {
+                MessageBox.Show("Det finns inga registrerade tider detta datum, Frånvaron har blivit registrerad.");
+            }
+
+            }
+       
+            
+        }
 
         /// <summary>
         ///  Metod för att lägga till tider till ett barn
@@ -211,6 +272,11 @@ namespace Grupp3___Förskolan_Drutten
             catch (NpgsqlException ex)
             {
                 meddelande = ex.Message;
+                if (meddelande.Contains("23505"))
+                {
+                    meddelande = "Det finns redan en tid registrerat detta datum. \n \n"
+                        + "Klicka på ett annat datum i kalendern och välj sedan detta datum igen \nom du vill uppdatera den redan befintliga tiden.";
+                }
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
             conn.Close();
@@ -322,6 +388,7 @@ namespace Grupp3___Förskolan_Drutten
         /// <returns></returns>
         public string BarnetsHämtaTid(int barnid, DateTime datum)
         {
+            
             string svar = "";
                 try
                 {
@@ -892,7 +959,7 @@ namespace Grupp3___Förskolan_Drutten
 
             try
             {
-                string sql = "SELECT COUNT(narvaro.datum) as antal FROM dagis.narvaro WHERE datum = ('" + AktuelltDatum + "') AND tid_lamnad  LIKE '%" + tid + "_%'";
+                string sql = "SELECT COUNT(narvaro.datum) as antal FROM dagis.narvaro WHERE datum = ('" + AktuelltDatum + "') AND tid_lamnad  LIKE '%" + tid + "_%'"; 
 
                 cmd = new NpgsqlCommand(sql, conn); // Kör sql
                 dr = cmd.ExecuteReader();

@@ -13,7 +13,9 @@ namespace Grupp3___Förskolan_Drutten
 {
     class Närvaro
     {
+        public int Närvaroid { get; set; }
         public DateTime Datum { get; set; }
+        public int Barnid { get; set; }
         public string Förnamn { get; set; }
         public string Efternamn { get; set; }
         public string TidLämnad { get; set; }
