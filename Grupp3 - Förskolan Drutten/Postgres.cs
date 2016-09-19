@@ -224,7 +224,6 @@ namespace Grupp3___Förskolan_Drutten
 
             foreach (DataRow rad in tabell.Rows)
             {
-                
                 narvaro.Närvaroid = (int)rad[0];
                 narvaro.Datum = (DateTime)rad[1];
                 narvaro.Barnid = (int)rad[2];
@@ -232,17 +231,18 @@ namespace Grupp3___Förskolan_Drutten
                 narvaro.TidLämnad = rad[4].ToString();
                 narvaro.TidHämtad = rad[5].ToString();
 
-     
             if(narvaro.Datum == datum && narvaro.Barnid == barnid)
             {
                 TaBortNärvaro(datum, barnid);
             }
-
             }
-       
-            
         }
 
+        /// <summary>
+        /// Tar bort från frånvarotabellen om en tid registreras samma datum som en frånvaro
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
         public void TaBortFrånvaro(DateTime datum, int barnid)
         {
             conn.Open();
@@ -269,6 +269,11 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        /// <summary>
+        /// Kontrollerar om tiden som läggs in har samma datum som en frånvaro, i så fall tas frånvaron bort
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="barnid"></param>
         public void KontrolleraFrånvaro(DateTime datum, int barnid)
         {
             string sql = "select franvaro.datum, franvaro.barnid from dagis.franvaro where franvaro.datum = '" + datum + "' AND franvaro.barnid = '" + barnid + "';";
@@ -279,7 +284,6 @@ namespace Grupp3___Förskolan_Drutten
 
             foreach (DataRow rad in tabell.Rows)
             {
-
                 f.Datum = (DateTime)rad[0];
                 f.Barnid = (int)rad[1];
 
@@ -287,10 +291,7 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     TaBortFrånvaro(datum, barnid);
                 }
-
             }
-
-
         }
 
         /// <summary>
