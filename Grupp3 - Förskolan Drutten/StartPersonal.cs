@@ -82,8 +82,8 @@ namespace Grupp3___Förskolan_Drutten
             //dataGridAllaBarn.DataSource = null;
             Postgres p = new Postgres();
 
-            barnAvdl2ListBox.DataSource = p.HämtanBarn();
-            label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+            listBoxSöktaBarn.DataSource = p.HämtanBarn();
+            labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             //dataGridAllaBarn.DataSource = p.HämtanBarn();
 
         }
@@ -306,17 +306,17 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxSöktaBarn_SelectedIndexChanged(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
-            Barn AktuelltBarn = (Barn)barnAvdl2ListBox.SelectedItem;
+            Barn AktuelltBarn = (Barn)listBoxSöktaBarn.SelectedItem;
 
             if (AktuelltBarn != null)
             {
 
-                listBox1.DataSource = null;
-                listBox1.DisplayMember = "VisaFörälder";
-                listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
+                listBoxVårnadshavare.DataSource = null;
+                listBoxVårnadshavare.DisplayMember = "VisaFörälder";
+                listBoxVårnadshavare.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
 
                 barnOverigtrichTextBox.Text = AktuelltBarn.Allergier + "\n" + AktuelltBarn.Annat;
 
@@ -329,35 +329,32 @@ namespace Grupp3___Förskolan_Drutten
             if (checkBoxAvdelning1.Checked == true && checkBoxAvdelning2.Checked == true)
             {
                 Postgres p = new Postgres();
-                listBox1.DataSource = null;
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
-                label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+                listBoxVårnadshavare.DataSource = null;
+                listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
 
             }
 
             else if (checkBoxAvdelning1.Checked == true)
             {
                 Postgres p = new Postgres();
-                listBox1.DataSource = null;
-                //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning1();
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök1(textBoxSökRuta.Text);
-                label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+                listBoxVårnadshavare.DataSource = null;
+                listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök1(textBoxSökRuta.Text);
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             }
             else if (checkBoxAvdelning2.Checked == true)
             {
                 Postgres p = new Postgres();
-                listBox1.DataSource = null;
-                //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning2();
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
-                label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+                listBoxVårnadshavare.DataSource = null;
+                listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             }
             else
             {
                 Postgres p = new Postgres();
-                listBox1.DataSource = null;
-                //barnAvdl2ListBox.DataSource = p.HämtanBarn();
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
-                label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+                listBoxVårnadshavare.DataSource = null;
+                listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             }
             
         }
