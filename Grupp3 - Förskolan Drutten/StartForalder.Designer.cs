@@ -143,11 +143,11 @@
             this.label33 = new System.Windows.Forms.Label();
             this.ändraLösenAvbryt = new System.Windows.Forms.Button();
             this.ändralösenBekräfta = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label34 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
@@ -1505,6 +1505,16 @@
             this.ändralösenBekräfta.UseVisualStyleBackColor = true;
             this.ändralösenBekräfta.Click += new System.EventHandler(this.ändralösenBekräfta_Click);
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(34, 20);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(79, 13);
+            this.label34.TabIndex = 23;
+            this.label34.Text = "Ändra uppgifter";
+            // 
             // datumDataGridViewTextBoxColumn
             // 
             this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
@@ -1526,16 +1536,6 @@
             // frånvaroBindingSource
             // 
             this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(34, 20);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(79, 13);
-            this.label34.TabIndex = 23;
-            this.label34.Text = "Ändra uppgifter";
             // 
             // StartForalder
             // 
