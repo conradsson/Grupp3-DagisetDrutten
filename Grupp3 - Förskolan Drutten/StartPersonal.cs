@@ -512,7 +512,7 @@ namespace Grupp3___Förskolan_Drutten
                 statuspanel.Text = "Närvarande.";
                 dataGridSkrivut.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridSkrivut.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+                dataGridSkrivut.DataSource = p.HämtaNärvaro(monthCalendar23INärvarohantering.SelectionStart);
                 dataGridSkrivut.Visible = true;
 
 
