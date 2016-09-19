@@ -428,7 +428,8 @@ namespace Grupp3___Förskolan_Drutten
 
                         Postgres p = new Postgres();
                         p.KontrolleraHämtning(datum, barnid, hamtas);
-                        dataGridViewHämtning.ClearSelection();
+                        //dataGridViewHämtning.ClearSelection();
+                        textBoxMeddelaHämtning.Clear();
                     }
 
 
@@ -452,11 +453,11 @@ namespace Grupp3___Förskolan_Drutten
 
             if (aktuelltb != null)
             {
-                Postgres p = new Postgres();
-                string tid;
-                DateTime datum = monthCalendar1.SelectionStart;
-                tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
-                textBoxMeddelaHämtning.Text = tid;
+                //Postgres p = new Postgres();
+                //string tid;
+                //DateTime datum = monthCalendar1.SelectionStart;
+                //tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
+                //textBoxMeddelaHämtning.Text = tid;
 
                 Postgres p1 = new Postgres();
                 dataGridViewHämtning.DataSource = null;
@@ -470,21 +471,7 @@ namespace Grupp3___Förskolan_Drutten
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            Barn aktuelltb = new Barn();
-            aktuelltb = (Barn)listBoxMeddelaHämtning.SelectedItem;
 
-            if (aktuelltb != null)
-            {
-                Postgres p = new Postgres();
-                string tid;
-                DateTime datum = monthCalendar1.SelectionStart;
-                tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
-                textBoxMeddelaHämtning.Text = tid;
-            }
-            //else
-            //{
-            //    MessageBox.Show("Välj ett barn i listan.");
-            //}
         }
 
         private void uppdateraFörälder_Click(object sender, EventArgs e)
