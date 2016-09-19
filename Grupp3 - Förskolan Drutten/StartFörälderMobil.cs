@@ -511,5 +511,54 @@ namespace Grupp3___Förskolan_Drutten
 
 
         }
+        private void ändraLösenordButton_Click(object sender, EventArgs e)
+        {
+            textBoxNuvarandeLösen.Clear();
+            textBoxNyttLösen.Clear();
+            textBoxNyttLösen2.Clear();
+            ändraLösenPanel.Visible = true;
+        }
+
+        private void ändraLösenAvbryt_Click(object sender, EventArgs e)
+        {
+            ändraLösenPanel.Visible = false;
+        }
+
+        private void ändralösenBekräfta_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+
+            int id = AktuellPerson.Personid;
+            string nuvarandeLösenord = textBoxNuvarandeLösen.Text;
+            string nyttLösenord = textBoxNyttLösen.Text;
+            string nyttLösenord2 = textBoxNyttLösen2.Text;
+
+            /*if (p.LösenordsEncrypt(nuvarandeLösenord) == AktuellPerson.Lösenord)
+            {
+                if (textBoxNyttLösen.Text == textBoxNyttLösen2.Text)
+                {
+                    int antaltecken = textBoxNyttLösen.Text.Count();
+                    if (antaltecken >= 4)
+                    {
+                        p.ÄndraLösenord(id, nuvarandeLösenord, nyttLösenord);
+                        ändraLösenPanel.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Det nya lösenordet måste minsta vara 4 st tecken.");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Det nya lösenordet var inte lika.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Det nuvarande lösenordet var fel.");
+            }*/
+        }
     }
 }
+
