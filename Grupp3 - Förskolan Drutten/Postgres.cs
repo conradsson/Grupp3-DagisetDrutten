@@ -677,7 +677,7 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         /// <summary>
-        /// Hämtar informationsinlägg från databasen.
+        /// Hämtar informationsinlägg från databasen till ett personal-konto.
         /// </summary>
         /// <returns></returns>
         public List<Information> HämtaInläggPersonal()
@@ -705,6 +705,10 @@ namespace Grupp3___Förskolan_Drutten
             }
             return Inlägg;
         }
+        /// <summary>
+        /// Hämtar informationsinlägg från databasen till ett förälder-konto.
+        /// </summary>
+        /// <returns></returns>
         public List<Information> HämtaInläggFörälder()
         {
             string sql = "SELECT i.inläggsid,i.datum,i.inläggsrubrik,i.inläggstext,i.skrivet_av FROM dagis.information i WHERE endast_för_personal = 'FALSE'ORDER BY  datum DESC";
@@ -730,7 +734,14 @@ namespace Grupp3___Förskolan_Drutten
             }
             return Inlägg;
         }
-
+        /// <summary>
+        /// Skapar ett nytt informationsinlägg.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="inläggsrubrik"></param>
+        /// <param name="inläggstext"></param>
+        /// <param name="skrivetav"></param>
+        /// <param name="endastFörPersonal"></param>
         public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav,bool endastFörPersonal)
         {
             Random random = new Random();
@@ -760,6 +771,14 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
             }
         }
+        /// <summary>
+        /// Redigerar och uppdaterar informationsinlägg.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="inläggsrubrik"></param>
+        /// <param name="inläggstext"></param>
+        /// <param name="inläggsid"></param>
+        /// <param name="endastFörPersonal"></param>
         public void UppdateraInlägg(string datum, string inläggsrubrik, string inläggstext, int inläggsid, bool endastFörPersonal)
         {
             try
@@ -782,6 +801,11 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
         }
+        /// <summary>
+        /// Tar bort informationsinlägg.
+        /// </summary>
+        /// <param name="datum"></param>
+        /// <param name="inläggsid"></param>
         public void TaBortInlägg(string datum, int inläggsid)
         {
             try
@@ -791,8 +815,6 @@ namespace Grupp3___Förskolan_Drutten
                 cmd = new NpgsqlCommand(sql, conn);
                 dr = cmd.ExecuteReader();
 
-                //HämtaInläggPersonal();  // HÄMTAR INLÄGG
-
                 dr.Close();
                 MessageBox.Show("Inlägget har tagits bort!");
 
@@ -801,8 +823,6 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
-
-            //conn.Close();
         }
 
         /// <summary>
