@@ -402,7 +402,8 @@ namespace Grupp3___Förskolan_Drutten
 
                 Postgres p = new Postgres();
 
-                p.MeddelaHämtning(barnid, hamtas, datum);
+                p.KontrolleraHämtning(datum, barnid, hamtas);
+                //p.MeddelaHämtning(barnid, hamtas, datum);
             }
 
             Postgres p1 = new Postgres();
