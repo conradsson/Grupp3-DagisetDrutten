@@ -130,6 +130,11 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewHämtning = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -148,6 +153,7 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHämtning)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -784,6 +790,7 @@
             // tabPage4
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.dataGridViewHämtning);
             this.tabPage4.Controls.Add(this.listBoxMeddelaHämtning);
             this.tabPage4.Controls.Add(this.buttonMeddelaHämtning);
             this.tabPage4.Controls.Add(this.label6);
@@ -1336,6 +1343,51 @@
             // 
             this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
+            // dataGridViewHämtning
+            // 
+            this.dataGridViewHämtning.AutoGenerateColumns = false;
+            this.dataGridViewHämtning.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewHämtning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHämtning.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewHämtning.DataSource = this.närvaroBindingSource;
+            this.dataGridViewHämtning.Location = new System.Drawing.Point(274, 24);
+            this.dataGridViewHämtning.Name = "dataGridViewHämtning";
+            this.dataGridViewHämtning.ReadOnly = true;
+            this.dataGridViewHämtning.Size = new System.Drawing.Size(461, 131);
+            this.dataGridViewHämtning.TabIndex = 21;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Datum";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Datum";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TidLämnad";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Från kl:";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "TidHämtad";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Till kl:";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "HämtasAv";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Hämtas av";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1382,6 +1434,7 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHämtning)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1489,5 +1542,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TidLämnad;
         private System.Windows.Forms.DataGridViewTextBoxColumn TidHämtad;
         private System.Windows.Forms.DataGridViewTextBoxColumn HämtasAv;
+        private System.Windows.Forms.DataGridView dataGridViewHämtning;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

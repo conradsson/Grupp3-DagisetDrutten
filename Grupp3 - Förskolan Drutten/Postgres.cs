@@ -489,6 +489,37 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        public void KontrolleraHämtning(DateTime datum, int barnid)
+        {
+            string sql = "select * from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            Närvaro narvaro = new Närvaro();
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+
+                narvaro.Närvaroid = (int)rad[0];
+                narvaro.Datum = (DateTime)rad[1];
+                narvaro.Barnid = (int)rad[2];
+                narvaro.HämtasAv = rad[3].ToString();
+                narvaro.TidLämnad = rad[4].ToString();
+                narvaro.TidHämtad = rad[5].ToString();
+
+
+                if (narvaro.Datum == datum && narvaro.Barnid == barnid)
+                {
+                    TaBortNärvaro(datum, barnid);
+                }
+                else
+                {
+                    MessageBox.Show("Det finns inga registrerade tider detta datum, Frånvaron har blivit registrerad.");
+                }
+
+            }
+        }
+
         public List<Närvaro> HämtaBarnetsTider(int barnid)
         {
 

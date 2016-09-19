@@ -394,14 +394,23 @@ namespace Grupp3___Förskolan_Drutten
         {
             Barn aktuelltbarn = (Barn)listBoxMeddelaHämtning.SelectedItem;
 
-            int barnid = aktuelltbarn.Barnid;
-            string hamtas = textBoxMeddelaHämtning.Text;
-            DateTime datum = monthCalendar1.SelectionStart;
+            if (aktuelltbarn != null)
+            {
+                int barnid = aktuelltbarn.Barnid;
+                string hamtas = textBoxMeddelaHämtning.Text;
+                DateTime datum = monthCalendar1.SelectionStart;
 
-            Postgres p = new Postgres();
+                Postgres p = new Postgres();
 
-            p.MeddelaHämtning(barnid, hamtas, datum);
+                p.MeddelaHämtning(barnid, hamtas, datum);
+            }
 
+            Postgres p1 = new Postgres();
+            dataGridViewHämtning.DataSource = null;
+            dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
+            Postgres p2 = new Postgres();
+            dataGridViewTiderBarn.DataSource = null;
+            dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid);
 
         }
 
@@ -417,6 +426,10 @@ namespace Grupp3___Förskolan_Drutten
                 DateTime datum = monthCalendar1.SelectionStart;
                 tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
                 textBoxMeddelaHämtning.Text = tid;
+
+                Postgres p1 = new Postgres();
+                dataGridViewHämtning.DataSource = null;
+                dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltb.Barnid);
             }
             //else
             //{
