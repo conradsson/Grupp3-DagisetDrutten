@@ -269,6 +269,31 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        public List<Frånvaro> HämtaBarnsFrånvaro(int barnid)
+        {
+
+            string sql = "select franvaro.datum,  franvaro.sjuk, franvaro.ledig from dagis.franvaro where franvaro.barnid = '" + barnid + "';";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Frånvaro> Frånvarolista = new List<Frånvaro>();
+            Frånvaro frånvaro;
+
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    frånvaro = new Frånvaro();
+
+                    frånvaro.Datum = (DateTime)rad[0];      
+                    frånvaro.Sjuk = (bool)rad[1];
+                    frånvaro.Ledig = (bool)rad[2];
+
+                    Frånvarolista.Add(frånvaro);
+                }
+            }
+            return Frånvarolista;
+       }
+
         /// <summary>
         /// Kontrollerar om tiden som läggs in har samma datum som en frånvaro, i så fall tas frånvaron bort
         /// </summary>

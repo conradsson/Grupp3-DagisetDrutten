@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -171,6 +171,8 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.panelskrivfrånvaro = new System.Windows.Forms.Button();
+            this.printDocument2 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -948,21 +950,21 @@
             // 
             // chartBarnensTider
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartBarnensTider.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartBarnensTider.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chartBarnensTider.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartBarnensTider.Legends.Add(legend3);
             this.chartBarnensTider.Location = new System.Drawing.Point(-24, 13);
             this.chartBarnensTider.Name = "chartBarnensTider";
             this.chartBarnensTider.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Barn lämnas";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Barn hämtas";
-            this.chartBarnensTider.Series.Add(series1);
-            this.chartBarnensTider.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Barn lämnas";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Barn hämtas";
+            this.chartBarnensTider.Series.Add(series5);
+            this.chartBarnensTider.Series.Add(series6);
             this.chartBarnensTider.Size = new System.Drawing.Size(779, 184);
             this.chartBarnensTider.TabIndex = 11;
             this.chartBarnensTider.Text = "chart1";
@@ -1436,6 +1438,7 @@
             // 
             this.panelskrivut.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panelskrivut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelskrivut.Controls.Add(this.panelskrivfrånvaro);
             this.panelskrivut.Controls.Add(this.dataGridViewFrånvaroSkrivut);
             this.panelskrivut.Controls.Add(this.statuspanel);
             this.panelskrivut.Controls.Add(this.panelavbryt);
@@ -1443,7 +1446,7 @@
             this.panelskrivut.Controls.Add(this.lblskrivut);
             this.panelskrivut.Controls.Add(this.status);
             this.panelskrivut.Controls.Add(this.dataGridSkrivut);
-            this.panelskrivut.Location = new System.Drawing.Point(964, 62);
+            this.panelskrivut.Location = new System.Drawing.Point(272, 12);
             this.panelskrivut.MaximumSize = new System.Drawing.Size(660, 500);
             this.panelskrivut.MinimumSize = new System.Drawing.Size(660, 500);
             this.panelskrivut.Name = "panelskrivut";
@@ -1624,6 +1627,20 @@
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // panelskrivfrånvaro
+            // 
+            this.panelskrivfrånvaro.Location = new System.Drawing.Point(573, 460);
+            this.panelskrivfrånvaro.Name = "panelskrivfrånvaro";
+            this.panelskrivfrånvaro.Size = new System.Drawing.Size(75, 23);
+            this.panelskrivfrånvaro.TabIndex = 12;
+            this.panelskrivfrånvaro.Text = "Skriv ut";
+            this.panelskrivfrånvaro.UseVisualStyleBackColor = true;
+            this.panelskrivfrånvaro.Click += new System.EventHandler(this.panelskrivfrånvaro_Click);
+            // 
+            // printDocument2
+            // 
+            this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
             // 
             // StartPersonal
             // 
@@ -1825,5 +1842,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Sjuk;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Ledig;
         private System.Windows.Forms.BindingSource frånvaroBindingSource;
+        private System.Windows.Forms.Button panelskrivfrånvaro;
+        private System.Drawing.Printing.PrintDocument printDocument2;
     }
 }
