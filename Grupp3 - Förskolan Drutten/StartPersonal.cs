@@ -187,7 +187,7 @@ namespace Grupp3___Förskolan_Drutten
                 label15.Text = "Närvarande:";
                 dataGridView1.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+                dataGridView1.DataSource = p.HämtaNärvaroFörNärvarohantering(monthCalendar2.SelectionStart);
                 label17.Text = dataGridView1.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
                 dataGridView1.Visible = true;
@@ -208,15 +208,7 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
-        {
 
-
-            //frånvarandeListBox.DataSource = null;
-            //frånvarandeListBox.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
-
-
-        }
 
         private void nyttInläggButton_Click(object sender, EventArgs e)
         {
@@ -439,7 +431,7 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonSökAntalFramtidaBarn_Click(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
             Postgres p1 = new Postgres();
