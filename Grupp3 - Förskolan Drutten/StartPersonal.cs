@@ -112,6 +112,7 @@ namespace Grupp3___Förskolan_Drutten
 
             Postgres p = new Postgres();
             dataGridView2.DataSource = p.HämtaNärvaro(DateTime.Today);
+            dataGridView2.Columns[0].Visible = false;
 
             labelAntalBarnIdag.Text = dataGridView2.RowCount.ToString() + " Barn på förskolan idag";
 

@@ -125,6 +125,8 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelAntalBarnIdag = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.förnamnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efternamnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -789,6 +791,8 @@
             // tabPage6
             // 
             this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage6.Controls.Add(this.label20);
+            this.tabPage6.Controls.Add(this.button5);
             this.tabPage6.Controls.Add(this.labelAntalBarnIdag);
             this.tabPage6.Controls.Add(this.label10);
             this.tabPage6.Controls.Add(this.label1);
@@ -827,7 +831,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(612, 207);
+            this.button2.Location = new System.Drawing.Point(630, 102);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
@@ -868,9 +872,9 @@
             this.tidHämtadDataGridViewTextBoxColumn1,
             this.hämtasAvDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.närvaroBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(34, 204);
+            this.dataGridView2.Location = new System.Drawing.Point(15, 204);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(542, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(561, 150);
             this.dataGridView2.TabIndex = 10;
             // 
             // tabPage2
@@ -1224,11 +1228,30 @@
             // labelAntalBarnIdag
             // 
             this.labelAntalBarnIdag.AutoSize = true;
-            this.labelAntalBarnIdag.Location = new System.Drawing.Point(595, 281);
+            this.labelAntalBarnIdag.Location = new System.Drawing.Point(595, 208);
             this.labelAntalBarnIdag.Name = "labelAntalBarnIdag";
             this.labelAntalBarnIdag.Size = new System.Drawing.Size(55, 13);
             this.labelAntalBarnIdag.TabIndex = 15;
             this.labelAntalBarnIdag.Text = "Antal barn";
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(621, 260);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(67, 61);
+            this.button5.TabIndex = 21;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(589, 328);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(138, 13);
+            this.label20.TabIndex = 22;
+            this.label20.Text = "Skriv ut dagens närvarolista";
             // 
             // datumDataGridViewTextBoxColumn
             // 
@@ -1464,5 +1487,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tidHämtadDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hämtasAvDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Label labelAntalBarnIdag;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button5;
     }
 }
