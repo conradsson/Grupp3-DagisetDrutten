@@ -538,6 +538,7 @@ namespace Grupp3___Förskolan_Drutten
         private void panelskriv_Click(object sender, EventArgs e)
         {
             printDocument1.Print();
+            panelskrivut.Visible = false;
         }
 
         private void panelavbryt_Click(object sender, EventArgs e)
@@ -559,6 +560,7 @@ namespace Grupp3___Förskolan_Drutten
         private void panelskrivfrånvaro_Click(object sender, EventArgs e)
         {
             printDocument2.Print();
+            panelskrivut.Visible = false;
         }
 
         private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
