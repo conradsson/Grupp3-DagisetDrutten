@@ -1324,13 +1324,55 @@ namespace Grupp3___Förskolan_Drutten
             string meddelande;
             try
             {
-                string sql = "insert into dagis.narvaro (närvarande) values () WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
+                string sql = "UPDATE dagis.narvaro SET närvarande = TRUE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
 
                 cmd = new NpgsqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue("@närvarande", närvarande);
+                //cmd.Parameters.AddWithValue("@närvarande", närvarande);
 
+                dr = cmd.ExecuteReader();
+                dr.Close();
 
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+
+            conn.Close();
+        }
+        public void TaBortNärvaroFörIdag(DateTime datum, int barnid, bool närvarande)
+        {
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.narvaro SET närvarande = FALSE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+
+                //cmd.Parameters.AddWithValue("@närvarande", närvarande);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+
+            conn.Close();
+        }
+        public void LäggTillHämtadFörIdag(DateTime datum, int barnid, bool närvarande)
+        {
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.narvaro SET hämtad = TRUE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+
+                //cmd.Parameters.AddWithValue("@närvarande", närvarande);
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
