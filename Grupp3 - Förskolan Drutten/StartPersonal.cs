@@ -187,7 +187,7 @@ namespace Grupp3___Förskolan_Drutten
                 label15.Text = "Närvarande:";
                 dataGridView1.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
+                dataGridView1.DataSource = p.HämtaNärvaroFörNärvarohantering(monthCalendar2.SelectionStart);
                 label17.Text = dataGridView1.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
                 dataGridView1.Visible = true;

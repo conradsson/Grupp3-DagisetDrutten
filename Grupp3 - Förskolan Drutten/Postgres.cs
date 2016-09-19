@@ -862,6 +862,39 @@ namespace Grupp3___Förskolan_Drutten
             return Närvarolista;
             
         }
+        public List<Närvaro> HämtaNärvaroFörNärvarohantering(DateTime AktuelltDatum)
+        {
+
+            string sql = "select dp.datum, db.förnamn, db.efternamn, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av, db.barnid, db.allergier from dagis.narvaro dp,  dagis.barn db where datum = ('" + AktuelltDatum + "') AND dp.barnid = db.barnid ORDER BY tid_lamnad";
+
+
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Närvaro> Närvarolista = new List<Närvaro>();
+            Närvaro närvaro;
+
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    närvaro = new Närvaro();
+
+                    närvaro.Datum = (DateTime)rad[0];
+                    närvaro.Förnamn = rad[1].ToString();
+                    närvaro.Efternamn = rad[2].ToString();
+                    närvaro.TidLämnad = rad[3].ToString();
+                    närvaro.TidHämtad = rad[4].ToString();
+                    närvaro.HämtasAv = rad[5].ToString();
+                    närvaro.barnid = (int)rad[6];
+                    närvaro.Allergier = rad[7].ToString();
+
+                    Närvarolista.Add(närvaro);
+
+                }
+            }
+            return Närvarolista;
+
+        }
         public List<Frånvaro> HämtaFrånvaro(DateTime AktuelltDatum)
         {
 
