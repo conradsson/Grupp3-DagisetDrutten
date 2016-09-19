@@ -779,7 +779,11 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         //Hischam
-
+        /// <summary>
+        /// Hämta närvaron utifrån valt datum
+        /// </summary>
+        /// <param name="AktuelltDatum"></param>
+        /// <returns></returns>
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
         {
 
@@ -815,6 +819,11 @@ namespace Grupp3___Förskolan_Drutten
             return Närvarolista;
             
         }
+        /// <summary>
+        /// Hämtar narvaron utifrån vald datum till närvarohanteringsfliken
+        /// </summary>
+        /// <param name="AktuelltDatum"></param>
+        /// <returns></returns>
         public List<Närvaro> HämtaNärvaroFörNärvarohantering(DateTime AktuelltDatum)
         {
 
