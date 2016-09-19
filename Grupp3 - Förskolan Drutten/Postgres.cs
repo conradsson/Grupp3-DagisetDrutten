@@ -269,6 +269,11 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        /// <summary>
+        /// Hämtar ett barns alla frånvarotider till en lista
+        /// </summary>
+        /// <param name="barnid"></param>
+        /// <returns></returns>
         public List<Frånvaro> HämtaBarnsFrånvaro(int barnid)
         {
 
