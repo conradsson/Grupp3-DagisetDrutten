@@ -200,10 +200,7 @@ namespace Grupp3___Förskolan_Drutten
             catch (NpgsqlException ex)
             {
                 meddelande = ex.Message;
-                //if (meddelande.Contains("23505"))
-                //{
-                //    meddelande = "Frånvaro är redan registrerat detta datum.";
-                //}
+           
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
             conn.Close();
@@ -231,10 +228,6 @@ namespace Grupp3___Förskolan_Drutten
             if(narvaro.Datum == datum && narvaro.Barnid == barnid)
             {
                 TaBortNärvaro(datum, barnid);
-            }
-            else
-            {
-                MessageBox.Show("Det finns inga registrerade tider detta datum, Frånvaron har blivit registrerad.");
             }
 
             }
@@ -465,6 +458,7 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="datum"></param>
         public void MeddelaHämtning(int barnid, string hamtas, DateTime datum)
         {
+            conn.Open();
             string meddelande;
             try
             {
@@ -489,7 +483,7 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
-        public void KontrolleraHämtning(DateTime datum, int barnid)
+        public void KontrolleraHämtning(DateTime datum, int barnid, string hämtasAv)
         {
             string sql = "select * from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
 
@@ -497,27 +491,26 @@ namespace Grupp3___Förskolan_Drutten
             tabell = sqlFråga(sql);
             Närvaro narvaro = new Närvaro();
 
-            foreach (DataRow rad in tabell.Rows)
-            {
+                foreach (DataRow rad in tabell.Rows)
+                {
 
-                narvaro.Närvaroid = (int)rad[0];
-                narvaro.Datum = (DateTime)rad[1];
-                narvaro.Barnid = (int)rad[2];
-                narvaro.HämtasAv = rad[3].ToString();
-                narvaro.TidLämnad = rad[4].ToString();
-                narvaro.TidHämtad = rad[5].ToString();
+                    narvaro.Närvaroid = (int)rad[0];
+                    narvaro.Datum = (DateTime)rad[1];
+                    narvaro.Barnid = (int)rad[2];
+                    narvaro.HämtasAv = rad[3].ToString();
+                    narvaro.TidLämnad = rad[4].ToString();
+                    narvaro.TidHämtad = rad[5].ToString();
 
-
+                }
                 if (narvaro.Datum == datum && narvaro.Barnid == barnid)
                 {
-                    TaBortNärvaro(datum, barnid);
-                }
-                else
-                {
-                    MessageBox.Show("Det finns inga registrerade tider detta datum, Frånvaron har blivit registrerad.");
+                    MeddelaHämtning(barnid, hämtasAv, datum);
                 }
 
-            }
+                else
+                {
+                    MessageBox.Show("Det finns inga registrerade tider detta datum. \nVälj en tid som finns registrerad för att kunna meddela hämtning.");
+                }
         }
 
         public List<Närvaro> HämtaBarnetsTider(int barnid)
@@ -1331,13 +1324,73 @@ namespace Grupp3___Förskolan_Drutten
             string meddelande;
             try
             {
-                string sql = "insert into dagis.narvaro (närvarande) values () WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
+                string sql = "UPDATE dagis.narvaro SET närvarande = TRUE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
 
                 cmd = new NpgsqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue("@närvarande", närvarande);
+                dr = cmd.ExecuteReader();
+                dr.Close();
 
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
 
+            conn.Close();
+        }
+        public void TaBortNärvaroFörIdag(DateTime datum, int barnid, bool närvarande)
+        {
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.narvaro SET närvarande = FALSE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+
+            conn.Close();
+        }
+        public void LäggTillHämtadFörIdag(DateTime datum, int barnid, bool närvarande)
+        {
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.narvaro SET hämtad = TRUE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+
+                //cmd.Parameters.AddWithValue("@närvarande", närvarande);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+
+            conn.Close();
+        }
+        public void TaBortHämtadFörIdag(DateTime datum, int barnid, bool närvarande)
+        {
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.narvaro SET hämtad = FALSE WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+
+                //cmd.Parameters.AddWithValue("@närvarande", närvarande);
 
                 dr = cmd.ExecuteReader();
                 dr.Close();

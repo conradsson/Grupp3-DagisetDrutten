@@ -463,26 +463,52 @@ namespace Grupp3___Förskolan_Drutten
 
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
-                Postgres p = new Postgres();
 
                 if (row.Cells[4].Value != null)
                 {
-
                     if (Convert.ToBoolean(row.Cells[4].Value))
                     {
-
+                        Postgres p = new Postgres();
                         aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
                         aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[4].Value);
                         aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
-
                         p.LäggTillNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
+                    }
+                    else
+                    {
+                            Postgres p = new Postgres();
+                            aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
+                            aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[4].Value);
+                            aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
-                        //MessageBox.Show(aktuelltBarn.barnid.ToString() + aktuelltBarn.närvarande);
+                            p.TaBortNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
+
                     }
                 }
+                if (row.Cells[5].Value != null)
+                {
+                    if (Convert.ToBoolean(row.Cells[5].Value))
+                    {
+                        Postgres p = new Postgres();
+                        aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
+                        aktuelltBarn.hämtad = Convert.ToBoolean(row.Cells[4].Value);
+                        aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
+
+                        p.LäggTillHämtadFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.hämtad);
+                    }
+                    else
+                    {
+                        Postgres p = new Postgres();
+                        aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
+                        aktuelltBarn.hämtad = Convert.ToBoolean(row.Cells[4].Value);
+                        aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
+
+                        p.TaBortHämtadFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.hämtad);
+                    }
+                }
+
             }
-            
         }
 
         //private void skrivut_Click(object sender, EventArgs e)
