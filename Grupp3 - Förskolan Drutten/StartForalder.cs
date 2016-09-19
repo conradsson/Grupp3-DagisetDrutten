@@ -409,26 +409,39 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonMeddelaHämtning_Click(object sender, EventArgs e)
         {
-            Barn aktuelltbarn = (Barn)listBoxMeddelaHämtning.SelectedItem;
-
-            if (aktuelltbarn != null)
             {
-                int barnid = aktuelltbarn.Barnid;
-                string hamtas = textBoxMeddelaHämtning.Text;
-                DateTime datum = monthCalendar1.SelectionStart;
+                Barn aktuelltbarn = (Barn)listBoxMeddelaHämtning.SelectedItem;
 
-                Postgres p = new Postgres();
+                if (aktuelltbarn != null)
+                {
+                    int barnid = aktuelltbarn.Barnid;
+                    string hamtas = textBoxMeddelaHämtning.Text;
+                    //DateTime datum = monthCalendar1.SelectionStart;
+                    DateTime datum;
+                    Närvaro n = new Närvaro();
 
-                p.KontrolleraHämtning(datum, barnid, hamtas);
-                //p.MeddelaHämtning(barnid, hamtas, datum);
+                    if (dataGridViewHämtning.SelectedRows != null)
+                    {
+
+                        n.Datum = Convert.ToDateTime(dataGridViewHämtning.SelectedCells[0].Value);
+                        datum = n.Datum;
+
+                        Postgres p = new Postgres();
+                        p.KontrolleraHämtning(datum, barnid, hamtas);
+                        dataGridViewHämtning.ClearSelection();
+                    }
+
+
+                    //p.MeddelaHämtning(barnid, hamtas, datum);
+                    Postgres p1 = new Postgres();
+                    dataGridViewHämtning.DataSource = null;
+                    dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                    Postgres p2 = new Postgres();
+                    dataGridViewTiderBarn.DataSource = null;
+                    dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid);
+
+                }
             }
-
-            Postgres p1 = new Postgres();
-            dataGridViewHämtning.DataSource = null;
-            dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
-            Postgres p2 = new Postgres();
-            dataGridViewTiderBarn.DataSource = null;
-            dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid);
 
         }
 
