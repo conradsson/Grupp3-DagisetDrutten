@@ -218,6 +218,9 @@ namespace Grupp3___Förskolan_Drutten
             {
                 Postgres p = new Postgres();
                 p.LäggTillTid(datum, barnid, lämnas, hämtas);
+
+                Postgres pp = new Postgres();
+                pp.KontrolleraFrånvaro(datum, barnid);
                 Postgres p1 = new Postgres();
                 dataGridViewHämtning.DataSource = null;
                 dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
