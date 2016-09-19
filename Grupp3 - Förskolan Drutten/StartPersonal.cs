@@ -190,17 +190,20 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
                 label17.Text = dataGridView1.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
-
+                dataGridView1.Visible = true;
+                dataGridView4.Visible = false;
                 
             }
             else if (FrånvarandeRadioButton.Checked)
             {
                 label15.Text = "Frånvarande:";
-                dataGridView2.DataSource = null;
+                dataGridView4.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridView1.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
+                dataGridView4.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
                 label17.Text = dataGridView1.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens frånvarolista";
+                dataGridView1.Visible = false;
+                dataGridView4.Visible = true;
 
             }
         }
