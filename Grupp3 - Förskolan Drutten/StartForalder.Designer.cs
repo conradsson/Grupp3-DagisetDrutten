@@ -147,6 +147,7 @@
             this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label34 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
@@ -397,6 +398,7 @@
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.label34);
             this.tabPage1.Controls.Add(this.ändraLösenPanel);
             this.tabPage1.Controls.Add(this.ändraLösenordButton);
             this.tabPage1.Controls.Add(this.uppdateraförälder);
@@ -1445,6 +1447,7 @@
             // 
             this.textBoxNuvarandeLösen.Location = new System.Drawing.Point(32, 47);
             this.textBoxNuvarandeLösen.Name = "textBoxNuvarandeLösen";
+            this.textBoxNuvarandeLösen.PasswordChar = '*';
             this.textBoxNuvarandeLösen.Size = new System.Drawing.Size(133, 20);
             this.textBoxNuvarandeLösen.TabIndex = 1;
             // 
@@ -1452,6 +1455,7 @@
             // 
             this.textBoxNyttLösen.Location = new System.Drawing.Point(32, 100);
             this.textBoxNyttLösen.Name = "textBoxNyttLösen";
+            this.textBoxNyttLösen.PasswordChar = '*';
             this.textBoxNyttLösen.Size = new System.Drawing.Size(133, 20);
             this.textBoxNyttLösen.TabIndex = 3;
             // 
@@ -1468,6 +1472,7 @@
             // 
             this.textBoxNyttLösen2.Location = new System.Drawing.Point(32, 152);
             this.textBoxNyttLösen2.Name = "textBoxNyttLösen2";
+            this.textBoxNyttLösen2.PasswordChar = '*';
             this.textBoxNyttLösen2.Size = new System.Drawing.Size(133, 20);
             this.textBoxNyttLösen2.TabIndex = 5;
             // 
@@ -1521,6 +1526,16 @@
             // frånvaroBindingSource
             // 
             this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(34, 20);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(79, 13);
+            this.label34.TabIndex = 23;
+            this.label34.Text = "Ändra uppgifter";
             // 
             // StartForalder
             // 
@@ -1697,5 +1712,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button ändralösenBekräfta;
         private System.Windows.Forms.Button ändraLösenAvbryt;
+        private System.Windows.Forms.Label label34;
     }
 }
