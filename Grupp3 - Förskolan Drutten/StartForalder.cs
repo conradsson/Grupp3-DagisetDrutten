@@ -661,11 +661,11 @@ namespace Grupp3___Förskolan_Drutten
         {
             Barn aktuelltbarn = (Barn)listBoxMeddelaFrånvaro.SelectedItem;
             
-            int barnid = aktuelltbarn.Barnid;
+            
             if (aktuelltbarn != null)
             {
                 Postgres p = new Postgres();
-           
+                int barnid = aktuelltbarn.Barnid;
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p.HämtaBarnsFrånvaro(barnid);
             }
