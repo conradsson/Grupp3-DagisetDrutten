@@ -1457,6 +1457,7 @@
             this.listBoxMeddelaFrånvaro.Name = "listBoxMeddelaFrånvaro";
             this.listBoxMeddelaFrånvaro.Size = new System.Drawing.Size(120, 95);
             this.listBoxMeddelaFrånvaro.TabIndex = 27;
+            this.listBoxMeddelaFrånvaro.SelectedIndexChanged += new System.EventHandler(this.listBoxMeddelaFrånvaro_SelectedIndexChanged);
             // 
             // button4
             // 

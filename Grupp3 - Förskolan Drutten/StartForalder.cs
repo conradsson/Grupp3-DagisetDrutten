@@ -227,6 +227,9 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p2 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
                 dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                Postgres p3 = new Postgres();
+                dataGridViewMeddelaFrånvaro.DataSource = null;
+                dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid);
                 
             }
 
@@ -536,6 +539,11 @@ namespace Grupp3___Förskolan_Drutten
                     p.LäggTillFånvaro(datum, id, sjuk, ledig);
                     Postgres p1 = new Postgres();
                     p1.KontrolleraNärvaro(datum, id);
+
+                    Postgres pp = new Postgres();
+                    dataGridViewMeddelaFrånvaro.DataSource = null;
+                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id);
+
                 }
                 else if (radioButtonLedig.Checked)
                 {
@@ -544,6 +552,10 @@ namespace Grupp3___Förskolan_Drutten
                     p.LäggTillFånvaro(datum, id, sjuk, ledig);
                     Postgres p2 = new Postgres();
                     p2.KontrolleraNärvaro(datum, id);
+
+                    Postgres pp = new Postgres();
+                    dataGridViewMeddelaFrånvaro.DataSource = null;
+                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id);
                 }
                 else 
                 {
@@ -642,6 +654,20 @@ namespace Grupp3___Förskolan_Drutten
             else
             {
                 MessageBox.Show("Det nuvarande lösenordet var fel.");
+            }
+        }
+
+        private void listBoxMeddelaFrånvaro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Barn aktuelltbarn = (Barn)listBoxMeddelaFrånvaro.SelectedItem;
+            
+            int barnid = aktuelltbarn.Barnid;
+            if (aktuelltbarn != null)
+            {
+                Postgres p = new Postgres();
+           
+                dataGridViewMeddelaFrånvaro.DataSource = null;
+                dataGridViewMeddelaFrånvaro.DataSource = p.HämtaBarnsFrånvaro(barnid);
             }
         }
     }
