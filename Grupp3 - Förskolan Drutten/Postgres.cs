@@ -830,7 +830,7 @@ namespace Grupp3___Förskolan_Drutten
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
         {
 
-            string sql = "select dp.datum, db.förnamn, db.efternamn, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av from dagis.narvaro dp, dagis.barn db where datum = ('" + AktuelltDatum + "') AND dp.barnid = db.barnid ORDER BY tid_lamnad";
+            string sql = "select dp.datum, db.förnamn, db.efternamn, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av, dp.närvarande, dp.hämtad, db.barnid from dagis.narvaro dp, dagis.barn db where datum = ('" + AktuelltDatum + "') AND dp.barnid = db.barnid ORDER BY tid_lamnad";
 
 
 
@@ -850,6 +850,9 @@ namespace Grupp3___Förskolan_Drutten
                     närvaro.TidLämnad = rad[3].ToString();
                     närvaro.TidHämtad = rad[4].ToString();
                     närvaro.HämtasAv = rad[5].ToString();
+                    närvaro.närvarande = (bool)rad[6];
+                    närvaro.hämtad = (bool)rad[7];
+                    närvaro.barnid = (int)rad[8];
 
                     Närvarolista.Add(närvaro);
 
@@ -1316,7 +1319,30 @@ namespace Grupp3___Förskolan_Drutten
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
         }
+        public void LäggTillNärvaroFörIdag(DateTime datum, int barnid, bool närvarande)
+        {
+            string meddelande;
+            try
+            {
+                string sql = "insert into dagis.narvaro (närvarande) values () WHERE barnid = '" + barnid + "' AND datum = '" + datum + "'";
 
+                cmd = new NpgsqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@närvarande", närvarande);
+
+
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+
+            conn.Close();
+        }
         static string UppercaseFirst(string s)
         {
             // Check for empty string.
