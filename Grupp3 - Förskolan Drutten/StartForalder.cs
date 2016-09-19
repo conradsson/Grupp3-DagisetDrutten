@@ -218,6 +218,12 @@ namespace Grupp3___Förskolan_Drutten
             {
                 Postgres p = new Postgres();
                 p.LäggTillTid(datum, barnid, lämnas, hämtas);
+                Postgres p1 = new Postgres();
+                dataGridViewHämtning.DataSource = null;
+                dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                Postgres p2 = new Postgres();
+                dataGridViewTiderBarn.DataSource = null;
+                dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid);
                 
             }
 
@@ -369,6 +375,12 @@ namespace Grupp3___Förskolan_Drutten
                 else
                 {
                     p.UppdateraTider(datum, id, lamnas, hamtas);
+                    Postgres p1 = new Postgres();
+                    dataGridViewHämtning.DataSource = null;
+                    dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                    Postgres p2 = new Postgres();
+                    dataGridViewTiderBarn.DataSource = null;
+                    dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid);
                 }
 
             }
@@ -518,16 +530,25 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     sjuk = true;
                     ledig = false;
+                    p.LäggTillFånvaro(datum, id, sjuk, ledig);
+                    Postgres p1 = new Postgres();
+                    p1.KontrolleraNärvaro(datum, id);
                 }
-                else
+                else if (radioButtonLedig.Checked)
                 {
                     sjuk = false;
                     ledig = true;
+                    p.LäggTillFånvaro(datum, id, sjuk, ledig);
+                    Postgres p2 = new Postgres();
+                    p2.KontrolleraNärvaro(datum, id);
+                }
+                else 
+                {
+                    sjuk = false;
+                    ledig = false;
+                    MessageBox.Show("För att registrera frånvaro måste du välja antingen sjuk eller ledig.");
                 }
                 
-                p.LäggTillFånvaro(datum, id, sjuk, ledig);
-                Postgres p1 = new Postgres();
-                p1.KontrolleraNärvaro(datum, id);
             }
         }
 
