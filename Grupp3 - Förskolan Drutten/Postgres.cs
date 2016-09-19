@@ -632,6 +632,29 @@ namespace Grupp3___Förskolan_Drutten
                 return Convert.ToBase64String(data);
             }
         }
+        public void ÄndraLösenord(int id,string nuvarandeLösenord, string nyttLösenord)
+        {
+
+            string meddelande;
+            try
+            {
+                string sql = "UPDATE dagis.person SET lösenord = '" + LösenordsEncrypt(nyttLösenord) + "' where personid = '" + id + "' and lösenord = '" + LösenordsEncrypt(nuvarandeLösenord)+ "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@förnamn", nyttLösenord);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Lösenordet är ändrat.";
+                System.Windows.Forms.MessageBox.Show(meddelande);
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+            }
+
+        }
 
         // Hämtar informationsinlägg från db
         public List<Information> HämtaInläggPersonal()
