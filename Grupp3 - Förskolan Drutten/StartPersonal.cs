@@ -208,15 +208,7 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
-        {
 
-
-            //frånvarandeListBox.DataSource = null;
-            //frånvarandeListBox.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
-
-
-        }
 
         private void nyttInläggButton_Click(object sender, EventArgs e)
         {
@@ -439,7 +431,7 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonSökAntalFramtidaBarn_Click(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
             Postgres p1 = new Postgres();
