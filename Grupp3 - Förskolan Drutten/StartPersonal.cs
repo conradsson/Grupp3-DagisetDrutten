@@ -82,8 +82,8 @@ namespace Grupp3___Förskolan_Drutten
             //dataGridAllaBarn.DataSource = null;
             Postgres p = new Postgres();
 
-            barnAvdl2ListBox.DataSource = p.HämtanBarn();
-            label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+            listBoxSöktaBarn.DataSource = p.HämtanBarn();
+            labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             //dataGridAllaBarn.DataSource = p.HämtanBarn();
 
         }
@@ -111,11 +111,11 @@ namespace Grupp3___Förskolan_Drutten
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
 
             Postgres p = new Postgres();
-            dataGridView2.DataSource = p.HämtaNärvaro(DateTime.Today);
-            dataGridView2.Columns[1].Visible = false;
+            dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(DateTime.Today);
+            dataGridViewDagensBarn.Columns[1].Visible = false;
             
 
-            labelAntalBarnIdag.Text = dataGridView2.RowCount.ToString() + " Barn på förskolan idag";
+            labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
 
             
             
@@ -180,31 +180,30 @@ namespace Grupp3___Förskolan_Drutten
 
 
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonSökValtDatumINärvarohantering_Click(object sender, EventArgs e)
         {
             if (NärvarandeRadioButton.Checked)
             {
                 label15.Text = "Närvarande:";
-                dataGridView1.DataSource = null;
+                dataGridViewNärvarandeINärvarohantering.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridView1.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
-                label17.Text = dataGridView1.RowCount.ToString() + " Barn";
+                dataGridViewNärvarandeINärvarohantering.DataSource = p.HämtaNärvaroFörNärvarohantering(monthCalendar23INärvarohantering.SelectionStart);
+                label17.Text = dataGridViewNärvarandeINärvarohantering.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
-                dataGridView1.Visible = true;
-                dataGridView4.Visible = false;
+                dataGridViewNärvarandeINärvarohantering.Visible = true;
+                dataGridViewFrånvarandeINärvarohantering.Visible = false;
                 
             }
             else if (FrånvarandeRadioButton.Checked)
             {
                 label15.Text = "Frånvarande:";
-                dataGridView4.DataSource = null;
+                dataGridViewFrånvarandeINärvarohantering.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridView4.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
-                label17.Text = dataGridView1.RowCount.ToString() + " Barn";
+                dataGridViewFrånvarandeINärvarohantering.DataSource = p.HämtaFrånvaro(monthCalendar23INärvarohantering.SelectionStart);
+                label17.Text = dataGridViewNärvarandeINärvarohantering.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens frånvarolista";
-                dataGridView1.Visible = false;
-                dataGridView4.Visible = true;
-
+                dataGridViewNärvarandeINärvarohantering.Visible = false;
+                dataGridViewFrånvarandeINärvarohantering.Visible = true;
             }
         }
 
@@ -307,17 +306,17 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        private void barnAvdl2ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxSöktaBarn_SelectedIndexChanged(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
-            Barn AktuelltBarn = (Barn)barnAvdl2ListBox.SelectedItem;
+            Barn AktuelltBarn = (Barn)listBoxSöktaBarn.SelectedItem;
 
             if (AktuelltBarn != null)
             {
 
-                listBox1.DataSource = null;
-                listBox1.DisplayMember = "VisaFörälder";
-                listBox1.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
+                listBoxVårnadshavare.DataSource = null;
+                listBoxVårnadshavare.DisplayMember = "VisaFörälder";
+                listBoxVårnadshavare.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
 
                 barnOverigtrichTextBox.Text = AktuelltBarn.Allergier + "\n" + AktuelltBarn.Annat;
 
@@ -330,36 +329,32 @@ namespace Grupp3___Förskolan_Drutten
             if (checkBoxAvdelning1.Checked == true && checkBoxAvdelning2.Checked == true)
             {
                 Postgres p = new Postgres();
-                listBox1.DataSource = null;
-                //barnAvdl2ListBox.DataSource = p.HämtanBarn();
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
-                label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+                listBoxVårnadshavare.DataSource = null;
+                listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
 
             }
 
             else if (checkBoxAvdelning1.Checked == true)
             {
                 Postgres p = new Postgres();
-                listBox1.DataSource = null;
-                //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning1();
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök1(textBoxSökRuta.Text);
-                label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+                listBoxVårnadshavare.DataSource = null;
+                listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök1(textBoxSökRuta.Text);
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             }
             else if (checkBoxAvdelning2.Checked == true)
             {
                 Postgres p = new Postgres();
-                listBox1.DataSource = null;
-                //barnAvdl2ListBox.DataSource = p.HämtaBarnAvdelning2();
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
-                label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+                listBoxVårnadshavare.DataSource = null;
+                listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             }
             else
             {
                 Postgres p = new Postgres();
-                listBox1.DataSource = null;
-                //barnAvdl2ListBox.DataSource = p.HämtanBarn();
-                barnAvdl2ListBox.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
-                label16.Text = "Antal barn: " + barnAvdl2ListBox.Items.Count.ToString();
+                listBoxVårnadshavare.DataSource = null;
+                listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             }
             
         }
@@ -388,7 +383,7 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonVisaDiagram_Click(object sender, EventArgs e)
         {
             label10.Visible = true;
             label1.Visible = true;
@@ -398,7 +393,7 @@ namespace Grupp3___Förskolan_Drutten
             for (int i = 0; i < 11; i++)
             {
                 Postgres p = new Postgres();
-                this.chart1.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
+                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
 
           }
             int kollaTid2 = 07;
@@ -406,7 +401,7 @@ namespace Grupp3___Förskolan_Drutten
             for (int i = 0; i < 11; i++)
             {
                 Postgres p = new Postgres();
-                this.chart1.Series["Barn hämtas"].Points.AddXY(tid2++, p.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
+                this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
 
             }
 
@@ -437,18 +432,13 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p1 = new Postgres();
 
             labelTotaltAntalBarn.Visible = true;
-            label11.Visible = true;
-            labelTotaltAntalBarn.Text = "Totalt antal barn på förskolan mellan " + dateTimePicker1.Value.ToString("yy-MM-dd") + " och " + dateTimePicker2.Value.ToString("yy-MM-dd") + ": ";
-            label11.Text = p1.HämtaFramtidaTider(dateTimePicker1.Value, dateTimePicker2.Value).ToString() + " Barn";
+            labelHurMångaBarnUnderSöktaDatum.Visible = true;
+            labelTotaltAntalBarn.Text = "Totalt antal barn på förskolan mellan " + dateTimePickerFrån.Value.ToString("yy-MM-dd") + " och " + dateTimePickerTill.Value.ToString("yy-MM-dd") + ": ";
+            labelHurMångaBarnUnderSöktaDatum.Text = p1.HämtaFramtidaTider(dateTimePickerFrån.Value, dateTimePickerTill.Value).ToString() + " Barn";
 
-            dataGridView3.DataSource = p.HämtaFramtidaBarn(dateTimePicker1.Value, dateTimePicker2.Value);
+            dataGridViewAllaFramtidaBarn.DataSource = p.HämtaFramtidaBarn(dateTimePickerFrån.Value, dateTimePickerTill.Value);
 
             
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
 
@@ -456,7 +446,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             Närvaro aktuelltBarn = new Närvaro();
 
-            foreach (DataGridViewRow row in dataGridView2.Rows)
+            foreach (DataGridViewRow row in dataGridViewDagensBarn.Rows)
             {
 
                 if (row.Cells[4].Value != null)
@@ -532,7 +522,7 @@ namespace Grupp3___Förskolan_Drutten
                 statuspanel.Text = "Frånvarande.";
                 dataGridSkrivut.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridSkrivut.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
+                dataGridSkrivut.DataSource = p.HämtaFrånvaro(monthCalendar23INärvarohantering.SelectionStart);
                 
 
             }

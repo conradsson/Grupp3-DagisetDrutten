@@ -779,54 +779,11 @@ namespace Grupp3___Förskolan_Drutten
         }
 
         //Hischam
-
-        //public List<Närvaro> HämtaNärvaro()
-        //{
-        //    string sql = "select * from dagis.narvaro";
-
-        //    tabell.Clear();
-        //    tabell = sqlFråga(sql);
-        //    List<Närvaro> Närvarolista = new List<Närvaro>();
-        //    Närvaro närvaro;
-
-        //    if (tabell.Columns[0].ColumnName.Equals("Error"))
-        //    {
-        //        Närvaro n = new Närvaro();
-        //        n.Error = true;
-        //        n.ErrorMeddelande = tabell.Rows[0][1].ToString();
-
-        //        Närvarolista.Add(n);
-        //    }
-        //    else
-        //    {
-        //        foreach (DataRow rad in tabell.Rows)
-        //        {
-        //            närvaro = new Närvaro();
-
-        //            närvaro.Närvaroid = (int)rad[0];
-        //            närvaro.Datum = (DateTime)rad[1];
-        //            närvaro.Barnid = (int)rad[2];
-        //            närvaro.TidLämnad = rad[4].ToString();
-        //            närvaro.TidHämtad = rad[5].ToString();
-        //            närvaro.HämtasAv = rad[3].ToString();
-
-        //            Närvarolista.Add(närvaro);  
-        //        }
-        //}
-        //    return Närvarolista;
-        //}
-        //public void ReturneraVärdenAvAktuellperson()
-        //{
-
-
-        //    if (aktuellPerson.Förnamn == "James")
-        //    {
-        //        MessageBox.Show("hej");
-        //    }
-
-
-
-        //}
+        /// <summary>
+        /// Hämta närvaron utifrån valt datum
+        /// </summary>
+        /// <param name="AktuelltDatum"></param>
+        /// <returns></returns>
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
         {
 
@@ -862,6 +819,44 @@ namespace Grupp3___Förskolan_Drutten
             return Närvarolista;
             
         }
+        /// <summary>
+        /// Hämtar narvaron utifrån vald datum till närvarohanteringsfliken
+        /// </summary>
+        /// <param name="AktuelltDatum"></param>
+        /// <returns></returns>
+        public List<Närvaro> HämtaNärvaroFörNärvarohantering(DateTime AktuelltDatum)
+        {
+
+            string sql = "select dp.datum, db.förnamn, db.efternamn, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av, db.barnid, db.allergier from dagis.narvaro dp,  dagis.barn db where datum = ('" + AktuelltDatum + "') AND dp.barnid = db.barnid ORDER BY tid_lamnad";
+
+
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            List<Närvaro> Närvarolista = new List<Närvaro>();
+            Närvaro närvaro;
+
+            {
+                foreach (DataRow rad in tabell.Rows)
+                {
+                    närvaro = new Närvaro();
+
+                    närvaro.Datum = (DateTime)rad[0];
+                    närvaro.Förnamn = rad[1].ToString();
+                    närvaro.Efternamn = rad[2].ToString();
+                    närvaro.TidLämnad = rad[3].ToString();
+                    närvaro.TidHämtad = rad[4].ToString();
+                    närvaro.HämtasAv = rad[5].ToString();
+                    närvaro.barnid = (int)rad[6];
+                    närvaro.Allergier = rad[7].ToString();
+
+                    Närvarolista.Add(närvaro);
+
+                }
+            }
+            return Närvarolista;
+
+        }
         public List<Frånvaro> HämtaFrånvaro(DateTime AktuelltDatum)
         {
 
@@ -893,36 +888,7 @@ namespace Grupp3___Förskolan_Drutten
             return Frånvarolista;
 
         }
-        //public List<Barn> HämtaBarnochFöräldrar()
-        //{
-
-        //    string sql = "SELECT db.barnid, db.förnamn, db.efternamn, db.avdelningsid FROM dagis.barn db";
-
-        //    tabell.Clear();
-        //    tabell = sqlFråga(sql);
-        //    List<Barn> BarnochFörälderlista = new List<Barn>();
-        //    Barn barn;
-
-        //    {
-        //        foreach (DataRow rad in tabell.Rows)
-        //        {
-        //            barn = new Närvaro();
-
-        //            barn.Barnid = (int)rad[0];
-        //            barn.Förnamn = rad[1].ToString();
-        //            barn.Efternamn = rad[2].ToString();
-        //            barn.Avdelningsid = (int)rad[3];
-
-        //            Närvarolista.Add(närvaro);
-
-        //        }
-        //    }
-        //    return Närvarolista;
-
-        //}
-
-
-        // Martin
+         // Martin
         /// <summary>
         /// Uppdaterar barn på inloggad förälder.
         /// </summary>
@@ -1123,48 +1089,6 @@ namespace Grupp3___Förskolan_Drutten
             }
             return PersonLista;
         }
-        //public List<Person> HämtaBarnsFörälderAvdelning1(int aktuellbarnid)
-        //{
-        //    string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = ('" + aktuellbarnid + "') AND avdelningsid = 1";
-
-        //    tabell.Clear();
-        //    tabell = sqlFråga(sql);
-        //    List<Person> PersonLista = new List<Person>();
-        //    Person person;
-
-        //    foreach (DataRow rad in tabell.Rows)
-        //    {
-        //        person = new Person();
-
-        //        person.Förnamn = rad[0].ToString();
-        //        person.Efternamn = rad[1].ToString();
-        //        person.Telefonnr = rad[2].ToString();
-
-        //        PersonLista.Add(person);
-        //    }
-        //    return PersonLista;
-        //}
-        //public List<Person> HämtaBarnsFörälderAvdelning2(int aktuellbarnid)
-        //{
-        //    string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = ('" + aktuellbarnid + "') AND barn.avdelningsid = 2";
-
-        //    tabell.Clear();
-        //    tabell = sqlFråga(sql);
-        //    List<Person> PersonLista = new List<Person>();
-        //    Person person;
-
-        //    foreach (DataRow rad in tabell.Rows)
-        //    {
-        //        person = new Person();
-
-        //        person.Förnamn = rad[0].ToString();
-        //        person.Efternamn = rad[1].ToString();
-        //        person.Telefonnr = rad[2].ToString();
-
-        //        PersonLista.Add(person);
-        //    }
-        //    return PersonLista;
-        //}
         public List<Barn> HämtaBarnAvdelning1()
         {
             string sql = "select * from dagis.barn WHERE avdelningsid = 1 ORDER BY förnamn";
