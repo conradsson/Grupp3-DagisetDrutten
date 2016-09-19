@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -71,6 +71,21 @@
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.inloggadButton = new System.Windows.Forms.Button();
             this.loggaUtButton = new System.Windows.Forms.Button();
+            this.BarntabControl = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.labelAntalSöktaBarn = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.buttonSök = new System.Windows.Forms.Button();
+            this.textBoxSökRuta = new System.Windows.Forms.TextBox();
+            this.checkBoxAvdelning2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxAvdelning1 = new System.Windows.Forms.CheckBox();
+            this.listBoxVårnadshavare = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
+            this.listBoxSöktaBarn = new System.Windows.Forms.ListBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.NärvarotabControl = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridViewFrånvarandeINärvarohantering = new System.Windows.Forms.DataGridView();
@@ -116,21 +131,6 @@
             this.textBoxEfternamnMittkonto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
-            this.BarntabControl = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.labelAntalSöktaBarn = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.buttonSök = new System.Windows.Forms.Button();
-            this.textBoxSökRuta = new System.Windows.Forms.TextBox();
-            this.checkBoxAvdelning2 = new System.Windows.Forms.CheckBox();
-            this.checkBoxAvdelning1 = new System.Windows.Forms.CheckBox();
-            this.listBoxVårnadshavare = new System.Windows.Forms.ListBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
-            this.listBoxSöktaBarn = new System.Windows.Forms.ListBox();
-            this.label39 = new System.Windows.Forms.Label();
             this.panelskrivut = new System.Windows.Forms.Panel();
             this.statuspanel = new System.Windows.Forms.Label();
             this.panelavbryt = new System.Windows.Forms.Button();
@@ -170,6 +170,9 @@
             this.nyttInläggPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.BarntabControl.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.NärvarotabControl.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvarandeINärvarohantering)).BeginInit();
@@ -181,9 +184,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllaFramtidaBarn)).BeginInit();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.BarntabControl.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panelskrivut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSkrivut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
@@ -492,10 +492,10 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
-            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.informationTabControl);
+            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -680,6 +680,156 @@
             this.loggaUtButton.UseVisualStyleBackColor = false;
             this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
             this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
+            // 
+            // BarntabControl
+            // 
+            this.BarntabControl.Controls.Add(this.tabPage4);
+            this.BarntabControl.Location = new System.Drawing.Point(193, 36);
+            this.BarntabControl.Name = "BarntabControl";
+            this.BarntabControl.SelectedIndex = 0;
+            this.BarntabControl.Size = new System.Drawing.Size(748, 389);
+            this.BarntabControl.TabIndex = 22;
+            this.BarntabControl.Visible = false;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.labelAntalSöktaBarn);
+            this.tabPage4.Controls.Add(this.groupBox2);
+            this.tabPage4.Controls.Add(this.listBoxVårnadshavare);
+            this.tabPage4.Controls.Add(this.label14);
+            this.tabPage4.Controls.Add(this.label27);
+            this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
+            this.tabPage4.Controls.Add(this.listBoxSöktaBarn);
+            this.tabPage4.Controls.Add(this.label39);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(740, 363);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Barnöversikt";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // labelAntalSöktaBarn
+            // 
+            this.labelAntalSöktaBarn.AutoSize = true;
+            this.labelAntalSöktaBarn.Location = new System.Drawing.Point(28, 280);
+            this.labelAntalSöktaBarn.Name = "labelAntalSöktaBarn";
+            this.labelAntalSöktaBarn.Size = new System.Drawing.Size(61, 13);
+            this.labelAntalSöktaBarn.TabIndex = 38;
+            this.labelAntalSöktaBarn.Text = "Antal barn: ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.buttonSök);
+            this.groupBox2.Controls.Add(this.textBoxSökRuta);
+            this.groupBox2.Controls.Add(this.checkBoxAvdelning2);
+            this.groupBox2.Controls.Add(this.checkBoxAvdelning1);
+            this.groupBox2.Location = new System.Drawing.Point(31, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(311, 94);
+            this.groupBox2.TabIndex = 37;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sökfunktioner";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(15, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 13);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Sök barn:";
+            // 
+            // buttonSök
+            // 
+            this.buttonSök.Location = new System.Drawing.Point(220, 62);
+            this.buttonSök.Name = "buttonSök";
+            this.buttonSök.Size = new System.Drawing.Size(75, 23);
+            this.buttonSök.TabIndex = 35;
+            this.buttonSök.Text = "Sök";
+            this.buttonSök.UseVisualStyleBackColor = true;
+            this.buttonSök.Click += new System.EventHandler(this.buttonSök_Click);
+            // 
+            // textBoxSökRuta
+            // 
+            this.textBoxSökRuta.Location = new System.Drawing.Point(16, 33);
+            this.textBoxSökRuta.Name = "textBoxSökRuta";
+            this.textBoxSökRuta.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSökRuta.TabIndex = 36;
+            // 
+            // checkBoxAvdelning2
+            // 
+            this.checkBoxAvdelning2.AutoSize = true;
+            this.checkBoxAvdelning2.Location = new System.Drawing.Point(106, 64);
+            this.checkBoxAvdelning2.Name = "checkBoxAvdelning2";
+            this.checkBoxAvdelning2.Size = new System.Drawing.Size(82, 17);
+            this.checkBoxAvdelning2.TabIndex = 34;
+            this.checkBoxAvdelning2.Text = "Avdelning 2";
+            this.checkBoxAvdelning2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAvdelning1
+            // 
+            this.checkBoxAvdelning1.AutoSize = true;
+            this.checkBoxAvdelning1.Location = new System.Drawing.Point(18, 64);
+            this.checkBoxAvdelning1.Name = "checkBoxAvdelning1";
+            this.checkBoxAvdelning1.Size = new System.Drawing.Size(82, 17);
+            this.checkBoxAvdelning1.TabIndex = 33;
+            this.checkBoxAvdelning1.Text = "Avdelning 1";
+            this.checkBoxAvdelning1.UseVisualStyleBackColor = true;
+            // 
+            // listBoxVårnadshavare
+            // 
+            this.listBoxVårnadshavare.FormattingEnabled = true;
+            this.listBoxVårnadshavare.Location = new System.Drawing.Point(269, 141);
+            this.listBoxVårnadshavare.Name = "listBoxVårnadshavare";
+            this.listBoxVårnadshavare.Size = new System.Drawing.Size(262, 43);
+            this.listBoxVårnadshavare.TabIndex = 32;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(266, 121);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Vårnadshavare:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(266, 189);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(38, 13);
+            this.label27.TabIndex = 30;
+            this.label27.Text = "Övrigt:";
+            // 
+            // barnOverigtrichTextBox
+            // 
+            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(269, 207);
+            this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
+            this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 69);
+            this.barnOverigtrichTextBox.TabIndex = 28;
+            this.barnOverigtrichTextBox.Text = "";
+            // 
+            // listBoxSöktaBarn
+            // 
+            this.listBoxSöktaBarn.FormattingEnabled = true;
+            this.listBoxSöktaBarn.Location = new System.Drawing.Point(31, 140);
+            this.listBoxSöktaBarn.Name = "listBoxSöktaBarn";
+            this.listBoxSöktaBarn.Size = new System.Drawing.Size(220, 134);
+            this.listBoxSöktaBarn.TabIndex = 17;
+            this.listBoxSöktaBarn.SelectedIndexChanged += new System.EventHandler(this.listBoxSöktaBarn_SelectedIndexChanged);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(28, 121);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(32, 13);
+            this.label39.TabIndex = 16;
+            this.label39.Text = "Barn:";
             // 
             // NärvarotabControl
             // 
@@ -899,21 +1049,21 @@
             // 
             // chartBarnensTider
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartBarnensTider.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartBarnensTider.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartBarnensTider.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartBarnensTider.Legends.Add(legend1);
             this.chartBarnensTider.Location = new System.Drawing.Point(-24, 13);
             this.chartBarnensTider.Name = "chartBarnensTider";
             this.chartBarnensTider.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Barn lämnas";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Barn hämtas";
-            this.chartBarnensTider.Series.Add(series3);
-            this.chartBarnensTider.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Barn lämnas";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Barn hämtas";
+            this.chartBarnensTider.Series.Add(series1);
+            this.chartBarnensTider.Series.Add(series2);
             this.chartBarnensTider.Size = new System.Drawing.Size(779, 184);
             this.chartBarnensTider.TabIndex = 11;
             this.chartBarnensTider.Text = "chart1";
@@ -1170,156 +1320,6 @@
             this.textBoxFörnamnMittkonto.Name = "textBoxFörnamnMittkonto";
             this.textBoxFörnamnMittkonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxFörnamnMittkonto.TabIndex = 0;
-            // 
-            // BarntabControl
-            // 
-            this.BarntabControl.Controls.Add(this.tabPage4);
-            this.BarntabControl.Location = new System.Drawing.Point(193, 36);
-            this.BarntabControl.Name = "BarntabControl";
-            this.BarntabControl.SelectedIndex = 0;
-            this.BarntabControl.Size = new System.Drawing.Size(748, 389);
-            this.BarntabControl.TabIndex = 22;
-            this.BarntabControl.Visible = false;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.labelAntalSöktaBarn);
-            this.tabPage4.Controls.Add(this.groupBox2);
-            this.tabPage4.Controls.Add(this.listBoxVårnadshavare);
-            this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.label27);
-            this.tabPage4.Controls.Add(this.barnOverigtrichTextBox);
-            this.tabPage4.Controls.Add(this.listBoxSöktaBarn);
-            this.tabPage4.Controls.Add(this.label39);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(740, 363);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Barnöversikt";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.labelAntalSöktaBarn.AutoSize = true;
-            this.labelAntalSöktaBarn.Location = new System.Drawing.Point(28, 280);
-            this.labelAntalSöktaBarn.Name = "label16";
-            this.labelAntalSöktaBarn.Size = new System.Drawing.Size(61, 13);
-            this.labelAntalSöktaBarn.TabIndex = 38;
-            this.labelAntalSöktaBarn.Text = "Antal barn: ";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.buttonSök);
-            this.groupBox2.Controls.Add(this.textBoxSökRuta);
-            this.groupBox2.Controls.Add(this.checkBoxAvdelning2);
-            this.groupBox2.Controls.Add(this.checkBoxAvdelning1);
-            this.groupBox2.Location = new System.Drawing.Point(31, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(311, 94);
-            this.groupBox2.TabIndex = 37;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Sökfunktioner";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 13);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Sök barn:";
-            // 
-            // buttonSök
-            // 
-            this.buttonSök.Location = new System.Drawing.Point(220, 62);
-            this.buttonSök.Name = "buttonSök";
-            this.buttonSök.Size = new System.Drawing.Size(75, 23);
-            this.buttonSök.TabIndex = 35;
-            this.buttonSök.Text = "Sök";
-            this.buttonSök.UseVisualStyleBackColor = true;
-            this.buttonSök.Click += new System.EventHandler(this.buttonSök_Click);
-            // 
-            // textBoxSökRuta
-            // 
-            this.textBoxSökRuta.Location = new System.Drawing.Point(16, 33);
-            this.textBoxSökRuta.Name = "textBoxSökRuta";
-            this.textBoxSökRuta.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSökRuta.TabIndex = 36;
-            // 
-            // checkBoxAvdelning2
-            // 
-            this.checkBoxAvdelning2.AutoSize = true;
-            this.checkBoxAvdelning2.Location = new System.Drawing.Point(106, 64);
-            this.checkBoxAvdelning2.Name = "checkBoxAvdelning2";
-            this.checkBoxAvdelning2.Size = new System.Drawing.Size(82, 17);
-            this.checkBoxAvdelning2.TabIndex = 34;
-            this.checkBoxAvdelning2.Text = "Avdelning 2";
-            this.checkBoxAvdelning2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAvdelning1
-            // 
-            this.checkBoxAvdelning1.AutoSize = true;
-            this.checkBoxAvdelning1.Location = new System.Drawing.Point(18, 64);
-            this.checkBoxAvdelning1.Name = "checkBoxAvdelning1";
-            this.checkBoxAvdelning1.Size = new System.Drawing.Size(82, 17);
-            this.checkBoxAvdelning1.TabIndex = 33;
-            this.checkBoxAvdelning1.Text = "Avdelning 1";
-            this.checkBoxAvdelning1.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBoxVårnadshavare.FormattingEnabled = true;
-            this.listBoxVårnadshavare.Location = new System.Drawing.Point(269, 141);
-            this.listBoxVårnadshavare.Name = "listBox1";
-            this.listBoxVårnadshavare.Size = new System.Drawing.Size(262, 43);
-            this.listBoxVårnadshavare.TabIndex = 32;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(266, 121);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 13);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Vårnadshavare:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(266, 189);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(38, 13);
-            this.label27.TabIndex = 30;
-            this.label27.Text = "Övrigt:";
-            // 
-            // barnOverigtrichTextBox
-            // 
-            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(269, 207);
-            this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
-            this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 69);
-            this.barnOverigtrichTextBox.TabIndex = 28;
-            this.barnOverigtrichTextBox.Text = "";
-            // 
-            // listBoxSöktaBarn
-            // 
-            this.listBoxSöktaBarn.FormattingEnabled = true;
-            this.listBoxSöktaBarn.Location = new System.Drawing.Point(31, 140);
-            this.listBoxSöktaBarn.Name = "listBoxSöktaBarn";
-            this.listBoxSöktaBarn.Size = new System.Drawing.Size(220, 134);
-            this.listBoxSöktaBarn.TabIndex = 17;
-            this.listBoxSöktaBarn.SelectedIndexChanged += new System.EventHandler(this.listBoxSöktaBarn_SelectedIndexChanged);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(28, 121);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(32, 13);
-            this.label39.TabIndex = 16;
-            this.label39.Text = "Barn:";
             // 
             // panelskrivut
             // 
@@ -1593,6 +1593,11 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.BarntabControl.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.NärvarotabControl.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -1608,11 +1613,6 @@
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.BarntabControl.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panelskrivut.ResumeLayout(false);
             this.panelskrivut.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSkrivut)).EndInit();
