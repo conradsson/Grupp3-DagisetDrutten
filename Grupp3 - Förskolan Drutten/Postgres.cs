@@ -245,6 +245,56 @@ namespace Grupp3___Förskolan_Drutten
             
         }
 
+        public void TaBortFrånvaro(DateTime datum, int barnid)
+        {
+            conn.Open();
+            string meddelande;
+            try
+            {
+                string sql = "delete from dagis.franvaro where franvaro.datum = @datum and franvaro.barnid = @barnid;";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@barnid", barnid);
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                meddelande = "Frånvaron är borttagen.";
+
+            }
+            catch (NpgsqlException ex)
+            {
+                meddelande = ex.Message;
+
+            }
+            System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
+        }
+
+        public void KontrolleraFrånvaro(DateTime datum, int barnid)
+        {
+            string sql = "select franvaro.datum, franvaro.barnid from dagis.franvaro where franvaro.datum = '" + datum + "' AND franvaro.barnid = '" + barnid + "';";
+
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            Frånvaro f = new Frånvaro();
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+
+                f.Datum = (DateTime)rad[0];
+                f.Barnid = (int)rad[1];
+
+                if (f.Datum == datum && f.Barnid == barnid)
+                {
+                    TaBortFrånvaro(datum, barnid);
+                }
+
+            }
+
+
+        }
+
         /// <summary>
         ///  Metod för att lägga till tider till ett barn
         /// </summary>
