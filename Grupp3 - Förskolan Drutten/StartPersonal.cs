@@ -192,7 +192,9 @@ namespace Grupp3___Förskolan_Drutten
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
                 dataGridViewNärvarandeINärvarohantering.Visible = true;
                 dataGridViewFrånvarandeINärvarohantering.Visible = false;
+
                 
+
             }
             else if (FrånvarandeRadioButton.Checked)
             {
