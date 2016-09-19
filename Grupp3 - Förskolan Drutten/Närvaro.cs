@@ -17,6 +17,7 @@ namespace Grupp3___Förskolan_Drutten
         public DateTime Datum { get; set; }
         public int barnid { get; set; }
         public int Barnid { get; set; }
+        public string Allergier { get; set; }
         public string Förnamn { get; set; }
         public string Efternamn { get; set; }
         public string TidLämnad { get; set; }
@@ -28,7 +29,7 @@ namespace Grupp3___Förskolan_Drutten
 
         public override string ToString()
         {
-            return Datum + " " + barnid + " " + Förnamn + " " + Efternamn + " " + TidLämnad + " " + TidHämtad + " " + HämtasAv + " " + närvarande + " " + hämtad;
+            return Datum + " " + barnid + " " + Förnamn + " " + Efternamn + " " + TidLämnad + " " + TidHämtad + " " + HämtasAv + " " + närvarande + " " + hämtad + " " + Allergier;
         }
 
         //public string visaBarnTider

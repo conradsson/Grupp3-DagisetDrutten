@@ -830,7 +830,7 @@ namespace Grupp3___Förskolan_Drutten
         public List<Närvaro> HämtaNärvaro(DateTime AktuelltDatum)
         {
 
-            string sql = "select dp.datum, db.förnamn, db.efternamn, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av, dp.närvarande, dp.hämtad, db.barnid from dagis.narvaro dp, dagis.barn db where datum = ('" + AktuelltDatum + "') AND dp.barnid = db.barnid ORDER BY tid_lamnad";
+            string sql = "select dp.datum, db.förnamn, db.efternamn, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av, dp.närvarande, dp.hämtad, db.barnid, db.allergier from dagis.narvaro dp,  dagis.barn db where datum = ('" + AktuelltDatum + "') AND dp.barnid = db.barnid ORDER BY tid_lamnad";
 
 
 
@@ -853,6 +853,7 @@ namespace Grupp3___Förskolan_Drutten
                     närvaro.närvarande = (bool)rad[6];
                     närvaro.hämtad = (bool)rad[7];
                     närvaro.barnid = (int)rad[8];
+                    närvaro.Allergier = rad[9].ToString();
 
                     Närvarolista.Add(närvaro);
 

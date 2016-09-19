@@ -191,12 +191,12 @@ namespace Grupp3___Förskolan_Drutten
                 label17.Text = dataGridView1.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
 
-
+                
             }
             else if (FrånvarandeRadioButton.Checked)
             {
                 label15.Text = "Frånvarande:";
-                dataGridView1.DataSource = null;
+                dataGridView2.DataSource = null;
                 Postgres p = new Postgres();
                 dataGridView1.DataSource = p.HämtaFrånvaro(monthCalendar2.SelectionStart);
                 label17.Text = dataGridView1.RowCount.ToString() + " Barn";
