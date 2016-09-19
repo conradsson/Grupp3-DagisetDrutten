@@ -1102,8 +1102,6 @@ namespace Grupp3___Förskolan_Drutten
             return BarnLista;
 
         }
-
-
         public List<Person> HämtaBarnsFörälder(int aktuellbarnid)
         {
             string sql = "SELECT person.förnamn, person.efternamn, person.telefonnummer FROM dagis.person, dagis.person_barn, dagis.barn WHERE person.personid = person_barn.fk_personid AND barn.barnid = person_barn.fk_barnid AND barnid = '" + aktuellbarnid + "';";
