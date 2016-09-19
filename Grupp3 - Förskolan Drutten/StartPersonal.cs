@@ -515,14 +515,15 @@ namespace Grupp3___Förskolan_Drutten
         {
             panelskrivut.Visible = true;
             panelskrivut.Location = new Point(144, 17);
+            dataGridSkrivut.Visible = false;
 
             if (NärvarandeRadioButton.Checked)
             {
-                statuspanel.Text = "närvarande.";
+                statuspanel.Text = "Närvarande.";
                 dataGridSkrivut.DataSource = null;
                 Postgres p = new Postgres();
                 dataGridSkrivut.DataSource = p.HämtaNärvaro(monthCalendar2.SelectionStart);
-                
+                dataGridSkrivut.Visible = true;
 
 
             }
@@ -535,7 +536,7 @@ namespace Grupp3___Förskolan_Drutten
                 
 
             }
-
+            
 
         }
 
@@ -553,7 +554,12 @@ namespace Grupp3___Förskolan_Drutten
         {
             Bitmap bm = new Bitmap(this.dataGridSkrivut.Width, this.dataGridSkrivut.Height);
             dataGridSkrivut.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridSkrivut.Width, this.dataGridSkrivut.Height));
-            e.Graphics.DrawImage(bm,10,10);
+            Bitmap bmp = Properties.Resources.BlådruttenMellan;
+            Image newImage = bmp;
+            e.Graphics.DrawImage(newImage, 25, 25, newImage.Width, newImage.Height);
+            e.Graphics.DrawString(statuspanel.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(50, 10));
+
+            e.Graphics.DrawImage(bm,100,40);
         }
     }
 }
