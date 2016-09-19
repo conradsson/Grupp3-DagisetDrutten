@@ -522,7 +522,7 @@ namespace Grupp3___Förskolan_Drutten
         private void button1_Click(object sender, EventArgs e)
         {
             panelskrivut.Visible = true;
-            panelskrivut.Location = new Point(146, 22);
+            panelskrivut.Location = new Point(144, 17);
 
             if (NärvarandeRadioButton.Checked)
             {
@@ -561,9 +561,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             Bitmap bm = new Bitmap(this.dataGridSkrivut.Width, this.dataGridSkrivut.Height);
             dataGridSkrivut.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridSkrivut.Width, this.dataGridSkrivut.Height));
-            //e.Graphics.DrawString("Närvaro", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0, 0));
             e.Graphics.DrawImage(bm,10,10);
-            
         }
     }
 }
