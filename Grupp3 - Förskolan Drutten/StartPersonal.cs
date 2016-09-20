@@ -23,10 +23,15 @@ namespace Grupp3___Förskolan_Drutten
             NärvarotabControl.Visible = true;
             AktuellPerson = aktuellperson;
 
-            listBoxInlägg.ClearSelected();
-            listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInläggPersonal();
+            //listBoxInlägg.ClearSelected();
+            //listBoxInlägg.DataSource = null;
+            //listBoxInlägg.DataSource = p.HämtaInläggPersonal();
+            Postgres p = new Postgres();
+            dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(DateTime.Today);
+            dataGridViewDagensBarn.Columns[1].Visible = false;
 
+
+            labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
 
         }
