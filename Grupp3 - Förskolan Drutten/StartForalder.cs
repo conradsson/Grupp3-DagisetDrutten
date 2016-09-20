@@ -230,7 +230,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p3 = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid);
-                
+               
             }
 
             comboBoxFrån1.Text = "";
@@ -288,48 +288,49 @@ namespace Grupp3___Förskolan_Drutten
 
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
         {
-            Barn aktuelltbarn = new Barn();
-            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            //Barn aktuelltbarn = new Barn();
+            //aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
 
-            if (aktuelltbarn != null)
-            {
-                Postgres p = new Postgres();
-                string tid;
-                DateTime datum = monthCalendar3.SelectionStart;
-                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+            //if (aktuelltbarn != null)
+            //{
+                
+            //    Postgres p = new Postgres();
+            //    string tid;
+            //    DateTime datum = monthCalendar3.SelectionStart;
+            //    tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
 
-                if (tid == "")
-                {
-                    groupBox3.Visible = false;
-                    comboBoxUppdateraTill1.Text = "";
-                    comboBoxUppdateraTill2.Text = "";
-                }
-                else
-                {
-                    groupBox3.Visible = true;
-                    comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
-                    comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
-                }
+            //    if (tid == "")
+            //    {
+            //        groupBox3.Visible = false;
+            //        comboBoxUppdateraTill1.Text = "";
+            //        comboBoxUppdateraTill2.Text = "";
+            //    }
+            //    else
+            //    {
+            //        groupBox3.Visible = true;
+            //        comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
+            //        comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+            //    }
 
                 
-                Postgres p2 = new Postgres();
-                string tidLämnas;
-                tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+            //    Postgres p2 = new Postgres();
+            //    string tidLämnas;
+            //    tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
 
-                if (tid == "")
-                {
-                    groupBox2.Visible = true;
-                    comboBoxUppdateraFrån1.Text = "";
-                    comboBoxUppdateraFrån2.Text = "";
-                }
-                else
-                {
-                    groupBox2.Visible = false;
-                    comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
-                    comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
-                }
+            //    if (tid == "")
+            //    {
+            //        groupBox2.Visible = true;
+            //        comboBoxUppdateraFrån1.Text = "";
+            //        comboBoxUppdateraFrån2.Text = "";
+            //    }
+            //    else
+            //    {
+            //        groupBox2.Visible = false;
+            //        comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
+            //        comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
+            //    }
 
-            }
+            //}
 
         }
 
@@ -522,6 +523,12 @@ namespace Grupp3___Förskolan_Drutten
                     Postgres pp = new Postgres();
                     dataGridViewMeddelaFrånvaro.DataSource = null;
                     dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id);
+                    Postgres p2 = new Postgres();
+                    dataGridViewHämtning.DataSource = null;
+                    dataGridViewHämtning.DataSource = p2.HämtaBarnetsTider(id);
+                    Postgres p3 = new Postgres();
+                    dataGridViewTiderBarn.DataSource = null;
+                    dataGridViewTiderBarn.DataSource = p3.HämtaBarnetsTider(id);
 
                 }
                 else if (radioButtonLedig.Checked)
@@ -535,6 +542,12 @@ namespace Grupp3___Förskolan_Drutten
                     Postgres pp = new Postgres();
                     dataGridViewMeddelaFrånvaro.DataSource = null;
                     dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id);
+                    Postgres p3 = new Postgres();
+                    dataGridViewHämtning.DataSource = null;
+                    dataGridViewHämtning.DataSource = p3.HämtaBarnetsTider(id);
+                    Postgres p4 = new Postgres();
+                    dataGridViewTiderBarn.DataSource = null;
+                    dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id);
                 }
                 else 
                 {
@@ -647,6 +660,53 @@ namespace Grupp3___Förskolan_Drutten
                 int barnid = aktuelltbarn.Barnid;
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p.HämtaBarnsFrånvaro(barnid);
+            }
+        }
+
+        private void monthCalendar3_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            Barn aktuelltbarn = new Barn();
+            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+
+            if (aktuelltbarn != null)
+            {
+
+                Postgres p = new Postgres();
+                string tid;
+                DateTime datum = monthCalendar3.SelectionStart;
+                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+
+                if (tid == "")
+                {
+                    groupBox3.Visible = false;
+                    comboBoxUppdateraTill1.Text = "";
+                    comboBoxUppdateraTill2.Text = "";
+                }
+                else
+                {
+                    groupBox3.Visible = true;
+                    comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
+                    comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+                }
+
+
+                Postgres p2 = new Postgres();
+                string tidLämnas;
+                tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+
+                if (tid == "")
+                {
+                    groupBox2.Visible = true;
+                    comboBoxUppdateraFrån1.Text = "";
+                    comboBoxUppdateraFrån2.Text = "";
+                }
+                else
+                {
+                    groupBox2.Visible = false;
+                    comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
+                    comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
+                }
+
             }
         }
     }
