@@ -19,15 +19,13 @@ namespace Grupp3___Förskolan_Drutten
         {
             InitializeComponent();
             //  Start Effekter..
-            //informationTabControl.Visible = true;
+
             NärvarotabControl.Visible = true;
             AktuellPerson = aktuellperson;
 
-            //listBoxInlägg.ClearSelected();
-            //listBoxInlägg.DataSource = null;
-            //listBoxInlägg.DataSource = p.HämtaInläggPersonal();
             Postgres p = new Postgres();
-            dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(DateTime.Today);
+            DateTime idag = DateTime.Today;
+            dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(idag);
             dataGridViewDagensBarn.Columns[1].Visible = false;
 
 
@@ -122,10 +120,6 @@ namespace Grupp3___Förskolan_Drutten
 
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
 
-            
-            
-
-
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -192,7 +186,8 @@ namespace Grupp3___Förskolan_Drutten
                 label15.Text = "Närvarande:";
                 dataGridViewNärvarandeINärvarohantering.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridViewNärvarandeINärvarohantering.DataSource = p.HämtaNärvaroFörNärvarohantering(monthCalendar23INärvarohantering.SelectionStart);
+                DateTime idag = monthCalendar23INärvarohantering.SelectionStart;
+                dataGridViewNärvarandeINärvarohantering.DataSource = p.HämtaNärvaroFörNärvarohantering(idag);
                 label17.Text = dataGridViewNärvarandeINärvarohantering.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
                 dataGridViewNärvarandeINärvarohantering.Visible = true;
@@ -206,7 +201,8 @@ namespace Grupp3___Förskolan_Drutten
                 label15.Text = "Frånvarande:";
                 dataGridViewFrånvarandeINärvarohantering.DataSource = null;
                 Postgres p = new Postgres();
-                dataGridViewFrånvarandeINärvarohantering.DataSource = p.HämtaFrånvaro(monthCalendar23INärvarohantering.SelectionStart);
+                DateTime idag = monthCalendar23INärvarohantering.SelectionStart;
+                dataGridViewFrånvarandeINärvarohantering.DataSource = p.HämtaFrånvaro(idag);
                 label17.Text = dataGridViewNärvarandeINärvarohantering.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens frånvarolista";
                 dataGridViewNärvarandeINärvarohantering.Visible = false;
