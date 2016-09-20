@@ -394,16 +394,16 @@ namespace Grupp3___Förskolan_Drutten
             buttonDöljDiagram.Visible = true;
             buttonVisaDiagram.Visible = false;
 
-            int kollaTid = 07;
-            int tid = 07;
+            int kollaTid = 06;
+            int tid = 06;
             for (int i = 0; i < 11; i++)
             {
                 Postgres p = new Postgres();
                 this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
 
           }
-            int kollaTid2 = 07;
-            int tid2 = 07;
+            int kollaTid2 = 06;
+            int tid2 = 06;
             for (int i = 0; i < 11; i++)
             {
                 Postgres p = new Postgres();
