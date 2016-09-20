@@ -181,6 +181,12 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonSökValtDatumINärvarohantering_Click(object sender, EventArgs e)
         {
+            if (NärvarandeRadioButton.Checked == false && FrånvarandeRadioButton.Checked == false)
+            {
+                MessageBox.Show("Vänligen markera närvarande eller frånvarande.");
+            }
+            else
+            {
             if (NärvarandeRadioButton.Checked)
             {
                 label15.Text = "Närvarande:";
@@ -192,8 +198,6 @@ namespace Grupp3___Förskolan_Drutten
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
                 dataGridViewNärvarandeINärvarohantering.Visible = true;
                 dataGridViewFrånvarandeINärvarohantering.Visible = false;
-
-                
 
             }
             else if (FrånvarandeRadioButton.Checked)
@@ -207,6 +211,8 @@ namespace Grupp3___Förskolan_Drutten
                 labelSkrivut.Text = "Skriv ut dagens frånvarolista";
                 dataGridViewNärvarandeINärvarohantering.Visible = false;
                 dataGridViewFrånvarandeINärvarohantering.Visible = true;
+            }
+
             }
         }
 

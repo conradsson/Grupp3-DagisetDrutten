@@ -198,6 +198,7 @@
             this.annatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.antalDagarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.labelObligatorisk = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
@@ -926,6 +927,7 @@
             // tabPage5
             // 
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.labelObligatorisk);
             this.tabPage5.Controls.Add(this.dataGridViewFrånvarandeINärvarohantering);
             this.tabPage5.Controls.Add(this.label17);
             this.tabPage5.Controls.Add(this.labelSkrivut);
@@ -1074,12 +1076,10 @@
             // NärvarandeRadioButton
             // 
             this.NärvarandeRadioButton.AutoSize = true;
-            this.NärvarandeRadioButton.Checked = true;
             this.NärvarandeRadioButton.Location = new System.Drawing.Point(267, 40);
             this.NärvarandeRadioButton.Name = "NärvarandeRadioButton";
             this.NärvarandeRadioButton.Size = new System.Drawing.Size(81, 17);
             this.NärvarandeRadioButton.TabIndex = 5;
-            this.NärvarandeRadioButton.TabStop = true;
             this.NärvarandeRadioButton.Text = "Närvarande";
             this.NärvarandeRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -1911,6 +1911,17 @@
             // 
             this.barnBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Barn);
             // 
+            // labelObligatorisk
+            // 
+            this.labelObligatorisk.AutoSize = true;
+            this.labelObligatorisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObligatorisk.ForeColor = System.Drawing.Color.Red;
+            this.labelObligatorisk.Location = new System.Drawing.Point(354, 9);
+            this.labelObligatorisk.Name = "labelObligatorisk";
+            this.labelObligatorisk.Size = new System.Drawing.Size(20, 25);
+            this.labelObligatorisk.TabIndex = 34;
+            this.labelObligatorisk.Text = "*";
+            // 
             // StartPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2138,5 +2149,6 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button ändraLösenordButton;
+        private System.Windows.Forms.Label labelObligatorisk;
     }
 }

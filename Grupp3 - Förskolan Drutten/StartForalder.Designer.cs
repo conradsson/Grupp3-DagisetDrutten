@@ -73,6 +73,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridViewHämtning = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +99,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.labelMeddelaFrånvaro = new System.Windows.Forms.Label();
+            this.labelObligatorisk = new System.Windows.Forms.Label();
             this.informationTabControl = new System.Windows.Forms.TabControl();
             this.senasteTabPage = new System.Windows.Forms.TabPage();
             this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
@@ -150,9 +153,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelObligatorisk = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
@@ -829,6 +829,28 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Från:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(41, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 25);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "*";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Red;
+            this.label27.Location = new System.Drawing.Point(31, 69);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(20, 25);
+            this.label27.TabIndex = 35;
+            this.label27.Text = "*";
+            // 
             // tabPage4
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -1083,6 +1105,17 @@
             this.labelMeddelaFrånvaro.Size = new System.Drawing.Size(158, 20);
             this.labelMeddelaFrånvaro.TabIndex = 31;
             this.labelMeddelaFrånvaro.Text = "Meddelad frånvaro";
+            // 
+            // labelObligatorisk
+            // 
+            this.labelObligatorisk.AutoSize = true;
+            this.labelObligatorisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObligatorisk.ForeColor = System.Drawing.Color.Red;
+            this.labelObligatorisk.Location = new System.Drawing.Point(431, 220);
+            this.labelObligatorisk.Name = "labelObligatorisk";
+            this.labelObligatorisk.Size = new System.Drawing.Size(20, 25);
+            this.labelObligatorisk.TabIndex = 33;
+            this.labelObligatorisk.Text = "*";
             // 
             // informationTabControl
             // 
@@ -1598,39 +1631,6 @@
             // frånvaroBindingSource
             // 
             this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
-            // 
-            // labelObligatorisk
-            // 
-            this.labelObligatorisk.AutoSize = true;
-            this.labelObligatorisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelObligatorisk.ForeColor = System.Drawing.Color.Red;
-            this.labelObligatorisk.Location = new System.Drawing.Point(431, 220);
-            this.labelObligatorisk.Name = "labelObligatorisk";
-            this.labelObligatorisk.Size = new System.Drawing.Size(20, 25);
-            this.labelObligatorisk.TabIndex = 33;
-            this.labelObligatorisk.Text = "*";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(41, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 25);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "*";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(31, 69);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(20, 25);
-            this.label27.TabIndex = 35;
-            this.label27.Text = "*";
             // 
             // StartForalder
             // 
