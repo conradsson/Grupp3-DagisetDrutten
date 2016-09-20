@@ -837,7 +837,7 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(30, 53);
+            this.label55.Location = new System.Drawing.Point(338, 24);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(118, 16);
             this.label55.TabIndex = 24;
@@ -845,7 +845,7 @@
             // 
             // ändraLösenordButton
             // 
-            this.ändraLösenordButton.Location = new System.Drawing.Point(84, 276);
+            this.ändraLösenordButton.Location = new System.Drawing.Point(347, 265);
             this.ändraLösenordButton.Name = "ändraLösenordButton";
             this.ändraLösenordButton.Size = new System.Drawing.Size(99, 28);
             this.ändraLösenordButton.TabIndex = 21;
@@ -855,7 +855,7 @@
             // 
             // uppdateraförälder
             // 
-            this.uppdateraförälder.Location = new System.Drawing.Point(84, 229);
+            this.uppdateraförälder.Location = new System.Drawing.Point(347, 218);
             this.uppdateraförälder.Name = "uppdateraförälder";
             this.uppdateraförälder.Size = new System.Drawing.Size(99, 34);
             this.uppdateraförälder.TabIndex = 20;
@@ -866,7 +866,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(81, 172);
+            this.label16.Location = new System.Drawing.Point(344, 161);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(83, 13);
             this.label16.TabIndex = 17;
@@ -874,7 +874,7 @@
             // 
             // textBoxTelefonnummerMittKonto
             // 
-            this.textBoxTelefonnummerMittKonto.Location = new System.Drawing.Point(84, 188);
+            this.textBoxTelefonnummerMittKonto.Location = new System.Drawing.Point(347, 177);
             this.textBoxTelefonnummerMittKonto.Name = "textBoxTelefonnummerMittKonto";
             this.textBoxTelefonnummerMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxTelefonnummerMittKonto.TabIndex = 16;
@@ -882,7 +882,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(81, 128);
+            this.label18.Location = new System.Drawing.Point(344, 117);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 13);
             this.label18.TabIndex = 13;
@@ -890,7 +890,7 @@
             // 
             // textBoxEfternamnMittKonto
             // 
-            this.textBoxEfternamnMittKonto.Location = new System.Drawing.Point(84, 144);
+            this.textBoxEfternamnMittKonto.Location = new System.Drawing.Point(347, 133);
             this.textBoxEfternamnMittKonto.Name = "textBoxEfternamnMittKonto";
             this.textBoxEfternamnMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxEfternamnMittKonto.TabIndex = 12;
@@ -898,7 +898,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(81, 86);
+            this.label19.Location = new System.Drawing.Point(344, 75);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 13);
             this.label19.TabIndex = 11;
@@ -906,7 +906,7 @@
             // 
             // textBoxFörnamnMittKonto
             // 
-            this.textBoxFörnamnMittKonto.Location = new System.Drawing.Point(84, 100);
+            this.textBoxFörnamnMittKonto.Location = new System.Drawing.Point(347, 89);
             this.textBoxFörnamnMittKonto.Name = "textBoxFörnamnMittKonto";
             this.textBoxFörnamnMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxFörnamnMittKonto.TabIndex = 10;
