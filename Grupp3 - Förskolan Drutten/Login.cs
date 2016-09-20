@@ -97,6 +97,7 @@ namespace Grupp3___Förskolan_Drutten
         // Öppnar formen för Mobil. Endast för presentation.
         private void MobilLink_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             MobilBankId b = new MobilBankId();
 
             b.Show();
