@@ -628,7 +628,6 @@ namespace Grupp3___Förskolan_Drutten
 
         private void ändraLösenAvbryt_Click(object sender, EventArgs e)
         {
-            
                 ändraLösenPanel.Visible = false;
         }
 
