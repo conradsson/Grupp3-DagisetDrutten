@@ -339,7 +339,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBoxVårnadshavare.DataSource = null;
                 listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
                 labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
-
+                 
             }
 
             else if (checkBoxAvdelning1.Checked == true)
