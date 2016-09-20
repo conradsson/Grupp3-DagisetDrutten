@@ -387,8 +387,12 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonVisaDiagram_Click(object sender, EventArgs e)
         {
-            label10.Visible = true;
-            label1.Visible = true;
+            labelAntalBarn.Visible = true;
+            labelTid.Visible = true;
+
+            dataGridViewDagensBarn.Height = 140;
+            buttonDöljDiagram.Visible = true;
+            buttonVisaDiagram.Visible = false;
 
             int kollaTid = 07;
             int tid = 07;
@@ -451,13 +455,13 @@ namespace Grupp3___Förskolan_Drutten
             foreach (DataGridViewRow row in dataGridViewDagensBarn.Rows)
             {
 
-                if (row.Cells[4].Value != null)
+                if (row.Cells[6].Value != null)
                 {
-                    if (Convert.ToBoolean(row.Cells[4].Value))
+                    if (Convert.ToBoolean(row.Cells[6].Value))
                     {
                         Postgres p = new Postgres();
                         aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
-                        aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[4].Value);
+                        aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[6].Value);
                         aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
                         p.LäggTillNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
@@ -466,7 +470,7 @@ namespace Grupp3___Förskolan_Drutten
                     {
                             Postgres p = new Postgres();
                             aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
-                            aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[4].Value);
+                            aktuelltBarn.närvarande = Convert.ToBoolean(row.Cells[6].Value);
                             aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
                             p.TaBortNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
@@ -475,11 +479,11 @@ namespace Grupp3___Förskolan_Drutten
                 }
                 if (row.Cells[5].Value != null)
                 {
-                    if (Convert.ToBoolean(row.Cells[5].Value))
+                    if (Convert.ToBoolean(row.Cells[7].Value))
                     {
                         Postgres p = new Postgres();
                         aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
-                        aktuelltBarn.hämtad = Convert.ToBoolean(row.Cells[4].Value);
+                        aktuelltBarn.hämtad = Convert.ToBoolean(row.Cells[7].Value);
                         aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
                         p.LäggTillHämtadFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.hämtad);
@@ -488,7 +492,7 @@ namespace Grupp3___Förskolan_Drutten
                     {
                         Postgres p = new Postgres();
                         aktuelltBarn.barnid = Convert.ToInt32(row.Cells[1].Value);
-                        aktuelltBarn.hämtad = Convert.ToBoolean(row.Cells[4].Value);
+                        aktuelltBarn.hämtad = Convert.ToBoolean(row.Cells[7].Value);
                         aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
                         p.TaBortHämtadFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.hämtad);
@@ -572,6 +576,16 @@ namespace Grupp3___Förskolan_Drutten
             e.Graphics.DrawImage(newImage, 25, 25, newImage.Width, newImage.Height);
             e.Graphics.DrawString(statuspanel.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(21, 120));
             e.Graphics.DrawImage(bm, 21, 140);
+        }
+
+        private void buttonDöljDiagram_Click(object sender, EventArgs e)
+        {
+            dataGridViewDagensBarn.Height = 240;
+            buttonVisaDiagram.Visible = true;
+            buttonDöljDiagram.Visible = false;
+            chartBarnensTider.Visible = false;
+            labelAntalBarn.Visible = false;
+            labelTid.Visible = false;
         }
     }
 }

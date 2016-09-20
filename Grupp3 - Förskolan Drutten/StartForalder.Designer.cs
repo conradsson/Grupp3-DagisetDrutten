@@ -194,9 +194,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
+            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
