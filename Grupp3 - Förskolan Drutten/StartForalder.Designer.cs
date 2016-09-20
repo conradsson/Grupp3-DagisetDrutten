@@ -44,10 +44,10 @@
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.informationTabControl = new System.Windows.Forms.TabControl();
             this.senasteTabPage = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
             this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.textBoxSkrivetAv = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.listBoxInlägg = new System.Windows.Forms.ListBox();
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.textBoxDatum = new System.Windows.Forms.TextBox();
@@ -69,7 +69,6 @@
             this.label40 = new System.Windows.Forms.Label();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label34 = new System.Windows.Forms.Label();
             this.ändraLösenPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ändralösenBekräfta = new System.Windows.Forms.Button();
@@ -81,6 +80,7 @@
             this.textBoxNuvarandeLösen = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
             this.ändraLösenordButton = new System.Windows.Forms.Button();
             this.uppdateraförälder = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -428,10 +428,10 @@
             this.senasteTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
             this.senasteTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.senasteTabPage.Controls.Add(this.label26);
             this.senasteTabPage.Controls.Add(this.richTextBoxPubliceradeInlägg);
             this.senasteTabPage.Controls.Add(this.label25);
             this.senasteTabPage.Controls.Add(this.textBoxSkrivetAv);
-            this.senasteTabPage.Controls.Add(this.label26);
             this.senasteTabPage.Controls.Add(this.listBoxInlägg);
             this.senasteTabPage.Controls.Add(this.textBoxRubrik);
             this.senasteTabPage.Controls.Add(this.textBoxDatum);
@@ -443,6 +443,16 @@
             this.senasteTabPage.TabIndex = 0;
             this.senasteTabPage.Text = "Senaste";
             this.senasteTabPage.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(11, 54);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(86, 16);
+            this.label26.TabIndex = 41;
+            this.label26.Text = "Välj inlägg:";
             // 
             // richTextBoxPubliceradeInlägg
             // 
@@ -473,16 +483,6 @@
             this.textBoxSkrivetAv.Size = new System.Drawing.Size(167, 20);
             this.textBoxSkrivetAv.TabIndex = 37;
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(12, 56);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(58, 13);
-            this.label26.TabIndex = 35;
-            this.label26.Text = "Välj inlägg:";
-            // 
             // listBoxInlägg
             // 
             this.listBoxInlägg.FormattingEnabled = true;
@@ -512,7 +512,7 @@
             // 
             // omTabPage
             // 
-            this.omTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttis1;
+            this.omTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttisNYOM;
             this.omTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.omTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.omTabPage.Controls.Add(this.label54);
@@ -541,7 +541,7 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label54.Location = new System.Drawing.Point(414, 287);
+            this.label54.Location = new System.Drawing.Point(444, 276);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(52, 13);
             this.label54.TabIndex = 14;
@@ -551,7 +551,7 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label53.Location = new System.Drawing.Point(409, 271);
+            this.label53.Location = new System.Drawing.Point(439, 260);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(96, 14);
             this.label53.TabIndex = 13;
@@ -561,7 +561,7 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label52.Location = new System.Drawing.Point(411, 303);
+            this.label52.Location = new System.Drawing.Point(441, 292);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(38, 14);
             this.label52.TabIndex = 12;
@@ -571,7 +571,7 @@
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label51.Location = new System.Drawing.Point(409, 222);
+            this.label51.Location = new System.Drawing.Point(439, 211);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(48, 14);
             this.label51.TabIndex = 11;
@@ -591,7 +591,7 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label49.Location = new System.Drawing.Point(411, 252);
+            this.label49.Location = new System.Drawing.Point(441, 241);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(40, 13);
             this.label49.TabIndex = 9;
@@ -601,7 +601,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label48.Location = new System.Drawing.Point(411, 238);
+            this.label48.Location = new System.Drawing.Point(441, 227);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(83, 13);
             this.label48.TabIndex = 8;
@@ -611,7 +611,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label47.Location = new System.Drawing.Point(411, 321);
+            this.label47.Location = new System.Drawing.Point(441, 310);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(120, 13);
             this.label47.TabIndex = 7;
@@ -621,7 +621,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label46.Location = new System.Drawing.Point(110, 330);
+            this.label46.Location = new System.Drawing.Point(133, 314);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(60, 12);
             this.label46.TabIndex = 6;
@@ -631,7 +631,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label45.Location = new System.Drawing.Point(110, 313);
+            this.label45.Location = new System.Drawing.Point(133, 297);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(60, 12);
             this.label45.TabIndex = 5;
@@ -641,7 +641,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label44.Location = new System.Drawing.Point(110, 297);
+            this.label44.Location = new System.Drawing.Point(133, 280);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(60, 12);
             this.label44.TabIndex = 4;
@@ -651,7 +651,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label43.Location = new System.Drawing.Point(110, 280);
+            this.label43.Location = new System.Drawing.Point(133, 264);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(60, 12);
             this.label43.TabIndex = 3;
@@ -661,7 +661,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label42.Location = new System.Drawing.Point(110, 264);
+            this.label42.Location = new System.Drawing.Point(133, 247);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(60, 12);
             this.label42.TabIndex = 2;
@@ -671,7 +671,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label41.Location = new System.Drawing.Point(110, 248);
+            this.label41.Location = new System.Drawing.Point(133, 231);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(60, 12);
             this.label41.TabIndex = 1;
@@ -681,7 +681,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label40.Location = new System.Drawing.Point(110, 231);
+            this.label40.Location = new System.Drawing.Point(133, 214);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(60, 12);
             this.label40.TabIndex = 0;
@@ -700,9 +700,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage1.Controls.Add(this.label34);
             this.tabPage1.Controls.Add(this.ändraLösenPanel);
+            this.tabPage1.Controls.Add(this.label55);
             this.tabPage1.Controls.Add(this.ändraLösenordButton);
             this.tabPage1.Controls.Add(this.uppdateraförälder);
             this.tabPage1.Controls.Add(this.label16);
@@ -720,23 +722,13 @@
             this.tabPage1.Text = "Kontouppgifter";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(34, 20);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(79, 13);
-            this.label34.TabIndex = 23;
-            this.label34.Text = "Ändra uppgifter";
-            // 
             // ändraLösenPanel
             // 
             this.ändraLösenPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.ändraLösenPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ändraLösenPanel.Controls.Add(this.panel2);
             this.ändraLösenPanel.Controls.Add(this.label30);
-            this.ändraLösenPanel.Location = new System.Drawing.Point(33, 53);
+            this.ändraLösenPanel.Location = new System.Drawing.Point(451, 124);
             this.ändraLösenPanel.Name = "ändraLösenPanel";
             this.ändraLösenPanel.Size = new System.Drawing.Size(419, 267);
             this.ändraLösenPanel.TabIndex = 22;
@@ -841,11 +833,21 @@
             this.label30.TabIndex = 24;
             this.label30.Text = "Ändra lösenord";
             // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(30, 53);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(118, 16);
+            this.label55.TabIndex = 24;
+            this.label55.Text = "Ändra uppgifter:";
+            // 
             // ändraLösenordButton
             // 
-            this.ändraLösenordButton.Location = new System.Drawing.Point(114, 191);
+            this.ändraLösenordButton.Location = new System.Drawing.Point(84, 276);
             this.ändraLösenordButton.Name = "ändraLösenordButton";
-            this.ändraLösenordButton.Size = new System.Drawing.Size(99, 34);
+            this.ändraLösenordButton.Size = new System.Drawing.Size(99, 28);
             this.ändraLösenordButton.TabIndex = 21;
             this.ändraLösenordButton.Text = "Ändra lösenord";
             this.ändraLösenordButton.UseVisualStyleBackColor = true;
@@ -853,7 +855,7 @@
             // 
             // uppdateraförälder
             // 
-            this.uppdateraförälder.Location = new System.Drawing.Point(114, 145);
+            this.uppdateraförälder.Location = new System.Drawing.Point(84, 229);
             this.uppdateraförälder.Name = "uppdateraförälder";
             this.uppdateraförälder.Size = new System.Drawing.Size(99, 34);
             this.uppdateraförälder.TabIndex = 20;
@@ -864,7 +866,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 115);
+            this.label16.Location = new System.Drawing.Point(81, 172);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(83, 13);
             this.label16.TabIndex = 17;
@@ -872,7 +874,7 @@
             // 
             // textBoxTelefonnummerMittKonto
             // 
-            this.textBoxTelefonnummerMittKonto.Location = new System.Drawing.Point(113, 112);
+            this.textBoxTelefonnummerMittKonto.Location = new System.Drawing.Point(84, 188);
             this.textBoxTelefonnummerMittKonto.Name = "textBoxTelefonnummerMittKonto";
             this.textBoxTelefonnummerMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxTelefonnummerMittKonto.TabIndex = 16;
@@ -880,7 +882,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(54, 89);
+            this.label18.Location = new System.Drawing.Point(81, 128);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 13);
             this.label18.TabIndex = 13;
@@ -888,7 +890,7 @@
             // 
             // textBoxEfternamnMittKonto
             // 
-            this.textBoxEfternamnMittKonto.Location = new System.Drawing.Point(113, 86);
+            this.textBoxEfternamnMittKonto.Location = new System.Drawing.Point(84, 144);
             this.textBoxEfternamnMittKonto.Name = "textBoxEfternamnMittKonto";
             this.textBoxEfternamnMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxEfternamnMittKonto.TabIndex = 12;
@@ -896,7 +898,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(56, 56);
+            this.label19.Location = new System.Drawing.Point(81, 86);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 13);
             this.label19.TabIndex = 11;
@@ -904,13 +906,15 @@
             // 
             // textBoxFörnamnMittKonto
             // 
-            this.textBoxFörnamnMittKonto.Location = new System.Drawing.Point(113, 53);
+            this.textBoxFörnamnMittKonto.Location = new System.Drawing.Point(84, 100);
             this.textBoxFörnamnMittKonto.Name = "textBoxFörnamnMittKonto";
             this.textBoxFörnamnMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxFörnamnMittKonto.TabIndex = 10;
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage2.Controls.Add(this.listAktuellaBarn);
             this.tabPage2.Controls.Add(this.label21);
@@ -1039,6 +1043,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage3.Controls.Add(this.dataGridViewTiderBarn);
             this.tabPage3.Controls.Add(this.tiderBarnListBox);
@@ -1524,6 +1530,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage4.Controls.Add(this.dataGridViewHämtning);
             this.tabPage4.Controls.Add(this.listBoxMeddelaHämtning);
@@ -1681,6 +1689,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage5.Controls.Add(this.labelFrånvaroTyp);
             this.tabPage5.Controls.Add(this.dataGridViewMeddelaFrånvaro);
@@ -2048,7 +2058,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxPubliceradeInlägg;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBoxSkrivetAv;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ListBox listBoxInlägg;
         private System.Windows.Forms.TextBox textBoxRubrik;
         private System.Windows.Forms.TextBox textBoxDatum;
@@ -2077,7 +2086,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button ändralösenBekräfta;
         private System.Windows.Forms.Button ändraLösenAvbryt;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.DataGridView dataGridViewMeddelaFrånvaro;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Sjuk;
@@ -2110,5 +2118,7 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label26;
     }
 }
