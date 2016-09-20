@@ -210,15 +210,17 @@ namespace Grupp3___Förskolan_Drutten
             string lämnas = comboBoxFrån1.Text + ":" + comboBoxFrån2.Text;
             string hämtas = comboBoxTill1.Text + ":" + comboBoxTill2.Text;
             DateTime dagensDatum = DateTime.Today;
-            if (lämnas == ":" && hämtas == ":")
+            
+            if (datum < dagensDatum)
+            {
+                MessageBox.Show("Du kan tyvärr inte lägga in tider som är före dagens datum. \nVänligen välj ett annat datum.");
+            }
+            else if (lämnas == ":" && hämtas == ":")
             {
 
                 MessageBox.Show("Var vänlig och fyll i tider.");
             }
-            else if (datum < dagensDatum)
-            {
-                MessageBox.Show("Du kan tyvärr inte lägga in tider som är före dagens datum. \nVänligen välj ett annat datum.");
-            }
+           
             else
             {
                 Postgres p = new Postgres();
