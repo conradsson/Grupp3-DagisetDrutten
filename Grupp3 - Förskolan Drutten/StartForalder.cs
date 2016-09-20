@@ -234,7 +234,7 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
                 Postgres p3 = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
-                dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid);
+                dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid, datummetod);
                
             }
 
@@ -536,7 +536,7 @@ namespace Grupp3___Förskolan_Drutten
 
                     Postgres pp = new Postgres();
                     dataGridViewMeddelaFrånvaro.DataSource = null;
-                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id);
+                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datummetod);
                     Postgres p2 = new Postgres();
                     dataGridViewHämtning.DataSource = null;
                     dataGridViewHämtning.DataSource = p2.HämtaBarnetsTider(id, datummetod);
@@ -555,7 +555,7 @@ namespace Grupp3___Förskolan_Drutten
 
                     Postgres pp = new Postgres();
                     dataGridViewMeddelaFrånvaro.DataSource = null;
-                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id);
+                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datummetod);
                     Postgres p3 = new Postgres();
                     dataGridViewHämtning.DataSource = null;
                     dataGridViewHämtning.DataSource = p3.HämtaBarnetsTider(id, datummetod);
@@ -666,14 +666,14 @@ namespace Grupp3___Förskolan_Drutten
         private void listBoxMeddelaFrånvaro_SelectedIndexChanged(object sender, EventArgs e)
         {
             Barn aktuelltbarn = (Barn)listBoxMeddelaFrånvaro.SelectedItem;
-            
+            DateTime datummetod = DateTime.Today;
             
             if (aktuelltbarn != null)
             {
                 Postgres p = new Postgres();
                 int barnid = aktuelltbarn.Barnid;
                 dataGridViewMeddelaFrånvaro.DataSource = null;
-                dataGridViewMeddelaFrånvaro.DataSource = p.HämtaBarnsFrånvaro(barnid);
+                dataGridViewMeddelaFrånvaro.DataSource = p.HämtaBarnsFrånvaro(barnid, datummetod);
             }
         }
 
