@@ -12,6 +12,7 @@ namespace Grupp3___Förskolan_Drutten
 {
     public partial class StartFörälderMobil : Form
     {
+        DateTime datummetod = DateTime.Today;
         Postgres p = new Postgres();
         Person AktuellPerson = new Person()
         {
@@ -36,6 +37,7 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = true;
 
             inloggadAnvändareLabel.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            
         }
 
         private void menyButton_Click(object sender, EventArgs e)
@@ -227,7 +229,7 @@ namespace Grupp3___Förskolan_Drutten
             if (aktuelltbarn != null)
             {
                 dataGridViewTiderBarn.DataSource = null;
-                dataGridViewTiderBarn.DataSource = p.HämtaBarnetsTider(aktuelltbarn.Barnid);
+                dataGridViewTiderBarn.DataSource = p.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
                 //dataGridViewTiderBarn.Columns[1].Visible = false;
                 //dataGridViewTiderBarn.Columns[2].Visible = false;
 

@@ -575,10 +575,10 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         /// <param name="barnid"></param>
         /// <returns></returns>
-        public List<Närvaro> HämtaBarnetsTider(int barnid)
+        public List<Närvaro> HämtaBarnetsTider(int barnid, DateTime datum)
         {
 
-            string sql = "select dp.datum, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av from dagis.narvaro dp where dp.barnid = '" + barnid + "' ORDER BY dp.datum";
+            string sql = "select dp.datum, dp.tid_lamnad, dp.tid_hamtad, dp.hamtas_av from dagis.narvaro dp where dp.barnid = '" + barnid + "' AND datum >= '" + datum + "' ORDER BY dp.datum";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
