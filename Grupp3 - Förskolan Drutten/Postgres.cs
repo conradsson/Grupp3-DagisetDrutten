@@ -236,10 +236,10 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         /// <param name="barnid"></param>
         /// <returns></returns>
-        public List<Frånvaro> HämtaBarnsFrånvaro(int barnid)
+        public List<Frånvaro> HämtaBarnsFrånvaro(int barnid, DateTime datum)
         {
 
-            string sql = "select franvaro.datum,  franvaro.sjuk, franvaro.ledig from dagis.franvaro where franvaro.barnid = '" + barnid + "';";
+            string sql = "select franvaro.datum,  franvaro.sjuk, franvaro.ledig from dagis.franvaro where franvaro.barnid = '" + barnid + "' AND datum >= '" + datum + "' ORDER BY datum;";
 
             tabell.Clear();
             tabell = sqlFråga(sql);
