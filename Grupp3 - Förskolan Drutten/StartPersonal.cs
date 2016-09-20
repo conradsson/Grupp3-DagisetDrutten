@@ -19,8 +19,8 @@ namespace Grupp3___Förskolan_Drutten
         {
             InitializeComponent();
             //  Start Effekter..
-            informationTabControl.Visible = true;
-
+            //informationTabControl.Visible = true;
+            NärvarotabControl.Visible = true;
             AktuellPerson = aktuellperson;
 
             listBoxInlägg.ClearSelected();
