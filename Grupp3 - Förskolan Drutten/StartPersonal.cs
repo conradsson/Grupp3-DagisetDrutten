@@ -216,8 +216,6 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-
-
         private void nyttInläggButton_Click(object sender, EventArgs e)
         {
             richTextBoxNyText.Clear();
