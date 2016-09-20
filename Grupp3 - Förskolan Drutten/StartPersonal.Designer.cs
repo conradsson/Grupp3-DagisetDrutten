@@ -526,10 +526,10 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
+            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.informationTabControl);
-            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -1409,9 +1409,10 @@
             // labelAntalSöktaBarn
             // 
             this.labelAntalSöktaBarn.AutoSize = true;
-            this.labelAntalSöktaBarn.Location = new System.Drawing.Point(28, 280);
+            this.labelAntalSöktaBarn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAntalSöktaBarn.Location = new System.Drawing.Point(30, 295);
             this.labelAntalSöktaBarn.Name = "labelAntalSöktaBarn";
-            this.labelAntalSöktaBarn.Size = new System.Drawing.Size(61, 13);
+            this.labelAntalSöktaBarn.Size = new System.Drawing.Size(93, 18);
             this.labelAntalSöktaBarn.TabIndex = 38;
             this.labelAntalSöktaBarn.Text = "Antal barn: ";
             // 
@@ -1422,9 +1423,10 @@
             this.groupBox2.Controls.Add(this.textBoxSökRuta);
             this.groupBox2.Controls.Add(this.checkBoxAvdelning2);
             this.groupBox2.Controls.Add(this.checkBoxAvdelning1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(31, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(311, 94);
+            this.groupBox2.Size = new System.Drawing.Size(311, 113);
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sökfunktioner";
@@ -1432,15 +1434,15 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 17);
+            this.label13.Location = new System.Drawing.Point(15, 20);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 13);
+            this.label13.Size = new System.Drawing.Size(69, 17);
             this.label13.TabIndex = 38;
             this.label13.Text = "Sök barn:";
             // 
             // buttonSök
             // 
-            this.buttonSök.Location = new System.Drawing.Point(220, 62);
+            this.buttonSök.Location = new System.Drawing.Point(225, 73);
             this.buttonSök.Name = "buttonSök";
             this.buttonSök.Size = new System.Drawing.Size(75, 23);
             this.buttonSök.TabIndex = 35;
@@ -1450,17 +1452,17 @@
             // 
             // textBoxSökRuta
             // 
-            this.textBoxSökRuta.Location = new System.Drawing.Point(16, 33);
+            this.textBoxSökRuta.Location = new System.Drawing.Point(16, 43);
             this.textBoxSökRuta.Name = "textBoxSökRuta";
-            this.textBoxSökRuta.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSökRuta.Size = new System.Drawing.Size(100, 23);
             this.textBoxSökRuta.TabIndex = 36;
             // 
             // checkBoxAvdelning2
             // 
             this.checkBoxAvdelning2.AutoSize = true;
-            this.checkBoxAvdelning2.Location = new System.Drawing.Point(106, 64);
+            this.checkBoxAvdelning2.Location = new System.Drawing.Point(117, 75);
             this.checkBoxAvdelning2.Name = "checkBoxAvdelning2";
-            this.checkBoxAvdelning2.Size = new System.Drawing.Size(82, 17);
+            this.checkBoxAvdelning2.Size = new System.Drawing.Size(101, 21);
             this.checkBoxAvdelning2.TabIndex = 34;
             this.checkBoxAvdelning2.Text = "Avdelning 2";
             this.checkBoxAvdelning2.UseVisualStyleBackColor = true;
@@ -1468,9 +1470,9 @@
             // checkBoxAvdelning1
             // 
             this.checkBoxAvdelning1.AutoSize = true;
-            this.checkBoxAvdelning1.Location = new System.Drawing.Point(18, 64);
+            this.checkBoxAvdelning1.Location = new System.Drawing.Point(18, 75);
             this.checkBoxAvdelning1.Name = "checkBoxAvdelning1";
-            this.checkBoxAvdelning1.Size = new System.Drawing.Size(82, 17);
+            this.checkBoxAvdelning1.Size = new System.Drawing.Size(101, 21);
             this.checkBoxAvdelning1.TabIndex = 33;
             this.checkBoxAvdelning1.Text = "Avdelning 1";
             this.checkBoxAvdelning1.UseVisualStyleBackColor = true;
@@ -1478,7 +1480,7 @@
             // listBoxVårnadshavare
             // 
             this.listBoxVårnadshavare.FormattingEnabled = true;
-            this.listBoxVårnadshavare.Location = new System.Drawing.Point(269, 141);
+            this.listBoxVårnadshavare.Location = new System.Drawing.Point(269, 158);
             this.listBoxVårnadshavare.Name = "listBoxVårnadshavare";
             this.listBoxVårnadshavare.Size = new System.Drawing.Size(262, 43);
             this.listBoxVårnadshavare.TabIndex = 32;
@@ -1486,24 +1488,26 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(266, 121);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(268, 136);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 13);
+            this.label14.Size = new System.Drawing.Size(124, 18);
             this.label14.TabIndex = 31;
             this.label14.Text = "Vårnadshavare:";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(266, 189);
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(269, 204);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(38, 13);
+            this.label27.Size = new System.Drawing.Size(58, 18);
             this.label27.TabIndex = 30;
             this.label27.Text = "Övrigt:";
             // 
             // barnOverigtrichTextBox
             // 
-            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(269, 207);
+            this.barnOverigtrichTextBox.Location = new System.Drawing.Point(269, 224);
             this.barnOverigtrichTextBox.Name = "barnOverigtrichTextBox";
             this.barnOverigtrichTextBox.Size = new System.Drawing.Size(288, 69);
             this.barnOverigtrichTextBox.TabIndex = 28;
@@ -1512,7 +1516,7 @@
             // listBoxSöktaBarn
             // 
             this.listBoxSöktaBarn.FormattingEnabled = true;
-            this.listBoxSöktaBarn.Location = new System.Drawing.Point(31, 140);
+            this.listBoxSöktaBarn.Location = new System.Drawing.Point(31, 157);
             this.listBoxSöktaBarn.Name = "listBoxSöktaBarn";
             this.listBoxSöktaBarn.Size = new System.Drawing.Size(220, 134);
             this.listBoxSöktaBarn.TabIndex = 17;
@@ -1521,9 +1525,10 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(28, 121);
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(30, 136);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(32, 13);
+            this.label39.Size = new System.Drawing.Size(48, 18);
             this.label39.TabIndex = 16;
             this.label39.Text = "Barn:";
             // 
