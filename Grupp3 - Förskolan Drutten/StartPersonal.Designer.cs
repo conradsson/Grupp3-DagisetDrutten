@@ -1519,7 +1519,7 @@
             // 
             // buttonDöljDiagram
             // 
-            this.buttonDöljDiagram.Location = new System.Drawing.Point(635, 309);
+            this.buttonDöljDiagram.Location = new System.Drawing.Point(635, 327);
             this.buttonDöljDiagram.Name = "buttonDöljDiagram";
             this.buttonDöljDiagram.Size = new System.Drawing.Size(75, 23);
             this.buttonDöljDiagram.TabIndex = 17;
