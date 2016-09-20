@@ -642,6 +642,7 @@ namespace Grupp3___Förskolan_Drutten
             textBoxNyttLösen.Clear();
             textBoxNyttLösen2.Clear();
             ändraLösenPanel.Visible = true;
+            ändraLösenPanel.Location = new Point(33, 37);
         }
     }
 }
