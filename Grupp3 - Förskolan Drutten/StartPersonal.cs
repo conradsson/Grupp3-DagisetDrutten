@@ -19,15 +19,13 @@ namespace Grupp3___Förskolan_Drutten
         {
             InitializeComponent();
             //  Start Effekter..
-            //informationTabControl.Visible = true;
+
             NärvarotabControl.Visible = true;
             AktuellPerson = aktuellperson;
 
-            //listBoxInlägg.ClearSelected();
-            //listBoxInlägg.DataSource = null;
-            //listBoxInlägg.DataSource = p.HämtaInläggPersonal();
             Postgres p = new Postgres();
-            dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(DateTime.Today);
+            DateTime idag = DateTime.Today;
+            dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(idag);
             dataGridViewDagensBarn.Columns[1].Visible = false;
 
 
@@ -121,10 +119,6 @@ namespace Grupp3___Förskolan_Drutten
             
 
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
-
-            
-            
-
 
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
