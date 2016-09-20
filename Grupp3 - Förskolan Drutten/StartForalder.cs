@@ -217,10 +217,8 @@ namespace Grupp3___Förskolan_Drutten
             }
             else if (lämnas == ":" && hämtas == ":")
             {
-
                 MessageBox.Show("Var vänlig och fyll i tider.");
             }
-           
             else
             {
                 Postgres p = new Postgres();
@@ -524,7 +522,11 @@ namespace Grupp3___Förskolan_Drutten
                 bool sjuk;
                 bool ledig;
 
-                if (radioButtonSjuk.Checked)
+                if (datum < datummetod)
+                {
+                    MessageBox.Show("Du kan tyvärr inte meddela frånvaro för en dag som är före dagens datum. \nVänligen välj ett annat datum.");
+                }
+                else if (radioButtonSjuk.Checked)
                 {
                     sjuk = true;
                     ledig = false;
