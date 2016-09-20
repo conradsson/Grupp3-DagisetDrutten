@@ -20,19 +20,17 @@ namespace Grupp3___Förskolan_Drutten
         Postgres p = new Postgres();
         Person person = new Person();
 
-        public string inskrivetAnvändarnamn;
-        public string inskrivetLösenord;
+
 
         // Logga in-knappen.
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
-            
             p.HämtaAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
 
-            inskrivetAnvändarnamn = andvandarnamnTextbox.Text;
-            inskrivetLösenord = losenordTextbox.Text;
-            this.Visible = false;
-
+            if (p.Inloggad == true)
+            {
+                this.Visible = false;
+            }
         }
         private void andvandarnamnTextbox_Enter(object sender, EventArgs e)
         {

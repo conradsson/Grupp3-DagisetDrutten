@@ -19,6 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlDataReader dr;
         private DataTable tabell;
         public Person aktuellPerson;
+        public bool Inloggad = false;
 
 
 
@@ -629,6 +630,7 @@ namespace Grupp3___Förskolan_Drutten
                             Lösenord = dr["lösenord"].ToString(),
                             ÄrPersonal = (bool)dr["personal"],
                             ÄrFörälder = (bool)dr["förälder"]
+                            
                         };
 
                         KontrolleraAnvändartyp();
@@ -656,6 +658,8 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         public void KontrolleraAnvändartyp()
         {
+            Inloggad = true;
+
             if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
             {
                 
