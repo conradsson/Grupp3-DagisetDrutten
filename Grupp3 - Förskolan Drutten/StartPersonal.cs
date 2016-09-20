@@ -394,6 +394,7 @@ namespace Grupp3___Förskolan_Drutten
             dataGridViewDagensBarn.Height = 140;
             buttonDöljDiagram.Visible = true;
             buttonVisaDiagram.Visible = false;
+            chartBarnensTider.Visible = true;
 
             int kollaTid = 06;
             int tid = 06;
