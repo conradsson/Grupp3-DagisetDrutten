@@ -181,6 +181,9 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonSökValtDatumINärvarohantering_Click(object sender, EventArgs e)
         {
+            dataGridViewNärvarandeINärvarohantering.DataSource = null;
+            dataGridViewFrånvarandeINärvarohantering.DataSource = null;
+
             if (NärvarandeRadioButton.Checked == false && FrånvarandeRadioButton.Checked == false)
             {
                 MessageBox.Show("Vänligen markera närvarande eller frånvarande.");
@@ -190,12 +193,12 @@ namespace Grupp3___Förskolan_Drutten
             if (NärvarandeRadioButton.Checked)
             {
                 label15.Text = "Närvarande:";
-                dataGridViewNärvarandeINärvarohantering.DataSource = null;
                 Postgres p = new Postgres();
                 DateTime idag = monthCalendar23INärvarohantering.SelectionStart;
                 dataGridViewNärvarandeINärvarohantering.DataSource = p.HämtaNärvaroFörNärvarohantering(idag);
                 label17.Text = dataGridViewNärvarandeINärvarohantering.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens närvarolista";
+
                 dataGridViewNärvarandeINärvarohantering.Visible = true;
                 dataGridViewFrånvarandeINärvarohantering.Visible = false;
 
@@ -203,12 +206,12 @@ namespace Grupp3___Förskolan_Drutten
             else if (FrånvarandeRadioButton.Checked)
             {
                 label15.Text = "Frånvarande:";
-                dataGridViewFrånvarandeINärvarohantering.DataSource = null;
                 Postgres p = new Postgres();
                 DateTime idag = monthCalendar23INärvarohantering.SelectionStart;
                 dataGridViewFrånvarandeINärvarohantering.DataSource = p.HämtaFrånvaro(idag);
                 label17.Text = dataGridViewNärvarandeINärvarohantering.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens frånvarolista";
+
                 dataGridViewNärvarandeINärvarohantering.Visible = false;
                 dataGridViewFrånvarandeINärvarohantering.Visible = true;
             }
