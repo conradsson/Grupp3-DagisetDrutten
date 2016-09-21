@@ -694,7 +694,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 if (tid.Contains("Co"))
                 {
-                    MessageBox.Show("Försök igen senare.");
+                    MessageBox.Show("Tiden kan inte hämtas.");
                 }
                 else if (tid == "")
                 {
@@ -722,7 +722,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 if (tidLämnas.Contains("Co"))
                 {
-                    MessageBox.Show("Försök igen senare.");
+                    MessageBox.Show("Tiden kan inte hämtas.");
                 }
                 else if (tid == "")
                 {
