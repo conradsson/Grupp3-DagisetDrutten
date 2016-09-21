@@ -42,31 +42,6 @@
             this.närvaroButton = new System.Windows.Forms.Button();
             this.tiderButton = new System.Windows.Forms.Button();
             this.mittKontoButton = new System.Windows.Forms.Button();
-            this.informationTabControl = new System.Windows.Forms.TabControl();
-            this.senasteTabPage = new System.Windows.Forms.TabPage();
-            this.label26 = new System.Windows.Forms.Label();
-            this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBoxSkrivetAv = new System.Windows.Forms.TextBox();
-            this.listBoxInlägg = new System.Windows.Forms.ListBox();
-            this.textBoxRubrik = new System.Windows.Forms.TextBox();
-            this.textBoxDatum = new System.Windows.Forms.TextBox();
-            this.omTabPage = new System.Windows.Forms.TabPage();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ändraLösenPanel = new System.Windows.Forms.Panel();
@@ -166,6 +141,31 @@
             this.labelObligatorisk = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.informationTabControl = new System.Windows.Forms.TabControl();
+            this.senasteTabPage = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBoxSkrivetAv = new System.Windows.Forms.TextBox();
+            this.listBoxInlägg = new System.Windows.Forms.ListBox();
+            this.textBoxRubrik = new System.Windows.Forms.TextBox();
+            this.textBoxDatum = new System.Windows.Forms.TextBox();
+            this.omTabPage = new System.Windows.Forms.TabPage();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
@@ -175,11 +175,11 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label34 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.informationTabControl.SuspendLayout();
-            this.senasteTabPage.SuspendLayout();
-            this.omTabPage.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.ändraLösenPanel.SuspendLayout();
@@ -194,6 +194,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHämtning)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeddelaFrånvaro)).BeginInit();
+            this.informationTabControl.SuspendLayout();
+            this.senasteTabPage.SuspendLayout();
+            this.omTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
@@ -412,281 +415,6 @@
             this.mittKontoButton.Click += new System.EventHandler(this.mittKontoButton_Click);
             this.mittKontoButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mittKontoButton_MouseDown);
             // 
-            // informationTabControl
-            // 
-            this.informationTabControl.Controls.Add(this.senasteTabPage);
-            this.informationTabControl.Controls.Add(this.omTabPage);
-            this.informationTabControl.Location = new System.Drawing.Point(193, 36);
-            this.informationTabControl.Name = "informationTabControl";
-            this.informationTabControl.SelectedIndex = 0;
-            this.informationTabControl.Size = new System.Drawing.Size(748, 389);
-            this.informationTabControl.TabIndex = 15;
-            this.informationTabControl.Visible = false;
-            // 
-            // senasteTabPage
-            // 
-            this.senasteTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
-            this.senasteTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.senasteTabPage.Controls.Add(this.label26);
-            this.senasteTabPage.Controls.Add(this.richTextBoxPubliceradeInlägg);
-            this.senasteTabPage.Controls.Add(this.label25);
-            this.senasteTabPage.Controls.Add(this.textBoxSkrivetAv);
-            this.senasteTabPage.Controls.Add(this.listBoxInlägg);
-            this.senasteTabPage.Controls.Add(this.textBoxRubrik);
-            this.senasteTabPage.Controls.Add(this.textBoxDatum);
-            this.senasteTabPage.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.senasteTabPage.Location = new System.Drawing.Point(4, 22);
-            this.senasteTabPage.Name = "senasteTabPage";
-            this.senasteTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.senasteTabPage.Size = new System.Drawing.Size(740, 363);
-            this.senasteTabPage.TabIndex = 0;
-            this.senasteTabPage.Text = "Senaste";
-            this.senasteTabPage.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(11, 54);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(86, 16);
-            this.label26.TabIndex = 41;
-            this.label26.Text = "Välj inlägg:";
-            // 
-            // richTextBoxPubliceradeInlägg
-            // 
-            this.richTextBoxPubliceradeInlägg.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBoxPubliceradeInlägg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxPubliceradeInlägg.Location = new System.Drawing.Point(164, 112);
-            this.richTextBoxPubliceradeInlägg.Name = "richTextBoxPubliceradeInlägg";
-            this.richTextBoxPubliceradeInlägg.ReadOnly = true;
-            this.richTextBoxPubliceradeInlägg.Size = new System.Drawing.Size(560, 172);
-            this.richTextBoxPubliceradeInlägg.TabIndex = 34;
-            this.richTextBoxPubliceradeInlägg.Text = "";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(499, 287);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 13);
-            this.label25.TabIndex = 38;
-            this.label25.Text = "Skrivet av:";
-            // 
-            // textBoxSkrivetAv
-            // 
-            this.textBoxSkrivetAv.Location = new System.Drawing.Point(557, 284);
-            this.textBoxSkrivetAv.Name = "textBoxSkrivetAv";
-            this.textBoxSkrivetAv.ReadOnly = true;
-            this.textBoxSkrivetAv.Size = new System.Drawing.Size(167, 20);
-            this.textBoxSkrivetAv.TabIndex = 37;
-            // 
-            // listBoxInlägg
-            // 
-            this.listBoxInlägg.FormattingEnabled = true;
-            this.listBoxInlägg.Location = new System.Drawing.Point(14, 72);
-            this.listBoxInlägg.Name = "listBoxInlägg";
-            this.listBoxInlägg.Size = new System.Drawing.Size(151, 212);
-            this.listBoxInlägg.TabIndex = 36;
-            this.listBoxInlägg.SelectedIndexChanged += new System.EventHandler(this.listBoxInlägg_SelectedIndexChanged);
-            // 
-            // textBoxRubrik
-            // 
-            this.textBoxRubrik.Location = new System.Drawing.Point(164, 92);
-            this.textBoxRubrik.Name = "textBoxRubrik";
-            this.textBoxRubrik.ReadOnly = true;
-            this.textBoxRubrik.Size = new System.Drawing.Size(167, 20);
-            this.textBoxRubrik.TabIndex = 40;
-            this.textBoxRubrik.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxDatum
-            // 
-            this.textBoxDatum.Location = new System.Drawing.Point(164, 72);
-            this.textBoxDatum.Name = "textBoxDatum";
-            this.textBoxDatum.ReadOnly = true;
-            this.textBoxDatum.Size = new System.Drawing.Size(167, 20);
-            this.textBoxDatum.TabIndex = 39;
-            this.textBoxDatum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // omTabPage
-            // 
-            this.omTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttisNYOM;
-            this.omTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.omTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.omTabPage.Controls.Add(this.label54);
-            this.omTabPage.Controls.Add(this.label53);
-            this.omTabPage.Controls.Add(this.label52);
-            this.omTabPage.Controls.Add(this.label51);
-            this.omTabPage.Controls.Add(this.label50);
-            this.omTabPage.Controls.Add(this.label49);
-            this.omTabPage.Controls.Add(this.label48);
-            this.omTabPage.Controls.Add(this.label47);
-            this.omTabPage.Controls.Add(this.label46);
-            this.omTabPage.Controls.Add(this.label45);
-            this.omTabPage.Controls.Add(this.label44);
-            this.omTabPage.Controls.Add(this.label43);
-            this.omTabPage.Controls.Add(this.label42);
-            this.omTabPage.Controls.Add(this.label41);
-            this.omTabPage.Controls.Add(this.label40);
-            this.omTabPage.Location = new System.Drawing.Point(4, 22);
-            this.omTabPage.Name = "omTabPage";
-            this.omTabPage.Size = new System.Drawing.Size(740, 363);
-            this.omTabPage.TabIndex = 1;
-            this.omTabPage.Text = "Om förskolan Drutten";
-            this.omTabPage.UseVisualStyleBackColor = true;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label54.Location = new System.Drawing.Point(444, 276);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(52, 13);
-            this.label54.TabIndex = 14;
-            this.label54.Text = "00 - 0101";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label53.Location = new System.Drawing.Point(439, 260);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(96, 14);
-            this.label53.TabIndex = 13;
-            this.label53.Text = "Telefonnummer";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label52.Location = new System.Drawing.Point(441, 292);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(38, 14);
-            this.label52.TabIndex = 12;
-            this.label52.Text = "Epost";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label51.Location = new System.Drawing.Point(439, 211);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(48, 14);
-            this.label51.TabIndex = 11;
-            this.label51.Text = "Adress";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label50.Location = new System.Drawing.Point(450, 252);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(76, 13);
-            this.label50.TabIndex = 10;
-            this.label50.Text = "Förskolestaden";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label49.Location = new System.Drawing.Point(441, 241);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(40, 13);
-            this.label49.TabIndex = 9;
-            this.label49.Text = "100 10";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label48.Location = new System.Drawing.Point(441, 227);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(83, 13);
-            this.label48.TabIndex = 8;
-            this.label48.Text = "Förskolevägen 1";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label47.Location = new System.Drawing.Point(441, 310);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(120, 13);
-            this.label47.TabIndex = 7;
-            this.label47.Text = "info@druttensforskola.se";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label46.Location = new System.Drawing.Point(133, 314);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(60, 12);
-            this.label46.TabIndex = 6;
-            this.label46.Text = "09.00 - 16.00";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label45.Location = new System.Drawing.Point(133, 297);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(60, 12);
-            this.label45.TabIndex = 5;
-            this.label45.Text = "09.00 - 16.00";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label44.Location = new System.Drawing.Point(133, 280);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(60, 12);
-            this.label44.TabIndex = 4;
-            this.label44.Text = "06.00 - 17.00";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label43.Location = new System.Drawing.Point(133, 264);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(60, 12);
-            this.label43.TabIndex = 3;
-            this.label43.Text = "06.00 - 18.00";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label42.Location = new System.Drawing.Point(133, 247);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(60, 12);
-            this.label42.TabIndex = 2;
-            this.label42.Text = "06.00 - 18.00";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label41.Location = new System.Drawing.Point(133, 231);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(60, 12);
-            this.label41.TabIndex = 1;
-            this.label41.Text = "06.00 - 18.00";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label40.Location = new System.Drawing.Point(133, 214);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(60, 12);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "06.00 - 18.00";
-            // 
             // MittKontoTabControl
             // 
             this.MittKontoTabControl.Controls.Add(this.tabPage1);
@@ -739,6 +467,9 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label34);
+            this.panel2.Controls.Add(this.label56);
+            this.panel2.Controls.Add(this.label57);
             this.panel2.Controls.Add(this.ändralösenBekräfta);
             this.panel2.Controls.Add(this.ändraLösenAvbryt);
             this.panel2.Controls.Add(this.textBoxNyttLösen2);
@@ -1847,6 +1578,281 @@
             this.label28.TabIndex = 34;
             this.label28.Text = "*";
             // 
+            // informationTabControl
+            // 
+            this.informationTabControl.Controls.Add(this.senasteTabPage);
+            this.informationTabControl.Controls.Add(this.omTabPage);
+            this.informationTabControl.Location = new System.Drawing.Point(193, 36);
+            this.informationTabControl.Name = "informationTabControl";
+            this.informationTabControl.SelectedIndex = 0;
+            this.informationTabControl.Size = new System.Drawing.Size(748, 389);
+            this.informationTabControl.TabIndex = 15;
+            this.informationTabControl.Visible = false;
+            // 
+            // senasteTabPage
+            // 
+            this.senasteTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.senasteTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.senasteTabPage.Controls.Add(this.label26);
+            this.senasteTabPage.Controls.Add(this.richTextBoxPubliceradeInlägg);
+            this.senasteTabPage.Controls.Add(this.label25);
+            this.senasteTabPage.Controls.Add(this.textBoxSkrivetAv);
+            this.senasteTabPage.Controls.Add(this.listBoxInlägg);
+            this.senasteTabPage.Controls.Add(this.textBoxRubrik);
+            this.senasteTabPage.Controls.Add(this.textBoxDatum);
+            this.senasteTabPage.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.senasteTabPage.Location = new System.Drawing.Point(4, 22);
+            this.senasteTabPage.Name = "senasteTabPage";
+            this.senasteTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.senasteTabPage.Size = new System.Drawing.Size(740, 363);
+            this.senasteTabPage.TabIndex = 0;
+            this.senasteTabPage.Text = "Senaste";
+            this.senasteTabPage.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(11, 54);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(86, 16);
+            this.label26.TabIndex = 41;
+            this.label26.Text = "Välj inlägg:";
+            // 
+            // richTextBoxPubliceradeInlägg
+            // 
+            this.richTextBoxPubliceradeInlägg.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBoxPubliceradeInlägg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxPubliceradeInlägg.Location = new System.Drawing.Point(164, 112);
+            this.richTextBoxPubliceradeInlägg.Name = "richTextBoxPubliceradeInlägg";
+            this.richTextBoxPubliceradeInlägg.ReadOnly = true;
+            this.richTextBoxPubliceradeInlägg.Size = new System.Drawing.Size(560, 172);
+            this.richTextBoxPubliceradeInlägg.TabIndex = 34;
+            this.richTextBoxPubliceradeInlägg.Text = "";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(499, 287);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 13);
+            this.label25.TabIndex = 38;
+            this.label25.Text = "Skrivet av:";
+            // 
+            // textBoxSkrivetAv
+            // 
+            this.textBoxSkrivetAv.Location = new System.Drawing.Point(557, 284);
+            this.textBoxSkrivetAv.Name = "textBoxSkrivetAv";
+            this.textBoxSkrivetAv.ReadOnly = true;
+            this.textBoxSkrivetAv.Size = new System.Drawing.Size(167, 20);
+            this.textBoxSkrivetAv.TabIndex = 37;
+            // 
+            // listBoxInlägg
+            // 
+            this.listBoxInlägg.FormattingEnabled = true;
+            this.listBoxInlägg.Location = new System.Drawing.Point(14, 72);
+            this.listBoxInlägg.Name = "listBoxInlägg";
+            this.listBoxInlägg.Size = new System.Drawing.Size(151, 212);
+            this.listBoxInlägg.TabIndex = 36;
+            this.listBoxInlägg.SelectedIndexChanged += new System.EventHandler(this.listBoxInlägg_SelectedIndexChanged);
+            // 
+            // textBoxRubrik
+            // 
+            this.textBoxRubrik.Location = new System.Drawing.Point(164, 92);
+            this.textBoxRubrik.Name = "textBoxRubrik";
+            this.textBoxRubrik.ReadOnly = true;
+            this.textBoxRubrik.Size = new System.Drawing.Size(167, 20);
+            this.textBoxRubrik.TabIndex = 40;
+            this.textBoxRubrik.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxDatum
+            // 
+            this.textBoxDatum.Location = new System.Drawing.Point(164, 72);
+            this.textBoxDatum.Name = "textBoxDatum";
+            this.textBoxDatum.ReadOnly = true;
+            this.textBoxDatum.Size = new System.Drawing.Size(167, 20);
+            this.textBoxDatum.TabIndex = 39;
+            this.textBoxDatum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // omTabPage
+            // 
+            this.omTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttisNYOM;
+            this.omTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.omTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.omTabPage.Controls.Add(this.label54);
+            this.omTabPage.Controls.Add(this.label53);
+            this.omTabPage.Controls.Add(this.label52);
+            this.omTabPage.Controls.Add(this.label51);
+            this.omTabPage.Controls.Add(this.label50);
+            this.omTabPage.Controls.Add(this.label49);
+            this.omTabPage.Controls.Add(this.label48);
+            this.omTabPage.Controls.Add(this.label47);
+            this.omTabPage.Controls.Add(this.label46);
+            this.omTabPage.Controls.Add(this.label45);
+            this.omTabPage.Controls.Add(this.label44);
+            this.omTabPage.Controls.Add(this.label43);
+            this.omTabPage.Controls.Add(this.label42);
+            this.omTabPage.Controls.Add(this.label41);
+            this.omTabPage.Controls.Add(this.label40);
+            this.omTabPage.Location = new System.Drawing.Point(4, 22);
+            this.omTabPage.Name = "omTabPage";
+            this.omTabPage.Size = new System.Drawing.Size(740, 363);
+            this.omTabPage.TabIndex = 1;
+            this.omTabPage.Text = "Om förskolan Drutten";
+            this.omTabPage.UseVisualStyleBackColor = true;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label54.Location = new System.Drawing.Point(444, 276);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(52, 13);
+            this.label54.TabIndex = 14;
+            this.label54.Text = "00 - 0101";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label53.Location = new System.Drawing.Point(439, 260);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(96, 14);
+            this.label53.TabIndex = 13;
+            this.label53.Text = "Telefonnummer";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label52.Location = new System.Drawing.Point(441, 292);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(38, 14);
+            this.label52.TabIndex = 12;
+            this.label52.Text = "Epost";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label51.Location = new System.Drawing.Point(439, 211);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(48, 14);
+            this.label51.TabIndex = 11;
+            this.label51.Text = "Adress";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label50.Location = new System.Drawing.Point(450, 252);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(76, 13);
+            this.label50.TabIndex = 10;
+            this.label50.Text = "Förskolestaden";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label49.Location = new System.Drawing.Point(441, 241);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(40, 13);
+            this.label49.TabIndex = 9;
+            this.label49.Text = "100 10";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label48.Location = new System.Drawing.Point(441, 227);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(83, 13);
+            this.label48.TabIndex = 8;
+            this.label48.Text = "Förskolevägen 1";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label47.Location = new System.Drawing.Point(441, 310);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(120, 13);
+            this.label47.TabIndex = 7;
+            this.label47.Text = "info@druttensforskola.se";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label46.Location = new System.Drawing.Point(133, 314);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(60, 12);
+            this.label46.TabIndex = 6;
+            this.label46.Text = "09.00 - 16.00";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label45.Location = new System.Drawing.Point(133, 297);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(60, 12);
+            this.label45.TabIndex = 5;
+            this.label45.Text = "09.00 - 16.00";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label44.Location = new System.Drawing.Point(133, 280);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(60, 12);
+            this.label44.TabIndex = 4;
+            this.label44.Text = "06.00 - 17.00";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label43.Location = new System.Drawing.Point(133, 264);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(60, 12);
+            this.label43.TabIndex = 3;
+            this.label43.Text = "06.00 - 18.00";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label42.Location = new System.Drawing.Point(133, 247);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(60, 12);
+            this.label42.TabIndex = 2;
+            this.label42.Text = "06.00 - 18.00";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label41.Location = new System.Drawing.Point(133, 231);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(60, 12);
+            this.label41.TabIndex = 1;
+            this.label41.Text = "06.00 - 18.00";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label40.Location = new System.Drawing.Point(133, 214);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(60, 12);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "06.00 - 18.00";
+            // 
             // kontoTypLabel
             // 
             this.kontoTypLabel.AutoSize = true;
@@ -1916,6 +1922,33 @@
             // 
             this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
+            // label34
+            // 
+            this.label34.ForeColor = System.Drawing.Color.Red;
+            this.label34.Location = new System.Drawing.Point(138, 136);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(10, 13);
+            this.label34.TabIndex = 12;
+            this.label34.Text = "*";
+            // 
+            // label56
+            // 
+            this.label56.ForeColor = System.Drawing.Color.Red;
+            this.label56.Location = new System.Drawing.Point(97, 84);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(10, 13);
+            this.label56.TabIndex = 11;
+            this.label56.Text = "*";
+            // 
+            // label57
+            // 
+            this.label57.ForeColor = System.Drawing.Color.Red;
+            this.label57.Location = new System.Drawing.Point(130, 30);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(10, 13);
+            this.label57.TabIndex = 10;
+            this.label57.Text = "*";
+            // 
             // StartForalder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1937,11 +1970,6 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.informationTabControl.ResumeLayout(false);
-            this.senasteTabPage.ResumeLayout(false);
-            this.senasteTabPage.PerformLayout();
-            this.omTabPage.ResumeLayout(false);
-            this.omTabPage.PerformLayout();
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1965,6 +1993,11 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeddelaFrånvaro)).EndInit();
+            this.informationTabControl.ResumeLayout(false);
+            this.senasteTabPage.ResumeLayout(false);
+            this.senasteTabPage.PerformLayout();
+            this.omTabPage.ResumeLayout(false);
+            this.omTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
@@ -2120,5 +2153,8 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
     }
 }
