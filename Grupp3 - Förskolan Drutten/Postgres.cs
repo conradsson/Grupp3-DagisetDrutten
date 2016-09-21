@@ -47,9 +47,15 @@ namespace Grupp3___Förskolan_Drutten
             }
             catch (NpgsqlException ex)
             {
+                if (ex.ErrorCode.Equals("53300"))
+                {
+                    MessageBox.Show("Antalet anslutningar till databasen har överskridits.");
+                }
+
                 MessageBox.Show(ex.Message);
                 DataColumn c1 = new DataColumn("Error");
                 DataColumn c2 = new DataColumn("ErrorMeddelande");
+
 
                 c1.DataType = System.Type.GetType("System.Boolean");
                 c2.DataType = System.Type.GetType("System.String");
