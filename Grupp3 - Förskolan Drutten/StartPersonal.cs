@@ -427,17 +427,6 @@ namespace Grupp3___Förskolan_Drutten
                 p.StängConnection();
                 p1.StängConnection();
             }
-
-
-            //int kollaTid2 = 06;
-            //int tid2 = 06;
-            //for (int i = 0; i < 11; i++)
-            //{
-            //    Postgres p = new Postgres();
-            //    this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
-                
-            //}
-
         }
 
         private void uppdateraförälder_Click(object sender, EventArgs e)
