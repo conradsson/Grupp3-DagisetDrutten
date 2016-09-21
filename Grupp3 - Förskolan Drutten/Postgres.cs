@@ -27,7 +27,20 @@ namespace Grupp3___Förskolan_Drutten
         public Postgres()
         {
             conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=pgmvaru_g3;User Id=pgmvaru_g3;Password=gunga;Database=pgmvaru_g3;SslMode=Require;trustServerCertificate=true;Pooling=false");
-            conn.Open();
+
+            try
+            { 
+                conn.Open(); 
+            }
+            catch (NpgsqlException ex)
+            {
+                string meddelande = ex.Message;
+                if (meddelande.Contains("53300"))
+                {
+                    meddelande = "Kan inte kontakta databasen, vänligen försök igen lite senare.";
+                }
+                MessageBox.Show(meddelande);
+            }
             tabell = new DataTable();
         }
 
@@ -47,12 +60,14 @@ namespace Grupp3___Förskolan_Drutten
             }
             catch (NpgsqlException ex)
             {
-                if (ex.ErrorCode.Equals("53300"))
+                string meddelande = ex.Message;
+                if (meddelande.Contains("53300"))
                 {
-                    MessageBox.Show("Antalet anslutningar till databasen har överskridits.");
+                    meddelande = "Kan inte kontakta databasen, vänligen försök igen lite senare.";
                 }
+                MessageBox.Show(meddelande);
 
-                MessageBox.Show(ex.Message);
+                
                 DataColumn c1 = new DataColumn("Error");
                 DataColumn c2 = new DataColumn("ErrorMeddelande");
 
