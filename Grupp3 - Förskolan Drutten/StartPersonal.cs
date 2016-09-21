@@ -160,6 +160,9 @@ namespace Grupp3___Förskolan_Drutten
 
         private void inloggadButton_Click(object sender, EventArgs e)
         {
+            textBoxFörnamnMittkonto.Text = AktuellPerson.Förnamn;
+            textBoxEfternamnMittkonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnrMittkonto.Text = AktuellPerson.Telefonnr;
 
             //  .Visable Effekter
             MittKontoTabControl.Visible = true;
