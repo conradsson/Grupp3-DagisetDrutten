@@ -691,7 +691,18 @@ namespace Grupp3___Förskolan_Drutten
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
 
-                if (tid == "")
+
+                if (tid.Contains("Co"))
+                {
+                    MessageBox.Show("Försök igen senare.");
+                }
+                else if (tid == "")
+                {
+                    groupBox3.Visible = false;
+                    comboBoxUppdateraTill1.Text = "";
+                    comboBoxUppdateraTill2.Text = "";
+                }
+                else if (tid == "Cone")
                 {
                     groupBox3.Visible = false;
                     comboBoxUppdateraTill1.Text = "";
@@ -709,11 +720,21 @@ namespace Grupp3___Förskolan_Drutten
                 string tidLämnas;
                 tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
 
-                if (tid == "")
+                if (tidLämnas.Contains("Co"))
+                {
+                    MessageBox.Show("Försök igen senare.");
+                }
+                else if (tid == "")
                 {
                     groupBox2.Visible = true;
                     comboBoxUppdateraFrån1.Text = "";
                     comboBoxUppdateraFrån2.Text = "";
+                }
+                else if (tid == "Cone")
+                {
+                    groupBox3.Visible = false;
+                    comboBoxUppdateraTill1.Text = "";
+                    comboBoxUppdateraTill2.Text = "";
                 }
                 else
                 {
