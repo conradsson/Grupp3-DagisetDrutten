@@ -1093,9 +1093,10 @@ namespace Grupp3___Förskolan_Drutten
 
             catch (Exception ex)
             {
-
-                svar = Convert.ToInt32(ex.Message);
-                return svar;
+               
+                MessageBox.Show(ex.Message);
+                //svar = Convert.ToInt32(ex.Message);
+                //return svar;
             }
 
             dr.Close();
