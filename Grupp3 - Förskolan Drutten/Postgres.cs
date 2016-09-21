@@ -656,6 +656,7 @@ namespace Grupp3___Förskolan_Drutten
 
                         KontrolleraAnvändartyp();
                     }
+                   
                 }
                 else // Ingen användare hittad.
                 {
@@ -670,7 +671,7 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
 
             }
-            dr.Close();
+             dr.Close();
         }
 
 
@@ -1084,11 +1085,12 @@ namespace Grupp3___Förskolan_Drutten
                 while (dr.Read())
                 {
 
-
                     svar = (Int64)dr["antal"];
 
                     return svar;
-                }
+                   
+                } 
+                dr.Close();
             }
 
             catch (Exception ex)
@@ -1099,7 +1101,7 @@ namespace Grupp3___Förskolan_Drutten
                 //return svar;
             }
 
-            dr.Close();
+            
             conn.Close();
             return svar;
         }
@@ -1166,16 +1168,16 @@ namespace Grupp3___Förskolan_Drutten
 
                     return svar;
                 }
+                dr.Close();
             }
 
             catch (Exception ex)
             {
 
-                svar = Convert.ToInt32(ex.Message);
-                return svar;
+                MessageBox.Show(ex.Message);
             }
 
-            dr.Close();
+            
             conn.Close();
             return svar;
         }
