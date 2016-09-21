@@ -115,12 +115,16 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
 
+
+
             Postgres p = new Postgres();
             dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(DateTime.Today);
             dataGridViewDagensBarn.Columns[1].Visible = false;
-            
-
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
+
+            
+            dataGridViewDagensBarn.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic;
+            
 
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)

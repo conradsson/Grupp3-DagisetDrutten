@@ -42,6 +42,7 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show(meddelande);
             }
             tabell = new DataTable();
+
         }
 
         //Test av fråga.
@@ -672,6 +673,7 @@ namespace Grupp3___Förskolan_Drutten
 
             }
              dr.Close();
+            conn.Close();
         }
 
 
@@ -741,7 +743,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 meddelande = ex.Message;
             }
-
+            conn.Close();
         }
 
         /// <summary>
@@ -838,6 +840,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
             }
+            conn.Close();
         }
         /// <summary>
         /// Redigerar och uppdaterar informationsinlägg.
@@ -868,6 +871,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
+            conn.Close();
         }
         /// <summary>
         /// Tar bort informationsinlägg.
@@ -891,6 +895,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
+            conn.Close();
         }
 
         /// <summary>
@@ -1035,9 +1040,9 @@ namespace Grupp3___Förskolan_Drutten
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
 
-            //conn.Close();
+            conn.Close();
 
-            
+
         }
         /// <summary>
         /// Hämtar aktuella barn på inloggad förälder
@@ -1385,6 +1390,7 @@ namespace Grupp3___Förskolan_Drutten
 
             }
             return BarnNamn;
+
         }
         /// <summary>
         /// Uppdaterar barn på inloggad förälder.
@@ -1413,6 +1419,7 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
         }
         /// <summary>
         /// ///Uppdaterar databasen med ett barns närvarande för dagen.
