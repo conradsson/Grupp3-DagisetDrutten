@@ -409,22 +409,34 @@ namespace Grupp3___Förskolan_Drutten
             buttonVisaDiagram.Visible = false;
             chartBarnensTider.Visible = true;
 
+
             int kollaTid = 06;
             int tid = 06;
-            for (int i = 0; i < 11; i++)
-            {
-                Postgres p = new Postgres();
-                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
-
-          }
             int kollaTid2 = 06;
             int tid2 = 06;
+            
+
             for (int i = 0; i < 11; i++)
             {
                 Postgres p = new Postgres();
-                this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
+                Postgres p1 = new Postgres();
 
+                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
+                this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p1.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
+
+                p.StängConnection();
+                p1.StängConnection();
             }
+
+
+            //int kollaTid2 = 06;
+            //int tid2 = 06;
+            //for (int i = 0; i < 11; i++)
+            //{
+            //    Postgres p = new Postgres();
+            //    this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
+                
+            //}
 
         }
 
@@ -601,6 +613,8 @@ namespace Grupp3___Förskolan_Drutten
             chartBarnensTider.Visible = false;
             labelAntalBarn.Visible = false;
             labelTid.Visible = false;
+
+            
         }
 
 

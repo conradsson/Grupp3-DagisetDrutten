@@ -1093,6 +1093,8 @@ namespace Grupp3___Förskolan_Drutten
                     svar = (Int64)dr["antal"];
 
                     return svar;
+
+
                    
                 } 
                 dr.Close();
@@ -1554,6 +1556,12 @@ namespace Grupp3___Förskolan_Drutten
             // Return char and concat substring.
             return char.ToLower(s[0]) + s.Substring(1);
         }
+
+        public void StängConnection()
+        {
+            conn.Close();
+        }
+
     }
 
 }
