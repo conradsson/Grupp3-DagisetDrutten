@@ -704,12 +704,7 @@ namespace Grupp3___Förskolan_Drutten
                     comboBoxUppdateraTill1.Text = "";
                     comboBoxUppdateraTill2.Text = "";
                 }
-                else if (tid == "Cone")
-                {
-                    groupBox3.Visible = false;
-                    comboBoxUppdateraTill1.Text = "";
-                    comboBoxUppdateraTill2.Text = "";
-                }
+           
                 else
                 {
                     groupBox3.Visible = true;
@@ -734,12 +729,7 @@ namespace Grupp3___Förskolan_Drutten
                     comboBoxUppdateraFrån1.Text = "";
                     comboBoxUppdateraFrån2.Text = "";
                 }
-                else if (tid == "Cone")
-                {
-                    groupBox3.Visible = false;
-                    comboBoxUppdateraTill1.Text = "";
-                    comboBoxUppdateraTill2.Text = "";
-                }
+         
                 else
                 {
                     groupBox2.Visible = false;
