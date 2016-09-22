@@ -386,7 +386,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 listBoxVårnadshavare.DataSource = null;
                 listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
-                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();  
             }
             
         }
