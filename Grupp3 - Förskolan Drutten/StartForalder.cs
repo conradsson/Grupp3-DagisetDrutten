@@ -29,8 +29,8 @@ namespace Grupp3___Förskolan_Drutten
             listBoxInlägg.DataSource = null;
             listBoxInlägg.DataSource = p.HämtaInläggFörälder();      
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn + " " + aktuellperson.Efternamn;
-            
-            //tiderBarnListBox.ClearSelected();
+
+            informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
         }
 
 
@@ -44,9 +44,9 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
             TidertabControl.Visible = false;
-            //NärvarotabControl.Visible = false;
-            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
-            
+            informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+            tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
         }
         private void informationButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -77,8 +77,9 @@ namespace Grupp3___Förskolan_Drutten
             MittKontoTabControl.Visible = true;
             informationTabControl.Visible = false;
             TidertabControl.Visible = false;
-            // NärvarotabControl.Visible = false;
-            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonHär;
+            tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
 
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
@@ -93,7 +94,9 @@ namespace Grupp3___Förskolan_Drutten
             //NärvarotabControl.Visible = false;
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
-            tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+            tiderButton.BackgroundImage = Properties.Resources.tiderButtonHär;
 
             List<Barn> barnlista = new List<Barn>();
             
@@ -104,8 +107,6 @@ namespace Grupp3___Förskolan_Drutten
             
             tiderBarnListBox.DataSource = barnlista;
             //tiderBarnListBox.ClearSelected();
-            listBoxMeddelaHämtning.DataSource = null;
-            listBoxMeddelaHämtning.DataSource = barnlista;
             listBoxMeddelaFrånvaro.DataSource = null;
             listBoxMeddelaFrånvaro.DataSource = barnlista;
 
@@ -251,8 +252,6 @@ namespace Grupp3___Förskolan_Drutten
                     }
                 }
                 Postgres p1 = new Postgres();
-                dataGridViewHämtning.DataSource = null;
-                dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
                 Postgres p2 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
                 dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
@@ -403,8 +402,6 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     p.UppdateraTider(datum, id, lamnas, hamtas, hamtasAv);
                     Postgres p1 = new Postgres();
-                    dataGridViewHämtning.DataSource = null;
-                    dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
                     Postgres p2 = new Postgres();
                     dataGridViewTiderBarn.DataSource = null;
                     dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
@@ -446,58 +443,7 @@ namespace Grupp3___Förskolan_Drutten
             richTextBoxAnnat.Clear();
         }
 
-        private void buttonMeddelaHämtning_Click(object sender, EventArgs e)
-        {
-            {
-                Barn aktuelltbarn = (Barn)listBoxMeddelaHämtning.SelectedItem;
 
-                if (aktuelltbarn != null)
-                {
-                    int barnid = aktuelltbarn.Barnid;
-                    string hamtas = textBoxMeddelaHämtning.Text;
-                   
-                    DateTime datum;
-                    DateTime datummetod = DateTime.Today;
-                    Närvaro n = new Närvaro();
-
-                    if (dataGridViewHämtning.SelectedRows != null)
-                    {
-
-                        n.Datum = Convert.ToDateTime(dataGridViewHämtning.SelectedCells[0].Value);
-                        datum = n.Datum;
-
-                        Postgres p = new Postgres();
-                        p.KontrolleraHämtning(datum, barnid, hamtas);
-                        
-                        textBoxMeddelaHämtning.Clear();
-                    }
-
-                    Postgres p1 = new Postgres();
-                    dataGridViewHämtning.DataSource = null;
-                    dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
-                    Postgres p2 = new Postgres();
-                    dataGridViewTiderBarn.DataSource = null;
-                    dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
-
-                }
-            }
-
-        }
-
-        private void listBoxMeddelaHämtning_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Barn aktuelltb = new Barn();
-            aktuelltb = (Barn)listBoxMeddelaHämtning.SelectedItem;
-            DateTime datummetod = DateTime.Today;
-
-            if (aktuelltb != null)
-            {
-                Postgres p1 = new Postgres();
-                dataGridViewHämtning.DataSource = null;
-                dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltb.Barnid, datummetod);
-            }
-
-        }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -561,8 +507,6 @@ namespace Grupp3___Förskolan_Drutten
                     dataGridViewMeddelaFrånvaro.DataSource = null;
                     dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datummetod);
                     Postgres p2 = new Postgres();
-                    dataGridViewHämtning.DataSource = null;
-                    dataGridViewHämtning.DataSource = p2.HämtaBarnetsTider(id, datummetod);
                     Postgres p3 = new Postgres();
                     dataGridViewTiderBarn.DataSource = null;
                     dataGridViewTiderBarn.DataSource = p3.HämtaBarnetsTider(id, datummetod);
@@ -580,8 +524,6 @@ namespace Grupp3___Förskolan_Drutten
                     dataGridViewMeddelaFrånvaro.DataSource = null;
                     dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datummetod);
                     Postgres p3 = new Postgres();
-                    dataGridViewHämtning.DataSource = null;
-                    dataGridViewHämtning.DataSource = p3.HämtaBarnetsTider(id, datummetod);
                     Postgres p4 = new Postgres();
                     dataGridViewTiderBarn.DataSource = null;
                     dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, datummetod);
@@ -779,6 +721,16 @@ namespace Grupp3___Förskolan_Drutten
             DateTime datum = monthCalendar3.SelectionStart;
             MetodHämtaBarnetsTid(datum);
      
+        }
+
+        private void buttonMeddelaHämtning_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxMeddelaHämtning_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
