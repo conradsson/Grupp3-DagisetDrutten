@@ -420,7 +420,8 @@ namespace Grupp3___Förskolan_Drutten
             int tid = 06;
             int kollaTid2 = 06;
             int tid2 = 06;
-            
+
+            MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
 
             for (int i = 0; i < 11; i++)
             {
@@ -459,10 +460,14 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             Postgres p1 = new Postgres();
 
+            dateTimePickerFrån.Value = DateTime.Today;
+
             if (dateTimePickerFrån.Value > dateTimePickerTill.Value)
             {
 
                 MessageBox.Show("Datumet FRÅN måste ligga före i tiden än datumet TILL.");
+                dataGridViewAllaFramtidaBarn.DataSource = null;
+                labelHurMångaBarnUnderSöktaDatum.Text = p1.HämtaFramtidaTider(dateTimePickerFrån.Value, dateTimePickerTill.Value).ToString() + " Barn";
             }
             else
             {
