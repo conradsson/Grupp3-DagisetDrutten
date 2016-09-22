@@ -146,9 +146,20 @@ namespace Grupp3___Förskolan_Drutten
 
         private void loggaBox_Click(object sender, EventArgs e)// Drutten loggan
         {
+            Postgres p = new Postgres();
+
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtaInläggPersonal();
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
+            BarntabControl.Visible = false;
+            NärvarotabControl.Visible = false;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
+
         }
 
 
@@ -431,7 +442,7 @@ namespace Grupp3___Förskolan_Drutten
             int kollaTid2 = 06;
             int tid2 = 06;
 
-            MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
+            //MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
 
             for (int i = 0; i < 11; i++)
             {
@@ -443,7 +454,9 @@ namespace Grupp3___Förskolan_Drutten
 
                 p.StängConnection();
                 p1.StängConnection();
+
             }
+
         }
 
         private void uppdateraförälder_Click(object sender, EventArgs e)
@@ -778,6 +791,11 @@ namespace Grupp3___Förskolan_Drutten
         private void dataGridViewNärvarandeINärvarohantering_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
           
+        }
+
+        private void loggaUtButton_MouseHover(object sender, EventArgs e)
+        {
+            loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonMouseOver;
         }
     }
 }
