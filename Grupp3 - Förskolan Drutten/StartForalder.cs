@@ -240,7 +240,7 @@ namespace Grupp3___Förskolan_Drutten
             }
             else if (från1 == "" || från2 == "" || till1 == "" || till2 == "")
             {
-                MessageBox.Show("Var vänlig kontrollera att Meddela tider är korrekt ifylld.\n\nIgen ruta där tider fylls i får lämnas tom.");
+                MessageBox.Show("Var vänlig kontrollera att Meddela tider är korrekt ifylld.\n\nIngen ruta där tider fylls i får lämnas tom.");
             }
             else if (hämtas == lämnas)
             {
