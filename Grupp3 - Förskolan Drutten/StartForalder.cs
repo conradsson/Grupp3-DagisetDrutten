@@ -619,11 +619,11 @@ namespace Grupp3___Förskolan_Drutten
                 }
                 Postgres pp = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
-                dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datum);
+                dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, idag);
                 Postgres p3 = new Postgres();
                 Postgres p4 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
-                dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, datum);
+                dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, idag);
             }
         }
 
