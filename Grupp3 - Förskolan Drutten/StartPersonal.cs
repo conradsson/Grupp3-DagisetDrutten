@@ -29,6 +29,7 @@ namespace Grupp3___Förskolan_Drutten
             dataGridViewDagensBarn.Columns[1].Visible = false;
 
             monthCalendar23INärvarohantering.TodayDate = idag;
+            //närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonHär;
 
 
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
@@ -192,6 +193,8 @@ namespace Grupp3___Förskolan_Drutten
         {
             dataGridViewNärvarandeINärvarohantering.DataSource = null;
             dataGridViewFrånvarandeINärvarohantering.DataSource = null;
+
+          
 
             if (NärvarandeRadioButton.Checked == false && FrånvarandeRadioButton.Checked == false)
             {
@@ -456,6 +459,13 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             Postgres p1 = new Postgres();
 
+            if (dateTimePickerFrån.Value > dateTimePickerTill.Value)
+            {
+
+                MessageBox.Show("Datumet FRÅN måste ligga före i tiden än datumet TILL.");
+            }
+            else
+            {
             labelTotaltAntalBarn.Visible = true;
             labelHurMångaBarnUnderSöktaDatum.Visible = true;
             labelTotaltAntalBarn.Text = "Totalt antal barn på förskolan mellan " + dateTimePickerFrån.Value.ToString("yy-MM-dd") + " och " + dateTimePickerTill.Value.ToString("yy-MM-dd") + ": ";
@@ -463,7 +473,7 @@ namespace Grupp3___Förskolan_Drutten
 
             dataGridViewAllaFramtidaBarn.DataSource = p.HämtaFramtidaBarn(dateTimePickerFrån.Value, dateTimePickerTill.Value);
 
-            
+            }
 
         }
 
@@ -521,10 +531,6 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-        //private void skrivut_Click(object sender, EventArgs e)
-        //{
-
-        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -668,73 +674,90 @@ namespace Grupp3___Förskolan_Drutten
         private void buttonHjälpSökDatum_MouseHover(object sender, EventArgs e)
         {
             panelHjälpISökDatum.Visible = true;
-            labelHjälpiSökDatum.Visible = true;
+            labelHjälpiSökDatum.Visible = true; 
+            buttonHjälpSökDatum.BackgroundImage = Properties.Resources.hjälpButtonHär;
         }
 
         private void buttonHjälpSökDatum_MouseLeave(object sender, EventArgs e)
         {
             panelHjälpISökDatum.Visible = false;
             labelHjälpiSökDatum.Visible = false;
+            buttonHjälpSökDatum.BackgroundImage = Properties.Resources.hjälpButtonpng;
         }
 
         private void buttonHjälpiFramtidsÖversikt_MouseHover(object sender, EventArgs e)
         {
             panelHjälpiFramtidsÖversikt.Visible = true;
             labelHjälpiFramtidsÖversikt.Visible = true;
+            buttonHjälpiFramtidsÖversikt.BackgroundImage = Properties.Resources.hjälpButtonHär;
         }
 
         private void buttonHjälpiFramtidsÖversikt_MouseLeave(object sender, EventArgs e)
         {
             panelHjälpiFramtidsÖversikt.Visible = false;
             labelHjälpiFramtidsÖversikt.Visible = false;
+            buttonHjälpiFramtidsÖversikt.BackgroundImage = Properties.Resources.hjälpButtonpng;
         }
 
         private void buttonHjälpiNärvarohantering_MouseHover(object sender, EventArgs e)
         {
             panelHjälpiNärvarohantering.Visible = true;
             labelHjälpiNärvarohantering.Visible = true;
+            buttonHjälpiNärvarohantering.BackgroundImage = Properties.Resources.hjälpButtonHär;
         }
 
         private void buttonHjälpiNärvarohantering_MouseLeave(object sender, EventArgs e)
         {
             panelHjälpiNärvarohantering.Visible = false;
             labelHjälpiNärvarohantering.Visible = false;
+            buttonHjälpiNärvarohantering.BackgroundImage = Properties.Resources.hjälpButtonpng;
         }
 
         private void buttonHjälpiBarnöversikt_MouseHover(object sender, EventArgs e)
         {
             panelHjälpiBarnöversikt.Visible = true;
             labelHjälpiBarnöversikt.Visible = true;
+            buttonHjälpiBarnöversikt.BackgroundImage = Properties.Resources.hjälpButtonHär;
         }
 
         private void buttonHjälpiBarnöversikt_MouseLeave(object sender, EventArgs e)
         {
             panelHjälpiBarnöversikt.Visible = false;
             labelHjälpiBarnöversikt.Visible = false;
+            buttonHjälpiBarnöversikt.BackgroundImage = Properties.Resources.hjälpButtonpng;
         }
 
         private void buttonHjälpiKontouppgifter_MouseHover(object sender, EventArgs e)
         {
             panelHjälpiKontouppgifter.Visible = true;
             labelHjälpiKontouppgifter.Visible = true;
+            buttonHjälpiKontouppgifter.BackgroundImage = Properties.Resources.hjälpButtonHär;
         }
 
         private void buttonHjälpiKontouppgifter_MouseLeave(object sender, EventArgs e)
         {
             panelHjälpiKontouppgifter.Visible = false;
             labelHjälpiKontouppgifter.Visible = false;
+            buttonHjälpiKontouppgifter.BackgroundImage = Properties.Resources.hjälpButtonpng;
         }
 
         private void buttonHjälpiSenaste_MouseHover(object sender, EventArgs e)
         {
             panelHjälpiSenaste.Visible = true;
             labelHjälpiSenaste.Visible = true;
+            buttonHjälpiSenaste.BackgroundImage = Properties.Resources.hjälpButtonHär;
         }
 
         private void buttonHjälpiSenaste_MouseLeave(object sender, EventArgs e)
         {
             panelHjälpiSenaste.Visible = false;
             labelHjälpiSenaste.Visible = false;
+            buttonHjälpiSenaste.BackgroundImage = Properties.Resources.hjälpButtonpng;
+        }
+
+        private void dataGridViewNärvarandeINärvarohantering_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
         }
     }
 }
