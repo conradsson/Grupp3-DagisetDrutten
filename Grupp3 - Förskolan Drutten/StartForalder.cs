@@ -139,9 +139,17 @@ namespace Grupp3___Förskolan_Drutten
 
         private void loggaBox_Click(object sender, EventArgs e) // Drutten Loggan
         {
+            Postgres p = new Postgres();
+
+            listBoxInlägg.DataSource = null;
+            listBoxInlägg.DataSource = p.HämtaInläggFörälder();
             //  .Visable Effekter
             informationTabControl.Visible = true;
             MittKontoTabControl.Visible = false;
+            TidertabControl.Visible = false;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+            tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
         }
 
 

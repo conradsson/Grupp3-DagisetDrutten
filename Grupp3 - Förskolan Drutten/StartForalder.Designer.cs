@@ -226,9 +226,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
-            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
+            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -1243,14 +1243,14 @@
             this.omTabPage.Name = "omTabPage";
             this.omTabPage.Size = new System.Drawing.Size(740, 363);
             this.omTabPage.TabIndex = 1;
-            this.omTabPage.Text = "Om förskolan Drutten";
+            this.omTabPage.Text = "Om Druttens förskola";
             this.omTabPage.UseVisualStyleBackColor = true;
             // 
             // label54
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label54.Location = new System.Drawing.Point(444, 276);
+            this.label54.Location = new System.Drawing.Point(444, 286);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(52, 13);
             this.label54.TabIndex = 14;
@@ -1260,7 +1260,7 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label53.Location = new System.Drawing.Point(439, 260);
+            this.label53.Location = new System.Drawing.Point(439, 270);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(96, 14);
             this.label53.TabIndex = 13;
@@ -1270,7 +1270,7 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label52.Location = new System.Drawing.Point(441, 292);
+            this.label52.Location = new System.Drawing.Point(441, 302);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(38, 14);
             this.label52.TabIndex = 12;
@@ -1290,7 +1290,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label50.Location = new System.Drawing.Point(450, 252);
+            this.label50.Location = new System.Drawing.Point(482, 241);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(76, 13);
             this.label50.TabIndex = 10;
@@ -1320,7 +1320,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label47.Location = new System.Drawing.Point(441, 310);
+            this.label47.Location = new System.Drawing.Point(441, 320);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(120, 13);
             this.label47.TabIndex = 7;
