@@ -431,6 +431,19 @@ namespace Grupp3___Förskolan_Drutten
             int kollaTid2 = 06;
             int tid2 = 06;
 
+            string[] antalBarnArray = new string[12];
+
+            for (int i = 0; i < antalBarnArray.Length; i++)
+            {
+                Postgres p = new Postgres();
+
+                antalBarnArray[i] = p.HämtaDagensTiderHämtas(DateTime.Today, 7).ToString();
+
+                MessageBox.Show(antalBarnArray[i]);
+
+                p.StängConnection();
+            }
+
             //MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
 
             for (int i = 0; i < 11; i++)
@@ -443,7 +456,9 @@ namespace Grupp3___Förskolan_Drutten
 
                 p.StängConnection();
                 p1.StängConnection();
+
             }
+
         }
 
         private void uppdateraförälder_Click(object sender, EventArgs e)
