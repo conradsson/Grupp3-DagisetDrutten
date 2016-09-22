@@ -229,7 +229,6 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="barnid"></param>
         public void TaBortFrånvaro(DateTime datum, int barnid)
         {
-            conn.Open();
             string meddelande;
             try
             {
@@ -288,10 +287,10 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         /// <param name="datum"></param>
         /// <param name="barnid"></param>
-        public void KontrolleraFrånvaro(DateTime datum, int barnid)
+        public bool KontrolleraFrånvaro(DateTime datum, int barnid)
         {
             string sql = "select franvaro.datum, franvaro.barnid from dagis.franvaro where franvaro.datum = '" + datum + "' AND franvaro.barnid = '" + barnid + "';";
-
+            bool finnsFrånvaro = false;
             tabell.Clear();
             tabell = sqlFråga(sql);
             Frånvaro f = new Frånvaro();
@@ -303,9 +302,15 @@ namespace Grupp3___Förskolan_Drutten
 
                 if (f.Datum == datum && f.Barnid == barnid)
                 {
-                    TaBortFrånvaro(datum, barnid);
+                    finnsFrånvaro = true;
                 }
+                else
+                {
+                    finnsFrånvaro = false;
+                }
+                
             }
+            return finnsFrånvaro;
         }
 
         /// <summary>

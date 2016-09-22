@@ -204,6 +204,8 @@ namespace Grupp3___Förskolan_Drutten
             dataGridViewNärvarandeINärvarohantering.DataSource = null;
             dataGridViewFrånvarandeINärvarohantering.DataSource = null;
 
+          
+
             if (NärvarandeRadioButton.Checked == false && FrånvarandeRadioButton.Checked == false)
             {
                 MessageBox.Show("Vänligen markera närvarande eller frånvarande.");
@@ -467,6 +469,13 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             Postgres p1 = new Postgres();
 
+            if (dateTimePickerFrån.Value > dateTimePickerTill.Value)
+            {
+
+                MessageBox.Show("Datumet FRÅN måste ligga före i tiden än datumet TILL.");
+            }
+            else
+            {
             labelTotaltAntalBarn.Visible = true;
             labelHurMångaBarnUnderSöktaDatum.Visible = true;
             labelTotaltAntalBarn.Text = "Totalt antal barn på förskolan mellan " + dateTimePickerFrån.Value.ToString("yy-MM-dd") + " och " + dateTimePickerTill.Value.ToString("yy-MM-dd") + ": ";
@@ -474,7 +483,7 @@ namespace Grupp3___Förskolan_Drutten
 
             dataGridViewAllaFramtidaBarn.DataSource = p.HämtaFramtidaBarn(dateTimePickerFrån.Value, dateTimePickerTill.Value);
 
-            
+            }
 
         }
 
@@ -759,6 +768,11 @@ namespace Grupp3___Förskolan_Drutten
         private void loggaUtButton_MouseLeave(object sender, EventArgs e)
         {
             loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonDrutten;
+        }
+
+        private void dataGridViewNärvarandeINärvarohantering_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
         }
     }
 }

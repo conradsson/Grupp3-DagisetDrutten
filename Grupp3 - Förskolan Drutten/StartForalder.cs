@@ -225,16 +225,31 @@ namespace Grupp3___Förskolan_Drutten
             }
             else
             {
-                Postgres p = new Postgres();
-                p.LäggTillTid(datum, barnid, lämnas, hämtas);
+               
 
-                    Postgres po = new Postgres();
-                    po.KontrolleraHämtning(datum, barnid, hamtas);
+                    
 
                     textBoxHämtasAv1.Clear();
                 
                 Postgres pp = new Postgres();
-                pp.KontrolleraFrånvaro(datum, barnid);
+                bool frånvaro = pp.KontrolleraFrånvaro(datum, barnid);
+                
+                if (frånvaro == true)
+                {
+                    DialogResult result = MessageBox.Show("Det finns en frånvaro meddelad detta datum! \n\nOm du trycker på OK meddelas tiden och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
+                    if (result == DialogResult.OK)
+                    {
+                        //this.Close();
+                        Postgres p = new Postgres();
+                        p.LäggTillTid(datum, barnid, lämnas, hämtas);
+
+                        Postgres po = new Postgres();
+                    po.KontrolleraHämtning(datum, barnid, hamtas);
+
+                    Postgres p4 = new Postgres();
+                    p4.TaBortFrånvaro(datum, barnid);
+                    }
+                }
                 Postgres p1 = new Postgres();
                 dataGridViewHämtning.DataSource = null;
                 dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
