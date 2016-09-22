@@ -218,7 +218,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 DateTime idag = monthCalendar23INärvarohantering.SelectionStart;
                 dataGridViewFrånvarandeINärvarohantering.DataSource = p.HämtaFrånvaro(idag);
-                label17.Text = dataGridViewNärvarandeINärvarohantering.RowCount.ToString() + " Barn";
+                label17.Text = dataGridViewFrånvarandeINärvarohantering.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens frånvarolista";
 
                 dataGridViewNärvarandeINärvarohantering.Visible = false;
