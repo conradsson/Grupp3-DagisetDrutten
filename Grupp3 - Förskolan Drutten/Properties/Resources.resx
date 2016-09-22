@@ -121,6 +121,9 @@
   <data name="druttenMellan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\druttenMellan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="närvaroButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\närvaroButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="druttis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\druttis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,8 +157,8 @@
   <data name="Background1024x600" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background1024x600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inloggadButtonDruttenPushedLängre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inloggadButtonDruttenPushedLängre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="barnButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barnButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonDrutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +169,8 @@
   <data name="DruttenMeny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DruttenMeny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="barnButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barnButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mittKontoButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mittKontoButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonDruttenPushed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonDruttenPushed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +199,9 @@
   <data name="barnButtonDruttenPushed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barnButtonDruttenPushed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tiderButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tiderButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="närvaroButtonDrutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\närvaroButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -220,8 +226,11 @@
   <data name="ButtonDrutten2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonDrutten1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MiniMobilButtonDruttenPushed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MiniMobilButtonDruttenPushed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="informationButtonMouseOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\informationButtonMouseOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inloggadButtonDruttenPushedLängre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inloggadButtonDruttenPushedLängre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonDrutten1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +247,14 @@
   <data name="DruttenMeny1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DruttenMeny1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tiderButtonDrutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tiderButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="inloggadButtonDruttenLängre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inloggadButtonDruttenLängre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="informationButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\informationButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mittKontoButtonPushed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mittKontoButtonPushed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,19 +265,10 @@
   <data name="homeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tiderButtonDrutten" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tiderButtonDrutten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MiniMobilButtonDruttenPushed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MiniMobilButtonDruttenPushed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="informationButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\informationButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mittKontoButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mittKontoButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="närvaroButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\närvaroButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tiderButtonHär" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tiderButtonHär.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loggaUtButtonMouseOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loggaUtButtonMouseOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
