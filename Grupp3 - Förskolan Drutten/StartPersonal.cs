@@ -813,5 +813,10 @@ namespace Grupp3___Förskolan_Drutten
         {
             loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonMouseOver;
         }
+
+        private void minimeraButton_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

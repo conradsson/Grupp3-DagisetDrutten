@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -78,12 +78,58 @@
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.inloggadButton = new System.Windows.Forms.Button();
             this.loggaUtButton = new System.Windows.Forms.Button();
+            this.MittKontoTabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panelHjälpiKontouppgifter = new System.Windows.Forms.Panel();
+            this.labelHjälpiKontouppgifter = new System.Windows.Forms.Label();
+            this.buttonHjälpiKontouppgifter = new System.Windows.Forms.Button();
+            this.ändraLösenPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ändralösenBekräfta = new System.Windows.Forms.Button();
+            this.ändraLösenAvbryt = new System.Windows.Forms.Button();
+            this.textBoxNyttLösen2 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBoxNyttLösen = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBoxNuvarandeLösen = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.ändraLösenordButton = new System.Windows.Forms.Button();
+            this.uppdateraförälder = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxTelefonnrMittkonto = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxEfternamnMittkonto = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
+            this.BarntabControl = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panelHjälpiBarnöversikt = new System.Windows.Forms.Panel();
+            this.labelHjälpiBarnöversikt = new System.Windows.Forms.Label();
+            this.buttonHjälpiBarnöversikt = new System.Windows.Forms.Button();
+            this.labelAntalSöktaBarn = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.buttonSök = new System.Windows.Forms.Button();
+            this.textBoxSökRuta = new System.Windows.Forms.TextBox();
+            this.checkBoxAvdelning2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxAvdelning1 = new System.Windows.Forms.CheckBox();
+            this.listBoxVårnadshavare = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
+            this.listBoxSöktaBarn = new System.Windows.Forms.ListBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.NärvarotabControl = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.buttonDöljDiagram = new System.Windows.Forms.Button();
             this.panelHjälpiNärvarohantering = new System.Windows.Forms.Panel();
             this.labelHjälpiNärvarohantering = new System.Windows.Forms.Label();
             this.buttonHjälpiNärvarohantering = new System.Windows.Forms.Button();
-            this.buttonDöljDiagram = new System.Windows.Forms.Button();
             this.dataGridViewDagensBarn = new System.Windows.Forms.DataGridView();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barnid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -131,52 +177,6 @@
             this.dateTimePickerTill = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrån = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
-            this.MittKontoTabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panelHjälpiKontouppgifter = new System.Windows.Forms.Panel();
-            this.labelHjälpiKontouppgifter = new System.Windows.Forms.Label();
-            this.buttonHjälpiKontouppgifter = new System.Windows.Forms.Button();
-            this.ändraLösenPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.ändralösenBekräfta = new System.Windows.Forms.Button();
-            this.ändraLösenAvbryt = new System.Windows.Forms.Button();
-            this.textBoxNyttLösen2 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBoxNyttLösen = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBoxNuvarandeLösen = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.ändraLösenordButton = new System.Windows.Forms.Button();
-            this.uppdateraförälder = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxTelefonnrMittkonto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxEfternamnMittkonto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxFörnamnMittkonto = new System.Windows.Forms.TextBox();
-            this.BarntabControl = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panelHjälpiBarnöversikt = new System.Windows.Forms.Panel();
-            this.labelHjälpiBarnöversikt = new System.Windows.Forms.Label();
-            this.buttonHjälpiBarnöversikt = new System.Windows.Forms.Button();
-            this.labelAntalSöktaBarn = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.buttonSök = new System.Windows.Forms.Button();
-            this.textBoxSökRuta = new System.Windows.Forms.TextBox();
-            this.checkBoxAvdelning2 = new System.Windows.Forms.CheckBox();
-            this.checkBoxAvdelning1 = new System.Windows.Forms.CheckBox();
-            this.listBoxVårnadshavare = new System.Windows.Forms.ListBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.barnOverigtrichTextBox = new System.Windows.Forms.RichTextBox();
-            this.listBoxSöktaBarn = new System.Windows.Forms.ListBox();
-            this.label39 = new System.Windows.Forms.Label();
             this.panelskrivut = new System.Windows.Forms.Panel();
             this.dataGridSkrivut = new System.Windows.Forms.DataGridView();
             this.panelskrivfrånvaro = new System.Windows.Forms.Button();
@@ -192,6 +192,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
+            this.minimeraButton = new System.Windows.Forms.Button();
             this.förnamnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efternamnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.närvaroBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -231,6 +232,15 @@
             this.nyttInläggPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.MittKontoTabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panelHjälpiKontouppgifter.SuspendLayout();
+            this.ändraLösenPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.BarntabControl.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panelHjälpiBarnöversikt.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.NärvarotabControl.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panelHjälpiNärvarohantering.SuspendLayout();
@@ -243,15 +253,6 @@
             this.tabPage2.SuspendLayout();
             this.panelHjälpiFramtidsÖversikt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllaFramtidaBarn)).BeginInit();
-            this.MittKontoTabControl.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panelHjälpiKontouppgifter.SuspendLayout();
-            this.ändraLösenPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.BarntabControl.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.panelHjälpiBarnöversikt.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panelskrivut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSkrivut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvaroSkrivut)).BeginInit();
@@ -796,671 +797,6 @@
             this.loggaUtButton.MouseLeave += new System.EventHandler(this.loggaUtButton_MouseLeave);
             this.loggaUtButton.MouseHover += new System.EventHandler(this.loggaUtButton_MouseHover);
             // 
-            // NärvarotabControl
-            // 
-            this.NärvarotabControl.Controls.Add(this.tabPage6);
-            this.NärvarotabControl.Controls.Add(this.tabPage5);
-            this.NärvarotabControl.Controls.Add(this.tabPage2);
-            this.NärvarotabControl.Location = new System.Drawing.Point(196, 36);
-            this.NärvarotabControl.Name = "NärvarotabControl";
-            this.NärvarotabControl.SelectedIndex = 0;
-            this.NärvarotabControl.Size = new System.Drawing.Size(748, 389);
-            this.NärvarotabControl.TabIndex = 23;
-            this.NärvarotabControl.Visible = false;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
-            this.tabPage6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage6.Controls.Add(this.buttonDöljDiagram);
-            this.tabPage6.Controls.Add(this.panelHjälpiNärvarohantering);
-            this.tabPage6.Controls.Add(this.buttonHjälpiNärvarohantering);
-            this.tabPage6.Controls.Add(this.dataGridViewDagensBarn);
-            this.tabPage6.Controls.Add(this.buttonUppdateraNärvaro);
-            this.tabPage6.Controls.Add(this.labelAntalBarnIdag);
-            this.tabPage6.Controls.Add(this.labelAntalBarn);
-            this.tabPage6.Controls.Add(this.labelTid);
-            this.tabPage6.Controls.Add(this.buttonVisaDiagram);
-            this.tabPage6.Controls.Add(this.chartBarnensTider);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(740, 363);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Närvarohantering";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // panelHjälpiNärvarohantering
-            // 
-            this.panelHjälpiNärvarohantering.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panelHjälpiNärvarohantering.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
-            this.panelHjälpiNärvarohantering.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelHjälpiNärvarohantering.Controls.Add(this.labelHjälpiNärvarohantering);
-            this.panelHjälpiNärvarohantering.Location = new System.Drawing.Point(499, 16);
-            this.panelHjälpiNärvarohantering.Name = "panelHjälpiNärvarohantering";
-            this.panelHjälpiNärvarohantering.Size = new System.Drawing.Size(222, 136);
-            this.panelHjälpiNärvarohantering.TabIndex = 43;
-            this.panelHjälpiNärvarohantering.Visible = false;
-            // 
-            // labelHjälpiNärvarohantering
-            // 
-            this.labelHjälpiNärvarohantering.AutoSize = true;
-            this.labelHjälpiNärvarohantering.BackColor = System.Drawing.Color.Transparent;
-            this.labelHjälpiNärvarohantering.Location = new System.Drawing.Point(4, 10);
-            this.labelHjälpiNärvarohantering.Name = "labelHjälpiNärvarohantering";
-            this.labelHjälpiNärvarohantering.Size = new System.Drawing.Size(202, 117);
-            this.labelHjälpiNärvarohantering.TabIndex = 0;
-            this.labelHjälpiNärvarohantering.Text = resources.GetString("labelHjälpiNärvarohantering.Text");
-            this.labelHjälpiNärvarohantering.Visible = false;
-            // 
-            // buttonHjälpiNärvarohantering
-            // 
-            this.buttonHjälpiNärvarohantering.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
-            this.buttonHjälpiNärvarohantering.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonHjälpiNärvarohantering.FlatAppearance.BorderSize = 0;
-            this.buttonHjälpiNärvarohantering.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonHjälpiNärvarohantering.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonHjälpiNärvarohantering.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHjälpiNärvarohantering.Location = new System.Drawing.Point(709, -2);
-            this.buttonHjälpiNärvarohantering.Name = "buttonHjälpiNärvarohantering";
-            this.buttonHjälpiNärvarohantering.Size = new System.Drawing.Size(27, 23);
-            this.buttonHjälpiNärvarohantering.TabIndex = 42;
-            this.buttonHjälpiNärvarohantering.UseVisualStyleBackColor = true;
-            this.buttonHjälpiNärvarohantering.MouseLeave += new System.EventHandler(this.buttonHjälpiNärvarohantering_MouseLeave);
-            this.buttonHjälpiNärvarohantering.MouseHover += new System.EventHandler(this.buttonHjälpiNärvarohantering_MouseHover);
-            // 
-            // buttonDöljDiagram
-            // 
-            this.buttonDöljDiagram.Location = new System.Drawing.Point(635, 327);
-            this.buttonDöljDiagram.Name = "buttonDöljDiagram";
-            this.buttonDöljDiagram.Size = new System.Drawing.Size(75, 23);
-            this.buttonDöljDiagram.TabIndex = 17;
-            this.buttonDöljDiagram.Text = "Dölj diagram";
-            this.buttonDöljDiagram.UseVisualStyleBackColor = true;
-            this.buttonDöljDiagram.Visible = false;
-            this.buttonDöljDiagram.Click += new System.EventHandler(this.buttonDöljDiagram_Click);
-            // 
-            // dataGridViewDagensBarn
-            // 
-            this.dataGridViewDagensBarn.AllowUserToOrderColumns = true;
-            this.dataGridViewDagensBarn.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewDagensBarn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewDagensBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDagensBarn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Datum,
-            this.Barnid,
-            this.förnamnDataGridViewTextBoxColumn1,
-            this.efternamnDataGridViewTextBoxColumn1,
-            this.TidLämnad,
-            this.TidHämtad,
-            this.närvarande,
-            this.hämtad,
-            this.HämtasAv,
-            this.Allergier});
-            this.dataGridViewDagensBarn.DataSource = this.närvaroBindingSource1;
-            this.dataGridViewDagensBarn.Location = new System.Drawing.Point(9, 21);
-            this.dataGridViewDagensBarn.Name = "dataGridViewDagensBarn";
-            this.dataGridViewDagensBarn.Size = new System.Drawing.Size(718, 240);
-            this.dataGridViewDagensBarn.TabIndex = 10;
-            // 
-            // Datum
-            // 
-            this.Datum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Datum.DataPropertyName = "Datum";
-            this.Datum.HeaderText = "Datum";
-            this.Datum.Name = "Datum";
-            this.Datum.Width = 69;
-            // 
-            // Barnid
-            // 
-            this.Barnid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Barnid.DataPropertyName = "Barnid";
-            this.Barnid.HeaderText = "Barnid";
-            this.Barnid.Name = "Barnid";
-            this.Barnid.Width = 68;
-            // 
-            // TidLämnad
-            // 
-            this.TidLämnad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TidLämnad.DataPropertyName = "TidLämnad";
-            this.TidLämnad.HeaderText = "Lämnas";
-            this.TidLämnad.Name = "TidLämnad";
-            this.TidLämnad.Width = 77;
-            // 
-            // TidHämtad
-            // 
-            this.TidHämtad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TidHämtad.DataPropertyName = "TidHämtad";
-            this.TidHämtad.HeaderText = "Hämtas";
-            this.TidHämtad.Name = "TidHämtad";
-            this.TidHämtad.Width = 75;
-            // 
-            // närvarande
-            // 
-            this.närvarande.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.närvarande.DataPropertyName = "närvarande";
-            this.närvarande.HeaderText = "Närvarande";
-            this.närvarande.Name = "närvarande";
-            this.närvarande.Width = 77;
-            // 
-            // hämtad
-            // 
-            this.hämtad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.hämtad.DataPropertyName = "hämtad";
-            this.hämtad.HeaderText = "Hämtad";
-            this.hämtad.Name = "hämtad";
-            this.hämtad.Width = 57;
-            // 
-            // HämtasAv
-            // 
-            this.HämtasAv.DataPropertyName = "HämtasAv";
-            this.HämtasAv.HeaderText = "Hämtas av";
-            this.HämtasAv.Name = "HämtasAv";
-            // 
-            // Allergier
-            // 
-            this.Allergier.DataPropertyName = "Allergier";
-            this.Allergier.HeaderText = "Allergier";
-            this.Allergier.Name = "Allergier";
-            // 
-            // buttonUppdateraNärvaro
-            // 
-            this.buttonUppdateraNärvaro.Location = new System.Drawing.Point(612, 267);
-            this.buttonUppdateraNärvaro.Name = "buttonUppdateraNärvaro";
-            this.buttonUppdateraNärvaro.Size = new System.Drawing.Size(117, 38);
-            this.buttonUppdateraNärvaro.TabIndex = 16;
-            this.buttonUppdateraNärvaro.Text = "Uppdatera närvarande/hämtade";
-            this.buttonUppdateraNärvaro.UseVisualStyleBackColor = true;
-            this.buttonUppdateraNärvaro.Click += new System.EventHandler(this.buttonUppdateraNärvaro_Click);
-            // 
-            // labelAntalBarnIdag
-            // 
-            this.labelAntalBarnIdag.AutoSize = true;
-            this.labelAntalBarnIdag.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAntalBarnIdag.Location = new System.Drawing.Point(12, 1);
-            this.labelAntalBarnIdag.Name = "labelAntalBarnIdag";
-            this.labelAntalBarnIdag.Size = new System.Drawing.Size(83, 18);
-            this.labelAntalBarnIdag.TabIndex = 15;
-            this.labelAntalBarnIdag.Text = "Antal barn";
-            // 
-            // labelAntalBarn
-            // 
-            this.labelAntalBarn.AutoSize = true;
-            this.labelAntalBarn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAntalBarn.Location = new System.Drawing.Point(2, 167);
-            this.labelAntalBarn.Name = "labelAntalBarn";
-            this.labelAntalBarn.Size = new System.Drawing.Size(65, 13);
-            this.labelAntalBarn.TabIndex = 14;
-            this.labelAntalBarn.Text = "Antal barn";
-            this.labelAntalBarn.Visible = false;
-            // 
-            // labelTid
-            // 
-            this.labelTid.AutoSize = true;
-            this.labelTid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTid.Location = new System.Drawing.Point(604, 333);
-            this.labelTid.Name = "labelTid";
-            this.labelTid.Size = new System.Drawing.Size(25, 13);
-            this.labelTid.TabIndex = 13;
-            this.labelTid.Text = "Tid";
-            this.labelTid.Visible = false;
-            // 
-            // buttonVisaDiagram
-            // 
-            this.buttonVisaDiagram.Location = new System.Drawing.Point(612, 313);
-            this.buttonVisaDiagram.Name = "buttonVisaDiagram";
-            this.buttonVisaDiagram.Size = new System.Drawing.Size(117, 38);
-            this.buttonVisaDiagram.TabIndex = 12;
-            this.buttonVisaDiagram.Text = "Visa diagram";
-            this.buttonVisaDiagram.UseVisualStyleBackColor = true;
-            this.buttonVisaDiagram.Click += new System.EventHandler(this.buttonVisaDiagram_Click);
-            // 
-            // chartBarnensTider
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartBarnensTider.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartBarnensTider.Legends.Add(legend1);
-            this.chartBarnensTider.Location = new System.Drawing.Point(-24, 176);
-            this.chartBarnensTider.Name = "chartBarnensTider";
-            this.chartBarnensTider.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Barn lämnas";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Barn hämtas";
-            this.chartBarnensTider.Series.Add(series1);
-            this.chartBarnensTider.Series.Add(series2);
-            this.chartBarnensTider.Size = new System.Drawing.Size(779, 184);
-            this.chartBarnensTider.TabIndex = 11;
-            this.chartBarnensTider.Text = "chart1";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
-            this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage5.Controls.Add(this.panelHjälpISökDatum);
-            this.tabPage5.Controls.Add(this.buttonHjälpSökDatum);
-            this.tabPage5.Controls.Add(this.label1);
-            this.tabPage5.Controls.Add(this.label8);
-            this.tabPage5.Controls.Add(this.labelObligatorisk);
-            this.tabPage5.Controls.Add(this.dataGridViewFrånvarandeINärvarohantering);
-            this.tabPage5.Controls.Add(this.label17);
-            this.tabPage5.Controls.Add(this.labelSkrivut);
-            this.tabPage5.Controls.Add(this.button1);
-            this.tabPage5.Controls.Add(this.button3);
-            this.tabPage5.Controls.Add(this.label15);
-            this.tabPage5.Controls.Add(this.dataGridViewNärvarandeINärvarohantering);
-            this.tabPage5.Controls.Add(this.label2);
-            this.tabPage5.Controls.Add(this.FrånvarandeRadioButton);
-            this.tabPage5.Controls.Add(this.NärvarandeRadioButton);
-            this.tabPage5.Controls.Add(this.monthCalendar23INärvarohantering);
-            this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(740, 363);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "Sök datum";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // panelHjälpISökDatum
-            // 
-            this.panelHjälpISökDatum.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panelHjälpISökDatum.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
-            this.panelHjälpISökDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelHjälpISökDatum.Controls.Add(this.labelHjälpiSökDatum);
-            this.panelHjälpISökDatum.Location = new System.Drawing.Point(491, 23);
-            this.panelHjälpISökDatum.Name = "panelHjälpISökDatum";
-            this.panelHjälpISökDatum.Size = new System.Drawing.Size(222, 136);
-            this.panelHjälpISökDatum.TabIndex = 38;
-            this.panelHjälpISökDatum.Visible = false;
-            this.panelHjälpISökDatum.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHjälpISökDatum_Paint);
-            // 
-            // labelHjälpiSökDatum
-            // 
-            this.labelHjälpiSökDatum.AutoSize = true;
-            this.labelHjälpiSökDatum.BackColor = System.Drawing.Color.Transparent;
-            this.labelHjälpiSökDatum.Location = new System.Drawing.Point(4, 10);
-            this.labelHjälpiSökDatum.Name = "labelHjälpiSökDatum";
-            this.labelHjälpiSökDatum.Size = new System.Drawing.Size(215, 104);
-            this.labelHjälpiSökDatum.TabIndex = 0;
-            this.labelHjälpiSökDatum.Text = "Hjälp.\r\n\r\nVänligen välj datum och sedan om du vill se\r\nnärvarande eller frånvaran" +
-    "de barn. Tryck på\r\nsök valt datum.\r\n\r\nOm du vill skriva ut listan så tryck på \r\n" +
-    "skrivut ikonen.";
-            this.labelHjälpiSökDatum.Visible = false;
-            // 
-            // buttonHjälpSökDatum
-            // 
-            this.buttonHjälpSökDatum.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
-            this.buttonHjälpSökDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonHjälpSökDatum.FlatAppearance.BorderSize = 0;
-            this.buttonHjälpSökDatum.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonHjälpSökDatum.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonHjälpSökDatum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHjälpSökDatum.Location = new System.Drawing.Point(700, 6);
-            this.buttonHjälpSökDatum.Name = "buttonHjälpSökDatum";
-            this.buttonHjälpSökDatum.Size = new System.Drawing.Size(27, 23);
-            this.buttonHjälpSökDatum.TabIndex = 37;
-            this.buttonHjälpSökDatum.UseVisualStyleBackColor = true;
-            this.buttonHjälpSökDatum.MouseLeave += new System.EventHandler(this.buttonHjälpSökDatum_MouseLeave);
-            this.buttonHjälpSökDatum.MouseHover += new System.EventHandler(this.buttonHjälpSökDatum_MouseHover);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(80, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 25);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "*";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 18);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Välj dag:";
-            // 
-            // labelObligatorisk
-            // 
-            this.labelObligatorisk.AutoSize = true;
-            this.labelObligatorisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelObligatorisk.ForeColor = System.Drawing.Color.Red;
-            this.labelObligatorisk.Location = new System.Drawing.Point(393, 5);
-            this.labelObligatorisk.Name = "labelObligatorisk";
-            this.labelObligatorisk.Size = new System.Drawing.Size(20, 25);
-            this.labelObligatorisk.TabIndex = 34;
-            this.labelObligatorisk.Text = "*";
-            // 
-            // dataGridViewFrånvarandeINärvarohantering
-            // 
-            this.dataGridViewFrånvarandeINärvarohantering.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewFrånvarandeINärvarohantering.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewFrånvarandeINärvarohantering.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFrånvarandeINärvarohantering.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.datumDataGridViewTextBoxColumn3,
-            this.förnamnDataGridViewTextBoxColumn5,
-            this.efternamnDataGridViewTextBoxColumn5,
-            this.sjukDataGridViewCheckBoxColumn,
-            this.ledigDataGridViewCheckBoxColumn});
-            this.dataGridViewFrånvarandeINärvarohantering.DataSource = this.frånvaroBindingSource;
-            this.dataGridViewFrånvarandeINärvarohantering.Location = new System.Drawing.Point(16, 195);
-            this.dataGridViewFrånvarandeINärvarohantering.Name = "dataGridViewFrånvarandeINärvarohantering";
-            this.dataGridViewFrånvarandeINärvarohantering.Size = new System.Drawing.Size(541, 150);
-            this.dataGridViewFrånvarandeINärvarohantering.TabIndex = 21;
-            this.dataGridViewFrånvarandeINärvarohantering.Visible = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(377, 176);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(0, 13);
-            this.label17.TabIndex = 20;
-            // 
-            // labelSkrivut
-            // 
-            this.labelSkrivut.AutoSize = true;
-            this.labelSkrivut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSkrivut.Location = new System.Drawing.Point(575, 101);
-            this.labelSkrivut.Name = "labelSkrivut";
-            this.labelSkrivut.Size = new System.Drawing.Size(0, 13);
-            this.labelSkrivut.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(610, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 61);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(306, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Sök valt datum";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.buttonSökValtDatumINärvarohantering_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(303, 176);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 13);
-            this.label15.TabIndex = 16;
-            // 
-            // dataGridViewNärvarandeINärvarohantering
-            // 
-            this.dataGridViewNärvarandeINärvarohantering.AutoGenerateColumns = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewNärvarandeINärvarohantering.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewNärvarandeINärvarohantering.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNärvarandeINärvarohantering.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.datumDataGridViewTextBoxColumn,
-            this.förnamnDataGridViewTextBoxColumn,
-            this.efternamnDataGridViewTextBoxColumn,
-            this.tidLämnadDataGridViewTextBoxColumn,
-            this.tidHämtadDataGridViewTextBoxColumn,
-            this.hämtasAvDataGridViewTextBoxColumn});
-            this.dataGridViewNärvarandeINärvarohantering.DataSource = this.närvaroBindingSource;
-            this.dataGridViewNärvarandeINärvarohantering.Location = new System.Drawing.Point(16, 195);
-            this.dataGridViewNärvarandeINärvarohantering.Name = "dataGridViewNärvarandeINärvarohantering";
-            this.dataGridViewNärvarandeINärvarohantering.Size = new System.Drawing.Size(644, 150);
-            this.dataGridViewNärvarandeINärvarohantering.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(307, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 18);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Välj status:";
-            // 
-            // FrånvarandeRadioButton
-            // 
-            this.FrånvarandeRadioButton.AutoSize = true;
-            this.FrånvarandeRadioButton.Location = new System.Drawing.Point(310, 60);
-            this.FrånvarandeRadioButton.Name = "FrånvarandeRadioButton";
-            this.FrånvarandeRadioButton.Size = new System.Drawing.Size(85, 17);
-            this.FrånvarandeRadioButton.TabIndex = 6;
-            this.FrånvarandeRadioButton.Text = "Frånvarande";
-            this.FrånvarandeRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // NärvarandeRadioButton
-            // 
-            this.NärvarandeRadioButton.AutoSize = true;
-            this.NärvarandeRadioButton.Location = new System.Drawing.Point(310, 37);
-            this.NärvarandeRadioButton.Name = "NärvarandeRadioButton";
-            this.NärvarandeRadioButton.Size = new System.Drawing.Size(81, 17);
-            this.NärvarandeRadioButton.TabIndex = 5;
-            this.NärvarandeRadioButton.Text = "Närvarande";
-            this.NärvarandeRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // monthCalendar23INärvarohantering
-            // 
-            this.monthCalendar23INärvarohantering.Location = new System.Drawing.Point(16, 31);
-            this.monthCalendar23INärvarohantering.Name = "monthCalendar23INärvarohantering";
-            this.monthCalendar23INärvarohantering.ShowWeekNumbers = true;
-            this.monthCalendar23INärvarohantering.TabIndex = 13;
-            this.monthCalendar23INärvarohantering.TodayDate = new System.DateTime(2016, 9, 21, 0, 0, 0, 0);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
-            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.panelHjälpiFramtidsÖversikt);
-            this.tabPage2.Controls.Add(this.buttonHjälpiFramtidsÖversikt);
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.labelHurMångaBarnUnderSöktaDatum);
-            this.tabPage2.Controls.Add(this.dataGridViewAllaFramtidaBarn);
-            this.tabPage2.Controls.Add(this.labelTotaltAntalBarn);
-            this.tabPage2.Controls.Add(this.dateTimePickerTill);
-            this.tabPage2.Controls.Add(this.dateTimePickerFrån);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(740, 363);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "Framtidsöversikt";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panelHjälpiFramtidsÖversikt
-            // 
-            this.panelHjälpiFramtidsÖversikt.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panelHjälpiFramtidsÖversikt.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
-            this.panelHjälpiFramtidsÖversikt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelHjälpiFramtidsÖversikt.Controls.Add(this.labelHjälpiFramtidsÖversikt);
-            this.panelHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(491, 23);
-            this.panelHjälpiFramtidsÖversikt.Name = "panelHjälpiFramtidsÖversikt";
-            this.panelHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(222, 136);
-            this.panelHjälpiFramtidsÖversikt.TabIndex = 41;
-            this.panelHjälpiFramtidsÖversikt.Visible = false;
-            // 
-            // labelHjälpiFramtidsÖversikt
-            // 
-            this.labelHjälpiFramtidsÖversikt.AutoSize = true;
-            this.labelHjälpiFramtidsÖversikt.BackColor = System.Drawing.Color.Transparent;
-            this.labelHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(4, 10);
-            this.labelHjälpiFramtidsÖversikt.Name = "labelHjälpiFramtidsÖversikt";
-            this.labelHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(193, 65);
-            this.labelHjälpiFramtidsÖversikt.TabIndex = 0;
-            this.labelHjälpiFramtidsÖversikt.Text = "Hjälp.\r\n\r\nVänligen välj datum och tryck sedan på\r\nsök antal barn för att se antal" +
-    "\r\nsamt alla närvarande barn.\r\n";
-            this.labelHjälpiFramtidsÖversikt.Visible = false;
-            // 
-            // buttonHjälpiFramtidsÖversikt
-            // 
-            this.buttonHjälpiFramtidsÖversikt.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
-            this.buttonHjälpiFramtidsÖversikt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonHjälpiFramtidsÖversikt.FlatAppearance.BorderSize = 0;
-            this.buttonHjälpiFramtidsÖversikt.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonHjälpiFramtidsÖversikt.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonHjälpiFramtidsÖversikt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(700, 6);
-            this.buttonHjälpiFramtidsÖversikt.Name = "buttonHjälpiFramtidsÖversikt";
-            this.buttonHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(27, 23);
-            this.buttonHjälpiFramtidsÖversikt.TabIndex = 40;
-            this.buttonHjälpiFramtidsÖversikt.UseVisualStyleBackColor = true;
-            this.buttonHjälpiFramtidsÖversikt.MouseLeave += new System.EventHandler(this.buttonHjälpiFramtidsÖversikt_MouseLeave);
-            this.buttonHjälpiFramtidsÖversikt.MouseHover += new System.EventHandler(this.buttonHjälpiFramtidsÖversikt_MouseHover);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(324, 7);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(15, 20);
-            this.label21.TabIndex = 38;
-            this.label21.Text = "*";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(55, 8);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(15, 20);
-            this.label20.TabIndex = 37;
-            this.label20.Text = "*";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(293, 9);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 18);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "Till:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(13, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 18);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Från:";
-            // 
-            // labelHurMångaBarnUnderSöktaDatum
-            // 
-            this.labelHurMångaBarnUnderSöktaDatum.AutoSize = true;
-            this.labelHurMångaBarnUnderSöktaDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHurMångaBarnUnderSöktaDatum.Location = new System.Drawing.Point(417, 92);
-            this.labelHurMångaBarnUnderSöktaDatum.Name = "labelHurMångaBarnUnderSöktaDatum";
-            this.labelHurMångaBarnUnderSöktaDatum.Size = new System.Drawing.Size(61, 18);
-            this.labelHurMångaBarnUnderSöktaDatum.TabIndex = 9;
-            this.labelHurMångaBarnUnderSöktaDatum.Text = "label11";
-            this.labelHurMångaBarnUnderSöktaDatum.Visible = false;
-            // 
-            // dataGridViewAllaFramtidaBarn
-            // 
-            this.dataGridViewAllaFramtidaBarn.AutoGenerateColumns = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAllaFramtidaBarn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewAllaFramtidaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAllaFramtidaBarn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.förnamnDataGridViewTextBoxColumn2,
-            this.efternamnDataGridViewTextBoxColumn2,
-            this.avdelningsidDataGridViewTextBoxColumn,
-            this.allergierDataGridViewTextBoxColumn,
-            this.annatDataGridViewTextBoxColumn,
-            this.antalDagarDataGridViewTextBoxColumn});
-            this.dataGridViewAllaFramtidaBarn.DataSource = this.barnBindingSource;
-            this.dataGridViewAllaFramtidaBarn.Location = new System.Drawing.Point(16, 115);
-            this.dataGridViewAllaFramtidaBarn.Name = "dataGridViewAllaFramtidaBarn";
-            this.dataGridViewAllaFramtidaBarn.ReadOnly = true;
-            this.dataGridViewAllaFramtidaBarn.Size = new System.Drawing.Size(642, 232);
-            this.dataGridViewAllaFramtidaBarn.TabIndex = 8;
-            // 
-            // labelTotaltAntalBarn
-            // 
-            this.labelTotaltAntalBarn.AutoSize = true;
-            this.labelTotaltAntalBarn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotaltAntalBarn.Location = new System.Drawing.Point(20, 92);
-            this.labelTotaltAntalBarn.Name = "labelTotaltAntalBarn";
-            this.labelTotaltAntalBarn.Size = new System.Drawing.Size(54, 18);
-            this.labelTotaltAntalBarn.TabIndex = 6;
-            this.labelTotaltAntalBarn.Text = "label11";
-            this.labelTotaltAntalBarn.Visible = false;
-            // 
-            // dateTimePickerTill
-            // 
-            this.dateTimePickerTill.Location = new System.Drawing.Point(307, 33);
-            this.dateTimePickerTill.Name = "dateTimePickerTill";
-            this.dateTimePickerTill.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerTill.TabIndex = 5;
-            // 
-            // dateTimePickerFrån
-            // 
-            this.dateTimePickerFrån.Location = new System.Drawing.Point(25, 33);
-            this.dateTimePickerFrån.Name = "dateTimePickerFrån";
-            this.dateTimePickerFrån.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerFrån.TabIndex = 4;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(559, 30);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Sök antal barn";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.buttonSökAntalFramtidaBarn_Click);
-            // 
             // MittKontoTabControl
             // 
             this.MittKontoTabControl.Controls.Add(this.tabPage1);
@@ -1961,6 +1297,671 @@
             this.label39.TabIndex = 16;
             this.label39.Text = "Barn:";
             // 
+            // NärvarotabControl
+            // 
+            this.NärvarotabControl.Controls.Add(this.tabPage6);
+            this.NärvarotabControl.Controls.Add(this.tabPage5);
+            this.NärvarotabControl.Controls.Add(this.tabPage2);
+            this.NärvarotabControl.Location = new System.Drawing.Point(196, 36);
+            this.NärvarotabControl.Name = "NärvarotabControl";
+            this.NärvarotabControl.SelectedIndex = 0;
+            this.NärvarotabControl.Size = new System.Drawing.Size(748, 389);
+            this.NärvarotabControl.TabIndex = 23;
+            this.NärvarotabControl.Visible = false;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage6.Controls.Add(this.buttonDöljDiagram);
+            this.tabPage6.Controls.Add(this.panelHjälpiNärvarohantering);
+            this.tabPage6.Controls.Add(this.buttonHjälpiNärvarohantering);
+            this.tabPage6.Controls.Add(this.dataGridViewDagensBarn);
+            this.tabPage6.Controls.Add(this.buttonUppdateraNärvaro);
+            this.tabPage6.Controls.Add(this.labelAntalBarnIdag);
+            this.tabPage6.Controls.Add(this.labelAntalBarn);
+            this.tabPage6.Controls.Add(this.labelTid);
+            this.tabPage6.Controls.Add(this.buttonVisaDiagram);
+            this.tabPage6.Controls.Add(this.chartBarnensTider);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(740, 363);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Närvarohantering";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // buttonDöljDiagram
+            // 
+            this.buttonDöljDiagram.Location = new System.Drawing.Point(635, 327);
+            this.buttonDöljDiagram.Name = "buttonDöljDiagram";
+            this.buttonDöljDiagram.Size = new System.Drawing.Size(75, 23);
+            this.buttonDöljDiagram.TabIndex = 17;
+            this.buttonDöljDiagram.Text = "Dölj diagram";
+            this.buttonDöljDiagram.UseVisualStyleBackColor = true;
+            this.buttonDöljDiagram.Visible = false;
+            this.buttonDöljDiagram.Click += new System.EventHandler(this.buttonDöljDiagram_Click);
+            // 
+            // panelHjälpiNärvarohantering
+            // 
+            this.panelHjälpiNärvarohantering.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpiNärvarohantering.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpiNärvarohantering.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpiNärvarohantering.Controls.Add(this.labelHjälpiNärvarohantering);
+            this.panelHjälpiNärvarohantering.Location = new System.Drawing.Point(499, 16);
+            this.panelHjälpiNärvarohantering.Name = "panelHjälpiNärvarohantering";
+            this.panelHjälpiNärvarohantering.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpiNärvarohantering.TabIndex = 43;
+            this.panelHjälpiNärvarohantering.Visible = false;
+            // 
+            // labelHjälpiNärvarohantering
+            // 
+            this.labelHjälpiNärvarohantering.AutoSize = true;
+            this.labelHjälpiNärvarohantering.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpiNärvarohantering.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpiNärvarohantering.Name = "labelHjälpiNärvarohantering";
+            this.labelHjälpiNärvarohantering.Size = new System.Drawing.Size(202, 117);
+            this.labelHjälpiNärvarohantering.TabIndex = 0;
+            this.labelHjälpiNärvarohantering.Text = resources.GetString("labelHjälpiNärvarohantering.Text");
+            this.labelHjälpiNärvarohantering.Visible = false;
+            // 
+            // buttonHjälpiNärvarohantering
+            // 
+            this.buttonHjälpiNärvarohantering.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpiNärvarohantering.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpiNärvarohantering.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpiNärvarohantering.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpiNärvarohantering.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpiNärvarohantering.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpiNärvarohantering.Location = new System.Drawing.Point(709, -2);
+            this.buttonHjälpiNärvarohantering.Name = "buttonHjälpiNärvarohantering";
+            this.buttonHjälpiNärvarohantering.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpiNärvarohantering.TabIndex = 42;
+            this.buttonHjälpiNärvarohantering.UseVisualStyleBackColor = true;
+            this.buttonHjälpiNärvarohantering.MouseLeave += new System.EventHandler(this.buttonHjälpiNärvarohantering_MouseLeave);
+            this.buttonHjälpiNärvarohantering.MouseHover += new System.EventHandler(this.buttonHjälpiNärvarohantering_MouseHover);
+            // 
+            // dataGridViewDagensBarn
+            // 
+            this.dataGridViewDagensBarn.AllowUserToOrderColumns = true;
+            this.dataGridViewDagensBarn.AutoGenerateColumns = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDagensBarn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewDagensBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDagensBarn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Datum,
+            this.Barnid,
+            this.förnamnDataGridViewTextBoxColumn1,
+            this.efternamnDataGridViewTextBoxColumn1,
+            this.TidLämnad,
+            this.TidHämtad,
+            this.närvarande,
+            this.hämtad,
+            this.HämtasAv,
+            this.Allergier});
+            this.dataGridViewDagensBarn.DataSource = this.närvaroBindingSource1;
+            this.dataGridViewDagensBarn.Location = new System.Drawing.Point(9, 21);
+            this.dataGridViewDagensBarn.Name = "dataGridViewDagensBarn";
+            this.dataGridViewDagensBarn.Size = new System.Drawing.Size(718, 240);
+            this.dataGridViewDagensBarn.TabIndex = 10;
+            // 
+            // Datum
+            // 
+            this.Datum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Datum.DataPropertyName = "Datum";
+            this.Datum.HeaderText = "Datum";
+            this.Datum.Name = "Datum";
+            this.Datum.Width = 69;
+            // 
+            // Barnid
+            // 
+            this.Barnid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Barnid.DataPropertyName = "Barnid";
+            this.Barnid.HeaderText = "Barnid";
+            this.Barnid.Name = "Barnid";
+            this.Barnid.Width = 68;
+            // 
+            // TidLämnad
+            // 
+            this.TidLämnad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TidLämnad.DataPropertyName = "TidLämnad";
+            this.TidLämnad.HeaderText = "Lämnas";
+            this.TidLämnad.Name = "TidLämnad";
+            this.TidLämnad.Width = 77;
+            // 
+            // TidHämtad
+            // 
+            this.TidHämtad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TidHämtad.DataPropertyName = "TidHämtad";
+            this.TidHämtad.HeaderText = "Hämtas";
+            this.TidHämtad.Name = "TidHämtad";
+            this.TidHämtad.Width = 75;
+            // 
+            // närvarande
+            // 
+            this.närvarande.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.närvarande.DataPropertyName = "närvarande";
+            this.närvarande.HeaderText = "Närvarande";
+            this.närvarande.Name = "närvarande";
+            this.närvarande.Width = 77;
+            // 
+            // hämtad
+            // 
+            this.hämtad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.hämtad.DataPropertyName = "hämtad";
+            this.hämtad.HeaderText = "Hämtad";
+            this.hämtad.Name = "hämtad";
+            this.hämtad.Width = 57;
+            // 
+            // HämtasAv
+            // 
+            this.HämtasAv.DataPropertyName = "HämtasAv";
+            this.HämtasAv.HeaderText = "Hämtas av";
+            this.HämtasAv.Name = "HämtasAv";
+            // 
+            // Allergier
+            // 
+            this.Allergier.DataPropertyName = "Allergier";
+            this.Allergier.HeaderText = "Allergier";
+            this.Allergier.Name = "Allergier";
+            // 
+            // buttonUppdateraNärvaro
+            // 
+            this.buttonUppdateraNärvaro.Location = new System.Drawing.Point(612, 267);
+            this.buttonUppdateraNärvaro.Name = "buttonUppdateraNärvaro";
+            this.buttonUppdateraNärvaro.Size = new System.Drawing.Size(117, 38);
+            this.buttonUppdateraNärvaro.TabIndex = 16;
+            this.buttonUppdateraNärvaro.Text = "Uppdatera närvarande/hämtade";
+            this.buttonUppdateraNärvaro.UseVisualStyleBackColor = true;
+            this.buttonUppdateraNärvaro.Click += new System.EventHandler(this.buttonUppdateraNärvaro_Click);
+            // 
+            // labelAntalBarnIdag
+            // 
+            this.labelAntalBarnIdag.AutoSize = true;
+            this.labelAntalBarnIdag.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAntalBarnIdag.Location = new System.Drawing.Point(12, 1);
+            this.labelAntalBarnIdag.Name = "labelAntalBarnIdag";
+            this.labelAntalBarnIdag.Size = new System.Drawing.Size(83, 18);
+            this.labelAntalBarnIdag.TabIndex = 15;
+            this.labelAntalBarnIdag.Text = "Antal barn";
+            // 
+            // labelAntalBarn
+            // 
+            this.labelAntalBarn.AutoSize = true;
+            this.labelAntalBarn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAntalBarn.Location = new System.Drawing.Point(2, 167);
+            this.labelAntalBarn.Name = "labelAntalBarn";
+            this.labelAntalBarn.Size = new System.Drawing.Size(65, 13);
+            this.labelAntalBarn.TabIndex = 14;
+            this.labelAntalBarn.Text = "Antal barn";
+            this.labelAntalBarn.Visible = false;
+            // 
+            // labelTid
+            // 
+            this.labelTid.AutoSize = true;
+            this.labelTid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTid.Location = new System.Drawing.Point(604, 333);
+            this.labelTid.Name = "labelTid";
+            this.labelTid.Size = new System.Drawing.Size(25, 13);
+            this.labelTid.TabIndex = 13;
+            this.labelTid.Text = "Tid";
+            this.labelTid.Visible = false;
+            // 
+            // buttonVisaDiagram
+            // 
+            this.buttonVisaDiagram.Location = new System.Drawing.Point(612, 313);
+            this.buttonVisaDiagram.Name = "buttonVisaDiagram";
+            this.buttonVisaDiagram.Size = new System.Drawing.Size(117, 38);
+            this.buttonVisaDiagram.TabIndex = 12;
+            this.buttonVisaDiagram.Text = "Visa diagram";
+            this.buttonVisaDiagram.UseVisualStyleBackColor = true;
+            this.buttonVisaDiagram.Click += new System.EventHandler(this.buttonVisaDiagram_Click);
+            // 
+            // chartBarnensTider
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartBarnensTider.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartBarnensTider.Legends.Add(legend2);
+            this.chartBarnensTider.Location = new System.Drawing.Point(-24, 176);
+            this.chartBarnensTider.Name = "chartBarnensTider";
+            this.chartBarnensTider.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Barn lämnas";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Barn hämtas";
+            this.chartBarnensTider.Series.Add(series3);
+            this.chartBarnensTider.Series.Add(series4);
+            this.chartBarnensTider.Size = new System.Drawing.Size(779, 184);
+            this.chartBarnensTider.TabIndex = 11;
+            this.chartBarnensTider.Text = "chart1";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.panelHjälpISökDatum);
+            this.tabPage5.Controls.Add(this.buttonHjälpSökDatum);
+            this.tabPage5.Controls.Add(this.label1);
+            this.tabPage5.Controls.Add(this.label8);
+            this.tabPage5.Controls.Add(this.labelObligatorisk);
+            this.tabPage5.Controls.Add(this.dataGridViewFrånvarandeINärvarohantering);
+            this.tabPage5.Controls.Add(this.label17);
+            this.tabPage5.Controls.Add(this.labelSkrivut);
+            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.label15);
+            this.tabPage5.Controls.Add(this.dataGridViewNärvarandeINärvarohantering);
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Controls.Add(this.FrånvarandeRadioButton);
+            this.tabPage5.Controls.Add(this.NärvarandeRadioButton);
+            this.tabPage5.Controls.Add(this.monthCalendar23INärvarohantering);
+            this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(740, 363);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Sök datum";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // panelHjälpISökDatum
+            // 
+            this.panelHjälpISökDatum.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpISökDatum.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpISökDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpISökDatum.Controls.Add(this.labelHjälpiSökDatum);
+            this.panelHjälpISökDatum.Location = new System.Drawing.Point(491, 23);
+            this.panelHjälpISökDatum.Name = "panelHjälpISökDatum";
+            this.panelHjälpISökDatum.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpISökDatum.TabIndex = 38;
+            this.panelHjälpISökDatum.Visible = false;
+            this.panelHjälpISökDatum.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHjälpISökDatum_Paint);
+            // 
+            // labelHjälpiSökDatum
+            // 
+            this.labelHjälpiSökDatum.AutoSize = true;
+            this.labelHjälpiSökDatum.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpiSökDatum.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpiSökDatum.Name = "labelHjälpiSökDatum";
+            this.labelHjälpiSökDatum.Size = new System.Drawing.Size(215, 104);
+            this.labelHjälpiSökDatum.TabIndex = 0;
+            this.labelHjälpiSökDatum.Text = "Hjälp.\r\n\r\nVänligen välj datum och sedan om du vill se\r\nnärvarande eller frånvaran" +
+    "de barn. Tryck på\r\nsök valt datum.\r\n\r\nOm du vill skriva ut listan så tryck på \r\n" +
+    "skrivut ikonen.";
+            this.labelHjälpiSökDatum.Visible = false;
+            // 
+            // buttonHjälpSökDatum
+            // 
+            this.buttonHjälpSökDatum.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpSökDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpSökDatum.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpSökDatum.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpSökDatum.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpSökDatum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpSökDatum.Location = new System.Drawing.Point(700, 6);
+            this.buttonHjälpSökDatum.Name = "buttonHjälpSökDatum";
+            this.buttonHjälpSökDatum.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpSökDatum.TabIndex = 37;
+            this.buttonHjälpSökDatum.UseVisualStyleBackColor = true;
+            this.buttonHjälpSökDatum.MouseLeave += new System.EventHandler(this.buttonHjälpSökDatum_MouseLeave);
+            this.buttonHjälpSökDatum.MouseHover += new System.EventHandler(this.buttonHjälpSökDatum_MouseHover);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(80, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 25);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(13, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 18);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Välj dag:";
+            // 
+            // labelObligatorisk
+            // 
+            this.labelObligatorisk.AutoSize = true;
+            this.labelObligatorisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObligatorisk.ForeColor = System.Drawing.Color.Red;
+            this.labelObligatorisk.Location = new System.Drawing.Point(393, 5);
+            this.labelObligatorisk.Name = "labelObligatorisk";
+            this.labelObligatorisk.Size = new System.Drawing.Size(20, 25);
+            this.labelObligatorisk.TabIndex = 34;
+            this.labelObligatorisk.Text = "*";
+            // 
+            // dataGridViewFrånvarandeINärvarohantering
+            // 
+            this.dataGridViewFrånvarandeINärvarohantering.AutoGenerateColumns = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewFrånvarandeINärvarohantering.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewFrånvarandeINärvarohantering.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFrånvarandeINärvarohantering.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.datumDataGridViewTextBoxColumn3,
+            this.förnamnDataGridViewTextBoxColumn5,
+            this.efternamnDataGridViewTextBoxColumn5,
+            this.sjukDataGridViewCheckBoxColumn,
+            this.ledigDataGridViewCheckBoxColumn});
+            this.dataGridViewFrånvarandeINärvarohantering.DataSource = this.frånvaroBindingSource;
+            this.dataGridViewFrånvarandeINärvarohantering.Location = new System.Drawing.Point(16, 195);
+            this.dataGridViewFrånvarandeINärvarohantering.Name = "dataGridViewFrånvarandeINärvarohantering";
+            this.dataGridViewFrånvarandeINärvarohantering.Size = new System.Drawing.Size(541, 150);
+            this.dataGridViewFrånvarandeINärvarohantering.TabIndex = 21;
+            this.dataGridViewFrånvarandeINärvarohantering.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(377, 176);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(0, 13);
+            this.label17.TabIndex = 20;
+            // 
+            // labelSkrivut
+            // 
+            this.labelSkrivut.AutoSize = true;
+            this.labelSkrivut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSkrivut.Location = new System.Drawing.Point(575, 101);
+            this.labelSkrivut.Name = "labelSkrivut";
+            this.labelSkrivut.Size = new System.Drawing.Size(0, 13);
+            this.labelSkrivut.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(610, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 61);
+            this.button1.TabIndex = 18;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(306, 120);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 23);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Sök valt datum";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.buttonSökValtDatumINärvarohantering_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(303, 176);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 13);
+            this.label15.TabIndex = 16;
+            // 
+            // dataGridViewNärvarandeINärvarohantering
+            // 
+            this.dataGridViewNärvarandeINärvarohantering.AutoGenerateColumns = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewNärvarandeINärvarohantering.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewNärvarandeINärvarohantering.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNärvarandeINärvarohantering.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.datumDataGridViewTextBoxColumn,
+            this.förnamnDataGridViewTextBoxColumn,
+            this.efternamnDataGridViewTextBoxColumn,
+            this.tidLämnadDataGridViewTextBoxColumn,
+            this.tidHämtadDataGridViewTextBoxColumn,
+            this.hämtasAvDataGridViewTextBoxColumn});
+            this.dataGridViewNärvarandeINärvarohantering.DataSource = this.närvaroBindingSource;
+            this.dataGridViewNärvarandeINärvarohantering.Location = new System.Drawing.Point(16, 195);
+            this.dataGridViewNärvarandeINärvarohantering.Name = "dataGridViewNärvarandeINärvarohantering";
+            this.dataGridViewNärvarandeINärvarohantering.Size = new System.Drawing.Size(644, 150);
+            this.dataGridViewNärvarandeINärvarohantering.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(307, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Välj status:";
+            // 
+            // FrånvarandeRadioButton
+            // 
+            this.FrånvarandeRadioButton.AutoSize = true;
+            this.FrånvarandeRadioButton.Location = new System.Drawing.Point(310, 60);
+            this.FrånvarandeRadioButton.Name = "FrånvarandeRadioButton";
+            this.FrånvarandeRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.FrånvarandeRadioButton.TabIndex = 6;
+            this.FrånvarandeRadioButton.Text = "Frånvarande";
+            this.FrånvarandeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // NärvarandeRadioButton
+            // 
+            this.NärvarandeRadioButton.AutoSize = true;
+            this.NärvarandeRadioButton.Location = new System.Drawing.Point(310, 37);
+            this.NärvarandeRadioButton.Name = "NärvarandeRadioButton";
+            this.NärvarandeRadioButton.Size = new System.Drawing.Size(81, 17);
+            this.NärvarandeRadioButton.TabIndex = 5;
+            this.NärvarandeRadioButton.Text = "Närvarande";
+            this.NärvarandeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // monthCalendar23INärvarohantering
+            // 
+            this.monthCalendar23INärvarohantering.Location = new System.Drawing.Point(16, 31);
+            this.monthCalendar23INärvarohantering.Name = "monthCalendar23INärvarohantering";
+            this.monthCalendar23INärvarohantering.ShowWeekNumbers = true;
+            this.monthCalendar23INärvarohantering.TabIndex = 13;
+            this.monthCalendar23INärvarohantering.TodayDate = new System.DateTime(2016, 9, 21, 0, 0, 0, 0);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.panelHjälpiFramtidsÖversikt);
+            this.tabPage2.Controls.Add(this.buttonHjälpiFramtidsÖversikt);
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.labelHurMångaBarnUnderSöktaDatum);
+            this.tabPage2.Controls.Add(this.dataGridViewAllaFramtidaBarn);
+            this.tabPage2.Controls.Add(this.labelTotaltAntalBarn);
+            this.tabPage2.Controls.Add(this.dateTimePickerTill);
+            this.tabPage2.Controls.Add(this.dateTimePickerFrån);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(740, 363);
+            this.tabPage2.TabIndex = 2;
+            this.tabPage2.Text = "Framtidsöversikt";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panelHjälpiFramtidsÖversikt
+            // 
+            this.panelHjälpiFramtidsÖversikt.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpiFramtidsÖversikt.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpiFramtidsÖversikt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpiFramtidsÖversikt.Controls.Add(this.labelHjälpiFramtidsÖversikt);
+            this.panelHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(491, 23);
+            this.panelHjälpiFramtidsÖversikt.Name = "panelHjälpiFramtidsÖversikt";
+            this.panelHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpiFramtidsÖversikt.TabIndex = 41;
+            this.panelHjälpiFramtidsÖversikt.Visible = false;
+            // 
+            // labelHjälpiFramtidsÖversikt
+            // 
+            this.labelHjälpiFramtidsÖversikt.AutoSize = true;
+            this.labelHjälpiFramtidsÖversikt.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpiFramtidsÖversikt.Name = "labelHjälpiFramtidsÖversikt";
+            this.labelHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(193, 65);
+            this.labelHjälpiFramtidsÖversikt.TabIndex = 0;
+            this.labelHjälpiFramtidsÖversikt.Text = "Hjälp.\r\n\r\nVänligen välj datum och tryck sedan på\r\nsök antal barn för att se antal" +
+    "\r\nsamt alla närvarande barn.\r\n";
+            this.labelHjälpiFramtidsÖversikt.Visible = false;
+            // 
+            // buttonHjälpiFramtidsÖversikt
+            // 
+            this.buttonHjälpiFramtidsÖversikt.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpiFramtidsÖversikt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpiFramtidsÖversikt.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpiFramtidsÖversikt.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpiFramtidsÖversikt.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpiFramtidsÖversikt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(700, 6);
+            this.buttonHjälpiFramtidsÖversikt.Name = "buttonHjälpiFramtidsÖversikt";
+            this.buttonHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpiFramtidsÖversikt.TabIndex = 40;
+            this.buttonHjälpiFramtidsÖversikt.UseVisualStyleBackColor = true;
+            this.buttonHjälpiFramtidsÖversikt.MouseLeave += new System.EventHandler(this.buttonHjälpiFramtidsÖversikt_MouseLeave);
+            this.buttonHjälpiFramtidsÖversikt.MouseHover += new System.EventHandler(this.buttonHjälpiFramtidsÖversikt_MouseHover);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(324, 7);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(15, 20);
+            this.label21.TabIndex = 38;
+            this.label21.Text = "*";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(55, 8);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(15, 20);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "*";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(293, 9);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(35, 18);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Till:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(13, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 18);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Från:";
+            // 
+            // labelHurMångaBarnUnderSöktaDatum
+            // 
+            this.labelHurMångaBarnUnderSöktaDatum.AutoSize = true;
+            this.labelHurMångaBarnUnderSöktaDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHurMångaBarnUnderSöktaDatum.Location = new System.Drawing.Point(417, 92);
+            this.labelHurMångaBarnUnderSöktaDatum.Name = "labelHurMångaBarnUnderSöktaDatum";
+            this.labelHurMångaBarnUnderSöktaDatum.Size = new System.Drawing.Size(61, 18);
+            this.labelHurMångaBarnUnderSöktaDatum.TabIndex = 9;
+            this.labelHurMångaBarnUnderSöktaDatum.Text = "label11";
+            this.labelHurMångaBarnUnderSöktaDatum.Visible = false;
+            // 
+            // dataGridViewAllaFramtidaBarn
+            // 
+            this.dataGridViewAllaFramtidaBarn.AutoGenerateColumns = false;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAllaFramtidaBarn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewAllaFramtidaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllaFramtidaBarn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.förnamnDataGridViewTextBoxColumn2,
+            this.efternamnDataGridViewTextBoxColumn2,
+            this.avdelningsidDataGridViewTextBoxColumn,
+            this.allergierDataGridViewTextBoxColumn,
+            this.annatDataGridViewTextBoxColumn,
+            this.antalDagarDataGridViewTextBoxColumn});
+            this.dataGridViewAllaFramtidaBarn.DataSource = this.barnBindingSource;
+            this.dataGridViewAllaFramtidaBarn.Location = new System.Drawing.Point(16, 115);
+            this.dataGridViewAllaFramtidaBarn.Name = "dataGridViewAllaFramtidaBarn";
+            this.dataGridViewAllaFramtidaBarn.ReadOnly = true;
+            this.dataGridViewAllaFramtidaBarn.Size = new System.Drawing.Size(642, 232);
+            this.dataGridViewAllaFramtidaBarn.TabIndex = 8;
+            // 
+            // labelTotaltAntalBarn
+            // 
+            this.labelTotaltAntalBarn.AutoSize = true;
+            this.labelTotaltAntalBarn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotaltAntalBarn.Location = new System.Drawing.Point(20, 92);
+            this.labelTotaltAntalBarn.Name = "labelTotaltAntalBarn";
+            this.labelTotaltAntalBarn.Size = new System.Drawing.Size(54, 18);
+            this.labelTotaltAntalBarn.TabIndex = 6;
+            this.labelTotaltAntalBarn.Text = "label11";
+            this.labelTotaltAntalBarn.Visible = false;
+            // 
+            // dateTimePickerTill
+            // 
+            this.dateTimePickerTill.Location = new System.Drawing.Point(307, 33);
+            this.dateTimePickerTill.Name = "dateTimePickerTill";
+            this.dateTimePickerTill.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerTill.TabIndex = 5;
+            // 
+            // dateTimePickerFrån
+            // 
+            this.dateTimePickerFrån.Location = new System.Drawing.Point(25, 33);
+            this.dateTimePickerFrån.Name = "dateTimePickerFrån";
+            this.dateTimePickerFrån.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerFrån.TabIndex = 4;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(559, 30);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Sök antal barn";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.buttonSökAntalFramtidaBarn_Click);
+            // 
             // panelskrivut
             // 
             this.panelskrivut.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
@@ -2110,6 +2111,22 @@
             // printDocument2
             // 
             this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
+            // 
+            // minimeraButton
+            // 
+            this.minimeraButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.minimeraButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.minimeraButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.minimeraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimeraButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimeraButton.ForeColor = System.Drawing.Color.Black;
+            this.minimeraButton.Location = new System.Drawing.Point(943, 12);
+            this.minimeraButton.Name = "minimeraButton";
+            this.minimeraButton.Size = new System.Drawing.Size(24, 23);
+            this.minimeraButton.TabIndex = 31;
+            this.minimeraButton.Text = "-";
+            this.minimeraButton.UseVisualStyleBackColor = false;
+            this.minimeraButton.Click += new System.EventHandler(this.minimeraButton_Click_1);
             // 
             // förnamnDataGridViewTextBoxColumn1
             // 
@@ -2311,6 +2328,7 @@
             this.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.Background1024x600;
             this.ClientSize = new System.Drawing.Size(1008, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.minimeraButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.kontoTypLabel);
             this.Controls.Add(this.pictureBox1);
@@ -2334,6 +2352,22 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.MittKontoTabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.panelHjälpiKontouppgifter.ResumeLayout(false);
+            this.panelHjälpiKontouppgifter.PerformLayout();
+            this.ändraLösenPanel.ResumeLayout(false);
+            this.ändraLösenPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.BarntabControl.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.panelHjälpiBarnöversikt.ResumeLayout(false);
+            this.panelHjälpiBarnöversikt.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.NärvarotabControl.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
@@ -2352,22 +2386,6 @@
             this.panelHjälpiFramtidsÖversikt.ResumeLayout(false);
             this.panelHjälpiFramtidsÖversikt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllaFramtidaBarn)).EndInit();
-            this.MittKontoTabControl.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.panelHjälpiKontouppgifter.ResumeLayout(false);
-            this.panelHjälpiKontouppgifter.PerformLayout();
-            this.ändraLösenPanel.ResumeLayout(false);
-            this.ändraLösenPanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.BarntabControl.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.panelHjälpiBarnöversikt.ResumeLayout(false);
-            this.panelHjälpiBarnöversikt.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panelskrivut.ResumeLayout(false);
             this.panelskrivut.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSkrivut)).EndInit();
@@ -2568,5 +2586,6 @@
         private System.Windows.Forms.TextBox textBoxEfternamnMittkonto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxFörnamnMittkonto;
+        private System.Windows.Forms.Button minimeraButton;
     }
 }

@@ -54,6 +54,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.minimeraButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -337,6 +338,22 @@
             this.panel1.Size = new System.Drawing.Size(524, 443);
             this.panel1.TabIndex = 3;
             // 
+            // minimeraButton
+            // 
+            this.minimeraButton.BackColor = System.Drawing.Color.LightGray;
+            this.minimeraButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.minimeraButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.minimeraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimeraButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimeraButton.ForeColor = System.Drawing.Color.Black;
+            this.minimeraButton.Location = new System.Drawing.Point(728, 2);
+            this.minimeraButton.Name = "minimeraButton";
+            this.minimeraButton.Size = new System.Drawing.Size(24, 23);
+            this.minimeraButton.TabIndex = 30;
+            this.minimeraButton.Text = "-";
+            this.minimeraButton.UseVisualStyleBackColor = false;
+            this.minimeraButton.Click += new System.EventHandler(this.minimeraButton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +361,7 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.minimeraButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
@@ -391,6 +409,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label MobilLink;
+        private System.Windows.Forms.Button minimeraButton;
     }
 }
 
