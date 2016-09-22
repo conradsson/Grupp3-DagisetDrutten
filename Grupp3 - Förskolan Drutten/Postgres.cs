@@ -169,7 +169,6 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="barnid"></param>
         public void TaBortNärvaro(DateTime datum, int barnid)
         {
-            conn.Open();
             string meddelande;
             try
             {
@@ -198,10 +197,10 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         /// <param name="datum"></param>
         /// <param name="barnid"></param>
-        public void KontrolleraNärvaro(DateTime datum, int barnid)
+        public bool KontrolleraNärvaro(DateTime datum, int barnid)
         {
             string sql = "select * from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
-
+            bool finnsNärvaro = false;
             tabell.Clear();
             tabell = sqlFråga(sql);
             Närvaro narvaro = new Närvaro();
@@ -217,9 +216,16 @@ namespace Grupp3___Förskolan_Drutten
 
             if(narvaro.Datum == datum && narvaro.barnid == barnid)
             {
-                TaBortNärvaro(datum, barnid);
+                finnsNärvaro = true;
+                //TaBortNärvaro(datum, barnid);
             }
+            else
+            {
+                finnsNärvaro = false;
             }
+            
+            }
+            return finnsNärvaro;
         }
 
         /// <summary>

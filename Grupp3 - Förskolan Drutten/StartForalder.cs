@@ -232,11 +232,12 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Var vänlig och fyll i tider.");
             }
+            else if(hämtas == "18:05" || hämtas == "18:10" || hämtas == "18:15" || hämtas == "18:20" || hämtas == "18:25" || hämtas == "18:30" || hämtas == "18:35" || hämtas == "18:40" || hämtas == "18:45" || hämtas == "18:50" || hämtas == "18:55")
+            {
+                MessageBox.Show("Tiden som barnet hämtas får ej anges till senare än kl 18:00.");
+            }
             else
             {
-               
-
-                    
 
                     textBoxHämtasAv1.Clear();
                 
@@ -258,7 +259,16 @@ namespace Grupp3___Förskolan_Drutten
                     Postgres p4 = new Postgres();
                     p4.TaBortFrånvaro(datum, barnid);
                     }
+                  
                 }
+                else
+                    {
+                        Postgres p = new Postgres();
+                        p.LäggTillTid(datum, barnid, lämnas, hämtas);
+
+                        Postgres po = new Postgres();
+                        po.KontrolleraHämtning(datum, barnid, hamtas);
+                    }
                 Postgres p1 = new Postgres();
                 Postgres p2 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
@@ -273,6 +283,7 @@ namespace Grupp3___Förskolan_Drutten
             comboBoxFrån2.Text = "";
             comboBoxTill1.Text = "";
             comboBoxTill2.Text = "";
+            MetodHämtaBarnetsTid(datum);
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -406,6 +417,10 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     MessageBox.Show("Var vänlig och fyll i tider.");
                 }
+                else if (hamtas == "18:05" || hamtas == "18:10" || hamtas == "18:15" || hamtas == "18:20" || hamtas == "18:25" || hamtas == "18:30" || hamtas == "18:35" || hamtas == "18:40" || hamtas == "18:45" || hamtas == "18:50" || hamtas == "18:55")
+                {
+                    MessageBox.Show("Tiden som barnet hämtas får ej anges till senare än kl 18:00.");
+                }
                 else
                 {
                     p.UppdateraTider(datum, id, lamnas, hamtas, hamtasAv);
@@ -498,6 +513,7 @@ namespace Grupp3___Förskolan_Drutten
                 DateTime datummetod = DateTime.Today;
                 bool sjuk;
                 bool ledig;
+                bool närvaro;
 
                 if (datum < datummetod)
                 {
@@ -507,34 +523,52 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     sjuk = true;
                     ledig = false;
-                    p.LäggTillFånvaro(datum, id, sjuk, ledig);
+                    
                     Postgres p1 = new Postgres();
-                    p1.KontrolleraNärvaro(datum, id);
+                    närvaro = p1.KontrolleraNärvaro(datum, id);
+                    if (närvaro == true)
+                    {
+                        DialogResult result = MessageBox.Show("Det finns en tid meddelad detta datum! \n\nOm du trycker på OK meddelas frånvaron och tiden tas bort. \nOm du trycker på AVBRYT meddelas inte frånvaron och tiden kvarstår.", "Meddela frånvaro", MessageBoxButtons.OKCancel);
+                        if (result == DialogResult.OK)
+                        {
+                            p.LäggTillFånvaro(datum, id, sjuk, ledig);
 
-                    Postgres pp = new Postgres();
-                    dataGridViewMeddelaFrånvaro.DataSource = null;
-                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datummetod);
-                    Postgres p2 = new Postgres();
-                    Postgres p3 = new Postgres();
-                    dataGridViewTiderBarn.DataSource = null;
-                    dataGridViewTiderBarn.DataSource = p3.HämtaBarnetsTider(id, datummetod);
+                            Postgres post = new Postgres();
+                            post.TaBortNärvaro(datum, id);
+                        }
+                       
+                    }
+                    else
+                    {   
+                        Postgres p2 = new Postgres();
+                        p2.LäggTillFånvaro(datum, id, sjuk, ledig);
+                    }
 
                 }
                 else if (radioButtonLedig.Checked)
                 {
                     sjuk = false;
                     ledig = true;
-                    p.LäggTillFånvaro(datum, id, sjuk, ledig);
-                    Postgres p2 = new Postgres();
-                    p2.KontrolleraNärvaro(datum, id);
+                    Postgres p1 = new Postgres();
+                    närvaro = p1.KontrolleraNärvaro(datum, id);
+                    if (närvaro == true)
+                    {
+                        DialogResult result = MessageBox.Show("Det finns en tid meddelad detta datum! \n\nOm du trycker på OK meddelas frånvaron och tiden tas bort. \nOm du trycker på AVBRYT meddelas inte frånvaron och tiden kvarstår.", "Meddela frånvaro", MessageBoxButtons.OKCancel);
+                        if (result == DialogResult.OK)
+                        {
+                            p.LäggTillFånvaro(datum, id, sjuk, ledig);
 
-                    Postgres pp = new Postgres();
-                    dataGridViewMeddelaFrånvaro.DataSource = null;
-                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datummetod);
-                    Postgres p3 = new Postgres();
-                    Postgres p4 = new Postgres();
-                    dataGridViewTiderBarn.DataSource = null;
-                    dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, datummetod);
+                            Postgres post = new Postgres();
+                            post.TaBortNärvaro(datum, id);
+                        }
+
+                    }
+                    else
+                    {
+                        Postgres p2 = new Postgres();
+                        p2.LäggTillFånvaro(datum, id, sjuk, ledig);
+                    }
+             
                 }
                 else 
                 {
@@ -542,7 +576,13 @@ namespace Grupp3___Förskolan_Drutten
                     ledig = false;
                     MessageBox.Show("För att registrera frånvaro måste du välja antingen sjuk eller ledig.");
                 }
-                
+                Postgres pp = new Postgres();
+                    dataGridViewMeddelaFrånvaro.DataSource = null;
+                    dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datum);
+                    Postgres p3 = new Postgres();
+                    Postgres p4 = new Postgres();
+                    dataGridViewTiderBarn.DataSource = null;
+                    dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, datum);
             }
         }
 
@@ -739,6 +779,66 @@ namespace Grupp3___Förskolan_Drutten
         private void listBoxMeddelaHämtning_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonHjälpSenaste_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpSenaste.Visible = true;
+            labelHjälpSenaste.Visible = true;
+        }
+
+        private void buttonHjälpSenaste_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpSenaste.Visible = false;
+            labelHjälpSenaste.Visible = false;
+        }
+
+        private void buttonHjälpKontoUppgifter_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpKontoUppgifter.Visible = true;
+            labelHjälpKontoUppgifter.Visible = true;
+        }
+
+        private void buttonHjälpKontoUppgifter_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpKontoUppgifter.Visible = false;
+            labelHjälpKontoUppgifter.Visible = false;
+        }
+
+        private void buttonHjälpMinaBarn_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpMinaBarn.Visible = true;
+            labelHjälpMinaBarn.Visible = true;  
+        }
+
+        private void buttonHjälpMinaBarn_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpMinaBarn.Visible = false;
+            labelHjälpMinaBarn.Visible = false;
+        }
+
+        private void buttonHjälpMeddelaTider_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpMeddelaTider.Visible = true;
+            labelHjälpMeddelaTider.Visible = true;
+        }
+
+        private void buttonHjälpMeddelaTider_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpMeddelaTider.Visible = false;
+            labelHjälpMeddelaTider.Visible = false;
+        }
+
+        private void buttonHjälpMeddelaFrånvaro_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpMeddelaFrånvaro.Visible = true;
+            labelHjälpMeddelaFrånvaro.Visible = true;
+        }
+
+        private void buttonHjälpMeddelaFrånvaro_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpMeddelaFrånvaro.Visible = false;
+            labelHjälpMeddelaFrånvaro.Visible = false;
         }
     }
 }
