@@ -97,6 +97,9 @@
             this.buttonVisaDiagram = new System.Windows.Forms.Button();
             this.chartBarnensTider = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.panelHjälpISökDatum = new System.Windows.Forms.Panel();
+            this.labelHjälpiSökDatum = new System.Windows.Forms.Label();
+            this.buttonHjälpSökDatum = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.labelObligatorisk = new System.Windows.Forms.Label();
@@ -218,6 +221,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarnensTider)).BeginInit();
             this.tabPage5.SuspendLayout();
+            this.panelHjälpISökDatum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvarandeINärvarohantering)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNärvarandeINärvarohantering)).BeginInit();
@@ -959,6 +963,8 @@
             this.tabPage5.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
             this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.panelHjälpISökDatum);
+            this.tabPage5.Controls.Add(this.buttonHjälpSökDatum);
             this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Controls.Add(this.label8);
             this.tabPage5.Controls.Add(this.labelObligatorisk);
@@ -981,6 +987,46 @@
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Sök datum";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // panelHjälpISökDatum
+            // 
+            this.panelHjälpISökDatum.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpISökDatum.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpISökDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpISökDatum.Controls.Add(this.labelHjälpiSökDatum);
+            this.panelHjälpISökDatum.Location = new System.Drawing.Point(491, 23);
+            this.panelHjälpISökDatum.Name = "panelHjälpISökDatum";
+            this.panelHjälpISökDatum.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpISökDatum.TabIndex = 38;
+            this.panelHjälpISökDatum.Visible = false;
+            this.panelHjälpISökDatum.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHjälpISökDatum_Paint);
+            // 
+            // labelHjälpiSökDatum
+            // 
+            this.labelHjälpiSökDatum.AutoSize = true;
+            this.labelHjälpiSökDatum.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpiSökDatum.Location = new System.Drawing.Point(4, 13);
+            this.labelHjälpiSökDatum.Name = "labelHjälpiSökDatum";
+            this.labelHjälpiSökDatum.Size = new System.Drawing.Size(215, 104);
+            this.labelHjälpiSökDatum.TabIndex = 0;
+            this.labelHjälpiSökDatum.Text = "Hjälp.\r\n\r\nVänligen välj datum och sedan om du vill se\r\nnärvarande eller frånvaran" +
+    "de barn. Tryck på\r\nsök valt datum.\r\n\r\nOm du vill skriva ut listan så tryck på \r\n" +
+    "skrivut ikonen.";
+            this.labelHjälpiSökDatum.Visible = false;
+            // 
+            // buttonHjälpSökDatum
+            // 
+            this.buttonHjälpSökDatum.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpSökDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpSökDatum.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpSökDatum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpSökDatum.Location = new System.Drawing.Point(700, 6);
+            this.buttonHjälpSökDatum.Name = "buttonHjälpSökDatum";
+            this.buttonHjälpSökDatum.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpSökDatum.TabIndex = 37;
+            this.buttonHjälpSökDatum.UseVisualStyleBackColor = true;
+            this.buttonHjälpSökDatum.MouseLeave += new System.EventHandler(this.buttonHjälpSökDatum_MouseLeave);
+            this.buttonHjälpSökDatum.MouseHover += new System.EventHandler(this.buttonHjälpSökDatum_MouseHover);
             // 
             // label1
             // 
@@ -2061,6 +2107,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartBarnensTider)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.panelHjälpISökDatum.ResumeLayout(false);
+            this.panelHjälpISökDatum.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvarandeINärvarohantering)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNärvarandeINärvarohantering)).EndInit();
@@ -2259,5 +2307,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panelHjälpISökDatum;
+        private System.Windows.Forms.Button buttonHjälpSökDatum;
+        private System.Windows.Forms.Label labelHjälpiSökDatum;
     }
 }

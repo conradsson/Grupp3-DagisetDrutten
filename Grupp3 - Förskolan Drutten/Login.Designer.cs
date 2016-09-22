@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.MobilLink = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.LoggaInButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.MobilLink = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.copyButton = new System.Windows.Forms.Button();
             this.rensaEncryptButton = new System.Windows.Forms.Button();
@@ -79,6 +79,18 @@
             this.groupBox2.Size = new System.Drawing.Size(387, 273);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // MobilLink
+            // 
+            this.MobilLink.AutoSize = true;
+            this.MobilLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobilLink.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.MobilLink.Location = new System.Drawing.Point(171, 257);
+            this.MobilLink.Name = "MobilLink";
+            this.MobilLink.Size = new System.Drawing.Size(32, 13);
+            this.MobilLink.TabIndex = 14;
+            this.MobilLink.Text = "Mobil";
+            this.MobilLink.Click += new System.EventHandler(this.MobilLink_Click);
             // 
             // label10
             // 
@@ -174,7 +186,7 @@
             // 
             // LoggaInButton
             // 
-            this.LoggaInButton.Location = new System.Drawing.Point(126, 193);
+            this.LoggaInButton.Location = new System.Drawing.Point(144, 193);
             this.LoggaInButton.Name = "LoggaInButton";
             this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
             this.LoggaInButton.TabIndex = 3;
@@ -210,18 +222,6 @@
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
-            // MobilLink
-            // 
-            this.MobilLink.AutoSize = true;
-            this.MobilLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MobilLink.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.MobilLink.Location = new System.Drawing.Point(162, 260);
-            this.MobilLink.Name = "MobilLink";
-            this.MobilLink.Size = new System.Drawing.Size(32, 13);
-            this.MobilLink.TabIndex = 14;
-            this.MobilLink.Text = "Mobil";
-            this.MobilLink.Click += new System.EventHandler(this.MobilLink_Click);
             // 
             // panel2
             // 

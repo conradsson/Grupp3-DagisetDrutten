@@ -659,5 +659,22 @@ namespace Grupp3___Förskolan_Drutten
             ändraLösenPanel.Visible = true;
             ändraLösenPanel.Location = new Point(33, 37);
         }
+
+        private void panelHjälpISökDatum_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonHjälpSökDatum_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpISökDatum.Visible = true;
+            labelHjälpiSökDatum.Visible = true;
+        }
+
+        private void buttonHjälpSökDatum_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpISökDatum.Visible = false;
+            labelHjälpiSökDatum.Visible = false;
+        }
     }
 }
