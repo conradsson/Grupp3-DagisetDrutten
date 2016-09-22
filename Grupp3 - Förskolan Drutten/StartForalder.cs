@@ -851,5 +851,10 @@ namespace Grupp3___Förskolan_Drutten
             panelHjälpMeddelaFrånvaro.Visible = false;
             labelHjälpMeddelaFrånvaro.Visible = false;
         }
+
+        private void minimeraButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
