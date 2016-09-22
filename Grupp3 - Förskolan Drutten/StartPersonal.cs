@@ -29,7 +29,7 @@ namespace Grupp3___Förskolan_Drutten
             dataGridViewDagensBarn.Columns[1].Visible = false;
 
             monthCalendar23INärvarohantering.TodayDate = idag;
-            //närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonHär;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonHär;
 
 
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
@@ -50,7 +50,10 @@ namespace Grupp3___Förskolan_Drutten
                 MittKontoTabControl.Visible = false;
                 BarntabControl.Visible = false;
                 NärvarotabControl.Visible = false;
-                informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+                informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
+                 mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+                 närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
+                 barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
 
         }
         private void informationButton_MouseDown(object sender, MouseEventArgs e)
@@ -69,7 +72,10 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             BarntabControl.Visible = false;
             NärvarotabControl.Visible = false;
-            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonHär;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -83,7 +89,10 @@ namespace Grupp3___Förskolan_Drutten
             NärvarotabControl.Visible = false;
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
-            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonHär;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
 
             //dataGridAllaBarn.DataSource = null;
             Postgres p = new Postgres();
@@ -114,9 +123,10 @@ namespace Grupp3___Förskolan_Drutten
             BarntabControl.Visible = false;
             MittKontoTabControl.Visible = false;
             informationTabControl.Visible = false;
-            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
-
-
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonHär;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
 
             Postgres p = new Postgres();
             dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(DateTime.Today);
@@ -744,6 +754,11 @@ namespace Grupp3___Förskolan_Drutten
             panelHjälpiSenaste.Visible = false;
             labelHjälpiSenaste.Visible = false;
             buttonHjälpiSenaste.BackgroundImage = Properties.Resources.hjälpButtonpng;
+        }
+
+        private void loggaUtButton_MouseLeave(object sender, EventArgs e)
+        {
+            loggaUtButton.BackgroundImage = Properties.Resources.loggaUtButtonDrutten;
         }
     }
 }
