@@ -740,5 +740,65 @@ namespace Grupp3___Förskolan_Drutten
         {
 
         }
+
+        private void buttonHjälpSenaste_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpSenaste.Visible = true;
+            labelHjälpSenaste.Visible = true;
+        }
+
+        private void buttonHjälpSenaste_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpSenaste.Visible = false;
+            labelHjälpSenaste.Visible = false;
+        }
+
+        private void buttonHjälpKontoUppgifter_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpKontoUppgifter.Visible = true;
+            labelHjälpKontoUppgifter.Visible = true;
+        }
+
+        private void buttonHjälpKontoUppgifter_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpKontoUppgifter.Visible = false;
+            labelHjälpKontoUppgifter.Visible = false;
+        }
+
+        private void buttonHjälpMinaBarn_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpMinaBarn.Visible = true;
+            labelHjälpMinaBarn.Visible = true;  
+        }
+
+        private void buttonHjälpMinaBarn_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpMinaBarn.Visible = false;
+            labelHjälpMinaBarn.Visible = false;
+        }
+
+        private void buttonHjälpMeddelaTider_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpMeddelaTider.Visible = true;
+            labelHjälpMeddelaTider.Visible = true;
+        }
+
+        private void buttonHjälpMeddelaTider_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpMeddelaTider.Visible = false;
+            labelHjälpMeddelaTider.Visible = false;
+        }
+
+        private void buttonHjälpMeddelaFrånvaro_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpMeddelaFrånvaro.Visible = true;
+            labelHjälpMeddelaFrånvaro.Visible = true;
+        }
+
+        private void buttonHjälpMeddelaFrånvaro_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpMeddelaFrånvaro.Visible = false;
+            labelHjälpMeddelaFrånvaro.Visible = false;
+        }
     }
 }
