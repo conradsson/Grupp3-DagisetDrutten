@@ -114,6 +114,7 @@ namespace Grupp3___Förskolan_Drutten
             groupBox3.Visible = false;
 
             HämtaVilkenGroupboxSomSkasynas(idag);
+            p.StängConnection();
 
         }
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
