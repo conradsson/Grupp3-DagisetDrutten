@@ -363,6 +363,16 @@ namespace Grupp3___Förskolan_Drutten.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap informationButtonMouseOver {
+            get {
+                object obj = ResourceManager.GetObject("informationButtonMouseOver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap inloggadButtonDrutten {
             get {
                 object obj = ResourceManager.GetObject("inloggadButtonDrutten", resourceCulture);
@@ -416,6 +426,16 @@ namespace Grupp3___Förskolan_Drutten.Properties {
         internal static System.Drawing.Bitmap loggaUtButtonDruttenPushed {
             get {
                 object obj = ResourceManager.GetObject("loggaUtButtonDruttenPushed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loggaUtButtonMouseOver {
+            get {
+                object obj = ResourceManager.GetObject("loggaUtButtonMouseOver", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -794,6 +794,7 @@
             this.loggaUtButton.Click += new System.EventHandler(this.loggaUtButton_Click);
             this.loggaUtButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loggaUtButton_MouseDown);
             this.loggaUtButton.MouseLeave += new System.EventHandler(this.loggaUtButton_MouseLeave);
+            this.loggaUtButton.MouseHover += new System.EventHandler(this.loggaUtButton_MouseHover);
             // 
             // NärvarotabControl
             // 
