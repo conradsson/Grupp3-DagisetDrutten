@@ -813,9 +813,9 @@
             this.tabPage6.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
             this.tabPage6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage6.Controls.Add(this.buttonDöljDiagram);
             this.tabPage6.Controls.Add(this.panelHjälpiNärvarohantering);
             this.tabPage6.Controls.Add(this.buttonHjälpiNärvarohantering);
-            this.tabPage6.Controls.Add(this.buttonDöljDiagram);
             this.tabPage6.Controls.Add(this.dataGridViewDagensBarn);
             this.tabPage6.Controls.Add(this.buttonUppdateraNärvaro);
             this.tabPage6.Controls.Add(this.labelAntalBarnIdag);
@@ -1015,9 +1015,9 @@
             // 
             // buttonVisaDiagram
             // 
-            this.buttonVisaDiagram.Location = new System.Drawing.Point(635, 328);
+            this.buttonVisaDiagram.Location = new System.Drawing.Point(612, 313);
             this.buttonVisaDiagram.Name = "buttonVisaDiagram";
-            this.buttonVisaDiagram.Size = new System.Drawing.Size(75, 23);
+            this.buttonVisaDiagram.Size = new System.Drawing.Size(117, 38);
             this.buttonVisaDiagram.TabIndex = 12;
             this.buttonVisaDiagram.Text = "Visa diagram";
             this.buttonVisaDiagram.UseVisualStyleBackColor = true;
@@ -1973,7 +1973,7 @@
             this.panelskrivut.Controls.Add(this.panelskriv);
             this.panelskrivut.Controls.Add(this.status);
             this.panelskrivut.Controls.Add(this.lblskrivut);
-            this.panelskrivut.Location = new System.Drawing.Point(621, 64);
+            this.panelskrivut.Location = new System.Drawing.Point(987, 71);
             this.panelskrivut.MaximumSize = new System.Drawing.Size(660, 500);
             this.panelskrivut.MinimumSize = new System.Drawing.Size(660, 500);
             this.panelskrivut.Name = "panelskrivut";
