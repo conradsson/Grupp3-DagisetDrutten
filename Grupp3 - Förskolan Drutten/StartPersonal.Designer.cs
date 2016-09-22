@@ -594,7 +594,6 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.panelskrivut);
             this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Controls.Add(this.klocklabel2);
             this.panel1.Controls.Add(this.klocklabel1);
@@ -1973,7 +1972,7 @@
             this.panelskrivut.Controls.Add(this.panelskriv);
             this.panelskrivut.Controls.Add(this.status);
             this.panelskrivut.Controls.Add(this.lblskrivut);
-            this.panelskrivut.Location = new System.Drawing.Point(723, 36);
+            this.panelskrivut.Location = new System.Drawing.Point(621, 64);
             this.panelskrivut.MaximumSize = new System.Drawing.Size(660, 500);
             this.panelskrivut.MinimumSize = new System.Drawing.Size(660, 500);
             this.panelskrivut.Name = "panelskrivut";
@@ -2311,6 +2310,7 @@
             this.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.Background1024x600;
             this.ClientSize = new System.Drawing.Size(1008, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.panelskrivut);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.kontoTypLabel);
             this.Controls.Add(this.pictureBox1);
