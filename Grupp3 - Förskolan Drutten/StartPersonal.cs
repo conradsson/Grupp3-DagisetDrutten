@@ -435,10 +435,10 @@ namespace Grupp3___Förskolan_Drutten
 
             for (int i = 0; i < 11; i++)
             {
-                Postgres p = new Postgres();
+                Postgres p2 = new Postgres();
                 Postgres p1 = new Postgres();
 
-                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p.HämtaDagensTider(DateTime.Today, kollaTid++));
+                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p2.HämtaDagensTider(DateTime.Today, kollaTid++));
                 this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p1.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
 
                 p.StängConnection();
