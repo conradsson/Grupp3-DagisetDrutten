@@ -54,7 +54,7 @@ namespace Grupp3___Förskolan_Drutten
                  mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
                  närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
                  barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
-
+            p.StängConnection();
         }
         private void informationButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -100,7 +100,7 @@ namespace Grupp3___Förskolan_Drutten
             listBoxSöktaBarn.DataSource = p.HämtanBarn();
             labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
             //dataGridAllaBarn.DataSource = p.HämtanBarn();
-
+            p.StängConnection();
         }
         private void barnButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -135,8 +135,8 @@ namespace Grupp3___Förskolan_Drutten
 
             
             dataGridViewDagensBarn.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic;
-            
 
+            p.StängConnection();
         }
         private void närvaroButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -159,7 +159,7 @@ namespace Grupp3___Förskolan_Drutten
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
             barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
-
+            p.StängConnection();
         }
 
 
@@ -234,8 +234,8 @@ namespace Grupp3___Förskolan_Drutten
 
                 dataGridViewNärvarandeINärvarohantering.Visible = true;
                 dataGridViewFrånvarandeINärvarohantering.Visible = false;
-
-            }
+                    p.StängConnection();
+                }
             else if (FrånvarandeRadioButton.Checked)
             {
                 label15.Text = "Frånvarande:";
@@ -247,7 +247,8 @@ namespace Grupp3___Förskolan_Drutten
 
                 dataGridViewNärvarandeINärvarohantering.Visible = false;
                 dataGridViewFrånvarandeINärvarohantering.Visible = true;
-            }
+                    p.StängConnection();
+                }
 
             }
         }
@@ -301,7 +302,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 }
             }
-
+            p.StängConnection();
 
         }
 
@@ -316,6 +317,7 @@ namespace Grupp3___Förskolan_Drutten
 
             listBoxInlägg.DataSource = null;
             listBoxInlägg.DataSource = p.HämtaInläggPersonal();
+            p.StängConnection();
         }
 
         private void redigeraButton_Click(object sender, EventArgs e)
@@ -347,6 +349,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBoxInlägg.DataSource = p.HämtaInläggPersonal();
 
             }
+            p.StängConnection();
         }
 
         private void listBoxSöktaBarn_SelectedIndexChanged(object sender, EventArgs e)
@@ -375,7 +378,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBoxVårnadshavare.DataSource = null;
                 listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
                 labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
-
+                p.StängConnection();
             }
 
             else if (checkBoxAvdelning1.Checked == true)
@@ -384,6 +387,7 @@ namespace Grupp3___Förskolan_Drutten
                 listBoxVårnadshavare.DataSource = null;
                 listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök1(textBoxSökRuta.Text);
                 labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
+                p.StängConnection();
             }
             else if (checkBoxAvdelning2.Checked == true)
             {
@@ -391,13 +395,15 @@ namespace Grupp3___Förskolan_Drutten
                 listBoxVårnadshavare.DataSource = null;
                 listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök2(textBoxSökRuta.Text);
                 labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
+                p.StängConnection();
             }
             else
             {
                 Postgres p = new Postgres();
                 listBoxVårnadshavare.DataSource = null;
                 listBoxSöktaBarn.DataSource = p.HämtaBarnEfterSök(textBoxSökRuta.Text);
-                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();  
+                labelAntalSöktaBarn.Text = "Antal barn: " + listBoxSöktaBarn.Items.Count.ToString();
+                p.StängConnection();
             }
             
         }
@@ -424,6 +430,7 @@ namespace Grupp3___Förskolan_Drutten
                 textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
 
             }
+            p.StängConnection();
         }
 
         private void buttonVisaDiagram_Click(object sender, EventArgs e)
@@ -474,7 +481,7 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
             AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
 
-
+            p.StängConnection();
 
         }
 
@@ -502,6 +509,8 @@ namespace Grupp3___Förskolan_Drutten
             dataGridViewAllaFramtidaBarn.DataSource = p.HämtaFramtidaBarn(dateTimePickerFrån.Value, dateTimePickerTill.Value);
 
             }
+            p.StängConnection();
+            p1.StängConnection();
 
         }
 
@@ -522,6 +531,7 @@ namespace Grupp3___Förskolan_Drutten
                         aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
                         p.LäggTillNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
+                        p.StängConnection();
                     }
                     else
                     {
@@ -531,6 +541,7 @@ namespace Grupp3___Förskolan_Drutten
                             aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
                             p.TaBortNärvaroFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.närvarande);
+                        p.StängConnection();
 
                     }
                 }
@@ -544,6 +555,7 @@ namespace Grupp3___Förskolan_Drutten
                         aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
                         p.LäggTillHämtadFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.hämtad);
+                        p.StängConnection();
                     }
                     else
                     {
@@ -553,6 +565,7 @@ namespace Grupp3___Förskolan_Drutten
                         aktuelltBarn.Datum = Convert.ToDateTime(row.Cells[0].Value);
 
                         p.TaBortHämtadFörIdag(aktuelltBarn.Datum, aktuelltBarn.barnid, aktuelltBarn.hämtad);
+                        p.StängConnection();
                     }
                 }
 
@@ -575,6 +588,7 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridSkrivut.Visible = true;
                 panelskrivfrånvaro.Visible = false;
                 panelskriv.Visible = true;
+                p.StängConnection();
 
             }
             else if (FrånvarandeRadioButton.Checked)
@@ -586,6 +600,7 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridViewFrånvaroSkrivut.Visible = true;
                 panelskriv.Visible = false;
                 panelskrivfrånvaro.Visible = true;
+                p.StängConnection();
 
             }
             
@@ -678,6 +693,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Det nuvarande lösenordet var fel.");
             }
+            p.StängConnection();
         }
 
         private void ändraLösenAvbryt_Click(object sender, EventArgs e)
