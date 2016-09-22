@@ -219,8 +219,13 @@ namespace Grupp3___Förskolan_Drutten
             DateTime datum = monthCalendar3.SelectionStart;
             DateTime datummetod = DateTime.Today;
             int barnid = aktuelltbarn.Barnid;
-            string lämnas = comboBoxFrån1.Text + ":" + comboBoxFrån2.Text;
-            string hämtas = comboBoxTill1.Text + ":" + comboBoxTill2.Text;
+            string från1 = comboBoxFrån1.Text;
+            string från2 = comboBoxFrån2.Text;
+            string lämnas = från1 + ":" + från2;
+
+            string till1 = comboBoxTill1.Text;
+            string till2 = comboBoxTill2.Text;
+            string hämtas = till1 + ":" + till2;
             DateTime dagensDatum = DateTime.Today;
             string hamtas = textBoxHämtasAv1.Text;
             
@@ -228,9 +233,17 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Du kan tyvärr inte lägga in tider som är före dagens datum. \nVänligen välj ett annat datum.");
             }
+            else if (från1 =="" || från2 == "" || till1 == "" || till2 =="")
+            {
+                MessageBox.Show("Var vänlig kontrollera att tider är korrekt ifyllt.\n\nIgen ruta där tider fylls i får lämnas tom.");
+            }
             else if (lämnas == ":" && hämtas == ":")
             {
                 MessageBox.Show("Var vänlig och fyll i tider.");
+            }
+            else if (Convert.ToInt32(från1) > Convert.ToInt32(till1))
+            {
+                MessageBox.Show("Var vänlig kontrollera att tider är korrekt ifyllt.\n\nTiden som barnet lämnas på förskolan kan inte anges till en senare tid än när barnet hämtas.");
             }
             else if(hämtas == "18:05" || hämtas == "18:10" || hämtas == "18:15" || hämtas == "18:20" || hämtas == "18:25" || hämtas == "18:30" || hämtas == "18:35" || hämtas == "18:40" || hämtas == "18:45" || hämtas == "18:50" || hämtas == "18:55")
             {
@@ -276,13 +289,11 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p3 = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid, datummetod);
-               
+                comboBoxFrån1.Text = "";
+                comboBoxFrån2.Text = "";
+                comboBoxTill1.Text = "";
+                comboBoxTill2.Text = "";
             }
-
-            comboBoxFrån1.Text = "";
-            comboBoxFrån2.Text = "";
-            comboBoxTill1.Text = "";
-            comboBoxTill2.Text = "";
             MetodHämtaBarnetsTid(datum);
         }
 
