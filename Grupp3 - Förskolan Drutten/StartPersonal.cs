@@ -218,7 +218,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 DateTime idag = monthCalendar23INärvarohantering.SelectionStart;
                 dataGridViewFrånvarandeINärvarohantering.DataSource = p.HämtaFrånvaro(idag);
-                label17.Text = dataGridViewNärvarandeINärvarohantering.RowCount.ToString() + " Barn";
+                label17.Text = dataGridViewFrånvarandeINärvarohantering.RowCount.ToString() + " Barn";
                 labelSkrivut.Text = "Skriv ut dagens frånvarolista";
 
                 dataGridViewNärvarandeINärvarohantering.Visible = false;
@@ -675,6 +675,66 @@ namespace Grupp3___Förskolan_Drutten
         {
             panelHjälpISökDatum.Visible = false;
             labelHjälpiSökDatum.Visible = false;
+        }
+
+        private void buttonHjälpiFramtidsÖversikt_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpiFramtidsÖversikt.Visible = true;
+            labelHjälpiFramtidsÖversikt.Visible = true;
+        }
+
+        private void buttonHjälpiFramtidsÖversikt_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpiFramtidsÖversikt.Visible = false;
+            labelHjälpiFramtidsÖversikt.Visible = false;
+        }
+
+        private void buttonHjälpiNärvarohantering_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpiNärvarohantering.Visible = true;
+            labelHjälpiNärvarohantering.Visible = true;
+        }
+
+        private void buttonHjälpiNärvarohantering_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpiNärvarohantering.Visible = false;
+            labelHjälpiNärvarohantering.Visible = false;
+        }
+
+        private void buttonHjälpiBarnöversikt_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpiBarnöversikt.Visible = true;
+            labelHjälpiBarnöversikt.Visible = true;
+        }
+
+        private void buttonHjälpiBarnöversikt_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpiBarnöversikt.Visible = false;
+            labelHjälpiBarnöversikt.Visible = false;
+        }
+
+        private void buttonHjälpiKontouppgifter_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpiKontouppgifter.Visible = true;
+            labelHjälpiKontouppgifter.Visible = true;
+        }
+
+        private void buttonHjälpiKontouppgifter_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpiKontouppgifter.Visible = false;
+            labelHjälpiKontouppgifter.Visible = false;
+        }
+
+        private void buttonHjälpiSenaste_MouseHover(object sender, EventArgs e)
+        {
+            panelHjälpiSenaste.Visible = true;
+            labelHjälpiSenaste.Visible = true;
+        }
+
+        private void buttonHjälpiSenaste_MouseLeave(object sender, EventArgs e)
+        {
+            panelHjälpiSenaste.Visible = false;
+            labelHjälpiSenaste.Visible = false;
         }
     }
 }

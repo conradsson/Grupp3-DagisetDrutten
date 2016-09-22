@@ -117,6 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelHjälpiSenaste.Text" xml:space="preserve">
+    <value>Hjälp.
+
+Här kan du se inlägg från kollegor, du kan
+även lägga in egna inlägg genom att
+trycka på nytt inlägg. Du kan välja om du
+vill skicka det till föräldrar och personal
+eller endast personal.
+
+Du kan även redigera och ta bort inlägg.</value>
+  </data>
+  <data name="labelHjälpiNärvarohantering.Text" xml:space="preserve">
+    <value>Hjälp.
+
+På denna sida ser du barnens närvaro för
+idag. Tryck på närvarande/hämtad och 
+sedan på Uppdatera-knappen.
+
+Tryck på Visa diagram om du vill ha en 
+översikt över barnens tider. Du kan även
+dölja diagrammet.</value>
+  </data>
   <metadata name="Datum.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
