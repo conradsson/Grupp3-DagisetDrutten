@@ -355,18 +355,19 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="barnid"></param>
         /// <param name="lamnas"></param>
         /// <param name="hamtas"></param>
-        public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas)
+        public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas, string hamtasAv)
         {
             string meddelande;
             try
             {
-                string sql = "update dagis.narvaro SET tid_lamnad = '" + lamnas + "', tid_hamtad ='" + hamtas + "' where barnid = '" + barnid +"' and datum = '" + datum + "';";
+                string sql = "update dagis.narvaro SET tid_lamnad = '" + lamnas + "', tid_hamtad ='" + hamtas + "', hamtas_av ='"+ hamtasAv +"' where barnid = '" + barnid +"' and datum = '" + datum + "';";
                    
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@datum", datum);
                 cmd.Parameters.AddWithValue("@barnid", barnid);
                 cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
                 cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
+                cmd.Parameters.AddWithValue("@hamtas_av", hamtasAv);
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
@@ -532,7 +533,7 @@ namespace Grupp3___Förskolan_Drutten
         public void MeddelaHämtning(int barnid, string hamtas, DateTime datum)
         {
             conn.Open();
-            string meddelande;
+            
             try
             {
                 string sql = "UPDATE dagis.narvaro SET hamtas_av = @hamtas_av"
@@ -545,14 +546,14 @@ namespace Grupp3___Förskolan_Drutten
                 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Hämtningen är meddelad.";
+                //meddelande = "Hämtningen är meddelad.";
 
             }
             catch (NpgsqlException ex)
             {
-                meddelande = ex.Message;
+                MessageBox.Show(ex.Message);
             }
-            System.Windows.Forms.MessageBox.Show(meddelande);
+            
             conn.Close();
         }
 
@@ -592,6 +593,21 @@ namespace Grupp3___Förskolan_Drutten
                 }
         }
 
+        public string HämtaHämtning(DateTime datum, int barnid)
+        {
+            string sql = "select narvaro.hamtas_av from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
+            string hämtasAv;
+            tabell.Clear();
+            tabell = sqlFråga(sql);
+            Närvaro narvaro = new Närvaro();
+
+            foreach (DataRow rad in tabell.Rows)
+            {
+                narvaro.HämtasAv = rad[0].ToString();
+            }
+            hämtasAv = narvaro.HämtasAv;
+            return hämtasAv;
+        }
         /// <summary>
         /// Hämtar ett barns registrerade närvarotider
         /// </summary>

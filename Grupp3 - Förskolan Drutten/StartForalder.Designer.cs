@@ -173,7 +173,7 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxHämtasAv1 = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -434,10 +434,9 @@
             this.tabPage3.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.textBoxHämtasAv1);
             this.tabPage3.Controls.Add(this.label58);
             this.tabPage3.Controls.Add(this.dataGridViewTiderBarn);
-            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.tiderBarnListBox);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.label2);
@@ -448,6 +447,7 @@
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -1924,12 +1924,12 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // textBox1
+            // textBoxHämtasAv1
             // 
-            this.textBox1.Location = new System.Drawing.Point(475, 266);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 37;
+            this.textBoxHämtasAv1.Location = new System.Drawing.Point(475, 266);
+            this.textBoxHämtasAv1.Name = "textBoxHämtasAv1";
+            this.textBoxHämtasAv1.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHämtasAv1.TabIndex = 37;
             // 
             // label58
             // 
@@ -2177,7 +2177,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxHämtasAv1;
         private System.Windows.Forms.Label label58;
     }
 }

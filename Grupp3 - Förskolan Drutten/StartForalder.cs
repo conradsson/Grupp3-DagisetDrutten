@@ -210,6 +210,7 @@ namespace Grupp3___Förskolan_Drutten
             string lämnas = comboBoxFrån1.Text + ":" + comboBoxFrån2.Text;
             string hämtas = comboBoxTill1.Text + ":" + comboBoxTill2.Text;
             DateTime dagensDatum = DateTime.Today;
+            string hamtas = textBoxHämtasAv1.Text;
             
             if (datum < dagensDatum)
             {
@@ -224,6 +225,11 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 p.LäggTillTid(datum, barnid, lämnas, hämtas);
 
+                    Postgres po = new Postgres();
+                    po.KontrolleraHämtning(datum, barnid, hamtas);
+
+                    textBoxHämtasAv1.Clear();
+                
                 Postgres pp = new Postgres();
                 pp.KontrolleraFrånvaro(datum, barnid);
                 Postgres p1 = new Postgres();
@@ -371,6 +377,7 @@ namespace Grupp3___Förskolan_Drutten
                 DateTime datummetod = DateTime.Today;
                 string lamnas = comboBoxUppdateraFrån1.Text + ":" + comboBoxUppdateraFrån2.Text;
                 string hamtas = comboBoxUppdateraTill1.Text + ":" + comboBoxUppdateraTill2.Text;
+                string hamtasAv = textBoxHämtasAv1.Text;
 
                 if (lamnas == ":" && hamtas == ":")
                 {
@@ -378,7 +385,7 @@ namespace Grupp3___Förskolan_Drutten
                 }
                 else
                 {
-                    p.UppdateraTider(datum, id, lamnas, hamtas);
+                    p.UppdateraTider(datum, id, lamnas, hamtas, hamtasAv);
                     Postgres p1 = new Postgres();
                     dataGridViewHämtning.DataSource = null;
                     dataGridViewHämtning.DataSource = p1.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
@@ -682,7 +689,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             Barn aktuelltbarn = new Barn();
             aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
-
+            textBoxHämtasAv1.Clear();
             if (aktuelltbarn != null)
             {
 
@@ -690,7 +697,8 @@ namespace Grupp3___Förskolan_Drutten
                 string tid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-
+                Postgres post = new Postgres();
+                string hämtasAv = post.BarnetHämtasAv(aktuelltbarn.Barnid, datum);
 
                 if (tid.Contains("Co"))
                 {
@@ -703,13 +711,18 @@ namespace Grupp3___Förskolan_Drutten
                     groupBox3.Visible = false;
                     comboBoxUppdateraTill1.Text = "";
                     comboBoxUppdateraTill2.Text = "";
+                    button5.Visible = false;
+                    button2.Visible = true;
                 }
            
                 else
                 {
                     groupBox3.Visible = true;
+                    button5.Visible = true;
+                    button2.Visible = false;
                     comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
                     comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+                    textBoxHämtasAv1.Text = hämtasAv;
                 }
 
 
@@ -728,13 +741,17 @@ namespace Grupp3___Förskolan_Drutten
                     groupBox2.Visible = true;
                     comboBoxUppdateraFrån1.Text = "";
                     comboBoxUppdateraFrån2.Text = "";
+                    button5.Visible = false;
+                    button2.Visible = true;
                 }
-         
                 else
                 {
                     groupBox2.Visible = false;
+                    button5.Visible = true;
+                    button2.Visible = false;
                     comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
+                    textBoxHämtasAv1.Text = hämtasAv;
                 }
 
             }

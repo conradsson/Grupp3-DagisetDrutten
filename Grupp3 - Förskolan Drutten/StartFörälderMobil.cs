@@ -335,14 +335,14 @@ namespace Grupp3___Förskolan_Drutten
                 DateTime datum = monthCalendar3.SelectionStart;
                 string lamnas = comboBoxUppdateraFrån1.Text + ":" + comboBoxUppdateraFrån2.Text;
                 string hamtas = comboBoxUppdateraTill1.Text + ":" + comboBoxUppdateraTill2.Text;
-
+                
                 if (lamnas == ":" && hamtas == ":")
                 {
                     MessageBox.Show("Var vänlig och fyll i tider.");
                 }
                 else
                 {
-                    p.UppdateraTider(datum, id, lamnas, hamtas);
+                    //p.UppdateraTider(datum, id, lamnas, hamtas);
                 }
 
             }
