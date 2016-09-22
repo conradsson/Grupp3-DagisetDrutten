@@ -102,5 +102,10 @@ namespace Grupp3___Förskolan_Drutten
 
             b.Show();
         }
+
+        private void minimeraButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
