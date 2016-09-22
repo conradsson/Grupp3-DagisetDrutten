@@ -235,7 +235,7 @@ namespace Grupp3___Förskolan_Drutten
             }
             else if (från1 =="" || från2 == "" || till1 == "" || till2 =="")
             {
-                MessageBox.Show("Var vänlig kontrollera att tider är korrekt ifyllt.\n\nIgen ruta där tider fylls i får lämnas tom.");
+                MessageBox.Show("Var vänlig kontrollera att Meddela tider är korrekt ifylld.\n\nIgen ruta där tider fylls i får lämnas tom.");
             }
             else if (lämnas == ":" && hämtas == ":")
             {
@@ -243,7 +243,7 @@ namespace Grupp3___Förskolan_Drutten
             }
             else if (Convert.ToInt32(från1) > Convert.ToInt32(till1))
             {
-                MessageBox.Show("Var vänlig kontrollera att tider är korrekt ifyllt.\n\nTiden som barnet lämnas på förskolan kan inte anges till en senare tid än när barnet hämtas.");
+                MessageBox.Show("Var vänlig kontrollera att Meddela tid är korrekt ifylld.\n\nTiden som barnet lämnas på förskolan kan inte anges till en senare tid än när barnet hämtas.");
             }
             else if(hämtas == "18:05" || hämtas == "18:10" || hämtas == "18:15" || hämtas == "18:20" || hämtas == "18:25" || hämtas == "18:30" || hämtas == "18:35" || hämtas == "18:40" || hämtas == "18:45" || hämtas == "18:50" || hämtas == "18:55")
             {
@@ -420,13 +420,22 @@ namespace Grupp3___Förskolan_Drutten
                 int id = aktuelltbarn.Barnid;
                 DateTime datum = monthCalendar3.SelectionStart;
                 DateTime datummetod = DateTime.Today;
-                string lamnas = comboBoxUppdateraFrån1.Text + ":" + comboBoxUppdateraFrån2.Text;
-                string hamtas = comboBoxUppdateraTill1.Text + ":" + comboBoxUppdateraTill2.Text;
+                string från1 = comboBoxUppdateraFrån1.Text;
+                string från2 = comboBoxUppdateraFrån2.Text;
+                string lamnas = från1 + ":" + från2;
+                
+                string till1 = comboBoxUppdateraTill1.Text;
+                string till2 = comboBoxUppdateraTill2.Text;
+                string hamtas = till1 + ":" + till2;
                 string hamtasAv = textBoxHämtasAv1.Text;
 
                 if (lamnas == ":" && hamtas == ":")
                 {
                     MessageBox.Show("Var vänlig och fyll i tider.");
+                }
+                else if (Convert.ToInt32(från1) > Convert.ToInt32(till1))
+                {
+                    MessageBox.Show("Var vänlig kontrollera att Uppdatera befintlig tid är korrekt ifylld.\n\nTiden som barnet lämnas på förskolan kan inte anges till en senare tid än när barnet hämtas.");
                 }
                 else if (hamtas == "18:05" || hamtas == "18:10" || hamtas == "18:15" || hamtas == "18:20" || hamtas == "18:25" || hamtas == "18:30" || hamtas == "18:35" || hamtas == "18:40" || hamtas == "18:45" || hamtas == "18:50" || hamtas == "18:55")
                 {
