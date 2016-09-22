@@ -47,6 +47,7 @@ namespace Grupp3___Förskolan_Drutten
             informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
             tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
+            p.StängConnection();
         }
         private void informationButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -80,6 +81,7 @@ namespace Grupp3___Förskolan_Drutten
             informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonHär;
             tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
+            p.StängConnection();
 
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
@@ -114,6 +116,7 @@ namespace Grupp3___Förskolan_Drutten
             groupBox3.Visible = false;
 
             HämtaVilkenGroupboxSomSkasynas(idag);
+            p.StängConnection();
 
         }
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
@@ -150,6 +153,7 @@ namespace Grupp3___Förskolan_Drutten
             informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
             tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
+            p.StängConnection();
         }
 
 
@@ -196,6 +200,7 @@ namespace Grupp3___Förskolan_Drutten
             TidertabControl.Visible = false;
             // NärvarotabControl.Visible = false;
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            p.StängConnection();
         }
 
         private void inloggadButton_MouseDown(object sender, MouseEventArgs e)
@@ -258,17 +263,24 @@ namespace Grupp3___Förskolan_Drutten
 
                     Postgres p4 = new Postgres();
                     p4.TaBortFrånvaro(datum, barnid);
+
+                        po.StängConnection();
+                        p4.StängConnection();
                     }
-                  
+                    pp.StängConnection();
+
+
                 }
                 else
                     {
                         Postgres p = new Postgres();
                         p.LäggTillTid(datum, barnid, lämnas, hämtas);
+                    p.StängConnection();
 
-                        Postgres po = new Postgres();
+                    Postgres po = new Postgres();
                         po.KontrolleraHämtning(datum, barnid, hamtas);
-                    }
+                    po.StängConnection();
+                }
                 Postgres p1 = new Postgres();
                 Postgres p2 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
@@ -276,7 +288,11 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p3 = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid, datummetod);
-               
+                p1.StängConnection();
+                p2.StängConnection();
+                p3.StängConnection();
+                
+
             }
 
             comboBoxFrån1.Text = "";
@@ -301,7 +317,7 @@ namespace Grupp3___Förskolan_Drutten
                 MetodHämtaBarnetsTid(datum);
                 
                 }
-
+            p.StängConnection();
         }
         
 
@@ -327,6 +343,7 @@ namespace Grupp3___Förskolan_Drutten
                 listAktuellaBarn.DisplayMember = "visaBarn";
 
             }
+            p.StängConnection();
         }
         private void HämtaVilkenGroupboxSomSkasynas(DateTime datum)
         {
@@ -396,6 +413,8 @@ namespace Grupp3___Förskolan_Drutten
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
                     textBoxHämtasAv1.Text = hämtasAv;
                 }
+                p.StängConnection();
+                p2.StängConnection();
             }
         }
         private void button5_Click(object sender, EventArgs e)
@@ -428,7 +447,11 @@ namespace Grupp3___Förskolan_Drutten
                     Postgres p2 = new Postgres();
                     dataGridViewTiderBarn.DataSource = null;
                     dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
+                    p1.StängConnection();
+                    p2.StängConnection();
                 }
+                p.StängConnection();
+                
 
             }
 
@@ -464,6 +487,7 @@ namespace Grupp3___Förskolan_Drutten
             textBoxEfternamn.Clear();
             textBoxAllergier.Clear();
             richTextBoxAnnat.Clear();
+            p.StängConnection();
         }
 
 
@@ -484,6 +508,7 @@ namespace Grupp3___Förskolan_Drutten
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
 
             p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
+            p.StängConnection();
         }
 
         private void uppdateraförälder_Click_1(object sender, EventArgs e)
@@ -497,6 +522,7 @@ namespace Grupp3___Förskolan_Drutten
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
 
             p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
+            p.StängConnection();
 
         }
 
@@ -535,13 +561,15 @@ namespace Grupp3___Förskolan_Drutten
 
                             Postgres post = new Postgres();
                             post.TaBortNärvaro(datum, id);
+                            post.StängConnection();
                         }
-                       
+                        p1.StängConnection();
                     }
                     else
                     {   
                         Postgres p2 = new Postgres();
                         p2.LäggTillFånvaro(datum, id, sjuk, ledig);
+                        p2.StängConnection();
                     }
 
                 }
@@ -561,12 +589,14 @@ namespace Grupp3___Förskolan_Drutten
                             Postgres post = new Postgres();
                             post.TaBortNärvaro(datum, id);
                         }
+                        p1.StängConnection();
 
                     }
                     else
                     {
                         Postgres p2 = new Postgres();
                         p2.LäggTillFånvaro(datum, id, sjuk, ledig);
+                        p2.StängConnection();
                     }
              
                 }
@@ -583,6 +613,10 @@ namespace Grupp3___Förskolan_Drutten
                     Postgres p4 = new Postgres();
                     dataGridViewTiderBarn.DataSource = null;
                     dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, datum);
+                p.StängConnection();
+                pp.StängConnection();
+
+                
             }
         }
 
@@ -600,7 +634,7 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson.Förnamn =    textBoxFörnamnMittKonto.Text;
             AktuellPerson.Efternamn=    textBoxEfternamnMittKonto.Text;
             AktuellPerson.Telefonnr=    textBoxTelefonnummerMittKonto.Text;
-
+            p.StängConnection();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -625,6 +659,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
             }
+            p.StängConnection();
         }
 
         private void ändraLösenordButton_Click(object sender, EventArgs e)
@@ -675,6 +710,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Det nuvarande lösenordet var fel.");
             }
+            p.StängConnection();
         }
 
         private void listBoxMeddelaFrånvaro_SelectedIndexChanged(object sender, EventArgs e)
@@ -689,6 +725,7 @@ namespace Grupp3___Förskolan_Drutten
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p.HämtaBarnsFrånvaro(barnid, datummetod);
             }
+            p.StängConnection();
         }
 
         private void MetodHämtaBarnetsTid(DateTime datum)
@@ -759,7 +796,8 @@ namespace Grupp3___Förskolan_Drutten
                     comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
                     textBoxHämtasAv1.Text = hämtasAv;
                 }
-
+                p.StängConnection();
+                p2.StängConnection();
             }
 
         }

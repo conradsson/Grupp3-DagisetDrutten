@@ -188,13 +188,13 @@
             this.panelHjälpMeddelaTider = new System.Windows.Forms.Panel();
             this.labelHjälpMeddelaTider = new System.Windows.Forms.Label();
             this.buttonHjälpMeddelaTider = new System.Windows.Forms.Button();
+            this.panelHjälpMeddelaFrånvaro = new System.Windows.Forms.Panel();
+            this.labelHjälpMeddelaFrånvaro = new System.Windows.Forms.Label();
+            this.buttonHjälpMeddelaFrånvaro = new System.Windows.Forms.Button();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panelHjälpMeddelaFrånvaro = new System.Windows.Forms.Panel();
-            this.labelHjälpMeddelaFrånvaro = new System.Windows.Forms.Label();
-            this.buttonHjälpMeddelaFrånvaro = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.informationTabControl.SuspendLayout();
@@ -217,9 +217,9 @@
             this.panelHjälpKontoUppgifter.SuspendLayout();
             this.panelHjälpMinaBarn.SuspendLayout();
             this.panelHjälpMeddelaTider.SuspendLayout();
+            this.panelHjälpMeddelaFrånvaro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
-            this.panelHjälpMeddelaFrånvaro.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -246,9 +246,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -2081,28 +2081,6 @@
             this.buttonHjälpMeddelaTider.MouseLeave += new System.EventHandler(this.buttonHjälpMeddelaTider_MouseLeave);
             this.buttonHjälpMeddelaTider.MouseHover += new System.EventHandler(this.buttonHjälpMeddelaTider_MouseHover);
             // 
-            // datumDataGridViewTextBoxColumn
-            // 
-            this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
-            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
-            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
-            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // närvaroBindingSource
-            // 
-            this.närvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Närvaro);
-            // 
-            // datumDataGridViewTextBoxColumn1
-            // 
-            this.datumDataGridViewTextBoxColumn1.DataPropertyName = "Datum";
-            this.datumDataGridViewTextBoxColumn1.HeaderText = "Datum";
-            this.datumDataGridViewTextBoxColumn1.Name = "datumDataGridViewTextBoxColumn1";
-            this.datumDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // frånvaroBindingSource
-            // 
-            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
-            // 
             // panelHjälpMeddelaFrånvaro
             // 
             this.panelHjälpMeddelaFrånvaro.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -2143,6 +2121,28 @@
             this.buttonHjälpMeddelaFrånvaro.UseVisualStyleBackColor = true;
             this.buttonHjälpMeddelaFrånvaro.MouseLeave += new System.EventHandler(this.buttonHjälpMeddelaFrånvaro_MouseLeave);
             this.buttonHjälpMeddelaFrånvaro.MouseHover += new System.EventHandler(this.buttonHjälpMeddelaFrånvaro_MouseHover);
+            // 
+            // datumDataGridViewTextBoxColumn
+            // 
+            this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
+            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // närvaroBindingSource
+            // 
+            this.närvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Närvaro);
+            // 
+            // datumDataGridViewTextBoxColumn1
+            // 
+            this.datumDataGridViewTextBoxColumn1.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn1.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn1.Name = "datumDataGridViewTextBoxColumn1";
+            this.datumDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // frånvaroBindingSource
+            // 
+            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
             // StartForalder
             // 
@@ -2199,10 +2199,10 @@
             this.panelHjälpMinaBarn.PerformLayout();
             this.panelHjälpMeddelaTider.ResumeLayout(false);
             this.panelHjälpMeddelaTider.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.panelHjälpMeddelaFrånvaro.ResumeLayout(false);
             this.panelHjälpMeddelaFrånvaro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
