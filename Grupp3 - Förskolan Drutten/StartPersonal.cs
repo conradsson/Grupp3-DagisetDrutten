@@ -431,7 +431,7 @@ namespace Grupp3___Förskolan_Drutten
             int kollaTid2 = 06;
             int tid2 = 06;
 
-            MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
+            //MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
 
             for (int i = 0; i < 11; i++)
             {
