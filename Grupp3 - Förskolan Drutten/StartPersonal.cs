@@ -289,34 +289,36 @@ namespace Grupp3___Förskolan_Drutten
 
         private void tabortButton_Click(object sender, EventArgs e)
         {
-            Postgres p = new Postgres();
+            Postgres p1 = new Postgres();
+            Postgres p2 = new Postgres();
             Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
             DialogResult result = MessageBox.Show("Är du säker på att du vill ta bort det markerade inlägget? " + "\n" + "Inlägget kommer inte kunna återställas.", "Ta bort inlägg", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 if (AktuelltInlägg != null)
                 {
-                    p.TaBortInlägg(AktuelltInlägg.Datum, AktuelltInlägg.InläggsId);
+                    p1.TaBortInlägg(AktuelltInlägg.Datum, AktuelltInlägg.InläggsId);
                     listBoxInlägg.DataSource = null;
-                    listBoxInlägg.DataSource = p.HämtaInläggPersonal();
-
+                    listBoxInlägg.DataSource = p2.HämtaInläggPersonal();
+                    p.StängConnection();
                 }
             }
-            p.StängConnection();
+            
 
         }
 
         private void publiceraButton_Click(object sender, EventArgs e)
         {
-            Postgres p = new Postgres();
+            Postgres p1 = new Postgres();
+            Postgres p2 = new Postgres();
             string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
 
-            p.NyttInlägg(DateTime.Now.ToShortDateString(), textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn,EndastFörPersonalCheckBox.Checked);
+            p1.NyttInlägg(DateTime.Now.ToShortDateString(), textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn,EndastFörPersonalCheckBox.Checked);
             skyddpanel.Visible = false;
             nyttInläggPanel.Visible = false;
 
             listBoxInlägg.DataSource = null;
-            listBoxInlägg.DataSource = p.HämtaInläggPersonal();
+            listBoxInlägg.DataSource = p2.HämtaInläggPersonal();
             p.StängConnection();
         }
 
@@ -336,20 +338,21 @@ namespace Grupp3___Förskolan_Drutten
 
         private void uppdateraInläggButton_Click(object sender, EventArgs e)
         {
-            Postgres p = new Postgres();
+            Postgres p1 = new Postgres();
+            Postgres p2 = new Postgres();
             Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
 
             if (AktuelltInlägg != null)
             {
-                p.UppdateraInlägg(AktuelltInlägg.Datum, textBoxNyRubrik.Text, richTextBoxNyText.Text, AktuelltInlägg.InläggsId,EndastFörPersonalCheckBox.Checked);
+                p1.UppdateraInlägg(AktuelltInlägg.Datum, textBoxNyRubrik.Text, richTextBoxNyText.Text, AktuelltInlägg.InläggsId,EndastFörPersonalCheckBox.Checked);
                 skyddpanel.Visible = false;
                 nyttInläggPanel.Visible = false;
 
                 listBoxInlägg.DataSource = null;
-                listBoxInlägg.DataSource = p.HämtaInläggPersonal();
-
+                listBoxInlägg.DataSource = p2.HämtaInläggPersonal();
+                p.StängConnection();
             }
-            p.StängConnection();
+
         }
 
         private void listBoxSöktaBarn_SelectedIndexChanged(object sender, EventArgs e)
@@ -365,7 +368,6 @@ namespace Grupp3___Förskolan_Drutten
                 listBoxVårnadshavare.DataSource = p.HämtaBarnsFörälder(AktuelltBarn.Barnid);
 
                 barnOverigtrichTextBox.Text = AktuelltBarn.Allergier + "\n" + AktuelltBarn.Annat;
-
 
             }
         }
@@ -421,8 +423,6 @@ namespace Grupp3___Förskolan_Drutten
 
             if (AktuelltInlägg != null)
             {
-
-
                 textBoxDatum.Text = AktuelltInlägg.Datum;
                 textBoxRubrik.Text = AktuelltInlägg.InläggsRubrik;
                 richTextBoxPubliceradeInlägg.Text = AktuelltInlägg.InläggsText;
@@ -676,6 +676,7 @@ namespace Grupp3___Förskolan_Drutten
                     if (antaltecken >= 4)
                     {
                         p.ÄndraLösenord(id, nuvarandeLösenord, nyttLösenord);
+                        AktuellPerson.Lösenord = p.LösenordsEncrypt(textBoxNyttLösen.Text);
                         ändraLösenPanel.Visible = false;
                     }
                     else

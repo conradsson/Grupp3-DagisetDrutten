@@ -17,14 +17,12 @@ namespace Grupp3___Förskolan_Drutten
         {
             InitializeComponent();
         }
-        Postgres p = new Postgres();
-        Person person = new Person();
-
 
 
         // Logga in-knappen.
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
+            Postgres p = new Postgres();
             p.HämtaAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
 
             if (p.Inloggad == true)
@@ -70,6 +68,7 @@ namespace Grupp3___Förskolan_Drutten
         // Lösenordskrypteraren. mini-applikation som krypterar det inmatade lösenordet.
         private void EncryptTestButton_Click(object sender, EventArgs e)
         {
+            Postgres p = new Postgres();
             encryptTextBox.Clear();
             encryptTextBox.Text = p.LösenordsEncrypt(losenordENCRYPTtextBox.Text);
         }
