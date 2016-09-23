@@ -2281,6 +2281,9 @@
             // 
             // exitButton
             // 
+            this.exitButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
             this.exitButton.Location = new System.Drawing.Point(972, 12);
@@ -2288,7 +2291,7 @@
             this.exitButton.Size = new System.Drawing.Size(24, 23);
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "X";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // timer1
