@@ -604,39 +604,6 @@ namespace Grupp3___Förskolan_Drutten
         }
 
 
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void uppdateraFörälder_Click(object sender, EventArgs e)
-        {
-            Postgres p = new Postgres();
-            //Person aktuellPerson = new Person();
-
-            int id = AktuellPerson.Personid;
-            string förnamn = textBoxFörnamnMittKonto.Text;
-            string efternamn = textBoxEfternamnMittKonto.Text;
-            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
-
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
-        }
-
-        private void uppdateraförälder_Click_1(object sender, EventArgs e)
-        {
-            Postgres p = new Postgres();
-            //Person aktuellPerson = new Person();
-
-            int id = AktuellPerson.Personid;
-            string förnamn = textBoxFörnamnMittKonto.Text;
-            string efternamn = textBoxEfternamnMittKonto.Text;
-            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
-
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Barn aktuelltbarn = new Barn();
@@ -731,12 +698,34 @@ namespace Grupp3___Förskolan_Drutten
             string förnamn = textBoxFörnamnMittKonto.Text;
             string efternamn = textBoxEfternamnMittKonto.Text;
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
+            char[] förstaTvåFörnamn = textBoxFörnamnMittKonto.Text.Take(2).ToArray();
+            string nyttFörnamnTvå = new string(förstaTvåFörnamn.Take(2).ToArray());
+            char[] förstaTvåEfternamn = textBoxEfternamnMittKonto.Text.Take(2).ToArray();
+            string nyttEfternamnTvå = new string(förstaTvåEfternamn.Take(2).ToArray());
+            string nyttAnvändnamn = nyttFörnamnTvå.ToLower() + nyttEfternamnTvå.ToLower();
 
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
+            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer, nyttAnvändnamn);
 
-            AktuellPerson.Förnamn = textBoxFörnamnMittKonto.Text;
-            AktuellPerson.Efternamn = textBoxEfternamnMittKonto.Text;
-            AktuellPerson.Telefonnr = textBoxTelefonnummerMittKonto.Text;
+            AktuellPerson.Användarnamn = nyttAnvändnamn;
+
+            if (textBoxEfternamnMittKonto.Text != AktuellPerson.Efternamn)
+            {
+                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                AktuellPerson.Efternamn = textBoxEfternamnMittKonto.Text;
+                inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            }
+            else if (textBoxFörnamnMittKonto.Text != AktuellPerson.Förnamn)
+            {
+                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                AktuellPerson.Förnamn = textBoxFörnamnMittKonto.Text;
+                inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            }
+            else if (textBoxTelefonnummerMittKonto.Text != AktuellPerson.Telefonnr)
+            {
+                AktuellPerson.Telefonnr = textBoxTelefonnummerMittKonto.Text;
+            }
+
+            p.StängConnection();
 
         }
 

@@ -31,6 +31,7 @@ namespace Grupp3___Förskolan_Drutten
             monthCalendar23INärvarohantering.TodayDate = idag;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonHär;
 
+            dateTimePickerFrån.Value = idag;
 
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
@@ -457,6 +458,8 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonVisaDiagram_Click(object sender, EventArgs e)
         {
+            this.chartBarnensTider.Series["Antal barn"].Points.Clear();
+
             labelAntalBarn.Visible = true;
             labelTid.Visible = true;
 
@@ -465,20 +468,15 @@ namespace Grupp3___Förskolan_Drutten
             buttonVisaDiagram.Visible = false;
             chartBarnensTider.Visible = true;
 
-
             int kollaTid = 06;
             int tid = 06;
             int kollaTid2 = 06;
             int tid2 = 06;
+            int tid3 = 06;
             double[] tidsArray = new double[13];
             double[] tidsArray2 = new double[13];
             double[] tidsArraySvaret = new double[13];
             double[] tidsArraySvaret2 = new double[13];
-
-
-            //MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
-            //string hej = p.HämtaAntalBarnEfterVarjeTimme(DateTime.Today, 7, 8).ToString();
-            //MessageBox.Show(hej);
 
             for (int i = 0; i < 13; i++)
             {
@@ -490,12 +488,11 @@ namespace Grupp3___Förskolan_Drutten
 
                 p1.StängConnection();
                 p2.StängConnection();
-
             }
 
             for (int i = 0; i < tidsArray.Length; i++)
             {
-                if (chartBarnensTider.Series[0].Points[i].YValues[0] != 0 || chartBarnensTider.Series[1].Points[i].YValues[0] !=0)
+                if (chartBarnensTider.Series[0].Points[i].YValues[0] != 1000)
                 {
                     tidsArray[i] = chartBarnensTider.Series[0].Points[i].YValues[0];
                     tidsArray2[i] = chartBarnensTider.Series[1].Points[i].YValues[0];
@@ -505,17 +502,12 @@ namespace Grupp3___Förskolan_Drutten
                       tidsArraySvaret[x] += tidsArray[i] - tidsArray2[i];
                         tidsArraySvaret2[i] = tidsArraySvaret[x];
                     }
-                }
+                } 
             }
-
-
-
-            //MessageBox.Show(tidsArray[].ToString());
-
-            //MessageBox.Show(chartBarnensTider.Series[0].Points[3].YValues[0].ToString());
-
-            //MessageBox.Show(chartBarnensTider.Series[1].Points[3].YValues[0].ToString());
-            
+            for (int i = 0; i < tidsArraySvaret2.Length; i++)
+            {
+                this.chartBarnensTider.Series["Antal barn"].Points.AddXY(tid3++, tidsArraySvaret2[i]);
+            }
 
         }
 
@@ -527,23 +519,43 @@ namespace Grupp3___Förskolan_Drutten
             string förnamn = textBoxFörnamnMittkonto.Text;
             string efternamn = textBoxEfternamnMittkonto.Text;
             string telefonnummer = textBoxTelefonnrMittkonto.Text;
+            char[] förstaTvåFörnamn = textBoxFörnamnMittkonto.Text.Take(2).ToArray();
+            string nyttFörnamnTvå = new string(förstaTvåFörnamn.Take(2).ToArray());
+            char[] förstaTvåEfternamn = textBoxEfternamnMittkonto.Text.Take(2).ToArray();
+            string nyttEfternamnTvå = new string(förstaTvåEfternamn.Take(2).ToArray());
+            string nyttAnvändnamn = nyttFörnamnTvå.ToLower() + nyttEfternamnTvå.ToLower();
 
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
+           p.UppdateraPerson(id, förnamn, efternamn, telefonnummer, nyttAnvändnamn);
 
-            AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
-            AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
-            AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
+            AktuellPerson.Användarnamn = nyttAnvändnamn;
+
+           if (textBoxEfternamnMittkonto.Text != AktuellPerson.Efternamn)
+            {
+                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
+                inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            }
+            else if (textBoxFörnamnMittkonto.Text != AktuellPerson.Förnamn)
+            {
+                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
+                inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            }
+            else if (textBoxTelefonnrMittkonto.Text != AktuellPerson.Telefonnr)
+            {
+                AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
+            }
 
             p.StängConnection();
-
         }
+
 
         private void buttonSökAntalFramtidaBarn_Click(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
             Postgres p1 = new Postgres();
 
-            dateTimePickerFrån.Value = DateTime.Today;
+            
 
             if (dateTimePickerFrån.Value > dateTimePickerTill.Value)
             {
