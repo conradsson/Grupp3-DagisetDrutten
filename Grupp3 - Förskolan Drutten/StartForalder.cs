@@ -311,44 +311,73 @@ namespace Grupp3___Förskolan_Drutten
                     Postgres pp = new Postgres();
                     datumet = start.AddDays(i).ToString("yyyy-MM-dd");
                 
-                   frånvaro = pp.KontrolleraFrånvaro(Convert.ToDateTime(datumet), barnid);
+                    frånvaro = pp.KontrolleraFrånvaro(Convert.ToDateTime(datumet), barnid);
+                    
+                    if (frånvaro == true)
+                    {
+                        DialogResult result = MessageBox.Show("Det finns en frånvaro meddelad detta datum! " +datumet+ " \n\nOm du trycker på OK meddelas tiden och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
+                           if (result == DialogResult.OK)
+                           {
+                               Postgres p = new Postgres();
+                               p.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
+
+                               Postgres po = new Postgres();
+                               po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
+
+                               Postgres p4 = new Postgres();
+                               p4.TaBortFrånvaro(Convert.ToDateTime(datumet), barnid);
+                               
+                               MessageBox.Show("Tiden är meddelad och frånvaron är borttagen.");
+                           }
+                    }
+                            else
+                           {
+                               Postgres p9 = new Postgres();
+                               p9.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
+
+                               Postgres po = new Postgres();
+                               po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
+                                   
+                               MessageBox.Show("Tiden är meddelad.");
+                           }
+
                 } 
 
-                if (frånvaro == true)
-                {
-                    DialogResult result = MessageBox.Show("Det finns frånvaro meddelad under detta/dessa datum! \n\nOm du trycker på OK meddelas tiden/tiderna och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden/tiderna och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
-                    if (result == DialogResult.OK)
-                    {
-                        for (int i = 0; i <= end.Subtract(start).Days; i++)
-                        {
-                            datumet = start.AddDays(i).ToString("yyyy-MM-dd");
-                             Postgres p = new Postgres();
-                            p.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
+                //
+                //{
+                //    DialogResult result = MessageBox.Show("Det finns frånvaro meddelad under detta/dessa datum! \n\nOm du trycker på OK meddelas tiden/tiderna och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden/tiderna och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
+                //    if (result == DialogResult.OK)
+                //    {
+                //        for (int i = 0; i <= end.Subtract(start).Days; i++)
+                //        {
+                //            datumet = start.AddDays(i).ToString("yyyy-MM-dd");
+                //             Postgres p = new Postgres();
+                //            p.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
 
-                            Postgres po = new Postgres();
-                            po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
+                //            Postgres po = new Postgres();
+                //            po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
 
-                            Postgres p4 = new Postgres();
-                            p4.TaBortFrånvaro(Convert.ToDateTime(datumet), barnid);
-                        }
-                        MessageBox.Show("Tiden är meddelad och frånvaron är borttagen.");
-                    }
+                //            Postgres p4 = new Postgres();
+                //            p4.TaBortFrånvaro(Convert.ToDateTime(datumet), barnid);
+                //        }
+                //        MessageBox.Show("Tiden är meddelad och frånvaron är borttagen.");
+                //    }
 
-                }
-                else
-                {
+                //}
+                //else
+                //{
 
-                    for (int i = 0; i <= end.Subtract(start).Days; i++)
-                    {
-                            datumet = start.AddDays(i).ToString("yyyy-MM-dd");
-                            Postgres p9 = new Postgres();
-                            p9.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
+                //    for (int i = 0; i <= end.Subtract(start).Days; i++)
+                //    {
+                //            datumet = start.AddDays(i).ToString("yyyy-MM-dd");
+                //            Postgres p9 = new Postgres();
+                //            p9.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
 
-                            Postgres po = new Postgres();
-                            po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
-                    }
-                    MessageBox.Show("Tiden är meddelad.");
-                }
+                //            Postgres po = new Postgres();
+                //            po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
+                //    }
+                //    MessageBox.Show("Tiden är meddelad.");
+                //}
                 Postgres p1 = new Postgres();
                 Postgres p2 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
