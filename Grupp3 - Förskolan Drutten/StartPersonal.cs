@@ -485,15 +485,7 @@ namespace Grupp3___Förskolan_Drutten
                     }
                 }
             }
-
-
-
-            //MessageBox.Show(tidsArray[].ToString());
-
-            //MessageBox.Show(chartBarnensTider.Series[0].Points[3].YValues[0].ToString());
-
-            //MessageBox.Show(chartBarnensTider.Series[1].Points[3].YValues[0].ToString());
-            
+           
 
         }
 
