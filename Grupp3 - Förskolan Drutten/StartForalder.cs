@@ -494,10 +494,10 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Välj ett barn i listan.");
             }
 
-
+            Postgres p1 = new Postgres();
             listAktuellaBarn.DataSource = null;
             List<Barn> barnlista = new List<Barn>();
-            barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
+            barnlista = p1.HämtaAktuellaBarn(AktuellPerson.Personid);
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
             textBoxFornamn.Clear();
