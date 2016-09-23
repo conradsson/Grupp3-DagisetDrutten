@@ -922,5 +922,49 @@ namespace Grupp3___Förskolan_Drutten
             panelHjälpMeddelaFrånvaro.Visible = false;
             labelHjälpMeddelaFrånvaro.Visible = false;
         }
+
+       
+
+        private void textBoxHämtasAv1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
+        }
+
+        private void textBoxFörnamnMittKonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
+        }
+
+        private void textBoxEfternamnMittKonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
+        }
+
+        private void textBoxFornamn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
+        }
+
+        private void textBoxEfternamn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
+        }
+
+        private void textBoxTelefonnummerMittKonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraNummer(e);
+            p.StängConnection();
+        }
     }
 }
