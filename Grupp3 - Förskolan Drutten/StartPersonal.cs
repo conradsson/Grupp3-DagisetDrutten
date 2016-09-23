@@ -448,21 +448,49 @@ namespace Grupp3___Förskolan_Drutten
             int tid = 06;
             int kollaTid2 = 06;
             int tid2 = 06;
+            double[] tidsArray = new double[13];
+            double[] tidsArray2 = new double[13];
+            double[] tidsArraySvaret = new double[13];
+
 
             //MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
+            //string hej = p.HämtaAntalBarnEfterVarjeTimme(DateTime.Today, 7, 8).ToString();
+            //MessageBox.Show(hej);
 
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < 13; i++)
             {
-                Postgres p2 = new Postgres();
                 Postgres p1 = new Postgres();
+                Postgres p2 = new Postgres();
 
-                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p2.HämtaDagensTider(DateTime.Today, kollaTid++));
-                this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p1.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
+                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p1.HämtaDagensTider(DateTime.Today, kollaTid++));
+                this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p2.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
 
-                p.StängConnection();
                 p1.StängConnection();
+                p2.StängConnection();
 
             }
+
+            for (int i = 0; i < tidsArray.Length; i++)
+            {
+                if (chartBarnensTider.Series[0].Points[i].YValues[0] != 0 || chartBarnensTider.Series[1].Points[i].YValues[0] !=0)
+                {
+                    tidsArray[i] = chartBarnensTider.Series[0].Points[i].YValues[0];
+                    tidsArray2[i] = chartBarnensTider.Series[1].Points[i].YValues[0];
+
+                    tidsArraySvaret[i] =+ tidsArray[i] - tidsArray2[i];
+
+                }
+
+                
+
+            }
+
+            //MessageBox.Show(tidsArray[].ToString());
+
+            //MessageBox.Show(chartBarnensTider.Series[0].Points[3].YValues[0].ToString());
+
+            //MessageBox.Show(chartBarnensTider.Series[1].Points[3].YValues[0].ToString());
+            
 
         }
 

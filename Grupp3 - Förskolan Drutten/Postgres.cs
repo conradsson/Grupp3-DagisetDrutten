@@ -1215,6 +1215,38 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
             return svar;
         }
+        public Int64 HämtaAntalBarnEfterVarjeTimme(DateTime AktuelltDatum, int tid, int tid2)
+        {
+            Int64 svar = 0;
+
+            try
+            {
+                string sql = "SELECT COUNT(narvaro.tid_lamnad) as antal FROM dagis.narvaro WHERE datum =  ('" + AktuelltDatum + "') AND tid_lamnad BETWEEN '" + tid + "' AND '" + tid2 + "'";
+
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+
+
+                    svar = (Int64)dr["antal"];
+
+                    return svar;
+                }
+                dr.Close();
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+            conn.Close();
+            return svar;
+        }
         /// <summary>
         /// Hämtas alla framtida barn utifrån datum, framtidsöversikt.
         /// </summary>
