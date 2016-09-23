@@ -351,8 +351,8 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
                 if (meddelande.Contains("23505"))
                 {
-                    meddelande = "Det finns redan en tid registrerat detta datum. \n \n"
-                        + "Klicka på ett annat datum i kalendern och välj sedan detta datum igen \nom du vill uppdatera den redan befintliga tiden.";
+                    meddelande = "Det finns redan en tid registrerad detta datum "+ datum.ToString("yyyy-MM-dd") +". \n"
+                        + "Tiden för detta datum kommer inte att påverkas. \n\nTiden som blir meddelad gäller endast den/de övriga datum du har valt.\nVälj detta datum igen om du vill uppdatera den redan befintliga tiden.";
                 System.Windows.Forms.MessageBox.Show(meddelande); 
                 }
             }

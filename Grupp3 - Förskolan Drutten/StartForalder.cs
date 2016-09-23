@@ -303,7 +303,6 @@ namespace Grupp3___Förskolan_Drutten
 
                 DateTime start = monthCalendar3.SelectionStart;
                 DateTime end = monthCalendar3.SelectionEnd;
-                
                 bool frånvaro = false;
                 String datumet = "";
                 for (int i = 0; i <= end.Subtract(start).Days; i++)
@@ -315,7 +314,7 @@ namespace Grupp3___Förskolan_Drutten
                     
                     if (frånvaro == true)
                     {
-                        DialogResult result = MessageBox.Show("Det finns en frånvaro meddelad detta datum! " +datumet+ " \n\nOm du trycker på OK meddelas tiden och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
+                        DialogResult result = MessageBox.Show("Det finns en frånvaro meddelad detta datum " +datumet+ "!" + " \n\nOm du trycker på OK meddelas tiden och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
                            if (result == DialogResult.OK)
                            {
                                Postgres p = new Postgres();
@@ -330,6 +329,7 @@ namespace Grupp3___Förskolan_Drutten
                                MessageBox.Show("Tiden är meddelad och frånvaron är borttagen.");
                            }
                     }
+                    
                             else
                            {
                                Postgres p9 = new Postgres();
@@ -337,11 +337,11 @@ namespace Grupp3___Förskolan_Drutten
 
                                Postgres po = new Postgres();
                                po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
-                                   
-                               MessageBox.Show("Tiden är meddelad.");
-                           }
 
-                } 
+                           }
+                    
+
+                } MessageBox.Show("Tiden är meddelad.");
 
                 //
                 //{
