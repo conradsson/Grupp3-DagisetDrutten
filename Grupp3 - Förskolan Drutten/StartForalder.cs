@@ -542,39 +542,6 @@ namespace Grupp3___Förskolan_Drutten
         }
 
 
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void uppdateraFörälder_Click(object sender, EventArgs e)
-        {
-            Postgres p = new Postgres();
-            //Person aktuellPerson = new Person();
-
-            int id = AktuellPerson.Personid;
-            string förnamn = textBoxFörnamnMittKonto.Text;
-            string efternamn = textBoxEfternamnMittKonto.Text;
-            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
-
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
-        }
-
-        private void uppdateraförälder_Click_1(object sender, EventArgs e)
-        {
-            Postgres p = new Postgres();
-            //Person aktuellPerson = new Person();
-
-            int id = AktuellPerson.Personid;
-            string förnamn = textBoxFörnamnMittKonto.Text;
-            string efternamn = textBoxEfternamnMittKonto.Text;
-            string telefonnummer = textBoxTelefonnummerMittKonto.Text;
-
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Barn aktuelltbarn = new Barn();
@@ -675,6 +642,7 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson.Förnamn = textBoxFörnamnMittKonto.Text;
             AktuellPerson.Efternamn = textBoxEfternamnMittKonto.Text;
             AktuellPerson.Telefonnr = textBoxTelefonnummerMittKonto.Text;
+            inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
 
         }
 
