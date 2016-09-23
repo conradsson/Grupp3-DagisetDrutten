@@ -268,14 +268,14 @@ namespace Grupp3___Förskolan_Drutten
             if (datum < dagensDatum)
             {
                 MessageBox.Show("Du kan tyvärr inte lägga in tider som är före dagens datum. \nVänligen välj ett annat datum.");
-                comboBoxFrån1.Text = "";
-                comboBoxFrån2.Text = "";
-                comboBoxTill1.Text = "";
-                comboBoxTill2.Text = "";
             }
             else if (från1 == "" || från2 == "" || till1 == "" || till2 == "")
             {
                 MessageBox.Show("Var vänlig kontrollera att Meddela tider är korrekt ifylld.\n\nIngen ruta där tider fylls i får lämnas tom.");
+            }
+            else if (från1 == "hh" || från2 == "mm" || till1 == "hh" || till2 == "mm")
+            {
+                MessageBox.Show("Var vänlig kontrollera att Meddela tider är korrekt ifylld.");
             }
             else if (hämtas == lämnas)
             {
@@ -356,13 +356,13 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p3 = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid, datummetod);
-               
-            }
-            MetodHämtaBarnetsTid(datum);
                 comboBoxFrån1.Text = "hh";
                 comboBoxFrån2.Text = "mm";
                 comboBoxTill1.Text = "hh";
                 comboBoxTill2.Text = "mm";
+            }
+            MetodHämtaBarnetsTid(datum);
+               
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
