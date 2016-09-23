@@ -470,6 +470,7 @@ namespace Grupp3___Förskolan_Drutten
             int tid = 06;
             int kollaTid2 = 06;
             int tid2 = 06;
+            int tid3 = 06;
             double[] tidsArray = new double[13];
             double[] tidsArray2 = new double[13];
             double[] tidsArraySvaret = new double[13];
@@ -495,7 +496,7 @@ namespace Grupp3___Förskolan_Drutten
 
             for (int i = 0; i < tidsArray.Length; i++)
             {
-                if (chartBarnensTider.Series[0].Points[i].YValues[0] != 0 || chartBarnensTider.Series[1].Points[i].YValues[0] !=0)
+                if (chartBarnensTider.Series[0].Points[i].YValues[0] != 1000)
                 {
                     tidsArray[i] = chartBarnensTider.Series[0].Points[i].YValues[0];
                     tidsArray2[i] = chartBarnensTider.Series[1].Points[i].YValues[0];
@@ -505,17 +506,12 @@ namespace Grupp3___Förskolan_Drutten
                       tidsArraySvaret[x] += tidsArray[i] - tidsArray2[i];
                         tidsArraySvaret2[i] = tidsArraySvaret[x];
                     }
-                }
+                } 
             }
-
-
-
-            //MessageBox.Show(tidsArray[].ToString());
-
-            //MessageBox.Show(chartBarnensTider.Series[0].Points[3].YValues[0].ToString());
-
-            //MessageBox.Show(chartBarnensTider.Series[1].Points[3].YValues[0].ToString());
-            
+            for (int i = 0; i < tidsArraySvaret2.Length; i++)
+            {
+                this.chartBarnensTider.Series["Antal barn"].Points.AddXY(tid3++, tidsArraySvaret2[i]);
+            }
 
         }
 
