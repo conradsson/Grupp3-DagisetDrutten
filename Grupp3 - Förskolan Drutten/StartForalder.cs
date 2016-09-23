@@ -636,8 +636,10 @@ namespace Grupp3___Förskolan_Drutten
             string förnamn = textBoxFörnamnMittKonto.Text;
             string efternamn = textBoxEfternamnMittKonto.Text;
             string telefonnummer = textBoxTelefonnummerMittKonto.Text;
+            string NyttAnvändarnamn = "";
 
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
+            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer,NyttAnvändarnamn);
+
 
             AktuellPerson.Förnamn = textBoxFörnamnMittKonto.Text;
             AktuellPerson.Efternamn = textBoxEfternamnMittKonto.Text;

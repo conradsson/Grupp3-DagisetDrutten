@@ -523,23 +523,28 @@ namespace Grupp3___Förskolan_Drutten
             string förnamn = textBoxFörnamnMittkonto.Text;
             string efternamn = textBoxEfternamnMittkonto.Text;
             string telefonnummer = textBoxTelefonnrMittkonto.Text;
+            char [] förstaTvåFörnamn = textBoxFörnamnMittkonto.Text.Take(2).ToArray();
+            char[] förstaTvåEfternamn = textBoxEfternamnMittkonto.Text.Take(2).ToArray();
+            string nyttAnvändarnamn = förstaTvåFörnamn.ToString() + förstaTvåEfternamn.ToString();
 
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
+            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer,nyttAnvändarnamn);
 
-           /* if (textBoxEfternamnMittkonto.Text != AktuellPerson.Efternamn  textBoxTelefonnrMittkonto.Text != AktuellPerson.Telefonnr)
+           if (textBoxEfternamnMittkonto.Text != AktuellPerson.Efternamn)
             {
-
-                AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
                 AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
-                AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
                 inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
             }
-            else if (textBoxFörnamnMittkonto.Text != AktuellPerson.Förnamn ||)*/
-
+            else if (textBoxFörnamnMittkonto.Text != AktuellPerson.Förnamn)
+            {
             AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
-            AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
-            AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
             inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            }
+            else if (textBoxTelefonnrMittkonto.Text != AktuellPerson.Telefonnr)
+            {
+                AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
+            }
+
+
 
 
             p.StängConnection();
