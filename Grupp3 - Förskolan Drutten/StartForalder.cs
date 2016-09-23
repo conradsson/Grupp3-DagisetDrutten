@@ -31,6 +31,7 @@ namespace Grupp3___Förskolan_Drutten
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn + " " + aktuellperson.Efternamn;
 
             informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
+            
         }
 
 
@@ -312,7 +313,7 @@ namespace Grupp3___Förskolan_Drutten
                 
                 bool frånvaro = false;
                 String datumet = "";
-                for (int i = 0; i < end.Subtract(start).Days; i++)
+                for (int i = 0; i <= end.Subtract(start).Days; i++)
                 {Postgres pp = new Postgres();
                     datumet = start.AddDays(i).ToString("yyyy-MM-dd");
                 
@@ -342,7 +343,7 @@ namespace Grupp3___Förskolan_Drutten
                             Postgres p4 = new Postgres();
                             p4.TaBortFrånvaro(Convert.ToDateTime(datumet), barnid);
                         }
-                        //this.Close();
+                        MessageBox.Show("Tiden är meddelad och frånvaron är borttagen");
                        
                     }
 
