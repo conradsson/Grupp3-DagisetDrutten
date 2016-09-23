@@ -519,29 +519,32 @@ namespace Grupp3___Förskolan_Drutten
             string förnamn = textBoxFörnamnMittkonto.Text;
             string efternamn = textBoxEfternamnMittkonto.Text;
             string telefonnummer = textBoxTelefonnrMittkonto.Text;
-            char [] förstaTvåFörnamn = textBoxFörnamnMittkonto.Text.Take(2).ToArray();
+            char[] förstaTvåFörnamn = textBoxFörnamnMittkonto.Text.Take(2).ToArray();
+            string nyttFörnamnTvå = new string(förstaTvåFörnamn.Take(2).ToArray());
             char[] förstaTvåEfternamn = textBoxEfternamnMittkonto.Text.Take(2).ToArray();
-            string nyttAnvändarnamn = förstaTvåFörnamn.ToString() + förstaTvåEfternamn.ToString();
+            string nyttEfternamnTvå = new string(förstaTvåEfternamn.Take(2).ToArray());
+            string nyttAnvändnamn = nyttFörnamnTvå.ToLower() + nyttEfternamnTvå.ToLower();
 
-            p.UppdateraPerson(id, förnamn, efternamn, telefonnummer,nyttAnvändarnamn);
+           p.UppdateraPerson(id, förnamn, efternamn, telefonnummer, nyttAnvändnamn);
+
+            AktuellPerson.Användarnamn = nyttAnvändnamn;
 
            if (textBoxEfternamnMittkonto.Text != AktuellPerson.Efternamn)
             {
+                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
                 AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
                 inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
             }
             else if (textBoxFörnamnMittkonto.Text != AktuellPerson.Förnamn)
             {
-            AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
-            inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
+                inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
             }
             else if (textBoxTelefonnrMittkonto.Text != AktuellPerson.Telefonnr)
             {
                 AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
             }
-
-
-
 
             p.StängConnection();
         }
