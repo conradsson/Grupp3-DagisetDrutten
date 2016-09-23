@@ -201,7 +201,42 @@ namespace Grupp3___Förskolan_Drutten
         private void inloggadButton_MouseDown(object sender, MouseEventArgs e)
         {
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenPushedLängre;
+            inloggadesAnvändarnamn.BackColor = Color.LightGray;
 
+        }
+        private void inloggadesAnvändarnamn_Click(object sender, EventArgs e)
+        {
+            Postgres p = new Postgres();
+
+
+            textBoxFörnamnMittKonto.Text = AktuellPerson.Förnamn;
+            textBoxEfternamnMittKonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnummerMittKonto.Text = AktuellPerson.Telefonnr;
+
+
+            List<Barn> barnlista = new List<Barn>();
+            barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
+            listAktuellaBarn.DataSource = null;
+            listAktuellaBarn.DataSource = barnlista;
+            listAktuellaBarn.ClearSelected();
+            textBoxFornamn.Clear();
+            textBoxEfternamn.Clear();
+            textBoxAllergier.Clear();
+            richTextBoxAnnat.Clear();
+            //  .Visable Effekter
+            MittKontoTabControl.Visible = true;
+            informationTabControl.Visible = false;
+            TidertabControl.Visible = false;
+            // NärvarotabControl.Visible = false;
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            inloggadesAnvändarnamn.BackColor = Color.WhiteSmoke;
+        }
+
+        private void inloggadesAnvändarnamn_MouseDown(object sender, MouseEventArgs e)
+        {
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenPushedLängre;
+            inloggadesAnvändarnamn.BackColor = Color.LightGray;
         }
 
         private void exitButton_Click(object sender, EventArgs e)

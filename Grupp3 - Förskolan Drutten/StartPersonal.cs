@@ -192,11 +192,33 @@ namespace Grupp3___Förskolan_Drutten
             BarntabControl.Visible = false;
             NärvarotabControl.Visible = false;
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            inloggadesAnvändarnamn.BackColor = Color.WhiteSmoke;
         }
 
         private void inloggadButton_MouseDown(object sender, MouseEventArgs e)
         {
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenPushedLängre;
+            inloggadesAnvändarnamn.BackColor = Color.LightGray;
+        }
+        private void inloggadesAnvändarnamn_Click(object sender, EventArgs e)
+        {
+            textBoxFörnamnMittkonto.Text = AktuellPerson.Förnamn;
+            textBoxEfternamnMittkonto.Text = AktuellPerson.Efternamn;
+            textBoxTelefonnrMittkonto.Text = AktuellPerson.Telefonnr;
+
+            //  .Visable Effekter
+            MittKontoTabControl.Visible = true;
+            informationTabControl.Visible = false;
+            BarntabControl.Visible = false;
+            NärvarotabControl.Visible = false;
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            inloggadesAnvändarnamn.BackColor = Color.WhiteSmoke;
+        }
+
+        private void inloggadesAnvändarnamn_MouseDown(object sender, MouseEventArgs e)
+        {
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenPushedLängre;
+            inloggadesAnvändarnamn.BackColor = Color.LightGray;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -847,5 +869,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+
     }
 }
