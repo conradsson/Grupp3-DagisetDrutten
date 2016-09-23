@@ -1624,6 +1624,33 @@ namespace Grupp3___Förskolan_Drutten
             conn.Close();
         }
 
+        public void ValideraText(KeyPressEventArgs e)
+        {
+            
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 32 || e.KeyChar == 45)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Ange endast bokstäver.");
+            }
+        }
+
+        public void ValideraNummer(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || e.KeyChar ==45)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Ange endast siffror.");
+            }
+        }
+
     }
 
 }

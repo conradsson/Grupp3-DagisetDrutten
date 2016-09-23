@@ -69,6 +69,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSorteraKolumn = new System.Windows.Forms.Button();
             this.klocklabel2 = new System.Windows.Forms.Label();
             this.klocklabel1 = new System.Windows.Forms.Label();
             this.Klockan = new System.Windows.Forms.Button();
@@ -596,6 +597,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.buttonSorteraKolumn);
             this.panel1.Controls.Add(this.nyttInläggPanel);
             this.panel1.Controls.Add(this.klocklabel2);
             this.panel1.Controls.Add(this.klocklabel1);
@@ -607,14 +609,24 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
+            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Controls.Add(this.NärvarotabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.informationTabControl);
-            this.panel1.Controls.Add(this.BarntabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
             this.panel1.TabIndex = 4;
+            // 
+            // buttonSorteraKolumn
+            // 
+            this.buttonSorteraKolumn.Location = new System.Drawing.Point(591, 12);
+            this.buttonSorteraKolumn.Name = "buttonSorteraKolumn";
+            this.buttonSorteraKolumn.Size = new System.Drawing.Size(90, 23);
+            this.buttonSorteraKolumn.TabIndex = 36;
+            this.buttonSorteraKolumn.Text = "Sortera Kolumn";
+            this.buttonSorteraKolumn.UseVisualStyleBackColor = true;
+            this.buttonSorteraKolumn.Click += new System.EventHandler(this.buttonSorteraKolumn_Click);
             // 
             // klocklabel2
             // 
@@ -1838,6 +1850,7 @@
             this.textBoxSökRuta.Name = "textBoxSökRuta";
             this.textBoxSökRuta.Size = new System.Drawing.Size(100, 23);
             this.textBoxSökRuta.TabIndex = 36;
+            this.textBoxSökRuta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSökRuta_KeyPress);
             // 
             // checkBoxAvdelning2
             // 
@@ -2123,7 +2136,8 @@
             this.närvarande.DataPropertyName = "närvarande";
             this.närvarande.HeaderText = "Närvarande";
             this.närvarande.Name = "närvarande";
-            this.närvarande.Width = 77;
+            this.närvarande.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.närvarande.Width = 96;
             // 
             // hämtad
             // 
@@ -2131,7 +2145,8 @@
             this.hämtad.DataPropertyName = "hämtad";
             this.hämtad.HeaderText = "Hämtad";
             this.hämtad.Name = "hämtad";
-            this.hämtad.Width = 57;
+            this.hämtad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hämtad.Width = 76;
             // 
             // HämtasAv
             // 
@@ -2594,6 +2609,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxFörnamnMittkonto;
         private System.Windows.Forms.Button minimeraButton;
+        private System.Windows.Forms.Button buttonSorteraKolumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barnid;
         private System.Windows.Forms.DataGridViewTextBoxColumn förnamnDataGridViewTextBoxColumn1;

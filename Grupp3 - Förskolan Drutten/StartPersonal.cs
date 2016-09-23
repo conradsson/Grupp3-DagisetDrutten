@@ -130,6 +130,7 @@ namespace Grupp3___Förskolan_Drutten
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonDrutten;
 
             Postgres p = new Postgres();
+
             dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(DateTime.Today);
             dataGridViewDagensBarn.Columns[1].Visible = false;
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
@@ -888,7 +889,7 @@ namespace Grupp3___Förskolan_Drutten
         private void dataGridViewDagensBarn_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-            //dataGridViewDagensBarn.Sort(dataGridViewDagensBarn.Columns[0], ListSortDirection.Ascending);
+            //dataGridViewDagensBarn.Sort(dataGridViewDagensBarn.Columns[2], ListSortDirection.Ascending);
         }
 
         private void dataGridViewDagensBarn_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -899,6 +900,65 @@ namespace Grupp3___Förskolan_Drutten
         private void dataGridViewDagensBarn_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buttonSorteraKolumn_Click(object sender, EventArgs e)
+        {
+            
+
+
+
+            //// Check which column is selected, otherwise set NewColumn to null.
+            //DataGridViewColumn newColumn =
+            //    dataGridViewDagensBarn.Columns.GetColumnCount(
+            //    DataGridViewElementStates.Selected) == 1 ?
+            //    dataGridViewDagensBarn.SelectedColumns[0] : null;
+
+            //DataGridViewColumn oldColumn = dataGridViewDagensBarn.SortedColumn;
+            //ListSortDirection direction;
+
+            //// If oldColumn is null, then the DataGridView is not currently sorted.
+            //if (oldColumn != null)
+            //{
+            //    // Sort the same column again, reversing the SortOrder.
+            //    if (oldColumn == newColumn &&
+            //        dataGridViewDagensBarn.SortOrder == SortOrder.Ascending)
+            //    {
+            //        direction = ListSortDirection.Descending;
+            //    }
+            //    else
+            //    {
+            //        // Sort a new column and remove the old SortGlyph.
+            //        direction = ListSortDirection.Ascending;
+            //        oldColumn.HeaderCell.SortGlyphDirection = SortOrder.None;
+            //    }
+            //}
+            //else
+            //{
+            //    direction = ListSortDirection.Ascending;
+            //}
+
+            //// If no column has been selected, display an error dialog  box.
+            //if (newColumn == null)
+            //{
+            //    MessageBox.Show("Select a single column and try again.",
+            //        "Error: Invalid Selection", MessageBoxButtons.OK,
+            //        MessageBoxIcon.Error);
+            //}
+            //else
+            //{
+            //    dataGridViewDagensBarn.Sort(newColumn, direction);
+            //    newColumn.HeaderCell.SortGlyphDirection =
+            //        direction == ListSortDirection.Ascending ?
+            //        SortOrder.Ascending : SortOrder.Descending;
+            //}
+        }
+
+        private void textBoxSökRuta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
         }
     }
 }
