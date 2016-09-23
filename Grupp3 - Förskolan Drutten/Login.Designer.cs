@@ -42,6 +42,8 @@
             this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
             this.LoggaInButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.copyButton = new System.Windows.Forms.Button();
@@ -52,13 +54,11 @@
             this.encryptTextBox = new System.Windows.Forms.TextBox();
             this.losenordENCRYPTtextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.minimeraButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -208,6 +208,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
+            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(524, 443);
+            this.panel1.TabIndex = 3;
+            // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Gainsboro;
@@ -319,34 +338,15 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Lösenord:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
-            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(524, 443);
-            this.panel1.TabIndex = 3;
-            // 
             // minimeraButton
             // 
-            this.minimeraButton.BackColor = System.Drawing.Color.LightGray;
+            this.minimeraButton.BackColor = System.Drawing.Color.Gainsboro;
             this.minimeraButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.minimeraButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.minimeraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimeraButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimeraButton.ForeColor = System.Drawing.Color.Black;
-            this.minimeraButton.Location = new System.Drawing.Point(728, 2);
+            this.minimeraButton.Location = new System.Drawing.Point(728, 3);
             this.minimeraButton.Name = "minimeraButton";
             this.minimeraButton.Size = new System.Drawing.Size(24, 23);
             this.minimeraButton.TabIndex = 30;
@@ -375,9 +375,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
