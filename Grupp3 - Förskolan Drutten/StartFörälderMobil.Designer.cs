@@ -55,12 +55,21 @@
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.omTabPage = new System.Windows.Forms.TabPage();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ändraLösenPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ändralösenBekräfta = new System.Windows.Forms.Button();
+            this.ändraLösenAvbryt = new System.Windows.Forms.Button();
+            this.textBoxNyttLösen2 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBoxNyttLösen = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBoxNuvarandeLösen = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.ändraLösenordButton = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
             this.uppdateraförälder = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.textBoxTelefonnummerMittKonto = new System.Windows.Forms.TextBox();
@@ -126,26 +135,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.label34 = new System.Windows.Forms.Label();
-            this.ändraLösenPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ändralösenBekräfta = new System.Windows.Forms.Button();
-            this.ändraLösenAvbryt = new System.Windows.Forms.Button();
-            this.textBoxNyttLösen2 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBoxNyttLösen = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBoxNuvarandeLösen = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.ändraLösenordButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenyPanel.SuspendLayout();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
-            this.omTabPage.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.ändraLösenPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.TidertabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -154,8 +151,6 @@
             this.groupBox2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.ändraLösenPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menyButton
@@ -403,6 +398,8 @@
             // 
             // senasteTabPage
             // 
+            this.senasteTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.senasteTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.senasteTabPage.Controls.Add(this.richTextBoxPubliceradeInlägg);
             this.senasteTabPage.Controls.Add(this.label25);
@@ -488,54 +485,15 @@
             // 
             // omTabPage
             // 
+            this.omTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttisNYOM;
+            this.omTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.omTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.omTabPage.Controls.Add(this.label29);
-            this.omTabPage.Controls.Add(this.label28);
-            this.omTabPage.Controls.Add(this.label27);
-            this.omTabPage.Controls.Add(this.label1);
             this.omTabPage.Location = new System.Drawing.Point(4, 22);
             this.omTabPage.Name = "omTabPage";
             this.omTabPage.Size = new System.Drawing.Size(323, 393);
             this.omTabPage.TabIndex = 1;
             this.omTabPage.Text = "Om förskolan Drutten";
             this.omTabPage.UseVisualStyleBackColor = true;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(32, 195);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(59, 13);
-            this.label29.TabIndex = 3;
-            this.label29.Text = "Öppettider:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(32, 276);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(88, 13);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Kontaktuppgifter:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(32, 133);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(91, 13);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "Vi som jobbar här:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Om förskolan Drutten";
             // 
             // MittKontoTabControl
             // 
@@ -550,6 +508,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage1.Controls.Add(this.ändraLösenPanel);
             this.tabPage1.Controls.Add(this.ändraLösenordButton);
@@ -569,6 +529,137 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Kontouppgifter";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ändraLösenPanel
+            // 
+            this.ändraLösenPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.ändraLösenPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ändraLösenPanel.Controls.Add(this.panel2);
+            this.ändraLösenPanel.Controls.Add(this.label30);
+            this.ändraLösenPanel.Location = new System.Drawing.Point(4, 6);
+            this.ändraLösenPanel.Name = "ändraLösenPanel";
+            this.ändraLösenPanel.Size = new System.Drawing.Size(316, 267);
+            this.ändraLösenPanel.TabIndex = 25;
+            this.ändraLösenPanel.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.ändralösenBekräfta);
+            this.panel2.Controls.Add(this.ändraLösenAvbryt);
+            this.panel2.Controls.Add(this.textBoxNyttLösen2);
+            this.panel2.Controls.Add(this.label33);
+            this.panel2.Controls.Add(this.textBoxNyttLösen);
+            this.panel2.Controls.Add(this.label32);
+            this.panel2.Controls.Add(this.textBoxNuvarandeLösen);
+            this.panel2.Controls.Add(this.label31);
+            this.panel2.Location = new System.Drawing.Point(28, 21);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(257, 226);
+            this.panel2.TabIndex = 23;
+            // 
+            // ändralösenBekräfta
+            // 
+            this.ändralösenBekräfta.Location = new System.Drawing.Point(171, 190);
+            this.ändralösenBekräfta.Name = "ändralösenBekräfta";
+            this.ändralösenBekräfta.Size = new System.Drawing.Size(75, 23);
+            this.ändralösenBekräfta.TabIndex = 7;
+            this.ändralösenBekräfta.Text = "Bekräfta";
+            this.ändralösenBekräfta.UseVisualStyleBackColor = true;
+            this.ändralösenBekräfta.Click += new System.EventHandler(this.ändralösenBekräfta_Click);
+            // 
+            // ändraLösenAvbryt
+            // 
+            this.ändraLösenAvbryt.Location = new System.Drawing.Point(84, 190);
+            this.ändraLösenAvbryt.Name = "ändraLösenAvbryt";
+            this.ändraLösenAvbryt.Size = new System.Drawing.Size(75, 23);
+            this.ändraLösenAvbryt.TabIndex = 6;
+            this.ändraLösenAvbryt.Text = "Avbryt";
+            this.ändraLösenAvbryt.UseVisualStyleBackColor = true;
+            this.ändraLösenAvbryt.Click += new System.EventHandler(this.ändraLösenAvbryt_Click);
+            // 
+            // textBoxNyttLösen2
+            // 
+            this.textBoxNyttLösen2.Location = new System.Drawing.Point(32, 152);
+            this.textBoxNyttLösen2.Name = "textBoxNyttLösen2";
+            this.textBoxNyttLösen2.PasswordChar = '*';
+            this.textBoxNyttLösen2.Size = new System.Drawing.Size(133, 20);
+            this.textBoxNyttLösen2.TabIndex = 5;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(29, 135);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(113, 13);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "Bekräfta nytt lösenord:";
+            // 
+            // textBoxNyttLösen
+            // 
+            this.textBoxNyttLösen.Location = new System.Drawing.Point(32, 100);
+            this.textBoxNyttLösen.Name = "textBoxNyttLösen";
+            this.textBoxNyttLösen.PasswordChar = '*';
+            this.textBoxNyttLösen.Size = new System.Drawing.Size(133, 20);
+            this.textBoxNyttLösen.TabIndex = 3;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(29, 83);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(72, 13);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "Nytt lösenord:";
+            // 
+            // textBoxNuvarandeLösen
+            // 
+            this.textBoxNuvarandeLösen.Location = new System.Drawing.Point(32, 47);
+            this.textBoxNuvarandeLösen.Name = "textBoxNuvarandeLösen";
+            this.textBoxNuvarandeLösen.PasswordChar = '*';
+            this.textBoxNuvarandeLösen.Size = new System.Drawing.Size(133, 20);
+            this.textBoxNuvarandeLösen.TabIndex = 1;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(29, 30);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(106, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Nuvarande lösenord:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(3, 3);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(92, 13);
+            this.label30.TabIndex = 24;
+            this.label30.Text = "Ändra lösenord";
+            // 
+            // ändraLösenordButton
+            // 
+            this.ändraLösenordButton.Location = new System.Drawing.Point(90, 202);
+            this.ändraLösenordButton.Name = "ändraLösenordButton";
+            this.ändraLösenordButton.Size = new System.Drawing.Size(99, 34);
+            this.ändraLösenordButton.TabIndex = 26;
+            this.ändraLösenordButton.Text = "Ändra lösenord";
+            this.ändraLösenordButton.UseVisualStyleBackColor = true;
+            this.ändraLösenordButton.Click += new System.EventHandler(this.ändraLösenordButton_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(29, 23);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(79, 13);
+            this.label34.TabIndex = 24;
+            this.label34.Text = "Ändra uppgifter";
             // 
             // uppdateraförälder
             // 
@@ -629,6 +720,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage2.Controls.Add(this.listAktuellaBarn);
             this.tabPage2.Controls.Add(this.label21);
@@ -758,6 +851,8 @@
             // 
             this.tabPage3.AutoScroll = true;
             this.tabPage3.AutoScrollMargin = new System.Drawing.Size(0, 1);
+            this.tabPage3.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage3.Controls.Add(this.dataGridViewTiderBarn);
             this.tabPage3.Controls.Add(this.tiderBarnListBox);
@@ -1146,6 +1241,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage4.Controls.Add(this.listBoxMeddelaHämtning);
             this.tabPage4.Controls.Add(this.buttonMeddelaHämtning);
@@ -1223,6 +1320,8 @@
             // 
             this.tabPage5.AutoScroll = true;
             this.tabPage5.AutoScrollMargin = new System.Drawing.Size(0, 1);
+            this.tabPage5.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage5.Controls.Add(this.radioButtonSjuk);
             this.tabPage5.Controls.Add(this.radioButtonLedig);
@@ -1302,137 +1401,6 @@
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.TabIndex = 20;
             // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(29, 23);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(79, 13);
-            this.label34.TabIndex = 24;
-            this.label34.Text = "Ändra uppgifter";
-            // 
-            // ändraLösenPanel
-            // 
-            this.ändraLösenPanel.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
-            this.ändraLösenPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ändraLösenPanel.Controls.Add(this.panel2);
-            this.ändraLösenPanel.Controls.Add(this.label30);
-            this.ändraLösenPanel.Location = new System.Drawing.Point(4, 6);
-            this.ändraLösenPanel.Name = "ändraLösenPanel";
-            this.ändraLösenPanel.Size = new System.Drawing.Size(316, 267);
-            this.ändraLösenPanel.TabIndex = 25;
-            this.ändraLösenPanel.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.ändralösenBekräfta);
-            this.panel2.Controls.Add(this.ändraLösenAvbryt);
-            this.panel2.Controls.Add(this.textBoxNyttLösen2);
-            this.panel2.Controls.Add(this.label33);
-            this.panel2.Controls.Add(this.textBoxNyttLösen);
-            this.panel2.Controls.Add(this.label32);
-            this.panel2.Controls.Add(this.textBoxNuvarandeLösen);
-            this.panel2.Controls.Add(this.label31);
-            this.panel2.Location = new System.Drawing.Point(28, 21);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(257, 226);
-            this.panel2.TabIndex = 23;
-            // 
-            // ändralösenBekräfta
-            // 
-            this.ändralösenBekräfta.Location = new System.Drawing.Point(171, 190);
-            this.ändralösenBekräfta.Name = "ändralösenBekräfta";
-            this.ändralösenBekräfta.Size = new System.Drawing.Size(75, 23);
-            this.ändralösenBekräfta.TabIndex = 7;
-            this.ändralösenBekräfta.Text = "Bekräfta";
-            this.ändralösenBekräfta.UseVisualStyleBackColor = true;
-            this.ändralösenBekräfta.Click += new System.EventHandler(this.ändralösenBekräfta_Click);
-            // 
-            // ändraLösenAvbryt
-            // 
-            this.ändraLösenAvbryt.Location = new System.Drawing.Point(84, 190);
-            this.ändraLösenAvbryt.Name = "ändraLösenAvbryt";
-            this.ändraLösenAvbryt.Size = new System.Drawing.Size(75, 23);
-            this.ändraLösenAvbryt.TabIndex = 6;
-            this.ändraLösenAvbryt.Text = "Avbryt";
-            this.ändraLösenAvbryt.UseVisualStyleBackColor = true;
-            this.ändraLösenAvbryt.Click += new System.EventHandler(this.ändraLösenAvbryt_Click);
-            // 
-            // textBoxNyttLösen2
-            // 
-            this.textBoxNyttLösen2.Location = new System.Drawing.Point(32, 152);
-            this.textBoxNyttLösen2.Name = "textBoxNyttLösen2";
-            this.textBoxNyttLösen2.PasswordChar = '*';
-            this.textBoxNyttLösen2.Size = new System.Drawing.Size(133, 20);
-            this.textBoxNyttLösen2.TabIndex = 5;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(29, 135);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(113, 13);
-            this.label33.TabIndex = 4;
-            this.label33.Text = "Bekräfta nytt lösenord:";
-            // 
-            // textBoxNyttLösen
-            // 
-            this.textBoxNyttLösen.Location = new System.Drawing.Point(32, 100);
-            this.textBoxNyttLösen.Name = "textBoxNyttLösen";
-            this.textBoxNyttLösen.PasswordChar = '*';
-            this.textBoxNyttLösen.Size = new System.Drawing.Size(133, 20);
-            this.textBoxNyttLösen.TabIndex = 3;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(29, 83);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(72, 13);
-            this.label32.TabIndex = 2;
-            this.label32.Text = "Nytt lösenord:";
-            // 
-            // textBoxNuvarandeLösen
-            // 
-            this.textBoxNuvarandeLösen.Location = new System.Drawing.Point(32, 47);
-            this.textBoxNuvarandeLösen.Name = "textBoxNuvarandeLösen";
-            this.textBoxNuvarandeLösen.PasswordChar = '*';
-            this.textBoxNuvarandeLösen.Size = new System.Drawing.Size(133, 20);
-            this.textBoxNuvarandeLösen.TabIndex = 1;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(29, 30);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(106, 13);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Nuvarande lösenord:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(3, 3);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(92, 13);
-            this.label30.TabIndex = 24;
-            this.label30.Text = "Ändra lösenord";
-            // 
-            // ändraLösenordButton
-            // 
-            this.ändraLösenordButton.Location = new System.Drawing.Point(90, 202);
-            this.ändraLösenordButton.Name = "ändraLösenordButton";
-            this.ändraLösenordButton.Size = new System.Drawing.Size(99, 34);
-            this.ändraLösenordButton.TabIndex = 26;
-            this.ändraLösenordButton.Text = "Ändra lösenord";
-            this.ändraLösenordButton.UseVisualStyleBackColor = true;
-            this.ändraLösenordButton.Click += new System.EventHandler(this.ändraLösenordButton_Click);
-            // 
             // StartFörälderMobil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1440,7 +1408,6 @@
             this.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.Background1024x600;
             this.ClientSize = new System.Drawing.Size(344, 563);
             this.Controls.Add(this.MenyPanel);
-            this.Controls.Add(this.MittKontoTabControl);
             this.Controls.Add(this.inloggadAnvändareLabel);
             this.Controls.Add(this.inloggadButton);
             this.Controls.Add(this.klocklabel2);
@@ -1449,6 +1416,7 @@
             this.Controls.Add(this.kontoTypLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menyButton);
+            this.Controls.Add(this.MittKontoTabControl);
             this.Controls.Add(this.TidertabControl);
             this.Controls.Add(this.informationTabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1463,11 +1431,13 @@
             this.informationTabControl.ResumeLayout(false);
             this.senasteTabPage.ResumeLayout(false);
             this.senasteTabPage.PerformLayout();
-            this.omTabPage.ResumeLayout(false);
-            this.omTabPage.PerformLayout();
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.ändraLösenPanel.ResumeLayout(false);
+            this.ändraLösenPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.TidertabControl.ResumeLayout(false);
@@ -1482,10 +1452,6 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.ändraLösenPanel.ResumeLayout(false);
-            this.ändraLösenPanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1517,10 +1483,6 @@
         private System.Windows.Forms.TextBox textBoxRubrik;
         private System.Windows.Forms.TextBox textBoxDatum;
         private System.Windows.Forms.TabPage omTabPage;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl MittKontoTabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button uppdateraförälder;

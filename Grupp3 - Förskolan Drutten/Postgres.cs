@@ -246,15 +246,15 @@ namespace Grupp3___Förskolan_Drutten
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Frånvaron är borttagen.";
+                //meddelande = "Frånvaron är borttagen.";
 
             }
             catch (NpgsqlException ex)
             {
                 meddelande = ex.Message;
-
+                System.Windows.Forms.MessageBox.Show(meddelande);
             }
-            System.Windows.Forms.MessageBox.Show(meddelande);
+            
             conn.Close();
         }
 
@@ -343,7 +343,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Tiden är tillagd ";
+                //meddelande = "Tiden är tillagd ";
 
             }
             catch (NpgsqlException ex)
@@ -353,9 +353,10 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     meddelande = "Det finns redan en tid registrerat detta datum. \n \n"
                         + "Klicka på ett annat datum i kalendern och välj sedan detta datum igen \nom du vill uppdatera den redan befintliga tiden.";
+                System.Windows.Forms.MessageBox.Show(meddelande); 
                 }
             }
-            System.Windows.Forms.MessageBox.Show(meddelande);
+           
             conn.Close();
         }
 
@@ -965,6 +966,7 @@ namespace Grupp3___Förskolan_Drutten
             return Närvarolista;
             
         }
+
         /// <summary>
         /// Hämtar narvaron utifrån vald datum till närvarohanteringsfliken
         /// </summary>
