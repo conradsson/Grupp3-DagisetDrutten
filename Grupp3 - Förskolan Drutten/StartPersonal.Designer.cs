@@ -1381,6 +1381,7 @@
             this.tabPage2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.panelHjälpiFramtidsÖversikt);
             this.tabPage2.Controls.Add(this.buttonHjälpiFramtidsÖversikt);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.label20);
@@ -1392,7 +1393,6 @@
             this.tabPage2.Controls.Add(this.dateTimePickerTill);
             this.tabPage2.Controls.Add(this.dateTimePickerFrån);
             this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.panelHjälpiFramtidsÖversikt);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Size = new System.Drawing.Size(740, 363);
@@ -2112,7 +2112,7 @@
             this.panelskrivut.Controls.Add(this.panelskriv);
             this.panelskrivut.Controls.Add(this.status);
             this.panelskrivut.Controls.Add(this.lblskrivut);
-            this.panelskrivut.Location = new System.Drawing.Point(987, 71);
+            this.panelskrivut.Location = new System.Drawing.Point(953, 71);
             this.panelskrivut.MaximumSize = new System.Drawing.Size(660, 500);
             this.panelskrivut.MinimumSize = new System.Drawing.Size(660, 500);
             this.panelskrivut.Name = "panelskrivut";
@@ -2328,12 +2328,12 @@
             this.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.Background1024x600;
             this.ClientSize = new System.Drawing.Size(1008, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.panelskrivut);
             this.Controls.Add(this.minimeraButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.kontoTypLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panelskrivut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

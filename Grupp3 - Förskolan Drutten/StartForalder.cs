@@ -464,7 +464,7 @@ namespace Grupp3___Förskolan_Drutten
                 else
                 {
                     p.UppdateraTider(datum, id, lamnas, hamtas, hamtasAv);
-                    Postgres p1 = new Postgres();
+                    
                     Postgres p2 = new Postgres();
                     dataGridViewTiderBarn.DataSource = null;
                     dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
@@ -494,10 +494,10 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Välj ett barn i listan.");
             }
 
-
+            Postgres p1 = new Postgres();
             listAktuellaBarn.DataSource = null;
             List<Barn> barnlista = new List<Barn>();
-            barnlista = p.HämtaAktuellaBarn(AktuellPerson.Personid);
+            barnlista = p1.HämtaAktuellaBarn(AktuellPerson.Personid);
             listAktuellaBarn.DataSource = barnlista;
             listAktuellaBarn.ClearSelected();
             textBoxFornamn.Clear();
@@ -619,7 +619,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres pp = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, idag);
-                Postgres p3 = new Postgres();
+                
                 Postgres p4 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
                 dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, idag);
