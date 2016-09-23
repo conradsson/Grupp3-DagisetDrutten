@@ -298,6 +298,8 @@
             this.inloggadesAnvändarnamn.Name = "inloggadesAnvändarnamn";
             this.inloggadesAnvändarnamn.Size = new System.Drawing.Size(0, 12);
             this.inloggadesAnvändarnamn.TabIndex = 29;
+            this.inloggadesAnvändarnamn.Click += new System.EventHandler(this.inloggadesAnvändarnamn_Click);
+            this.inloggadesAnvändarnamn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.inloggadesAnvändarnamn_MouseDown);
             // 
             // inloggadButton
             // 
