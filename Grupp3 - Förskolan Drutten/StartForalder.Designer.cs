@@ -1138,10 +1138,11 @@
             "40",
             "45",
             "50",
-            "55"});
-            this.comboBoxTill2.Location = new System.Drawing.Point(63, 87);
+            "55",
+            "mm"});
+            this.comboBoxTill2.Location = new System.Drawing.Point(66, 87);
             this.comboBoxTill2.Name = "comboBoxTill2";
-            this.comboBoxTill2.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxTill2.Size = new System.Drawing.Size(45, 23);
             this.comboBoxTill2.TabIndex = 18;
             // 
             // comboBoxTill1
@@ -1162,17 +1163,18 @@
             "15",
             "16",
             "17",
-            "18"});
+            "18",
+            "hh"});
             this.comboBoxTill1.Location = new System.Drawing.Point(14, 87);
             this.comboBoxTill1.Name = "comboBoxTill1";
-            this.comboBoxTill1.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxTill1.Size = new System.Drawing.Size(45, 23);
             this.comboBoxTill1.TabIndex = 17;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(54, 88);
+            this.label17.Location = new System.Drawing.Point(57, 88);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(13, 17);
             this.label17.TabIndex = 19;
@@ -1195,10 +1197,11 @@
             "40",
             "45",
             "50",
-            "55"});
-            this.comboBoxFrån2.Location = new System.Drawing.Point(63, 37);
+            "55",
+            "mm"});
+            this.comboBoxFrån2.Location = new System.Drawing.Point(66, 37);
             this.comboBoxFrån2.Name = "comboBoxFrån2";
-            this.comboBoxFrån2.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxFrån2.Size = new System.Drawing.Size(45, 23);
             this.comboBoxFrån2.TabIndex = 15;
             // 
             // comboBoxFrån1
@@ -1219,10 +1222,11 @@
             "15",
             "16",
             "17",
-            "18"});
+            "18",
+            "hh"});
             this.comboBoxFrån1.Location = new System.Drawing.Point(14, 37);
             this.comboBoxFrån1.Name = "comboBoxFrån1";
-            this.comboBoxFrån1.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxFrån1.Size = new System.Drawing.Size(45, 23);
             this.comboBoxFrån1.TabIndex = 14;
             // 
             // label5
@@ -1239,7 +1243,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(54, 38);
+            this.label15.Location = new System.Drawing.Point(57, 38);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(13, 17);
             this.label15.TabIndex = 16;
@@ -1313,9 +1317,9 @@
             "45",
             "50",
             "55"});
-            this.comboBoxUppdateraTill2.Location = new System.Drawing.Point(63, 87);
+            this.comboBoxUppdateraTill2.Location = new System.Drawing.Point(66, 87);
             this.comboBoxUppdateraTill2.Name = "comboBoxUppdateraTill2";
-            this.comboBoxUppdateraTill2.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxUppdateraTill2.Size = new System.Drawing.Size(45, 23);
             this.comboBoxUppdateraTill2.TabIndex = 18;
             // 
             // comboBoxUppdateraFrån2
@@ -1336,9 +1340,9 @@
             "45",
             "50",
             "55"});
-            this.comboBoxUppdateraFrån2.Location = new System.Drawing.Point(63, 37);
+            this.comboBoxUppdateraFrån2.Location = new System.Drawing.Point(66, 37);
             this.comboBoxUppdateraFrån2.Name = "comboBoxUppdateraFrån2";
-            this.comboBoxUppdateraFrån2.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxUppdateraFrån2.Size = new System.Drawing.Size(45, 23);
             this.comboBoxUppdateraFrån2.TabIndex = 17;
             // 
             // comboBoxUppdateraTill1
@@ -1362,7 +1366,7 @@
             "18"});
             this.comboBoxUppdateraTill1.Location = new System.Drawing.Point(14, 87);
             this.comboBoxUppdateraTill1.Name = "comboBoxUppdateraTill1";
-            this.comboBoxUppdateraTill1.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxUppdateraTill1.Size = new System.Drawing.Size(45, 23);
             this.comboBoxUppdateraTill1.TabIndex = 16;
             // 
             // comboBoxUppdateraFrån1
@@ -1386,7 +1390,7 @@
             "18"});
             this.comboBoxUppdateraFrån1.Location = new System.Drawing.Point(14, 37);
             this.comboBoxUppdateraFrån1.Name = "comboBoxUppdateraFrån1";
-            this.comboBoxUppdateraFrån1.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxUppdateraFrån1.Size = new System.Drawing.Size(45, 23);
             this.comboBoxUppdateraFrån1.TabIndex = 15;
             // 
             // label9
@@ -1413,7 +1417,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(54, 88);
+            this.label24.Location = new System.Drawing.Point(57, 88);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(13, 17);
             this.label24.TabIndex = 20;
@@ -1423,7 +1427,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(54, 39);
+            this.label23.Location = new System.Drawing.Point(57, 39);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(13, 17);
             this.label23.TabIndex = 19;

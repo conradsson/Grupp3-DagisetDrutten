@@ -299,38 +299,26 @@ namespace Grupp3___Förskolan_Drutten
             }
             else
             {
-
                 textBoxHämtasAv1.Clear();
 
-                
                 DateTime start = monthCalendar3.SelectionStart;
                 DateTime end = monthCalendar3.SelectionEnd;
-                if (end.Subtract(start).Days == 5 )
-                {
-                    end = end.AddDays(1);
-                }
-
                 
                 bool frånvaro = false;
                 String datumet = "";
                 for (int i = 0; i <= end.Subtract(start).Days; i++)
-                {Postgres pp = new Postgres();
+                {
+                    Postgres pp = new Postgres();
                     datumet = start.AddDays(i).ToString("yyyy-MM-dd");
                 
                    frånvaro = pp.KontrolleraFrånvaro(Convert.ToDateTime(datumet), barnid);
                 } 
-                
 
                 if (frånvaro == true)
                 {
                     DialogResult result = MessageBox.Show("Det finns en frånvaro meddelad detta datum! \n\nOm du trycker på OK meddelas tiden och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
                     if (result == DialogResult.OK)
                     {
-                        //DateTime start = monthCalendar3.SelectionStart;
-                        //DateTime end = monthCalendar3.SelectionEnd;
-                        //end = end.AddDays(1);
-
-                        //String datumet = "";
                         for (int i = 0; i <= end.Subtract(start).Days; i++)
                         {
                             datumet = start.AddDays(i).ToString("yyyy-MM-dd");
@@ -343,36 +331,23 @@ namespace Grupp3___Förskolan_Drutten
                             Postgres p4 = new Postgres();
                             p4.TaBortFrånvaro(Convert.ToDateTime(datumet), barnid);
                         }
-                        MessageBox.Show("Tiden är meddelad och frånvaron är borttagen");
-                       
+                        MessageBox.Show("Tiden är meddelad och frånvaron är borttagen.");
                     }
 
                 }
                 else
                 {
-                    //DateTime start = monthCalendar3.SelectionStart;
-                    //DateTime end = monthCalendar3.SelectionEnd;
-                    //end = end.AddDays(1);
 
-                    //String datumet = "";
                     for (int i = 0; i <= end.Subtract(start).Days; i++)
                     {
-                      
-                        
                             datumet = start.AddDays(i).ToString("yyyy-MM-dd");
                             Postgres p9 = new Postgres();
                             p9.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
 
                             Postgres po = new Postgres();
                             po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
-                        
-
                     }
-                    //Postgres p = new Postgres();
-                    //p.LäggTillTid(datum, barnid, lämnas, hämtas);
-
-                    //Postgres po = new Postgres();
-                    //po.KontrolleraHämtning(datum, barnid, hamtas);
+                    MessageBox.Show("Tiden är meddelad.");
                 }
                 Postgres p1 = new Postgres();
                 Postgres p2 = new Postgres();
@@ -381,30 +356,13 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p3 = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid, datummetod);
-                comboBoxFrån1.Text = "";
-                comboBoxFrån2.Text = "";
-                comboBoxTill1.Text = "";
-                comboBoxTill2.Text = "";
+               
             }
             MetodHämtaBarnetsTid(datum);
-
-            //DateTime start = monthCalendar3.SelectionStart;
-            //DateTime end = monthCalendar3.SelectionEnd;
-            //end = end.AddDays(1);
-           
-            //String datumet = "";
-            //for (int i = 0; i < end.Subtract(start).Days; i++)
-            //{
-            //    datumet = start.AddDays(i).ToString("yyyy-MM-dd");
-            //    MessageBox.Show(datumet);
-            //    Postgres p9 = new Postgres();
-            //    p9.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
-
-            //    Postgres po = new Postgres();
-            //    po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
-            //}
-            //MessageBox.Show(end.ToString("yyyy-MM-dd"));
-            //sql = "INSERT INTO dagis.narvaro VALUES" + sql;
+                comboBoxFrån1.Text = "hh";
+                comboBoxFrån2.Text = "mm";
+                comboBoxTill1.Text = "hh";
+                comboBoxTill2.Text = "mm";
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -429,7 +387,6 @@ namespace Grupp3___Förskolan_Drutten
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
         {
             //Barn aktuelltbarn = new Barn();
-
         }
 
         private void listAktuellaBarn_SelectedIndexChanged(object sender, EventArgs e)
@@ -895,7 +852,6 @@ namespace Grupp3___Förskolan_Drutten
         {
             DateTime datum = monthCalendar3.SelectionStart;
             MetodHämtaBarnetsTid(datum);
-
         }
 
         private void buttonMeddelaHämtning_Click_1(object sender, EventArgs e)
