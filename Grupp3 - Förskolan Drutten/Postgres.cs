@@ -965,6 +965,7 @@ namespace Grupp3___Förskolan_Drutten
             return Närvarolista;
             
         }
+
         /// <summary>
         /// Hämtar narvaron utifrån vald datum till närvarohanteringsfliken
         /// </summary>

@@ -134,8 +134,8 @@ namespace Grupp3___Förskolan_Drutten
             dataGridViewDagensBarn.Columns[1].Visible = false;
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
 
-            
-            dataGridViewDagensBarn.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic;
+
+
 
             p.StängConnection();
         }
@@ -885,6 +885,20 @@ namespace Grupp3___Förskolan_Drutten
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void dataGridViewDagensBarn_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
 
+            //dataGridViewDagensBarn.Sort(dataGridViewDagensBarn.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void dataGridViewDagensBarn_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+           
+        }
+
+        private void dataGridViewDagensBarn_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
