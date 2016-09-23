@@ -521,12 +521,23 @@ namespace Grupp3___Förskolan_Drutten
 
             p.UppdateraPerson(id, förnamn, efternamn, telefonnummer);
 
+           /* if (textBoxEfternamnMittkonto.Text != AktuellPerson.Efternamn  textBoxTelefonnrMittkonto.Text != AktuellPerson.Telefonnr)
+            {
+
+                AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
+                AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
+                AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
+                inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            }
+            else if (textBoxFörnamnMittkonto.Text != AktuellPerson.Förnamn ||)*/
+
             AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
             AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
             AktuellPerson.Telefonnr = textBoxTelefonnrMittkonto.Text;
+            inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+
 
             p.StängConnection();
-
         }
 
         private void buttonSökAntalFramtidaBarn_Click(object sender, EventArgs e)
