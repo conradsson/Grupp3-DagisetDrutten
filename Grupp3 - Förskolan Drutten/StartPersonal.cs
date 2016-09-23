@@ -473,6 +473,7 @@ namespace Grupp3___Förskolan_Drutten
             double[] tidsArray = new double[13];
             double[] tidsArray2 = new double[13];
             double[] tidsArraySvaret = new double[13];
+            double[] tidsArraySvaret2 = new double[13];
 
 
             //MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
@@ -499,13 +500,15 @@ namespace Grupp3___Förskolan_Drutten
                     tidsArray[i] = chartBarnensTider.Series[0].Points[i].YValues[0];
                     tidsArray2[i] = chartBarnensTider.Series[1].Points[i].YValues[0];
 
-                    tidsArraySvaret[i] =+ tidsArray[i] - tidsArray2[i];
-
+                    for (int x = 0; x < tidsArraySvaret.Length; x++)
+                    {
+                      tidsArraySvaret[x] += tidsArray[i] - tidsArray2[i];
+                        tidsArraySvaret2[i] = tidsArraySvaret[x];
+                    }
                 }
-
-                
-
             }
+
+
 
             //MessageBox.Show(tidsArray[].ToString());
 
