@@ -31,6 +31,7 @@ namespace Grupp3___Förskolan_Drutten
             monthCalendar23INärvarohantering.TodayDate = idag;
             närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonHär;
 
+            dateTimePickerFrån.Value = idag;
 
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
@@ -457,6 +458,8 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonVisaDiagram_Click(object sender, EventArgs e)
         {
+            this.chartBarnensTider.Series["Antal barn"].Points.Clear();
+
             labelAntalBarn.Visible = true;
             labelTid.Visible = true;
 
@@ -464,7 +467,6 @@ namespace Grupp3___Förskolan_Drutten
             buttonDöljDiagram.Visible = true;
             buttonVisaDiagram.Visible = false;
             chartBarnensTider.Visible = true;
-
 
             int kollaTid = 06;
             int tid = 06;
@@ -476,11 +478,6 @@ namespace Grupp3___Förskolan_Drutten
             double[] tidsArraySvaret = new double[13];
             double[] tidsArraySvaret2 = new double[13];
 
-
-            //MessageBox.Show(p.HämtaDagensTider(DateTime.Today, 7).ToString());
-            //string hej = p.HämtaAntalBarnEfterVarjeTimme(DateTime.Today, 7, 8).ToString();
-            //MessageBox.Show(hej);
-
             for (int i = 0; i < 13; i++)
             {
                 Postgres p1 = new Postgres();
@@ -491,7 +488,6 @@ namespace Grupp3___Förskolan_Drutten
 
                 p1.StängConnection();
                 p2.StängConnection();
-
             }
 
             for (int i = 0; i < tidsArray.Length; i++)
@@ -550,12 +546,13 @@ namespace Grupp3___Förskolan_Drutten
             p.StängConnection();
         }
 
+
         private void buttonSökAntalFramtidaBarn_Click(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
             Postgres p1 = new Postgres();
 
-            dateTimePickerFrån.Value = DateTime.Today;
+            
 
             if (dateTimePickerFrån.Value > dateTimePickerTill.Value)
             {
