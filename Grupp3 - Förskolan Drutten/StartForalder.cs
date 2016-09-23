@@ -114,7 +114,6 @@ namespace Grupp3___Förskolan_Drutten
             groupBox3.Visible = false;
 
             HämtaVilkenGroupboxSomSkasynas(idag);
-            p.StängConnection();
 
         }
         private void tiderButton_MouseDown(object sender, MouseEventArgs e)
@@ -233,10 +232,18 @@ namespace Grupp3___Förskolan_Drutten
             if (datum < dagensDatum)
             {
                 MessageBox.Show("Du kan tyvärr inte lägga in tider som är före dagens datum. \nVänligen välj ett annat datum.");
+                comboBoxFrån1.Text = "";
+                comboBoxFrån2.Text = "";
+                comboBoxTill1.Text = "";
+                comboBoxTill2.Text = "";
             }
             else if (från1 == "" || från2 == "" || till1 == "" || till2 == "")
             {
-                MessageBox.Show("Var vänlig kontrollera att Meddela tider är korrekt ifylld.\n\nIgen ruta där tider fylls i får lämnas tom.");
+                MessageBox.Show("Var vänlig kontrollera att Meddela tider är korrekt ifylld.\n\nIngen ruta där tider fylls i får lämnas tom.");
+            }
+            else if (hämtas == lämnas)
+            {
+                MessageBox.Show("Var vänlig kontrollera att Meddela tid är korrekt ifylld.\n\nTiden som barnet lämnas på förskolan kan inte vara samma tid som barnet hämtas");
             }
             else if (lämnas == ":" && hämtas == ":")
             {
@@ -245,6 +252,10 @@ namespace Grupp3___Förskolan_Drutten
             else if (Convert.ToInt32(från1) > Convert.ToInt32(till1))
             {
                 MessageBox.Show("Var vänlig kontrollera att Meddela tid är korrekt ifylld.\n\nTiden som barnet lämnas på förskolan kan inte anges till en senare tid än när barnet hämtas.");
+            }
+            else if (från1 == till1 && Convert.ToInt32(från2) > Convert.ToInt32(till2))
+            {
+                    MessageBox.Show("Var vänlig kontrollera att Meddela tid är korrekt ifylld.\n\nTiden som barnet lämnas på förskolan kan inte anges till en senare tid än när barnet hämtas.");                
             }
             else if (hämtas == "18:05" || hämtas == "18:10" || hämtas == "18:15" || hämtas == "18:20" || hämtas == "18:25" || hämtas == "18:30" || hämtas == "18:35" || hämtas == "18:40" || hämtas == "18:45" || hämtas == "18:50" || hämtas == "18:55")
             {
@@ -438,6 +449,14 @@ namespace Grupp3___Förskolan_Drutten
                 {
                     MessageBox.Show("Var vänlig kontrollera att Uppdatera befintlig tid är korrekt ifylld.\n\nTiden som barnet lämnas på förskolan kan inte anges till en senare tid än när barnet hämtas.");
                 }
+                else if (från1 == till1 && Convert.ToInt32(från2) > Convert.ToInt32(till2))
+                {
+                        MessageBox.Show("Var vänlig kontrollera att Uppdatera befintlig tid är korrekt ifylld.\n\nTiden som barnet lämnas på förskolan kan inte anges till en senare tid än när barnet hämtas.");
+                }
+                else if (hamtas == lamnas)
+                {
+                    MessageBox.Show("Var vänlig kontrollera att Uppdatera befintlig tid är korrekt ifylld.\n\nTiden som barnet lämnas på förskolan kan inte vara samma tid som barnet hämtas");
+                }
                 else if (hamtas == "18:05" || hamtas == "18:10" || hamtas == "18:15" || hamtas == "18:20" || hamtas == "18:25" || hamtas == "18:30" || hamtas == "18:35" || hamtas == "18:40" || hamtas == "18:45" || hamtas == "18:50" || hamtas == "18:55")
                 {
                     MessageBox.Show("Tiden som barnet hämtas får ej anges till senare än kl 18:00.");
@@ -599,11 +618,11 @@ namespace Grupp3___Förskolan_Drutten
                 }
                 Postgres pp = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
-                dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, datum);
+                dataGridViewMeddelaFrånvaro.DataSource = pp.HämtaBarnsFrånvaro(id, idag);
                 Postgres p3 = new Postgres();
                 Postgres p4 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
-                dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, datum);
+                dataGridViewTiderBarn.DataSource = p4.HämtaBarnetsTider(id, idag);
             }
         }
 
