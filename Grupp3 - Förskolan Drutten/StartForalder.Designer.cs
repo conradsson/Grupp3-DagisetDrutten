@@ -50,11 +50,9 @@
             this.textBoxHämtasAv1 = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.dataGridViewTiderBarn = new System.Windows.Forms.DataGridView();
-            this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TidLämnad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TidHämtad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HämtasAv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -90,10 +88,8 @@
             this.buttonHjälpMeddelaFrånvaro = new System.Windows.Forms.Button();
             this.labelFrånvaroTyp = new System.Windows.Forms.Label();
             this.dataGridViewMeddelaFrånvaro = new System.Windows.Forms.DataGridView();
-            this.datumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sjuk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Ledig = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radioButtonSjuk = new System.Windows.Forms.RadioButton();
             this.radioButtonLedig = new System.Windows.Forms.RadioButton();
             this.listBoxMeddelaFrånvaro = new System.Windows.Forms.ListBox();
@@ -196,19 +192,21 @@
             this.datumDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.närvaroidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.minimeraButton = new System.Windows.Forms.Button();
+            this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panelHjälpMeddelaTider.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTiderBarn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panelHjälpMeddelaFrånvaro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeddelaFrånvaro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
             this.panelHjälpSenaste.SuspendLayout();
@@ -221,6 +219,8 @@
             this.tabPage2.SuspendLayout();
             this.panelHjälpMinaBarn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -550,13 +550,6 @@
             this.dataGridViewTiderBarn.Size = new System.Drawing.Size(461, 131);
             this.dataGridViewTiderBarn.TabIndex = 14;
             // 
-            // datumDataGridViewTextBoxColumn
-            // 
-            this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
-            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
-            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
-            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // TidLämnad
             // 
             this.TidLämnad.DataPropertyName = "TidLämnad";
@@ -577,10 +570,6 @@
             this.HämtasAv.HeaderText = "Hämtas av";
             this.HämtasAv.Name = "HämtasAv";
             this.HämtasAv.ReadOnly = true;
-            // 
-            // närvaroBindingSource
-            // 
-            this.närvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Närvaro);
             // 
             // tiderBarnListBox
             // 
@@ -1088,13 +1077,6 @@
             this.dataGridViewMeddelaFrånvaro.Size = new System.Drawing.Size(363, 132);
             this.dataGridViewMeddelaFrånvaro.TabIndex = 30;
             // 
-            // datumDataGridViewTextBoxColumn1
-            // 
-            this.datumDataGridViewTextBoxColumn1.DataPropertyName = "Datum";
-            this.datumDataGridViewTextBoxColumn1.HeaderText = "Datum";
-            this.datumDataGridViewTextBoxColumn1.Name = "datumDataGridViewTextBoxColumn1";
-            this.datumDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // Sjuk
             // 
             this.Sjuk.DataPropertyName = "Sjuk";
@@ -1108,10 +1090,6 @@
             this.Ledig.HeaderText = "Ledig";
             this.Ledig.Name = "Ledig";
             this.Ledig.ReadOnly = true;
-            // 
-            // frånvaroBindingSource
-            // 
-            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
             // radioButtonSjuk
             // 
@@ -2150,7 +2128,7 @@
             // 
             // minimeraButton
             // 
-            this.minimeraButton.BackColor = System.Drawing.Color.LightGray;
+            this.minimeraButton.BackColor = System.Drawing.Color.Gainsboro;
             this.minimeraButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.minimeraButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.minimeraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2162,6 +2140,28 @@
             this.minimeraButton.TabIndex = 31;
             this.minimeraButton.Text = "-";
             this.minimeraButton.UseVisualStyleBackColor = false;
+            // 
+            // datumDataGridViewTextBoxColumn
+            // 
+            this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
+            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // närvaroBindingSource
+            // 
+            this.närvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Närvaro);
+            // 
+            // datumDataGridViewTextBoxColumn1
+            // 
+            this.datumDataGridViewTextBoxColumn1.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn1.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn1.Name = "datumDataGridViewTextBoxColumn1";
+            this.datumDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // frånvaroBindingSource
+            // 
+            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
             // StartForalder
             // 
@@ -2191,7 +2191,6 @@
             this.panelHjälpMeddelaTider.ResumeLayout(false);
             this.panelHjälpMeddelaTider.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTiderBarn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -2201,7 +2200,6 @@
             this.panelHjälpMeddelaFrånvaro.ResumeLayout(false);
             this.panelHjälpMeddelaFrånvaro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeddelaFrånvaro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.informationTabControl.ResumeLayout(false);
             this.senasteTabPage.ResumeLayout(false);
             this.senasteTabPage.PerformLayout();
@@ -2223,6 +2221,8 @@
             this.panelHjälpMinaBarn.ResumeLayout(false);
             this.panelHjälpMinaBarn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
