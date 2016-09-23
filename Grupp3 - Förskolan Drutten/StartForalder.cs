@@ -316,7 +316,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 if (frånvaro == true)
                 {
-                    DialogResult result = MessageBox.Show("Det finns en frånvaro meddelad detta datum! \n\nOm du trycker på OK meddelas tiden och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
+                    DialogResult result = MessageBox.Show("Det finns frånvaro meddelad under detta/dessa datum! \n\nOm du trycker på OK meddelas tiden/tiderna och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden/tiderna och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
                     if (result == DialogResult.OK)
                     {
                         for (int i = 0; i <= end.Subtract(start).Days; i++)
@@ -356,13 +356,12 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p3 = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
                 dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid, datummetod);
-                comboBoxFrån1.Text = "hh";
-                comboBoxFrån2.Text = "mm";
-                comboBoxTill1.Text = "hh";
-                comboBoxTill2.Text = "mm";
             }
             MetodHämtaBarnetsTid(datum);
-               
+            comboBoxFrån1.Text = "hh";
+            comboBoxFrån2.Text = "mm";
+            comboBoxTill1.Text = "hh";
+            comboBoxTill2.Text = "mm";   
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
