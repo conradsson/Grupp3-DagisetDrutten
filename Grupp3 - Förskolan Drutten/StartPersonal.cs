@@ -960,5 +960,26 @@ namespace Grupp3___Förskolan_Drutten
             p.ValideraText(e);
             p.StängConnection();
         }
+
+        private void textBoxFörnamnMittkonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
+        }
+
+        private void textBoxEfternamnMittkonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
+        }
+
+        private void textBoxTelefonnrMittkonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraNummer(e);
+            p.StängConnection();
+        }
     }
 }

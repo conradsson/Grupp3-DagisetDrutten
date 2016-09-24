@@ -183,6 +183,7 @@
             this.andvandarnamnTextbox.TabIndex = 1;
             this.andvandarnamnTextbox.Text = "Användarnamn";
             this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
+            this.andvandarnamnTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.andvandarnamnTextbox_KeyPress);
             this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
             // 
             // LoggaInButton
