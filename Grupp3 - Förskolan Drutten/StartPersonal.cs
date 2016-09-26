@@ -73,10 +73,12 @@ namespace Grupp3___Förskolan_Drutten
             informationTabControl.Visible = false;
             BarntabControl.Visible = false;
             NärvarotabControl.Visible = false;
+            inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
             mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonHär;
-            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
-            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
             informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
+            inloggadesAnvändarnamn.BackColor = Color.WhiteSmoke;
         }
         private void mittKontoButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -194,6 +196,10 @@ namespace Grupp3___Förskolan_Drutten
             BarntabControl.Visible = false;
             NärvarotabControl.Visible = false;
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonHär;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
             inloggadesAnvändarnamn.BackColor = Color.WhiteSmoke;
         }
 
@@ -214,6 +220,10 @@ namespace Grupp3___Förskolan_Drutten
             BarntabControl.Visible = false;
             NärvarotabControl.Visible = false;
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonHär;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            barnButton.BackgroundImage = Properties.Resources.barnButtonDrutten;
+            närvaroButton.BackgroundImage = Properties.Resources.närvaroButtonDrutten;
             inloggadesAnvändarnamn.BackColor = Color.WhiteSmoke;
         }
 
