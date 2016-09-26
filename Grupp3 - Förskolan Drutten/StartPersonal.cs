@@ -899,7 +899,10 @@ namespace Grupp3___Förskolan_Drutten
 
         private void dataGridViewDagensBarn_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (dataGridViewDagensBarn.Rows[0].Cells[2].Value.ToString() == "Förnamn")
+            {
+                MessageBox.Show("gej");
+            }
         }
 
         private void buttonSorteraKolumn_Click(object sender, EventArgs e)
@@ -959,6 +962,14 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p = new Postgres();
             p.ValideraText(e);
             p.StängConnection();
+        }
+
+        private void dataGridViewDagensBarn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewDagensBarn.Columns[1].Name == "Förnamn")
+            {
+                MessageBox.Show("gej");
+            }
         }
     }
 }
