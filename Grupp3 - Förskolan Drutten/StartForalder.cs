@@ -197,6 +197,10 @@ namespace Grupp3___Förskolan_Drutten
             TidertabControl.Visible = false;
             // NärvarotabControl.Visible = false;
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonHär;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
+            inloggadesAnvändarnamn.BackColor = Color.WhiteSmoke;
         }
 
         private void inloggadButton_MouseDown(object sender, MouseEventArgs e)
@@ -231,6 +235,9 @@ namespace Grupp3___Förskolan_Drutten
             // NärvarotabControl.Visible = false;
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
             inloggadButton.BackgroundImage = Properties.Resources.inloggadButtonDruttenLängre;
+            mittKontoButton.BackgroundImage = Properties.Resources.mittKontoButtonHär;
+            informationButton.BackgroundImage = Properties.Resources.informationButtonDrutten;
+            tiderButton.BackgroundImage = Properties.Resources.tiderButtonDrutten;
             inloggadesAnvändarnamn.BackColor = Color.WhiteSmoke;
         }
 
