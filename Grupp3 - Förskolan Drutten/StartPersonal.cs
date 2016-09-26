@@ -250,6 +250,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             dataGridViewNärvarandeINärvarohantering.DataSource = null;
             dataGridViewFrånvarandeINärvarohantering.DataSource = null;
+            
 
           
 
@@ -259,6 +260,8 @@ namespace Grupp3___Förskolan_Drutten
             }
             else
             {
+                    button1.Enabled = true;
+
             if (NärvarandeRadioButton.Checked)
             {
                 label15.Text = "Närvarande:";
