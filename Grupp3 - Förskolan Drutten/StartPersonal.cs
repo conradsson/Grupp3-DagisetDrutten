@@ -914,51 +914,51 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonSorteraKolumn_Click(object sender, EventArgs e)
         {
-            
-            //// Check which column is selected, otherwise set NewColumn to null.
-            //DataGridViewColumn newColumn =
-            //    dataGridViewDagensBarn.Columns.GetColumnCount(
-            //    DataGridViewElementStates.Selected) == 1 ?
-            //    dataGridViewDagensBarn.SelectedColumns[0] : null;
 
-            //DataGridViewColumn oldColumn = dataGridViewDagensBarn.SortedColumn;
-            //ListSortDirection direction;
+            // Check which column is selected, otherwise set NewColumn to null.
+            DataGridViewColumn newColumn =
+                dataGridViewDagensBarn.Columns.GetColumnCount(
+                DataGridViewElementStates.Selected) == 1 ?
+                dataGridViewDagensBarn.SelectedColumns[0] : null;
 
-            //// If oldColumn is null, then the DataGridView is not currently sorted.
-            //if (oldColumn != null)
-            //{
-            //    // Sort the same column again, reversing the SortOrder.
-            //    if (oldColumn == newColumn &&
-            //        dataGridViewDagensBarn.SortOrder == SortOrder.Ascending)
-            //    {
-            //        direction = ListSortDirection.Descending;
-            //    }
-            //    else
-            //    {
-            //        // Sort a new column and remove the old SortGlyph.
-            //        direction = ListSortDirection.Ascending;
-            //        oldColumn.HeaderCell.SortGlyphDirection = SortOrder.None;
-            //    }
-            //}
-            //else
-            //{
-            //    direction = ListSortDirection.Ascending;
-            //}
+            DataGridViewColumn oldColumn = dataGridViewDagensBarn.SortedColumn;
+            ListSortDirection direction;
 
-            //// If no column has been selected, display an error dialog  box.
-            //if (newColumn == null)
-            //{
-            //    MessageBox.Show("Select a single column and try again.",
-            //        "Error: Invalid Selection", MessageBoxButtons.OK,
-            //        MessageBoxIcon.Error);
-            //}
-            //else
-            //{
-            //    dataGridViewDagensBarn.Sort(newColumn, direction);
-            //    newColumn.HeaderCell.SortGlyphDirection =
-            //        direction == ListSortDirection.Ascending ?
-            //        SortOrder.Ascending : SortOrder.Descending;
-            //}
+            // If oldColumn is null, then the DataGridView is not currently sorted.
+            if (oldColumn != null)
+            {
+                // Sort the same column again, reversing the SortOrder.
+                if (oldColumn == newColumn &&
+                    dataGridViewDagensBarn.SortOrder == SortOrder.Ascending)
+                {
+                    direction = ListSortDirection.Descending;
+                }
+                else
+                {
+                    // Sort a new column and remove the old SortGlyph.
+                    direction = ListSortDirection.Ascending;
+                    oldColumn.HeaderCell.SortGlyphDirection = SortOrder.None;
+                }
+            }
+            else
+            {
+                direction = ListSortDirection.Ascending;
+            }
+
+            // If no column has been selected, display an error dialog  box.
+            if (newColumn == null)
+            {
+                MessageBox.Show("Select a single column and try again.",
+                    "Error: Invalid Selection", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                dataGridViewDagensBarn.Sort(newColumn, direction);
+                newColumn.HeaderCell.SortGlyphDirection =
+                    direction == ListSortDirection.Ascending ?
+                    SortOrder.Ascending : SortOrder.Descending;
+            }
         }
 
         private void textBoxSökRuta_KeyPress(object sender, KeyPressEventArgs e)
