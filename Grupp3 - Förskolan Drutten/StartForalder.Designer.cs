@@ -44,12 +44,15 @@
             this.mittKontoButton = new System.Windows.Forms.Button();
             this.TidertabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panelHjälpMeddelaTider = new System.Windows.Forms.Panel();
+            this.labelHjälpMeddelaTider = new System.Windows.Forms.Label();
+            this.buttonHjälpMeddelaTider = new System.Windows.Forms.Button();
+            this.textBoxHämtasAv1 = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
             this.dataGridViewTiderBarn = new System.Windows.Forms.DataGridView();
-            this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TidLämnad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TidHämtad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HämtasAv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tiderBarnListBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,50 +60,36 @@
             this.labelMeddeladTid = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBoxUppdateraTill2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxUppdateraFrån2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxUppdateraTill1 = new System.Windows.Forms.ComboBox();
-            this.comboBoxUppdateraFrån1 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxTill2 = new System.Windows.Forms.ComboBox();
             this.comboBoxTill1 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxFrån2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.comboBoxFrån1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridViewHämtning = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listBoxMeddelaHämtning = new System.Windows.Forms.ListBox();
-            this.buttonMeddelaHämtning = new System.Windows.Forms.Button();
-            this.textBoxMeddelaHämtning = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxUppdateraTill2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUppdateraFrån2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUppdateraTill1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUppdateraFrån1 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.panelHjälpMeddelaFrånvaro = new System.Windows.Forms.Panel();
+            this.labelHjälpMeddelaFrånvaro = new System.Windows.Forms.Label();
+            this.buttonHjälpMeddelaFrånvaro = new System.Windows.Forms.Button();
             this.labelFrånvaroTyp = new System.Windows.Forms.Label();
             this.dataGridViewMeddelaFrånvaro = new System.Windows.Forms.DataGridView();
-            this.datumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sjuk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Ledig = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radioButtonSjuk = new System.Windows.Forms.RadioButton();
             this.radioButtonLedig = new System.Windows.Forms.RadioButton();
             this.listBoxMeddelaFrånvaro = new System.Windows.Forms.ListBox();
@@ -114,19 +103,42 @@
             this.label28 = new System.Windows.Forms.Label();
             this.informationTabControl = new System.Windows.Forms.TabControl();
             this.senasteTabPage = new System.Windows.Forms.TabPage();
+            this.panelHjälpSenaste = new System.Windows.Forms.Panel();
+            this.labelHjälpSenaste = new System.Windows.Forms.Label();
+            this.buttonHjälpSenaste = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
             this.richTextBoxPubliceradeInlägg = new System.Windows.Forms.RichTextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.textBoxSkrivetAv = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.listBoxInlägg = new System.Windows.Forms.ListBox();
             this.textBoxRubrik = new System.Windows.Forms.TextBox();
             this.textBoxDatum = new System.Windows.Forms.TextBox();
             this.omTabPage = new System.Windows.Forms.TabPage();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label34 = new System.Windows.Forms.Label();
+            this.panelHjälpKontoUppgifter = new System.Windows.Forms.Panel();
+            this.labelHjälpKontoUppgifter = new System.Windows.Forms.Label();
+            this.buttonHjälpKontoUppgifter = new System.Windows.Forms.Button();
             this.ändraLösenPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             this.ändralösenBekräfta = new System.Windows.Forms.Button();
             this.ändraLösenAvbryt = new System.Windows.Forms.Button();
             this.textBoxNyttLösen2 = new System.Windows.Forms.TextBox();
@@ -136,6 +148,7 @@
             this.textBoxNuvarandeLösen = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
             this.ändraLösenordButton = new System.Windows.Forms.Button();
             this.uppdateraförälder = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -145,6 +158,9 @@
             this.label19 = new System.Windows.Forms.Label();
             this.textBoxFörnamnMittKonto = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panelHjälpMinaBarn = new System.Windows.Forms.Panel();
+            this.labelHjälpMinaBarn = new System.Windows.Forms.Label();
+            this.buttonHjälpMinaBarn = new System.Windows.Forms.Button();
             this.listAktuellaBarn = new System.Windows.Forms.ListBox();
             this.label21 = new System.Windows.Forms.Label();
             this.richTextBoxAnnat = new System.Windows.Forms.RichTextBox();
@@ -160,43 +176,51 @@
             this.loggaBox = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hämtadDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.närvarandeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.hämtasAvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tidHämtadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tidLämnadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.efternamnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.förnamnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allergierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barnidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.närvaroidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minimeraButton = new System.Windows.Forms.Button();
+            this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.närvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frånvaroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TidertabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panelHjälpMeddelaTider.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTiderBarn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHämtning)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.panelHjälpMeddelaFrånvaro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeddelaFrånvaro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
             this.informationTabControl.SuspendLayout();
             this.senasteTabPage.SuspendLayout();
+            this.panelHjälpSenaste.SuspendLayout();
             this.omTabPage.SuspendLayout();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panelHjälpKontoUppgifter.SuspendLayout();
             this.ändraLösenPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panelHjälpMinaBarn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -223,9 +247,9 @@
             this.panel1.Controls.Add(this.närvaroButton);
             this.panel1.Controls.Add(this.tiderButton);
             this.panel1.Controls.Add(this.mittKontoButton);
+            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.MittKontoTabControl);
-            this.panel1.Controls.Add(this.TidertabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -235,7 +259,7 @@
             // 
             this.klocklabel2.AutoSize = true;
             this.klocklabel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.klocklabel2.Location = new System.Drawing.Point(758, 11);
+            this.klocklabel2.Location = new System.Drawing.Point(760, 11);
             this.klocklabel2.Name = "klocklabel2";
             this.klocklabel2.Size = new System.Drawing.Size(22, 13);
             this.klocklabel2.TabIndex = 32;
@@ -245,7 +269,7 @@
             // 
             this.klocklabel1.AutoSize = true;
             this.klocklabel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.klocklabel1.Location = new System.Drawing.Point(811, 11);
+            this.klocklabel1.Location = new System.Drawing.Point(813, 11);
             this.klocklabel1.Name = "klocklabel1";
             this.klocklabel1.Size = new System.Drawing.Size(38, 13);
             this.klocklabel1.TabIndex = 31;
@@ -258,7 +282,7 @@
             this.Klockan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Klockan.FlatAppearance.BorderSize = 0;
             this.Klockan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Klockan.Location = new System.Drawing.Point(748, 5);
+            this.Klockan.Location = new System.Drawing.Point(750, 5);
             this.Klockan.Name = "Klockan";
             this.Klockan.Size = new System.Drawing.Size(191, 28);
             this.Klockan.TabIndex = 30;
@@ -274,6 +298,8 @@
             this.inloggadesAnvändarnamn.Name = "inloggadesAnvändarnamn";
             this.inloggadesAnvändarnamn.Size = new System.Drawing.Size(0, 12);
             this.inloggadesAnvändarnamn.TabIndex = 29;
+            this.inloggadesAnvändarnamn.Click += new System.EventHandler(this.inloggadesAnvändarnamn_Click);
+            this.inloggadesAnvändarnamn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.inloggadesAnvändarnamn_MouseDown);
             // 
             // inloggadButton
             // 
@@ -306,8 +332,8 @@
             this.loggaUtButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.loggaUtButton.FlatAppearance.BorderSize = 0;
             this.loggaUtButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.loggaUtButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.loggaUtButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.loggaUtButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.loggaUtButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.loggaUtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loggaUtButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loggaUtButton.ForeColor = System.Drawing.Color.Black;
@@ -323,14 +349,14 @@
             // 
             // informationButton
             // 
-            this.informationButton.BackColor = System.Drawing.Color.LightGray;
+            this.informationButton.BackColor = System.Drawing.Color.Transparent;
             this.informationButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.informationButtonDrutten;
             this.informationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.informationButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.informationButton.FlatAppearance.BorderSize = 0;
             this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.informationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.informationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.informationButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.informationButton.ForeColor = System.Drawing.Color.Black;
@@ -346,14 +372,14 @@
             // 
             // närvaroButton
             // 
-            this.närvaroButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.BackColor = System.Drawing.Color.Transparent;
             this.närvaroButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.närvaroButtonDrutten;
             this.närvaroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.närvaroButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.närvaroButton.FlatAppearance.BorderSize = 0;
             this.närvaroButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.närvaroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.närvaroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.närvaroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.närvaroButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.närvaroButton.ForeColor = System.Drawing.Color.Black;
@@ -369,14 +395,14 @@
             // 
             // tiderButton
             // 
-            this.tiderButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.BackColor = System.Drawing.Color.Transparent;
             this.tiderButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.tiderButtonDrutten;
             this.tiderButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tiderButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.tiderButton.FlatAppearance.BorderSize = 0;
             this.tiderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.tiderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.tiderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.tiderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.tiderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.tiderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tiderButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tiderButton.ForeColor = System.Drawing.Color.Black;
@@ -392,14 +418,14 @@
             // 
             // mittKontoButton
             // 
-            this.mittKontoButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.BackColor = System.Drawing.Color.Transparent;
             this.mittKontoButton.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.mittKontoButtonDrutten;
             this.mittKontoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mittKontoButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.mittKontoButton.FlatAppearance.BorderSize = 0;
             this.mittKontoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.mittKontoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.mittKontoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.mittKontoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mittKontoButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mittKontoButton.ForeColor = System.Drawing.Color.Black;
@@ -415,7 +441,6 @@
             // TidertabControl
             // 
             this.TidertabControl.Controls.Add(this.tabPage3);
-            this.TidertabControl.Controls.Add(this.tabPage4);
             this.TidertabControl.Controls.Add(this.tabPage5);
             this.TidertabControl.Location = new System.Drawing.Point(193, 36);
             this.TidertabControl.Name = "TidertabControl";
@@ -426,7 +451,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage3.Controls.Add(this.panelHjälpMeddelaTider);
+            this.tabPage3.Controls.Add(this.buttonHjälpMeddelaTider);
+            this.tabPage3.Controls.Add(this.textBoxHämtasAv1);
+            this.tabPage3.Controls.Add(this.label58);
             this.tabPage3.Controls.Add(this.dataGridViewTiderBarn);
             this.tabPage3.Controls.Add(this.tiderBarnListBox);
             this.tabPage3.Controls.Add(this.label3);
@@ -435,8 +466,10 @@
             this.tabPage3.Controls.Add(this.labelMeddeladTid);
             this.tabPage3.Controls.Add(this.label35);
             this.tabPage3.Controls.Add(this.label36);
-            this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -445,6 +478,63 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Meddela tider";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panelHjälpMeddelaTider
+            // 
+            this.panelHjälpMeddelaTider.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpMeddelaTider.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpMeddelaTider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpMeddelaTider.Controls.Add(this.labelHjälpMeddelaTider);
+            this.panelHjälpMeddelaTider.Location = new System.Drawing.Point(451, 18);
+            this.panelHjälpMeddelaTider.Name = "panelHjälpMeddelaTider";
+            this.panelHjälpMeddelaTider.Size = new System.Drawing.Size(262, 195);
+            this.panelHjälpMeddelaTider.TabIndex = 45;
+            this.panelHjälpMeddelaTider.Visible = false;
+            // 
+            // labelHjälpMeddelaTider
+            // 
+            this.labelHjälpMeddelaTider.AutoSize = true;
+            this.labelHjälpMeddelaTider.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpMeddelaTider.Location = new System.Drawing.Point(9, 11);
+            this.labelHjälpMeddelaTider.Name = "labelHjälpMeddelaTider";
+            this.labelHjälpMeddelaTider.Size = new System.Drawing.Size(248, 169);
+            this.labelHjälpMeddelaTider.TabIndex = 0;
+            this.labelHjälpMeddelaTider.Text = resources.GetString("labelHjälpMeddelaTider.Text");
+            this.labelHjälpMeddelaTider.Visible = false;
+            // 
+            // buttonHjälpMeddelaTider
+            // 
+            this.buttonHjälpMeddelaTider.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpMeddelaTider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpMeddelaTider.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpMeddelaTider.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpMeddelaTider.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpMeddelaTider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpMeddelaTider.Location = new System.Drawing.Point(700, 1);
+            this.buttonHjälpMeddelaTider.Name = "buttonHjälpMeddelaTider";
+            this.buttonHjälpMeddelaTider.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpMeddelaTider.TabIndex = 44;
+            this.buttonHjälpMeddelaTider.UseVisualStyleBackColor = true;
+            this.buttonHjälpMeddelaTider.MouseLeave += new System.EventHandler(this.buttonHjälpMeddelaTider_MouseLeave);
+            this.buttonHjälpMeddelaTider.MouseHover += new System.EventHandler(this.buttonHjälpMeddelaTider_MouseHover);
+            // 
+            // textBoxHämtasAv1
+            // 
+            this.textBoxHämtasAv1.Location = new System.Drawing.Point(475, 266);
+            this.textBoxHämtasAv1.Name = "textBoxHämtasAv1";
+            this.textBoxHämtasAv1.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHämtasAv1.TabIndex = 37;
+            this.textBoxHämtasAv1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHämtasAv1_KeyPress);
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(472, 251);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(86, 16);
+            this.label58.TabIndex = 38;
+            this.label58.Text = "Hämtas av:";
             // 
             // dataGridViewTiderBarn
             // 
@@ -462,13 +552,6 @@
             this.dataGridViewTiderBarn.ReadOnly = true;
             this.dataGridViewTiderBarn.Size = new System.Drawing.Size(461, 131);
             this.dataGridViewTiderBarn.TabIndex = 14;
-            // 
-            // datumDataGridViewTextBoxColumn
-            // 
-            this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
-            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
-            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
-            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // TidLämnad
             // 
@@ -491,10 +574,6 @@
             this.HämtasAv.Name = "HämtasAv";
             this.HämtasAv.ReadOnly = true;
             // 
-            // närvaroBindingSource
-            // 
-            this.närvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Närvaro);
-            // 
             // tiderBarnListBox
             // 
             this.tiderBarnListBox.FormattingEnabled = true;
@@ -510,9 +589,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(30, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Välj dag:";
+            this.label3.Text = "Välj datum:";
             // 
             // label2
             // 
@@ -527,6 +606,7 @@
             // monthCalendar3
             // 
             this.monthCalendar3.Location = new System.Drawing.Point(33, 175);
+            this.monthCalendar3.MaxSelectionCount = 5;
             this.monthCalendar3.Name = "monthCalendar3";
             this.monthCalendar3.ShowWeekNumbers = true;
             this.monthCalendar3.TabIndex = 2;
@@ -559,171 +639,11 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Red;
-            this.label36.Location = new System.Drawing.Point(95, 154);
+            this.label36.Location = new System.Drawing.Point(110, 154);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(20, 25);
             this.label36.TabIndex = 35;
             this.label36.Text = "*";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.comboBoxUppdateraTill2);
-            this.groupBox3.Controls.Add(this.comboBoxUppdateraFrån2);
-            this.groupBox3.Controls.Add(this.comboBoxUppdateraTill1);
-            this.groupBox3.Controls.Add(this.comboBoxUppdateraFrån1);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(291, 175);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(178, 159);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Uppdatera befintlig tid";
-            // 
-            // comboBoxUppdateraTill2
-            // 
-            this.comboBoxUppdateraTill2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxUppdateraTill2.FormattingEnabled = true;
-            this.comboBoxUppdateraTill2.Items.AddRange(new object[] {
-            "00",
-            "05",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55"});
-            this.comboBoxUppdateraTill2.Location = new System.Drawing.Point(63, 87);
-            this.comboBoxUppdateraTill2.Name = "comboBoxUppdateraTill2";
-            this.comboBoxUppdateraTill2.Size = new System.Drawing.Size(42, 23);
-            this.comboBoxUppdateraTill2.TabIndex = 18;
-            // 
-            // comboBoxUppdateraFrån2
-            // 
-            this.comboBoxUppdateraFrån2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxUppdateraFrån2.FormattingEnabled = true;
-            this.comboBoxUppdateraFrån2.Items.AddRange(new object[] {
-            "00",
-            "05",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55"});
-            this.comboBoxUppdateraFrån2.Location = new System.Drawing.Point(63, 37);
-            this.comboBoxUppdateraFrån2.Name = "comboBoxUppdateraFrån2";
-            this.comboBoxUppdateraFrån2.Size = new System.Drawing.Size(42, 23);
-            this.comboBoxUppdateraFrån2.TabIndex = 17;
-            // 
-            // comboBoxUppdateraTill1
-            // 
-            this.comboBoxUppdateraTill1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxUppdateraTill1.FormattingEnabled = true;
-            this.comboBoxUppdateraTill1.Items.AddRange(new object[] {
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18"});
-            this.comboBoxUppdateraTill1.Location = new System.Drawing.Point(14, 87);
-            this.comboBoxUppdateraTill1.Name = "comboBoxUppdateraTill1";
-            this.comboBoxUppdateraTill1.Size = new System.Drawing.Size(42, 23);
-            this.comboBoxUppdateraTill1.TabIndex = 16;
-            // 
-            // comboBoxUppdateraFrån1
-            // 
-            this.comboBoxUppdateraFrån1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxUppdateraFrån1.FormattingEnabled = true;
-            this.comboBoxUppdateraFrån1.Items.AddRange(new object[] {
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18"});
-            this.comboBoxUppdateraFrån1.Location = new System.Drawing.Point(14, 37);
-            this.comboBoxUppdateraFrån1.Name = "comboBoxUppdateraFrån1";
-            this.comboBoxUppdateraFrån1.Size = new System.Drawing.Size(42, 23);
-            this.comboBoxUppdateraFrån1.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 15);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Från:";
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(15, 123);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Uppdatera";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(10, 73);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(26, 15);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "Till:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(54, 88);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(13, 17);
-            this.label24.TabIndex = 20;
-            this.label24.Text = ":";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(54, 39);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(13, 17);
-            this.label23.TabIndex = 19;
-            this.label23.Text = ":";
             // 
             // groupBox2
             // 
@@ -731,7 +651,6 @@
             this.groupBox2.Controls.Add(this.comboBoxTill1);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.comboBoxFrån2);
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.comboBoxFrån1);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label15);
@@ -739,15 +658,16 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(291, 175);
+            this.groupBox2.Location = new System.Drawing.Point(291, 176);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(154, 159);
+            this.groupBox2.Size = new System.Drawing.Size(154, 125);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lägg till ny tid";
+            this.groupBox2.Text = "Meddela tid";
             // 
             // comboBoxTill2
             // 
+            this.comboBoxTill2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTill2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTill2.FormattingEnabled = true;
             this.comboBoxTill2.Items.AddRange(new object[] {
@@ -762,14 +682,16 @@
             "40",
             "45",
             "50",
-            "55"});
-            this.comboBoxTill2.Location = new System.Drawing.Point(63, 87);
+            "55",
+            "mm"});
+            this.comboBoxTill2.Location = new System.Drawing.Point(66, 87);
             this.comboBoxTill2.Name = "comboBoxTill2";
-            this.comboBoxTill2.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxTill2.Size = new System.Drawing.Size(45, 23);
             this.comboBoxTill2.TabIndex = 18;
             // 
             // comboBoxTill1
             // 
+            this.comboBoxTill1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTill1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTill1.FormattingEnabled = true;
             this.comboBoxTill1.Items.AddRange(new object[] {
@@ -785,17 +707,18 @@
             "15",
             "16",
             "17",
-            "18"});
+            "18",
+            "hh"});
             this.comboBoxTill1.Location = new System.Drawing.Point(14, 87);
             this.comboBoxTill1.Name = "comboBoxTill1";
-            this.comboBoxTill1.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxTill1.Size = new System.Drawing.Size(45, 23);
             this.comboBoxTill1.TabIndex = 17;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(54, 88);
+            this.label17.Location = new System.Drawing.Point(57, 88);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(13, 17);
             this.label17.TabIndex = 19;
@@ -803,6 +726,7 @@
             // 
             // comboBoxFrån2
             // 
+            this.comboBoxFrån2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFrån2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFrån2.FormattingEnabled = true;
             this.comboBoxFrån2.Items.AddRange(new object[] {
@@ -817,25 +741,16 @@
             "40",
             "45",
             "50",
-            "55"});
-            this.comboBoxFrån2.Location = new System.Drawing.Point(63, 37);
+            "55",
+            "mm"});
+            this.comboBoxFrån2.Location = new System.Drawing.Point(66, 37);
             this.comboBoxFrån2.Name = "comboBoxFrån2";
-            this.comboBoxFrån2.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxFrån2.Size = new System.Drawing.Size(45, 23);
             this.comboBoxFrån2.TabIndex = 15;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(15, 123);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Meddela";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBoxFrån1
             // 
+            this.comboBoxFrån1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFrån1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFrån1.FormattingEnabled = true;
             this.comboBoxFrån1.Items.AddRange(new object[] {
@@ -851,10 +766,11 @@
             "15",
             "16",
             "17",
-            "18"});
+            "18",
+            "hh"});
             this.comboBoxFrån1.Location = new System.Drawing.Point(14, 37);
             this.comboBoxFrån1.Name = "comboBoxFrån1";
-            this.comboBoxFrån1.Size = new System.Drawing.Size(42, 23);
+            this.comboBoxFrån1.Size = new System.Drawing.Size(45, 23);
             this.comboBoxFrån1.TabIndex = 14;
             // 
             // label5
@@ -871,7 +787,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(54, 38);
+            this.label15.Location = new System.Drawing.Point(57, 38);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(13, 17);
             this.label15.TabIndex = 16;
@@ -909,166 +825,187 @@
             this.label27.TabIndex = 35;
             this.label27.Text = "*";
             // 
-            // tabPage4
+            // button5
             // 
-            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.dataGridViewHämtning);
-            this.tabPage4.Controls.Add(this.listBoxMeddelaHämtning);
-            this.tabPage4.Controls.Add(this.buttonMeddelaHämtning);
-            this.tabPage4.Controls.Add(this.textBoxMeddelaHämtning);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.label37);
-            this.tabPage4.Controls.Add(this.label38);
-            this.tabPage4.Controls.Add(this.label39);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(740, 363);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Meddela hämtning";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(500, 310);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Uppdatera";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // dataGridViewHämtning
+            // button2
             // 
-            this.dataGridViewHämtning.AutoGenerateColumns = false;
-            this.dataGridViewHämtning.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewHämtning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHämtning.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dataGridViewHämtning.DataSource = this.närvaroBindingSource;
-            this.dataGridViewHämtning.Location = new System.Drawing.Point(33, 124);
-            this.dataGridViewHämtning.MultiSelect = false;
-            this.dataGridViewHämtning.Name = "dataGridViewHämtning";
-            this.dataGridViewHämtning.ReadOnly = true;
-            this.dataGridViewHämtning.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHämtning.Size = new System.Drawing.Size(461, 131);
-            this.dataGridViewHämtning.TabIndex = 21;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(500, 310);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Meddela";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // groupBox3
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Datum";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Datum";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.groupBox3.Controls.Add(this.comboBoxUppdateraTill2);
+            this.groupBox3.Controls.Add(this.comboBoxUppdateraFrån2);
+            this.groupBox3.Controls.Add(this.comboBoxUppdateraTill1);
+            this.groupBox3.Controls.Add(this.comboBoxUppdateraFrån1);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(291, 176);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(178, 125);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Uppdatera befintlig tid";
             // 
-            // dataGridViewTextBoxColumn2
+            // comboBoxUppdateraTill2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TidLämnad";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Från kl:";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.comboBoxUppdateraTill2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUppdateraTill2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUppdateraTill2.FormattingEnabled = true;
+            this.comboBoxUppdateraTill2.Items.AddRange(new object[] {
+            "00",
+            "05",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55"});
+            this.comboBoxUppdateraTill2.Location = new System.Drawing.Point(66, 87);
+            this.comboBoxUppdateraTill2.Name = "comboBoxUppdateraTill2";
+            this.comboBoxUppdateraTill2.Size = new System.Drawing.Size(45, 23);
+            this.comboBoxUppdateraTill2.TabIndex = 18;
             // 
-            // dataGridViewTextBoxColumn3
+            // comboBoxUppdateraFrån2
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "TidHämtad";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Till kl:";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.comboBoxUppdateraFrån2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUppdateraFrån2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUppdateraFrån2.FormattingEnabled = true;
+            this.comboBoxUppdateraFrån2.Items.AddRange(new object[] {
+            "00",
+            "05",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55"});
+            this.comboBoxUppdateraFrån2.Location = new System.Drawing.Point(66, 37);
+            this.comboBoxUppdateraFrån2.Name = "comboBoxUppdateraFrån2";
+            this.comboBoxUppdateraFrån2.Size = new System.Drawing.Size(45, 23);
+            this.comboBoxUppdateraFrån2.TabIndex = 17;
             // 
-            // dataGridViewTextBoxColumn4
+            // comboBoxUppdateraTill1
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "HämtasAv";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Hämtas av";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.comboBoxUppdateraTill1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUppdateraTill1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUppdateraTill1.FormattingEnabled = true;
+            this.comboBoxUppdateraTill1.Items.AddRange(new object[] {
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"});
+            this.comboBoxUppdateraTill1.Location = new System.Drawing.Point(14, 87);
+            this.comboBoxUppdateraTill1.Name = "comboBoxUppdateraTill1";
+            this.comboBoxUppdateraTill1.Size = new System.Drawing.Size(45, 23);
+            this.comboBoxUppdateraTill1.TabIndex = 16;
             // 
-            // listBoxMeddelaHämtning
+            // comboBoxUppdateraFrån1
             // 
-            this.listBoxMeddelaHämtning.FormattingEnabled = true;
-            this.listBoxMeddelaHämtning.Location = new System.Drawing.Point(33, 36);
-            this.listBoxMeddelaHämtning.Name = "listBoxMeddelaHämtning";
-            this.listBoxMeddelaHämtning.Size = new System.Drawing.Size(120, 56);
-            this.listBoxMeddelaHämtning.TabIndex = 20;
-            this.listBoxMeddelaHämtning.SelectedIndexChanged += new System.EventHandler(this.listBoxMeddelaHämtning_SelectedIndexChanged);
+            this.comboBoxUppdateraFrån1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUppdateraFrån1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUppdateraFrån1.FormattingEnabled = true;
+            this.comboBoxUppdateraFrån1.Items.AddRange(new object[] {
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"});
+            this.comboBoxUppdateraFrån1.Location = new System.Drawing.Point(14, 37);
+            this.comboBoxUppdateraFrån1.Name = "comboBoxUppdateraFrån1";
+            this.comboBoxUppdateraFrån1.Size = new System.Drawing.Size(45, 23);
+            this.comboBoxUppdateraFrån1.TabIndex = 15;
             // 
-            // buttonMeddelaHämtning
+            // label9
             // 
-            this.buttonMeddelaHämtning.Location = new System.Drawing.Point(35, 312);
-            this.buttonMeddelaHämtning.Name = "buttonMeddelaHämtning";
-            this.buttonMeddelaHämtning.Size = new System.Drawing.Size(75, 23);
-            this.buttonMeddelaHämtning.TabIndex = 19;
-            this.buttonMeddelaHämtning.Text = "Meddela";
-            this.buttonMeddelaHämtning.UseVisualStyleBackColor = true;
-            this.buttonMeddelaHämtning.Click += new System.EventHandler(this.buttonMeddelaHämtning_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 15);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Från:";
             // 
-            // textBoxMeddelaHämtning
+            // label22
             // 
-            this.textBoxMeddelaHämtning.Location = new System.Drawing.Point(35, 286);
-            this.textBoxMeddelaHämtning.Name = "textBoxMeddelaHämtning";
-            this.textBoxMeddelaHämtning.Size = new System.Drawing.Size(100, 20);
-            this.textBoxMeddelaHämtning.TabIndex = 17;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(10, 73);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(26, 15);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Till:";
             // 
-            // label12
+            // label24
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(30, 107);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 16);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Välj dag:";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(57, 88);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(13, 17);
+            this.label24.TabIndex = 20;
+            this.label24.Text = ":";
             // 
-            // label13
+            // label23
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(30, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 16);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Välj barn:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(32, 271);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 16);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Hämtas av:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(99, 14);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(20, 25);
-            this.label37.TabIndex = 34;
-            this.label37.Text = "*";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.Red;
-            this.label38.Location = new System.Drawing.Point(94, 102);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(20, 25);
-            this.label38.TabIndex = 35;
-            this.label38.Text = "*";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Red;
-            this.label39.Location = new System.Drawing.Point(113, 265);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(20, 25);
-            this.label39.TabIndex = 36;
-            this.label39.Text = "*";
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(57, 39);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(13, 17);
+            this.label23.TabIndex = 19;
+            this.label23.Text = ":";
             // 
             // tabPage5
             // 
+            this.tabPage5.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.panelHjälpMeddelaFrånvaro);
+            this.tabPage5.Controls.Add(this.buttonHjälpMeddelaFrånvaro);
             this.tabPage5.Controls.Add(this.labelFrånvaroTyp);
             this.tabPage5.Controls.Add(this.dataGridViewMeddelaFrånvaro);
             this.tabPage5.Controls.Add(this.radioButtonSjuk);
@@ -1089,6 +1026,47 @@
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Meddela frånvaro";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // panelHjälpMeddelaFrånvaro
+            // 
+            this.panelHjälpMeddelaFrånvaro.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpMeddelaFrånvaro.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpMeddelaFrånvaro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpMeddelaFrånvaro.Controls.Add(this.labelHjälpMeddelaFrånvaro);
+            this.panelHjälpMeddelaFrånvaro.Location = new System.Drawing.Point(491, 18);
+            this.panelHjälpMeddelaFrånvaro.Name = "panelHjälpMeddelaFrånvaro";
+            this.panelHjälpMeddelaFrånvaro.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpMeddelaFrånvaro.TabIndex = 47;
+            this.panelHjälpMeddelaFrånvaro.Visible = false;
+            // 
+            // labelHjälpMeddelaFrånvaro
+            // 
+            this.labelHjälpMeddelaFrånvaro.AutoSize = true;
+            this.labelHjälpMeddelaFrånvaro.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpMeddelaFrånvaro.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpMeddelaFrånvaro.Name = "labelHjälpMeddelaFrånvaro";
+            this.labelHjälpMeddelaFrånvaro.Size = new System.Drawing.Size(207, 104);
+            this.labelHjälpMeddelaFrånvaro.TabIndex = 0;
+            this.labelHjälpMeddelaFrånvaro.Text = "Hjälp.\r\n\r\nVälj barn i listan. Välj datum då du vill \r\nanmäla frånvaro. Välj Sjuk " +
+    "eller Ledig följt\r\nav knappen meddela.\r\n\r\nDu kan se vilka tider du meddelat från" +
+    "varo\r\ni listan uppe till höger.";
+            this.labelHjälpMeddelaFrånvaro.Visible = false;
+            // 
+            // buttonHjälpMeddelaFrånvaro
+            // 
+            this.buttonHjälpMeddelaFrånvaro.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpMeddelaFrånvaro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpMeddelaFrånvaro.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpMeddelaFrånvaro.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpMeddelaFrånvaro.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpMeddelaFrånvaro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpMeddelaFrånvaro.Location = new System.Drawing.Point(700, 1);
+            this.buttonHjälpMeddelaFrånvaro.Name = "buttonHjälpMeddelaFrånvaro";
+            this.buttonHjälpMeddelaFrånvaro.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpMeddelaFrånvaro.TabIndex = 46;
+            this.buttonHjälpMeddelaFrånvaro.UseVisualStyleBackColor = true;
+            this.buttonHjälpMeddelaFrånvaro.MouseLeave += new System.EventHandler(this.buttonHjälpMeddelaFrånvaro_MouseLeave);
+            this.buttonHjälpMeddelaFrånvaro.MouseHover += new System.EventHandler(this.buttonHjälpMeddelaFrånvaro_MouseHover);
             // 
             // labelFrånvaroTyp
             // 
@@ -1115,13 +1093,6 @@
             this.dataGridViewMeddelaFrånvaro.Size = new System.Drawing.Size(363, 132);
             this.dataGridViewMeddelaFrånvaro.TabIndex = 30;
             // 
-            // datumDataGridViewTextBoxColumn1
-            // 
-            this.datumDataGridViewTextBoxColumn1.DataPropertyName = "Datum";
-            this.datumDataGridViewTextBoxColumn1.HeaderText = "Datum";
-            this.datumDataGridViewTextBoxColumn1.Name = "datumDataGridViewTextBoxColumn1";
-            this.datumDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // Sjuk
             // 
             this.Sjuk.DataPropertyName = "Sjuk";
@@ -1135,10 +1106,6 @@
             this.Ledig.HeaderText = "Ledig";
             this.Ledig.Name = "Ledig";
             this.Ledig.ReadOnly = true;
-            // 
-            // frånvaroBindingSource
-            // 
-            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
             // radioButtonSjuk
             // 
@@ -1189,9 +1156,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(30, 159);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.Size = new System.Drawing.Size(85, 16);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Välj dag:";
+            this.label7.Text = "Välj datum:";
             // 
             // label14
             // 
@@ -1206,6 +1173,7 @@
             // monthCalendar2
             // 
             this.monthCalendar2.Location = new System.Drawing.Point(33, 175);
+            this.monthCalendar2.MaxSelectionCount = 1;
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.ShowWeekNumbers = true;
             this.monthCalendar2.TabIndex = 20;
@@ -1247,7 +1215,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(95, 154);
+            this.label28.Location = new System.Drawing.Point(110, 154);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(20, 25);
             this.label28.TabIndex = 34;
@@ -1266,11 +1234,15 @@
             // 
             // senasteTabPage
             // 
+            this.senasteTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.senasteTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.senasteTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.senasteTabPage.Controls.Add(this.panelHjälpSenaste);
+            this.senasteTabPage.Controls.Add(this.buttonHjälpSenaste);
+            this.senasteTabPage.Controls.Add(this.label26);
             this.senasteTabPage.Controls.Add(this.richTextBoxPubliceradeInlägg);
             this.senasteTabPage.Controls.Add(this.label25);
             this.senasteTabPage.Controls.Add(this.textBoxSkrivetAv);
-            this.senasteTabPage.Controls.Add(this.label26);
             this.senasteTabPage.Controls.Add(this.listBoxInlägg);
             this.senasteTabPage.Controls.Add(this.textBoxRubrik);
             this.senasteTabPage.Controls.Add(this.textBoxDatum);
@@ -1282,6 +1254,56 @@
             this.senasteTabPage.TabIndex = 0;
             this.senasteTabPage.Text = "Senaste";
             this.senasteTabPage.UseVisualStyleBackColor = true;
+            // 
+            // panelHjälpSenaste
+            // 
+            this.panelHjälpSenaste.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpSenaste.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpSenaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpSenaste.Controls.Add(this.labelHjälpSenaste);
+            this.panelHjälpSenaste.Location = new System.Drawing.Point(491, 23);
+            this.panelHjälpSenaste.Name = "panelHjälpSenaste";
+            this.panelHjälpSenaste.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpSenaste.TabIndex = 43;
+            this.panelHjälpSenaste.Visible = false;
+            // 
+            // labelHjälpSenaste
+            // 
+            this.labelHjälpSenaste.AutoSize = true;
+            this.labelHjälpSenaste.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpSenaste.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpSenaste.Name = "labelHjälpSenaste";
+            this.labelHjälpSenaste.Size = new System.Drawing.Size(179, 65);
+            this.labelHjälpSenaste.TabIndex = 0;
+            this.labelHjälpSenaste.Text = "Hjälp.\r\n\r\nPå denna sida kan du ta del av \r\nnyhetsinformation som berör ditt barn\r" +
+    "\npå förskolan.\r\n";
+            this.labelHjälpSenaste.Visible = false;
+            // 
+            // buttonHjälpSenaste
+            // 
+            this.buttonHjälpSenaste.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpSenaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpSenaste.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpSenaste.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpSenaste.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpSenaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpSenaste.Location = new System.Drawing.Point(700, 6);
+            this.buttonHjälpSenaste.Name = "buttonHjälpSenaste";
+            this.buttonHjälpSenaste.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpSenaste.TabIndex = 42;
+            this.buttonHjälpSenaste.UseVisualStyleBackColor = true;
+            this.buttonHjälpSenaste.MouseLeave += new System.EventHandler(this.buttonHjälpSenaste_MouseLeave);
+            this.buttonHjälpSenaste.MouseHover += new System.EventHandler(this.buttonHjälpSenaste_MouseHover);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(11, 54);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(86, 16);
+            this.label26.TabIndex = 41;
+            this.label26.Text = "Välj inlägg:";
             // 
             // richTextBoxPubliceradeInlägg
             // 
@@ -1312,16 +1334,6 @@
             this.textBoxSkrivetAv.Size = new System.Drawing.Size(167, 20);
             this.textBoxSkrivetAv.TabIndex = 37;
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(12, 56);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(58, 13);
-            this.label26.TabIndex = 35;
-            this.label26.Text = "Välj inlägg:";
-            // 
             // listBoxInlägg
             // 
             this.listBoxInlägg.FormattingEnabled = true;
@@ -1351,7 +1363,7 @@
             // 
             // omTabPage
             // 
-            this.omTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttis1;
+            this.omTabPage.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.druttisNYOM;
             this.omTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.omTabPage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.omTabPage.Controls.Add(this.label54);
@@ -1373,8 +1385,158 @@
             this.omTabPage.Name = "omTabPage";
             this.omTabPage.Size = new System.Drawing.Size(740, 363);
             this.omTabPage.TabIndex = 1;
-            this.omTabPage.Text = "Om förskolan Drutten";
+            this.omTabPage.Text = "Om Druttens förskola";
             this.omTabPage.UseVisualStyleBackColor = true;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label54.Location = new System.Drawing.Point(444, 286);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(52, 13);
+            this.label54.TabIndex = 14;
+            this.label54.Text = "00 - 0101";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label53.Location = new System.Drawing.Point(439, 270);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(96, 14);
+            this.label53.TabIndex = 13;
+            this.label53.Text = "Telefonnummer";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label52.Location = new System.Drawing.Point(441, 302);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(38, 14);
+            this.label52.TabIndex = 12;
+            this.label52.Text = "Epost";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label51.Location = new System.Drawing.Point(439, 211);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(48, 14);
+            this.label51.TabIndex = 11;
+            this.label51.Text = "Adress";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label50.Location = new System.Drawing.Point(482, 241);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(76, 13);
+            this.label50.TabIndex = 10;
+            this.label50.Text = "Förskolestaden";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label49.Location = new System.Drawing.Point(441, 241);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(40, 13);
+            this.label49.TabIndex = 9;
+            this.label49.Text = "100 10";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label48.Location = new System.Drawing.Point(441, 227);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(83, 13);
+            this.label48.TabIndex = 8;
+            this.label48.Text = "Förskolevägen 1";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Arial", 7.25F);
+            this.label47.Location = new System.Drawing.Point(441, 320);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(120, 13);
+            this.label47.TabIndex = 7;
+            this.label47.Text = "info@druttensforskola.se";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label46.Location = new System.Drawing.Point(133, 314);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(60, 12);
+            this.label46.TabIndex = 6;
+            this.label46.Text = "09.00 - 16.00";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label45.Location = new System.Drawing.Point(133, 297);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(60, 12);
+            this.label45.TabIndex = 5;
+            this.label45.Text = "09.00 - 16.00";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label44.Location = new System.Drawing.Point(133, 280);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(60, 12);
+            this.label44.TabIndex = 4;
+            this.label44.Text = "06.00 - 17.00";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label43.Location = new System.Drawing.Point(133, 264);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(60, 12);
+            this.label43.TabIndex = 3;
+            this.label43.Text = "06.00 - 18.00";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label42.Location = new System.Drawing.Point(133, 247);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(60, 12);
+            this.label42.TabIndex = 2;
+            this.label42.Text = "06.00 - 18.00";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label41.Location = new System.Drawing.Point(133, 231);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(60, 12);
+            this.label41.TabIndex = 1;
+            this.label41.Text = "06.00 - 18.00";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Arial", 6.25F);
+            this.label40.Location = new System.Drawing.Point(133, 214);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(60, 12);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "06.00 - 18.00";
             // 
             // MittKontoTabControl
             // 
@@ -1389,9 +1551,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage1.Controls.Add(this.label34);
+            this.tabPage1.Controls.Add(this.panelHjälpKontoUppgifter);
+            this.tabPage1.Controls.Add(this.buttonHjälpKontoUppgifter);
             this.tabPage1.Controls.Add(this.ändraLösenPanel);
+            this.tabPage1.Controls.Add(this.label55);
             this.tabPage1.Controls.Add(this.ändraLösenordButton);
             this.tabPage1.Controls.Add(this.uppdateraförälder);
             this.tabPage1.Controls.Add(this.label16);
@@ -1409,15 +1575,45 @@
             this.tabPage1.Text = "Kontouppgifter";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label34
+            // panelHjälpKontoUppgifter
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(34, 20);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(79, 13);
-            this.label34.TabIndex = 23;
-            this.label34.Text = "Ändra uppgifter";
+            this.panelHjälpKontoUppgifter.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpKontoUppgifter.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpKontoUppgifter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpKontoUppgifter.Controls.Add(this.labelHjälpKontoUppgifter);
+            this.panelHjälpKontoUppgifter.Location = new System.Drawing.Point(491, 23);
+            this.panelHjälpKontoUppgifter.Name = "panelHjälpKontoUppgifter";
+            this.panelHjälpKontoUppgifter.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpKontoUppgifter.TabIndex = 45;
+            this.panelHjälpKontoUppgifter.Visible = false;
+            // 
+            // labelHjälpKontoUppgifter
+            // 
+            this.labelHjälpKontoUppgifter.AutoSize = true;
+            this.labelHjälpKontoUppgifter.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpKontoUppgifter.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpKontoUppgifter.Name = "labelHjälpKontoUppgifter";
+            this.labelHjälpKontoUppgifter.Size = new System.Drawing.Size(162, 78);
+            this.labelHjälpKontoUppgifter.TabIndex = 0;
+            this.labelHjälpKontoUppgifter.Text = "Hjälp.\r\n\r\nPå denna sida kan du ändra för-,\r\nefternamn och telefonnummer.\r\n\r\nDu ka" +
+    "n även ändra ditt lösenord.";
+            this.labelHjälpKontoUppgifter.Visible = false;
+            // 
+            // buttonHjälpKontoUppgifter
+            // 
+            this.buttonHjälpKontoUppgifter.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpKontoUppgifter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpKontoUppgifter.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpKontoUppgifter.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpKontoUppgifter.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpKontoUppgifter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpKontoUppgifter.Location = new System.Drawing.Point(700, 6);
+            this.buttonHjälpKontoUppgifter.Name = "buttonHjälpKontoUppgifter";
+            this.buttonHjälpKontoUppgifter.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpKontoUppgifter.TabIndex = 44;
+            this.buttonHjälpKontoUppgifter.UseVisualStyleBackColor = true;
+            this.buttonHjälpKontoUppgifter.MouseLeave += new System.EventHandler(this.buttonHjälpKontoUppgifter_MouseLeave);
+            this.buttonHjälpKontoUppgifter.MouseHover += new System.EventHandler(this.buttonHjälpKontoUppgifter_MouseHover);
             // 
             // ändraLösenPanel
             // 
@@ -1425,7 +1621,7 @@
             this.ändraLösenPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ändraLösenPanel.Controls.Add(this.panel2);
             this.ändraLösenPanel.Controls.Add(this.label30);
-            this.ändraLösenPanel.Location = new System.Drawing.Point(33, 53);
+            this.ändraLösenPanel.Location = new System.Drawing.Point(451, 124);
             this.ändraLösenPanel.Name = "ändraLösenPanel";
             this.ändraLösenPanel.Size = new System.Drawing.Size(419, 267);
             this.ändraLösenPanel.TabIndex = 22;
@@ -1436,6 +1632,9 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label34);
+            this.panel2.Controls.Add(this.label56);
+            this.panel2.Controls.Add(this.label57);
             this.panel2.Controls.Add(this.ändralösenBekräfta);
             this.panel2.Controls.Add(this.ändraLösenAvbryt);
             this.panel2.Controls.Add(this.textBoxNyttLösen2);
@@ -1448,6 +1647,33 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(366, 226);
             this.panel2.TabIndex = 23;
+            // 
+            // label34
+            // 
+            this.label34.ForeColor = System.Drawing.Color.Red;
+            this.label34.Location = new System.Drawing.Point(138, 136);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(10, 13);
+            this.label34.TabIndex = 12;
+            this.label34.Text = "*";
+            // 
+            // label56
+            // 
+            this.label56.ForeColor = System.Drawing.Color.Red;
+            this.label56.Location = new System.Drawing.Point(97, 84);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(10, 13);
+            this.label56.TabIndex = 11;
+            this.label56.Text = "*";
+            // 
+            // label57
+            // 
+            this.label57.ForeColor = System.Drawing.Color.Red;
+            this.label57.Location = new System.Drawing.Point(130, 30);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(10, 13);
+            this.label57.TabIndex = 10;
+            this.label57.Text = "*";
             // 
             // ändralösenBekräfta
             // 
@@ -1530,9 +1756,19 @@
             this.label30.TabIndex = 24;
             this.label30.Text = "Ändra lösenord";
             // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(77, 43);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(114, 16);
+            this.label55.TabIndex = 24;
+            this.label55.Text = "Ändra uppgifter";
+            // 
             // ändraLösenordButton
             // 
-            this.ändraLösenordButton.Location = new System.Drawing.Point(114, 191);
+            this.ändraLösenordButton.Location = new System.Drawing.Point(217, 235);
             this.ändraLösenordButton.Name = "ändraLösenordButton";
             this.ändraLösenordButton.Size = new System.Drawing.Size(99, 34);
             this.ändraLösenordButton.TabIndex = 21;
@@ -1542,7 +1778,7 @@
             // 
             // uppdateraförälder
             // 
-            this.uppdateraförälder.Location = new System.Drawing.Point(114, 145);
+            this.uppdateraförälder.Location = new System.Drawing.Point(80, 235);
             this.uppdateraförälder.Name = "uppdateraförälder";
             this.uppdateraförälder.Size = new System.Drawing.Size(99, 34);
             this.uppdateraförälder.TabIndex = 20;
@@ -1553,7 +1789,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 115);
+            this.label16.Location = new System.Drawing.Point(77, 165);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(83, 13);
             this.label16.TabIndex = 17;
@@ -1561,15 +1797,16 @@
             // 
             // textBoxTelefonnummerMittKonto
             // 
-            this.textBoxTelefonnummerMittKonto.Location = new System.Drawing.Point(113, 112);
+            this.textBoxTelefonnummerMittKonto.Location = new System.Drawing.Point(80, 181);
             this.textBoxTelefonnummerMittKonto.Name = "textBoxTelefonnummerMittKonto";
             this.textBoxTelefonnummerMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxTelefonnummerMittKonto.TabIndex = 16;
+            this.textBoxTelefonnummerMittKonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefonnummerMittKonto_KeyPress);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(54, 89);
+            this.label18.Location = new System.Drawing.Point(77, 121);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 13);
             this.label18.TabIndex = 13;
@@ -1577,15 +1814,16 @@
             // 
             // textBoxEfternamnMittKonto
             // 
-            this.textBoxEfternamnMittKonto.Location = new System.Drawing.Point(113, 86);
+            this.textBoxEfternamnMittKonto.Location = new System.Drawing.Point(80, 137);
             this.textBoxEfternamnMittKonto.Name = "textBoxEfternamnMittKonto";
             this.textBoxEfternamnMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxEfternamnMittKonto.TabIndex = 12;
+            this.textBoxEfternamnMittKonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEfternamnMittKonto_KeyPress);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(56, 56);
+            this.label19.Location = new System.Drawing.Point(77, 79);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 13);
             this.label19.TabIndex = 11;
@@ -1593,14 +1831,19 @@
             // 
             // textBoxFörnamnMittKonto
             // 
-            this.textBoxFörnamnMittKonto.Location = new System.Drawing.Point(113, 53);
+            this.textBoxFörnamnMittKonto.Location = new System.Drawing.Point(80, 93);
             this.textBoxFörnamnMittKonto.Name = "textBoxFörnamnMittKonto";
             this.textBoxFörnamnMittKonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxFörnamnMittKonto.TabIndex = 10;
+            this.textBoxFörnamnMittKonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFörnamnMittKonto_KeyPress);
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.panelHjälpMinaBarn);
+            this.tabPage2.Controls.Add(this.buttonHjälpMinaBarn);
             this.tabPage2.Controls.Add(this.listAktuellaBarn);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.richTextBoxAnnat);
@@ -1619,6 +1862,47 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mina Barn";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panelHjälpMinaBarn
+            // 
+            this.panelHjälpMinaBarn.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpMinaBarn.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpMinaBarn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpMinaBarn.Controls.Add(this.labelHjälpMinaBarn);
+            this.panelHjälpMinaBarn.Location = new System.Drawing.Point(491, 23);
+            this.panelHjälpMinaBarn.Name = "panelHjälpMinaBarn";
+            this.panelHjälpMinaBarn.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpMinaBarn.TabIndex = 47;
+            this.panelHjälpMinaBarn.Visible = false;
+            // 
+            // labelHjälpMinaBarn
+            // 
+            this.labelHjälpMinaBarn.AutoSize = true;
+            this.labelHjälpMinaBarn.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpMinaBarn.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpMinaBarn.Name = "labelHjälpMinaBarn";
+            this.labelHjälpMinaBarn.Size = new System.Drawing.Size(188, 104);
+            this.labelHjälpMinaBarn.TabIndex = 0;
+            this.labelHjälpMinaBarn.Text = "Hjälp.\r\n\r\nVälj barn i listan. Du kan skriva in vilka\r\nallergier ditt barn har ell" +
+    "er om det finns\r\nannan viktig information personal\r\nbehöver få reda på. \r\n\r\nTryc" +
+    "k på uppdatera efteråt.\r\n";
+            this.labelHjälpMinaBarn.Visible = false;
+            // 
+            // buttonHjälpMinaBarn
+            // 
+            this.buttonHjälpMinaBarn.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.hjälpButtonpng;
+            this.buttonHjälpMinaBarn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHjälpMinaBarn.FlatAppearance.BorderSize = 0;
+            this.buttonHjälpMinaBarn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpMinaBarn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHjälpMinaBarn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHjälpMinaBarn.Location = new System.Drawing.Point(700, 6);
+            this.buttonHjälpMinaBarn.Name = "buttonHjälpMinaBarn";
+            this.buttonHjälpMinaBarn.Size = new System.Drawing.Size(27, 23);
+            this.buttonHjälpMinaBarn.TabIndex = 46;
+            this.buttonHjälpMinaBarn.UseVisualStyleBackColor = true;
+            this.buttonHjälpMinaBarn.MouseLeave += new System.EventHandler(this.buttonHjälpMinaBarn_MouseLeave);
+            this.buttonHjälpMinaBarn.MouseHover += new System.EventHandler(this.buttonHjälpMinaBarn_MouseHover);
             // 
             // listAktuellaBarn
             // 
@@ -1687,6 +1971,7 @@
             this.textBoxEfternamn.Name = "textBoxEfternamn";
             this.textBoxEfternamn.Size = new System.Drawing.Size(100, 20);
             this.textBoxEfternamn.TabIndex = 17;
+            this.textBoxEfternamn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEfternamn_KeyPress);
             // 
             // label10
             // 
@@ -1713,6 +1998,7 @@
             this.textBoxFornamn.Name = "textBoxFornamn";
             this.textBoxFornamn.Size = new System.Drawing.Size(100, 20);
             this.textBoxFornamn.TabIndex = 14;
+            this.textBoxFornamn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFornamn_KeyPress);
             // 
             // kontoTypLabel
             // 
@@ -1730,7 +2016,7 @@
             // 
             this.loggaBox.BackColor = System.Drawing.Color.Transparent;
             this.loggaBox.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.BlådruttenMellan;
-            this.loggaBox.Location = new System.Drawing.Point(22, 12);
+            this.loggaBox.Location = new System.Drawing.Point(24, 12);
             this.loggaBox.Name = "loggaBox";
             this.loggaBox.Size = new System.Drawing.Size(113, 86);
             this.loggaBox.TabIndex = 1;
@@ -1739,6 +2025,9 @@
             // 
             // exitButton
             // 
+            this.exitButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
             this.exitButton.Location = new System.Drawing.Point(972, 12);
@@ -1746,7 +2035,7 @@
             this.exitButton.Size = new System.Drawing.Size(24, 23);
             this.exitButton.TabIndex = 5;
             this.exitButton.Text = "X";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // timer1
@@ -1754,155 +2043,147 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label40
+            // dataGridViewTextBoxColumn4
             // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label40.Location = new System.Drawing.Point(110, 231);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(60, 12);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "06.00 - 18.00";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "HämtasAv";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Hämtas av";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // label41
+            // dataGridViewTextBoxColumn3
             // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label41.Location = new System.Drawing.Point(110, 248);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(60, 12);
-            this.label41.TabIndex = 1;
-            this.label41.Text = "06.00 - 18.00";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "TidHämtad";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Till kl:";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // label42
+            // dataGridViewTextBoxColumn2
             // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label42.Location = new System.Drawing.Point(110, 264);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(60, 12);
-            this.label42.TabIndex = 2;
-            this.label42.Text = "06.00 - 18.00";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TidLämnad";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Från kl:";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // label43
+            // dataGridViewTextBoxColumn1
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label43.Location = new System.Drawing.Point(110, 280);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(60, 12);
-            this.label43.TabIndex = 3;
-            this.label43.Text = "06.00 - 18.00";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Datum";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Datum";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // label44
+            // hämtadDataGridViewCheckBoxColumn
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label44.Location = new System.Drawing.Point(110, 297);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(60, 12);
-            this.label44.TabIndex = 4;
-            this.label44.Text = "06.00 - 17.00";
+            this.hämtadDataGridViewCheckBoxColumn.DataPropertyName = "hämtad";
+            this.hämtadDataGridViewCheckBoxColumn.HeaderText = "hämtad";
+            this.hämtadDataGridViewCheckBoxColumn.Name = "hämtadDataGridViewCheckBoxColumn";
+            this.hämtadDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
-            // label45
+            // närvarandeDataGridViewCheckBoxColumn
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label45.Location = new System.Drawing.Point(110, 313);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(60, 12);
-            this.label45.TabIndex = 5;
-            this.label45.Text = "09.00 - 16.00";
+            this.närvarandeDataGridViewCheckBoxColumn.DataPropertyName = "närvarande";
+            this.närvarandeDataGridViewCheckBoxColumn.HeaderText = "närvarande";
+            this.närvarandeDataGridViewCheckBoxColumn.Name = "närvarandeDataGridViewCheckBoxColumn";
+            this.närvarandeDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
-            // label46
+            // hämtasAvDataGridViewTextBoxColumn
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Arial", 6.25F);
-            this.label46.Location = new System.Drawing.Point(110, 330);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(60, 12);
-            this.label46.TabIndex = 6;
-            this.label46.Text = "09.00 - 16.00";
+            this.hämtasAvDataGridViewTextBoxColumn.DataPropertyName = "HämtasAv";
+            this.hämtasAvDataGridViewTextBoxColumn.HeaderText = "HämtasAv";
+            this.hämtasAvDataGridViewTextBoxColumn.Name = "hämtasAvDataGridViewTextBoxColumn";
+            this.hämtasAvDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label47
+            // tidHämtadDataGridViewTextBoxColumn
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label47.Location = new System.Drawing.Point(411, 321);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(120, 13);
-            this.label47.TabIndex = 7;
-            this.label47.Text = "info@druttensforskola.se";
+            this.tidHämtadDataGridViewTextBoxColumn.DataPropertyName = "TidHämtad";
+            this.tidHämtadDataGridViewTextBoxColumn.HeaderText = "TidHämtad";
+            this.tidHämtadDataGridViewTextBoxColumn.Name = "tidHämtadDataGridViewTextBoxColumn";
+            this.tidHämtadDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label48
+            // tidLämnadDataGridViewTextBoxColumn
             // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label48.Location = new System.Drawing.Point(411, 238);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(83, 13);
-            this.label48.TabIndex = 8;
-            this.label48.Text = "Förskolevägen 1";
+            this.tidLämnadDataGridViewTextBoxColumn.DataPropertyName = "TidLämnad";
+            this.tidLämnadDataGridViewTextBoxColumn.HeaderText = "TidLämnad";
+            this.tidLämnadDataGridViewTextBoxColumn.Name = "tidLämnadDataGridViewTextBoxColumn";
+            this.tidLämnadDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label49
+            // efternamnDataGridViewTextBoxColumn
             // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label49.Location = new System.Drawing.Point(411, 252);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(40, 13);
-            this.label49.TabIndex = 9;
-            this.label49.Text = "100 10";
+            this.efternamnDataGridViewTextBoxColumn.DataPropertyName = "Efternamn";
+            this.efternamnDataGridViewTextBoxColumn.HeaderText = "Efternamn";
+            this.efternamnDataGridViewTextBoxColumn.Name = "efternamnDataGridViewTextBoxColumn";
+            this.efternamnDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label50
+            // förnamnDataGridViewTextBoxColumn
             // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label50.Location = new System.Drawing.Point(450, 252);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(76, 13);
-            this.label50.TabIndex = 10;
-            this.label50.Text = "Förskolestaden";
+            this.förnamnDataGridViewTextBoxColumn.DataPropertyName = "Förnamn";
+            this.förnamnDataGridViewTextBoxColumn.HeaderText = "Förnamn";
+            this.förnamnDataGridViewTextBoxColumn.Name = "förnamnDataGridViewTextBoxColumn";
+            this.förnamnDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label51
+            // allergierDataGridViewTextBoxColumn
             // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label51.Location = new System.Drawing.Point(409, 222);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(48, 14);
-            this.label51.TabIndex = 11;
-            this.label51.Text = "Adress";
+            this.allergierDataGridViewTextBoxColumn.DataPropertyName = "Allergier";
+            this.allergierDataGridViewTextBoxColumn.HeaderText = "Allergier";
+            this.allergierDataGridViewTextBoxColumn.Name = "allergierDataGridViewTextBoxColumn";
+            this.allergierDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label52
+            // barnidDataGridViewTextBoxColumn
             // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label52.Location = new System.Drawing.Point(411, 303);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(38, 14);
-            this.label52.TabIndex = 12;
-            this.label52.Text = "Epost";
+            this.barnidDataGridViewTextBoxColumn.DataPropertyName = "barnid";
+            this.barnidDataGridViewTextBoxColumn.HeaderText = "barnid";
+            this.barnidDataGridViewTextBoxColumn.Name = "barnidDataGridViewTextBoxColumn";
+            this.barnidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label53
+            // datumDataGridViewTextBoxColumn2
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label53.Location = new System.Drawing.Point(409, 271);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(96, 14);
-            this.label53.TabIndex = 13;
-            this.label53.Text = "Telefonnummer";
+            this.datumDataGridViewTextBoxColumn2.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn2.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn2.Name = "datumDataGridViewTextBoxColumn2";
+            this.datumDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // label54
+            // närvaroidDataGridViewTextBoxColumn
             // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial", 7.25F);
-            this.label54.Location = new System.Drawing.Point(414, 287);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(52, 13);
-            this.label54.TabIndex = 14;
-            this.label54.Text = "00 - 0101";
+            this.närvaroidDataGridViewTextBoxColumn.DataPropertyName = "Närvaroid";
+            this.närvaroidDataGridViewTextBoxColumn.HeaderText = "Närvaroid";
+            this.närvaroidDataGridViewTextBoxColumn.Name = "närvaroidDataGridViewTextBoxColumn";
+            this.närvaroidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // minimeraButton
+            // 
+            this.minimeraButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.minimeraButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.minimeraButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.minimeraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimeraButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimeraButton.ForeColor = System.Drawing.Color.Black;
+            this.minimeraButton.Location = new System.Drawing.Point(942, 12);
+            this.minimeraButton.Name = "minimeraButton";
+            this.minimeraButton.Size = new System.Drawing.Size(24, 23);
+            this.minimeraButton.TabIndex = 31;
+            this.minimeraButton.Text = "-";
+            this.minimeraButton.UseVisualStyleBackColor = false;
+            // 
+            // datumDataGridViewTextBoxColumn
+            // 
+            this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
+            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // närvaroBindingSource
+            // 
+            this.närvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Närvaro);
+            // 
+            // datumDataGridViewTextBoxColumn1
+            // 
+            this.datumDataGridViewTextBoxColumn1.DataPropertyName = "Datum";
+            this.datumDataGridViewTextBoxColumn1.HeaderText = "Datum";
+            this.datumDataGridViewTextBoxColumn1.Name = "datumDataGridViewTextBoxColumn1";
+            this.datumDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // frånvaroBindingSource
+            // 
+            this.frånvaroBindingSource.DataSource = typeof(Grupp3___Förskolan_Drutten.Frånvaro);
             // 
             // StartForalder
             // 
@@ -1912,6 +2193,7 @@
             this.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.Background1024x600;
             this.ClientSize = new System.Drawing.Size(1008, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.minimeraButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.kontoTypLabel);
             this.Controls.Add(this.loggaBox);
@@ -1928,34 +2210,41 @@
             this.TidertabControl.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panelHjälpMeddelaTider.ResumeLayout(false);
+            this.panelHjälpMeddelaTider.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTiderBarn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHämtning)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.panelHjälpMeddelaFrånvaro.ResumeLayout(false);
+            this.panelHjälpMeddelaFrånvaro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeddelaFrånvaro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.informationTabControl.ResumeLayout(false);
             this.senasteTabPage.ResumeLayout(false);
             this.senasteTabPage.PerformLayout();
+            this.panelHjälpSenaste.ResumeLayout(false);
+            this.panelHjälpSenaste.PerformLayout();
             this.omTabPage.ResumeLayout(false);
             this.omTabPage.PerformLayout();
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.panelHjälpKontoUppgifter.ResumeLayout(false);
+            this.panelHjälpKontoUppgifter.PerformLayout();
             this.ändraLösenPanel.ResumeLayout(false);
             this.ändraLösenPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panelHjälpMinaBarn.ResumeLayout(false);
+            this.panelHjälpMinaBarn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loggaBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.närvaroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frånvaroBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1977,7 +2266,6 @@
         private System.Windows.Forms.Button mittKontoButton;
         private System.Windows.Forms.TabControl TidertabControl;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxEfternamn;
@@ -1990,11 +2278,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MonthCalendar monthCalendar3;
-        private System.Windows.Forms.Button buttonMeddelaHämtning;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxMeddelaHämtning;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label7;
@@ -2017,7 +2300,6 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.ListBox tiderBarnListBox;
         private System.Windows.Forms.ListBox listAktuellaBarn;
-        private System.Windows.Forms.ListBox listBoxMeddelaHämtning;
         private System.Windows.Forms.ListBox listBoxMeddelaFrånvaro;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label9;
@@ -2046,7 +2328,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxPubliceradeInlägg;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBoxSkrivetAv;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ListBox listBoxInlägg;
         private System.Windows.Forms.TextBox textBoxRubrik;
         private System.Windows.Forms.TextBox textBoxDatum;
@@ -2058,11 +2339,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TidLämnad;
         private System.Windows.Forms.DataGridViewTextBoxColumn TidHämtad;
         private System.Windows.Forms.DataGridViewTextBoxColumn HämtasAv;
-        private System.Windows.Forms.DataGridView dataGridViewHämtning;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button ändraLösenordButton;
         private System.Windows.Forms.Panel ändraLösenPanel;
         private System.Windows.Forms.Label label30;
@@ -2075,7 +2351,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button ändralösenBekräfta;
         private System.Windows.Forms.Button ändraLösenAvbryt;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.DataGridView dataGridViewMeddelaFrånvaro;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Sjuk;
@@ -2088,9 +2363,6 @@
         private System.Windows.Forms.Label labelObligatorisk;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label45;
@@ -2108,5 +2380,43 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox textBoxHämtasAv1;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn hämtadDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn närvarandeDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hämtasAvDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tidHämtadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tidLämnadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn efternamnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn förnamnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn allergierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barnidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn närvaroidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panelHjälpSenaste;
+        private System.Windows.Forms.Label labelHjälpSenaste;
+        private System.Windows.Forms.Button buttonHjälpSenaste;
+        private System.Windows.Forms.Panel panelHjälpKontoUppgifter;
+        private System.Windows.Forms.Label labelHjälpKontoUppgifter;
+        private System.Windows.Forms.Button buttonHjälpKontoUppgifter;
+        private System.Windows.Forms.Panel panelHjälpMinaBarn;
+        private System.Windows.Forms.Label labelHjälpMinaBarn;
+        private System.Windows.Forms.Button buttonHjälpMinaBarn;
+        private System.Windows.Forms.Panel panelHjälpMeddelaTider;
+        private System.Windows.Forms.Label labelHjälpMeddelaTider;
+        private System.Windows.Forms.Button buttonHjälpMeddelaTider;
+        private System.Windows.Forms.Panel panelHjälpMeddelaFrånvaro;
+        private System.Windows.Forms.Label labelHjälpMeddelaFrånvaro;
+        private System.Windows.Forms.Button buttonHjälpMeddelaFrånvaro;
+        private System.Windows.Forms.Button minimeraButton;
     }
 }

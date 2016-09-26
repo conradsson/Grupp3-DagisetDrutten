@@ -56,6 +56,7 @@
       <HintPath>..\packages\Npgsql.3.1.7\lib\net451\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -70,7 +71,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Avdelning.cs" />
     <Compile Include="Barn.cs" />
     <Compile Include="Errorhandler.cs" />
     <Compile Include="Frånvaro.cs" />
@@ -288,6 +288,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\druttis1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGroundVitdruttis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\druttisNYOM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hjälpButtonpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hjälpButtonHär.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barnButtonHär.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informationButtonHär.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mittKontoButtonHär.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\närvaroButtonHär.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiderButtonHär.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informationButtonMouseOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loggaUtButtonMouseOver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.MobilLink = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,8 +42,9 @@
             this.andvandarnamnTextbox = new System.Windows.Forms.TextBox();
             this.LoggaInButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
-            this.MobilLink = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.copyButton = new System.Windows.Forms.Button();
             this.rensaEncryptButton = new System.Windows.Forms.Button();
@@ -52,12 +54,11 @@
             this.encryptTextBox = new System.Windows.Forms.TextBox();
             this.losenordENCRYPTtextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.minimeraButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -79,6 +80,18 @@
             this.groupBox2.Size = new System.Drawing.Size(387, 273);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // MobilLink
+            // 
+            this.MobilLink.AutoSize = true;
+            this.MobilLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobilLink.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.MobilLink.Location = new System.Drawing.Point(171, 257);
+            this.MobilLink.Name = "MobilLink";
+            this.MobilLink.Size = new System.Drawing.Size(32, 13);
+            this.MobilLink.TabIndex = 14;
+            this.MobilLink.Text = "Mobil";
+            this.MobilLink.Click += new System.EventHandler(this.MobilLink_Click);
             // 
             // label10
             // 
@@ -170,11 +183,12 @@
             this.andvandarnamnTextbox.TabIndex = 1;
             this.andvandarnamnTextbox.Text = "Användarnamn";
             this.andvandarnamnTextbox.Enter += new System.EventHandler(this.andvandarnamnTextbox_Enter);
+            this.andvandarnamnTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.andvandarnamnTextbox_KeyPress);
             this.andvandarnamnTextbox.Leave += new System.EventHandler(this.andvandarnamnTextbox_Leave);
             // 
             // LoggaInButton
             // 
-            this.LoggaInButton.Location = new System.Drawing.Point(126, 193);
+            this.LoggaInButton.Location = new System.Drawing.Point(144, 193);
             this.LoggaInButton.Name = "LoggaInButton";
             this.LoggaInButton.Size = new System.Drawing.Size(85, 26);
             this.LoggaInButton.TabIndex = 3;
@@ -195,6 +209,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
+            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(524, 443);
+            this.panel1.TabIndex = 3;
+            // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Gainsboro;
@@ -210,18 +243,6 @@
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
-            // MobilLink
-            // 
-            this.MobilLink.AutoSize = true;
-            this.MobilLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MobilLink.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.MobilLink.Location = new System.Drawing.Point(162, 260);
-            this.MobilLink.Name = "MobilLink";
-            this.MobilLink.Size = new System.Drawing.Size(32, 13);
-            this.MobilLink.TabIndex = 14;
-            this.MobilLink.Text = "Mobil";
-            this.MobilLink.Click += new System.EventHandler(this.MobilLink_Click);
             // 
             // panel2
             // 
@@ -318,24 +339,21 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Lösenord:";
             // 
-            // pictureBox1
+            // minimeraButton
             // 
-            this.pictureBox1.Image = global::Grupp3___Förskolan_Drutten.Properties.Resources.Blådrutten;
-            this.pictureBox1.Location = new System.Drawing.Point(191, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 112);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.DruttenMeny1;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(524, 443);
-            this.panel1.TabIndex = 3;
+            this.minimeraButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.minimeraButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.minimeraButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.minimeraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimeraButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimeraButton.ForeColor = System.Drawing.Color.Black;
+            this.minimeraButton.Location = new System.Drawing.Point(728, 3);
+            this.minimeraButton.Name = "minimeraButton";
+            this.minimeraButton.Size = new System.Drawing.Size(24, 23);
+            this.minimeraButton.TabIndex = 30;
+            this.minimeraButton.Text = "-";
+            this.minimeraButton.UseVisualStyleBackColor = false;
+            this.minimeraButton.Click += new System.EventHandler(this.minimeraButton_Click);
             // 
             // Login
             // 
@@ -344,6 +362,7 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.minimeraButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
@@ -357,9 +376,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,6 +410,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label MobilLink;
+        private System.Windows.Forms.Button minimeraButton;
     }
 }
 

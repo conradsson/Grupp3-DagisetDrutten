@@ -21,14 +21,28 @@ namespace Grupp3___Förskolan_Drutten
         public Person aktuellPerson;
         public bool Inloggad = false;
 
-
+        
 
         //Kontaktar databasen.
         public Postgres()
         {
             conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=pgmvaru_g3;User Id=pgmvaru_g3;Password=gunga;Database=pgmvaru_g3;SslMode=Require;trustServerCertificate=true;Pooling=false");
-            conn.Open();
+
+            try
+            { 
+                conn.Open(); 
+            }
+            catch (NpgsqlException ex)
+            {
+                string meddelande = ex.Message;
+                if (meddelande.Contains("53300"))
+                {
+                    meddelande = "Kan inte kontakta databasen, vänligen försök igen lite senare.";
+                }
+                MessageBox.Show(meddelande);
+            }
             tabell = new DataTable();
+
         }
 
         //Test av fråga.
@@ -47,9 +61,17 @@ namespace Grupp3___Förskolan_Drutten
             }
             catch (NpgsqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                string meddelande = ex.Message;
+                if (meddelande.Contains("53300"))
+                {
+                    meddelande = "Kan inte kontakta databasen, vänligen försök igen lite senare.";
+                }
+                MessageBox.Show(meddelande);
+
+                
                 DataColumn c1 = new DataColumn("Error");
                 DataColumn c2 = new DataColumn("ErrorMeddelande");
+
 
                 c1.DataType = System.Type.GetType("System.Boolean");
                 c2.DataType = System.Type.GetType("System.String");
@@ -147,7 +169,6 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="barnid"></param>
         public void TaBortNärvaro(DateTime datum, int barnid)
         {
-            conn.Open();
             string meddelande;
             try
             {
@@ -176,10 +197,10 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         /// <param name="datum"></param>
         /// <param name="barnid"></param>
-        public void KontrolleraNärvaro(DateTime datum, int barnid)
+        public bool KontrolleraNärvaro(DateTime datum, int barnid)
         {
             string sql = "select * from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
-
+            bool finnsNärvaro = false;
             tabell.Clear();
             tabell = sqlFråga(sql);
             Närvaro narvaro = new Närvaro();
@@ -195,9 +216,16 @@ namespace Grupp3___Förskolan_Drutten
 
             if(narvaro.Datum == datum && narvaro.barnid == barnid)
             {
-                TaBortNärvaro(datum, barnid);
+                finnsNärvaro = true;
+                //TaBortNärvaro(datum, barnid);
             }
+            else
+            {
+                finnsNärvaro = false;
             }
+            
+            }
+            return finnsNärvaro;
         }
 
         /// <summary>
@@ -207,7 +235,6 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="barnid"></param>
         public void TaBortFrånvaro(DateTime datum, int barnid)
         {
-            conn.Open();
             string meddelande;
             try
             {
@@ -219,15 +246,15 @@ namespace Grupp3___Förskolan_Drutten
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Frånvaron är borttagen.";
+                //meddelande = "Frånvaron är borttagen.";
 
             }
             catch (NpgsqlException ex)
             {
                 meddelande = ex.Message;
-
+                System.Windows.Forms.MessageBox.Show(meddelande);
             }
-            System.Windows.Forms.MessageBox.Show(meddelande);
+            
             conn.Close();
         }
 
@@ -266,10 +293,10 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         /// <param name="datum"></param>
         /// <param name="barnid"></param>
-        public void KontrolleraFrånvaro(DateTime datum, int barnid)
+        public bool KontrolleraFrånvaro(DateTime datum, int barnid)
         {
             string sql = "select franvaro.datum, franvaro.barnid from dagis.franvaro where franvaro.datum = '" + datum + "' AND franvaro.barnid = '" + barnid + "';";
-
+            bool finnsFrånvaro = false;
             tabell.Clear();
             tabell = sqlFråga(sql);
             Frånvaro f = new Frånvaro();
@@ -281,9 +308,15 @@ namespace Grupp3___Förskolan_Drutten
 
                 if (f.Datum == datum && f.Barnid == barnid)
                 {
-                    TaBortFrånvaro(datum, barnid);
+                    finnsFrånvaro = true;
                 }
+                else
+                {
+                    finnsFrånvaro = false;
+                }
+                
             }
+            return finnsFrånvaro;
         }
 
         /// <summary>
@@ -310,7 +343,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Tiden är tillagd ";
+                //meddelande = "Tiden är tillagd ";
 
             }
             catch (NpgsqlException ex)
@@ -318,11 +351,12 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
                 if (meddelande.Contains("23505"))
                 {
-                    meddelande = "Det finns redan en tid registrerat detta datum. \n \n"
-                        + "Klicka på ett annat datum i kalendern och välj sedan detta datum igen \nom du vill uppdatera den redan befintliga tiden.";
+                    meddelande = "Det finns redan en tid registrerad detta datum "+ datum.ToString("yyyy-MM-dd") +". \n"
+                        + "Tiden för detta datum kommer inte att påverkas. \n\nTiden som blir meddelad gäller endast den/de övriga datum du har valt.\nVälj detta datum igen om du vill uppdatera den redan befintliga tiden.";
+                System.Windows.Forms.MessageBox.Show(meddelande); 
                 }
             }
-            System.Windows.Forms.MessageBox.Show(meddelande);
+           
             conn.Close();
         }
 
@@ -333,18 +367,19 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="barnid"></param>
         /// <param name="lamnas"></param>
         /// <param name="hamtas"></param>
-        public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas)
+        public void UppdateraTider(DateTime datum, int barnid, string lamnas, string hamtas, string hamtasAv)
         {
             string meddelande;
             try
             {
-                string sql = "update dagis.narvaro SET tid_lamnad = '" + lamnas + "', tid_hamtad ='" + hamtas + "' where barnid = '" + barnid +"' and datum = '" + datum + "';";
+                string sql = "update dagis.narvaro SET tid_lamnad = '" + lamnas + "', tid_hamtad ='" + hamtas + "', hamtas_av ='"+ hamtasAv +"' where barnid = '" + barnid +"' and datum = '" + datum + "';";
                    
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@datum", datum);
                 cmd.Parameters.AddWithValue("@barnid", barnid);
                 cmd.Parameters.AddWithValue("@tid_lamnad", lamnas);
                 cmd.Parameters.AddWithValue("@tid_hamtad", hamtas);
+                cmd.Parameters.AddWithValue("@hamtas_av", hamtasAv);
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
@@ -510,7 +545,7 @@ namespace Grupp3___Förskolan_Drutten
         public void MeddelaHämtning(int barnid, string hamtas, DateTime datum)
         {
             conn.Open();
-            string meddelande;
+            
             try
             {
                 string sql = "UPDATE dagis.narvaro SET hamtas_av = @hamtas_av"
@@ -523,14 +558,14 @@ namespace Grupp3___Förskolan_Drutten
                 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                meddelande = "Hämtningen är meddelad.";
+                //meddelande = "Hämtningen är meddelad.";
 
             }
             catch (NpgsqlException ex)
             {
-                meddelande = ex.Message;
+                MessageBox.Show(ex.Message);
             }
-            System.Windows.Forms.MessageBox.Show(meddelande);
+            
             conn.Close();
         }
 
@@ -570,6 +605,7 @@ namespace Grupp3___Förskolan_Drutten
                 }
         }
 
+       
         /// <summary>
         /// Hämtar ett barns registrerade närvarotider
         /// </summary>
@@ -585,18 +621,18 @@ namespace Grupp3___Förskolan_Drutten
             List<Närvaro> BarnTider = new List<Närvaro>();
             Närvaro närvaro;
 
-                foreach (DataRow rad in tabell.Rows)
-                {
-                    närvaro = new Närvaro();
+            foreach (DataRow rad in tabell.Rows)
+            {
+                närvaro = new Närvaro();
 
-                    närvaro.Datum = (DateTime)rad[0];
-                    närvaro.TidLämnad = rad[1].ToString();
-                    närvaro.TidHämtad = rad[2].ToString();
-                    närvaro.HämtasAv = rad[3].ToString();
+                närvaro.Datum = (DateTime)rad[0];
+                närvaro.TidLämnad = rad[1].ToString();
+                närvaro.TidHämtad = rad[2].ToString();
+                närvaro.HämtasAv = rad[3].ToString();
 
-                    BarnTider.Add(närvaro);
-                }
-            
+                BarnTider.Add(närvaro);
+            }
+
             return BarnTider;
 
         }
@@ -635,6 +671,7 @@ namespace Grupp3___Förskolan_Drutten
 
                         KontrolleraAnvändartyp();
                     }
+                   
                 }
                 else // Ingen användare hittad.
                 {
@@ -649,7 +686,8 @@ namespace Grupp3___Förskolan_Drutten
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
 
             }
-            dr.Close();
+             dr.Close();
+            conn.Close();
         }
 
 
@@ -719,7 +757,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 meddelande = ex.Message;
             }
-
+            conn.Close();
         }
 
         /// <summary>
@@ -816,6 +854,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel har uppstått: " + ex.Message);
             }
+            conn.Close();
         }
         /// <summary>
         /// Redigerar och uppdaterar informationsinlägg.
@@ -846,6 +885,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
+            conn.Close();
         }
         /// <summary>
         /// Tar bort informationsinlägg.
@@ -869,6 +909,7 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Ett fel uppstod: " + ex);
             }
+            conn.Close();
         }
 
         /// <summary>
@@ -911,6 +952,7 @@ namespace Grupp3___Förskolan_Drutten
             return Närvarolista;
             
         }
+
         /// <summary>
         /// Hämtar narvaron utifrån vald datum till närvarohanteringsfliken
         /// </summary>
@@ -1013,9 +1055,9 @@ namespace Grupp3___Förskolan_Drutten
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
 
-            //conn.Close();
+            conn.Close();
 
-            
+
         }
         /// <summary>
         /// Hämtar aktuella barn på inloggad förälder
@@ -1063,21 +1105,25 @@ namespace Grupp3___Förskolan_Drutten
                 while (dr.Read())
                 {
 
-
                     svar = (Int64)dr["antal"];
 
                     return svar;
-                }
+
+
+                   
+                } 
+                dr.Close();
             }
 
             catch (Exception ex)
             {
-
-                svar = Convert.ToInt32(ex.Message);
-                return svar;
+               
+                MessageBox.Show(ex.Message);
+                //svar = Convert.ToInt32(ex.Message);
+                //return svar;
             }
 
-            dr.Close();
+            
             conn.Close();
             return svar;
         }
@@ -1144,16 +1190,48 @@ namespace Grupp3___Förskolan_Drutten
 
                     return svar;
                 }
+                dr.Close();
             }
 
             catch (Exception ex)
             {
 
-                svar = Convert.ToInt32(ex.Message);
-                return svar;
+                MessageBox.Show(ex.Message);
             }
 
-            dr.Close();
+            
+            conn.Close();
+            return svar;
+        }
+        public Int64 HämtaAntalBarnEfterVarjeTimme(DateTime AktuelltDatum, int tid, int tid2)
+        {
+            Int64 svar = 0;
+
+            try
+            {
+                string sql = "SELECT COUNT(narvaro.tid_lamnad) as antal FROM dagis.narvaro WHERE datum =  ('" + AktuelltDatum + "') AND tid_lamnad BETWEEN '" + tid + "' AND '" + tid2 + "'";
+
+                cmd = new NpgsqlCommand(sql, conn); // Kör sql
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+
+
+                    svar = (Int64)dr["antal"];
+
+                    return svar;
+                }
+                dr.Close();
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
             conn.Close();
             return svar;
         }
@@ -1361,22 +1439,24 @@ namespace Grupp3___Förskolan_Drutten
 
             }
             return BarnNamn;
+
         }
         /// <summary>
         /// Uppdaterar barn på inloggad förälder.
         /// </summary>
-        public void UppdateraPerson(int id, string förnamn, string efternamn, string telefonnummer)
+        public void UppdateraPerson(int id, string förnamn, string efternamn, string telefonnummer,string användarnamn)
         {
 
             string meddelande;
             try
             {
-                string sql = "UPDATE dagis.person SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "', telefonnummer = '" + telefonnummer + "' where personid = '" + id + "';";
+                string sql = "UPDATE dagis.person SET förnamn = '" + förnamn + "', efternamn = '" + efternamn + "', telefonnummer = '" + telefonnummer + "', användarnamn = '" + användarnamn + "' where personid = '" + id + "';";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@förnamn", förnamn);
                 cmd.Parameters.AddWithValue("@efternamn", efternamn);
                 cmd.Parameters.AddWithValue("@telefonnummer", telefonnummer);
+                cmd.Parameters.AddWithValue("@användarnamn", användarnamn);
 
 
                 dr = cmd.ExecuteReader();
@@ -1389,6 +1469,7 @@ namespace Grupp3___Förskolan_Drutten
                 meddelande = ex.Message;
             }
             System.Windows.Forms.MessageBox.Show(meddelande);
+            conn.Close();
         }
         /// <summary>
         /// ///Uppdaterar databasen med ett barns närvarande för dagen.
@@ -1523,6 +1604,39 @@ namespace Grupp3___Förskolan_Drutten
             // Return char and concat substring.
             return char.ToLower(s[0]) + s.Substring(1);
         }
+
+        public void StängConnection()
+        {
+            conn.Close();
+        }
+
+        public void ValideraText(KeyPressEventArgs e)
+        {
+            
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 32 || e.KeyChar == 45)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Ange endast bokstäver.");
+            }
+        }
+
+        public void ValideraNummer(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || e.KeyChar ==45)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Ange endast siffror.");
+            }
+        }
+
     }
 
 }
