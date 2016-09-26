@@ -589,9 +589,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(30, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Välj dag:";
+            this.label3.Text = "Välj datum:";
             // 
             // label2
             // 
@@ -639,7 +639,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Red;
-            this.label36.Location = new System.Drawing.Point(95, 154);
+            this.label36.Location = new System.Drawing.Point(110, 154);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(20, 25);
             this.label36.TabIndex = 35;
@@ -1048,7 +1048,7 @@
             this.labelHjälpMeddelaFrånvaro.Size = new System.Drawing.Size(207, 104);
             this.labelHjälpMeddelaFrånvaro.TabIndex = 0;
             this.labelHjälpMeddelaFrånvaro.Text = "Hjälp.\r\n\r\nVälj barn i listan. Välj datum då du vill \r\nanmäla frånvaro. Välj Sjuk " +
-    "eller ledig följt\r\nav knappen meddela.\r\n\r\nDu kan se vilka tider du meddelat från" +
+    "eller Ledig följt\r\nav knappen meddela.\r\n\r\nDu kan se vilka tider du meddelat från" +
     "varo\r\ni listan uppe till höger.";
             this.labelHjälpMeddelaFrånvaro.Visible = false;
             // 
@@ -1156,9 +1156,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(30, 159);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.Size = new System.Drawing.Size(85, 16);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Välj dag:";
+            this.label7.Text = "Välj datum:";
             // 
             // label14
             // 
@@ -1215,7 +1215,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(95, 154);
+            this.label28.Location = new System.Drawing.Point(110, 154);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(20, 25);
             this.label28.TabIndex = 34;
