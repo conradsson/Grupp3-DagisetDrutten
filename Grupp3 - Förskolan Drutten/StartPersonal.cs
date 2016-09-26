@@ -465,6 +465,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
 
+
             }
             p.StängConnection();
         }
