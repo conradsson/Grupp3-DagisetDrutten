@@ -21,7 +21,7 @@ namespace Grupp3___Förskolan_Drutten
         public Person aktuellPerson;
         public bool Inloggad = false;
 
-
+        
 
         //Kontaktar databasen.
         public Postgres()
