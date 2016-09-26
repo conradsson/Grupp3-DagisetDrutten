@@ -120,13 +120,15 @@
   <data name="labelHjälpMeddelaTider.Text" xml:space="preserve">
     <value>Hjälp.
 
-Välj barn i listan. Välj datum för att lägga in
-ny tid eller uppdatera befintlig. I listan till
-höger syns nuvarande inlagda tider.
+Välj barn i listan. Välj datum för att lägga in ny tid eller 
+uppdatera befintlig. I listan till höger syns nuvarande 
+inlagda tider.
 
-Du kan även skriva in om någon annan än 
-du ska hämta barnen det datumet.
-Tryck uppdatera efteråt.</value>
+Du kan även skriva in om någon annan än du ska 
+hämta barnen det datumet. Tryck uppdatera efteråt.
+
+Du kan ange tider för flera dagar i veckan samtidigt
+genom att dra över datumen med muspekaren.</value>
   </data>
   <metadata name="TidLämnad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
