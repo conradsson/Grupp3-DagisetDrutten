@@ -905,9 +905,6 @@ namespace Grupp3___Förskolan_Drutten
         private void buttonSorteraKolumn_Click(object sender, EventArgs e)
         {
             
-
-
-
             //// Check which column is selected, otherwise set NewColumn to null.
             //DataGridViewColumn newColumn =
             //    dataGridViewDagensBarn.Columns.GetColumnCount(
