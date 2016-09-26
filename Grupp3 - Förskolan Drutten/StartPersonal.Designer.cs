@@ -101,8 +101,6 @@
             this.buttonVisaDiagram = new System.Windows.Forms.Button();
             this.chartBarnensTider = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.panelHjälpISökDatum = new System.Windows.Forms.Panel();
-            this.labelHjälpiSökDatum = new System.Windows.Forms.Label();
             this.buttonHjälpSökDatum = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -118,7 +116,11 @@
             this.FrånvarandeRadioButton = new System.Windows.Forms.RadioButton();
             this.NärvarandeRadioButton = new System.Windows.Forms.RadioButton();
             this.monthCalendar23INärvarohantering = new System.Windows.Forms.MonthCalendar();
+            this.panelHjälpISökDatum = new System.Windows.Forms.Panel();
+            this.labelHjälpiSökDatum = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panelHjälpiFramtidsÖversikt = new System.Windows.Forms.Panel();
+            this.labelHjälpiFramtidsÖversikt = new System.Windows.Forms.Label();
             this.buttonHjälpiFramtidsÖversikt = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -130,8 +132,6 @@
             this.dateTimePickerTill = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrån = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
-            this.panelHjälpiFramtidsÖversikt = new System.Windows.Forms.Panel();
-            this.labelHjälpiFramtidsÖversikt = new System.Windows.Forms.Label();
             this.MittKontoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panelHjälpiKontouppgifter = new System.Windows.Forms.Panel();
@@ -239,12 +239,12 @@
             this.panelHjälpiNärvarohantering.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarnensTider)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.panelHjälpISökDatum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvarandeINärvarohantering)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNärvarandeINärvarohantering)).BeginInit();
+            this.panelHjälpISökDatum.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllaFramtidaBarn)).BeginInit();
             this.panelHjälpiFramtidsÖversikt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllaFramtidaBarn)).BeginInit();
             this.MittKontoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panelHjälpiKontouppgifter.SuspendLayout();
@@ -1061,6 +1061,7 @@
             this.tabPage5.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
             this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.panelHjälpISökDatum);
             this.tabPage5.Controls.Add(this.buttonHjälpSökDatum);
             this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Controls.Add(this.label8);
@@ -1076,7 +1077,6 @@
             this.tabPage5.Controls.Add(this.FrånvarandeRadioButton);
             this.tabPage5.Controls.Add(this.NärvarandeRadioButton);
             this.tabPage5.Controls.Add(this.monthCalendar23INärvarohantering);
-            this.tabPage5.Controls.Add(this.panelHjälpISökDatum);
             this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -1085,32 +1085,6 @@
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Sök datum";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // panelHjälpISökDatum
-            // 
-            this.panelHjälpISökDatum.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panelHjälpISökDatum.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
-            this.panelHjälpISökDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelHjälpISökDatum.Controls.Add(this.labelHjälpiSökDatum);
-            this.panelHjälpISökDatum.Location = new System.Drawing.Point(491, 23);
-            this.panelHjälpISökDatum.Name = "panelHjälpISökDatum";
-            this.panelHjälpISökDatum.Size = new System.Drawing.Size(222, 136);
-            this.panelHjälpISökDatum.TabIndex = 38;
-            this.panelHjälpISökDatum.Visible = false;
-            this.panelHjälpISökDatum.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHjälpISökDatum_Paint);
-            // 
-            // labelHjälpiSökDatum
-            // 
-            this.labelHjälpiSökDatum.AutoSize = true;
-            this.labelHjälpiSökDatum.BackColor = System.Drawing.Color.Transparent;
-            this.labelHjälpiSökDatum.Location = new System.Drawing.Point(4, 10);
-            this.labelHjälpiSökDatum.Name = "labelHjälpiSökDatum";
-            this.labelHjälpiSökDatum.Size = new System.Drawing.Size(215, 104);
-            this.labelHjälpiSökDatum.TabIndex = 0;
-            this.labelHjälpiSökDatum.Text = "Hjälp.\r\n\r\nVänligen välj datum och sedan om du vill se\r\nnärvarande eller frånvaran" +
-    "de barn. Tryck på\r\nsök valt datum.\r\n\r\nOm du vill skriva ut listan så tryck på \r\n" +
-    "skrivut ikonen.";
-            this.labelHjälpiSökDatum.Visible = false;
             // 
             // buttonHjälpSökDatum
             // 
@@ -1296,6 +1270,32 @@
             this.monthCalendar23INärvarohantering.TabIndex = 13;
             this.monthCalendar23INärvarohantering.TodayDate = new System.DateTime(2016, 9, 21, 0, 0, 0, 0);
             // 
+            // panelHjälpISökDatum
+            // 
+            this.panelHjälpISökDatum.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpISökDatum.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpISökDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpISökDatum.Controls.Add(this.labelHjälpiSökDatum);
+            this.panelHjälpISökDatum.Location = new System.Drawing.Point(491, 23);
+            this.panelHjälpISökDatum.Name = "panelHjälpISökDatum";
+            this.panelHjälpISökDatum.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpISökDatum.TabIndex = 38;
+            this.panelHjälpISökDatum.Visible = false;
+            this.panelHjälpISökDatum.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHjälpISökDatum_Paint);
+            // 
+            // labelHjälpiSökDatum
+            // 
+            this.labelHjälpiSökDatum.AutoSize = true;
+            this.labelHjälpiSökDatum.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpiSökDatum.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpiSökDatum.Name = "labelHjälpiSökDatum";
+            this.labelHjälpiSökDatum.Size = new System.Drawing.Size(215, 104);
+            this.labelHjälpiSökDatum.TabIndex = 0;
+            this.labelHjälpiSökDatum.Text = "Hjälp.\r\n\r\nVänligen välj datum och sedan om du vill se\r\nnärvarande eller frånvaran" +
+    "de barn. Tryck på\r\nsök valt datum.\r\n\r\nOm du vill skriva ut listan så tryck på \r\n" +
+    "skrivut ikonen.";
+            this.labelHjälpiSökDatum.Visible = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
@@ -1319,6 +1319,30 @@
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Framtidsöversikt";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panelHjälpiFramtidsÖversikt
+            // 
+            this.panelHjälpiFramtidsÖversikt.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelHjälpiFramtidsÖversikt.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
+            this.panelHjälpiFramtidsÖversikt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHjälpiFramtidsÖversikt.Controls.Add(this.labelHjälpiFramtidsÖversikt);
+            this.panelHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(491, 23);
+            this.panelHjälpiFramtidsÖversikt.Name = "panelHjälpiFramtidsÖversikt";
+            this.panelHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(222, 136);
+            this.panelHjälpiFramtidsÖversikt.TabIndex = 41;
+            this.panelHjälpiFramtidsÖversikt.Visible = false;
+            // 
+            // labelHjälpiFramtidsÖversikt
+            // 
+            this.labelHjälpiFramtidsÖversikt.AutoSize = true;
+            this.labelHjälpiFramtidsÖversikt.BackColor = System.Drawing.Color.Transparent;
+            this.labelHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(4, 10);
+            this.labelHjälpiFramtidsÖversikt.Name = "labelHjälpiFramtidsÖversikt";
+            this.labelHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(193, 65);
+            this.labelHjälpiFramtidsÖversikt.TabIndex = 0;
+            this.labelHjälpiFramtidsÖversikt.Text = "Hjälp.\r\n\r\nVänligen välj datum och tryck sedan på\r\nsök antal barn för att se antal" +
+    "\r\nsamt alla närvarande barn.\r\n";
+            this.labelHjälpiFramtidsÖversikt.Visible = false;
             // 
             // buttonHjälpiFramtidsÖversikt
             // 
@@ -1449,30 +1473,6 @@
             this.button4.Text = "Sök antal barn";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.buttonSökAntalFramtidaBarn_Click);
-            // 
-            // panelHjälpiFramtidsÖversikt
-            // 
-            this.panelHjälpiFramtidsÖversikt.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panelHjälpiFramtidsÖversikt.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
-            this.panelHjälpiFramtidsÖversikt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelHjälpiFramtidsÖversikt.Controls.Add(this.labelHjälpiFramtidsÖversikt);
-            this.panelHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(491, 23);
-            this.panelHjälpiFramtidsÖversikt.Name = "panelHjälpiFramtidsÖversikt";
-            this.panelHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(222, 136);
-            this.panelHjälpiFramtidsÖversikt.TabIndex = 41;
-            this.panelHjälpiFramtidsÖversikt.Visible = false;
-            // 
-            // labelHjälpiFramtidsÖversikt
-            // 
-            this.labelHjälpiFramtidsÖversikt.AutoSize = true;
-            this.labelHjälpiFramtidsÖversikt.BackColor = System.Drawing.Color.Transparent;
-            this.labelHjälpiFramtidsÖversikt.Location = new System.Drawing.Point(4, 10);
-            this.labelHjälpiFramtidsÖversikt.Name = "labelHjälpiFramtidsÖversikt";
-            this.labelHjälpiFramtidsÖversikt.Size = new System.Drawing.Size(193, 65);
-            this.labelHjälpiFramtidsÖversikt.TabIndex = 0;
-            this.labelHjälpiFramtidsÖversikt.Text = "Hjälp.\r\n\r\nVänligen välj datum och tryck sedan på\r\nsök antal barn för att se antal" +
-    "\r\nsamt alla närvarande barn.\r\n";
-            this.labelHjälpiFramtidsÖversikt.Visible = false;
             // 
             // MittKontoTabControl
             // 
@@ -2381,15 +2381,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartBarnensTider)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.panelHjälpISökDatum.ResumeLayout(false);
-            this.panelHjälpISökDatum.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrånvarandeINärvarohantering)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNärvarandeINärvarohantering)).EndInit();
+            this.panelHjälpISökDatum.ResumeLayout(false);
+            this.panelHjälpISökDatum.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllaFramtidaBarn)).EndInit();
             this.panelHjälpiFramtidsÖversikt.ResumeLayout(false);
             this.panelHjälpiFramtidsÖversikt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllaFramtidaBarn)).EndInit();
             this.MittKontoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
