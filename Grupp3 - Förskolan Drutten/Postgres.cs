@@ -605,21 +605,7 @@ namespace Grupp3___Förskolan_Drutten
                 }
         }
 
-        public string HämtaHämtning(DateTime datum, int barnid)
-        {
-            string sql = "select narvaro.hamtas_av from dagis.narvaro where narvaro.datum = '" + datum + "' AND narvaro.barnid = '" + barnid + "';";
-            string hämtasAv;
-            tabell.Clear();
-            tabell = sqlFråga(sql);
-            Närvaro narvaro = new Närvaro();
-
-            foreach (DataRow rad in tabell.Rows)
-            {
-                narvaro.HämtasAv = rad[0].ToString();
-            }
-            hämtasAv = narvaro.HämtasAv;
-            return hämtasAv;
-        }
+       
         /// <summary>
         /// Hämtar ett barns registrerade närvarotider
         /// </summary>
@@ -635,18 +621,18 @@ namespace Grupp3___Förskolan_Drutten
             List<Närvaro> BarnTider = new List<Närvaro>();
             Närvaro närvaro;
 
-                foreach (DataRow rad in tabell.Rows)
-                {
-                    närvaro = new Närvaro();
+            foreach (DataRow rad in tabell.Rows)
+            {
+                närvaro = new Närvaro();
 
-                    närvaro.Datum = (DateTime)rad[0];
-                    närvaro.TidLämnad = rad[1].ToString();
-                    närvaro.TidHämtad = rad[2].ToString();
-                    närvaro.HämtasAv = rad[3].ToString();
+                närvaro.Datum = (DateTime)rad[0];
+                närvaro.TidLämnad = rad[1].ToString();
+                närvaro.TidHämtad = rad[2].ToString();
+                närvaro.HämtasAv = rad[3].ToString();
 
-                    BarnTider.Add(närvaro);
-                }
-            
+                BarnTider.Add(närvaro);
+            }
+
             return BarnTider;
 
         }
