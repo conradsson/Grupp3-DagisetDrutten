@@ -1448,7 +1448,6 @@
             this.tabPage2.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.BackGroundVitdruttis;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.panelHjälpiFramtidsÖversikt);
             this.tabPage2.Controls.Add(this.buttonHjälpiFramtidsÖversikt);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.label20);
@@ -1460,6 +1459,7 @@
             this.tabPage2.Controls.Add(this.dateTimePickerTill);
             this.tabPage2.Controls.Add(this.dateTimePickerFrån);
             this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.panelHjälpiFramtidsÖversikt);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Size = new System.Drawing.Size(740, 363);
@@ -1553,7 +1553,7 @@
             // 
             this.labelHurMångaBarnUnderSöktaDatum.AutoSize = true;
             this.labelHurMångaBarnUnderSöktaDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHurMångaBarnUnderSöktaDatum.Location = new System.Drawing.Point(417, 92);
+            this.labelHurMångaBarnUnderSöktaDatum.Location = new System.Drawing.Point(490, 92);
             this.labelHurMångaBarnUnderSöktaDatum.Name = "labelHurMångaBarnUnderSöktaDatum";
             this.labelHurMångaBarnUnderSöktaDatum.Size = new System.Drawing.Size(61, 18);
             this.labelHurMångaBarnUnderSöktaDatum.TabIndex = 9;
@@ -2237,7 +2237,7 @@
             // avdelningsidDataGridViewTextBoxColumn
             // 
             this.avdelningsidDataGridViewTextBoxColumn.DataPropertyName = "Avdelningsid";
-            this.avdelningsidDataGridViewTextBoxColumn.HeaderText = "Avdelningsid";
+            this.avdelningsidDataGridViewTextBoxColumn.HeaderText = "Avdelning";
             this.avdelningsidDataGridViewTextBoxColumn.Name = "avdelningsidDataGridViewTextBoxColumn";
             this.avdelningsidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -2314,8 +2314,9 @@
             // 
             // närvarande
             // 
-            this.närvarande.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.närvarande.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.närvarande.DataPropertyName = "närvarande";
+            this.närvarande.FillWeight = 55F;
             this.närvarande.HeaderText = "Närvarande";
             this.närvarande.Name = "närvarande";
             this.närvarande.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -2323,8 +2324,9 @@
             // 
             // hämtad
             // 
-            this.hämtad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.hämtad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.hämtad.DataPropertyName = "hämtad";
+            this.hämtad.FillWeight = 55F;
             this.hämtad.HeaderText = "Hämtad";
             this.hämtad.Name = "hämtad";
             this.hämtad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -2512,12 +2514,6 @@
         private System.Windows.Forms.BindingSource närvaroBindingSource;
         private System.Windows.Forms.Label labelAntalBarnIdag;
         private System.Windows.Forms.BindingSource barnBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn förnamnDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn efternamnDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn avdelningsidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn allergierDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn annatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn antalDagarDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource närvaroBindingSource1;
         private System.Windows.Forms.Button buttonUppdateraNärvaro;
         private System.Windows.Forms.Panel panelskrivut;
@@ -2599,6 +2595,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxFörnamnMittkonto;
         private System.Windows.Forms.Button minimeraButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn förnamnDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn efternamnDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn avdelningsidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn allergierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn annatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn antalDagarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barnid;
         private System.Windows.Forms.DataGridViewTextBoxColumn förnamnDataGridViewTextBoxColumn1;

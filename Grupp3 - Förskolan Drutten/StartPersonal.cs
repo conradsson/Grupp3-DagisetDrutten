@@ -465,6 +465,7 @@ namespace Grupp3___Förskolan_Drutten
 
                 textBoxSkrivetAv.Text = AktuelltInlägg.SkrivetAv;
 
+
             }
             p.StängConnection();
         }
@@ -575,14 +576,14 @@ namespace Grupp3___Förskolan_Drutten
 
                 MessageBox.Show("Datumet FRÅN måste ligga före i tiden än datumet TILL.");
                 dataGridViewAllaFramtidaBarn.DataSource = null;
-                labelHurMångaBarnUnderSöktaDatum.Text = p1.HämtaFramtidaTider(dateTimePickerFrån.Value, dateTimePickerTill.Value).ToString() + " Barn";
+                labelHurMångaBarnUnderSöktaDatum.Text = p1.HämtaFramtidaTider(dateTimePickerFrån.Value, dateTimePickerTill.Value).ToString() + " Tillfällen";
             }
             else
             {
             labelTotaltAntalBarn.Visible = true;
             labelHurMångaBarnUnderSöktaDatum.Visible = true;
-            labelTotaltAntalBarn.Text = "Totalt antal barn på förskolan mellan " + dateTimePickerFrån.Value.ToString("yy-MM-dd") + " och " + dateTimePickerTill.Value.ToString("yy-MM-dd") + ": ";
-            labelHurMångaBarnUnderSöktaDatum.Text = p1.HämtaFramtidaTider(dateTimePickerFrån.Value, dateTimePickerTill.Value).ToString() + " Barn";
+            labelTotaltAntalBarn.Text = "Totalt antal tillfällen barn är på förskolan mellan " + dateTimePickerFrån.Value.ToString("yy-MM-dd") + " och " + dateTimePickerTill.Value.ToString("yy-MM-dd") + ": ";
+            labelHurMångaBarnUnderSöktaDatum.Text = p1.HämtaFramtidaTider(dateTimePickerFrån.Value, dateTimePickerTill.Value).ToString() + " Tillfällen";
 
             dataGridViewAllaFramtidaBarn.DataSource = p.HämtaFramtidaBarn(dateTimePickerFrån.Value, dateTimePickerTill.Value);
 
