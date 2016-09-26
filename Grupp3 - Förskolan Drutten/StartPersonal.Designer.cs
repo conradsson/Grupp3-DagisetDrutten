@@ -2314,8 +2314,9 @@
             // 
             // närvarande
             // 
-            this.närvarande.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.närvarande.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.närvarande.DataPropertyName = "närvarande";
+            this.närvarande.FillWeight = 55F;
             this.närvarande.HeaderText = "Närvarande";
             this.närvarande.Name = "närvarande";
             this.närvarande.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -2323,8 +2324,9 @@
             // 
             // hämtad
             // 
-            this.hämtad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.hämtad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.hämtad.DataPropertyName = "hämtad";
+            this.hämtad.FillWeight = 55F;
             this.hämtad.HeaderText = "Hämtad";
             this.hämtad.Name = "hämtad";
             this.hämtad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
