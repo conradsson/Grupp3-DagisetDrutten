@@ -14,6 +14,8 @@ namespace Grupp3___Förskolan_Drutten
     {
         Person AktuellPerson = new Person();
         Postgres p = new Postgres();
+        DateTime idag = DateTime.Today;
+
 
         public StartPersonal(Person aktuellperson)
         {
@@ -24,7 +26,6 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson = aktuellperson;
 
             Postgres p = new Postgres();
-            DateTime idag = DateTime.Today;
             dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(idag);
             dataGridViewDagensBarn.Columns[1].Visible = false;
 
@@ -135,7 +136,7 @@ namespace Grupp3___Förskolan_Drutten
 
             Postgres p = new Postgres();
 
-            dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(DateTime.Today);
+            dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(idag);
             dataGridViewDagensBarn.Columns[1].Visible = false;
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
 
@@ -250,6 +251,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             dataGridViewNärvarandeINärvarohantering.DataSource = null;
             dataGridViewFrånvarandeINärvarohantering.DataSource = null;
+            
 
           
 
@@ -259,6 +261,8 @@ namespace Grupp3___Förskolan_Drutten
             }
             else
             {
+                    button1.Enabled = true;
+
             if (NärvarandeRadioButton.Checked)
             {
                 label15.Text = "Närvarande:";
@@ -497,8 +501,8 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p1 = new Postgres();
                 Postgres p2 = new Postgres();
 
-                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p1.HämtaDagensTider(DateTime.Today, kollaTid++));
-                this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p2.HämtaDagensTiderHämtas(DateTime.Today, kollaTid2++));
+                this.chartBarnensTider.Series["Barn lämnas"].Points.AddXY(tid++, p1.HämtaDagensTider(idag, kollaTid++));
+                this.chartBarnensTider.Series["Barn hämtas"].Points.AddXY(tid2++, p2.HämtaDagensTiderHämtas(idag, kollaTid2++));
 
                 p1.StängConnection();
                 p2.StängConnection();
