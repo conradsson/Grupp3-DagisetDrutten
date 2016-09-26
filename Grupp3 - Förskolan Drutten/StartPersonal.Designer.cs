@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPersonal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kontoTypLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.informationTabControl = new System.Windows.Forms.TabControl();
@@ -609,10 +609,10 @@
             this.panel1.Controls.Add(this.mittKontoButton);
             this.panel1.Controls.Add(this.inloggadButton);
             this.panel1.Controls.Add(this.loggaUtButton);
-            this.panel1.Controls.Add(this.NärvarotabControl);
-            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Controls.Add(this.informationTabControl);
             this.panel1.Controls.Add(this.BarntabControl);
+            this.panel1.Controls.Add(this.NärvarotabControl);
+            this.panel1.Controls.Add(this.MittKontoTabControl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 435);
@@ -1107,14 +1107,14 @@
             // 
             this.dataGridViewDagensBarn.AllowUserToOrderColumns = true;
             this.dataGridViewDagensBarn.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewDagensBarn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDagensBarn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewDagensBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDagensBarn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Datum,
@@ -1133,7 +1133,6 @@
             this.dataGridViewDagensBarn.Size = new System.Drawing.Size(718, 240);
             this.dataGridViewDagensBarn.TabIndex = 10;
             this.dataGridViewDagensBarn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDagensBarn_CellClick);
-            this.dataGridViewDagensBarn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDagensBarn_CellContentClick);
             this.dataGridViewDagensBarn.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewDagensBarn_ColumnHeaderMouseClick);
             this.dataGridViewDagensBarn.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridViewDagensBarn_DataBindingComplete);
             // 
@@ -1271,29 +1270,29 @@
             // 
             // chartBarnensTider
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartBarnensTider.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartBarnensTider.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chartBarnensTider.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartBarnensTider.Legends.Add(legend4);
             this.chartBarnensTider.Location = new System.Drawing.Point(-24, 176);
             this.chartBarnensTider.Name = "chartBarnensTider";
             this.chartBarnensTider.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Barn lämnas";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Barn hämtas";
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Color = System.Drawing.Color.DodgerBlue;
-            series3.Legend = "Legend1";
-            series3.Name = "Antal barn";
-            series3.YValuesPerPoint = 2;
-            this.chartBarnensTider.Series.Add(series1);
-            this.chartBarnensTider.Series.Add(series2);
-            this.chartBarnensTider.Series.Add(series3);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Barn lämnas";
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Barn hämtas";
+            series12.BorderWidth = 2;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Color = System.Drawing.Color.DodgerBlue;
+            series12.Legend = "Legend1";
+            series12.Name = "Antal barn";
+            series12.YValuesPerPoint = 2;
+            this.chartBarnensTider.Series.Add(series10);
+            this.chartBarnensTider.Series.Add(series11);
+            this.chartBarnensTider.Series.Add(series12);
             this.chartBarnensTider.Size = new System.Drawing.Size(779, 184);
             this.chartBarnensTider.TabIndex = 11;
             this.chartBarnensTider.Text = "chart1";
@@ -1405,14 +1404,14 @@
             // dataGridViewFrånvarandeINärvarohantering
             // 
             this.dataGridViewFrånvarandeINärvarohantering.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewFrånvarandeINärvarohantering.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewFrånvarandeINärvarohantering.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewFrånvarandeINärvarohantering.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFrånvarandeINärvarohantering.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.datumDataGridViewTextBoxColumn3,
@@ -1511,14 +1510,14 @@
             // dataGridViewNärvarandeINärvarohantering
             // 
             this.dataGridViewNärvarandeINärvarohantering.AutoGenerateColumns = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewNärvarandeINärvarohantering.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewNärvarandeINärvarohantering.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewNärvarandeINärvarohantering.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewNärvarandeINärvarohantering.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.datumDataGridViewTextBoxColumn,
@@ -1731,14 +1730,14 @@
             // dataGridViewAllaFramtidaBarn
             // 
             this.dataGridViewAllaFramtidaBarn.AutoGenerateColumns = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAllaFramtidaBarn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAllaFramtidaBarn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewAllaFramtidaBarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAllaFramtidaBarn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.förnamnDataGridViewTextBoxColumn2,
@@ -2097,6 +2096,7 @@
             this.textBoxTelefonnrMittkonto.Name = "textBoxTelefonnrMittkonto";
             this.textBoxTelefonnrMittkonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxTelefonnrMittkonto.TabIndex = 6;
+            this.textBoxTelefonnrMittkonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefonnrMittkonto_KeyPress);
             // 
             // label4
             // 
@@ -2113,6 +2113,7 @@
             this.textBoxEfternamnMittkonto.Name = "textBoxEfternamnMittkonto";
             this.textBoxEfternamnMittkonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxEfternamnMittkonto.TabIndex = 2;
+            this.textBoxEfternamnMittkonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEfternamnMittkonto_KeyPress);
             // 
             // label3
             // 
@@ -2129,6 +2130,7 @@
             this.textBoxFörnamnMittkonto.Name = "textBoxFörnamnMittkonto";
             this.textBoxFörnamnMittkonto.Size = new System.Drawing.Size(100, 20);
             this.textBoxFörnamnMittkonto.TabIndex = 0;
+            this.textBoxFörnamnMittkonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFörnamnMittkonto_KeyPress);
             // 
             // panelskrivut
             // 

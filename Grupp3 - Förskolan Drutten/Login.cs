@@ -106,5 +106,12 @@ namespace Grupp3___Förskolan_Drutten
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void andvandarnamnTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Postgres p = new Postgres();
+            p.ValideraText(e);
+            p.StängConnection();
+        }
     }
 }
