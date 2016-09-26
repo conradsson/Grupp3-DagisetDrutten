@@ -576,7 +576,9 @@ namespace Grupp3___Förskolan_Drutten
 
                 MessageBox.Show("Datumet FRÅN måste ligga före i tiden än datumet TILL.");
                 dataGridViewAllaFramtidaBarn.DataSource = null;
-                labelHurMångaBarnUnderSöktaDatum.Text = p1.HämtaFramtidaTider(dateTimePickerFrån.Value, dateTimePickerTill.Value).ToString() + " Tillfällen";
+                labelHurMångaBarnUnderSöktaDatum.Visible = false;
+                labelTotaltAntalBarn.Visible = false;
+
             }
             else
             {

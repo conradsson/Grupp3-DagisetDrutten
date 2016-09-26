@@ -260,7 +260,7 @@ namespace Grupp3___Förskolan_Drutten
         {
             Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
             DateTime datum = monthCalendar3.SelectionStart;
-            DateTime datummetod = DateTime.Today;
+            
             int barnid = aktuelltbarn.Barnid;
             string från1 = comboBoxFrån1.Text;
             string från2 = comboBoxFrån2.Text;
@@ -269,10 +269,10 @@ namespace Grupp3___Förskolan_Drutten
             string till1 = comboBoxTill1.Text;
             string till2 = comboBoxTill2.Text;
             string hämtas = till1 + ":" + till2;
-            DateTime dagensDatum = DateTime.Today;
+            
             string hamtas = textBoxHämtasAv1.Text;
 
-            if (datum < dagensDatum)
+            if (datum < idag)
             {
                 MessageBox.Show("Du kan tyvärr inte lägga in tider som är före dagens datum. \nVänligen välj ett annat datum.");
             }
@@ -344,54 +344,16 @@ namespace Grupp3___Förskolan_Drutten
 
                                Postgres po = new Postgres();
                                po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
-
                            }
-                    
-
-                } MessageBox.Show("Tiden är meddelad.");
-
-                //
-                //{
-                //    DialogResult result = MessageBox.Show("Det finns frånvaro meddelad under detta/dessa datum! \n\nOm du trycker på OK meddelas tiden/tiderna och frånvaron tas bort. \nOm du trycker på AVBRYT meddelas inte tiden/tiderna och frånvaron kvarstår.", "Meddela tid", MessageBoxButtons.OKCancel);
-                //    if (result == DialogResult.OK)
-                //    {
-                //        for (int i = 0; i <= end.Subtract(start).Days; i++)
-                //        {
-                //            datumet = start.AddDays(i).ToString("yyyy-MM-dd");
-                //             Postgres p = new Postgres();
-                //            p.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
-
-                //            Postgres po = new Postgres();
-                //            po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
-
-                //            Postgres p4 = new Postgres();
-                //            p4.TaBortFrånvaro(Convert.ToDateTime(datumet), barnid);
-                //        }
-                //        MessageBox.Show("Tiden är meddelad och frånvaron är borttagen.");
-                //    }
-
-                //}
-                //else
-                //{
-
-                //    for (int i = 0; i <= end.Subtract(start).Days; i++)
-                //    {
-                //            datumet = start.AddDays(i).ToString("yyyy-MM-dd");
-                //            Postgres p9 = new Postgres();
-                //            p9.LäggTillTid(Convert.ToDateTime(datumet), barnid, lämnas, hämtas);
-
-                //            Postgres po = new Postgres();
-                //            po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
-                //    }
-                //    MessageBox.Show("Tiden är meddelad.");
-                //}
-                Postgres p1 = new Postgres();
+                }
+                MessageBox.Show("Tiden är meddelad.");
+          
                 Postgres p2 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
-                dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
+                dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, idag);
                 Postgres p3 = new Postgres();
                 dataGridViewMeddelaFrånvaro.DataSource = null;
-                dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid, datummetod);
+                dataGridViewMeddelaFrånvaro.DataSource = p3.HämtaBarnsFrånvaro(aktuelltbarn.Barnid, idag);
             }
             MetodHämtaBarnetsTid(datum);
             comboBoxFrån1.Text = "hh";
@@ -521,7 +483,7 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 int id = aktuelltbarn.Barnid;
                 DateTime datum = monthCalendar3.SelectionStart;
-                DateTime datummetod = DateTime.Today;
+               
                 string från1 = comboBoxUppdateraFrån1.Text;
                 string från2 = comboBoxUppdateraFrån2.Text;
                 string lamnas = från1 + ":" + från2;
@@ -557,7 +519,7 @@ namespace Grupp3___Förskolan_Drutten
                     
                     Postgres p2 = new Postgres();
                     dataGridViewTiderBarn.DataSource = null;
-                    dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
+                    dataGridViewTiderBarn.DataSource = p2.HämtaBarnetsTider(aktuelltbarn.Barnid, idag);
                 }
 
             }
@@ -607,12 +569,12 @@ namespace Grupp3___Förskolan_Drutten
                 Postgres p = new Postgres();
                 int id = aktuelltbarn.Barnid;
                 DateTime datum = monthCalendar2.SelectionStart;
-                DateTime datummetod = DateTime.Today;
+                
                 bool sjuk;
                 bool ledig;
                 bool närvaro;
 
-                if (datum < datummetod)
+                if (datum < idag)
                 {
                     MessageBox.Show("Du kan tyvärr inte meddela frånvaro för en dag som är före dagens datum. \nVänligen välj ett annat datum.");
                 }

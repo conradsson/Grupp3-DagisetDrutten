@@ -128,17 +128,6 @@ eller endast personal.
 
 Du kan även redigera och ta bort inlägg.</value>
   </data>
-  <data name="labelHjälpiNärvarohantering.Text" xml:space="preserve">
-    <value>Hjälp.
-
-På denna sida ser du barnens närvaro för
-idag. Tryck på närvarande/hämtad och 
-sedan på Uppdatera-knappen.
-
-Tryck på Visa diagram om du vill ha en 
-översikt över barnens tider. Du kan även
-dölja diagrammet.</value>
-  </data>
   <metadata name="Datum.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -166,6 +155,17 @@ dölja diagrammet.</value>
   <metadata name="närvaroBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>431, 17</value>
   </metadata>
+  <data name="labelHjälpiNärvarohantering.Text" xml:space="preserve">
+    <value>Hjälp.
+
+På denna sida ser du barnens närvaro för
+idag. Tryck på närvarande/hämtad och 
+sedan på Uppdatera-knappen.
+
+Tryck på Visa diagram om du vill ha en 
+översikt över barnens tider. Du kan även
+dölja diagrammet.</value>
+  </data>
   <metadata name="frånvaroBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>750, 17</value>
   </metadata>
