@@ -696,31 +696,41 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         public void KontrolleraAnvändartyp()
         {
-            Inloggad = true;
+            if (aktuellPerson.Inloggad == false)
+            {
+                aktuellPerson.Inloggad = true;
 
-            if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
-            {
-                
-                StartFP fp = new StartFP(aktuellPerson);
-                fp.Show();
-            }
-            else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
-            {
-                
-                StartForalder f = new StartForalder(aktuellPerson);
-                f.Show();
-            }
-            else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
-            {
-                
-                StartPersonal p = new StartPersonal(aktuellPerson);
-                p.Show();
 
+
+                if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
+                {
+
+                    StartFP fp = new StartFP(aktuellPerson);
+                    fp.Show();
+                }
+                else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
+                {
+
+                    StartForalder f = new StartForalder(aktuellPerson);
+                    f.Show();
+                }
+                else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
+                {
+
+                    StartPersonal p = new StartPersonal(aktuellPerson);
+                    p.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
+                }
             }
-            else
+            else  // Om användarkontot redan är inloggad.
             {
-                MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
+                MessageBox.Show("Användaren är redan inloggad.");
             }
+
         }
         /// <summary>
         /// Lätt-krypterar lösenordet. Används i HämtaAnvändare();

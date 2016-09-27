@@ -177,6 +177,7 @@ namespace Grupp3___Förskolan_Drutten
             DialogResult result = MessageBox.Show("Är du säker på att du vill logga ut?", "Logga ut", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                AktuellPerson.Inloggad = false;
                 this.Close();
                 new Login().Show();
             }
@@ -241,6 +242,7 @@ namespace Grupp3___Förskolan_Drutten
             DialogResult result = MessageBox.Show("Är du säker på att du vill avsluta? ", "Avsluta", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                AktuellPerson.Inloggad = false;
                 Application.Exit();
             }
         }
