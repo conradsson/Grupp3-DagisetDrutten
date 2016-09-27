@@ -26,6 +26,8 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson = aktuellperson;
 
             Postgres p = new Postgres();
+            Postgres p1 = new Postgres();
+
             dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(idag);
             dataGridViewDagensBarn.Columns[1].Visible = false;
 
@@ -37,9 +39,11 @@ namespace Grupp3___Förskolan_Drutten
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
 
+            p1.UppdateraStatusPåInlogg(aktuellperson.Inloggad, aktuellperson.Personid);
+            Login.ActiveForm.Hide();
         }
 
-        // Knapp Effekter
+        // Knapp Effekter 
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
@@ -177,6 +181,10 @@ namespace Grupp3___Förskolan_Drutten
             DialogResult result = MessageBox.Show("Är du säker på att du vill logga ut?", "Logga ut", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                Postgres p = new Postgres();
+
+                AktuellPerson.Inloggad = false;
+                p.UppdateraStatusPåInlogg(AktuellPerson.Inloggad, AktuellPerson.Personid);
                 this.Close();
                 new Login().Show();
             }
@@ -241,11 +249,13 @@ namespace Grupp3___Förskolan_Drutten
             DialogResult result = MessageBox.Show("Är du säker på att du vill avsluta? ", "Avsluta", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                Postgres p = new Postgres();
+
+                AktuellPerson.Inloggad = false;
+                p.UppdateraStatusPåInlogg(AktuellPerson.Inloggad, AktuellPerson.Personid);
                 Application.Exit();
             }
         }
-
-
 
         private void buttonSökValtDatumINärvarohantering_Click(object sender, EventArgs e)
         {
@@ -351,9 +361,13 @@ namespace Grupp3___Förskolan_Drutten
         {
             Postgres p1 = new Postgres();
             Postgres p2 = new Postgres();
+            string rubrik = textBoxNyRubrik.Text;
+            string informationen = richTextBoxNyText.Text;
+            int personid = AktuellPerson.Personid;
             string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            DateTime tidjustnu = DateTime.Now;
 
-            p1.NyttInlägg(DateTime.Now.ToShortDateString(), textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn,EndastFörPersonalCheckBox.Checked);
+            p1.NyttInlägg(tidjustnu.ToShortDateString(), rubrik, informationen, fullständigtNamn,EndastFörPersonalCheckBox.Checked, personid);
             skyddpanel.Visible = false;
             nyttInläggPanel.Visible = false;
 
@@ -381,10 +395,15 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p1 = new Postgres();
             Postgres p2 = new Postgres();
             Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
+            string dagensDatum = AktuelltInlägg.Datum;
+            string rubrik = textBoxNyRubrik.Text;
+            string informationen = richTextBoxNyText.Text;
+            int inläggsid = AktuelltInlägg.InläggsId;
+
 
             if (AktuelltInlägg != null)
             {
-                p1.UppdateraInlägg(AktuelltInlägg.Datum, textBoxNyRubrik.Text, richTextBoxNyText.Text, AktuelltInlägg.InläggsId,EndastFörPersonalCheckBox.Checked);
+                p1.UppdateraInlägg(dagensDatum, rubrik, informationen, inläggsid,EndastFörPersonalCheckBox.Checked);
                 skyddpanel.Visible = false;
                 nyttInläggPanel.Visible = false;
 

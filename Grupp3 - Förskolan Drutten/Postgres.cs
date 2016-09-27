@@ -19,7 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlDataReader dr;
         private DataTable tabell;
         public Person aktuellPerson;
-        public bool Inloggad = false;
+        
 
         
 
@@ -665,7 +665,8 @@ namespace Grupp3___Förskolan_Drutten
                             Användarnamn = dr["användarnamn"].ToString(),
                             Lösenord = dr["lösenord"].ToString(),
                             ÄrPersonal = (bool)dr["personal"],
-                            ÄrFörälder = (bool)dr["förälder"]
+                            ÄrFörälder = (bool)dr["förälder"],
+                            Inloggad = (bool)dr["inloggad"]
                             
                         };
 
@@ -696,32 +697,63 @@ namespace Grupp3___Förskolan_Drutten
         /// </summary>
         public void KontrolleraAnvändartyp()
         {
-            Inloggad = true;
+            if (aktuellPerson.Inloggad == false)
+            {
+                aktuellPerson.Inloggad = true;
 
-            if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
-            {
-                
-                StartFP fp = new StartFP(aktuellPerson);
-                fp.Show();
-            }
-            else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
-            {
-                
-                StartForalder f = new StartForalder(aktuellPerson);
-                f.Show();
-            }
-            else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
-            {
-                
-                StartPersonal p = new StartPersonal(aktuellPerson);
-                p.Show();
+                if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
+                {
 
+                    StartFP fp = new StartFP(aktuellPerson);
+                    fp.Show();
+                }
+                else if (aktuellPerson.ÄrFörälder == true) // Om användaren är förälder
+                {
+
+                    StartForalder f = new StartForalder(aktuellPerson);
+                    f.Show();
+                }
+                else if (aktuellPerson.ÄrPersonal == true) // Om användaren är personal
+                {
+
+                    StartPersonal p = new StartPersonal(aktuellPerson);
+                    p.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
+                }
             }
-            else
+            else  // Om användarkontot redan är inloggad.
             {
-                MessageBox.Show("Användaren har ingen behörighet, kontakta systemadministratören.");
+                MessageBox.Show("Användaren är redan inloggad.");
             }
+            
+
         }
+        public void UppdateraStatusPåInlogg(bool inloggad, int personid)
+        {
+            try
+            {
+                string sql = "update dagis.person SET inloggad = '" + inloggad + "' WHERE personid = '" + personid + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@inloggad", inloggad);
+
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show("Ett fel uppstod: " + ex);
+            }
+            conn.Close();
+
+        }
+
         /// <summary>
         /// Lätt-krypterar lösenordet. Används i HämtaAnvändare();
         /// </summary>
@@ -826,14 +858,14 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="inläggstext"></param>
         /// <param name="skrivetav"></param>
         /// <param name="endastFörPersonal"></param>
-        public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav,bool endastFörPersonal)
+        public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav,bool endastFörPersonal, int personid)
         {
             Random random = new Random();
 
             try
             {
-                string sql = "insert into dagis.information (inläggsid, datum, inläggsrubrik, inläggstext, skrivet_av, endast_för_personal)"
-                   + " values (@inläggsid, @datum, @inläggsrubrik, @inläggstext, @skrivet_av, @endast_för_personal)";
+                string sql = "insert into dagis.information (inläggsid, datum, inläggsrubrik, inläggstext, skrivet_av, endast_för_personal, personid)"
+                   + " values (@inläggsid, @datum, @inläggsrubrik, @inläggstext, @skrivet_av, @endast_för_personal, @personid)";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@inläggsid", random.Next(1000));
@@ -842,6 +874,7 @@ namespace Grupp3___Förskolan_Drutten
                 cmd.Parameters.AddWithValue("@inläggstext", inläggstext);
                 cmd.Parameters.AddWithValue("@skrivet_av", skrivetav);
                 cmd.Parameters.AddWithValue("@endast_för_personal", endastFörPersonal);
+                cmd.Parameters.AddWithValue("@personid", personid);
 
 
                 dr = cmd.ExecuteReader();

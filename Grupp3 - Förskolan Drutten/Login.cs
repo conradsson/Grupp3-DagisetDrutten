@@ -23,12 +23,11 @@ namespace Grupp3___Förskolan_Drutten
         private void LoggaInButton_Click(object sender, EventArgs e)
         {
             Postgres p = new Postgres();
-            p.HämtaAnvändare(andvandarnamnTextbox.Text, losenordTextbox.Text);
+            string användarnamn = andvandarnamnTextbox.Text;
+            string lösenord = losenordTextbox.Text;
 
-            if (p.Inloggad == true)
-            {
-                this.Visible = false;
-            }
+            p.HämtaAnvändare(användarnamn, lösenord);
+
         }
         private void andvandarnamnTextbox_Enter(object sender, EventArgs e)
         {
