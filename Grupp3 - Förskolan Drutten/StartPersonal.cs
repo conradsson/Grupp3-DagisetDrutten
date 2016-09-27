@@ -40,7 +40,7 @@ namespace Grupp3___Förskolan_Drutten
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
 
             p1.UppdateraStatusPåInlogg(aktuellperson.Inloggad, aktuellperson.Personid);
-
+            Login.ActiveForm.Hide();
         }
 
         // Knapp Effekter 

@@ -34,7 +34,7 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p1 = new Postgres();
 
             p1.UppdateraStatusPåInlogg(aktuellperson.Inloggad, aktuellperson.Personid);
-
+            Login.ActiveForm.Hide();
         }
 
 
