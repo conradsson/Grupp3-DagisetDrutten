@@ -43,7 +43,7 @@ namespace Grupp3___Förskolan_Drutten
 
         }
 
-        // Knapp Effekter
+        // Knapp Effekter 
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
