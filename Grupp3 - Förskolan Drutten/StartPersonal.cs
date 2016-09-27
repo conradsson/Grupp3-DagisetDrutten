@@ -26,6 +26,8 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson = aktuellperson;
 
             Postgres p = new Postgres();
+            Postgres p1 = new Postgres();
+
             dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(idag);
             dataGridViewDagensBarn.Columns[1].Visible = false;
 
@@ -36,6 +38,8 @@ namespace Grupp3___Förskolan_Drutten
 
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
+
+            p1.UppdateraStatusPåInlogg(aktuellperson.Inloggad, aktuellperson.Personid);
 
         }
 

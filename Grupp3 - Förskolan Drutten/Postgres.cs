@@ -19,7 +19,7 @@ namespace Grupp3___Förskolan_Drutten
         private NpgsqlDataReader dr;
         private DataTable tabell;
         public Person aktuellPerson;
-        public bool Inloggad = false;
+        
 
         
 
@@ -700,8 +700,6 @@ namespace Grupp3___Förskolan_Drutten
             {
                 aktuellPerson.Inloggad = true;
 
-
-
                 if (aktuellPerson.ÄrFörälder == true && aktuellPerson.ÄrPersonal == true)  // "Mellan läget"
                 {
 
@@ -730,8 +728,31 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Användaren är redan inloggad.");
             }
+            
 
         }
+        public void UppdateraStatusPåInlogg(bool inloggad, int personid)
+        {
+            try
+            {
+                string sql = "update dagis.person SET inloggad = '" + inloggad + "' WHERE personid = '" + personid + "'";
+
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@inloggad", inloggad);
+
+
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show("Ett fel uppstod: " + ex);
+            }
+            conn.Close();
+
+        }
+
         /// <summary>
         /// Lätt-krypterar lösenordet. Används i HämtaAnvändare();
         /// </summary>

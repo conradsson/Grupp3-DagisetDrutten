@@ -31,7 +31,10 @@ namespace Grupp3___Förskolan_Drutten
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn + " " + aktuellperson.Efternamn;
 
             informationButton.BackgroundImage = Properties.Resources.informationButtonHär;
-            
+            Postgres p1 = new Postgres();
+
+            p1.UppdateraStatusPåInlogg(aktuellperson.Inloggad, aktuellperson.Personid);
+
         }
 
 
