@@ -26,6 +26,8 @@ namespace Grupp3___Förskolan_Drutten
             AktuellPerson = aktuellperson;
 
             Postgres p = new Postgres();
+            Postgres p1 = new Postgres();
+
             dataGridViewDagensBarn.DataSource = p.HämtaNärvaro(idag);
             dataGridViewDagensBarn.Columns[1].Visible = false;
 
@@ -37,9 +39,11 @@ namespace Grupp3___Förskolan_Drutten
             labelAntalBarnIdag.Text = dataGridViewDagensBarn.RowCount.ToString() + " Barn på förskolan idag";
             inloggadesAnvändarnamn.Text = aktuellperson.Förnamn +" "+ aktuellperson.Efternamn;
 
+            p1.UppdateraStatusPåInlogg(aktuellperson.Inloggad, aktuellperson.Personid);
+
         }
 
-        // Knapp Effekter
+        // Knapp Effekter 
 
         private void informationButton_Click(object sender, EventArgs e)// Information-knappen
         {
@@ -177,6 +181,10 @@ namespace Grupp3___Förskolan_Drutten
             DialogResult result = MessageBox.Show("Är du säker på att du vill logga ut?", "Logga ut", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                Postgres p = new Postgres();
+
+                AktuellPerson.Inloggad = false;
+                p.UppdateraStatusPåInlogg(AktuellPerson.Inloggad, AktuellPerson.Personid);
                 this.Close();
                 new Login().Show();
             }
@@ -241,6 +249,10 @@ namespace Grupp3___Förskolan_Drutten
             DialogResult result = MessageBox.Show("Är du säker på att du vill avsluta? ", "Avsluta", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                Postgres p = new Postgres();
+
+                AktuellPerson.Inloggad = false;
+                p.UppdateraStatusPåInlogg(AktuellPerson.Inloggad, AktuellPerson.Personid);
                 Application.Exit();
             }
         }
