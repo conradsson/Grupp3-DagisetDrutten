@@ -164,7 +164,10 @@ namespace Grupp3___Förskolan_Drutten
             DialogResult result = MessageBox.Show("Är du säker på att du vill logga ut?", "Logga ut", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                Postgres p = new Postgres();
+
                 AktuellPerson.Inloggad = false;
+                p.UppdateraStatusPåInlogg(AktuellPerson.Inloggad, AktuellPerson.Personid);
                 this.Close();
                 new Login().Show();
             }
@@ -256,8 +259,12 @@ namespace Grupp3___Förskolan_Drutten
             DialogResult result = MessageBox.Show("Är du säker på att du vill avsluta? ", "Avsluta", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                Postgres p = new Postgres();
+
                 AktuellPerson.Inloggad = false;
+                p.UppdateraStatusPåInlogg(AktuellPerson.Inloggad, AktuellPerson.Personid);
                 Application.Exit();
+
             }
         }
 

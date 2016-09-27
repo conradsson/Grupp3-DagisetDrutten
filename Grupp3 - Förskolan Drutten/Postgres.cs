@@ -665,7 +665,8 @@ namespace Grupp3___Förskolan_Drutten
                             Användarnamn = dr["användarnamn"].ToString(),
                             Lösenord = dr["lösenord"].ToString(),
                             ÄrPersonal = (bool)dr["personal"],
-                            ÄrFörälder = (bool)dr["förälder"]
+                            ÄrFörälder = (bool)dr["förälder"],
+                            Inloggad = (bool)dr["inloggad"]
                             
                         };
 
