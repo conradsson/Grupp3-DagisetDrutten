@@ -245,8 +245,6 @@ namespace Grupp3___Förskolan_Drutten
             }
         }
 
-
-
         private void buttonSökValtDatumINärvarohantering_Click(object sender, EventArgs e)
         {
             dataGridViewNärvarandeINärvarohantering.DataSource = null;
@@ -351,9 +349,13 @@ namespace Grupp3___Förskolan_Drutten
         {
             Postgres p1 = new Postgres();
             Postgres p2 = new Postgres();
+            string rubrik = textBoxNyRubrik.Text;
+            string informationen = richTextBoxNyText.Text;
+            int personid = AktuellPerson.Personid;
             string fullständigtNamn = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
+            DateTime tidjustnu = DateTime.Now;
 
-            p1.NyttInlägg(DateTime.Now.ToShortDateString(), textBoxNyRubrik.Text, richTextBoxNyText.Text, fullständigtNamn,EndastFörPersonalCheckBox.Checked);
+            p1.NyttInlägg(tidjustnu.ToShortDateString(), rubrik, informationen, fullständigtNamn,EndastFörPersonalCheckBox.Checked, personid);
             skyddpanel.Visible = false;
             nyttInläggPanel.Visible = false;
 
@@ -381,10 +383,15 @@ namespace Grupp3___Förskolan_Drutten
             Postgres p1 = new Postgres();
             Postgres p2 = new Postgres();
             Information AktuelltInlägg = (Information)listBoxInlägg.SelectedItem;
+            string dagensDatum = AktuelltInlägg.Datum;
+            string rubrik = textBoxNyRubrik.Text;
+            string informationen = richTextBoxNyText.Text;
+            int inläggsid = AktuelltInlägg.InläggsId;
+
 
             if (AktuelltInlägg != null)
             {
-                p1.UppdateraInlägg(AktuelltInlägg.Datum, textBoxNyRubrik.Text, richTextBoxNyText.Text, AktuelltInlägg.InläggsId,EndastFörPersonalCheckBox.Checked);
+                p1.UppdateraInlägg(dagensDatum, rubrik, informationen, inläggsid,EndastFörPersonalCheckBox.Checked);
                 skyddpanel.Visible = false;
                 nyttInläggPanel.Visible = false;
 

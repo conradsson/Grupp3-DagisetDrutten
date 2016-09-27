@@ -826,14 +826,14 @@ namespace Grupp3___Förskolan_Drutten
         /// <param name="inläggstext"></param>
         /// <param name="skrivetav"></param>
         /// <param name="endastFörPersonal"></param>
-        public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav,bool endastFörPersonal)
+        public void NyttInlägg(string datum,string inläggsrubrik,string inläggstext,string skrivetav,bool endastFörPersonal, int personid)
         {
             Random random = new Random();
 
             try
             {
-                string sql = "insert into dagis.information (inläggsid, datum, inläggsrubrik, inläggstext, skrivet_av, endast_för_personal)"
-                   + " values (@inläggsid, @datum, @inläggsrubrik, @inläggstext, @skrivet_av, @endast_för_personal)";
+                string sql = "insert into dagis.information (inläggsid, datum, inläggsrubrik, inläggstext, skrivet_av, endast_för_personal, personid)"
+                   + " values (@inläggsid, @datum, @inläggsrubrik, @inläggstext, @skrivet_av, @endast_för_personal, @personid)";
 
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@inläggsid", random.Next(1000));
@@ -842,6 +842,7 @@ namespace Grupp3___Förskolan_Drutten
                 cmd.Parameters.AddWithValue("@inläggstext", inläggstext);
                 cmd.Parameters.AddWithValue("@skrivet_av", skrivetav);
                 cmd.Parameters.AddWithValue("@endast_för_personal", endastFörPersonal);
+                cmd.Parameters.AddWithValue("@personid", personid);
 
 
                 dr = cmd.ExecuteReader();
