@@ -485,7 +485,7 @@
             this.panelHjälpMeddelaTider.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
             this.panelHjälpMeddelaTider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelHjälpMeddelaTider.Controls.Add(this.labelHjälpMeddelaTider);
-            this.panelHjälpMeddelaTider.Location = new System.Drawing.Point(451, 18);
+            this.panelHjälpMeddelaTider.Location = new System.Drawing.Point(452, 18);
             this.panelHjälpMeddelaTider.Name = "panelHjälpMeddelaTider";
             this.panelHjälpMeddelaTider.Size = new System.Drawing.Size(262, 195);
             this.panelHjälpMeddelaTider.TabIndex = 45;
@@ -520,7 +520,7 @@
             // 
             // textBoxHämtasAv1
             // 
-            this.textBoxHämtasAv1.Location = new System.Drawing.Point(475, 266);
+            this.textBoxHämtasAv1.Location = new System.Drawing.Point(594, 55);
             this.textBoxHämtasAv1.Name = "textBoxHämtasAv1";
             this.textBoxHämtasAv1.Size = new System.Drawing.Size(100, 20);
             this.textBoxHämtasAv1.TabIndex = 37;
@@ -530,7 +530,7 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(472, 251);
+            this.label58.Location = new System.Drawing.Point(591, 40);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(86, 16);
             this.label58.TabIndex = 38;
@@ -547,7 +547,7 @@
             this.TidHämtad,
             this.HämtasAv});
             this.dataGridViewTiderBarn.DataSource = this.närvaroBindingSource;
-            this.dataGridViewTiderBarn.Location = new System.Drawing.Point(274, 24);
+            this.dataGridViewTiderBarn.Location = new System.Drawing.Point(33, 225);
             this.dataGridViewTiderBarn.Name = "dataGridViewTiderBarn";
             this.dataGridViewTiderBarn.ReadOnly = true;
             this.dataGridViewTiderBarn.Size = new System.Drawing.Size(461, 131);
@@ -577,9 +577,9 @@
             // tiderBarnListBox
             // 
             this.tiderBarnListBox.FormattingEnabled = true;
-            this.tiderBarnListBox.Location = new System.Drawing.Point(33, 36);
+            this.tiderBarnListBox.Location = new System.Drawing.Point(33, 48);
             this.tiderBarnListBox.Name = "tiderBarnListBox";
-            this.tiderBarnListBox.Size = new System.Drawing.Size(120, 56);
+            this.tiderBarnListBox.Size = new System.Drawing.Size(120, 160);
             this.tiderBarnListBox.TabIndex = 11;
             this.tiderBarnListBox.SelectedIndexChanged += new System.EventHandler(this.tiderBarnListBox_SelectedIndexChanged);
             // 
@@ -587,7 +587,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 159);
+            this.label3.Location = new System.Drawing.Point(157, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 5;
@@ -597,7 +597,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 19);
+            this.label2.Location = new System.Drawing.Point(30, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 4;
@@ -605,7 +605,8 @@
             // 
             // monthCalendar3
             // 
-            this.monthCalendar3.Location = new System.Drawing.Point(33, 175);
+            this.monthCalendar3.AllowDrop = true;
+            this.monthCalendar3.Location = new System.Drawing.Point(160, 47);
             this.monthCalendar3.MaxSelectionCount = 5;
             this.monthCalendar3.Name = "monthCalendar3";
             this.monthCalendar3.ShowWeekNumbers = true;
@@ -616,10 +617,10 @@
             // labelMeddeladTid
             // 
             this.labelMeddeladTid.AutoSize = true;
-            this.labelMeddeladTid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMeddeladTid.Location = new System.Drawing.Point(270, 6);
+            this.labelMeddeladTid.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMeddeladTid.Location = new System.Drawing.Point(29, 209);
             this.labelMeddeladTid.Name = "labelMeddeladTid";
-            this.labelMeddeladTid.Size = new System.Drawing.Size(112, 20);
+            this.labelMeddeladTid.Size = new System.Drawing.Size(103, 18);
             this.labelMeddeladTid.TabIndex = 15;
             this.labelMeddeladTid.Text = "Meddelad tid";
             // 
@@ -628,7 +629,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Red;
-            this.label35.Location = new System.Drawing.Point(99, 14);
+            this.label35.Location = new System.Drawing.Point(99, 26);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(20, 25);
             this.label35.TabIndex = 34;
@@ -639,7 +640,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Red;
-            this.label36.Location = new System.Drawing.Point(110, 154);
+            this.label36.Location = new System.Drawing.Point(237, 26);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(20, 25);
             this.label36.TabIndex = 35;
@@ -658,9 +659,9 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(291, 176);
+            this.groupBox2.Location = new System.Drawing.Point(410, 41);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(154, 125);
+            this.groupBox2.Size = new System.Drawing.Size(154, 167);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Meddela tid";
@@ -828,7 +829,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(500, 310);
+            this.button5.Location = new System.Drawing.Point(594, 81);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 10;
@@ -839,7 +840,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(500, 310);
+            this.button2.Location = new System.Drawing.Point(594, 81);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 10;
@@ -858,9 +859,9 @@
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(291, 176);
+            this.groupBox3.Location = new System.Drawing.Point(410, 41);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(178, 125);
+            this.groupBox3.Size = new System.Drawing.Size(178, 167);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Uppdatera befintlig tid";
@@ -1033,7 +1034,7 @@
             this.panelHjälpMeddelaFrånvaro.BackgroundImage = global::Grupp3___Förskolan_Drutten.Properties.Resources.ButtonDrutten3;
             this.panelHjälpMeddelaFrånvaro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelHjälpMeddelaFrånvaro.Controls.Add(this.labelHjälpMeddelaFrånvaro);
-            this.panelHjälpMeddelaFrånvaro.Location = new System.Drawing.Point(491, 18);
+            this.panelHjälpMeddelaFrånvaro.Location = new System.Drawing.Point(492, 19);
             this.panelHjälpMeddelaFrånvaro.Name = "panelHjälpMeddelaFrånvaro";
             this.panelHjälpMeddelaFrånvaro.Size = new System.Drawing.Size(222, 136);
             this.panelHjälpMeddelaFrånvaro.TabIndex = 47;
@@ -1049,7 +1050,7 @@
             this.labelHjälpMeddelaFrånvaro.TabIndex = 0;
             this.labelHjälpMeddelaFrånvaro.Text = "Hjälp.\r\n\r\nVälj barn i listan. Välj datum då du vill \r\nanmäla frånvaro. Välj Sjuk " +
     "eller Ledig följt\r\nav knappen meddela.\r\n\r\nDu kan se vilka tider du meddelat från" +
-    "varo\r\ni listan uppe till höger.";
+    "varo\r\ni listan nere till vänster.";
             this.labelHjälpMeddelaFrånvaro.Visible = false;
             // 
             // buttonHjälpMeddelaFrånvaro
@@ -1072,7 +1073,7 @@
             // 
             this.labelFrånvaroTyp.AutoSize = true;
             this.labelFrånvaroTyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFrånvaroTyp.Location = new System.Drawing.Point(291, 227);
+            this.labelFrånvaroTyp.Location = new System.Drawing.Point(439, 32);
             this.labelFrånvaroTyp.Name = "labelFrånvaroTyp";
             this.labelFrånvaroTyp.Size = new System.Drawing.Size(146, 16);
             this.labelFrånvaroTyp.TabIndex = 32;
@@ -1087,7 +1088,7 @@
             this.Sjuk,
             this.Ledig});
             this.dataGridViewMeddelaFrånvaro.DataSource = this.frånvaroBindingSource;
-            this.dataGridViewMeddelaFrånvaro.Location = new System.Drawing.Point(305, 24);
+            this.dataGridViewMeddelaFrånvaro.Location = new System.Drawing.Point(33, 225);
             this.dataGridViewMeddelaFrånvaro.Name = "dataGridViewMeddelaFrånvaro";
             this.dataGridViewMeddelaFrånvaro.ReadOnly = true;
             this.dataGridViewMeddelaFrånvaro.Size = new System.Drawing.Size(363, 132);
@@ -1111,7 +1112,7 @@
             // 
             this.radioButtonSjuk.AutoSize = true;
             this.radioButtonSjuk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSjuk.Location = new System.Drawing.Point(297, 253);
+            this.radioButtonSjuk.Location = new System.Drawing.Point(445, 58);
             this.radioButtonSjuk.Name = "radioButtonSjuk";
             this.radioButtonSjuk.Size = new System.Drawing.Size(49, 19);
             this.radioButtonSjuk.TabIndex = 29;
@@ -1123,7 +1124,7 @@
             // 
             this.radioButtonLedig.AutoSize = true;
             this.radioButtonLedig.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonLedig.Location = new System.Drawing.Point(297, 276);
+            this.radioButtonLedig.Location = new System.Drawing.Point(445, 81);
             this.radioButtonLedig.Name = "radioButtonLedig";
             this.radioButtonLedig.Size = new System.Drawing.Size(56, 19);
             this.radioButtonLedig.TabIndex = 28;
@@ -1134,15 +1135,15 @@
             // listBoxMeddelaFrånvaro
             // 
             this.listBoxMeddelaFrånvaro.FormattingEnabled = true;
-            this.listBoxMeddelaFrånvaro.Location = new System.Drawing.Point(33, 36);
+            this.listBoxMeddelaFrånvaro.Location = new System.Drawing.Point(33, 48);
             this.listBoxMeddelaFrånvaro.Name = "listBoxMeddelaFrånvaro";
-            this.listBoxMeddelaFrånvaro.Size = new System.Drawing.Size(120, 56);
+            this.listBoxMeddelaFrånvaro.Size = new System.Drawing.Size(120, 160);
             this.listBoxMeddelaFrånvaro.TabIndex = 27;
             this.listBoxMeddelaFrånvaro.SelectedIndexChanged += new System.EventHandler(this.listBoxMeddelaFrånvaro_SelectedIndexChanged);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(297, 311);
+            this.button4.Location = new System.Drawing.Point(445, 116);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 24;
@@ -1154,7 +1155,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(30, 159);
+            this.label7.Location = new System.Drawing.Point(179, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 16);
             this.label7.TabIndex = 23;
@@ -1164,7 +1165,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(30, 19);
+            this.label14.Location = new System.Drawing.Point(30, 31);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(74, 16);
             this.label14.TabIndex = 22;
@@ -1172,7 +1173,7 @@
             // 
             // monthCalendar2
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(33, 175);
+            this.monthCalendar2.Location = new System.Drawing.Point(182, 48);
             this.monthCalendar2.MaxSelectionCount = 1;
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.ShowWeekNumbers = true;
@@ -1181,10 +1182,10 @@
             // labelMeddelaFrånvaro
             // 
             this.labelMeddelaFrånvaro.AutoSize = true;
-            this.labelMeddelaFrånvaro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMeddelaFrånvaro.Location = new System.Drawing.Point(301, 6);
+            this.labelMeddelaFrånvaro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMeddelaFrånvaro.Location = new System.Drawing.Point(29, 209);
             this.labelMeddelaFrånvaro.Name = "labelMeddelaFrånvaro";
-            this.labelMeddelaFrånvaro.Size = new System.Drawing.Size(158, 20);
+            this.labelMeddelaFrånvaro.Size = new System.Drawing.Size(147, 18);
             this.labelMeddelaFrånvaro.TabIndex = 31;
             this.labelMeddelaFrånvaro.Text = "Meddelad frånvaro";
             // 
@@ -1193,7 +1194,7 @@
             this.labelObligatorisk.AutoSize = true;
             this.labelObligatorisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObligatorisk.ForeColor = System.Drawing.Color.Red;
-            this.labelObligatorisk.Location = new System.Drawing.Point(431, 221);
+            this.labelObligatorisk.Location = new System.Drawing.Point(579, 26);
             this.labelObligatorisk.Name = "labelObligatorisk";
             this.labelObligatorisk.Size = new System.Drawing.Size(20, 25);
             this.labelObligatorisk.TabIndex = 33;
@@ -1204,7 +1205,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(99, 14);
+            this.label29.Location = new System.Drawing.Point(99, 26);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(20, 25);
             this.label29.TabIndex = 35;
@@ -1215,7 +1216,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(110, 154);
+            this.label28.Location = new System.Drawing.Point(259, 27);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(20, 25);
             this.label28.TabIndex = 34;
