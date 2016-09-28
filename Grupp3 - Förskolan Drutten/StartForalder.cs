@@ -677,13 +677,13 @@ namespace Grupp3___Förskolan_Drutten
 
             if (textBoxEfternamnMittKonto.Text != AktuellPerson.Efternamn)
             {
-                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                MessageBox.Show("Ditt användarnamn har uppdaterats." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
                 AktuellPerson.Efternamn = textBoxEfternamnMittKonto.Text;
                 inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
             }
             else if (textBoxFörnamnMittKonto.Text != AktuellPerson.Förnamn)
             {
-                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                MessageBox.Show("Ditt användarnamn har uppdaterats." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
                 AktuellPerson.Förnamn = textBoxFörnamnMittKonto.Text;
                 inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
             }

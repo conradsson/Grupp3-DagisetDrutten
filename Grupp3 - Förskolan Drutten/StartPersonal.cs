@@ -568,13 +568,13 @@ namespace Grupp3___Förskolan_Drutten
 
            if (textBoxEfternamnMittkonto.Text != AktuellPerson.Efternamn)
             {
-                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                MessageBox.Show("Ditt användarnamn har uppdaterats." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
                 AktuellPerson.Efternamn = textBoxEfternamnMittkonto.Text;
                 inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
             }
             else if (textBoxFörnamnMittkonto.Text != AktuellPerson.Förnamn)
             {
-                MessageBox.Show("Ditt användarnamn har uppdateras." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
+                MessageBox.Show("Ditt användarnamn har uppdaterats." + "\n" + "Användarnamn: " + AktuellPerson.Användarnamn);
                 AktuellPerson.Förnamn = textBoxFörnamnMittkonto.Text;
                 inloggadesAnvändarnamn.Text = AktuellPerson.Förnamn + " " + AktuellPerson.Efternamn;
             }
