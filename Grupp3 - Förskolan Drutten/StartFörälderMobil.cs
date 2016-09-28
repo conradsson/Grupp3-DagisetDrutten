@@ -197,155 +197,155 @@ namespace Grupp3___Förskolan_Drutten
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
-            DateTime datum = monthCalendar3.SelectionStart;
-            int barnid = aktuelltbarn.Barnid;
-            string lämnas = comboBoxFrån1.Text + ":" + comboBoxFrån2.Text;
-            string hämtas = comboBoxTill1.Text + ":" + comboBoxTill2.Text;
+            //Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            //DateTime datum = monthCalendar3.SelectionStart;
+            //int barnid = aktuelltbarn.Barnid;
+            //string lämnas = comboBoxFrån1.Text + ":" + comboBoxFrån2.Text;
+            //string hämtas = comboBoxTill1.Text + ":" + comboBoxTill2.Text;
 
-            if (lämnas == ":" && hämtas == ":")
-            {
+            //if (lämnas == ":" && hämtas == ":")
+            //{
 
-                MessageBox.Show("Var vänlig och fyll i tider.");
-            }
-            else
-            {
-                Postgres p = new Postgres();
-                p.LäggTillTid(datum, barnid, lämnas, hämtas);
-            }
+            //    MessageBox.Show("Var vänlig och fyll i tider.");
+            //}
+            //else
+            //{
+            //    Postgres p = new Postgres();
+            //    p.LäggTillTid(datum, barnid, lämnas, hämtas);
+            //}
 
-            comboBoxFrån1.Text = "";
-            comboBoxFrån2.Text = "";
-            comboBoxTill1.Text = "";
-            comboBoxTill2.Text = "";
+            //comboBoxFrån1.Text = "";
+            //comboBoxFrån2.Text = "";
+            //comboBoxTill1.Text = "";
+            //comboBoxTill2.Text = "";
         }
 
         private void tiderBarnListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Postgres p = new Postgres();
-            Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            //Postgres p = new Postgres();
+            //Barn aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
 
 
-            if (aktuelltbarn != null)
-            {
-                dataGridViewTiderBarn.DataSource = null;
-                dataGridViewTiderBarn.DataSource = p.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
-                //dataGridViewTiderBarn.Columns[1].Visible = false;
-                //dataGridViewTiderBarn.Columns[2].Visible = false;
-
-                string tid;
-                DateTime datum = monthCalendar3.SelectionStart;
-                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-
-                if (tid == "")
-                {
-                    comboBoxUppdateraTill1.Text = "";
-                    comboBoxUppdateraTill2.Text = "";
-                }
-                else
-                {
-                    comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
-                    comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
-                }
-
-                Postgres p2 = new Postgres();
-                string tidLämnas;
-                tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
-
-                if (tidLämnas == "")
-                {
-                    comboBoxUppdateraFrån1.Text = "";
-                    comboBoxUppdateraFrån2.Text = "";
-                }
-                else
-                {
-                    comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
-                    comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
-                }
-
-            }
-            //else
+            //if (aktuelltbarn != null)
             //{
-            //    MessageBox.Show("Välj ett barn i listan.");
+            //    dataGridViewTiderBarn.DataSource = null;
+            //    dataGridViewTiderBarn.DataSource = p.HämtaBarnetsTider(aktuelltbarn.Barnid, datummetod);
+            //    //dataGridViewTiderBarn.Columns[1].Visible = false;
+            //    //dataGridViewTiderBarn.Columns[2].Visible = false;
+
+            //    string tid;
+            //    DateTime datum = monthCalendar3.SelectionStart;
+            //    tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+
+            //    if (tid == "")
+            //    {
+            //        comboBoxUppdateraTill1.Text = "";
+            //        comboBoxUppdateraTill2.Text = "";
+            //    }
+            //    else
+            //    {
+            //        comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
+            //        comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+            //    }
+
+            //    Postgres p2 = new Postgres();
+            //    string tidLämnas;
+            //    tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+
+            //    if (tidLämnas == "")
+            //    {
+            //        comboBoxUppdateraFrån1.Text = "";
+            //        comboBoxUppdateraFrån2.Text = "";
+            //    }
+            //    else
+            //    {
+            //        comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
+            //        comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
+            //    }
+
             //}
+            ////else
+            ////{
+            ////    MessageBox.Show("Välj ett barn i listan.");
+            ////}
 
         }
 
 
         private void monthCalendar3_DateChanged(object sender, DateRangeEventArgs e)
         {
-            Barn aktuelltbarn = new Barn();
-            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            //Barn aktuelltbarn = new Barn();
+            //aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
 
-            if (aktuelltbarn != null)
-            {
-                Postgres p = new Postgres();
-                string tid;
-                DateTime datum = monthCalendar3.SelectionStart;
-                tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
-
-                if (tid == "")
-                {
-                    groupBox3.Visible = false;
-                    comboBoxUppdateraTill1.Text = "";
-                    comboBoxUppdateraTill2.Text = "";
-                }
-                else
-                {
-                    groupBox3.Visible = true;
-                    comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
-                    comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
-                }
-
-
-                Postgres p2 = new Postgres();
-                string tidLämnas;
-                tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
-
-                if (tid == "")
-                {
-                    groupBox2.Visible = true;
-                    comboBoxUppdateraFrån1.Text = "";
-                    comboBoxUppdateraFrån2.Text = "";
-                }
-                else
-                {
-                    groupBox2.Visible = false;
-                    comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
-                    comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
-                }
-
-            }
-            //else
+            //if (aktuelltbarn != null)
             //{
-            //    MessageBox.Show("Välj ett barn i listan.");
+            //    Postgres p = new Postgres();
+            //    string tid;
+            //    DateTime datum = monthCalendar3.SelectionStart;
+            //    tid = p.BarnetsHämtaTid(aktuelltbarn.Barnid, datum);
+
+            //    if (tid == "")
+            //    {
+            //        groupBox3.Visible = false;
+            //        comboBoxUppdateraTill1.Text = "";
+            //        comboBoxUppdateraTill2.Text = "";
+            //    }
+            //    else
+            //    {
+            //        groupBox3.Visible = true;
+            //        comboBoxUppdateraTill1.Text = tid[0].ToString() + tid[1].ToString();
+            //        comboBoxUppdateraTill2.Text = tid[3].ToString() + tid[4].ToString();
+            //    }
+
+
+            //    Postgres p2 = new Postgres();
+            //    string tidLämnas;
+            //    tidLämnas = p2.BarnetsLämnaTid(aktuelltbarn.Barnid, datum);
+
+            //    if (tid == "")
+            //    {
+            //        groupBox2.Visible = true;
+            //        comboBoxUppdateraFrån1.Text = "";
+            //        comboBoxUppdateraFrån2.Text = "";
+            //    }
+            //    else
+            //    {
+            //        groupBox2.Visible = false;
+            //        comboBoxUppdateraFrån1.Text = tidLämnas[0].ToString() + tidLämnas[1].ToString();
+            //        comboBoxUppdateraFrån2.Text = tidLämnas[3].ToString() + tidLämnas[4].ToString();
+            //    }
+
             //}
+            ////else
+            ////{
+            ////    MessageBox.Show("Välj ett barn i listan.");
+            ////}
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Barn aktuelltbarn = new Barn();
-            aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
+            //Barn aktuelltbarn = new Barn();
+            //aktuelltbarn = (Barn)tiderBarnListBox.SelectedItem;
 
-            if (aktuelltbarn != null)
-            {
-                Postgres p = new Postgres();
-                int id = aktuelltbarn.Barnid;
-                DateTime datum = monthCalendar3.SelectionStart;
-                string lamnas = comboBoxUppdateraFrån1.Text + ":" + comboBoxUppdateraFrån2.Text;
-                string hamtas = comboBoxUppdateraTill1.Text + ":" + comboBoxUppdateraTill2.Text;
+            //if (aktuelltbarn != null)
+            //{
+            //    Postgres p = new Postgres();
+            //    int id = aktuelltbarn.Barnid;
+            //    DateTime datum = monthCalendar3.SelectionStart;
+            //    string lamnas = comboBoxUppdateraFrån1.Text + ":" + comboBoxUppdateraFrån2.Text;
+            //    string hamtas = comboBoxUppdateraTill1.Text + ":" + comboBoxUppdateraTill2.Text;
                 
-                if (lamnas == ":" && hamtas == ":")
-                {
-                    MessageBox.Show("Var vänlig och fyll i tider.");
-                }
-                else
-                {
-                    //p.UppdateraTider(datum, id, lamnas, hamtas);
-                }
+            //    if (lamnas == ":" && hamtas == ":")
+            //    {
+            //        MessageBox.Show("Var vänlig och fyll i tider.");
+            //    }
+            //    else
+            //    {
+            //        //p.UppdateraTider(datum, id, lamnas, hamtas);
+            //    }
 
-            }
+            //}
 
         }
 
@@ -383,85 +383,85 @@ namespace Grupp3___Förskolan_Drutten
 
         private void buttonMeddelaHämtning_Click(object sender, EventArgs e)
         {
-            Barn aktuelltbarn = (Barn)listBoxMeddelaHämtning.SelectedItem;
+            //Barn aktuelltbarn = (Barn)listBoxMeddelaHämtning.SelectedItem;
 
-            int barnid = aktuelltbarn.Barnid;
-            string hamtas = textBoxMeddelaHämtning.Text;
-            DateTime datum = monthCalendar1.SelectionStart;
+            //int barnid = aktuelltbarn.Barnid;
+            //string hamtas = textBoxMeddelaHämtning.Text;
+            //DateTime datum = monthCalendar1.SelectionStart;
 
-            Postgres p = new Postgres();
+            //Postgres p = new Postgres();
 
-            p.MeddelaHämtning(barnid, hamtas, datum);
+            //p.MeddelaHämtning(barnid, hamtas, datum);
 
 
         }
 
         private void listBoxMeddelaHämtning_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Barn aktuelltb = new Barn();
-            aktuelltb = (Barn)listBoxMeddelaHämtning.SelectedItem;
+            //Barn aktuelltb = new Barn();
+            //aktuelltb = (Barn)listBoxMeddelaHämtning.SelectedItem;
 
-            if (aktuelltb != null)
-            {
-                Postgres p = new Postgres();
-                string tid;
-                DateTime datum = monthCalendar1.SelectionStart;
-                tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
-                textBoxMeddelaHämtning.Text = tid;
-            }
+            //if (aktuelltb != null)
+            //{
+            //    Postgres p = new Postgres();
+            //    string tid;
+            //    DateTime datum = monthCalendar1.SelectionStart;
+            //    tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
+            //    textBoxMeddelaHämtning.Text = tid;
+            //}
             //else
             //{
             //    MessageBox.Show("Välj ett barn i listan.");
             //}
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            Barn aktuelltb = new Barn();
-            aktuelltb = (Barn)listBoxMeddelaHämtning.SelectedItem;
+        //private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        //{
+        //    //Barn aktuelltb = new Barn();
+        //    //aktuelltb = (Barn)listBoxMeddelaHämtning.SelectedItem;
 
-            if (aktuelltb != null)
-            {
-                Postgres p = new Postgres();
-                string tid;
-                DateTime datum = monthCalendar1.SelectionStart;
-                tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
-                textBoxMeddelaHämtning.Text = tid;
-            }
-            //else
-            //{
-            //    MessageBox.Show("Välj ett barn i listan.");
-            //}
-        }
+        //    //if (aktuelltb != null)
+        //    //{
+        //    //    Postgres p = new Postgres();
+        //    //    string tid;
+        //    //    DateTime datum = monthCalendar1.SelectionStart;
+        //    //    tid = p.BarnetHämtasAv(aktuelltb.Barnid, datum);
+        //    //    textBoxMeddelaHämtning.Text = tid;
+        //    //}
+        //    //else
+        //    //{
+        //    //    MessageBox.Show("Välj ett barn i listan.");
+        //    //}
+        //}
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Barn aktuelltbarn = new Barn();
-            aktuelltbarn = (Barn)listBoxMeddelaFrånvaro.SelectedItem;
+        //private void button4_Click(object sender, EventArgs e)
+        //{
+        //    Barn aktuelltbarn = new Barn();
+        //    aktuelltbarn = (Barn)listBoxMeddelaFrånvaro.SelectedItem;
 
 
-            if (aktuelltbarn != null)
-            {
-                Postgres p = new Postgres();
-                int id = aktuelltbarn.Barnid;
-                DateTime datum = monthCalendar2.SelectionStart;
-                bool sjuk;
-                bool ledig;
+        //    if (aktuelltbarn != null)
+        //    {
+        //        Postgres p = new Postgres();
+        //        int id = aktuelltbarn.Barnid;
+        //        DateTime datum = monthCalendar2.SelectionStart;
+        //        bool sjuk;
+        //        bool ledig;
 
-                if (radioButtonSjuk.Checked)
-                {
-                    sjuk = true;
-                    ledig = false;
-                }
-                else
-                {
-                    sjuk = false;
-                    ledig = true;
-                }
+        //        if (radioButtonSjuk.Checked)
+        //        {
+        //            sjuk = true;
+        //            ledig = false;
+        //        }
+        //        else
+        //        {
+        //            sjuk = false;
+        //            ledig = true;
+        //        }
 
-                p.LäggTillFånvaro(datum, id, sjuk, ledig);
-            }
-        }
+        //        p.LäggTillFånvaro(datum, id, sjuk, ledig);
+        //    }
+        //}
 
         private void uppdateraförälder_Click_2(object sender, EventArgs e)
         {
@@ -529,6 +529,16 @@ namespace Grupp3___Förskolan_Drutten
             {
                 MessageBox.Show("Det nuvarande lösenordet var fel.");
             }*/
+        }
+
+        private void informationTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void senasteTabPage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
