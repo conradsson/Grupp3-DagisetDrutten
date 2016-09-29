@@ -343,8 +343,6 @@ namespace Grupp3___Förskolan_Drutten
 
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                //meddelande = "Tiden är tillagd ";
-
             }
             catch (NpgsqlException ex)
             {
@@ -352,12 +350,13 @@ namespace Grupp3___Förskolan_Drutten
                 if (meddelande.Contains("23505"))
                 {
                     meddelande = "Det finns redan en tid registrerad detta datum "+ datum.ToString("yyyy-MM-dd") +". \n"
-                        + "Tiden för detta datum kommer inte att påverkas. \n\nTiden som blir meddelad gäller endast den/de övriga datum du har valt.\nVälj detta datum igen om du vill uppdatera den redan befintliga tiden.";
-                System.Windows.Forms.MessageBox.Show(meddelande); 
+                        + "Tiden för detta datum kommer inte att påverkas. \n\nTiden som blir meddelad gäller endast den/de övriga datum du har valt.\nVälj detta datum igen om du vill uppdatera den redan befintliga tiden."; 
                 }
+                System.Windows.Forms.MessageBox.Show(meddelande); 
             }
-           
+            
             conn.Close();
+
         }
 
         /// <summary>
