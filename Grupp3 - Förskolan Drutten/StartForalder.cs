@@ -358,7 +358,6 @@ namespace Grupp3___Förskolan_Drutten
                                po.KontrolleraHämtning(Convert.ToDateTime(datumet), barnid, hamtas);
                            }
                 }
-                MessageBox.Show("Tiden är meddelad.");
           
                 Postgres p2 = new Postgres();
                 dataGridViewTiderBarn.DataSource = null;
